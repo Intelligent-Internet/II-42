@@ -1,0 +1,74 @@
+name: Prepare Release
+
+on:
+    push:
+        branches:
+            - release
+    workflow_dispatch:
+        inputs:
+            release_series:
+                description: Optional major.minor release series
+                required: false
+                default: ''
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+    actions: write
+    contents: write
+
+jobs:
+    prepare-release:
+        runs-on: ubuntu-24.04
+        if: >-
+            github.event_name == 'workflow_dispatch' ||
+            (
+              github.event_name == 'push' &&
+              github.ref == 'refs/heads/release' &&
+              github.event.created == false &&
+              github.actor != 'github-actions[bot]'
+            )
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+                  ref: release
+
+            - name: Compute and apply next patch version
+              id: version
+              run: |
+                  release_series='${{ inputs.release_series }}'
+                  if [ -z "${release_series}" ]; then
+                      current_version="$(sed -n \
+                        "s/^default_version = '\\(.*\\)'$/\\1/p" \
+                        psql_bm25s.control)"
+                      release_series="${current_version%.*}"
+                  fi
+                  version="$(python3 scripts/bump_extension_version.py \
+                    --series "${release_series}")"
+                  echo "version=${version}" >> "${GITHUB_OUTPUT}"
+
+            - name: Commit version bump
+              run: |
+                  git config user.name 'github-actions[bot]'
+                  git config user.email \
+                    '41898282+github-actions[bot]@users.noreply.github.com'
+                  git add psql_bm25s.control sql/
+                  git commit -m "Release ${{ steps.version.outputs.version }}"
+                  git tag -a \
+                    "v${{ steps.version.outputs.version }}" \
+                    -m "Release ${{ steps.version.outputs.version }}"
+
+            - name: Push release commit and tag
+              run: git push origin HEAD:release --follow-tags
+
+            - name: Dispatch Release workflow
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh workflow run Release \
+                    --ref release \
+                    -f tag_name="v${{ steps.version.outputs.version }}"

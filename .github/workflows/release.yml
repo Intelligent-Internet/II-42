@@ -1,0 +1,259 @@
+name: Release
+
+on:
+    push:
+        tags:
+            - 'v*'
+    workflow_dispatch:
+        inputs:
+            tag_name:
+                description: Release tag to publish (for example v0.1.3)
+                required: true
+                type: string
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+    actions: read
+    contents: write
+    packages: write
+
+jobs:
+    build-release-assets:
+        runs-on: ubuntu-24.04
+        strategy:
+            fail-fast: false
+            matrix:
+                pg_major: [17, 18]
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+                  ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag_name || github.ref }}
+
+            - name: Resolve version from tag
+              id: version
+              run: |
+                  if [ "${{ github.event_name }}" = 'workflow_dispatch' ]; then
+                      tag_name='${{ inputs.tag_name }}'
+                  else
+                      tag_name="${GITHUB_REF_NAME}"
+                  fi
+                  tag_version="${tag_name#v}"
+                  control_version="$(sed -n \
+                    "s/^default_version = '\\(.*\\)'$/\\1/p" \
+                    psql_bm25s.control)"
+                  if [ "${tag_version}" != "${control_version}" ]; then
+                      echo "tag version ${tag_version} does not match control version ${control_version}" >&2
+                      exit 1
+                  fi
+                  echo "version=${tag_version}" >> "${GITHUB_OUTPUT}"
+
+            - name: Install PostgreSQL toolchain
+              run: ./scripts/install_postgres_apt.sh "${{ matrix.pg_major }}"
+
+            - name: Add PostgreSQL binaries to PATH
+              run: |
+                  echo "/usr/lib/postgresql/${{ matrix.pg_major }}/bin" \
+                    >> "${GITHUB_PATH}"
+
+            - name: Build unit tests
+              run: |
+                  cmake -S . -B build_tmp
+                  cmake --build build_tmp
+
+            - name: Run unit tests
+              run: ctest --test-dir build_tmp --output-on-failure
+
+            - name: Start temporary PostgreSQL
+              run: |
+                  cluster_dir="${RUNNER_TEMP}/pg${{ matrix.pg_major }}"
+                  socket_dir="${RUNNER_TEMP}/pgsocket${{ matrix.pg_major }}"
+                  port="55${{ matrix.pg_major }}"
+                  initdb -D "${cluster_dir}" -A trust -U postgres >/dev/null
+                  mkdir -p "${socket_dir}"
+                  pg_ctl \
+                    -D "${cluster_dir}" \
+                    -l "${cluster_dir}/postgres.log" \
+                    -o "-F -k ${socket_dir} -p ${port}" \
+                    start
+                  createdb \
+                    -h "${socket_dir}" \
+                    -p "${port}" \
+                    -U postgres \
+                    contrib_regression
+                  {
+                      echo "PGHOST=${socket_dir}"
+                      echo "PGPORT=${port}"
+                      echo "PGUSER=postgres"
+                  } >> "${GITHUB_ENV}"
+
+            - name: Run integration tests
+              run: |
+                  make clean
+                  make PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+                  sudo make install \
+                    PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+                  make installcheck \
+                    PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+
+            - name: Stop temporary PostgreSQL
+              if: always()
+              run: |
+                  cluster_dir="${RUNNER_TEMP}/pg${{ matrix.pg_major }}"
+                  if [ -f "${cluster_dir}/postmaster.pid" ]; then
+                      pg_ctl -D "${cluster_dir}" -m fast stop
+                  fi
+
+            - name: Build release zip
+              run: |
+                  ./scripts/build_release_zip.sh \
+                    --version "${{ steps.version.outputs.version }}" \
+                    --pg-config /usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+
+            - name: Upload release artifacts
+              uses: actions/upload-artifact@v6
+              with:
+                  name: release-pg${{ matrix.pg_major }}
+                  path: |
+                      dist/*.zip
+                      dist/*.sha256
+                  if-no-files-found: error
+
+    build-docker-release-image:
+        runs-on: ubuntu-24.04
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+                  ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag_name || github.ref }}
+
+            - name: Resolve version from tag
+              id: version
+              run: |
+                  if [ "${{ github.event_name }}" = 'workflow_dispatch' ]; then
+                      tag_name='${{ inputs.tag_name }}'
+                  else
+                      tag_name="${GITHUB_REF_NAME}"
+                  fi
+                  tag_version="${tag_name#v}"
+                  control_version="$(sed -n \
+                    "s/^default_version = '\\(.*\\)'$/\\1/p" \
+                    psql_bm25s.control)"
+                  if [ "${tag_version}" != "${control_version}" ]; then
+                      echo "tag version ${tag_version} does not match control version ${control_version}" >&2
+                      exit 1
+                  fi
+                  echo "version=${tag_version}" >> "${GITHUB_OUTPUT}"
+
+            - name: Build PostgreSQL 18 Docker image
+              run: |
+                  ./scripts/build_release_docker_image.sh \
+                    --version "${{ steps.version.outputs.version }}" \
+                    --image-tag psql_bm25s:release-pg18
+
+            - name: Smoke test Docker image
+              run: |
+                  container_name="psql-bm25s-release-pg18"
+                  docker rm -f "${container_name}" >/dev/null 2>&1 || true
+                  docker run -d \
+                    --name "${container_name}" \
+                    --tmpfs /var/run/postgresql:rw,mode=3775,uid=999,gid=999 \
+                    -e POSTGRES_HOST_AUTH_METHOD=trust \
+                    psql_bm25s:release-pg18
+                  trap 'docker rm -f "${container_name}" >/dev/null 2>&1 || true' EXIT
+                  for _ in $(seq 1 60); do
+                      if docker exec "${container_name}" \
+                          pg_isready -U postgres >/dev/null 2>&1; then
+                          break
+                      fi
+                      sleep 1
+                  done
+                  docker exec "${container_name}" \
+                    psql -U postgres -d postgres -Atqc \
+                    "SELECT extname FROM pg_extension WHERE extname = 'psql_bm25s';" \
+                    | grep -x 'psql_bm25s'
+
+            - name: Log in to GitHub Container Registry
+              run: |
+                  docker_config_dir="${RUNNER_TEMP}/docker-ghcr"
+                  login_stderr="${RUNNER_TEMP}/docker-login-ghcr.log"
+                  mkdir -p "${docker_config_dir}"
+                  printf '%s' "${{ secrets.GITHUB_TOKEN }}" | \
+                    docker --config "${docker_config_dir}" login ghcr.io \
+                      --username "${{ github.actor }}" \
+                      --password-stdin 2>"${login_stderr}"
+                  awk '
+                    index($0, "WARNING! Your credentials are stored unencrypted") == 0 &&
+                    index($0, "Configure a credential helper to remove this warning.") == 0 &&
+                    index($0, "https://docs.docker.com/go/credential-store/") == 0
+                  ' "${login_stderr}" >&2
+                  echo "DOCKER_CONFIG=${docker_config_dir}" >> "${GITHUB_ENV}"
+
+            - name: Publish Docker image to GitHub Packages
+              run: |
+                  image_name="ghcr.io/${GITHUB_REPOSITORY,,}"
+                  version="${{ steps.version.outputs.version }}"
+                  ./scripts/publish_docker_image.sh \
+                    --source-tag psql_bm25s:release-pg18 \
+                    --target-image "${image_name}" \
+                    --tag "pg18-v${version}" \
+                    --tag pg18
+
+    publish-release:
+        runs-on: ubuntu-24.04
+        needs:
+            - build-release-assets
+            - build-docker-release-image
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+
+            - name: Download release artifacts
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  rm -rf release-assets
+                  mkdir -p release-assets
+                  for artifact_name in \
+                    release-pg17 \
+                    release-pg18
+                  do
+                      artifact_dir="release-assets/${artifact_name}"
+                      mkdir -p "${artifact_dir}"
+                      gh run download "${GITHUB_RUN_ID}" \
+                        --name "${artifact_name}" \
+                        --dir "${artifact_dir}"
+                  done
+
+            - name: Publish GitHub release
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  tag_name='${{ github.event_name == 'workflow_dispatch' && inputs.tag_name || github.ref_name }}'
+                  assets=()
+                  while IFS= read -r -d '' file; do
+                      assets+=("${file}")
+                  done < <(find release-assets -type f -print0 | sort -z)
+
+                  if [ "${#assets[@]}" -eq 0 ]; then
+                      echo 'no release assets downloaded' >&2
+                      exit 1
+                  fi
+
+                  if gh release view "${tag_name}" >/dev/null 2>&1; then
+                      gh release upload "${tag_name}" "${assets[@]}" --clobber
+                  else
+                      gh release create "${tag_name}" "${assets[@]}" \
+                        --title "${tag_name}" \
+                        --generate-notes \
+                        --verify-tag
+                  fi

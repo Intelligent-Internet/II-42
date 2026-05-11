@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-03-27 23:00:43",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "pg_search"
+  ],
+  "results": {
+    "nfcorpus": {
+      "dataset": "nfcorpus",
+      "pg_search": {
+        "build_bytes": 5226496,
+        "build_ms": 254.2429740000074,
+        "query": {
+          "avg_ms": 0.883259013901615,
+          "count": 3237,
+          "p50_ms": 0.7388749999961419,
+          "p95_ms": 1.850111000004517,
+          "qps": 1132.1707271151479
+        }
+      },
+      "stats": {
+        "documents": 3633,
+        "queries": 3237,
+        "query_tokens": 8947,
+        "tokens": 614081,
+        "vocab_size": 19117
+      },
+      "wall_time_s": 3.716625511999993
+    }
+  },
+  "top_k": 1000
+}

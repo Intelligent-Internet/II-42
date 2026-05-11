@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-03-27 23:01:33",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "vchord_bm25"
+  ],
+  "results": {
+    "nq": {
+      "dataset": "nq",
+      "stats": {
+        "documents": 2681468,
+        "queries": 3452,
+        "query_tokens": 21779,
+        "tokens": 148249812,
+        "vocab_size": 892745
+      },
+      "vchord_bm25": {
+        "build_bytes": 8324227072,
+        "build_ms": 55566.86992900001,
+        "query": {
+          "avg_ms": 45.53794273319794,
+          "count": 3452,
+          "p50_ms": 39.84269899996207,
+          "p95_ms": 93.67617874997904,
+          "qps": 21.959709639473523
+        }
+      },
+      "wall_time_s": 443.23540390200003
+    }
+  },
+  "top_k": 1000
+}

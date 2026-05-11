@@ -1,0 +1,10 @@
+/build/
+/build_tmp/
+/*.o
+/*.so
+/*.dylib
+/src/*.o
+/results/
+/python_reference_bm25s/
+/dist/
+/.local/

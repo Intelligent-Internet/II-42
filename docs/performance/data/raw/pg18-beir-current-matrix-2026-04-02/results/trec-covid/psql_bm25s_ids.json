@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-04-02 15:31:07",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "psql_bm25s_ids"
+  ],
+  "results": {
+    "trec-covid": {
+      "dataset": "trec-covid",
+      "psql_bm25s_ids": {
+        "build_bytes": 159334400,
+        "build_ms": 2652.9776269999984,
+        "query": {
+          "avg_ms": 5.209959799998103,
+          "count": 50,
+          "p50_ms": 1.665567499998133,
+          "p95_ms": 3.3246690999945363,
+          "qps": 191.94006065082579
+        }
+      },
+      "stats": {
+        "documents": 171332,
+        "queries": 50,
+        "query_tokens": 404,
+        "tokens": 20231413,
+        "vocab_size": 174893
+      },
+      "wall_time_s": 27.344199978000006
+    }
+  },
+  "top_k": 1000
+}

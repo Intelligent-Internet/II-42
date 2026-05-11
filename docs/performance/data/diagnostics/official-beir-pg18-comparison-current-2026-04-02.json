@@ -1,0 +1,642 @@
+{
+  "created_at": "2026-04-02T21:48:00.179176+00:00",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "python_reference_bm25s",
+    "psql_bm25s_ids",
+    "psql_bm25s_text"
+  ],
+  "results": {
+    "arguana": {
+      "dataset": "arguana",
+      "official_qps": 573.91,
+      "stats": {
+        "documents": 8674,
+        "queries": 1406,
+        "query_tokens": 176684,
+        "tokens": 947471,
+        "vocab_size": 22713
+      },
+      "python_reference_bm25s": {
+        "build_ms": 317.77068400000275,
+        "query": {
+          "count": 1406,
+          "qps": 1158.3371702153602,
+          "total_ms": 1213.8089290000025
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 8921088,
+        "build_ms": 100.55703200001176,
+        "query": {
+          "avg_ms": 0.712948697723838,
+          "count": 1406,
+          "p50_ms": 0.6916844999977911,
+          "p95_ms": 0.8992362499924411,
+          "qps": 1402.6254668710426
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 9158656,
+        "build_ms": 167.5025070000089,
+        "query": {
+          "avg_ms": 0.8992748641535829,
+          "count": 1406,
+          "p50_ms": 0.874073999995062,
+          "p95_ms": 1.1641810000000419,
+          "qps": 1112.0070624249258
+        }
+      },
+      "wall_time_s": 7.965304829000054
+    },
+    "climate-fever": {
+      "dataset": "climate-fever",
+      "official_qps": 13.09,
+      "stats": {
+        "documents": 5416593,
+        "queries": 1535,
+        "query_tokens": 21728,
+        "tokens": 318190131,
+        "vocab_size": 3115002
+      },
+      "python_reference_bm25s": {
+        "build_ms": 164820.97826799998,
+        "query": {
+          "count": 1535,
+          "qps": 3.040857249530789,
+          "total_ms": 504791.86428
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 2854166528,
+        "build_ms": 52735.130433,
+        "query": {
+          "avg_ms": 17.306871386320587,
+          "count": 1535,
+          "p50_ms": 13.796010999953978,
+          "p95_ms": 33.19396420008614,
+          "qps": 57.780518366271764
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 2893324288,
+        "build_ms": 91728.48343499993,
+        "query": {
+          "avg_ms": 19.705341819543207,
+          "count": 1535,
+          "p50_ms": 15.627945999995063,
+          "p95_ms": 35.97166649999507,
+          "qps": 50.747660667739744
+        }
+      },
+      "wall_time_s": 2066.338296246998
+    },
+    "cqadupstack": {
+      "dataset": "cqadupstack",
+      "official_qps": 170.91,
+      "stats": {
+        "documents": 457199,
+        "queries": 13145,
+        "query_tokens": 81016,
+        "tokens": 44857487,
+        "vocab_size": 873200
+      },
+      "python_reference_bm25s": {
+        "build_ms": 15677.542047999963,
+        "query": {
+          "count": 13145,
+          "qps": 111.55857577787046,
+          "total_ms": 117830.47523099997
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 339632128,
+        "build_ms": 5827.169133000041,
+        "query": {
+          "avg_ms": 2.2566613988588067,
+          "count": 13145,
+          "p50_ms": 1.9672669999977188,
+          "p95_ms": 4.335866000030819,
+          "qps": 443.13249675192736
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 351059968,
+        "build_ms": 9291.73428400003,
+        "query": {
+          "avg_ms": 2.280932461087888,
+          "count": 13145,
+          "p50_ms": 2.0297840000012,
+          "p95_ms": 4.268619799984207,
+          "qps": 438.4171899254971
+        }
+      },
+      "wall_time_s": 498.1311263489948
+    },
+    "dbpedia-entity": {
+      "dataset": "dbpedia-entity",
+      "official_qps": 13.44,
+      "stats": {
+        "documents": 4635922,
+        "queries": 467,
+        "query_tokens": 2037,
+        "tokens": 162336259,
+        "vocab_size": 2744583
+      },
+      "python_reference_bm25s": {
+        "build_ms": 99599.22849599997,
+        "query": {
+          "count": 467,
+          "qps": 3.465364700479915,
+          "total_ms": 134762.150701
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 1612824576,
+        "build_ms": 26370.406444000026,
+        "query": {
+          "avg_ms": 7.8010927194861805,
+          "count": 467,
+          "p50_ms": 3.9010369999914474,
+          "p95_ms": 11.4848320999954,
+          "qps": 128.1871701770858
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 1648541696,
+        "build_ms": 45047.597964999964,
+        "query": {
+          "avg_ms": 10.965966790150333,
+          "count": 467,
+          "p50_ms": 4.951864000020123,
+          "p95_ms": 13.1275308000113,
+          "qps": 91.19123002435164
+        }
+      },
+      "wall_time_s": 995.4279983769995
+    },
+    "fever": {
+      "dataset": "fever",
+      "official_qps": 20.19,
+      "stats": {
+        "documents": 5416568,
+        "queries": 123142,
+        "query_tokens": 699692,
+        "tokens": 318184332,
+        "vocab_size": 3115013
+      },
+      "python_reference_bm25s": {
+        "build_ms": 156450.797019,
+        "query": {
+          "count": 123142,
+          "qps": 3.148580416581738,
+          "total_ms": 39110323.926136
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 2854125568,
+        "build_ms": 52830.13254399998,
+        "query": {
+          "avg_ms": 10.249974268649202,
+          "count": 123142,
+          "p50_ms": 9.052751000012904,
+          "p95_ms": 20.748952249994087,
+          "qps": 97.56122052507216
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 2893283328,
+        "build_ms": 94593.96311400007,
+        "query": {
+          "avg_ms": 12.476651536096687,
+          "count": 123142,
+          "p50_ms": 11.222477999979219,
+          "p95_ms": 24.08512639995592,
+          "qps": 80.14970980850599
+        }
+      },
+      "wall_time_s": 44137.470673106
+    },
+    "fiqa": {
+      "dataset": "fiqa",
+      "official_qps": 717.78,
+      "stats": {
+        "documents": 57638,
+        "queries": 6648,
+        "query_tokens": 52068,
+        "tokens": 5189073,
+        "vocab_size": 59853
+      },
+      "python_reference_bm25s": {
+        "build_ms": 1877.2248589999947,
+        "query": {
+          "count": 6648,
+          "qps": 810.5140837913601,
+          "total_ms": 8202.201704999992
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 45047808,
+        "build_ms": 671.7647749999998,
+        "query": {
+          "avg_ms": 0.7094621887785767,
+          "count": 6648,
+          "p50_ms": 0.6840129999972078,
+          "p95_ms": 0.9777317500017091,
+          "qps": 1409.5183870498
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 45744128,
+        "build_ms": 1059.3052269999957,
+        "query": {
+          "avg_ms": 0.8428817378159246,
+          "count": 6648,
+          "p50_ms": 0.819441500006235,
+          "p95_ms": 1.1454613500028186,
+          "qps": 1186.4060580920882
+        }
+      },
+      "wall_time_s": 41.671973849999965
+    },
+    "hotpotqa": {
+      "dataset": "hotpotqa",
+      "official_qps": 20.88,
+      "stats": {
+        "documents": 5233329,
+        "queries": 97852,
+        "query_tokens": 1205269,
+        "tokens": 169530288,
+        "vocab_size": 2549160
+      },
+      "python_reference_bm25s": {
+        "build_ms": 107660.79175799996,
+        "query": {
+          "count": 97852,
+          "qps": 4.160948847409708,
+          "total_ms": 23516751.488284998
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 1672863744,
+        "build_ms": 30792.22733099999,
+        "query": {
+          "avg_ms": 18.051164503270048,
+          "count": 97852,
+          "p50_ms": 15.878717999839864,
+          "p95_ms": 38.15703254995242,
+          "qps": 55.398088019132814
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 1705336832,
+        "build_ms": 50378.30390499999,
+        "query": {
+          "avg_ms": 20.055376641560805,
+          "count": 97852,
+          "p50_ms": 17.734340500055623,
+          "p95_ms": 41.85511155005769,
+          "qps": 49.86194065922938
+        }
+      },
+      "wall_time_s": 28196.306116854004
+    },
+    "msmarco": {
+      "dataset": "msmarco",
+      "official_qps": 12.2,
+      "stats": {
+        "documents": 8841823,
+        "queries": 509962,
+        "query_tokens": 2275139,
+        "tokens": 340859911,
+        "vocab_size": 1431983
+      },
+      "python_reference_bm25s": {
+        "build_ms": 193947.50312799998,
+        "query": {
+          "count": 509962,
+          "qps": 1.6084862832952358,
+          "total_ms": 317044668.205229
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 3204751360,
+        "build_ms": 56057.54913299995,
+        "query": {
+          "avg_ms": 10.344949989071205,
+          "count": 509962,
+          "p50_ms": 8.17375699995182,
+          "p95_ms": 24.82518310052908,
+          "qps": 96.66552289343474
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 3222036480,
+        "build_ms": 87827.69346700002,
+        "query": {
+          "avg_ms": 12.17552952042516,
+          "count": 509962,
+          "p50_ms": 9.736483500091708,
+          "p95_ms": 28.56496350012775,
+          "qps": 82.13195149520534
+        }
+      },
+      "wall_time_s": 338119.34378029
+    },
+    "nfcorpus": {
+      "dataset": "nfcorpus",
+      "official_qps": 1196.16,
+      "stats": {
+        "documents": 3633,
+        "queries": 3237,
+        "query_tokens": 8947,
+        "tokens": 614081,
+        "vocab_size": 19117
+      },
+      "python_reference_bm25s": {
+        "build_ms": 167.41157700000286,
+        "query": {
+          "count": 3237,
+          "qps": 3155.3458158319845,
+          "total_ms": 1025.8780460000025
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 4825088,
+        "build_ms": 81.53869599999553,
+        "query": {
+          "avg_ms": 0.2963889687984357,
+          "count": 3237,
+          "p50_ms": 0.27650399999856745,
+          "p95_ms": 0.3892715999910478,
+          "qps": 3373.9447323360637
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 5029888,
+        "build_ms": 113.11808300000337,
+        "query": {
+          "avg_ms": 0.3005748464628491,
+          "count": 3237,
+          "p50_ms": 0.27714900001285514,
+          "p95_ms": 0.39218180000659686,
+          "qps": 3326.9583658378397
+        }
+      },
+      "wall_time_s": 5.476940256000034
+    },
+    "nq": {
+      "dataset": "nq",
+      "official_qps": 41.85,
+      "stats": {
+        "documents": 2681468,
+        "queries": 3452,
+        "query_tokens": 21779,
+        "tokens": 148249812,
+        "vocab_size": 892745
+      },
+      "python_reference_bm25s": {
+        "build_ms": 72682.627761,
+        "query": {
+          "count": 3452,
+          "qps": 10.547267039473438,
+          "total_ms": 327288.5750480001
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 1439391744,
+        "build_ms": 23712.073369999984,
+        "query": {
+          "avg_ms": 5.735756671494523,
+          "count": 3452,
+          "p50_ms": 4.859750000008489,
+          "p95_ms": 9.885610750001206,
+          "qps": 174.3449133694574
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 1449902080,
+        "build_ms": 40803.48065899994,
+        "query": {
+          "avg_ms": 5.6596685141938226,
+          "count": 3452,
+          "p50_ms": 4.781521500007102,
+          "p95_ms": 9.74725659998796,
+          "qps": 176.68879325566695
+        }
+      },
+      "wall_time_s": 1034.4747383950048
+    },
+    "quora": {
+      "dataset": "quora",
+      "official_qps": 272.04,
+      "stats": {
+        "documents": 522931,
+        "queries": 15000,
+        "query_tokens": 101406,
+        "tokens": 4202151,
+        "vocab_size": 65377
+      },
+      "python_reference_bm25s": {
+        "build_ms": 5795.618351999999,
+        "query": {
+          "count": 15000,
+          "qps": 90.55577043265674,
+          "total_ms": 165643.778727
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 54829056,
+        "build_ms": 787.8471659999917,
+        "query": {
+          "avg_ms": 1.5674470187334435,
+          "count": 15000,
+          "p50_ms": 1.4681379999998967,
+          "p95_ms": 2.5240480500038127,
+          "qps": 637.9800963276181
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 55517184,
+        "build_ms": 1064.5575770000023,
+        "query": {
+          "avg_ms": 1.613850237399987,
+          "count": 15000,
+          "p50_ms": 1.5153155000007246,
+          "p95_ms": 2.573833050000473,
+          "qps": 619.6361823579505
+        }
+      },
+      "wall_time_s": 261.8178884689989
+    },
+    "scidocs": {
+      "dataset": "scidocs",
+      "official_qps": 767.05,
+      "stats": {
+        "documents": 25657,
+        "queries": 1000,
+        "query_tokens": 7812,
+        "tokens": 3211248,
+        "vocab_size": 58804
+      },
+      "python_reference_bm25s": {
+        "build_ms": 974.177662999999,
+        "query": {
+          "count": 1000,
+          "qps": 1203.0876556516228,
+          "total_ms": 831.1946309999953
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 26017792,
+        "build_ms": 394.76593500000945,
+        "query": {
+          "avg_ms": 0.5447057749997413,
+          "count": 1000,
+          "p50_ms": 0.5122964999983992,
+          "p95_ms": 0.6652377000108344,
+          "qps": 1835.8534935681103
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 26664960,
+        "build_ms": 633.0072209999997,
+        "query": {
+          "avg_ms": 0.6192267789999875,
+          "count": 1000,
+          "p50_ms": 0.5707820000040442,
+          "p95_ms": 0.732322300004995,
+          "qps": 1614.9172385841218
+        }
+      },
+      "wall_time_s": 15.444668194002247
+    },
+    "scifact": {
+      "dataset": "scifact",
+      "official_qps": 1317.12,
+      "stats": {
+        "documents": 5183,
+        "queries": 1109,
+        "query_tokens": 10343,
+        "tokens": 812074,
+        "vocab_size": 26559
+      },
+      "python_reference_bm25s": {
+        "build_ms": 223.6609449999989,
+        "query": {
+          "count": 1109,
+          "qps": 2964.855155049128,
+          "total_ms": 374.0486270000005
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 6381568,
+        "build_ms": 98.73040799999444,
+        "query": {
+          "avg_ms": 0.3910119053202253,
+          "count": 1109,
+          "p50_ms": 0.3833279999980732,
+          "p95_ms": 0.43318879999958426,
+          "qps": 2557.466886285814
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 6660096,
+        "build_ms": 150.08957000000578,
+        "query": {
+          "avg_ms": 0.4463925653742165,
+          "count": 1109,
+          "p50_ms": 0.43375700001035966,
+          "p95_ms": 0.49796679999474236,
+          "qps": 2240.1806785506997
+        }
+      },
+      "wall_time_s": 4.532643822000004
+    },
+    "trec-covid": {
+      "dataset": "trec-covid",
+      "official_qps": 85.64,
+      "stats": {
+        "documents": 171332,
+        "queries": 50,
+        "query_tokens": 404,
+        "tokens": 20231413,
+        "vocab_size": 174893
+      },
+      "python_reference_bm25s": {
+        "build_ms": 6667.7678929999975,
+        "query": {
+          "count": 50,
+          "qps": 210.5038605671257,
+          "total_ms": 237.52533500000084
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 159334400,
+        "build_ms": 2652.9776269999984,
+        "query": {
+          "avg_ms": 5.209959799998103,
+          "count": 50,
+          "p50_ms": 1.665567499998133,
+          "p95_ms": 3.3246690999945363,
+          "qps": 191.94006065082579
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 161382400,
+        "build_ms": 4605.911388999999,
+        "query": {
+          "avg_ms": 6.473140239998543,
+          "count": 50,
+          "p50_ms": 1.6440224999954012,
+          "p95_ms": 3.9309412499960654,
+          "qps": 154.4845257361866
+        }
+      },
+      "wall_time_s": 75.73580279200002
+    },
+    "webis-touche2020": {
+      "dataset": "webis-touche2020",
+      "official_qps": 60.59,
+      "stats": {
+        "documents": 382545,
+        "queries": 49,
+        "query_tokens": 246,
+        "tokens": 74180347,
+        "vocab_size": 354228
+      },
+      "python_reference_bm25s": {
+        "build_ms": 21183.247323000003,
+        "query": {
+          "count": 49,
+          "qps": 240.36295866316627,
+          "total_ms": 203.85836600000573
+        }
+      },
+      "psql_bm25s_ids": {
+        "build_bytes": 507535360,
+        "build_ms": 9842.923301000013,
+        "query": {
+          "avg_ms": 12.052210428571911,
+          "count": 49,
+          "p50_ms": 1.8432749999988118,
+          "p95_ms": 2.9557326000144712,
+          "qps": 82.97233158403225
+        }
+      },
+      "psql_bm25s_text": {
+        "build_bytes": 512172032,
+        "build_ms": 16510.605417999985,
+        "query": {
+          "avg_ms": 13.495128530613394,
+          "count": 49,
+          "p50_ms": 2.0495950000167795,
+          "p95_ms": 3.326191200011408,
+          "qps": 74.1008133217496
+        }
+      },
+      "wall_time_s": 263.88711767300003
+    }
+  },
+  "top_k": 1000
+}

@@ -1,0 +1,2 @@
+-- 0.1.1 is a packaging and release-automation update.
+-- The SQL surface is unchanged from 0.1.0.

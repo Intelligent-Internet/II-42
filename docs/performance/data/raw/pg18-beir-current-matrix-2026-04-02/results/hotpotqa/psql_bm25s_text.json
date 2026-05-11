@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-04-02 15:14:34",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "psql_bm25s_text"
+  ],
+  "results": {
+    "hotpotqa": {
+      "dataset": "hotpotqa",
+      "psql_bm25s_text": {
+        "build_bytes": 1705336832,
+        "build_ms": 50378.30390499999,
+        "query": {
+          "avg_ms": 20.055376641560805,
+          "count": 97852,
+          "p50_ms": 17.734340500055623,
+          "p95_ms": 41.85511155005769,
+          "qps": 49.86194065922938
+        }
+      },
+      "stats": {
+        "documents": 5233329,
+        "queries": 97852,
+        "query_tokens": 1205269,
+        "tokens": 169530288,
+        "vocab_size": 2549160
+      },
+      "wall_time_s": 2311.9949821070004
+    }
+  },
+  "top_k": 1000
+}

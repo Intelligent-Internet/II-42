@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-04-02 15:06:57",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "psql_bm25s_ids"
+  ],
+  "results": {
+    "climate-fever": {
+      "dataset": "climate-fever",
+      "psql_bm25s_ids": {
+        "build_bytes": 2854166528,
+        "build_ms": 52735.130433,
+        "query": {
+          "avg_ms": 17.306871386320587,
+          "count": 1535,
+          "p50_ms": 13.796010999953978,
+          "p95_ms": 33.19396420008614,
+          "qps": 57.780518366271764
+        }
+      },
+      "stats": {
+        "documents": 5416593,
+        "queries": 1535,
+        "query_tokens": 21728,
+        "tokens": 318190131,
+        "vocab_size": 3115002
+      },
+      "wall_time_s": 509.344980486
+    }
+  },
+  "top_k": 1000
+}

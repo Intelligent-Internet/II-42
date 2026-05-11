@@ -1,0 +1,842 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1380" viewBox="0 0 1900 1380">
+<rect width="100%" height="100%" fill="#fffdf8"/>
+<text x="950.00" y="50.00" font-size="32" font-weight="800" fill="#25211a" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">BEIR Quality Score Heatmap</text>
+<text x="950.00" y="80.00" font-size="15" font-weight="400" fill="#5b5349" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">qrels-only evaluation | top100 retrieval | cell = absolute metric score</text>
+<text x="950.00" y="108.00" font-size="14" font-weight="400" fill="#74695d" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Datasets are sorted by document count. Bold cells are within 0.001 of the best engine for that dataset and metric.</text>
+<rect x="690.00" y="154.00" width="19.07" height="18.00" fill="#f8f3e9" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="708.57" y="154.00" width="19.07" height="18.00" fill="#f0eee7" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="727.14" y="154.00" width="19.07" height="18.00" fill="#e7e8e4" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="745.71" y="154.00" width="19.07" height="18.00" fill="#dfe3e2" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="764.29" y="154.00" width="19.07" height="18.00" fill="#d7dee0" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="782.86" y="154.00" width="19.07" height="18.00" fill="#cfd9de" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="801.43" y="154.00" width="19.07" height="18.00" fill="#c6d3db" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="820.00" y="154.00" width="19.07" height="18.00" fill="#beced9" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="838.57" y="154.00" width="19.07" height="18.00" fill="#b6c9d7" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="857.14" y="154.00" width="19.07" height="18.00" fill="#adc3d4" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="875.71" y="154.00" width="19.07" height="18.00" fill="#a5bed2" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="894.29" y="154.00" width="19.07" height="18.00" fill="#9db9d0" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="912.86" y="154.00" width="19.07" height="18.00" fill="#94b3cd" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="931.43" y="154.00" width="19.07" height="18.00" fill="#8caecb" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="950.00" y="154.00" width="19.07" height="18.00" fill="#84a9c9" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="968.57" y="154.00" width="19.07" height="18.00" fill="#7ca4c7" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="987.14" y="154.00" width="19.07" height="18.00" fill="#739ec4" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1005.71" y="154.00" width="19.07" height="18.00" fill="#6b99c2" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1024.29" y="154.00" width="19.07" height="18.00" fill="#6394c0" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1042.86" y="154.00" width="19.07" height="18.00" fill="#5a8ebd" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1061.43" y="154.00" width="19.07" height="18.00" fill="#5289bb" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1080.00" y="154.00" width="19.07" height="18.00" fill="#4a84b9" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1098.57" y="154.00" width="19.07" height="18.00" fill="#417eb6" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1117.14" y="154.00" width="19.07" height="18.00" fill="#3979b4" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1135.71" y="154.00" width="19.07" height="18.00" fill="#3174b2" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1154.29" y="154.00" width="19.07" height="18.00" fill="#296fb0" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1172.86" y="154.00" width="19.07" height="18.00" fill="#2069ad" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="1191.43" y="154.00" width="19.07" height="18.00" fill="#1864ab" stroke="none" stroke-width="1.00" rx="0.00"/>
+<rect x="690.00" y="154.00" width="520.00" height="18.00" fill="none" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="690.00" y="193.00" font-size="12" font-weight="400" fill="#6b6257" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">panel min</text>
+<text x="950.00" y="193.00" font-size="12" font-weight="400" fill="#6b6257" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">absolute cell values</text>
+<text x="1210.00" y="193.00" font-size="12" font-weight="400" fill="#6b6257" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">panel max</text>
+<text x="950.00" y="140.00" font-size="13" font-weight="600" fill="#51483d" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">color is scaled independently inside each metric panel</text>
+<text x="672.00" y="168.00" font-size="12" font-weight="400" fill="#74695d" text-anchor="end" font-family="ui-sans-serif, system-ui, sans-serif">lower</text>
+<text x="1228.00" y="168.00" font-size="12" font-weight="400" fill="#244f7e" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">higher</text>
+<rect x="64.00" y="250.00" width="851.00" height="450.00" fill="#fffaf0" stroke="#d8ccb8" stroke-width="1.20" rx="14.00"/>
+<text x="489.50" y="230.00" font-size="20" font-weight="700" fill="#25211a" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">NDCG@10</text>
+<text x="82.00" y="296.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Dataset</text>
+<text x="298.00" y="296.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Docs</text>
+<text x="390.30" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Python reference</text>
+<text x="502.90" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s ids</text>
+<text x="615.50" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s text[]</text>
+<text x="728.10" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">pg_search</text>
+<text x="840.70" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">vchord_bm25</text>
+<line x1="82.00" y1="330.00" x2="897.00" y2="330.00" stroke="#e2d6c4" stroke-width="1.20"/>
+<rect x="82.00" y="330.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="346.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nfcorpus</text>
+<text x="298.00" y="346.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4K</text>
+<rect x="334.00" y="330.00" width="112.60" height="23.00" fill="#bacbd8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="346.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3230</text>
+<rect x="446.60" y="330.00" width="112.60" height="23.00" fill="#b9cbd8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="346.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3235</text>
+<rect x="559.20" y="330.00" width="112.60" height="23.00" fill="#b9cbd8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="346.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3235</text>
+<rect x="671.80" y="330.00" width="112.60" height="23.00" fill="#baccd8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="346.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3215</text>
+<rect x="784.40" y="330.00" width="112.60" height="23.00" fill="#baccd8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="346.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3209</text>
+<text x="82.00" y="369.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scifact</text>
+<text x="298.00" y="369.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5K</text>
+<rect x="334.00" y="353.00" width="112.60" height="23.00" fill="#407eb6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="369.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6863</text>
+<rect x="446.60" y="353.00" width="112.60" height="23.00" fill="#407eb6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="369.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6863</text>
+<rect x="559.20" y="353.00" width="112.60" height="23.00" fill="#407eb6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="369.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6863</text>
+<rect x="671.80" y="353.00" width="112.60" height="23.00" fill="#427fb7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="369.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6819</text>
+<rect x="784.40" y="353.00" width="112.60" height="23.00" fill="#4480b7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="369.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6766</text>
+<rect x="82.00" y="376.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="392.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">arguana</text>
+<text x="298.00" y="392.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">9K</text>
+<rect x="334.00" y="376.00" width="112.60" height="23.00" fill="#abc2d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="392.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3655</text>
+<rect x="446.60" y="376.00" width="112.60" height="23.00" fill="#abc2d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="392.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3656</text>
+<rect x="559.20" y="376.00" width="112.60" height="23.00" fill="#abc2d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="392.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3656</text>
+<rect x="671.80" y="376.00" width="112.60" height="23.00" fill="#bfcfd9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="392.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3060</text>
+<rect x="784.40" y="376.00" width="112.60" height="23.00" fill="#adc3d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="392.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3597</text>
+<text x="82.00" y="415.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scidocs</text>
+<text x="298.00" y="415.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">26K</text>
+<rect x="334.00" y="399.00" width="112.60" height="23.00" fill="#f1eee7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="415.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1578</text>
+<rect x="446.60" y="399.00" width="112.60" height="23.00" fill="#f1eee7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="415.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1578</text>
+<rect x="559.20" y="399.00" width="112.60" height="23.00" fill="#f1eee7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="415.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1578</text>
+<rect x="671.80" y="399.00" width="112.60" height="23.00" fill="#f1efe7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="415.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1567</text>
+<rect x="784.40" y="399.00" width="112.60" height="23.00" fill="#f1efe7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="415.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1561</text>
+<rect x="82.00" y="422.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="438.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fiqa</text>
+<text x="298.00" y="438.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">58K</text>
+<rect x="334.00" y="422.00" width="112.60" height="23.00" fill="#d2dade" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2514</text>
+<rect x="446.60" y="422.00" width="112.60" height="23.00" fill="#d2dade" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2514</text>
+<rect x="559.20" y="422.00" width="112.60" height="23.00" fill="#d2dade" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2514</text>
+<rect x="671.80" y="422.00" width="112.60" height="23.00" fill="#d2dbde" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="438.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2504</text>
+<rect x="784.40" y="422.00" width="112.60" height="23.00" fill="#d1dade" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2517</text>
+<text x="82.00" y="461.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">trec-covid</text>
+<text x="298.00" y="461.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">171K</text>
+<rect x="334.00" y="445.00" width="112.60" height="23.00" fill="#5e90be" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="461.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5988</text>
+<rect x="446.60" y="445.00" width="112.60" height="23.00" fill="#5d90be" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="461.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5994</text>
+<rect x="559.20" y="445.00" width="112.60" height="23.00" fill="#5d90be" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="461.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5994</text>
+<rect x="671.80" y="445.00" width="112.60" height="23.00" fill="#6092bf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="461.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5903</text>
+<rect x="784.40" y="445.00" width="112.60" height="23.00" fill="#6192bf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="461.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5895</text>
+<rect x="82.00" y="468.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="484.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">webis-touche2020</text>
+<text x="298.00" y="484.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">383K</text>
+<rect x="334.00" y="468.00" width="112.60" height="23.00" fill="#b9cbd7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3259</text>
+<rect x="446.60" y="468.00" width="112.60" height="23.00" fill="#b9cbd7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3259</text>
+<rect x="559.20" y="468.00" width="112.60" height="23.00" fill="#b9cbd7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3259</text>
+<rect x="671.80" y="468.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3347</text>
+<rect x="784.40" y="468.00" width="112.60" height="23.00" fill="#b5c8d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="484.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3379</text>
+<text x="82.00" y="507.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">cqadupstack</text>
+<text x="298.00" y="507.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">457K</text>
+<rect x="334.00" y="491.00" width="112.60" height="23.00" fill="#c2d0da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="507.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2994</text>
+<rect x="446.60" y="491.00" width="112.60" height="23.00" fill="#c2d0da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="507.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2994</text>
+<rect x="559.20" y="491.00" width="112.60" height="23.00" fill="#c2d0da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="507.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2994</text>
+<rect x="671.80" y="491.00" width="112.60" height="23.00" fill="#c1d0da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="507.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3005</text>
+<rect x="784.40" y="491.00" width="112.60" height="23.00" fill="#c1d0da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="507.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3007</text>
+<rect x="82.00" y="514.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="530.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">quora</text>
+<text x="298.00" y="530.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">523K</text>
+<rect x="334.00" y="514.00" width="112.60" height="23.00" fill="#1965ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="530.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8045</text>
+<rect x="446.60" y="514.00" width="112.60" height="23.00" fill="#1964ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="530.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8056</text>
+<rect x="559.20" y="514.00" width="112.60" height="23.00" fill="#1964ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="530.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8056</text>
+<rect x="671.80" y="514.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="530.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8075</text>
+<rect x="784.40" y="514.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="530.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8069</text>
+<text x="82.00" y="553.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nq</text>
+<text x="298.00" y="553.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">2.7M</text>
+<rect x="334.00" y="537.00" width="112.60" height="23.00" fill="#c6d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="553.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2849</text>
+<rect x="446.60" y="537.00" width="112.60" height="23.00" fill="#c6d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="553.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2849</text>
+<rect x="559.20" y="537.00" width="112.60" height="23.00" fill="#c6d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="553.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2849</text>
+<rect x="671.80" y="537.00" width="112.60" height="23.00" fill="#c4d2da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="553.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2933</text>
+<rect x="784.40" y="537.00" width="112.60" height="23.00" fill="#c3d1da" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="553.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2935</text>
+<rect x="82.00" y="560.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="576.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">dbpedia-entity</text>
+<text x="298.00" y="576.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4.6M</text>
+<rect x="334.00" y="560.00" width="112.60" height="23.00" fill="#c8d4dc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="576.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2801</text>
+<rect x="446.60" y="560.00" width="112.60" height="23.00" fill="#c8d4dc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="576.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2803</text>
+<rect x="559.20" y="560.00" width="112.60" height="23.00" fill="#c8d4dc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="576.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2803</text>
+<rect x="671.80" y="560.00" width="112.60" height="23.00" fill="#c7d4db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="576.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2837</text>
+<rect x="784.40" y="560.00" width="112.60" height="23.00" fill="#c6d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="576.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2845</text>
+<text x="82.00" y="599.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">hotpotqa</text>
+<text x="298.00" y="599.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.2M</text>
+<rect x="334.00" y="583.00" width="112.60" height="23.00" fill="#6897c1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="599.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5689</text>
+<rect x="446.60" y="583.00" width="112.60" height="23.00" fill="#6897c1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="599.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5689</text>
+<rect x="559.20" y="583.00" width="112.60" height="23.00" fill="#6897c1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="599.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5689</text>
+<rect x="671.80" y="583.00" width="112.60" height="23.00" fill="#6092bf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="599.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5927</text>
+<rect x="784.40" y="583.00" width="112.60" height="23.00" fill="#6193bf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="599.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5884</text>
+<rect x="82.00" y="606.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="622.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fever</text>
+<text x="298.00" y="622.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="334.00" y="606.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="622.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4811</text>
+<rect x="446.60" y="606.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="622.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4811</text>
+<rect x="559.20" y="606.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="622.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4811</text>
+<rect x="671.80" y="606.00" width="112.60" height="23.00" fill="#7aa3c6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="622.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5125</text>
+<rect x="784.40" y="606.00" width="112.60" height="23.00" fill="#7ba3c6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="622.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5121</text>
+<text x="82.00" y="645.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">climate-fever</text>
+<text x="298.00" y="645.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="334.00" y="629.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1361</text>
+<rect x="446.60" y="629.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1361</text>
+<rect x="559.20" y="629.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1361</text>
+<rect x="671.80" y="629.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="645.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1421</text>
+<rect x="784.40" y="629.00" width="112.60" height="23.00" fill="#f7f2e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1403</text>
+<rect x="82.00" y="652.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="668.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">msmarco</text>
+<text x="298.00" y="668.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">8.8M</text>
+<rect x="334.00" y="652.00" width="112.60" height="23.00" fill="#a0bbd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4005</text>
+<rect x="446.60" y="652.00" width="112.60" height="23.00" fill="#a0bbd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3996</text>
+<rect x="559.20" y="652.00" width="112.60" height="23.00" fill="#a0bbd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3996</text>
+<rect x="671.80" y="652.00" width="112.60" height="23.00" fill="#9db9d0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="668.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4097</text>
+<rect x="784.40" y="652.00" width="112.60" height="23.00" fill="#9db9d0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="668.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4093</text>
+<line x1="262.00" y1="272.00" x2="262.00" y2="675.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<line x1="334.00" y1="272.00" x2="334.00" y2="675.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<rect x="985.00" y="250.00" width="851.00" height="450.00" fill="#fffaf0" stroke="#d8ccb8" stroke-width="1.20" rx="14.00"/>
+<text x="1410.50" y="230.00" font-size="20" font-weight="700" fill="#25211a" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">MAP@100</text>
+<text x="1003.00" y="296.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Dataset</text>
+<text x="1219.00" y="296.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Docs</text>
+<text x="1311.30" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Python reference</text>
+<text x="1423.90" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s ids</text>
+<text x="1536.50" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s text[]</text>
+<text x="1649.10" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">pg_search</text>
+<text x="1761.70" y="290.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">vchord_bm25</text>
+<line x1="1003.00" y1="330.00" x2="1818.00" y2="330.00" stroke="#e2d6c4" stroke-width="1.20"/>
+<rect x="1003.00" y="330.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="346.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nfcorpus</text>
+<text x="1219.00" y="346.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4K</text>
+<rect x="1255.00" y="330.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="346.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1533</text>
+<rect x="1367.60" y="330.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="346.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1535</text>
+<rect x="1480.20" y="330.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="346.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1535</text>
+<rect x="1592.80" y="330.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="346.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1523</text>
+<rect x="1705.40" y="330.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="346.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1518</text>
+<text x="1003.00" y="369.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scifact</text>
+<text x="1219.00" y="369.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5K</text>
+<rect x="1255.00" y="353.00" width="112.60" height="23.00" fill="#417eb6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="369.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6439</text>
+<rect x="1367.60" y="353.00" width="112.60" height="23.00" fill="#417eb6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="369.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6439</text>
+<rect x="1480.20" y="353.00" width="112.60" height="23.00" fill="#417eb6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="369.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6439</text>
+<rect x="1592.80" y="353.00" width="112.60" height="23.00" fill="#437fb7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="369.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6397</text>
+<rect x="1705.40" y="353.00" width="112.60" height="23.00" fill="#4480b7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="369.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6350</text>
+<rect x="1003.00" y="376.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="392.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">arguana</text>
+<text x="1219.00" y="392.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">9K</text>
+<rect x="1255.00" y="376.00" width="112.60" height="23.00" fill="#c5d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="392.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2524</text>
+<rect x="1367.60" y="376.00" width="112.60" height="23.00" fill="#c5d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="392.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2524</text>
+<rect x="1480.20" y="376.00" width="112.60" height="23.00" fill="#c5d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="392.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2524</text>
+<rect x="1592.80" y="376.00" width="112.60" height="23.00" fill="#d4dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="392.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2100</text>
+<rect x="1705.40" y="376.00" width="112.60" height="23.00" fill="#c7d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="392.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2484</text>
+<text x="1003.00" y="415.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scidocs</text>
+<text x="1219.00" y="415.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">26K</text>
+<rect x="1255.00" y="399.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="415.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1077</text>
+<rect x="1367.60" y="399.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="415.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1077</text>
+<rect x="1480.20" y="399.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="415.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1077</text>
+<rect x="1592.80" y="399.00" width="112.60" height="23.00" fill="#f6f2e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="415.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1066</text>
+<rect x="1705.40" y="399.00" width="112.60" height="23.00" fill="#f6f2e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="415.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1066</text>
+<rect x="1003.00" y="422.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="438.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fiqa</text>
+<text x="1219.00" y="438.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">58K</text>
+<rect x="1255.00" y="422.00" width="112.60" height="23.00" fill="#d6dddf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2041</text>
+<rect x="1367.60" y="422.00" width="112.60" height="23.00" fill="#d6dddf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2041</text>
+<rect x="1480.20" y="422.00" width="112.60" height="23.00" fill="#d6dddf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2041</text>
+<rect x="1592.80" y="422.00" width="112.60" height="23.00" fill="#d6dde0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2034</text>
+<rect x="1705.40" y="422.00" width="112.60" height="23.00" fill="#d6dde0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="438.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2036</text>
+<text x="1003.00" y="461.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">trec-covid</text>
+<text x="1219.00" y="461.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">171K</text>
+<rect x="1255.00" y="445.00" width="112.60" height="23.00" fill="#a9c1d3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="461.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3354</text>
+<rect x="1367.60" y="445.00" width="112.60" height="23.00" fill="#a9c1d3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="461.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3353</text>
+<rect x="1480.20" y="445.00" width="112.60" height="23.00" fill="#a9c1d3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="461.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3353</text>
+<rect x="1592.80" y="445.00" width="112.60" height="23.00" fill="#adc3d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="461.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3240</text>
+<rect x="1705.40" y="445.00" width="112.60" height="23.00" fill="#acc3d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="461.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3271</text>
+<rect x="1003.00" y="468.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="484.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">webis-touche2020</text>
+<text x="1219.00" y="484.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">383K</text>
+<rect x="1255.00" y="468.00" width="112.60" height="23.00" fill="#d3dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2105</text>
+<rect x="1367.60" y="468.00" width="112.60" height="23.00" fill="#d3dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2106</text>
+<rect x="1480.20" y="468.00" width="112.60" height="23.00" fill="#d3dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2106</text>
+<rect x="1592.80" y="468.00" width="112.60" height="23.00" fill="#d3dbdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="484.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2120</text>
+<rect x="1705.40" y="468.00" width="112.60" height="23.00" fill="#d2dbdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="484.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2140</text>
+<text x="1003.00" y="507.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">cqadupstack</text>
+<text x="1219.00" y="507.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">457K</text>
+<rect x="1255.00" y="491.00" width="112.60" height="23.00" fill="#bfced9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="507.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2723</text>
+<rect x="1367.60" y="491.00" width="112.60" height="23.00" fill="#bfced9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="507.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2723</text>
+<rect x="1480.20" y="491.00" width="112.60" height="23.00" fill="#bfced9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="507.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2723</text>
+<rect x="1592.80" y="491.00" width="112.60" height="23.00" fill="#beced9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="507.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2735</text>
+<rect x="1705.40" y="491.00" width="112.60" height="23.00" fill="#beced9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="507.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2734</text>
+<rect x="1003.00" y="514.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="530.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">quora</text>
+<text x="1219.00" y="530.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">523K</text>
+<rect x="1255.00" y="514.00" width="112.60" height="23.00" fill="#1965ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="530.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7630</text>
+<rect x="1367.60" y="514.00" width="112.60" height="23.00" fill="#1964ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="530.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7643</text>
+<rect x="1480.20" y="514.00" width="112.60" height="23.00" fill="#1964ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="530.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7643</text>
+<rect x="1592.80" y="514.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="530.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7662</text>
+<rect x="1705.40" y="514.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="530.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7658</text>
+<text x="1003.00" y="553.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nq</text>
+<text x="1219.00" y="553.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">2.7M</text>
+<rect x="1255.00" y="537.00" width="112.60" height="23.00" fill="#c9d5dc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="553.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2409</text>
+<rect x="1367.60" y="537.00" width="112.60" height="23.00" fill="#c9d5dc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="553.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2408</text>
+<rect x="1480.20" y="537.00" width="112.60" height="23.00" fill="#c9d5dc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="553.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2408</text>
+<rect x="1592.80" y="537.00" width="112.60" height="23.00" fill="#c7d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="553.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2487</text>
+<rect x="1705.40" y="537.00" width="112.60" height="23.00" fill="#c6d3db" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="553.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2491</text>
+<rect x="1003.00" y="560.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="576.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">dbpedia-entity</text>
+<text x="1219.00" y="576.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4.6M</text>
+<rect x="1255.00" y="560.00" width="112.60" height="23.00" fill="#d3dbdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="576.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2113</text>
+<rect x="1367.60" y="560.00" width="112.60" height="23.00" fill="#d3dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="576.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2110</text>
+<rect x="1480.20" y="560.00" width="112.60" height="23.00" fill="#d3dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="576.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2110</text>
+<rect x="1592.80" y="560.00" width="112.60" height="23.00" fill="#d1dade" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="576.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2169</text>
+<rect x="1705.40" y="560.00" width="112.60" height="23.00" fill="#d1dade" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="576.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2172</text>
+<text x="1003.00" y="599.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">hotpotqa</text>
+<text x="1219.00" y="599.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.2M</text>
+<rect x="1255.00" y="583.00" width="112.60" height="23.00" fill="#77a0c5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="599.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4858</text>
+<rect x="1367.60" y="583.00" width="112.60" height="23.00" fill="#77a0c5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="599.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4859</text>
+<rect x="1480.20" y="583.00" width="112.60" height="23.00" fill="#77a0c5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="599.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4859</text>
+<rect x="1592.80" y="583.00" width="112.60" height="23.00" fill="#6f9bc3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="599.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5094</text>
+<rect x="1705.40" y="583.00" width="112.60" height="23.00" fill="#709cc3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="599.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5050</text>
+<rect x="1003.00" y="606.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="622.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fever</text>
+<text x="1219.00" y="622.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="1255.00" y="606.00" width="112.60" height="23.00" fill="#8aadcb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="622.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4284</text>
+<rect x="1367.60" y="606.00" width="112.60" height="23.00" fill="#8aadcb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="622.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4284</text>
+<rect x="1480.20" y="606.00" width="112.60" height="23.00" fill="#8aadcb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="622.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4284</text>
+<rect x="1592.80" y="606.00" width="112.60" height="23.00" fill="#7fa6c8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="622.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4598</text>
+<rect x="1705.40" y="606.00" width="112.60" height="23.00" fill="#80a6c8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="622.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4593</text>
+<text x="1003.00" y="645.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">climate-fever</text>
+<text x="1219.00" y="645.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="1255.00" y="629.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1020</text>
+<rect x="1367.60" y="629.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1020</text>
+<rect x="1480.20" y="629.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1020</text>
+<rect x="1592.80" y="629.00" width="112.60" height="23.00" fill="#f7f2e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="645.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1064</text>
+<rect x="1705.40" y="629.00" width="112.60" height="23.00" fill="#f7f2e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="645.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1046</text>
+<rect x="1003.00" y="652.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="668.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">msmarco</text>
+<text x="1219.00" y="668.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">8.8M</text>
+<rect x="1255.00" y="652.00" width="112.60" height="23.00" fill="#aec4d5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3212</text>
+<rect x="1367.60" y="652.00" width="112.60" height="23.00" fill="#aec4d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3225</text>
+<rect x="1480.20" y="652.00" width="112.60" height="23.00" fill="#aec4d4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3225</text>
+<rect x="1592.80" y="652.00" width="112.60" height="23.00" fill="#a3bdd2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="668.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3526</text>
+<rect x="1705.40" y="652.00" width="112.60" height="23.00" fill="#aac1d3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="668.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3346</text>
+<line x1="1183.00" y1="272.00" x2="1183.00" y2="675.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<line x1="1255.00" y1="272.00" x2="1255.00" y2="675.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<rect x="64.00" y="796.00" width="851.00" height="450.00" fill="#fffaf0" stroke="#d8ccb8" stroke-width="1.20" rx="14.00"/>
+<text x="489.50" y="776.00" font-size="20" font-weight="700" fill="#25211a" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Recall@100</text>
+<text x="82.00" y="842.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Dataset</text>
+<text x="298.00" y="842.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Docs</text>
+<text x="390.30" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Python reference</text>
+<text x="502.90" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s ids</text>
+<text x="615.50" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s text[]</text>
+<text x="728.10" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">pg_search</text>
+<text x="840.70" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">vchord_bm25</text>
+<line x1="82.00" y1="876.00" x2="897.00" y2="876.00" stroke="#e2d6c4" stroke-width="1.20"/>
+<rect x="82.00" y="876.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="892.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nfcorpus</text>
+<text x="298.00" y="892.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4K</text>
+<rect x="334.00" y="876.00" width="112.60" height="23.00" fill="#d5dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="892.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2474</text>
+<rect x="446.60" y="876.00" width="112.60" height="23.00" fill="#d4dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="892.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2503</text>
+<rect x="559.20" y="876.00" width="112.60" height="23.00" fill="#d4dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="892.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2504</text>
+<rect x="671.80" y="876.00" width="112.60" height="23.00" fill="#d4dcdf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="892.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2486</text>
+<rect x="784.40" y="876.00" width="112.60" height="23.00" fill="#d5dddf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="892.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2468</text>
+<text x="82.00" y="915.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scifact</text>
+<text x="298.00" y="915.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5K</text>
+<rect x="334.00" y="899.00" width="112.60" height="23.00" fill="#296fb0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="915.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9127</text>
+<rect x="446.60" y="899.00" width="112.60" height="23.00" fill="#296fb0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="915.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9127</text>
+<rect x="559.20" y="899.00" width="112.60" height="23.00" fill="#296fb0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="915.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9127</text>
+<rect x="671.80" y="899.00" width="112.60" height="23.00" fill="#296fb0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="915.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9127</text>
+<rect x="784.40" y="899.00" width="112.60" height="23.00" fill="#296fb0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="915.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9127</text>
+<rect x="82.00" y="922.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="938.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">arguana</text>
+<text x="298.00" y="938.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">9K</text>
+<rect x="334.00" y="922.00" width="112.60" height="23.00" fill="#1b66ac" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="938.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9659</text>
+<rect x="446.60" y="922.00" width="112.60" height="23.00" fill="#1b66ac" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="938.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9659</text>
+<rect x="559.20" y="922.00" width="112.60" height="23.00" fill="#1b66ac" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="938.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9659</text>
+<rect x="671.80" y="922.00" width="112.60" height="23.00" fill="#286eaf" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="938.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9161</text>
+<rect x="784.40" y="922.00" width="112.60" height="23.00" fill="#1d67ac" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="938.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9580</text>
+<text x="82.00" y="961.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scidocs</text>
+<text x="298.00" y="961.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">26K</text>
+<rect x="334.00" y="945.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="961.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3646</text>
+<rect x="446.60" y="945.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="961.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3646</text>
+<rect x="559.20" y="945.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="961.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3646</text>
+<rect x="671.80" y="945.00" width="112.60" height="23.00" fill="#b7cad7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="961.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3607</text>
+<rect x="784.40" y="945.00" width="112.60" height="23.00" fill="#b7cad7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="961.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3616</text>
+<rect x="82.00" y="968.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="984.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fiqa</text>
+<text x="298.00" y="984.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">58K</text>
+<rect x="334.00" y="968.00" width="112.60" height="23.00" fill="#84a9c9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5593</text>
+<rect x="446.60" y="968.00" width="112.60" height="23.00" fill="#84a9c9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5593</text>
+<rect x="559.20" y="968.00" width="112.60" height="23.00" fill="#84a9c9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5593</text>
+<rect x="671.80" y="968.00" width="112.60" height="23.00" fill="#84a9c9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5589</text>
+<rect x="784.40" y="968.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="984.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5542</text>
+<text x="82.00" y="1007.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">trec-covid</text>
+<text x="298.00" y="1007.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">171K</text>
+<rect x="334.00" y="991.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1007.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1121</text>
+<rect x="446.60" y="991.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1007.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1121</text>
+<rect x="559.20" y="991.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1007.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1121</text>
+<rect x="671.80" y="991.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1007.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1104</text>
+<rect x="784.40" y="991.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1007.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1108</text>
+<rect x="82.00" y="1014.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="1030.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">webis-touche2020</text>
+<text x="298.00" y="1030.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">383K</text>
+<rect x="334.00" y="1014.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5557</text>
+<rect x="446.60" y="1014.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5557</text>
+<rect x="559.20" y="1014.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5557</text>
+<rect x="671.80" y="1014.00" width="112.60" height="23.00" fill="#84a9c9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1030.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5600</text>
+<rect x="784.40" y="1014.00" width="112.60" height="23.00" fill="#84a9c9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5589</text>
+<text x="82.00" y="1053.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">cqadupstack</text>
+<text x="298.00" y="1053.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">457K</text>
+<rect x="334.00" y="1037.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5543</text>
+<rect x="446.60" y="1037.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5543</text>
+<rect x="559.20" y="1037.00" width="112.60" height="23.00" fill="#85aac9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5543</text>
+<rect x="671.80" y="1037.00" width="112.60" height="23.00" fill="#86aaca" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1053.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5508</text>
+<rect x="784.40" y="1037.00" width="112.60" height="23.00" fill="#86abca" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1053.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5503</text>
+<rect x="82.00" y="1060.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="1076.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">quora</text>
+<text x="298.00" y="1076.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">523K</text>
+<rect x="334.00" y="1060.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1076.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9771</text>
+<rect x="446.60" y="1060.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1076.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9775</text>
+<rect x="559.20" y="1060.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1076.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9775</text>
+<rect x="671.80" y="1060.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1076.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9786</text>
+<rect x="784.40" y="1060.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1076.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.9770</text>
+<text x="82.00" y="1099.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nq</text>
+<text x="298.00" y="1099.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">2.7M</text>
+<rect x="334.00" y="1083.00" width="112.60" height="23.00" fill="#558bbc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1099.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7430</text>
+<rect x="446.60" y="1083.00" width="112.60" height="23.00" fill="#558bbc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1099.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7430</text>
+<rect x="559.20" y="1083.00" width="112.60" height="23.00" fill="#558bbc" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1099.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7430</text>
+<rect x="671.80" y="1083.00" width="112.60" height="23.00" fill="#538abb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1099.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7506</text>
+<rect x="784.40" y="1083.00" width="112.60" height="23.00" fill="#538abb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1099.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7494</text>
+<rect x="82.00" y="1106.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="1122.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">dbpedia-entity</text>
+<text x="298.00" y="1122.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4.6M</text>
+<rect x="334.00" y="1106.00" width="112.60" height="23.00" fill="#a1bcd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1122.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4472</text>
+<rect x="446.60" y="1106.00" width="112.60" height="23.00" fill="#a1bcd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1122.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4472</text>
+<rect x="559.20" y="1106.00" width="112.60" height="23.00" fill="#a1bcd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1122.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4472</text>
+<rect x="671.80" y="1106.00" width="112.60" height="23.00" fill="#9fbad0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1122.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4538</text>
+<rect x="784.40" y="1106.00" width="112.60" height="23.00" fill="#9fbad0" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1122.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4536</text>
+<text x="82.00" y="1145.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">hotpotqa</text>
+<text x="298.00" y="1145.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.2M</text>
+<rect x="334.00" y="1129.00" width="112.60" height="23.00" fill="#5188bb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1145.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7586</text>
+<rect x="446.60" y="1129.00" width="112.60" height="23.00" fill="#5188bb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1145.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7586</text>
+<rect x="559.20" y="1129.00" width="112.60" height="23.00" fill="#5188bb" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1145.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7586</text>
+<rect x="671.80" y="1129.00" width="112.60" height="23.00" fill="#4c85b9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1145.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7760</text>
+<rect x="784.40" y="1129.00" width="112.60" height="23.00" fill="#4d86ba" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1145.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.7716</text>
+<rect x="82.00" y="1152.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="1168.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fever</text>
+<text x="298.00" y="1168.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="334.00" y="1152.00" width="112.60" height="23.00" fill="#3979b4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1168.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8494</text>
+<rect x="446.60" y="1152.00" width="112.60" height="23.00" fill="#3979b4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1168.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8494</text>
+<rect x="559.20" y="1152.00" width="112.60" height="23.00" fill="#3979b4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1168.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8494</text>
+<rect x="671.80" y="1152.00" width="112.60" height="23.00" fill="#3677b3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1168.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8633</text>
+<rect x="784.40" y="1152.00" width="112.60" height="23.00" fill="#3677b3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1168.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.8638</text>
+<text x="82.00" y="1191.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">climate-fever</text>
+<text x="298.00" y="1191.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="334.00" y="1175.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3666</text>
+<rect x="446.60" y="1175.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3666</text>
+<rect x="559.20" y="1175.00" width="112.60" height="23.00" fill="#b6c9d7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3666</text>
+<rect x="671.80" y="1175.00" width="112.60" height="23.00" fill="#b1c5d5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1191.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3867</text>
+<rect x="784.40" y="1175.00" width="112.60" height="23.00" fill="#b3c7d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3784</text>
+<rect x="82.00" y="1198.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="82.00" y="1214.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">msmarco</text>
+<text x="298.00" y="1214.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">8.8M</text>
+<rect x="334.00" y="1198.00" width="112.60" height="23.00" fill="#a7bfd3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="390.30" y="1214.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4248</text>
+<rect x="446.60" y="1198.00" width="112.60" height="23.00" fill="#a7bfd3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="502.90" y="1214.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4247</text>
+<rect x="559.20" y="1198.00" width="112.60" height="23.00" fill="#a7bfd3" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="615.50" y="1214.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4247</text>
+<rect x="671.80" y="1198.00" width="112.60" height="23.00" fill="#a0bbd1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="728.10" y="1214.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4506</text>
+<rect x="784.40" y="1198.00" width="112.60" height="23.00" fill="#a3bdd2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="840.70" y="1214.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.4393</text>
+<line x1="262.00" y1="818.00" x2="262.00" y2="1221.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<line x1="334.00" y1="818.00" x2="334.00" y2="1221.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<rect x="985.00" y="796.00" width="851.00" height="450.00" fill="#fffaf0" stroke="#d8ccb8" stroke-width="1.20" rx="14.00"/>
+<text x="1410.50" y="776.00" font-size="20" font-weight="700" fill="#25211a" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Precision@10</text>
+<text x="1003.00" y="842.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Dataset</text>
+<text x="1219.00" y="842.00" font-size="12" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Docs</text>
+<text x="1311.30" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Python reference</text>
+<text x="1423.90" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s ids</text>
+<text x="1536.50" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s text[]</text>
+<text x="1649.10" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">pg_search</text>
+<text x="1761.70" y="836.00" font-size="11" font-weight="700" fill="#5d5348" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">vchord_bm25</text>
+<line x1="1003.00" y1="876.00" x2="1818.00" y2="876.00" stroke="#e2d6c4" stroke-width="1.20"/>
+<rect x="1003.00" y="876.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="892.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nfcorpus</text>
+<text x="1219.00" y="892.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4K</text>
+<rect x="1255.00" y="876.00" width="112.60" height="23.00" fill="#b2c6d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="892.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2319</text>
+<rect x="1367.60" y="876.00" width="112.60" height="23.00" fill="#b2c6d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="892.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2322</text>
+<rect x="1480.20" y="876.00" width="112.60" height="23.00" fill="#b2c6d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="892.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2322</text>
+<rect x="1592.80" y="876.00" width="112.60" height="23.00" fill="#b2c7d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="892.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2313</text>
+<rect x="1705.40" y="876.00" width="112.60" height="23.00" fill="#b3c7d6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="892.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2303</text>
+<text x="1003.00" y="915.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scifact</text>
+<text x="1219.00" y="915.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5K</text>
+<rect x="1255.00" y="899.00" width="112.60" height="23.00" fill="#e6e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="915.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0907</text>
+<rect x="1367.60" y="899.00" width="112.60" height="23.00" fill="#e6e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="915.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0907</text>
+<rect x="1480.20" y="899.00" width="112.60" height="23.00" fill="#e6e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="915.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0907</text>
+<rect x="1592.80" y="899.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="915.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0900</text>
+<rect x="1705.40" y="899.00" width="112.60" height="23.00" fill="#e7e8e4" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="915.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0893</text>
+<rect x="1003.00" y="922.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="938.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">arguana</text>
+<text x="1219.00" y="938.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">9K</text>
+<rect x="1255.00" y="922.00" width="112.60" height="23.00" fill="#ecebe6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="938.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0760</text>
+<rect x="1367.60" y="922.00" width="112.60" height="23.00" fill="#ecebe6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="938.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0760</text>
+<rect x="1480.20" y="922.00" width="112.60" height="23.00" fill="#ecebe6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="938.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0760</text>
+<rect x="1592.80" y="922.00" width="112.60" height="23.00" fill="#f0eee7" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="938.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0654</text>
+<rect x="1705.40" y="922.00" width="112.60" height="23.00" fill="#ecebe6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="938.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0749</text>
+<text x="1003.00" y="961.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">scidocs</text>
+<text x="1219.00" y="961.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">26K</text>
+<rect x="1255.00" y="945.00" width="112.60" height="23.00" fill="#eaeae5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="961.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0816</text>
+<rect x="1367.60" y="945.00" width="112.60" height="23.00" fill="#eaeae5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="961.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0816</text>
+<rect x="1480.20" y="945.00" width="112.60" height="23.00" fill="#eaeae5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="961.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0816</text>
+<rect x="1592.80" y="945.00" width="112.60" height="23.00" fill="#eaeae5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="961.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0805</text>
+<rect x="1705.40" y="945.00" width="112.60" height="23.00" fill="#eaeae5" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="961.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0802</text>
+<rect x="1003.00" y="968.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="984.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fiqa</text>
+<text x="1219.00" y="984.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">58K</text>
+<rect x="1255.00" y="968.00" width="112.60" height="23.00" fill="#eeede6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0699</text>
+<rect x="1367.60" y="968.00" width="112.60" height="23.00" fill="#eeede6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0699</text>
+<rect x="1480.20" y="968.00" width="112.60" height="23.00" fill="#eeede6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0699</text>
+<rect x="1592.80" y="968.00" width="112.60" height="23.00" fill="#eeede6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="984.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0688</text>
+<rect x="1705.40" y="968.00" width="112.60" height="23.00" fill="#eeede6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="984.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0698</text>
+<text x="1003.00" y="1007.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">trec-covid</text>
+<text x="1219.00" y="1007.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">171K</text>
+<rect x="1255.00" y="991.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1007.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6500</text>
+<rect x="1367.60" y="991.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1007.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6500</text>
+<rect x="1480.20" y="991.00" width="112.60" height="23.00" fill="#1864ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1007.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6500</text>
+<rect x="1592.80" y="991.00" width="112.60" height="23.00" fill="#1b66ac" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1007.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6420</text>
+<rect x="1705.40" y="991.00" width="112.60" height="23.00" fill="#1965ab" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1007.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.6460</text>
+<rect x="1003.00" y="1014.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="1030.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">webis-touche2020</text>
+<text x="1219.00" y="1030.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">383K</text>
+<rect x="1255.00" y="1014.00" width="112.60" height="23.00" fill="#98b5ce" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3041</text>
+<rect x="1367.60" y="1014.00" width="112.60" height="23.00" fill="#98b5ce" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3041</text>
+<rect x="1480.20" y="1014.00" width="112.60" height="23.00" fill="#98b5ce" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3041</text>
+<rect x="1592.80" y="1014.00" width="112.60" height="23.00" fill="#95b4ce" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1030.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3102</text>
+<rect x="1705.40" y="1014.00" width="112.60" height="23.00" fill="#95b4cd" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1030.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.3122</text>
+<text x="1003.00" y="1053.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">cqadupstack</text>
+<text x="1219.00" y="1053.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">457K</text>
+<rect x="1255.00" y="1037.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0488</text>
+<rect x="1367.60" y="1037.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0488</text>
+<rect x="1480.20" y="1037.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0488</text>
+<rect x="1592.80" y="1037.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0489</text>
+<rect x="1705.40" y="1037.00" width="112.60" height="23.00" fill="#f6f2e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1053.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0490</text>
+<rect x="1003.00" y="1060.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="1076.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">quora</text>
+<text x="1219.00" y="1076.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">523K</text>
+<rect x="1255.00" y="1060.00" width="112.60" height="23.00" fill="#dbe0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1076.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1216</text>
+<rect x="1367.60" y="1060.00" width="112.60" height="23.00" fill="#dbe0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1076.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1218</text>
+<rect x="1480.20" y="1060.00" width="112.60" height="23.00" fill="#dbe0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1076.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1218</text>
+<rect x="1592.80" y="1060.00" width="112.60" height="23.00" fill="#dbe0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1076.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1223</text>
+<rect x="1705.40" y="1060.00" width="112.60" height="23.00" fill="#dbe0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1076.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1220</text>
+<text x="1003.00" y="1099.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">nq</text>
+<text x="1219.00" y="1099.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">2.7M</text>
+<rect x="1255.00" y="1083.00" width="112.60" height="23.00" fill="#f5f1e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1099.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0521</text>
+<rect x="1367.60" y="1083.00" width="112.60" height="23.00" fill="#f5f1e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1099.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0521</text>
+<rect x="1480.20" y="1083.00" width="112.60" height="23.00" fill="#f5f1e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1099.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0521</text>
+<rect x="1592.80" y="1083.00" width="112.60" height="23.00" fill="#f4f1e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1099.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0532</text>
+<rect x="1705.40" y="1083.00" width="112.60" height="23.00" fill="#f4f1e8" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1099.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0532</text>
+<rect x="1003.00" y="1106.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="1122.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">dbpedia-entity</text>
+<text x="1219.00" y="1122.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4.6M</text>
+<rect x="1255.00" y="1106.00" width="112.60" height="23.00" fill="#a6bfd2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1122.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2658</text>
+<rect x="1367.60" y="1106.00" width="112.60" height="23.00" fill="#a6bfd2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1122.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2658</text>
+<rect x="1480.20" y="1106.00" width="112.60" height="23.00" fill="#a6bfd2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1122.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2658</text>
+<rect x="1592.80" y="1106.00" width="112.60" height="23.00" fill="#a5bed2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1122.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2683</text>
+<rect x="1705.40" y="1106.00" width="112.60" height="23.00" fill="#a5bed2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1122.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.2685</text>
+<text x="1003.00" y="1145.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">hotpotqa</text>
+<text x="1219.00" y="1145.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.2M</text>
+<rect x="1255.00" y="1129.00" width="112.60" height="23.00" fill="#dce1e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1145.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1199</text>
+<rect x="1367.60" y="1129.00" width="112.60" height="23.00" fill="#dce1e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1145.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1199</text>
+<rect x="1480.20" y="1129.00" width="112.60" height="23.00" fill="#dce1e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1145.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1199</text>
+<rect x="1592.80" y="1129.00" width="112.60" height="23.00" fill="#dae0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1145.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1242</text>
+<rect x="1705.40" y="1129.00" width="112.60" height="23.00" fill="#dae0e1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1145.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.1234</text>
+<rect x="1003.00" y="1152.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="1168.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">fever</text>
+<text x="1219.00" y="1168.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="1255.00" y="1152.00" width="112.60" height="23.00" fill="#eeece6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1168.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0712</text>
+<rect x="1367.60" y="1152.00" width="112.60" height="23.00" fill="#eeece6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1168.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0712</text>
+<rect x="1480.20" y="1152.00" width="112.60" height="23.00" fill="#eeece6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1168.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0712</text>
+<rect x="1592.80" y="1152.00" width="112.60" height="23.00" fill="#ecece6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1168.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0744</text>
+<rect x="1705.40" y="1152.00" width="112.60" height="23.00" fill="#ecece6" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1168.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0744</text>
+<text x="1003.00" y="1191.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">climate-fever</text>
+<text x="1219.00" y="1191.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M</text>
+<rect x="1255.00" y="1175.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0429</text>
+<rect x="1367.60" y="1175.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0429</text>
+<rect x="1480.20" y="1175.00" width="112.60" height="23.00" fill="#f8f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1191.00" font-size="10" font-weight="400" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0429</text>
+<rect x="1592.80" y="1175.00" width="112.60" height="23.00" fill="#f7f2e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1191.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0456</text>
+<rect x="1705.40" y="1175.00" width="112.60" height="23.00" fill="#f7f3e9" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1191.00" font-size="10" font-weight="700" fill="#1f1b16" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.0449</text>
+<rect x="1003.00" y="1198.00" width="815.00" height="23.00" fill="#fffdf8" stroke="none" stroke-width="1.00" rx="0.00"/>
+<text x="1003.00" y="1214.00" font-size="11" font-weight="400" fill="#383229" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">msmarco</text>
+<text x="1219.00" y="1214.00" font-size="11" font-weight="400" fill="#6c6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">8.8M</text>
+<rect x="1255.00" y="1198.00" width="112.60" height="23.00" fill="#3375b2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1311.30" y="1214.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5767</text>
+<rect x="1367.60" y="1198.00" width="112.60" height="23.00" fill="#3375b2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1423.90" y="1214.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5767</text>
+<rect x="1480.20" y="1198.00" width="112.60" height="23.00" fill="#3375b2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1536.50" y="1214.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5767</text>
+<rect x="1592.80" y="1198.00" width="112.60" height="23.00" fill="#2e72b1" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1649.10" y="1214.00" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5907</text>
+<rect x="1705.40" y="1198.00" width="112.60" height="23.00" fill="#3074b2" stroke="#e2d6c4" stroke-width="1.00" rx="0.00"/>
+<text x="1761.70" y="1214.00" font-size="10" font-weight="400" fill="#ffffff" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">0.5837</text>
+<line x1="1183.00" y1="818.00" x2="1183.00" y2="1221.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<line x1="1255.00" y1="818.00" x2="1255.00" y2="1221.00" stroke="#e2d6c4" stroke-width="1.00"/>
+<text x="950.00" y="1342.00" font-size="14" font-weight="400" fill="#6a6258" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">This chart compares relevance quality only. Use the QPS, build-time, and index-size matrices for engineering cost trade-offs.</text>
+</svg>

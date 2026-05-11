@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240">
+<rect width="100%" height="100%" fill="#fffdf8"/>
+<text x="800.00" y="42.00" font-size="28" font-weight="700" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">QPS vs Dataset Scale (PG18 BEIR Matrix)</text>
+<text x="800.00" y="68.00" font-size="15" font-weight="400" fill="#555" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">x-axis: document count (log scale) | y-axis: query throughput QPS (log scale)</text>
+<line x1="301.53" y1="90.00" x2="301.53" y2="740.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="301.53" y="764.00" font-size="13" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">10K</text>
+<line x1="714.35" y1="90.00" x2="714.35" y2="740.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="714.35" y="764.00" font-size="13" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">100K</text>
+<line x1="1127.18" y1="90.00" x2="1127.18" y2="740.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="1127.18" y="764.00" font-size="13" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">1.0M</text>
+<line x1="1540.00" y1="90.00" x2="1540.00" y2="740.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="1540.00" y="764.00" font-size="13" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">10.0M</text>
+<line x1="120.00" y1="90.00" x2="120.00" y2="740.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="120.00" y="764.00" font-size="13" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4K</text>
+<line x1="120.00" y1="740.00" x2="1540.00" y2="740.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="104.00" y="744.00" font-size="13" font-weight="400" fill="#666" text-anchor="end" font-family="ui-sans-serif, system-ui, sans-serif">1</text>
+<line x1="120.00" y1="577.50" x2="1540.00" y2="577.50" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="104.00" y="581.50" font-size="13" font-weight="400" fill="#666" text-anchor="end" font-family="ui-sans-serif, system-ui, sans-serif">10</text>
+<line x1="120.00" y1="415.00" x2="1540.00" y2="415.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="104.00" y="419.00" font-size="13" font-weight="400" fill="#666" text-anchor="end" font-family="ui-sans-serif, system-ui, sans-serif">100</text>
+<line x1="120.00" y1="252.50" x2="1540.00" y2="252.50" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="104.00" y="256.50" font-size="13" font-weight="400" fill="#666" text-anchor="end" font-family="ui-sans-serif, system-ui, sans-serif">1K</text>
+<line x1="120.00" y1="90.00" x2="1540.00" y2="90.00" stroke="#e8e2d6" stroke-width="1.00"/>
+<text x="104.00" y="94.00" font-size="13" font-weight="400" fill="#666" text-anchor="end" font-family="ui-sans-serif, system-ui, sans-serif">10K</text>
+<line x1="120.00" y1="90.00" x2="120.00" y2="740.00" stroke="#444" stroke-width="1.50"/>
+<line x1="120.00" y1="740.00" x2="1540.00" y2="740.00" stroke="#444" stroke-width="1.50"/>
+<path d="M 120.00 171.40 L 183.71 175.80 L 276.03 242.13 L 470.46 239.45 L 615.57 267.33 L 810.89 362.47 L 954.90 353.11 L 986.86 407.28 L 1010.94 422.00 L 1304.02 573.74 L 1402.17 652.29 L 1423.91 639.38 L 1430.08 659.06 L 1430.08 661.51 L 1517.93 706.46" fill="none" stroke="#1f77b4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="120.00" cy="171.40" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="183.71" cy="175.80" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="276.03" cy="242.13" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="470.46" cy="239.45" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="615.57" cy="267.33" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="810.89" cy="362.47" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="954.90" cy="353.11" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="986.86" cy="407.28" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1010.94" cy="422.00" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1304.02" cy="573.74" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1402.17" cy="652.29" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1423.91" cy="639.38" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1430.08" cy="659.06" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1430.08" cy="661.51" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<circle cx="1517.93" cy="706.46" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<path d="M 120.00 166.68 L 183.71 186.23 L 276.03 228.62 L 470.46 209.63 L 615.57 228.28 L 810.89 368.99 L 954.90 428.17 L 986.86 309.94 L 1010.94 284.22 L 1304.02 375.77 L 1402.17 397.48 L 1423.91 456.68 L 1430.08 416.74 L 1430.08 453.71 L 1517.93 417.39" fill="none" stroke="#d62728" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="120.00,159.68 127.00,172.68 113.00,172.68" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="183.71,179.23 190.71,192.23 176.71,192.23" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="276.03,221.62 283.03,234.62 269.03,234.62" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="470.46,202.63 477.46,215.63 463.46,215.63" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="615.57,221.28 622.57,234.28 608.57,234.28" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="810.89,361.99 817.89,374.99 803.89,374.99" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="954.90,421.17 961.90,434.17 947.90,434.17" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="986.86,302.94 993.86,315.94 979.86,315.94" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1010.94,277.22 1017.94,290.22 1003.94,290.22" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1304.02,368.77 1311.02,381.77 1297.02,381.77" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1402.17,390.48 1409.17,403.48 1395.17,403.48" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1423.91,449.68 1430.91,462.68 1416.91,462.68" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1430.08,409.74 1437.08,422.74 1423.08,422.74" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1430.08,446.71 1437.08,459.71 1423.08,459.71" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<polygon points="1517.93,410.39 1524.93,423.39 1510.93,423.39" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<path d="M 120.00 167.67 L 183.71 195.58 L 276.03 245.01 L 470.46 218.68 L 615.57 240.44 L 810.89 384.31 L 954.90 436.15 L 986.86 310.69 L 1010.94 286.28 L 1304.02 374.83 L 1402.17 421.51 L 1423.91 464.11 L 1430.08 430.62 L 1430.08 462.87 L 1517.93 428.89" fill="none" stroke="#ff7f0e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="120.00,174.67 127.00,161.67 113.00,161.67" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="183.71,202.58 190.71,189.58 176.71,189.58" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="276.03,252.01 283.03,239.01 269.03,239.01" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="470.46,225.68 477.46,212.68 463.46,212.68" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="615.57,247.44 622.57,234.44 608.57,234.44" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="810.89,391.31 817.89,378.31 803.89,378.31" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="954.90,443.15 961.90,430.15 947.90,430.15" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="986.86,317.69 993.86,304.69 979.86,304.69" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1010.94,293.28 1017.94,280.28 1003.94,280.28" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1304.02,381.83 1311.02,368.83 1297.02,368.83" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1402.17,428.51 1409.17,415.51 1395.17,415.51" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1423.91,471.11 1430.91,458.11 1416.91,458.11" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1430.08,437.62 1437.08,424.62 1423.08,424.62" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1430.08,469.87 1437.08,456.87 1423.08,456.87" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<polygon points="1517.93,435.89 1524.93,422.89 1510.93,422.89" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<path d="M 120.00 243.74 L 183.71 301.41 L 276.03 404.56 L 470.46 536.45 L 615.57 536.98 L 810.89 586.89 L 954.90 592.01 L 986.86 553.78 L 1010.94 557.61 L 1304.02 610.37 L 1402.17 623.50 L 1423.91 653.16 L 1430.08 618.12 L 1430.08 666.32 L 1517.93 634.87" fill="none" stroke="#2ca02c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="115.00" y="238.74" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="178.71" y="296.41" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="271.03" y="399.56" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="465.46" y="531.45" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="610.57" y="531.98" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="805.89" y="581.89" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="949.90" y="587.01" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="981.86" y="548.78" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1005.94" y="552.61" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1299.02" y="605.37" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1397.17" y="618.50" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1418.91" y="648.16" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1425.08" y="613.12" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1425.08" y="661.32" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<rect x="1512.93" y="629.87" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<path d="M 120.00 236.60 L 183.71 285.17 L 276.03 431.84 L 470.46 323.23 L 615.57 369.49 L 810.89 434.68 L 954.90 425.61 L 986.86 450.45 L 1010.94 384.36 L 1304.02 521.99 L 1402.17 516.74 L 1423.91 582.56 L 1430.08 563.85 L 1430.08 622.97 L 1517.93 535.24" fill="none" stroke="#9467bd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="120.00,230.10 126.50,236.60 120.00,243.10 113.50,236.60" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="183.71,278.67 190.21,285.17 183.71,291.67 177.21,285.17" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="276.03,425.34 282.53,431.84 276.03,438.34 269.53,431.84" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="470.46,316.73 476.96,323.23 470.46,329.73 463.96,323.23" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="615.57,362.99 622.07,369.49 615.57,375.99 609.07,369.49" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="810.89,428.18 817.39,434.68 810.89,441.18 804.39,434.68" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="954.90,419.11 961.40,425.61 954.90,432.11 948.40,425.61" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="986.86,443.95 993.36,450.45 986.86,456.95 980.36,450.45" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1010.94,377.86 1017.44,384.36 1010.94,390.86 1004.44,384.36" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1304.02,515.49 1310.52,521.99 1304.02,528.49 1297.52,521.99" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1402.17,510.24 1408.67,516.74 1402.17,523.24 1395.67,516.74" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1423.91,576.06 1430.41,582.56 1423.91,589.06 1417.41,582.56" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1430.08,557.35 1436.58,563.85 1430.08,570.35 1423.58,563.85" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1430.08,616.47 1436.58,622.97 1430.08,629.47 1423.58,622.97" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polygon points="1517.93,528.74 1524.43,535.24 1517.93,541.74 1511.43,535.24" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<polyline points="120.00,742.00 120.00,756.00 169.20,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="169.20" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">nfcorpus</text>
+<text x="169.20" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4K docs</text>
+<polyline points="183.71,742.00 183.71,756.00 183.71,818.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="183.71" y="846.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">scifact</text>
+<text x="183.71" y="864.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5K docs</text>
+<polyline points="276.03,742.00 276.03,756.00 276.03,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="276.03" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">arguana</text>
+<text x="276.03" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">9K docs</text>
+<polyline points="470.46,742.00 470.46,756.00 470.46,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="470.46" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">scidocs</text>
+<text x="470.46" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">26K docs</text>
+<polyline points="615.57,742.00 615.57,756.00 615.57,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="615.57" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">fiqa</text>
+<text x="615.57" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">58K docs</text>
+<polyline points="810.89,742.00 810.89,756.00 810.89,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="810.89" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">trec-covid</text>
+<text x="810.89" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">171K docs</text>
+<polyline points="954.90,742.00 954.90,756.00 954.90,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="954.90" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">webis-touche2020</text>
+<text x="954.90" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">383K docs</text>
+<polyline points="986.86,742.00 986.86,756.00 986.86,818.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="986.86" y="846.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">cqadupstack</text>
+<text x="986.86" y="864.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">457K docs</text>
+<polyline points="1010.94,742.00 1010.94,756.00 1010.94,868.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1010.94" y="896.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">quora</text>
+<text x="1010.94" y="914.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">523K docs</text>
+<polyline points="1304.02,742.00 1304.02,756.00 1304.02,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1304.02" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">nq</text>
+<text x="1304.02" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">2.7M docs</text>
+<polyline points="1402.17,742.00 1402.17,756.00 1402.17,818.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1402.17" y="846.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">dbpedia-entity</text>
+<text x="1402.17" y="864.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">4.6M docs</text>
+<polyline points="1423.91,742.00 1423.91,756.00 1423.91,768.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1423.91" y="796.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">hotpotqa</text>
+<text x="1423.91" y="814.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.2M docs</text>
+<polyline points="1430.08,742.00 1430.08,756.00 1430.08,868.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1430.08" y="896.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">fever</text>
+<text x="1430.08" y="914.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M docs</text>
+<polyline points="1430.08,742.00 1430.08,756.00 1430.08,918.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1430.08" y="946.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">climate-fever</text>
+<text x="1430.08" y="964.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">5.4M docs</text>
+<polyline points="1517.93,742.00 1517.93,756.00 1490.50,968.00" fill="none" stroke="#c8c1b4" stroke-width="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1490.50" y="996.00" font-size="13" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">msmarco</text>
+<text x="1490.50" y="1014.00" font-size="12" font-weight="400" fill="#666" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">8.8M docs</text>
+<text x="830.00" y="1222.00" font-size="16" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Dataset size (documents)</text>
+<g transform="translate(28 415.0) rotate(-90)"><text x="0.00" y="0.00" font-size="16" font-weight="600" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Query throughput (QPS)</text></g>
+<rect x="1294" y="86" width="242" height="168" rx="10" fill="#fffaf0" stroke="#d8cfbf"/>
+<text x="1405.00" y="106.00" font-size="16" font-weight="700" fill="#222" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif">Engines</text>
+<line x1="1310.00" y1="114.00" x2="1336.00" y2="114.00" stroke="#1f77b4" stroke-width="3.00"/>
+<circle cx="1323.00" cy="114.00" r="5.5" fill="#1f77b4" stroke="white" stroke-width="1.5"/>
+<text x="1348.00" y="119.00" font-size="14" font-weight="400" fill="#333" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Python reference implementation</text>
+<line x1="1310.00" y1="142.00" x2="1336.00" y2="142.00" stroke="#d62728" stroke-width="3.00"/>
+<polygon points="1323.00,135.00 1330.00,148.00 1316.00,148.00" fill="#d62728" stroke="white" stroke-width="1.5"/>
+<text x="1348.00" y="147.00" font-size="14" font-weight="400" fill="#333" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s ids</text>
+<line x1="1310.00" y1="170.00" x2="1336.00" y2="170.00" stroke="#ff7f0e" stroke-width="3.00"/>
+<polygon points="1323.00,177.00 1330.00,164.00 1316.00,164.00" fill="#ff7f0e" stroke="white" stroke-width="1.5"/>
+<text x="1348.00" y="175.00" font-size="14" font-weight="400" fill="#333" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">psql_bm25s text[]</text>
+<line x1="1310.00" y1="198.00" x2="1336.00" y2="198.00" stroke="#2ca02c" stroke-width="3.00"/>
+<rect x="1318.00" y="193.00" width="10" height="10" fill="#2ca02c" stroke="white" stroke-width="1.5"/>
+<text x="1348.00" y="203.00" font-size="14" font-weight="400" fill="#333" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">pg_search</text>
+<line x1="1310.00" y1="226.00" x2="1336.00" y2="226.00" stroke="#9467bd" stroke-width="3.00"/>
+<polygon points="1323.00,219.50 1329.50,226.00 1323.00,232.50 1316.50,226.00" fill="#9467bd" stroke="white" stroke-width="1.5"/>
+<text x="1348.00" y="231.00" font-size="14" font-weight="400" fill="#333" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">vchord_bm25</text>
+<text x="120.00" y="1156.00" font-size="13" font-weight="400" fill="#666" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Note: QPS also depends on query count, query length, and token distribution; scale is the dominant visual guide here.</text>
+<text x="120.00" y="1182.00" font-size="13" font-weight="400" fill="#666" text-anchor="start" font-family="ui-sans-serif, system-ui, sans-serif">Representative largest dataset: msmarco | Python reference 1.61 | ids 96.67 | text[] 82.13 | pg_search 4.44 | vchord 18.20</text>
+</svg>

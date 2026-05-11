@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-04-02 15:06:40",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "psql_bm25s_text"
+  ],
+  "results": {
+    "arguana": {
+      "dataset": "arguana",
+      "psql_bm25s_text": {
+        "build_bytes": 9158656,
+        "build_ms": 167.5025070000089,
+        "query": {
+          "avg_ms": 0.8992748641535829,
+          "count": 1406,
+          "p50_ms": 0.874073999995062,
+          "p95_ms": 1.1641810000000419,
+          "qps": 1112.0070624249258
+        }
+      },
+      "stats": {
+        "documents": 8674,
+        "queries": 1406,
+        "query_tokens": 176684,
+        "tokens": 947471,
+        "vocab_size": 22713
+      },
+      "wall_time_s": 2.95003586
+    }
+  },
+  "top_k": 1000
+}

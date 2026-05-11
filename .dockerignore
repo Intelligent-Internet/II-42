@@ -1,0 +1,10 @@
+.git
+.github
+.bench-venv
+build_tmp
+dist
+docs/performance/data
+$LOG
+.DS_Store
+*.so
+*.dylib

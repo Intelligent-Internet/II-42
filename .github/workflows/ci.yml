@@ -1,0 +1,146 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+            - release
+    pull_request:
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+    contents: read
+
+jobs:
+    build-test:
+        runs-on: ubuntu-24.04
+        strategy:
+            fail-fast: false
+            matrix:
+                pg_major: [17, 18]
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+
+            - name: Read extension version
+              id: version
+              run: |
+                  version="$(sed -n "s/^default_version = '\\(.*\\)'$/\\1/p" \
+                    psql_bm25s.control)"
+                  echo "version=${version}" >> "${GITHUB_OUTPUT}"
+
+            - name: Install PostgreSQL toolchain
+              run: ./scripts/install_postgres_apt.sh "${{ matrix.pg_major }}"
+
+            - name: Add PostgreSQL binaries to PATH
+              run: |
+                  echo "/usr/lib/postgresql/${{ matrix.pg_major }}/bin" \
+                    >> "${GITHUB_PATH}"
+
+            - name: Build unit tests
+              run: |
+                  cmake -S . -B build_tmp
+                  cmake --build build_tmp
+
+            - name: Run unit tests
+              run: ctest --test-dir build_tmp --output-on-failure
+
+            - name: Build extension
+              run: |
+                  make clean
+                  make PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+
+            - name: Start temporary PostgreSQL
+              run: |
+                  cluster_dir="${RUNNER_TEMP}/pg${{ matrix.pg_major }}"
+                  socket_dir="${RUNNER_TEMP}/pgsocket${{ matrix.pg_major }}"
+                  port="55${{ matrix.pg_major }}"
+                  initdb -D "${cluster_dir}" -A trust -U postgres >/dev/null
+                  mkdir -p "${socket_dir}"
+                  pg_ctl \
+                    -D "${cluster_dir}" \
+                    -l "${cluster_dir}/postgres.log" \
+                    -o "-F -k ${socket_dir} -p ${port}" \
+                    start
+                  createdb \
+                    -h "${socket_dir}" \
+                    -p "${port}" \
+                    -U postgres \
+                    contrib_regression
+                  {
+                      echo "PGHOST=${socket_dir}"
+                      echo "PGPORT=${port}"
+                      echo "PGUSER=postgres"
+                  } >> "${GITHUB_ENV}"
+
+            - name: Run integration tests
+              run: |
+                  sudo make install \
+                    PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+                  if ! make installcheck \
+                    PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config; then
+                      if [ -f regression.diffs ]; then
+                          cat regression.diffs
+                      fi
+                      if [ -f regression.out ]; then
+                          cat regression.out
+                      fi
+                      exit 1
+                  fi
+
+            - name: Stop temporary PostgreSQL
+              if: always()
+              run: |
+                  cluster_dir="${RUNNER_TEMP}/pg${{ matrix.pg_major }}"
+                  if [ -f "${cluster_dir}/postmaster.pid" ]; then
+                      pg_ctl -D "${cluster_dir}" -m fast stop
+                  fi
+
+    docker-pg18:
+        runs-on: ubuntu-24.04
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+
+            - name: Read extension version
+              id: version
+              run: |
+                  version="$(sed -n "s/^default_version = '\\(.*\\)'$/\\1/p" \
+                    psql_bm25s.control)"
+                  echo "version=${version}" >> "${GITHUB_OUTPUT}"
+
+            - name: Build PostgreSQL 18 Docker image
+              run: |
+                  ./scripts/build_release_docker_image.sh \
+                    --version "${{ steps.version.outputs.version }}" \
+                    --image-tag psql_bm25s:ci-pg18
+
+            - name: Smoke test Docker image
+              run: |
+                  container_name="psql-bm25s-ci-pg18"
+                  docker rm -f "${container_name}" >/dev/null 2>&1 || true
+                  docker run -d \
+                    --name "${container_name}" \
+                    --tmpfs /var/run/postgresql:rw,mode=3775,uid=999,gid=999 \
+                    -e POSTGRES_HOST_AUTH_METHOD=trust \
+                    psql_bm25s:ci-pg18
+                  trap 'docker rm -f "${container_name}" >/dev/null 2>&1 || true' EXIT
+                  for _ in $(seq 1 60); do
+                      if docker exec "${container_name}" \
+                          pg_isready -U postgres >/dev/null 2>&1; then
+                          break
+                      fi
+                      sleep 1
+                  done
+                  docker exec "${container_name}" \
+                    psql -U postgres -d postgres -Atqc \
+                    "SELECT extname FROM pg_extension WHERE extname = 'psql_bm25s';" \
+                    | grep -x 'psql_bm25s'

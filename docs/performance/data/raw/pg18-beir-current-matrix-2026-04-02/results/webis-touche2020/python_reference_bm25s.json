@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-03-27 23:01:11",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "python_reference_bm25s"
+  ],
+  "results": {
+    "webis-touche2020": {
+      "dataset": "webis-touche2020",
+      "stats": {
+        "documents": 382545,
+        "queries": 49,
+        "query_tokens": 246,
+        "tokens": 74180347,
+        "vocab_size": 354228
+      },
+      "python_reference_bm25s": {
+        "build_ms": 21183.247323000003,
+        "query": {
+          "count": 49,
+          "qps": 240.36295866316627,
+          "total_ms": 203.85836600000573
+        }
+      },
+      "wall_time_s": 60.105774795
+    }
+  },
+  "top_k": 1000
+}
