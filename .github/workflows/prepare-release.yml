@@ -3,7 +3,7 @@ name: Prepare Release
 on:
     push:
         branches:
-            - release
+            - main
     workflow_dispatch:
         inputs:
             release_series:
@@ -25,7 +25,7 @@ jobs:
             github.event_name == 'workflow_dispatch' ||
             (
               github.event_name == 'push' &&
-              github.ref == 'refs/heads/release' &&
+              github.ref == 'refs/heads/main' &&
               github.event.created == false &&
               github.actor != 'github-actions[bot]'
             )
@@ -35,7 +35,7 @@ jobs:
               uses: actions/checkout@v5
               with:
                   fetch-depth: 0
-                  ref: release
+                  ref: main
 
             - name: Compute and apply next patch version
               id: version
@@ -63,12 +63,12 @@ jobs:
                     -m "Release ${{ steps.version.outputs.version }}"
 
             - name: Push release commit and tag
-              run: git push origin HEAD:release --follow-tags
+              run: git push origin HEAD:main --follow-tags
 
             - name: Dispatch Release workflow
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   gh workflow run Release \
-                    --ref release \
+                    --ref main \
                     -f tag_name="v${{ steps.version.outputs.version }}"
