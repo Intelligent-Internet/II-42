@@ -8,6 +8,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DB_NAME_RE = re.compile(r'^[A-Za-z_][A-Za-z0-9_]*$')
+VERSION_RE = re.compile(r"^default_version = '([^']+)'$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -49,6 +50,14 @@ def run_psql(args: argparse.Namespace, dbname: str, sql: str) -> str:
         capture_output=True,
     )
     return result.stdout.strip()
+
+
+def read_extension_version() -> str:
+    for line in (REPO_ROOT / 'psql_bm25s.control').read_text().splitlines():
+        match = VERSION_RE.match(line)
+        if match is not None:
+            return match.group(1)
+    raise RuntimeError('could not read default_version from psql_bm25s.control')
 
 
 def validate_database_name(dbname: str) -> None:
@@ -349,12 +358,13 @@ def run_relocation_guard(args: argparse.Namespace) -> None:
 
 def main() -> None:
     args = parse_args()
+    current_version = read_extension_version()
     run_case(args, args.fresh_db, '')
     run_case(
         args,
         args.upgrade_db,
         "VERSION '0.2.0'",
-        "ALTER EXTENSION psql_bm25s UPDATE TO '0.4.7';",
+        f"ALTER EXTENSION psql_bm25s UPDATE TO '{current_version}';",
     )
     run_relocation_guard(args)
     print('extension schema smoke passed')

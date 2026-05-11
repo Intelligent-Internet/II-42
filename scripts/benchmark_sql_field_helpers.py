@@ -90,7 +90,7 @@ def drop_database_if_exists(cur: psycopg.Cursor[Any], db_name: str) -> None:
 
 
 def setup_schema(cur: psycopg.Cursor[Any], docs: int) -> None:
-    cur.execute('CREATE EXTENSION psql_bm25s VERSION \'0.1.2\'')
+    cur.execute('CREATE EXTENSION psql_bm25s')
     cur.execute('CREATE SCHEMA bench')
     cur.execute(
         """

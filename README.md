@@ -183,7 +183,7 @@ sudo rsync -a <package>/ /
 ```
 
 Replace `<package>` with the actual archive directory name from the
-release, for example `psql_bm25s-v0.4.7-linux-x86_64-pg18`.
+release, for example `psql_bm25s-vX.Y.Z-linux-x86_64-pg18`.
 
 After copying the files, restart PostgreSQL if needed, then enable the
 extension in the target database:
@@ -208,7 +208,7 @@ Pull either the floating PG18 tag or a versioned release tag:
 ```bash
 docker pull ghcr.io/intelligent-internet/psql_bm25s:pg18
 # or:
-docker pull ghcr.io/intelligent-internet/psql_bm25s:pg18-v0.4.7
+docker pull ghcr.io/intelligent-internet/psql_bm25s:pg18-vX.Y.Z
 ```
 
 Start PostgreSQL with the extension preinstalled:
