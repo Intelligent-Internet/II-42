@@ -1,4 +1,4 @@
 comment = 'PostgreSQL extension for BM25-family lexical retrieval'
-default_version = '0.4.11'
+default_version = '0.4.13'
 module_pathname = '$libdir/psql_bm25s'
 relocatable = false
