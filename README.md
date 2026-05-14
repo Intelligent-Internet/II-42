@@ -5,7 +5,7 @@ independent PostgreSQL extension for BM25-family lexical retrieval. It
 is inspired by the public [`bm25s`](https://github.com/xhluca/bm25s)
 work and implemented as a PostgreSQL-native access method.
 
-<img width="1500" height="600" alt="commons-banner-github" src="https://github.com/user-attachments/assets/de036ebb-58f7-4d62-a362-ec50a693b402" />
+<img width="1500" height="600" alt="commons-banner-github" src="doc/banner.png" />
 
 The project keeps the BM25 contract explicit where it matters most:
 
