@@ -1,6 +1,13 @@
 name: CI
 
 on:
+    workflow_call:
+        inputs:
+            source_ref:
+                required: false
+                type: string
+                default: ''
+    workflow_dispatch:
     push:
         branches:
             - main
@@ -9,6 +16,8 @@ on:
 
 env:
     FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    II42_MILESTONE_MODEL_URL: ${{ vars.II42_MILESTONE_MODEL_URL }}
+    II42_MILESTONE_MODEL_ARCHIVE_SHA256: ${{ vars.II42_MILESTONE_MODEL_ARCHIVE_SHA256 }}
 
 permissions:
     contents: read
@@ -26,16 +35,41 @@ jobs:
               uses: actions/checkout@v5
               with:
                   fetch-depth: 0
+                  ref: ${{ inputs.source_ref || github.sha }}
 
             - name: Read extension version
               id: version
               run: |
                   version="$(sed -n "s/^default_version = '\\(.*\\)'$/\\1/p" \
-                    psql_bm25s.control)"
+                    ii42.control)"
                   echo "version=${version}" >> "${GITHUB_OUTPUT}"
 
             - name: Install PostgreSQL toolchain
               run: ./scripts/install_postgres_apt.sh "${{ matrix.pg_major }}"
+
+            - name: Check active script syntax
+              run: |
+                  python3 -m compileall -q scripts tests
+                  find scripts packaging \
+                    -type f -name '*.sh' -print0 \
+                    | xargs -0 -n1 bash -n
+
+            - name: Run Python product unit tests
+              run: python3 -m pytest -q
+
+            - name: Verify product convergence inventory
+              run: python3 scripts/test_product_convergence_inventory.py
+
+            - name: Install ONNX Runtime C SDK
+              run: |
+                  prefix="${RUNNER_TEMP}/onnxruntime"
+                  ./scripts/install_onnxruntime_c.sh \
+                    --version "$(cat packaging/onnxruntime.version)" \
+                    --prefix "${prefix}"
+                  echo "PKG_CONFIG_PATH=${prefix}/lib/pkgconfig" \
+                    >> "${GITHUB_ENV}"
+                  echo "LD_LIBRARY_PATH=${prefix}/lib" \
+                    >> "${GITHUB_ENV}"
 
             - name: Add PostgreSQL binaries to PATH
               run: |
@@ -50,10 +84,28 @@ jobs:
             - name: Run unit tests
               run: ctest --test-dir build_tmp --output-on-failure
 
+            - name: Run sanitized unit tests
+              if: matrix.pg_major == 18
+              run: |
+                  cmake -S . -B build_sanitized \
+                    -DCMAKE_C_FLAGS='-fsanitize=address,undefined -fno-omit-frame-pointer' \
+                    -DCMAKE_EXE_LINKER_FLAGS='-fsanitize=address,undefined'
+                  cmake --build build_sanitized
+                  ASAN_OPTIONS=detect_leaks=1 \
+                    ctest --test-dir build_sanitized --output-on-failure
+
+            - name: Build extension without ONNX Runtime
+              run: |
+                  make clean
+                  make II42_ENABLE_ONNXRUNTIME=0 \
+                    PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+                  make clean
+
             - name: Build extension
               run: |
                   make clean
-                  make PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+                  make II42_ENABLE_ONNXRUNTIME=1 \
+                    PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
 
             - name: Start temporary PostgreSQL
               run: |
@@ -80,9 +132,11 @@ jobs:
 
             - name: Run integration tests
               run: |
-                  sudo make install \
+                  sudo --preserve-env=PKG_CONFIG_PATH make install \
+                    II42_ENABLE_ONNXRUNTIME=1 \
                     PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
                   if ! make installcheck \
+                    II42_ENABLE_ONNXRUNTIME=1 \
                     PG_CONFIG=/usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config; then
                       if [ -f regression.diffs ]; then
                           cat regression.diffs
@@ -92,6 +146,56 @@ jobs:
                       fi
                       exit 1
                   fi
+
+            - name: Run extension schema placement smoke
+              run: |
+                  python3 scripts/test_extension_schema_smoke.py \
+                    --psql \
+                    /usr/lib/postgresql/${{ matrix.pg_major }}/bin/psql
+
+            - name: Run preloaded ONNX Runtime smoke
+              run: |
+                  python3 scripts/test_onnxruntime_smoke.py \
+                    --pg-bin \
+                    /usr/lib/postgresql/${{ matrix.pg_major }}/bin
+
+            - name: Fetch frozen milestone model
+              if: >-
+                  matrix.pg_major == 18
+              run: |
+                  ./scripts/fetch_milestone_model_for_ci.sh \
+                    "${RUNNER_TEMP}/ii42-milestone-model"
+
+            - name: Build and verify release archive
+              if: >-
+                  matrix.pg_major == 18
+              run: |
+                  ./scripts/build_release_zip.sh \
+                    --version "${{ steps.version.outputs.version }}" \
+                    --onnxruntime-prefix "${RUNNER_TEMP}/onnxruntime" \
+                    --pg-config \
+                    /usr/lib/postgresql/${{ matrix.pg_major }}/bin/pg_config
+                  archive="$(
+                    find dist -maxdepth 1 -type f -name '*.zip' -print -quit
+                  )"
+                  test -n "${archive}"
+                  (
+                    cd dist
+                    sha256sum -c "$(basename "${archive}").sha256"
+                  )
+                  extract_root="${RUNNER_TEMP}/ii42-release"
+                  mkdir -p "${extract_root}"
+                  unzip -q "${archive}" -d "${extract_root}"
+                  find "${extract_root}" -type l \
+                    -name 'libonnxruntime.so*' -print -quit \
+                    | grep -q .
+                  grep -F "Git commit: $(git rev-parse HEAD)" \
+                    "${extract_root}"/*/BUILD-INFO.txt
+                  grep -F 'Git tree: clean' \
+                    "${extract_root}"/*/BUILD-INFO.txt
+                  find "${extract_root}" -path \
+                    '*/ii42/models/default/manifest.json' -print -quit \
+                    | grep -q .
 
             - name: Stop temporary PostgreSQL
               if: always()
@@ -109,29 +213,35 @@ jobs:
               uses: actions/checkout@v5
               with:
                   fetch-depth: 0
+                  ref: ${{ inputs.source_ref || github.sha }}
 
             - name: Read extension version
               id: version
               run: |
                   version="$(sed -n "s/^default_version = '\\(.*\\)'$/\\1/p" \
-                    psql_bm25s.control)"
+                    ii42.control)"
                   echo "version=${version}" >> "${GITHUB_OUTPUT}"
+
+            - name: Fetch frozen milestone model
+              run: |
+                  ./scripts/fetch_milestone_model_for_ci.sh \
+                    "${RUNNER_TEMP}/ii42-milestone-model"
 
             - name: Build PostgreSQL 18 Docker image
               run: |
                   ./scripts/build_release_docker_image.sh \
                     --version "${{ steps.version.outputs.version }}" \
-                    --image-tag psql_bm25s:ci-pg18
+                    --image-tag ii42:ci-pg18
 
             - name: Smoke test Docker image
               run: |
-                  container_name="psql-bm25s-ci-pg18"
+                  container_name="ii42-ci-pg18"
                   docker rm -f "${container_name}" >/dev/null 2>&1 || true
                   docker run -d \
                     --name "${container_name}" \
                     --tmpfs /var/run/postgresql:rw,mode=3775,uid=999,gid=999 \
                     -e POSTGRES_HOST_AUTH_METHOD=trust \
-                    psql_bm25s:ci-pg18
+                    ii42:ci-pg18
                   trap 'docker rm -f "${container_name}" >/dev/null 2>&1 || true' EXIT
                   for _ in $(seq 1 60); do
                       if docker exec "${container_name}" \
@@ -142,5 +252,20 @@ jobs:
                   done
                   docker exec "${container_name}" \
                     psql -U postgres -d postgres -Atqc \
-                    "SELECT extname FROM pg_extension WHERE extname = 'psql_bm25s';" \
-                    | grep -x 'psql_bm25s'
+                    "SELECT extname FROM pg_extension WHERE extname = 'ii42';" \
+                    | grep -x 'ii42'
+                  docker exec "${container_name}" \
+                    psql -U postgres -d postgres -Atqc \
+                    "SELECT ii42_onnxruntime_build_info();" \
+                    | grep -q '^enabled:'
+                  docker exec "${container_name}" \
+                    psql -U postgres -d postgres -Atqc \
+                    "SELECT ii42_onnxruntime_probe();" \
+                    | grep -q '^available:'
+                  docker exec "${container_name}" \
+                    test -s \
+                    /usr/share/postgresql/18/ii42/models/default/manifest.json
+                  docker exec "${container_name}" \
+                    psql -U postgres -d postgres -Atqc \
+                    "SELECT ii42_runtime_service_status()->>'shared_memory_available';" \
+                    | grep -x 'true'

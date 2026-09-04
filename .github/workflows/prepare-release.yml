@@ -1,15 +1,10 @@
 name: Prepare Release
 
 on:
-    push:
-        branches:
-            - main
+    workflow_run:
+        workflows: [CI]
+        types: [completed]
     workflow_dispatch:
-        inputs:
-            release_series:
-                description: Optional major.minor release series
-                required: false
-                default: ''
 
 env:
     FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -18,16 +13,20 @@ permissions:
     actions: write
     contents: write
 
+concurrency:
+    group: prepare-public-release
+    cancel-in-progress: false
+
 jobs:
     prepare-release:
         runs-on: ubuntu-24.04
         if: >-
             github.event_name == 'workflow_dispatch' ||
             (
-              github.event_name == 'push' &&
-              github.ref == 'refs/heads/main' &&
-              github.event.created == false &&
-              github.actor != 'github-actions[bot]'
+              github.event.workflow_run.conclusion == 'success' &&
+              github.event.workflow_run.event == 'push' &&
+              github.event.workflow_run.head_branch == 'main' &&
+              github.event.workflow_run.head_repository.full_name == github.repository
             )
 
         steps:
@@ -35,37 +34,57 @@ jobs:
               uses: actions/checkout@v5
               with:
                   fetch-depth: 0
-                  ref: main
+                  ref: ${{ github.event.workflow_run.head_sha || 'main' }}
 
-            - name: Compute and apply next patch version
+            - name: Verify candidate and read reviewed version
               id: version
+              env:
+                  GH_TOKEN: ${{ github.token }}
               run: |
-                  release_series='${{ inputs.release_series }}'
-                  if [ -z "${release_series}" ]; then
-                      current_version="$(sed -n \
-                        "s/^default_version = '\\(.*\\)'$/\\1/p" \
-                        psql_bm25s.control)"
-                      release_series="${current_version%.*}"
+                  source_sha="$(git rev-parse HEAD)"
+                  main_sha="$(git ls-remote origin refs/heads/main | cut -f1)"
+                  if [ "${source_sha}" != "${main_sha}" ]; then
+                      echo 'Newer source is on main; do not publish an older run.'
+                      exit 0
                   fi
-                  version="$(python3 scripts/bump_extension_version.py \
-                    --series "${release_series}")"
+                  conclusion="$(gh run list --workflow CI --branch main \
+                    --commit "${source_sha}" --limit 1 --json conclusion \
+                    --jq '.[0].conclusion')"
+                  test "${conclusion}" = success
+                  version="$(sed -n \
+                    "s/^default_version = '\\(.*\\)'$/\\1/p" ii42.control)"
+                  [[ "${version}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+                  test -s "sql/ii42--${version}.sql"
                   echo "version=${version}" >> "${GITHUB_OUTPUT}"
 
-            - name: Commit version bump
+            - name: Tag the tested source without changing its version
+              if: steps.version.outputs.version != ''
+              id: tag
+              env:
+                  VERSION: ${{ steps.version.outputs.version }}
+                  GH_TOKEN: ${{ github.token }}
               run: |
+                  tag_name="v${VERSION}"
+                  if git rev-parse --verify "refs/tags/${tag_name}" >/dev/null 2>&1; then
+                      if [ "$(git rev-parse "${tag_name}^{commit}")" != "$(git rev-parse HEAD)" ]; then
+                          echo "${tag_name} already identifies different source; review a new version." >&2
+                          exit 1
+                      fi
+                      if gh release view "${tag_name}" >/dev/null 2>&1; then
+                          echo 'This version is already published.'
+                          exit 0
+                      fi
+                  else
                   git config user.name 'github-actions[bot]'
                   git config user.email \
                     '41898282+github-actions[bot]@users.noreply.github.com'
-                  git add psql_bm25s.control sql/
-                  git commit -m "Release ${{ steps.version.outputs.version }}"
-                  git tag -a \
-                    "v${{ steps.version.outputs.version }}" \
-                    -m "Release ${{ steps.version.outputs.version }}"
-
-            - name: Push release commit and tag
-              run: git push origin HEAD:main --follow-tags
+                      git tag -a "${tag_name}" -m "II-42 ${VERSION} (Beta)"
+                      git push origin "refs/tags/${tag_name}"
+                  fi
+                  echo "publish=true" >> "${GITHUB_OUTPUT}"
 
             - name: Dispatch Release workflow
+              if: steps.tag.outputs.publish == 'true'
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
