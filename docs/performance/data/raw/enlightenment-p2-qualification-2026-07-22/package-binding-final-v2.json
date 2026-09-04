@@ -1,0 +1,111 @@
+{
+  "artifacts": [
+    {
+      "installed": {
+        "kind": "file",
+        "sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+      },
+      "installed_path": "/usr/lib/postgresql/18/lib/ii42.so",
+      "matched": true,
+      "name": "ii42.so",
+      "staged": {
+        "kind": "file",
+        "sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+      },
+      "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/ii42.so"
+    },
+    {
+      "installed": {
+        "kind": "file",
+        "sha256": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b"
+      },
+      "installed_path": "/usr/share/postgresql/18/extension/ii42.control",
+      "matched": true,
+      "name": "ii42.control",
+      "staged": {
+        "kind": "file",
+        "sha256": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b"
+      },
+      "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/share/postgresql/18/extension/ii42.control"
+    },
+    {
+      "installed": {
+        "kind": "file",
+        "sha256": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe"
+      },
+      "installed_path": "/usr/share/postgresql/18/extension/ii42--0.1.2.sql",
+      "matched": true,
+      "name": "ii42--0.1.2.sql",
+      "staged": {
+        "kind": "file",
+        "sha256": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe"
+      },
+      "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/share/postgresql/18/extension/ii42--0.1.2.sql"
+    },
+    {
+      "installed": {
+        "kind": "symlink",
+        "target": "libonnxruntime.so.1.26.0"
+      },
+      "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime.so.1",
+      "matched": true,
+      "name": "libonnxruntime.so.1",
+      "staged": {
+        "kind": "symlink",
+        "target": "libonnxruntime.so.1.26.0"
+      },
+      "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime.so.1"
+    },
+    {
+      "installed": {
+        "kind": "file",
+        "sha256": "5bd5bedf736fc501692435d0ec4f6e8b2bdf48cd30af8e6d00d61b3ddc9a7ab8"
+      },
+      "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime.so.1.26.0",
+      "matched": true,
+      "name": "libonnxruntime.so.1.26.0",
+      "staged": {
+        "kind": "file",
+        "sha256": "5bd5bedf736fc501692435d0ec4f6e8b2bdf48cd30af8e6d00d61b3ddc9a7ab8"
+      },
+      "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime.so.1.26.0"
+    },
+    {
+      "installed": {
+        "kind": "file",
+        "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d"
+      },
+      "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime_providers_shared.so",
+      "matched": true,
+      "name": "libonnxruntime_providers_shared.so",
+      "staged": {
+        "kind": "file",
+        "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d"
+      },
+      "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime_providers_shared.so"
+    }
+  ],
+  "build_info": {
+    "Built at": "2026-07-23T05:38:30Z",
+    "Git commit": "2b8e6203227ee651f3cacafe118c0bd5aba18c06",
+    "Git tree": "dirty-exact-bulk-slice-v1",
+    "ONNX Runtime": "1.26.0",
+    "ONNX Runtime linkage": "bundled in PostgreSQL pkglibdir",
+    "Package": "ii42-v0.1.2-linux-x86_64-pg18",
+    "PostgreSQL major": "18",
+    "Version": "0.1.2",
+    "pg_config": "/usr/lib/postgresql/18/bin/pg_config"
+  },
+  "build_info_sha256": "a9f2091c9ea56039efbb94f989cd820b971612a41fb394ae796b41abb7d2a80b",
+  "errors": [],
+  "extension_version": "0.1.2",
+  "fingerprint": "0c8f7f8ab6b13b0be36b5b0549ad00d7ee9e32bc2ced71fabed3d2b83c37bb24",
+  "package_root": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged",
+  "passed": true,
+  "pg_bin": "/usr/lib/postgresql/18/bin",
+  "pg_config": {
+    "pkglibdir": "/usr/lib/postgresql/18/lib",
+    "sharedir": "/usr/share/postgresql/18",
+    "version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1)"
+  }
+}

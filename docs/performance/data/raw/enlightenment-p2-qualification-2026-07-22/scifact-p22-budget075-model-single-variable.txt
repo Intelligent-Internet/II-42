@@ -1,0 +1,88 @@
+generated_at=2026-07-23T04:50:19-04:00
+source=/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke
+variant=/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_budget075
+
+manifest_diff
+--- /var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke/manifest.json	2026-07-22 15:27:01.716207729 -0400
++++ /var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_budget075/manifest.json	2026-07-23 02:49:39.760735721 -0400
+@@ -15,7 +15,7 @@
+     },
+     "p2_contract": {
+       "path": "provenance/p2_contract.json",
+-      "sha256": "435dc02e56ad72044fda8ac94575eef0a2a09e36d5b326e0dbebdf92f1e6e42c"
++      "sha256": "1bcc6fcbda3067b9d3d12238a34db6134eeeaa98f9e93bf9ae67ace9bb2b2b84"
+     },
+     "query_calibration_runtime": {
+       "path": "calibration/query_calibration_rms.f32",
+@@ -31,7 +31,7 @@
+     },
+     "scoring_profile": {
+       "path": "calibration/scoring_profile.json",
+-      "sha256": "d765be8b428f623a772f3a94104c4aa58948a96aac2d60aa8acd3064e5cfbad6"
++      "sha256": "82afe22317ad8ded8ab455db02e765f9c5f18d9df070e6468f4b941d549f9202"
+     },
+     "semantic_runtime": {
+       "path": "encoder/semantic_runtime.json",
+@@ -62,7 +62,7 @@
+   },
+   "latent_dims": 79787,
+   "model_format": "onnx",
+-  "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
++  "model_id": "ii42_p2_p22_nfcorpus_v2_budget075",
+   "query_active": 0,
+   "runtime": "onnxruntime",
+   "runtime_abi": "ii42_p2_unified_text_atoms_v2",
+@@ -75,7 +75,7 @@
+   "runtime_output": {
+     "atom_id_dtype": "int64",
+     "atom_weight_dtype": "float32",
+-    "document_semantic_budget_ratio": 1.125,
++    "document_semantic_budget_ratio": 0.75,
+     "document_semantic_max_atoms": 192,
+     "lexical_dims": 29522,
+     "max_atoms": 512,
+
+scoring_profile_diff
+--- /var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke/calibration/scoring_profile.json	2026-07-22 15:27:01.350806311 -0400
++++ /var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_budget075/calibration/scoring_profile.json	2026-07-23 02:49:39.759855406 -0400
+@@ -2,7 +2,7 @@
+   "candidate_k": 1000,
+   "dense_runtime_dependency": false,
+   "document_compiler": {
+-    "semantic_budget_ratio_to_lexical": 1.125,
++    "semantic_budget_ratio_to_lexical": 0.75,
+     "semantic_encoder": {
+       "active_dims": 192,
+       "gamma": 0.5627960562705994,
+
+contract_diff
+--- /var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke/provenance/p2_contract.json	2026-07-22 15:27:01.350959935 -0400
++++ /var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_budget075/provenance/p2_contract.json	2026-07-23 02:49:39.760443018 -0400
+@@ -1,6 +1,13 @@
+ {
+-  "budget_ratio": 1.125,
++  "budget_ratio": 0.75,
+   "dataset": "nfcorpus",
++  "lossy_variant": {
++    "field": "document_semantic_budget_ratio",
++    "source_manifest_sha256": "5792543cfb259cb969136315e4072bf90f0542345aa636062878649d88414d32",
++    "source_model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
++    "source_value": 1.125,
++    "value": 0.75
++  },
+   "m1914_transform": {
+     "document_active_dims": 192,
+     "gamma_document": 0.5627960562705994,
+
+byte_identical_load_bearing_artifacts
+calibration/query_calibration_rms.f32 source=0a5f21a54cdf36740eeceac5a78397098a71c486ab3ec3097b44738a5e5ccd33 variant=0a5f21a54cdf36740eeceac5a78397098a71c486ab3ec3097b44738a5e5ccd33 match=true
+calibration/query_calibration_stats.npz source=342a973bef0a995e7a7cacc21b97a54fbfbe89f32c428e51fffa20be970c5622 variant=342a973bef0a995e7a7cacc21b97a54fbfbe89f32c428e51fffa20be970c5622 match=true
+encoder/merges.txt source=fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862 variant=fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862 match=true
+encoder/semantic_document_compiler.onnx source=9e04d78c9cb14a73dbda4dba66d0e14ce0840d76ff6ab2ff6bdee8e4671cb79f variant=9e04d78c9cb14a73dbda4dba66d0e14ce0840d76ff6ab2ff6bdee8e4671cb79f match=true
+encoder/semantic_query_compiler.onnx source=d93d38d1e9d34e26a08b9b87ccf4013a2d7357002c09e797abbe4aea7349f9b3 variant=d93d38d1e9d34e26a08b9b87ccf4013a2d7357002c09e797abbe4aea7349f9b3 match=true
+encoder/semantic_runtime.json source=fbb34a7b5d86d283eda50f827f747959d27500a61454e9e56debe35827b2dfec variant=fbb34a7b5d86d283eda50f827f747959d27500a61454e9e56debe35827b2dfec match=true
+encoder/tokenizer_config.json source=37d6615d67cc6d6ca861957eafd9edee2bcec5c5b3301c4acb629bde1925f2cb variant=37d6615d67cc6d6ca861957eafd9edee2bcec5c5b3301c4acb629bde1925f2cb match=true
+encoder/tokenizer.json source=33465117406b9007673e8ba283f7f1383d9b5094df947481af60eec94ed7d7bd variant=33465117406b9007673e8ba283f7f1383d9b5094df947481af60eec94ed7d7bd match=true
+encoder/vocab.json source=ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e variant=ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e match=true
+lexical/vocabulary.json source=3f2239c6b5eafb3b21eade201d2cac23fa6912fac417befcce9c15aa932fec9c variant=3f2239c6b5eafb3b21eade201d2cac23fa6912fac417befcce9c15aa932fec9c match=true
+sae/atom_space.json source=0935e32c1be670aeafc9364401ac33e6d9a8f538bf7df00c97c32033954ffa04 variant=0935e32c1be670aeafc9364401ac33e6d9a8f538bf7df00c97c32033954ffa04 match=true

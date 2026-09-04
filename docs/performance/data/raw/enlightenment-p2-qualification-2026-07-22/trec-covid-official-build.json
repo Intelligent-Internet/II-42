@@ -1,0 +1,8 @@
+{
+  "build_seconds": {
+    "BM25": 10.816816,
+    "P2.2": 10042.401586
+  },
+  "dataset": "trec-covid",
+  "document_count": 171331
+}

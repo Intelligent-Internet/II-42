@@ -1,0 +1,214 @@
+{
+  "completed": 25,
+  "counts": {
+    "complete": 25,
+    "stopped": 5
+  },
+  "tasks": {
+    "arguana:psql_bm25s_ids": {
+      "dataset": "arguana",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/arguana/psql_bm25s_ids.json"
+    },
+    "arguana:psql_bm25s_text": {
+      "dataset": "arguana",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/arguana/psql_bm25s_text.json"
+    },
+    "climate-fever:psql_bm25s_ids": {
+      "dataset": "climate-fever",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/climate-fever/psql_bm25s_ids.json"
+    },
+    "climate-fever:psql_bm25s_text": {
+      "dataset": "climate-fever",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/climate-fever/psql_bm25s_text.json"
+    },
+    "cqadupstack:psql_bm25s_ids": {
+      "dataset": "cqadupstack",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/cqadupstack/psql_bm25s_ids.json"
+    },
+    "cqadupstack:psql_bm25s_text": {
+      "dataset": "cqadupstack",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/cqadupstack/psql_bm25s_text.json"
+    },
+    "dbpedia-entity:psql_bm25s_ids": {
+      "dataset": "dbpedia-entity",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/dbpedia-entity/psql_bm25s_ids.json"
+    },
+    "dbpedia-entity:psql_bm25s_text": {
+      "dataset": "dbpedia-entity",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/dbpedia-entity/psql_bm25s_text.json"
+    },
+    "fever:psql_bm25s_ids": {
+      "dataset": "fever",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/fever/psql_bm25s_ids.json"
+    },
+    "fever:psql_bm25s_text": {
+      "dataset": "fever",
+      "engine": "psql_bm25s_text",
+      "status": "stopped",
+      "local_result": false
+    },
+    "fiqa:psql_bm25s_ids": {
+      "dataset": "fiqa",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/fiqa/psql_bm25s_ids.json"
+    },
+    "fiqa:psql_bm25s_text": {
+      "dataset": "fiqa",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/fiqa/psql_bm25s_text.json"
+    },
+    "hotpotqa:psql_bm25s_ids": {
+      "dataset": "hotpotqa",
+      "engine": "psql_bm25s_ids",
+      "status": "stopped",
+      "local_result": false
+    },
+    "hotpotqa:psql_bm25s_text": {
+      "dataset": "hotpotqa",
+      "engine": "psql_bm25s_text",
+      "status": "stopped",
+      "local_result": false
+    },
+    "msmarco:psql_bm25s_ids": {
+      "dataset": "msmarco",
+      "engine": "psql_bm25s_ids",
+      "status": "stopped",
+      "local_result": false
+    },
+    "msmarco:psql_bm25s_text": {
+      "dataset": "msmarco",
+      "engine": "psql_bm25s_text",
+      "status": "stopped",
+      "local_result": false
+    },
+    "nfcorpus:psql_bm25s_ids": {
+      "dataset": "nfcorpus",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/nfcorpus/psql_bm25s_ids.json"
+    },
+    "nfcorpus:psql_bm25s_text": {
+      "dataset": "nfcorpus",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/nfcorpus/psql_bm25s_text.json"
+    },
+    "nq:psql_bm25s_ids": {
+      "dataset": "nq",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/nq/psql_bm25s_ids.json"
+    },
+    "nq:psql_bm25s_text": {
+      "dataset": "nq",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/nq/psql_bm25s_text.json"
+    },
+    "quora:psql_bm25s_ids": {
+      "dataset": "quora",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/quora/psql_bm25s_ids.json"
+    },
+    "quora:psql_bm25s_text": {
+      "dataset": "quora",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/quora/psql_bm25s_text.json"
+    },
+    "scidocs:psql_bm25s_ids": {
+      "dataset": "scidocs",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/scidocs/psql_bm25s_ids.json"
+    },
+    "scidocs:psql_bm25s_text": {
+      "dataset": "scidocs",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/scidocs/psql_bm25s_text.json"
+    },
+    "scifact:psql_bm25s_ids": {
+      "dataset": "scifact",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/scifact/psql_bm25s_ids.json"
+    },
+    "scifact:psql_bm25s_text": {
+      "dataset": "scifact",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/scifact/psql_bm25s_text.json"
+    },
+    "trec-covid:psql_bm25s_ids": {
+      "dataset": "trec-covid",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/trec-covid/psql_bm25s_ids.json"
+    },
+    "trec-covid:psql_bm25s_text": {
+      "dataset": "trec-covid",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/trec-covid/psql_bm25s_text.json"
+    },
+    "webis-touche2020:psql_bm25s_ids": {
+      "dataset": "webis-touche2020",
+      "engine": "psql_bm25s_ids",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/webis-touche2020/psql_bm25s_ids.json"
+    },
+    "webis-touche2020:psql_bm25s_text": {
+      "dataset": "webis-touche2020",
+      "engine": "psql_bm25s_text",
+      "status": "complete",
+      "local_result": true,
+      "result_path": "results/webis-touche2020/psql_bm25s_text.json"
+    }
+  }
+}

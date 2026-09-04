@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import argparse
 import gc
-import json
 import os
+import tempfile
 import time
 import traceback
 from pathlib import Path
@@ -16,7 +16,7 @@ from psycopg import conninfo
 
 from benchmark_beir_official import (
     TOP_K,
-    benchmark_python_reference,
+    benchmark_upstream,
     combine_doc_text,
     dataset_stats,
     ensure_extension,
@@ -30,16 +30,12 @@ from benchmark_beir_official import (
 )
 
 
-DEFAULT_DB_PREFIX = 'psql_bm25s_pg18_matrix_'
-DEFAULT_DATASETS_DIR = Path(
-    os.environ.get('PSQL_BM25S_DATASETS_DIR', '/tmp/psql_bm25s_beir')
+DEFAULT_DB_PREFIX = 'ii42_pg18_matrix_'
+DEFAULT_TEMP_ROOT = Path(tempfile.gettempdir())
+DEFAULT_DATASETS_DIR = (
+    DEFAULT_TEMP_ROOT / 'ii42_dataset_cache/beir_official'
 )
-DEFAULT_OUTPUT = Path(
-    os.environ.get(
-        'PSQL_BM25S_MATRIX_OUTPUT',
-        '/tmp/psql_bm25s_pg18_matrix/results/smoke.json',
-    )
-)
+DEFAULT_OUTPUT = DEFAULT_TEMP_ROOT / 'ii42_pg18_matrix/results/smoke.json'
 OFFICIAL_ORDER = [
     'arguana',
     'climate-fever',
@@ -58,9 +54,9 @@ OFFICIAL_ORDER = [
     'webis-touche2020',
 ]
 ENGINE_ORDER = [
-    'python_reference_bm25s',
-    'psql_bm25s_ids',
-    'psql_bm25s_text',
+    'upstream_bm25s',
+    'ii42_ids',
+    'ii42_text',
     'pg_search',
     'vchord_bm25',
 ]
@@ -70,7 +66,7 @@ def benchmark_admin_dsn(
     env_name: str | None = None,
 ) -> str:
     env_dsn = os.environ.get(env_name) if env_name else None
-    base_dsn = os.environ.get('PSQL_BM25S_BENCH_DSN', 'dbname=postgres')
+    base_dsn = os.environ.get('II42_BENCH_DSN', 'dbname=postgres')
     if env_dsn:
         base_dsn = env_dsn
     params = conninfo.conninfo_to_dict(base_dsn)
@@ -81,14 +77,14 @@ def benchmark_admin_dsn(
     return conninfo.make_conninfo(**params)
 
 
-PSQL_BM25S_ADMIN_DSN = benchmark_admin_dsn(
-    'PSQL_BM25S_MATRIX_PSQL_BM25S_DSN'
+II42_ADMIN_DSN = benchmark_admin_dsn(
+    'II42_MATRIX_II42_DSN'
 )
 PG_SEARCH_ADMIN_DSN = benchmark_admin_dsn(
-    'PSQL_BM25S_MATRIX_PG_SEARCH_DSN'
+    'II42_MATRIX_PG_SEARCH_DSN'
 )
 VCHORD_BM25_ADMIN_DSN = benchmark_admin_dsn(
-    'PSQL_BM25S_MATRIX_VCHORD_BM25_DSN'
+    'II42_MATRIX_VCHORD_BM25_DSN'
 )
 
 
@@ -118,7 +114,7 @@ def ensure_local_database(
             )
             if cur.fetchone()[0]:
                 return
-            cur.execute(f'CREATE DATABASE "{db_name}"')
+            cur.execute(f'CREATE DATABASE "{db_name}" TEMPLATE template0')
 
 
 def load_local_dataset(
@@ -189,19 +185,19 @@ def ensure_vchord_bm25_extension(
     )
 
 
-def benchmark_psql_bm25s_ids(
+def benchmark_ii42_ids(
     dataset: str,
     corpus_id_tokens: list[list[int]],
     query_id_tokens: list[list[int]],
     top_k: int,
     db_prefix: str,
 ) -> dict[str, Any]:
-    db_name = f'{db_prefix}psql_bm25s_{dataset.replace("-", "_")}'
-    ensure_local_database(PSQL_BM25S_ADMIN_DSN, db_name)
+    db_name = f'{db_prefix}ii42_{dataset.replace("-", "_")}'
+    ensure_local_database(II42_ADMIN_DSN, db_name)
     db_dsn = make_database_dsn(
-        PSQL_BM25S_ADMIN_DSN,
+        II42_ADMIN_DSN,
         db_name,
-        'psql_bm25s_matrix',
+        'ii42_matrix',
     )
 
     with psycopg.connect(db_dsn, autocommit=True) as conn:
@@ -227,7 +223,7 @@ def benchmark_psql_bm25s_ids(
             cur.execute(
                 """
                 CREATE INDEX docs_ids_bm25_idx
-                ON bench.docs_ids USING psql_bm25s (token_ids)
+                ON bench.docs_ids USING ii42 (token_ids)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -251,7 +247,7 @@ def benchmark_psql_bm25s_ids(
                     count(*),
                     coalesce(min(doc_id), 0),
                     coalesce(max(score), 0::real)
-                FROM public.psql_bm25s_query_ids(
+                FROM public.ii42_query_ids(
                     'bench.docs_ids_bm25_idx'::regclass,
                     %s::int4[],
                     %s::int4,
@@ -271,7 +267,7 @@ def benchmark_psql_bm25s_ids(
     }
 
 
-def benchmark_psql_bm25s_text(
+def benchmark_ii42_text(
     dataset: str,
     corpus_id_tokens: list[list[int]],
     query_id_tokens: list[list[int]],
@@ -279,12 +275,12 @@ def benchmark_psql_bm25s_text(
     top_k: int,
     db_prefix: str,
 ) -> dict[str, Any]:
-    db_name = f'{db_prefix}psql_bm25s_text_{dataset.replace("-", "_")}'
-    ensure_local_database(PSQL_BM25S_ADMIN_DSN, db_name)
+    db_name = f'{db_prefix}ii42_text_{dataset.replace("-", "_")}'
+    ensure_local_database(II42_ADMIN_DSN, db_name)
     db_dsn = make_database_dsn(
-        PSQL_BM25S_ADMIN_DSN,
+        II42_ADMIN_DSN,
         db_name,
-        'psql_bm25s_matrix',
+        'ii42_matrix',
     )
 
     def decode(token_ids: list[int]) -> list[str]:
@@ -313,7 +309,7 @@ def benchmark_psql_bm25s_text(
             cur.execute(
                 """
                 CREATE INDEX docs_tokens_bm25_idx
-                ON bench.docs_tokens USING psql_bm25s (tokens)
+                ON bench.docs_tokens USING ii42 (tokens)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -336,7 +332,7 @@ def benchmark_psql_bm25s_text(
                     count(*),
                     coalesce(min(doc_id), 0),
                     coalesce(max(score), 0::real)
-                FROM public.psql_bm25s_query_tokens(
+                FROM public.ii42_query_tokens(
                     'bench.docs_tokens_bm25_idx'::regclass,
                     %s::text[],
                     %s::int4,
@@ -569,23 +565,23 @@ def run_dataset(
         'stats': dataset_stats(corpus_tokenized, query_ids),
         'wall_time_s': time.perf_counter() - started,
     }
-    if 'python_reference_bm25s' in paths:
-        result['python_reference_bm25s'] = benchmark_python_reference(
+    if 'upstream_bm25s' in paths:
+        result['upstream_bm25s'] = benchmark_upstream(
             corpus_ids,
             corpus_tokenized,
             query_ids,
             top_k,
         )
-    if 'psql_bm25s_ids' in paths:
-        result['psql_bm25s_ids'] = benchmark_psql_bm25s_ids(
+    if 'ii42_ids' in paths:
+        result['ii42_ids'] = benchmark_ii42_ids(
             dataset,
             corpus_tokenized.ids,
             query_ids,
             top_k,
             db_prefix,
         )
-    if 'psql_bm25s_text' in paths:
-        result['psql_bm25s_text'] = benchmark_psql_bm25s_text(
+    if 'ii42_text' in paths:
+        result['ii42_text'] = benchmark_ii42_text(
             dataset,
             corpus_tokenized.ids,
             query_ids,

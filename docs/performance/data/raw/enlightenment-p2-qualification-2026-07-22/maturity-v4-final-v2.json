@@ -1,0 +1,514 @@
+{
+  "api_version": "ii42_index_v1",
+  "benchmark_output": null,
+  "elapsed_ms": 1951322.552,
+  "failed_step": null,
+  "output": "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/maturity-v4-final-v2.json",
+  "package_binding": {
+    "postflight": {
+      "artifacts": [
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/ii42.so",
+          "matched": true,
+          "name": "ii42.so",
+          "staged": {
+            "kind": "file",
+            "sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/ii42.so"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b"
+          },
+          "installed_path": "/usr/share/postgresql/18/extension/ii42.control",
+          "matched": true,
+          "name": "ii42.control",
+          "staged": {
+            "kind": "file",
+            "sha256": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/share/postgresql/18/extension/ii42.control"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe"
+          },
+          "installed_path": "/usr/share/postgresql/18/extension/ii42--0.1.2.sql",
+          "matched": true,
+          "name": "ii42--0.1.2.sql",
+          "staged": {
+            "kind": "file",
+            "sha256": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/share/postgresql/18/extension/ii42--0.1.2.sql"
+        },
+        {
+          "installed": {
+            "kind": "symlink",
+            "target": "libonnxruntime.so.1.26.0"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime.so.1",
+          "matched": true,
+          "name": "libonnxruntime.so.1",
+          "staged": {
+            "kind": "symlink",
+            "target": "libonnxruntime.so.1.26.0"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime.so.1"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "5bd5bedf736fc501692435d0ec4f6e8b2bdf48cd30af8e6d00d61b3ddc9a7ab8"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime.so.1.26.0",
+          "matched": true,
+          "name": "libonnxruntime.so.1.26.0",
+          "staged": {
+            "kind": "file",
+            "sha256": "5bd5bedf736fc501692435d0ec4f6e8b2bdf48cd30af8e6d00d61b3ddc9a7ab8"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime.so.1.26.0"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime_providers_shared.so",
+          "matched": true,
+          "name": "libonnxruntime_providers_shared.so",
+          "staged": {
+            "kind": "file",
+            "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime_providers_shared.so"
+        }
+      ],
+      "build_info": {
+        "Built at": "2026-07-23T05:38:30Z",
+        "Git commit": "2b8e6203227ee651f3cacafe118c0bd5aba18c06",
+        "Git tree": "dirty-exact-bulk-slice-v1",
+        "ONNX Runtime": "1.26.0",
+        "ONNX Runtime linkage": "bundled in PostgreSQL pkglibdir",
+        "Package": "ii42-v0.1.2-linux-x86_64-pg18",
+        "PostgreSQL major": "18",
+        "Version": "0.1.2",
+        "pg_config": "/usr/lib/postgresql/18/bin/pg_config"
+      },
+      "build_info_sha256": "a9f2091c9ea56039efbb94f989cd820b971612a41fb394ae796b41abb7d2a80b",
+      "errors": [],
+      "extension_version": "0.1.2",
+      "fingerprint": "0c8f7f8ab6b13b0be36b5b0549ad00d7ee9e32bc2ced71fabed3d2b83c37bb24",
+      "package_root": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged",
+      "passed": true,
+      "pg_bin": "/usr/lib/postgresql/18/bin",
+      "pg_config": {
+        "pkglibdir": "/usr/lib/postgresql/18/lib",
+        "sharedir": "/usr/share/postgresql/18",
+        "version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1)"
+      }
+    },
+    "preflight": {
+      "artifacts": [
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/ii42.so",
+          "matched": true,
+          "name": "ii42.so",
+          "staged": {
+            "kind": "file",
+            "sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/ii42.so"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b"
+          },
+          "installed_path": "/usr/share/postgresql/18/extension/ii42.control",
+          "matched": true,
+          "name": "ii42.control",
+          "staged": {
+            "kind": "file",
+            "sha256": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/share/postgresql/18/extension/ii42.control"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe"
+          },
+          "installed_path": "/usr/share/postgresql/18/extension/ii42--0.1.2.sql",
+          "matched": true,
+          "name": "ii42--0.1.2.sql",
+          "staged": {
+            "kind": "file",
+            "sha256": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/share/postgresql/18/extension/ii42--0.1.2.sql"
+        },
+        {
+          "installed": {
+            "kind": "symlink",
+            "target": "libonnxruntime.so.1.26.0"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime.so.1",
+          "matched": true,
+          "name": "libonnxruntime.so.1",
+          "staged": {
+            "kind": "symlink",
+            "target": "libonnxruntime.so.1.26.0"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime.so.1"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "5bd5bedf736fc501692435d0ec4f6e8b2bdf48cd30af8e6d00d61b3ddc9a7ab8"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime.so.1.26.0",
+          "matched": true,
+          "name": "libonnxruntime.so.1.26.0",
+          "staged": {
+            "kind": "file",
+            "sha256": "5bd5bedf736fc501692435d0ec4f6e8b2bdf48cd30af8e6d00d61b3ddc9a7ab8"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime.so.1.26.0"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d"
+          },
+          "installed_path": "/usr/lib/postgresql/18/lib/libonnxruntime_providers_shared.so",
+          "matched": true,
+          "name": "libonnxruntime_providers_shared.so",
+          "staged": {
+            "kind": "file",
+            "sha256": "086ec1d5388f64153d9c63470d126693db9a182c8ce236d3a1119068471b8a0d"
+          },
+          "staged_path": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged/usr/lib/postgresql/18/lib/libonnxruntime_providers_shared.so"
+        }
+      ],
+      "build_info": {
+        "Built at": "2026-07-23T05:38:30Z",
+        "Git commit": "2b8e6203227ee651f3cacafe118c0bd5aba18c06",
+        "Git tree": "dirty-exact-bulk-slice-v1",
+        "ONNX Runtime": "1.26.0",
+        "ONNX Runtime linkage": "bundled in PostgreSQL pkglibdir",
+        "Package": "ii42-v0.1.2-linux-x86_64-pg18",
+        "PostgreSQL major": "18",
+        "Version": "0.1.2",
+        "pg_config": "/usr/lib/postgresql/18/bin/pg_config"
+      },
+      "build_info_sha256": "a9f2091c9ea56039efbb94f989cd820b971612a41fb394ae796b41abb7d2a80b",
+      "errors": [],
+      "extension_version": "0.1.2",
+      "fingerprint": "0c8f7f8ab6b13b0be36b5b0549ad00d7ee9e32bc2ced71fabed3d2b83c37bb24",
+      "package_root": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged",
+      "passed": true,
+      "pg_bin": "/usr/lib/postgresql/18/bin",
+      "pg_config": {
+        "pkglibdir": "/usr/lib/postgresql/18/lib",
+        "sharedir": "/usr/share/postgresql/18",
+        "version": "PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1)"
+      }
+    },
+    "stable": true
+  },
+  "passed": true,
+  "pg_bin": "/usr/lib/postgresql/18/bin",
+  "steps": [
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_product_convergence_inventory.py"
+      ],
+      "elapsed_ms": 2670.369,
+      "name": "product convergence inventory",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "product convergence inventory ok\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "-m",
+        "py_compile",
+        "scripts/test_onnxruntime_smoke.py",
+        "scripts/test_onnxruntime_provider_matrix.py",
+        "scripts/test_extension_schema_smoke.py",
+        "scripts/test_extension_regression_temp_pg.py",
+        "scripts/test_empty_unlogged_lifecycle_smoke.py",
+        "scripts/test_v2_crash_smoke.py",
+        "scripts/test_payload_health_corruption_smoke.py",
+        "scripts/test_p2_mutable_lifecycle_smoke.py",
+        "scripts/test_concurrent_ddl_lifecycle_smoke.py",
+        "scripts/test_onnxruntime_resource_soak.py",
+        "scripts/test_runtime_service_required_smoke.py",
+        "scripts/test_runtime_service_temp_pg.py",
+        "scripts/test_runtime_service_privilege_smoke.py",
+        "scripts/test_runtime_service_restart_smoke.py",
+        "scripts/test_replication_lifecycle_smoke.py",
+        "scripts/test_model_lifecycle_medium_perf.py",
+        "scripts/benchmark_ii42_product_path.py",
+        "scripts/run_product_maturity_suite.py"
+      ],
+      "elapsed_ms": 166.377,
+      "name": "product script py_compile",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_extension_regression_temp_pg.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin"
+      ],
+      "elapsed_ms": 3973.544,
+      "name": "isolated core and shared-resident regressions",
+      "returncode": 0,
+      "stderr_tail": "# could not set core size: disallowed by hard limit\n# could not set core size: disallowed by hard limit\n",
+      "stdout_tail": "# initializing database system by running initdb\n# using temp instance on port 50771 with PID 3126781\nok 1         - ii42_integration                          995 ms\n1..1\n# All 1 tests passed.\n# initializing database system by running initdb\n# using temp instance on port 59981 with PID 3126874\nok 1         - ii42_resident_integration                 196 ms\n1..1\n# All 1 tests passed.\nIsolated extension regressions passed\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_extension_schema_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin"
+      ],
+      "elapsed_ms": 2472.94,
+      "name": "isolated extension schema placement smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "extension schema smoke passed\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_onnxruntime_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin"
+      ],
+      "elapsed_ms": 4035.074,
+      "name": "isolated ONNX Runtime ABI smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"api_version\": \"ii42_index_v1\",\n  \"cache_contract\": \"bounded_lru_atomic_failure\",\n  \"intra_op_threads\": 2,\n  \"provider\": \"cpu\",\n  \"route\": \"isolated direct-debug ONNX Runtime ABI\",\n  \"status\": \"passed\"\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_onnxruntime_provider_matrix.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--providers",
+        "cpu",
+        "--iterations",
+        "2",
+        "--strict",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 10734.795,
+      "name": "ONNX Runtime CPU provider matrix",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "      \"semantic_proxy\": 0.84773369\n        },\n        \"latency_ms\": 129.615,\n        \"provider\": {\n          \"active\": \"cpu\",\n          \"available\": [\n            \"CPUExecutionProvider\"\n          ],\n          \"requested\": \"cpu\"\n        },\n        \"runtime\": \"onnxruntime\",\n        \"runtime_abi\": \"ii42_p2_unified_text_atoms_v2\",\n        \"runtime_io\": {\n          \"attention_mask\": \"attention_mask\",\n          \"input_ids\": \"input_ids\",\n          \"semantic_ids\": \"semantic_ids\",\n          \"semantic_weights\": \"semantic_weights\"\n        },\n        \"session_cache_hit\": false,\n        \"session_load_ms\": 813.904,\n        \"tokenizer\": {\n          \"aggregation\": \"dimension_max_top_k\",\n          \"max_length\": 512,\n          \"token_count\": 7,\n          \"truncated\": false,\n          \"type\": \"roberta_byte_bpe\",\n          \"window_count\": 1,\n          \"window_overlap\": 64,\n          \"window_stride\": 446\n        },\n        \"weights\": [\n          1,\n          1,\n          1,\n          2.65482926,\n          1.68896794,\n          1.87579191,\n          0.123339973,\n          0.314645052,\n          0.572320223,\n          0.242760077,\n          0.243161261,\n          0.281961799,\n          0.895556331,\n          0.193634599,\n          0.243135467,\n          0.424837589,\n          3.56689072,\n          0.336029172,\n          0.779617369,\n          4.38931561,\n          0.365973622,\n          0.194473162,\n          0.326347917,\n          0.487480968,\n          0.138004974,\n          0.728487253,\n          0.743732214,\n          0.653841019,\n          3.28221869,\n          4.39449596,\n          0.746959209,\n          2.26736665,\n          0.160455257,\n          0.654702961,\n          0.416351855,\n          0.240782574,\n          0.399214417,\n          0.23711437,\n          0.216686025,\n          0.321753085,\n          3.80158257,\n          7.23254061,\n          0.509550333,\n          1.16981542,\n          3.40306878,\n          1.18499625,\n          0.388501823,\n          0.52301532,\n          0.494431883,\n          0.359978437,\n          0.566125333,\n          2.53184295,\n          0.542615891\n        ]\n      },\n      \"iterations\": 2,\n      \"native_index\": true,\n      \"provider\": \"cpu\",\n      \"service_last\": {\n        \"accelerator_packages\": [\n          \"cuda\",\n          \"coreml\"\n        ],\n        \"active_provider\": \"cpu\",\n        \"api_version\": \"ii42_index_v1\",\n        \"backend_model_loading_allowed\": false,\n        \"batch_successes\": 1,\n        \"busy_rejections\": 0,\n        \"canceled_requests\": 0,\n        \"completed_request_id\": 0,\n        \"cpu_builtin\": true,\n        \"encoded_texts\": 5,\n        \"failures\": 0,\n        \"fallback_order\": [\n          \"cuda\",\n          \"coreml\",\n          \"cpu\"\n        ],\n        \"last_batch_size\": 1,\n        \"last_request_at\": 838100598867988,\n        \"last_response_at\": 838100598880820,\n        \"max_observed_batch_size\": 3,\n        \"max_supported_batch_size\": 32,\n        \"model_owner\": \"runtime_worker\",\n        \"onnxruntime_intra_op_threads\": 0,\n        \"operation\": \"runtime_service_status\",\n        \"orphan_responses\": 0,\n        \"processing_batch_count\": 0,\n        \"provider\": \"cpu\",\n        \"queue_capacity\": 64,\n        \"queue_depth\": 0,\n        \"queue_max_depth\": 1,\n        \"queue_max_wait_ms\": 0,\n        \"queue_policy\": \"fifo_bounded\",\n        \"queue_timeout_policy\": \"none\",\n        \"queue_total_wait_ms\": 0,\n        \"queue_waits\": 0,\n        \"ready_for_text_encoding\": true,\n        \"request_id\": 3,\n        \"request_pending\": false,\n        \"request_processing\": false,\n        \"requests\": 3,\n        \"response_ready\": false,\n        \"runtime_max_us\": 2756408,\n        \"runtime_runs\": 3,\n        \"runtime_total_us\": 3686208,\n        \"shared_memory_available\": true,\n        \"successes\": 3,\n        \"worker_pid\": 3127948,\n        \"worker_ready\": true,\n        \"worker_recoveries\": 0,\n        \"worker_started\": true,\n        \"worker_started_at\": 838100589462020\n      },\n      \"status\": \"passed\"\n    }\n  ],\n  \"status\": \"passed\"\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_empty_unlogged_lifecycle_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 31316.712,
+      "name": "empty and UNLOGGED lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "\n        \"details\": {\n          \"auto_rebuild_churn_ratio\": null,\n          \"auto_rebuild_delta_bytes\": null,\n          \"auto_rebuild_threshold\": null,\n          \"consistency\": \"realtime\",\n          \"delta_bytes\": 0,\n          \"delta_records\": 0,\n          \"docs\": 2,\n          \"index_bytes\": 320608,\n          \"index_name\": \"lifecycle.unlogged_sae_idx\",\n          \"pages\": 42,\n          \"pending_deletes\": 0,\n          \"pending_writes\": 0,\n          \"query_overlay_max_bytes\": null,\n          \"query_overlay_max_records\": null,\n          \"rebuilds\": 1,\n          \"source_type\": \"text\",\n          \"stale\": false\n        },\n        \"generation\": {\n          \"atomic\": true,\n          \"cache_epoch\": 1,\n          \"contract_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n          \"delta\": {\n            \"bytes\": 0,\n            \"pages\": 0,\n            \"records\": 0,\n            \"start_block\": 42\n          },\n          \"docs\": 2,\n          \"generation\": 1,\n          \"generation_id\": \"16635/1/1\",\n          \"health\": \"ok\",\n          \"health_reason\": \"ok\",\n          \"layout\": {\n            \"matches\": true,\n            \"physical\": \"bm25s_sae\",\n            \"requested\": \"bm25s_sae\"\n          },\n          \"posting\": {\n            \"active\": true,\n            \"bytes\": 320608,\n            \"pages\": 40,\n            \"present\": true,\n            \"reason\": \"ok\",\n            \"record_count\": 2,\n            \"role\": \"unified_posting\",\n            \"signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n            \"start_block\": 2,\n            \"valid\": true\n          },\n          \"primary\": {\n            \"bytes\": 12,\n            \"pages\": 1,\n            \"payload_bytes\": 0,\n            \"role\": \"identity_map\",\n            \"start_block\": 1,\n            \"tid_bytes\": 12\n          },\n          \"rebuilds\": 1,\n          \"valid\": true\n        },\n        \"index_name\": \"lifecycle.unlogged_sae_idx\",\n        \"index_ready\": true,\n        \"index_type\": \"bm25s_sae\",\n        \"index_valid\": true,\n        \"model_artifacts_valid\": true,\n        \"options\": {\n          \"access_method\": \"ii42\",\n          \"atom_space\": \"p2_m1934_b1125_nfcorpus_3f2239c6b5ea\",\n          \"consistency\": \"realtime\",\n          \"index_name\": \"lifecycle.unlogged_sae_idx\",\n          \"index_type\": \"bm25s_sae\",\n          \"lifecycle\": \"postgresql_index\",\n          \"model\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n          \"model_path\": \"/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n          \"model_path_source\": \"index\",\n          \"model_runtime_error\": null,\n          \"payload_owner\": \"index_relation\",\n          \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n          \"sae_enabled\": true,\n          \"sae_explicit\": true,\n          \"sae_route_source\": \"explicit\",\n          \"scoring_profile\": \"p2_unified_sparse_dot_v1\",\n          \"semantic_configuration_error\": null,\n          \"semantic_configuration_ready\": true\n        },\n        \"query_ready\": true,\n        \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"runtime_signature_matches\": true,\n        \"sae_enabled\": true,\n        \"status_error\": null\n      }\n    },\n    \"sae_contract_transition\": {\n      \"current\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"legacy\": \"f8c5f586d14791e2a7c2bc9bbf8d972f\",\n      \"upgraded\": \"5f24130eb550dd59f88fdab3cc1c1dda\"\n    },\n    \"unlogged_rows_after_crash\": {\n      \"unlogged_bm25\": 0,\n      \"unlogged_sae\": 0\n    }\n  },\n  \"gates\": {\n    \"crash_restores_valid_empty_unlogged_generations\": true,\n    \"fast_restart_preserves_all_generations\": true,\n    \"first_insert_advances_empty_indexes\": true,\n    \"first_insert_after_crash_rebuilds_both_routes\": true,\n    \"legacy_unlogged_contract_upgrades_to_current\": true,\n    \"logged_empty_indexes_are_query_ready\": true,\n    \"unlogged_build_preserves_main_generation\": true\n  },\n  \"model_path\": \"/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"passed_gates\": 7,\n  \"route\": \"empty and UNLOGGED unified index lifecycle\",\n  \"total_gates\": 7\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_v2_crash_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin"
+      ],
+      "elapsed_ms": 1805.024,
+      "name": "mutable BM25 crash recovery smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_runtime_service_required_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 1341.033,
+      "name": "runtime service required smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Runtime service required smoke passed\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_runtime_service_privilege_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 6881.374,
+      "name": "runtime service privilege smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Runtime service privilege smoke passed\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_runtime_service_temp_pg.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 114985.562,
+      "name": "runtime service temp pg smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Runtime service temp PostgreSQL smoke passed\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_replication_lifecycle_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 35214.427,
+      "name": "physical replication lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"api_version\": \"ii42_index_v1\",\n  \"checks\": {\n    \"drop\": \"ok\",\n    \"initial_replay\": {\n      \"bm25_generation\": \"16625/1/1\",\n      \"semantic_generation\": \"16626/1/1\",\n      \"semantic_hits\": [\n        [\n          1,\n          9.789977\n        ],\n        [\n          2,\n          9.234283\n        ]\n      ]\n    },\n    \"reindex\": {\n      \"after\": {\n        \"bm25\": 16627,\n        \"semantic\": 16628\n      },\n      \"before\": {\n        \"bm25\": 16625,\n        \"semantic\": 16626\n      },\n      \"semantic_hits\": [\n        [\n          4,\n          18.780237\n        ],\n        [\n          2,\n          17.704487\n        ]\n      ]\n    },\n    \"update_and_maintain\": {\n      \"semantic_hits\": [\n        [\n          4,\n          18.780237\n        ],\n        [\n          2,\n          17.704487\n        ]\n      ]\n    }\n  },\n  \"passed\": true,\n  \"suite\": \"physical_replication_lifecycle\"\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_payload_health_corruption_smoke.py",
+        "--bindir",
+        "/usr/lib/postgresql/18/bin"
+      ],
+      "elapsed_ms": 1656.583,
+      "name": "payload health corruption smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "payload health corruption smoke passed\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_onnxruntime_resource_soak.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--iterations",
+        "1000",
+        "--sample-every",
+        "50",
+        "--output",
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/maturity-v4-final-v2.onnx-soak.json"
+      ],
+      "elapsed_ms": 9268.357,
+      "name": "ONNX Runtime resource soak",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"all_gates_passed\": true,\n  \"backend_pid\": 3138427,\n  \"failed_session_phase\": {\n    \"expected_failures\": true,\n    \"growth_kb\": 1088,\n    \"iterations\": 1000,\n    \"observed_failures\": 1000,\n    \"samples\": [\n      {\n        \"iteration\": 0,\n        \"rss_kb\": 50740\n      },\n      {\n        \"iteration\": 50,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 100,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 150,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 200,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 250,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 300,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 350,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 400,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 450,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 500,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 550,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 600,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 650,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 700,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 750,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 800,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 850,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 900,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 950,\n        \"rss_kb\": 51828\n      },\n      {\n        \"iteration\": 1000,\n        \"rss_kb\": 51828\n      }\n    ],\n    \"tail_slope_kb_per_iteration\": 0.0\n  },\n  \"gates\": {\n    \"all_failures_observed\": true,\n    \"failed_growth_bounded\": true,\n    \"healthy_cache_survives_failed_soak\": true,\n    \"transient_growth_bounded\": true\n  },\n  \"limits\": {\n    \"max_growth_kb\": 16384,\n    \"max_slope_kb_per_iteration\": 64.0\n  },\n  \"transient_session_phase\": {\n    \"expected_failures\": false,\n    \"growth_kb\": 0,\n    \"iterations\": 1000,\n    \"observed_failures\": 0,\n    \"samples\": [\n      {\n        \"iteration\": 0,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 50,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 100,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 150,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 200,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 250,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 300,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 350,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 400,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 450,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 500,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 550,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 600,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 650,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 700,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 750,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 800,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 850,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 900,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 950,\n        \"rss_kb\": 50684\n      },\n      {\n        \"iteration\": 1000,\n        \"rss_kb\": 50684\n      }\n    ],\n    \"tail_slope_kb_per_iteration\": 0.0\n  }\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_p2_mutable_lifecycle_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+        "--soak-queries",
+        "300",
+        "--mixed-soak-cycles",
+        "8",
+        "--output",
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/maturity-v4-final-v2.model-lifecycle.json"
+      ],
+      "elapsed_ms": 158961.691,
+      "name": "production model unified lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "        \"atom_space\": \"p2_m1934_b1125_nfcorpus_3f2239c6b5ea\",\n        \"consistency\": \"realtime\",\n        \"index_name\": \"p2_mutable.docs_idx\",\n        \"index_type\": \"bm25s_sae\",\n        \"lifecycle\": \"postgresql_index\",\n        \"model\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path\": \"/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path_source\": \"index\",\n        \"model_runtime_error\": null,\n        \"payload_owner\": \"index_relation\",\n        \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"sae_enabled\": true,\n        \"sae_explicit\": true,\n        \"sae_route_source\": \"explicit\",\n        \"scoring_profile\": \"p2_unified_sparse_dot_v1\",\n        \"semantic_configuration_error\": null,\n        \"semantic_configuration_ready\": true\n      },\n      \"query_ready\": true,\n      \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"runtime_signature_matches\": true,\n      \"sae_enabled\": true,\n      \"status_error\": null\n    }\n  },\n  \"gates\": {\n    \"aborted_dml_does_not_publish_generation\": true,\n    \"bm25_aborted_dml_is_hidden_and_converges\": true,\n    \"bm25_build_options_are_generation_bound\": true,\n    \"bm25_cold_restart_preserves_results\": true,\n    \"bm25_contract_drift_forces_heap_rebuild\": true,\n    \"bm25_crash_restart_preserves_results\": true,\n    \"bm25_savepoint_rollback_is_hidden_and_converges\": true,\n    \"bm25_uses_primary_generation_without_posting_section\": true,\n    \"cold_restart_preserves_results\": true,\n    \"corrupt_artifact_fails_closed\": true,\n    \"crash_restart_preserves_results\": true,\n    \"create_index_builds_unified_generation\": true,\n    \"delete_is_immediately_hidden\": true,\n    \"delete_waits_for_physical_vacuum\": true,\n    \"drop_removes_complete_index_only\": true,\n    \"eventual_deferred_maintain_converges_generation\": true,\n    \"eventual_maintain_converges_unified_generation\": true,\n    \"eventual_sae_uses_relation_owned_unified_delta\": true,\n    \"eventual_uses_one_pending_generation\": true,\n    \"failed_rebuild_rolls_back_complete_generation\": true,\n    \"index_type_change_requires_atomic_reindex\": true,\n    \"insert_advances_shared_generation\": true,\n    \"insert_is_semantically_visible\": true,\n    \"legacy_split_api_is_not_public\": true,\n    \"long_tail_changes_semantic_atoms\": true,\n    \"long_text_single_batch_runtime_parity\": true,\n    \"long_text_uses_complete_windowed_input\": true,\n    \"mixed_crud_soak_converges\": true,\n    \"model_change_fails_closed_until_reindex\": true,\n    \"no_generation_or_sidecar_relations\": true,\n    \"nonindexed_hot_update_preserves_generation\": true,\n    \"oversized_input_fails_explicitly\": true,\n    \"query_soak_is_stable\": true,\n    \"reindex_preserves_results\": true,\n    \"restoring_generation_model_restores_readiness\": true,\n    \"restoring_valid_artifacts_restores_readiness\": true,\n    \"sae_preload_tracks_generation_replacement\": true,\n    \"sae_preload_warms_only_unified_generation\": true,\n    \"sae_rejects_duplicate_exact_bm25_routes\": true,\n    \"savepoint_commit_publishes_generation\": true,\n    \"savepoint_rollback_does_not_publish_generation\": true,\n    \"short_text_single_batch_runtime_parity\": true,\n    \"unified_delta_matches_compaction_and_reindex\": true,\n    \"unified_inspection_is_available_to_product_role\": true,\n    \"unified_search_is_available_to_product_role\": true,\n    \"update_advances_shared_generation\": true,\n    \"update_is_semantically_visible\": true,\n    \"vacuum_converges_unified_generation\": true\n  },\n  \"metrics_ms\": {\n    \"cluster_start_ms\": 419.514,\n    \"cold_restart_ms\": 704.76,\n    \"crash_restart_ms\": 621.851,\n    \"create_index_ms\": 2784.23,\n    \"full_text_window_audit_ms\": 7391.586,\n    \"unified_delta_crud_differential_ms\": 13822.801\n  },\n  \"model_id\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"model_path\": \"/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"passed_gates\": 48,\n  \"route\": \"unified relation-owned P2 SAE index lifecycle\",\n  \"runtime_abi\": \"ii42_p2_unified_text_atoms_v2\",\n  \"total_gates\": 48\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_concurrent_ddl_lifecycle_smoke.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+        "--output",
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/maturity-v4-final-v2.concurrent-ddl.json"
+      ],
+      "elapsed_ms": 23052.889,
+      "name": "concurrent DDL and relation rewrite lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"api_version\": \"ii42_index_v1\",\n  \"concurrent_reindex_writer_seconds\": 3.521331,\n  \"gate_count\": 8,\n  \"gates\": [\n    \"create_index_concurrently\",\n    \"reindex_concurrently_with_writer\",\n    \"crud_before_reindex\",\n    \"reindex_concurrently\",\n    \"vacuum_full_relation_rewrite\",\n    \"truncate_to_empty_generation\",\n    \"post_truncate_realtime_insert\",\n    \"drop_index_concurrently\"\n  ],\n  \"model_path\": \"/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"passed\": true,\n  \"route\": \"concurrent_ddl_and_relation_rewrite\"\n}\n"
+    },
+    {
+      "command": [
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/venv/bin/python",
+        "scripts/test_model_lifecycle_medium_perf.py",
+        "--pg-bin",
+        "/usr/lib/postgresql/18/bin",
+        "--docs",
+        "50000",
+        "--output",
+        "/var/lib/postgresql/18/ii42/qualification/p22-final-v1/maturity-v4-final-v2.medium-lifecycle.json",
+        "--model-path",
+        "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 1542548.757,
+      "name": "mutable lifecycle medium smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "sae_enabled\": true,\n      \"status_error\": null\n    }\n  },\n  \"initial_query_diagnostics_ms\": 1859.021,\n  \"maintain_result\": \"ii42_access_index(type=text, docs=50000, bytes=42188472, pages=5219, stale=false, payload_health=ok, rebuild_required=false)\",\n  \"model_path\": \"/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"model_source\": \"production_checkout\",\n  \"post_mutation_query\": {\n    \"count\": 20,\n    \"max_score\": 33.8678\n  },\n  \"post_mutation_query_diagnostics\": {\n    \"joined_count\": 20,\n    \"raw_count\": 20,\n    \"raw_tids\": [\n      \"(577,47)\",\n      \"(658,18)\",\n      \"(335,59)\",\n      \"(255,13)\",\n      \"(470,71)\"\n    ],\n    \"status\": {\n      \"api_version\": \"ii42_index_v1\",\n      \"blocker\": \"none\",\n      \"details\": {\n        \"auto_rebuild_churn_ratio\": null,\n        \"auto_rebuild_delta_bytes\": null,\n        \"auto_rebuild_threshold\": 1,\n        \"consistency\": \"eventual\",\n        \"delta_bytes\": 0,\n        \"delta_records\": 0,\n        \"docs\": 50000,\n        \"index_bytes\": 42188472,\n        \"index_name\": \"medium.docs_body_idx\",\n        \"pages\": 5219,\n        \"pending_deletes\": 0,\n        \"pending_writes\": 0,\n        \"query_overlay_max_bytes\": null,\n        \"query_overlay_max_records\": null,\n        \"rebuilds\": 2,\n        \"source_type\": \"text\",\n        \"stale\": false\n      },\n      \"generation\": {\n        \"atomic\": true,\n        \"cache_epoch\": 2,\n        \"contract_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"delta\": {\n          \"bytes\": 0,\n          \"pages\": 0,\n          \"records\": 0,\n          \"start_block\": 5219\n        },\n        \"docs\": 50000,\n        \"generation\": 2,\n        \"generation_id\": \"16617/2/2\",\n        \"health\": \"ok\",\n        \"health_reason\": \"ok\",\n        \"layout\": {\n          \"matches\": true,\n          \"physical\": \"bm25s_sae\",\n          \"requested\": \"bm25s_sae\"\n        },\n        \"posting\": {\n          \"active\": true,\n          \"bytes\": 42188472,\n          \"pages\": 5181,\n          \"present\": true,\n          \"reason\": \"ok\",\n          \"record_count\": 50000,\n          \"role\": \"unified_posting\",\n          \"signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n          \"start_block\": 38,\n          \"valid\": true\n        },\n        \"primary\": {\n          \"bytes\": 300000,\n          \"pages\": 37,\n          \"payload_bytes\": 0,\n          \"role\": \"identity_map\",\n          \"start_block\": 1,\n          \"tid_bytes\": 300000\n        },\n        \"rebuilds\": 2,\n        \"valid\": true\n      },\n      \"index_name\": \"medium.docs_body_idx\",\n      \"index_ready\": true,\n      \"index_type\": \"bm25s_sae\",\n      \"index_valid\": true,\n      \"model_artifacts_valid\": true,\n      \"options\": {\n        \"access_method\": \"ii42\",\n        \"atom_space\": \"p2_m1934_b1125_nfcorpus_3f2239c6b5ea\",\n        \"consistency\": \"eventual\",\n        \"index_name\": \"medium.docs_body_idx\",\n        \"index_type\": \"bm25s_sae\",\n        \"lifecycle\": \"postgresql_index\",\n        \"model\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path\": \"/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path_source\": \"index\",\n        \"model_runtime_error\": null,\n        \"payload_owner\": \"index_relation\",\n        \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"sae_enabled\": true,\n        \"sae_explicit\": true,\n        \"sae_route_source\": \"explicit\",\n        \"scoring_profile\": \"p2_unified_sparse_dot_v1\",\n        \"semantic_configuration_error\": null,\n        \"semantic_configuration_ready\": true\n      },\n      \"query_ready\": true,\n      \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"runtime_signature_matches\": true,\n      \"sae_enabled\": true,\n      \"status_error\": null\n    }\n  },\n  \"post_mutation_query_diagnostics_ms\": 1857.946,\n  \"post_mutation_query_ms\": 904.259,\n  \"query_first_ms\": 960.487,\n  \"query_second_ms\": 75.774,\n  \"reindex_ms\": 534628.618,\n  \"second_query\": {\n    \"count\": 20,\n    \"max_score\": 33.86785\n  },\n  \"setup_and_native_index_build_ms\": 487160.302,\n  \"unified_maintain_ms\": 508710.948\n}\n"
+    }
+  ],
+  "suite": "ii42_product_maturity"
+}

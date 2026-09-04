@@ -1,0 +1,45 @@
+{
+  "candidate_k": 1000,
+  "dataset": "scifact-official",
+  "document_count": 5183,
+  "inputs": {
+    "qrels_sha256": "ef9f4e18fe1f809e5d5229ad121ad1ffca3bfa6579b3b21700bb5357dfed7efb",
+    "queries_sha256": "2af8d23b334799a51db8af004fd48ff12082e61bf5230ee737ee8c73d829ac5d"
+  },
+  "methods": {
+    "bm25": {
+      "build_seconds": 0.659394,
+      "candidate_upper_bound": 0.965,
+      "index_bytes": 8601600,
+      "latency_ms_p50": 1.415375,
+      "latency_ms_p95": 1.604792,
+      "map_at_100": 0.626833,
+      "mrr_at_20": 0.634838,
+      "ndcg_at_10": 0.663931,
+      "recall_at_100": 0.882556
+    },
+    "p2": {
+      "build_seconds": 244.961216,
+      "candidate_upper_bound": 0.99,
+      "index_bytes": 30318592,
+      "latency_ms_p50": 15.838667,
+      "latency_ms_p95": 19.389375,
+      "map_at_100": 0.670381,
+      "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+      "mrr_at_20": 0.679533,
+      "ndcg_at_10": 0.709942,
+      "recall_at_100": 0.952667,
+      "runtime_abi": "ii42_p2_unified_text_atoms_v2"
+    }
+  },
+  "p2_minus_bm25": {
+    "candidate_upper_bound": 0.025,
+    "map_at_100": 0.043548,
+    "mrr_at_20": 0.044695,
+    "ndcg_at_10": 0.04601,
+    "recall_at_100": 0.070111
+  },
+  "query_count": 300,
+  "route": "ii42_search",
+  "surface": "isolated native PG18 full corpus"
+}

@@ -1,0 +1,642 @@
+{
+  "api_version": "ii42_index_v1",
+  "checks": {
+    "delete_and_update_replay": {
+      "bm25_generation": "16610/3/3",
+      "semantic_generation": "16611/3/3",
+      "semantic_hits": [
+        [
+          2,
+          27.901812
+        ]
+      ]
+    },
+    "drop": "ok",
+    "eventual_unified_delta_cache_rebuild": {
+      "primary_after": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 388,
+          "delta_records": 1,
+          "pending_deletes": 0,
+          "pending_total": 1,
+          "pending_writes": 1
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 3,
+          "generation_bytes": 643374,
+          "identity_bytes": 18,
+          "index_bytes": 0,
+          "locator": "1663/5/16611",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 8144,
+          "payload_expected_bytes": 18,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 643356,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=64, shared_preload_available=true, shared_preload_arena_size=67108864, shared_preload_used=3888, shared_preload_free_bytes=67104976, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=true, shared_preload_admission_state=admissible, shared_preload_entries=2, shared_preload_ready_entries=2, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=1, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=2, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1, pending_deletes=0, delta_records=1, delta_bytes=388, flags=0x0, active_start_blkno=1, active_data_pages=1, delta_start_blkno=81, delta_data_pages=1, relation_blocks=82, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=18, payload_capacity_bytes=8144, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37748804, rebuild_budget_bytes=34359738368, identity_bytes=18, index_bytes=0, posting_bytes=643356, generation_bytes=643374, docs=3, auto_preload_priority=0, locator=1663/5/16611)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 2,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 67108864,
+          "available": true,
+          "base_entries": 1,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 64,
+          "entries": 2,
+          "free_bytes": 67104976,
+          "has_evictable_relation": true,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 2,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 3888
+        }
+      },
+      "primary_before": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 388,
+          "delta_records": 1,
+          "pending_deletes": 0,
+          "pending_total": 1,
+          "pending_writes": 1
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 3,
+          "generation_bytes": 643374,
+          "identity_bytes": 18,
+          "index_bytes": 0,
+          "locator": "1663/5/16611",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 8144,
+          "payload_expected_bytes": 18,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 643356,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 1,
+          "active_index_maintenance_workers": 1,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=64, shared_preload_available=true, shared_preload_arena_size=67108864, shared_preload_used=528, shared_preload_free_bytes=67108336, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=true, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=1, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=1, active_preload_workers=0, active_index_maintenance_workers=1, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=1, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1, pending_deletes=0, delta_records=1, delta_bytes=388, flags=0x0, active_start_blkno=1, active_data_pages=1, delta_start_blkno=81, delta_data_pages=1, relation_blocks=82, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=18, payload_capacity_bytes=8144, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37748804, rebuild_budget_bytes=34359738368, identity_bytes=18, index_bytes=0, posting_bytes=643356, generation_bytes=643374, docs=3, auto_preload_priority=0, locator=1663/5/16611)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": false,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": false,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 1,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 67108864,
+          "available": true,
+          "base_entries": 1,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 64,
+          "entries": 1,
+          "free_bytes": 67108336,
+          "has_evictable_relation": true,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 1,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": false,
+          "unified_delta_cache_entries": 0,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 528
+        }
+      },
+      "semantic_hits": [
+        [
+          4,
+          18.780245
+        ],
+        [
+          2,
+          17.704489
+        ]
+      ],
+      "standby_after_cold": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 388,
+          "delta_records": 1,
+          "pending_deletes": 0,
+          "pending_total": 1,
+          "pending_writes": 1
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 3,
+          "generation_bytes": 643374,
+          "identity_bytes": 18,
+          "index_bytes": 0,
+          "locator": "1663/5/16611",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 8144,
+          "payload_expected_bytes": 18,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 643356,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=64, shared_preload_available=true, shared_preload_arena_size=67108864, shared_preload_used=4240, shared_preload_free_bytes=67104624, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=true, shared_preload_admission_state=admissible, shared_preload_entries=3, shared_preload_ready_entries=3, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=2, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=3, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1, pending_deletes=0, delta_records=1, delta_bytes=388, flags=0x0, active_start_blkno=1, active_data_pages=1, delta_start_blkno=81, delta_data_pages=1, relation_blocks=82, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=18, payload_capacity_bytes=8144, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37748804, rebuild_budget_bytes=34359738368, identity_bytes=18, index_bytes=0, posting_bytes=643356, generation_bytes=643374, docs=3, auto_preload_priority=0, locator=1663/5/16611)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 3,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 67108864,
+          "available": true,
+          "base_entries": 2,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 64,
+          "entries": 3,
+          "free_bytes": 67104624,
+          "has_evictable_relation": true,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 3,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 4240
+        }
+      },
+      "standby_after_warm": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 388,
+          "delta_records": 1,
+          "pending_deletes": 0,
+          "pending_total": 1,
+          "pending_writes": 1
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 3,
+          "generation_bytes": 643374,
+          "identity_bytes": 18,
+          "index_bytes": 0,
+          "locator": "1663/5/16611",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 8144,
+          "payload_expected_bytes": 18,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 643356,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=64, shared_preload_available=true, shared_preload_arena_size=67108864, shared_preload_used=4240, shared_preload_free_bytes=67104624, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=true, shared_preload_admission_state=admissible, shared_preload_entries=3, shared_preload_ready_entries=3, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=2, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=4, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1, pending_deletes=0, delta_records=1, delta_bytes=388, flags=0x0, active_start_blkno=1, active_data_pages=1, delta_start_blkno=81, delta_data_pages=1, relation_blocks=82, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=18, payload_capacity_bytes=8144, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37748804, rebuild_budget_bytes=34359738368, identity_bytes=18, index_bytes=0, posting_bytes=643356, generation_bytes=643374, docs=3, auto_preload_priority=0, locator=1663/5/16611)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 4,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 67108864,
+          "available": true,
+          "base_entries": 2,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 64,
+          "entries": 3,
+          "free_bytes": 67104624,
+          "has_evictable_relation": true,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 3,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 4240
+        }
+      },
+      "standby_before": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 388,
+          "delta_records": 1,
+          "pending_deletes": 0,
+          "pending_total": 1,
+          "pending_writes": 1
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 3,
+          "generation_bytes": 643374,
+          "identity_bytes": 18,
+          "index_bytes": 0,
+          "locator": "1663/5/16611",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 8144,
+          "payload_expected_bytes": 18,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 643356,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=64, shared_preload_available=true, shared_preload_arena_size=67108864, shared_preload_used=880, shared_preload_free_bytes=67107984, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=true, shared_preload_admission_state=admissible, shared_preload_entries=2, shared_preload_ready_entries=2, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=2, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=2, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1, pending_deletes=0, delta_records=1, delta_bytes=388, flags=0x0, active_start_blkno=1, active_data_pages=1, delta_start_blkno=81, delta_data_pages=1, relation_blocks=82, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=18, payload_capacity_bytes=8144, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37748804, rebuild_budget_bytes=34359738368, identity_bytes=18, index_bytes=0, posting_bytes=643356, generation_bytes=643374, docs=3, auto_preload_priority=0, locator=1663/5/16611)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": false,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": false,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 2,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 67108864,
+          "available": true,
+          "base_entries": 2,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 64,
+          "entries": 2,
+          "free_bytes": 67107984,
+          "has_evictable_relation": true,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 2,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": false,
+          "unified_delta_cache_entries": 0,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 880
+        }
+      }
+    },
+    "initial_replay": {
+      "bm25_generation": "16610/1/1",
+      "conversion_generation": "16612/1/1",
+      "conversion_hits": [
+        [
+          1,
+          0.6337457
+        ],
+        [
+          2,
+          0.24141401
+        ],
+        [
+          3,
+          0.053412557
+        ]
+      ],
+      "semantic_generation": "16611/1/1",
+      "semantic_hits": [
+        [
+          1,
+          9.789966
+        ],
+        [
+          2,
+          9.234287
+        ]
+      ]
+    },
+    "reindex": {
+      "after": {
+        "bm25": 16613,
+        "semantic": 16614
+      },
+      "before": {
+        "bm25": 16610,
+        "semantic": 16611
+      },
+      "semantic_hits": [
+        [
+          2,
+          27.901812
+        ]
+      ]
+    },
+    "same_relation_type_conversion_replay": {
+      "bm25_to_sae": {
+        "after_filenode": 16615,
+        "before_filenode": 16612,
+        "hits": [
+          [
+            1,
+            31.502348
+          ],
+          [
+            2,
+            17.921776
+          ],
+          [
+            3,
+            17.278482
+          ]
+        ],
+        "pending_error": "ii42 index generation does not match the configured model\nDETAIL:  generation signature 106f62828780c85098ac5bad7740c019, runtime signature 5f24130eb550dd59f88fdab3cc1c1dda\nHINT:  REINDEX the ii42 index after changing model_path, the default model checkout, or any model artifact.\nCONTEXT:  PL/pgSQL function ii42_encode_text_internal(regclass,text) line 32 at RAISE\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer) line 14 at assignment\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search(regclass,text,integer,real[],boolean,text[],boolean,boolean) line 116 at RETURN QUERY",
+        "pending_layout": {
+          "matches": false,
+          "physical": "bm25s",
+          "requested": "bm25s_sae"
+        }
+      },
+      "sae_to_bm25": {
+        "after_filenode": 16616,
+        "before_filenode": 16615,
+        "hits": [
+          [
+            1,
+            0.6337457
+          ],
+          [
+            2,
+            0.24141401
+          ],
+          [
+            3,
+            0.053412557
+          ]
+        ],
+        "pending_error": "exact BM25 access is unavailable for this ii42 generation\nDETAIL:  The index stores one unified posting payload, not a duplicate exact-BM25 payload.\nHINT:  Use ii42_search(index_name, query_text, k).\nCONTEXT:  SQL statement \"SELECT *\n    FROM ii42_query(\n        index_name,\n        query_text,\n        k,\n        weight_mask,\n        lowercase,\n        stopwords,\n        stem_english,\n        fold_diacritics\n    )\"\nPL/pgSQL function ii42_search(regclass,text,integer,real[],boolean,text[],boolean,boolean) line 130 at RETURN QUERY",
+        "pending_layout": {
+          "matches": false,
+          "physical": "bm25s_sae",
+          "requested": "bm25s"
+        }
+      }
+    },
+    "update_and_insert_replay": {
+      "semantic_hits": [
+        [
+          4,
+          18.780245
+        ],
+        [
+          2,
+          17.704489
+        ]
+      ]
+    }
+  },
+  "passed": true,
+  "suite": "physical_replication_lifecycle"
+}

@@ -2,8 +2,13 @@ from __future__ import annotations
 
 import argparse
 import re
+import socket
 import subprocess
+import sys
+import tempfile
 from pathlib import Path
+
+from ii42_test_support import extension_control_root
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -17,20 +22,40 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument('--psql', default='psql')
     parser.add_argument('--admin-db', default='postgres')
-    parser.add_argument('--fresh-db', default='psql_bm25s_schema_fresh_smoke')
+    parser.add_argument('--host')
+    parser.add_argument('--port', type=int)
+    parser.add_argument('--user')
+    parser.add_argument(
+        '--pg-bin',
+        type=Path,
+        help=(
+            'Start an isolated PostgreSQL cluster with binaries from this '
+            'directory instead of using an existing server.'
+        ),
+    )
+    parser.add_argument('--extension-libdir', type=Path)
+    parser.add_argument(
+        '--extension-control-dir',
+        type=Path,
+        help=(
+            'PostgreSQL share or extension directory containing the '
+            'staged ii42.control.'
+        ),
+    )
+    parser.add_argument('--fresh-db', default='ii42_schema_fresh_smoke')
     parser.add_argument(
         '--relocate-db',
-        default='psql_bm25s_schema_relocate_smoke',
+        default='ii42_schema_relocate_smoke',
     )
     parser.add_argument(
-        '--upgrade-db',
-        default='psql_bm25s_schema_upgrade_smoke',
+        '--pinned-version-db',
+        default='ii42_schema_pinned_version_smoke',
     )
     return parser.parse_args()
 
 
 def psql_cmd(args: argparse.Namespace, dbname: str) -> list[str]:
-    return [
+    command = [
         args.psql,
         '-X',
         '-d',
@@ -38,6 +63,13 @@ def psql_cmd(args: argparse.Namespace, dbname: str) -> list[str]:
         '-v',
         'ON_ERROR_STOP=1',
     ]
+    if args.host is not None:
+        command.extend(['-h', args.host])
+    if args.port is not None:
+        command.extend(['-p', str(args.port)])
+    if args.user is not None:
+        command.extend(['-U', args.user])
+    return command
 
 
 def run_psql(args: argparse.Namespace, dbname: str, sql: str) -> str:
@@ -46,18 +78,46 @@ def run_psql(args: argparse.Namespace, dbname: str, sql: str) -> str:
         input=sql,
         text=True,
         cwd=REPO_ROOT,
-        check=True,
+        check=False,
         capture_output=True,
     )
+    if result.returncode != 0:
+        if result.stdout:
+            print(result.stdout, file=sys.stderr)
+        if result.stderr:
+            print(result.stderr, file=sys.stderr)
+        result.check_returncode()
     return result.stdout.strip()
 
 
 def read_extension_version() -> str:
-    for line in (REPO_ROOT / 'psql_bm25s.control').read_text().splitlines():
+    for line in (REPO_ROOT / 'ii42.control').read_text().splitlines():
         match = VERSION_RE.match(line)
         if match is not None:
             return match.group(1)
-    raise RuntimeError('could not read default_version from psql_bm25s.control')
+    raise RuntimeError('could not read default_version from ii42.control')
+
+
+def free_port() -> int:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.bind(('127.0.0.1', 0))
+        return int(sock.getsockname()[1])
+
+
+def run_command(command: list[str | Path]) -> None:
+    result = subprocess.run(
+        [str(item) for item in command],
+        cwd=REPO_ROOT,
+        text=True,
+        check=False,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        if result.stdout:
+            print(result.stdout, file=sys.stderr)
+        if result.stderr:
+            print(result.stderr, file=sys.stderr)
+        result.check_returncode()
 
 
 def validate_database_name(dbname: str) -> None:
@@ -96,173 +156,416 @@ def drop_database(args: argparse.Namespace, dbname: str) -> None:
     )
 
 
-def wrapper_smoke_sql(version_sql: str, upgrade_sql: str = '') -> str:
+def wrapper_smoke_sql(version_sql: str) -> str:
     return f'''
     CREATE SCHEMA ext;
-    CREATE EXTENSION psql_bm25s WITH SCHEMA ext {version_sql};
-    {upgrade_sql}
-
-    DO $$
-    DECLARE
-        removed_function_count integer;
-        removed_type_count integer;
-    BEGIN
-        SELECT count(*)
-        INTO removed_function_count
-        FROM pg_proc p
-        JOIN pg_namespace n
-            ON n.oid = p.pronamespace
-        WHERE n.nspname = 'ext'
-          AND p.proname IN (
-            'psql_bm25s_build_ids',
-            'psql_bm25s_build_tokens',
-            'psql_bm25s_describe',
-            'psql_bm25s_from_bytea',
-            'psql_bm25s_field_queries',
-            'psql_bm25s_field_query',
-            'psql_bm25s_fuse',
-            'psql_bm25s_fuse_results',
-            'psql_bm25s_hybrid_check_direction',
-            'psql_bm25s_hybrid_check_fusion',
-            'psql_bm25s_hybrid_check_normalizer',
-            'psql_bm25s_hybrid_fuse_candidates_sql_reference',
-            'psql_bm25s_index_describe',
-            'psql_bm25s_index_maintenance_policy',
-            'psql_bm25s_index_maintenance_policy_details',
-            'psql_bm25s_index_maintenance_policy_recommend',
-            'psql_bm25s_index_maintenance_state',
-            'psql_bm25s_index_value',
-            'psql_bm25s_match_query_tokens',
-            'psql_bm25s_num_docs',
-            'psql_bm25s_recommend_maintenance_policy',
-            'psql_bm25s_hits',
-            'psql_bm25s_query_hits',
-            'psql_bm25s_search',
-            'psql_bm25s_search_field_queries',
-            'psql_bm25s_search_ids',
-            'psql_bm25s_search_ids_result',
-            'psql_bm25s_search_indexes',
-            'psql_bm25s_search_prepared_query',
-            'psql_bm25s_search_prepared_query_result',
-            'psql_bm25s_search_query',
-            'psql_bm25s_search_query_result',
-            'psql_bm25s_search_query_result_cfg',
-            'psql_bm25s_search_result',
-            'psql_bm25s_search_tokens',
-            'psql_bm25s_search_tokens_result',
-            'psql_bm25s_search_weighted_queries',
-            'psql_bm25s_score_query_tokens',
-            'psql_bm25s_to_bytea',
-            'psql_bm25s_topk_ids',
-            'psql_bm25s_topk_tokens',
-            'psql_bm25s_vocab_size',
-            'psql_bm25s_weighted_queries',
-            'psql_bm25s_weighted_query'
-          );
-
-        IF removed_function_count <> 0 THEN
-            RAISE EXCEPTION
-                'removed API functions are still visible: %',
-                removed_function_count;
-        END IF;
-
-        SELECT count(*)
-        INTO removed_type_count
-        FROM pg_type t
-        JOIN pg_namespace n
-            ON n.oid = t.typnamespace
-        WHERE n.nspname = 'ext'
-          AND t.typname IN (
-            'psql_bm25s_field_query',
-            'psql_bm25s_result',
-            'psql_bm25s_result_field_query',
-            'psql_bm25s_result_weighted_query',
-            'psql_bm25s_weighted_query'
-          );
-
-        IF removed_type_count <> 0 THEN
-            RAISE EXCEPTION 'removed result type is still visible';
-        END IF;
-
-        SELECT count(*)
-        INTO removed_function_count
-        FROM pg_proc p
-        JOIN pg_namespace n
-            ON n.oid = p.pronamespace
-        WHERE n.nspname = 'ext'
-          AND p.proname = 'psql_bm25s_query'
-          AND pg_get_function_identity_arguments(p.oid)
-              = 'regclass, text, boolean, text[], boolean, boolean';
-
-        IF removed_function_count <> 0 THEN
-            RAISE EXCEPTION 'old prepared-query builder is still visible';
-        END IF;
-    END;
-    $$;
+    CREATE EXTENSION ii42 WITH SCHEMA ext {version_sql};
 
     CREATE TABLE public.docs (
         id serial PRIMARY KEY,
         body text,
+        summary text,
         title varchar,
         tokens text[]
     );
 
-    INSERT INTO public.docs (body, title, tokens) VALUES
-        ('alpha beta gamma', 'alpha title', ARRAY['alpha', 'beta']),
-        ('beta gamma delta', 'beta title', ARRAY['beta', 'gamma']),
-        ('theta lambda', 'theta title', ARRAY['theta']);
+    INSERT INTO public.docs (body, summary, title, tokens) VALUES
+        ('alpha beta gamma', 'alpha summary', 'alpha title',
+            ARRAY['alpha', 'beta']),
+        ('beta gamma delta', 'beta summary', 'beta title',
+            ARRAY['beta', 'gamma']),
+        ('theta lambda', 'theta summary', 'theta title', ARRAY['theta']);
 
     SET search_path = ext, public;
-    CREATE INDEX docs_body_idx ON public.docs USING psql_bm25s (body);
-    CREATE INDEX docs_title_idx ON public.docs USING psql_bm25s (title);
-    CREATE INDEX docs_tokens_idx ON public.docs USING psql_bm25s (tokens);
+    CREATE INDEX docs_body_idx ON public.docs USING ii42 (body);
+    CREATE INDEX docs_title_idx ON public.docs USING ii42 (title);
+    CREATE INDEX docs_tokens_idx ON public.docs USING ii42 (tokens);
+    CREATE INDEX docs_fields_idx ON public.docs USING ii42 (body, summary)
+        WITH (field_aware = true);
+
+    DO $$
+    DECLARE
+        runtime_state jsonb;
+    BEGIN
+        runtime_state := ext.ii42_index_runtime_state_json(
+            'public.docs_body_idx'::regclass
+        );
+        IF jsonb_typeof(runtime_state) <> 'object'
+            OR NOT (runtime_state ?& ARRAY[
+                'raw_state',
+                'cache_epoch',
+                'sae_enabled',
+                'generation',
+                'shared_preload',
+                'maintenance',
+                'debt'
+            ])
+            OR runtime_state->'generation'->>'storage'
+                <> 'convergent_segments'
+            OR (runtime_state->'generation'->>'docs')::integer <> 3
+            OR NOT ((runtime_state->'shared_preload') ? 'registry')
+            OR NOT ((runtime_state->'debt') ? 'counter_only')
+            OR runtime_state->>'raw_state'
+                NOT LIKE 'ii42_index_runtime_state(%'
+        THEN
+            RAISE EXCEPTION
+                'runtime state JSON contract mismatch: %', runtime_state;
+        END IF;
+    END;
+    $$;
+
+    DO $$
+    BEGIN
+        IF EXISTS (
+            SELECT 1
+            FROM pg_catalog.pg_opclass AS opclass
+            JOIN pg_catalog.pg_namespace AS namespace
+              ON namespace.oid = opclass.opcnamespace
+            JOIN pg_catalog.pg_amop AS amop
+              ON amop.amopfamily = opclass.opcfamily
+            JOIN pg_catalog.pg_operator AS operator
+              ON operator.oid = amop.amopopr
+            WHERE namespace.nspname = 'ext'
+              AND opclass.opcname IN (
+                  'ii42_text_ops',
+                  'ii42_varchar_ops'
+              )
+              AND operator.oprname = '@@'
+        ) THEN
+            RAISE EXCEPTION
+                'scalar ii42 opclasses must not bind raw @@ operators';
+        END IF;
+    END;
+    $$;
+
+    DO $$
+    DECLARE
+        exposed_diagnostics text[];
+        exposed_result_routes text[];
+        function_oid oid;
+        function_signature text;
+        public_can_execute boolean;
+        removed_signature text;
+    BEGIN
+        FOREACH removed_signature IN ARRAY ARRAY[
+            'ext.ii42_index_drop(regclass)',
+            'ext.ii42_fast_path_advice(regclass)',
+            'ext.ii42_fast_path_plan(regclass,jsonb)',
+            'ext.ii42_fast_path_explain(regclass,text)',
+            'ext.ii42_ranked_query('
+                || 'ext.ii42_result_prepared_query,integer,real[])',
+            'ext.ii42_ranked_query('
+                || 'regclass,text,integer,real[],boolean,text[],boolean,'
+                || 'boolean)',
+            'ext.ii42_query_prepared('
+                || 'ext.ii42_result_prepared_query,integer,real[])',
+            'ext.ii42_filter_query(ext.ii42_result_ranked_query)',
+            'ext.ii42_order_tokens(ext.ii42_result_ranked_query)',
+            'ext.ii42_fusion(ext.ii42_result_hit[],integer)'
+        ]
+        LOOP
+            IF to_regprocedure(removed_signature) IS NOT NULL THEN
+                RAISE EXCEPTION
+                    'removed SQL API is installed: %', removed_signature;
+            END IF;
+        END LOOP;
+        IF to_regtype('ext.ii42_result_ranked_query') IS NOT NULL THEN
+            RAISE EXCEPTION
+                'removed ii42_result_ranked_query type is installed';
+        END IF;
+
+        function_oid := to_regprocedure(
+            'ext.ii42_query('
+            || 'regclass,text,integer,real[],boolean,text[],boolean,boolean'
+            || ')'
+        );
+        IF function_oid IS NULL OR NOT (
+            SELECT prosecdef
+            FROM pg_proc
+            WHERE oid = function_oid
+        ) THEN
+            RAISE EXCEPTION
+                'ii42_query must be the SECURITY DEFINER product boundary';
+        END IF;
+        SELECT EXISTS (
+            SELECT 1
+            FROM aclexplode(
+                COALESCE(
+                    procedure.proacl,
+                    acldefault('f', procedure.proowner)
+                )
+            ) AS privilege
+            WHERE privilege.grantee = 0
+              AND privilege.privilege_type = 'EXECUTE'
+        )
+        INTO public_can_execute
+        FROM pg_proc AS procedure
+        WHERE procedure.oid = function_oid;
+        IF NOT public_can_execute THEN
+            RAISE EXCEPTION 'PUBLIC cannot execute ii42_query';
+        END IF;
+
+        FOREACH function_signature IN ARRAY ARRAY[
+            'ext.ii42_encode_text_internal(regclass,text)',
+            'ext.ii42_encode_document_batch_internal(regclass,text[])',
+            'ext.ii42_index_semantic_query_native_internal('
+                || 'regclass,integer[],real[],text[],real[],integer,text,'
+                || 'integer[],tid[],jsonb)',
+            'ext.ii42_query_semantic_internal('
+                || 'regclass,text,integer,text[],real[],integer[],tid[],'
+                || 'jsonb)',
+            'ext.ii42_query_internal('
+                || 'regclass,text,text[],real[],integer,real[],boolean,'
+                || 'text[],boolean,boolean,integer[],tid[],jsonb)',
+            'ext.ii42_query_bm25_internal('
+                || 'regclass,text,integer,real[],boolean,text[],boolean,'
+                || 'boolean)'
+        ]
+        LOOP
+            function_oid := to_regprocedure(function_signature);
+            IF function_oid IS NULL THEN
+                RAISE EXCEPTION
+                    'required internal function is missing: %',
+                    function_signature;
+            END IF;
+            SELECT EXISTS (
+                SELECT 1
+                FROM aclexplode(
+                    COALESCE(
+                        procedure.proacl,
+                        acldefault('f', procedure.proowner)
+                    )
+                ) AS privilege
+                WHERE privilege.grantee = 0
+                  AND privilege.privilege_type = 'EXECUTE'
+            )
+            INTO public_can_execute
+            FROM pg_proc AS procedure
+            WHERE procedure.oid = function_oid;
+            IF public_can_execute THEN
+                RAISE EXCEPTION
+                    'PUBLIC can execute internal function %',
+                    function_signature;
+            END IF;
+        END LOOP;
+
+        SELECT array_agg(
+            procedure.oid::regprocedure::text
+            ORDER BY procedure.oid::regprocedure::text
+        )
+        INTO exposed_diagnostics
+        FROM pg_proc AS procedure
+        JOIN pg_namespace AS namespace
+          ON namespace.oid = procedure.pronamespace
+        WHERE namespace.nspname = 'ext'
+          AND procedure.proname = ANY (ARRAY[
+              'ii42_query_ids',
+              'ii42_query_tokens',
+              'ii42_field_aware_query_tokens',
+              'ii42_field_aware_query',
+              'ii42_prepared_query',
+              'ii42_order_tokens',
+              'ii42_op_match_prepared_query',
+              'ii42_op_match_prepared_query_scalar',
+              'ii42_match_prepared_query',
+              'ii42_match_query',
+              'ii42_score_prepared_query',
+              'ii42_score_query'
+          ])
+          AND EXISTS (
+              SELECT 1
+              FROM aclexplode(
+                  COALESCE(
+                      procedure.proacl,
+                      acldefault('f', procedure.proowner)
+                  )
+              ) AS privilege
+              WHERE privilege.grantee = 0
+                AND privilege.privilege_type = 'EXECUTE'
+          );
+        IF exposed_diagnostics IS NOT NULL THEN
+            RAISE EXCEPTION
+                'PUBLIC can execute diagnostic query functions: %',
+                exposed_diagnostics;
+        END IF;
+
+        SELECT array_agg(
+            procedure.oid::regprocedure::text
+            ORDER BY procedure.oid::regprocedure::text
+        )
+        INTO exposed_diagnostics
+        FROM pg_proc AS procedure
+        JOIN pg_namespace AS namespace
+          ON namespace.oid = procedure.pronamespace
+        WHERE namespace.nspname = 'ext'
+          AND procedure.proname = ANY (ARRAY[
+              'ii42_fusion_weighted_query',
+              'ii42_fusion_weighted_queries',
+              'ii42_fusion_field_query',
+              'ii42_fusion_field_queries',
+              'ii42_fusion',
+              'ii42_fusion_query',
+              'ii42_fusion_query_fields',
+              'ii42_fusion_query_weighted',
+              'ii42_hybrid_candidate',
+              'ii42_hybrid_bm25_candidate',
+              'ii42_hybrid_vector_candidate',
+              'ii42_hybrid_bm25_candidates',
+              'ii42_hybrid_fuse_candidates'
+          ])
+          AND NOT EXISTS (
+              SELECT 1
+              FROM aclexplode(
+                  COALESCE(
+                      procedure.proacl,
+                      acldefault('f', procedure.proowner)
+                  )
+              ) AS privilege
+              WHERE privilege.grantee = 0
+                AND privilege.privilege_type = 'EXECUTE'
+          );
+        IF exposed_diagnostics IS NOT NULL THEN
+            RAISE EXCEPTION
+                'PUBLIC cannot execute product composition functions: %',
+                exposed_diagnostics;
+        END IF;
+
+        SELECT array_agg(
+            procedure.oid::regprocedure::text
+            ORDER BY procedure.oid::regprocedure::text
+        )
+        INTO exposed_result_routes
+        FROM pg_proc AS procedure
+        JOIN pg_namespace AS namespace
+          ON namespace.oid = procedure.pronamespace
+        JOIN pg_type AS result_type
+          ON result_type.oid = procedure.prorettype
+        WHERE namespace.nspname = 'ext'
+          AND procedure.proretset
+          AND result_type.typnamespace = namespace.oid
+          AND result_type.typname = ANY (ARRAY[
+              'ii42_result_hit',
+              'ii42_result_hybrid_candidate',
+              'ii42_result_hybrid_hit'
+          ])
+          AND procedure.proname <> ALL (ARRAY[
+              'ii42_query',
+              'ii42_fusion',
+              'ii42_fusion_query',
+              'ii42_fusion_query_fields',
+              'ii42_fusion_query_weighted',
+              'ii42_hybrid_bm25_candidates',
+              'ii42_hybrid_fuse_candidates'
+          ])
+          AND EXISTS (
+              SELECT 1
+              FROM aclexplode(
+                  COALESCE(
+                      procedure.proacl,
+                      acldefault('f', procedure.proowner)
+                  )
+              ) AS privilege
+              WHERE privilege.grantee = 0
+                AND privilege.privilege_type = 'EXECUTE'
+          );
+        IF exposed_result_routes IS NOT NULL THEN
+            RAISE EXCEPTION
+                'PUBLIC can execute alternate top-k result routes: %',
+                exposed_result_routes;
+        END IF;
+    END;
+    $$;
+
+    CREATE ROLE ii42_schema_app;
+    GRANT USAGE ON SCHEMA ext TO ii42_schema_app;
+    GRANT SELECT ON public.docs TO ii42_schema_app;
+    SET ROLE ii42_schema_app;
+    SELECT count(*)
+    FROM ext.ii42_query(
+        'public.docs_body_idx'::regclass,
+        'alpha',
+        2
+    );
+    SELECT count(*)
+    FROM ext.ii42_query(
+        'public.docs_fields_idx'::regclass,
+        'alpha',
+        ARRAY['body', 'summary']::text[],
+        ARRAY[2.0, 0.5]::real[],
+        2
+    );
+    SELECT count(*)
+    FROM ext.ii42_fusion_query(
+        ARRAY[
+            'public.docs_body_idx'::regclass,
+            'public.docs_title_idx'::regclass
+        ],
+        'alpha',
+        ARRAY[1.0, 0.5]::real[],
+        2
+    );
+    WITH candidates AS (
+        SELECT array_agg(candidate) AS items
+        FROM ext.ii42_hybrid_bm25_candidates(
+            'body',
+            'public.docs_body_idx'::regclass,
+            'alpha',
+            1.0,
+            2
+        ) AS candidate
+    )
+    SELECT count(*)
+    FROM candidates
+    CROSS JOIN LATERAL ext.ii42_hybrid_fuse_candidates(
+        candidates.items,
+        2
+    );
+    SELECT count(*)
+    FROM public.docs
+    WHERE tokens OPERATOR(ext.@@) 'alpha';
+    RESET ROLE;
+    DROP OWNED BY ii42_schema_app;
+    DROP ROLE ii42_schema_app;
 
     SET search_path = pg_catalog;
 
     SELECT count(*)
-    FROM ext.psql_bm25s_ranked_query(
-        'public.docs_body_idx'::regclass,
-        'alpha',
-        2
-    ) q;
-
-    SELECT count(*)
-    FROM ext.psql_bm25s_fusion_query_weighted(
+    FROM ext.ii42_fusion_query_weighted(
         ARRAY[
-            ext.psql_bm25s_fusion_weighted_query(
+            ext.ii42_fusion_weighted_query(
                 'public.docs_body_idx'::regclass,
                 'alpha',
                 2.0
             ),
-            ext.psql_bm25s_fusion_weighted_query(
+            ext.ii42_fusion_weighted_query(
                 'public.docs_title_idx'::regclass,
                 'alpha',
                 1.0
             )
-        ]::ext.psql_bm25s_result_fusion_weighted_query[],
+        ]::ext.ii42_result_fusion_weighted_query[],
         2,
         10,
         NULL
     ) r;
 
     SELECT count(*)
-    FROM ext.psql_bm25s_query(
+    FROM ext.ii42_query(
         'public.docs_body_idx'::regclass,
         'alpha',
         2
     ) r;
 
     SELECT count(*)
-    FROM ext.psql_bm25s_hybrid_fuse_candidates(
+    FROM ext.ii42_hybrid_fuse_candidates(
         ARRAY[
-            ext.psql_bm25s_hybrid_bm25_candidate(
+            ext.ii42_hybrid_bm25_candidate(
                 'body',
                 '(0,1)'::tid,
                 1.0,
                 1,
                 2.0
             ),
-            ext.psql_bm25s_hybrid_vector_candidate(
+            ext.ii42_hybrid_vector_candidate(
                 'embedding',
                 '(0,1)'::tid,
                 0.2,
@@ -270,7 +573,7 @@ def wrapper_smoke_sql(version_sql: str, upgrade_sql: str = '') -> str:
                 1.0,
                 'minmax'
             ),
-            ext.psql_bm25s_hybrid_vector_candidate(
+            ext.ii42_hybrid_vector_candidate(
                 'embedding',
                 '(0,2)'::tid,
                 0.4,
@@ -278,31 +581,21 @@ def wrapper_smoke_sql(version_sql: str, upgrade_sql: str = '') -> str:
                 1.0,
                 'minmax'
             )
-        ]::ext.psql_bm25s_result_hybrid_candidate[],
+        ]::ext.ii42_result_hybrid_candidate[],
         2,
         'score'
     ) h;
 
     SELECT count(*)
     FROM public.docs
-    WHERE body OPERATOR(ext.@@) 'alpha';
+    WHERE tokens OPERATOR(ext.@@) 'alpha';
 
-    SET search_path = public, pg_catalog;
+    DROP INDEX public.docs_tokens_idx;
 
     DO $$
-    DECLARE
-        explain_result jsonb;
     BEGIN
-        explain_result := ext.psql_bm25s_fast_path_explain(
-            'public.docs_body_idx'::regclass,
-            $q$SELECT *
-              FROM docs
-              WHERE body OPERATOR(ext.@@) 'alpha'$q$
-        );
-        IF NOT explain_result ? 'used_psql_bm25s_index' THEN
-            RAISE EXCEPTION
-                'psql_bm25s_fast_path_explain returned unexpected JSON: %',
-                explain_result;
+        IF to_regclass('public.docs_tokens_idx') IS NOT NULL THEN
+            RAISE EXCEPTION 'DROP INDEX left the index relation';
         END IF;
     END;
     $$;
@@ -313,11 +606,10 @@ def run_case(
     args: argparse.Namespace,
     dbname: str,
     version_sql: str,
-    upgrade_sql: str = '',
 ) -> None:
     reset_database(args, dbname)
     try:
-        run_psql(args, dbname, wrapper_smoke_sql(version_sql, upgrade_sql))
+        run_psql(args, dbname, wrapper_smoke_sql(version_sql))
     finally:
         drop_database(args, dbname)
 
@@ -331,12 +623,12 @@ def run_relocation_guard(args: argparse.Namespace) -> None:
             '''
             CREATE SCHEMA ext;
             CREATE SCHEMA ext2;
-            CREATE EXTENSION psql_bm25s WITH SCHEMA ext;
+            CREATE EXTENSION ii42 WITH SCHEMA ext;
             ''',
         )
         result = subprocess.run(
             psql_cmd(args, args.relocate_db),
-            input='ALTER EXTENSION psql_bm25s SET SCHEMA ext2;',
+            input='ALTER EXTENSION ii42 SET SCHEMA ext2;',
             text=True,
             cwd=REPO_ROOT,
             check=False,
@@ -344,9 +636,9 @@ def run_relocation_guard(args: argparse.Namespace) -> None:
         )
         if result.returncode == 0:
             raise AssertionError(
-                'psql_bm25s unexpectedly allowed ALTER EXTENSION SET SCHEMA'
+                'ii42 unexpectedly allowed ALTER EXTENSION SET SCHEMA'
             )
-        expected = 'extension "psql_bm25s" does not support SET SCHEMA'
+        expected = 'extension "ii42" does not support SET SCHEMA'
         if expected not in result.stderr:
             raise AssertionError(
                 'unexpected relocation error: '
@@ -356,17 +648,119 @@ def run_relocation_guard(args: argparse.Namespace) -> None:
         drop_database(args, args.relocate_db)
 
 
-def main() -> None:
-    args = parse_args()
+def run_all_cases(args: argparse.Namespace) -> None:
     current_version = read_extension_version()
     run_case(args, args.fresh_db, '')
     run_case(
         args,
-        args.upgrade_db,
-        "VERSION '0.2.0'",
-        f"ALTER EXTENSION psql_bm25s UPDATE TO '{current_version}';",
+        args.pinned_version_db,
+        f"VERSION '{current_version}'",
     )
     run_relocation_guard(args)
+
+
+def run_isolated(args: argparse.Namespace) -> None:
+    if args.pg_bin is None:
+        raise AssertionError('isolated schema smoke requires --pg-bin')
+
+    initdb = args.pg_bin / 'initdb'
+    pg_ctl = args.pg_bin / 'pg_ctl'
+    psql = args.pg_bin / 'psql'
+    for binary in (initdb, pg_ctl, psql):
+        if not binary.is_file():
+            raise FileNotFoundError(f'PostgreSQL binary is missing: {binary}')
+
+    with tempfile.TemporaryDirectory(prefix='ii42_schema_') as tmp:
+        root = Path(tmp)
+        data_dir = root / 'data'
+        socket_dir = root / 'socket'
+        log_path = root / 'postgres.log'
+        socket_dir.mkdir()
+        port = free_port()
+        started = False
+        try:
+            run_command(
+                [
+                    initdb,
+                    '-D',
+                    data_dir,
+                    '-A',
+                    'trust',
+                    '-U',
+                    'postgres',
+                ]
+            )
+            with (data_dir / 'postgresql.conf').open(
+                'a',
+                encoding='utf-8',
+            ) as handle:
+                handle.write("\nlisten_addresses = ''\n")
+                handle.write(
+                    f"unix_socket_directories = '{socket_dir}'\n"
+                )
+                handle.write(f'port = {port}\n')
+                if args.extension_libdir is not None:
+                    libdir = str(args.extension_libdir).replace("'", "''")
+                    handle.write(
+                        "dynamic_library_path = '"
+                        f"{libdir}:$libdir'\n"
+                    )
+                if args.extension_control_dir is not None:
+                    control_dir = str(
+                        args.extension_control_dir
+                    ).replace("'", "''")
+                    handle.write(
+                        "extension_control_path = '"
+                        f"{control_dir}:$system'\n"
+                    )
+            run_command(
+                [pg_ctl, '-D', data_dir, '-l', log_path, 'start', '-w']
+            )
+            started = True
+            args.psql = str(psql)
+            args.host = str(socket_dir)
+            args.port = port
+            args.user = 'postgres'
+            run_all_cases(args)
+        except Exception:
+            if log_path.exists():
+                print(log_path.read_text(encoding='utf-8'), file=sys.stderr)
+            raise
+        finally:
+            if started:
+                run_command([pg_ctl, '-D', data_dir, 'stop', '-m', 'fast'])
+
+
+def main() -> None:
+    args = parse_args()
+    if (args.extension_libdir is None) != (
+        args.extension_control_dir is None
+    ):
+        raise ValueError(
+            '--extension-libdir and --extension-control-dir must be '
+            'provided together'
+        )
+    if args.extension_libdir is not None:
+        args.extension_libdir = args.extension_libdir.expanduser().resolve()
+        if not any(
+            (args.extension_libdir / name).is_file()
+            for name in ('ii42.so', 'ii42.dylib')
+        ):
+            raise FileNotFoundError(
+                'ii42 extension library is missing from '
+                f'{args.extension_libdir}'
+            )
+        args.extension_control_dir = extension_control_root(
+            args.extension_control_dir
+        )
+    if args.pg_bin is None:
+        if args.extension_libdir is not None:
+            raise ValueError(
+                'staged extension paths require isolated --pg-bin mode'
+            )
+        run_all_cases(args)
+    else:
+        run_isolated(args)
     print('extension schema smoke passed')
 
 

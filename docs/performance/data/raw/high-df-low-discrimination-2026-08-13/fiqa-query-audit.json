@@ -1,0 +1,87 @@
+{
+  "field_count": 1,
+  "index_name": "ii42_beir15.docs_fiqa_bm25_idx",
+  "k": 100,
+  "lexical_dims": 29522,
+  "queries": [
+    {
+      "document_slots": "57651",
+      "elapsed_ms": 517.0169999996688,
+      "encoded_atom_count": 60,
+      "k": 100,
+      "kth_score": 48.1894417,
+      "levels": [
+        {
+          "block_count": "7207",
+          "block_shift": 3,
+          "block_size": 8,
+          "bound_bytes": "1605008",
+          "competitive_blocks": "1765",
+          "competitive_document_slots": "14120",
+          "competitive_postings": "154028",
+          "document_fraction": 0.244922031,
+          "posting_fraction": 0.292505251,
+          "total_postings": "526582",
+          "touched_term_blocks": "200626"
+        },
+        {
+          "block_count": "3604",
+          "block_shift": 4,
+          "block_size": 16,
+          "bound_bytes": "1022624",
+          "competitive_blocks": "2683",
+          "competitive_document_slots": "42928",
+          "competitive_postings": "408506",
+          "document_fraction": 0.74461848,
+          "posting_fraction": 0.775769016,
+          "total_postings": "526582",
+          "touched_term_blocks": "127828"
+        },
+        {
+          "block_count": "1802",
+          "block_shift": 5,
+          "block_size": 32,
+          "bound_bytes": "609216",
+          "competitive_blocks": "1782",
+          "competitive_document_slots": "57024",
+          "competitive_postings": "522234",
+          "document_fraction": 0.989124213,
+          "posting_fraction": 0.991742976,
+          "total_postings": "526582",
+          "touched_term_blocks": "76152"
+        },
+        {
+          "block_count": "901",
+          "block_shift": 6,
+          "block_size": 64,
+          "bound_bytes": "344400",
+          "competitive_blocks": "900",
+          "competitive_document_slots": "57600",
+          "competitive_postings": "526582",
+          "document_fraction": 0.999115367,
+          "posting_fraction": 1,
+          "total_postings": "526582",
+          "touched_term_blocks": "43050"
+        },
+        {
+          "block_count": "451",
+          "block_shift": 7,
+          "block_size": 128,
+          "bound_bytes": "187680",
+          "competitive_blocks": "450",
+          "competitive_document_slots": "57600",
+          "competitive_postings": "526582",
+          "document_fraction": 0.999115367,
+          "posting_fraction": 1,
+          "total_postings": "526582",
+          "touched_term_blocks": "23460"
+        }
+      ],
+      "query_postings": "526582",
+      "query_runs": 60,
+      "query_terms": 60,
+      "query_text": "Tax considerations for selling a property below appraised value to family?"
+    }
+  ],
+  "semantic_dims": 50265
+}

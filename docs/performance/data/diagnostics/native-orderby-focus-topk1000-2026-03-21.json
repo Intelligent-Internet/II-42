@@ -1,0 +1,157 @@
+{
+  "datasets": {
+    "arguana": {
+      "dataset": "arguana",
+      "ii42_ids": {
+        "build_bytes": 5947392,
+        "build_ms": 86.17300001787953,
+        "orderby_query": {
+          "avg_ms": 13.648819409186288,
+          "count": 1406,
+          "p50_ms": 11.230875490582548,
+          "p95_ms": 26.527698486461304,
+          "qps": 73.2664100843003
+        },
+        "plan_default": [
+          "Limit",
+          "  ->  Index Scan using docs_ids_bm25_idx on docs_ids",
+          "        Order By: (token_ids <=> '{145,11,160,2,156,11,132,133,161,162,163,18,74,164,75,46,165,47,166,18,74,164,167,89,168,169,170,171,172,108,173,174,175,170,54,21,59,176,177,91,178,165,179,114,180,165,47,49,145,181,180,13,182,183,184,185,186,107,97,187,131,188,63,18,93,189,18,190,191,192,114,63,180,112,167,193,1,167,194,195,2,196,19,197,63,64,198,46,89,199,200,201,202,203,204,202,205,206,207,208,209,210,211,212,213,22,110,214,111,215,216,74,217,59,109,218,137,176,219,220,221,110,222,217,59,223,224,225,226,227,214,228,109,218,108,74,229,230,108,202,231,232,233,234,235,17,18,78,79,43,236,237,82,238,88,120,239,240,241,242,243,244,245,236,237,82,246,247,248,109,63,249,2,250,63,251,89,252,253,254,255,256,257,258,259,260,123,261,262,263,264,89,265,91,266,51,267,265,202,268,109,269,120,236,237,82,112,64,63,210,270,131,185,93,271,272,273,274,63,64,275,185,104,276,277,166,91,64,278,185,279,276,277,104,280,128,122,281,107,282,128,283,63,145,102,109,284,106,285,286,109,128,5,63,64,278,270,281,281,287,288,186,123,289,10,218,290,30,291,285,292,166,64,210,293,294,295,281,296,297,108,298,299,274,210,300,295,281,176,297,63,238,301,64,107,294,295,297,108,109,302,303,225,304,305,300,295,306,30,291,10,307,281,308,18,107,97,309,129,131,281,93,107,310,311,312,313,314,315,120,316,317,76,308,281,318,319,320,88,321,120,47,322,323,97,316,324,263,47,325,326,47,162,327,49,328,315,156,11,112,329,330,114,331,332,149,63,333,114,334,335,108,336,2,337,95,338,339,340,341,63,176,80,342,343,129,344,345,346,159,347,348,349,350,160,351,265,267,352,353,354,355,356,357,228,111,358,359,169,285,17,114,360,361,362,363,364,365,366,367,281,368,335,74,369,370,371,353,364,372,373,374,375,326,47,323,97,376,362,377,378,379}'::integer[])"
+        ],
+        "plan_forced": [
+          "Aggregate",
+          "  ->  Limit",
+          "        ->  Index Scan using docs_ids_bm25_idx on docs_ids",
+          "              Order By: (token_ids <=> '{145,11,160,2,156,11,132,133,161,162,163,18,74,164,75,46,165,47,166,18,74,164,167,89,168,169,170,171,172,108,173,174,175,170,54,21,59,176,177,91,178,165,179,114,180,165,47,49,145,181,180,13,182,183,184,185,186,107,97,187,131,188,63,18,93,189,18,190,191,192,114,63,180,112,167,193,1,167,194,195,2,196,19,197,63,64,198,46,89,199,200,201,202,203,204,202,205,206,207,208,209,210,211,212,213,22,110,214,111,215,216,74,217,59,109,218,137,176,219,220,221,110,222,217,59,223,224,225,226,227,214,228,109,218,108,74,229,230,108,202,231,232,233,234,235,17,18,78,79,43,236,237,82,238,88,120,239,240,241,242,243,244,245,236,237,82,246,247,248,109,63,249,2,250,63,251,89,252,253,254,255,256,257,258,259,260,123,261,262,263,264,89,265,91,266,51,267,265,202,268,109,269,120,236,237,82,112,64,63,210,270,131,185,93,271,272,273,274,63,64,275,185,104,276,277,166,91,64,278,185,279,276,277,104,280,128,122,281,107,282,128,283,63,145,102,109,284,106,285,286,109,128,5,63,64,278,270,281,281,287,288,186,123,289,10,218,290,30,291,285,292,166,64,210,293,294,295,281,296,297,108,298,299,274,210,300,295,281,176,297,63,238,301,64,107,294,295,297,108,109,302,303,225,304,305,300,295,306,30,291,10,307,281,308,18,107,97,309,129,131,281,93,107,310,311,312,313,314,315,120,316,317,76,308,281,318,319,320,88,321,120,47,322,323,97,316,324,263,47,325,326,47,162,327,49,328,315,156,11,112,329,330,114,331,332,149,63,333,114,334,335,108,336,2,337,95,338,339,340,341,63,176,80,342,343,129,344,345,346,159,347,348,349,350,160,351,265,267,352,353,354,355,356,357,228,111,358,359,169,285,17,114,360,361,362,363,364,365,366,367,281,368,335,74,369,370,371,353,364,372,373,374,375,326,47,323,97,376,362,377,378,379}'::integer[])"
+        ],
+        "result_query": {
+          "avg_ms": 1.1266750207322862,
+          "count": 1406,
+          "p50_ms": 0.8686044893693179,
+          "p95_ms": 2.229405741672963,
+          "qps": 887.567383317016
+        }
+      },
+      "ii42_text": {
+        "build_bytes": 6184960,
+        "build_ms": 92.97733299899846,
+        "orderby_query": {
+          "avg_ms": 73.80049097965104,
+          "count": 1406,
+          "p50_ms": 60.34858299244661,
+          "p95_ms": 161.16043751389952,
+          "qps": 13.550045355060433
+        },
+        "plan_default": [
+          "Limit",
+          "  ->  Index Scan using docs_tokens_bm25_idx on docs_tokens",
+          "        Order By: (tokens <=> '{be,vegetarian,help,environ,becom,vegetarian,environment,friend,thing,do,modern,farm,one,main,sourc,pollut,our,river,beef,farm,one,main,caus,deforest,long,peopl,continu,buy,fast,food,billion,financi,incent,continu,cut,down,tree,make,room,cattl,becaus,our,desir,eat,fish,our,river,sea,be,empti,fish,mani,speci,face,extinct,energi,resourc,use,up,much,more,greedili,meat,farm,than,my,farm,cereal,puls,etc,eat,meat,fish,onli,caus,cruelti,anim,caus,serious,harm,environ,biodivers,exampl,consid,meat,product,relat,pollut,deforest,toronto,1992,royal,agricultur,winter,fair,agricultur,canada,display,two,contrast,statist,take,four,footbal,field,land,about,hectar,feed,each,canadian,one,appl,tree,produc,enough,fruit,make,320,pie,think,about,coupl,appl,tree,few,row,wheat,mere,fraction,hectar,could,produc,enough,food,one,person,2006,food,agricultur,organiz,fao,report,conclud,worldwid,livestock,farm,generat,18,planet,greenhous,gas,emiss,comparison,all,world,car,train,plane,boat,account,combin,13,greenhous,gas,emiss,result,abov,point,produc,meat,damag,environ,demand,meat,drive,deforest,daniel,cesar,avelino,brazil,feder,public,prosecut,offic,say,we,know,singl,biggest,driver,deforest,amazon,cattl,clear,tropic,rainforest,amazon,agricultur,estim,produc,17,world,greenhous,gas,emiss,onli,product,meat,take,lot,more,energi,than,ultim,give,us,chicken,meat,product,consum,energi,ratio,protein,output,beef,cattl,product,requir,energi,input,protein,output,ratio,54,same,true,water,use,due,same,phenomenon,meat,be,ineffici,produc,term,amount,grain,need,produc,same,weight,meat,product,requir,lot,water,water,anoth,scarc,resourc,we,soon,have,enough,various,area,globe,grain,fed,beef,product,take,100,000,liter,water,everi,kilogram,food,rais,broiler,chicken,take,500,liter,water,make,kilogram,meat,comparison,soybean,product,use,000,liter,kilogram,food,produc,rice,912,wheat,900,potato,500,liter,while,area,globe,have,sever,water,shortag,farm,use,up,70,time,more,water,than,use,domest,purpos,cook,wash,third,popul,world,alreadi,suffer,from,shortag,water,groundwat,level,fall,all,over,world,river,begin,dri,up,alreadi,some,biggest,river,china,yellow,river,do,reach,sea,rise,popul,becom,vegetarian,onli,respons,way,eat,stephen,lecki,how,meat,centr,eat,pattern,affect,food,secur,environ,intern,develop,research,center,bryan,walsh,meat,make,global,warm,wors,time,magazin,10,septemb,2008,david,adam,supermarket,supplier,help,destroy,amazon,rainforest,guardian,21st,june,2009,roger,segelken,could,feed,800,million,peopl,grain,livestock,eat,cornel,scienc,news,7th,august,1997,fiona,harvey,water,scarciti,affect,one,three,ft,com,21st,august,2003,rupert,wingfield,hay,yellow,river,dri,up,bbc,news,29th,juli,2004}'::text[])"
+        ],
+        "plan_forced": [
+          "Aggregate",
+          "  ->  Limit",
+          "        ->  Index Scan using docs_tokens_bm25_idx on docs_tokens",
+          "              Order By: (tokens <=> '{be,vegetarian,help,environ,becom,vegetarian,environment,friend,thing,do,modern,farm,one,main,sourc,pollut,our,river,beef,farm,one,main,caus,deforest,long,peopl,continu,buy,fast,food,billion,financi,incent,continu,cut,down,tree,make,room,cattl,becaus,our,desir,eat,fish,our,river,sea,be,empti,fish,mani,speci,face,extinct,energi,resourc,use,up,much,more,greedili,meat,farm,than,my,farm,cereal,puls,etc,eat,meat,fish,onli,caus,cruelti,anim,caus,serious,harm,environ,biodivers,exampl,consid,meat,product,relat,pollut,deforest,toronto,1992,royal,agricultur,winter,fair,agricultur,canada,display,two,contrast,statist,take,four,footbal,field,land,about,hectar,feed,each,canadian,one,appl,tree,produc,enough,fruit,make,320,pie,think,about,coupl,appl,tree,few,row,wheat,mere,fraction,hectar,could,produc,enough,food,one,person,2006,food,agricultur,organiz,fao,report,conclud,worldwid,livestock,farm,generat,18,planet,greenhous,gas,emiss,comparison,all,world,car,train,plane,boat,account,combin,13,greenhous,gas,emiss,result,abov,point,produc,meat,damag,environ,demand,meat,drive,deforest,daniel,cesar,avelino,brazil,feder,public,prosecut,offic,say,we,know,singl,biggest,driver,deforest,amazon,cattl,clear,tropic,rainforest,amazon,agricultur,estim,produc,17,world,greenhous,gas,emiss,onli,product,meat,take,lot,more,energi,than,ultim,give,us,chicken,meat,product,consum,energi,ratio,protein,output,beef,cattl,product,requir,energi,input,protein,output,ratio,54,same,true,water,use,due,same,phenomenon,meat,be,ineffici,produc,term,amount,grain,need,produc,same,weight,meat,product,requir,lot,water,water,anoth,scarc,resourc,we,soon,have,enough,various,area,globe,grain,fed,beef,product,take,100,000,liter,water,everi,kilogram,food,rais,broiler,chicken,take,500,liter,water,make,kilogram,meat,comparison,soybean,product,use,000,liter,kilogram,food,produc,rice,912,wheat,900,potato,500,liter,while,area,globe,have,sever,water,shortag,farm,use,up,70,time,more,water,than,use,domest,purpos,cook,wash,third,popul,world,alreadi,suffer,from,shortag,water,groundwat,level,fall,all,over,world,river,begin,dri,up,alreadi,some,biggest,river,china,yellow,river,do,reach,sea,rise,popul,becom,vegetarian,onli,respons,way,eat,stephen,lecki,how,meat,centr,eat,pattern,affect,food,secur,environ,intern,develop,research,center,bryan,walsh,meat,make,global,warm,wors,time,magazin,10,septemb,2008,david,adam,supermarket,supplier,help,destroy,amazon,rainforest,guardian,21st,june,2009,roger,segelken,could,feed,800,million,peopl,grain,livestock,eat,cornel,scienc,news,7th,august,1997,fiona,harvey,water,scarciti,affect,one,three,ft,com,21st,august,2003,rupert,wingfield,hay,yellow,river,dri,up,bbc,news,29th,juli,2004}'::text[])"
+        ],
+        "result_query": {
+          "avg_ms": 0.9032843787788452,
+          "count": 1406,
+          "p50_ms": 0.8433959883404896,
+          "p95_ms": 1.3153432446415536,
+          "qps": 1107.0710658717526
+        }
+      },
+      "stats": {
+        "documents": 8674,
+        "queries": 1406,
+        "query_tokens": 176684,
+        "tokens": 947471,
+        "vocab_size": 22713
+      },
+      "upstream_bm25s_local": {
+        "build_ms": 292.7569580206182,
+        "query": {
+          "count": 1406,
+          "qps": 1507.4231352964223,
+          "total_ms": 932.7175409998745
+        }
+      }
+    },
+    "scifact": {
+      "dataset": "scifact",
+      "ii42_ids": {
+        "build_bytes": 4259840,
+        "build_ms": 75.96079198992811,
+        "orderby_query": {
+          "avg_ms": 1.943517322555029,
+          "count": 300,
+          "p50_ms": 1.8933120009023696,
+          "p95_ms": 2.813335105020087,
+          "qps": 514.5310455403393
+        },
+        "plan_default": [
+          "Limit",
+          "  ->  Index Scan using docs_ids_bm25_idx on docs_ids",
+          "        Order By: (token_ids <=> '{39,16598,78,105,622}'::integer[])"
+        ],
+        "plan_forced": [
+          "Aggregate",
+          "  ->  Limit",
+          "        ->  Index Scan using docs_ids_bm25_idx on docs_ids",
+          "              Order By: (token_ids <=> '{39,16598,78,105,622}'::integer[])"
+        ],
+        "result_query": {
+          "avg_ms": 0.3221501298442793,
+          "count": 300,
+          "p50_ms": 0.30577047436963767,
+          "p95_ms": 0.43447528732940555,
+          "qps": 3104.142781141759
+        }
+      },
+      "ii42_text": {
+        "build_bytes": 4538368,
+        "build_ms": 87.20983300008811,
+        "orderby_query": {
+          "avg_ms": 9.44957929304413,
+          "count": 300,
+          "p50_ms": 7.737478503258899,
+          "p95_ms": 15.31205268693157,
+          "qps": 105.8248170620785
+        },
+        "plan_default": [
+          "Limit",
+          "  ->  Index Scan using docs_tokens_bm25_idx on docs_tokens",
+          "        Order By: (tokens <=> '{dimension,biomateri,show,induct,properti}'::text[])"
+        ],
+        "plan_forced": [
+          "Aggregate",
+          "  ->  Limit",
+          "        ->  Index Scan using docs_tokens_bm25_idx on docs_tokens",
+          "              Order By: (tokens <=> '{dimension,biomateri,show,induct,properti}'::text[])"
+        ],
+        "result_query": {
+          "avg_ms": 0.4056958534056321,
+          "count": 300,
+          "p50_ms": 0.37235401396173984,
+          "p95_ms": 0.5105996897327715,
+          "qps": 2464.9007171393423
+        }
+      },
+      "stats": {
+        "documents": 5183,
+        "queries": 300,
+        "query_tokens": 2816,
+        "tokens": 812074,
+        "vocab_size": 26559
+      },
+      "upstream_bm25s_local": {
+        "build_ms": 211.92491700639948,
+        "query": {
+          "count": 300,
+          "qps": 3454.733633492471,
+          "total_ms": 86.83737498358823
+        }
+      }
+    }
+  },
+  "top_k": 1000
+}

@@ -30,9 +30,9 @@ PLOT_W = WIDTH - LEFT - RIGHT
 PLOT_H = HEIGHT - TOP - BOTTOM
 
 ENGINES = [
-    ('python_reference_bm25s', 'Python reference implementation', '#1f77b4', 'circle'),
-    ('psql_bm25s_ids', 'psql_bm25s ids', '#d62728', 'triangle_up'),
-    ('psql_bm25s_text', 'psql_bm25s text[]', '#ff7f0e', 'triangle_down'),
+    ('upstream_bm25s', 'upstream bm25s', '#1f77b4', 'circle'),
+    ('ii42_ids', 'ii42 ids', '#d62728', 'triangle_up'),
+    ('ii42_text', 'ii42 text[]', '#ff7f0e', 'triangle_down'),
     ('pg_search', 'pg_search', '#2ca02c', 'square'),
     ('vchord_bm25', 'vchord_bm25', '#9467bd', 'diamond'),
 ]
@@ -406,7 +406,7 @@ def main() -> None:
         svg_text(
             LEFT,
             HEIGHT - 58,
-            'Representative largest dataset: msmarco | Python reference 3.2m | '
+            'Representative largest dataset: msmarco | upstream 3.2m | '
             'ids 56.06s | text[] 1.5m | pg_search 1.2m | vchord 1.7m',
             size=13,
             fill='#666',

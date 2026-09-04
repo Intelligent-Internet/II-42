@@ -31,7 +31,13 @@ ${sudo_cmd} apt-get install -y \
     lsb-release \
     zip \
     build-essential \
-    cmake
+    cmake \
+    pkg-config \
+    python3-numpy \
+    python3-onnx \
+    python3-psycopg \
+    python3-pytest \
+    python3-scipy
 
 ${sudo_cmd} install -d -m 0755 /etc/apt/keyrings
 

@@ -1,0 +1,244 @@
+{
+  "batch_crud_ms": 841.433,
+  "docs": 50000,
+  "drop_index_ms": 39.22,
+  "first_query": {
+    "count": 20,
+    "max_score": 33.86785
+  },
+  "health_after_maintain_ms": 1819.671,
+  "health_after_reindex_ms": 1820.824,
+  "initial_query_diagnostics": {
+    "joined_count": 20,
+    "raw_count": 20,
+    "raw_tids": [
+      "(577,47)",
+      "(658,18)",
+      "(335,59)",
+      "(255,13)",
+      "(470,71)"
+    ],
+    "status": {
+      "api_version": "ii42_index_v1",
+      "blocker": "none",
+      "details": {
+        "auto_rebuild_churn_ratio": null,
+        "auto_rebuild_delta_bytes": null,
+        "auto_rebuild_threshold": 1,
+        "consistency": "eventual",
+        "delta_bytes": 0,
+        "delta_records": 0,
+        "docs": 50000,
+        "index_bytes": 42188680,
+        "index_name": "medium.docs_body_idx",
+        "pages": 5219,
+        "pending_deletes": 0,
+        "pending_writes": 0,
+        "query_overlay_max_bytes": null,
+        "query_overlay_max_records": null,
+        "rebuilds": 1,
+        "source_type": "text",
+        "stale": false
+      },
+      "generation": {
+        "atomic": true,
+        "cache_epoch": 1,
+        "contract_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+        "delta": {
+          "bytes": 0,
+          "pages": 0,
+          "records": 0,
+          "start_block": 5219
+        },
+        "docs": 50000,
+        "generation": 1,
+        "generation_id": "16617/1/1",
+        "health": "ok",
+        "health_reason": "ok",
+        "layout": {
+          "matches": true,
+          "physical": "bm25s_sae",
+          "requested": "bm25s_sae"
+        },
+        "posting": {
+          "active": true,
+          "bytes": 42188680,
+          "pages": 5181,
+          "present": true,
+          "reason": "ok",
+          "record_count": 50000,
+          "role": "unified_posting",
+          "signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+          "start_block": 38,
+          "valid": true
+        },
+        "primary": {
+          "bytes": 300000,
+          "pages": 37,
+          "payload_bytes": 0,
+          "role": "identity_map",
+          "start_block": 1,
+          "tid_bytes": 300000
+        },
+        "rebuilds": 1,
+        "valid": true
+      },
+      "index_name": "medium.docs_body_idx",
+      "index_ready": true,
+      "index_type": "bm25s_sae",
+      "index_valid": true,
+      "model_artifacts_valid": true,
+      "options": {
+        "access_method": "ii42",
+        "atom_space": "p2_m1934_b1125_nfcorpus_3f2239c6b5ea",
+        "consistency": "eventual",
+        "index_name": "medium.docs_body_idx",
+        "index_type": "bm25s_sae",
+        "lifecycle": "postgresql_index",
+        "model": "ii42_p2_p22_nfcorpus_v2_smoke",
+        "model_path": "/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+        "model_path_source": "index",
+        "model_runtime_error": null,
+        "payload_owner": "index_relation",
+        "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+        "sae_enabled": true,
+        "sae_explicit": true,
+        "sae_route_source": "explicit",
+        "scoring_profile": "p2_unified_sparse_dot_v1",
+        "semantic_configuration_error": null,
+        "semantic_configuration_ready": true
+      },
+      "query_ready": true,
+      "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+      "runtime_signature_matches": true,
+      "sae_enabled": true,
+      "status_error": null
+    }
+  },
+  "initial_query_diagnostics_ms": 1837.768,
+  "maintain_result": "ii42_access_index(type=text, docs=50000, bytes=42188472, pages=5219, stale=false, payload_health=ok, rebuild_required=false)",
+  "model_path": "/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+  "model_source": "production_checkout",
+  "post_mutation_query": {
+    "count": 20,
+    "max_score": 33.8678
+  },
+  "post_mutation_query_diagnostics": {
+    "joined_count": 20,
+    "raw_count": 20,
+    "raw_tids": [
+      "(577,47)",
+      "(658,18)",
+      "(335,59)",
+      "(255,13)",
+      "(470,71)"
+    ],
+    "status": {
+      "api_version": "ii42_index_v1",
+      "blocker": "none",
+      "details": {
+        "auto_rebuild_churn_ratio": null,
+        "auto_rebuild_delta_bytes": null,
+        "auto_rebuild_threshold": 1,
+        "consistency": "eventual",
+        "delta_bytes": 0,
+        "delta_records": 0,
+        "docs": 50000,
+        "index_bytes": 42188472,
+        "index_name": "medium.docs_body_idx",
+        "pages": 5219,
+        "pending_deletes": 0,
+        "pending_writes": 0,
+        "query_overlay_max_bytes": null,
+        "query_overlay_max_records": null,
+        "rebuilds": 2,
+        "source_type": "text",
+        "stale": false
+      },
+      "generation": {
+        "atomic": true,
+        "cache_epoch": 2,
+        "contract_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+        "delta": {
+          "bytes": 0,
+          "pages": 0,
+          "records": 0,
+          "start_block": 5219
+        },
+        "docs": 50000,
+        "generation": 2,
+        "generation_id": "16617/2/2",
+        "health": "ok",
+        "health_reason": "ok",
+        "layout": {
+          "matches": true,
+          "physical": "bm25s_sae",
+          "requested": "bm25s_sae"
+        },
+        "posting": {
+          "active": true,
+          "bytes": 42188472,
+          "pages": 5181,
+          "present": true,
+          "reason": "ok",
+          "record_count": 50000,
+          "role": "unified_posting",
+          "signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+          "start_block": 38,
+          "valid": true
+        },
+        "primary": {
+          "bytes": 300000,
+          "pages": 37,
+          "payload_bytes": 0,
+          "role": "identity_map",
+          "start_block": 1,
+          "tid_bytes": 300000
+        },
+        "rebuilds": 2,
+        "valid": true
+      },
+      "index_name": "medium.docs_body_idx",
+      "index_ready": true,
+      "index_type": "bm25s_sae",
+      "index_valid": true,
+      "model_artifacts_valid": true,
+      "options": {
+        "access_method": "ii42",
+        "atom_space": "p2_m1934_b1125_nfcorpus_3f2239c6b5ea",
+        "consistency": "eventual",
+        "index_name": "medium.docs_body_idx",
+        "index_type": "bm25s_sae",
+        "lifecycle": "postgresql_index",
+        "model": "ii42_p2_p22_nfcorpus_v2_smoke",
+        "model_path": "/Volumes/Calf/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+        "model_path_source": "index",
+        "model_runtime_error": null,
+        "payload_owner": "index_relation",
+        "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+        "sae_enabled": true,
+        "sae_explicit": true,
+        "sae_route_source": "explicit",
+        "scoring_profile": "p2_unified_sparse_dot_v1",
+        "semantic_configuration_error": null,
+        "semantic_configuration_ready": true
+      },
+      "query_ready": true,
+      "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+      "runtime_signature_matches": true,
+      "sae_enabled": true,
+      "status_error": null
+    }
+  },
+  "post_mutation_query_diagnostics_ms": 1804.859,
+  "post_mutation_query_ms": 880.721,
+  "query_first_ms": 917.177,
+  "query_second_ms": 80.533,
+  "reindex_ms": 480789.563,
+  "second_query": {
+    "count": 20,
+    "max_score": 33.86785
+  },
+  "setup_and_native_index_build_ms": 484446.288,
+  "unified_maintain_ms": 474399.572
+}

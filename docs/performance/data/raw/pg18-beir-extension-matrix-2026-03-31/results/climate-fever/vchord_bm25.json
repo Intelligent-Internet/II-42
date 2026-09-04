@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-03-27 22:59:32",
+  "datasets_dir": "/var/tmp/pg18_benchmark_matrix_task/datasets",
+  "db_prefix": "psql_bm25s_pg18_matrix_",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "vchord_bm25"
+  ],
+  "results": {
+    "climate-fever": {
+      "dataset": "climate-fever",
+      "stats": {
+        "documents": 5416593,
+        "queries": 1535,
+        "query_tokens": 21728,
+        "tokens": 318190131,
+        "vocab_size": 3115002
+      },
+      "vchord_bm25": {
+        "build_bytes": 27352801280,
+        "build_ms": 149237.660903,
+        "query": {
+          "avg_ms": 190.46893319283575,
+          "count": 1535,
+          "p50_ms": 164.413571999944,
+          "p95_ms": 435.9494470999607,
+          "qps": 5.250200036494003
+        }
+      },
+      "wall_time_s": 948.134658405
+    }
+  },
+  "top_k": 1000
+}

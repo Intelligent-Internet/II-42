@@ -2,9 +2,9 @@
   "created_at": "2026-04-02T21:48:00.179176+00:00",
   "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
   "paths": [
-    "python_reference_bm25s",
-    "psql_bm25s_ids",
-    "psql_bm25s_text"
+    "upstream_bm25s",
+    "ii42_ids",
+    "ii42_text"
   ],
   "results": {
     "arguana": {
@@ -17,7 +17,7 @@
         "tokens": 947471,
         "vocab_size": 22713
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 317.77068400000275,
         "query": {
           "count": 1406,
@@ -25,7 +25,7 @@
           "total_ms": 1213.8089290000025
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 8921088,
         "build_ms": 100.55703200001176,
         "query": {
@@ -36,7 +36,7 @@
           "qps": 1402.6254668710426
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 9158656,
         "build_ms": 167.5025070000089,
         "query": {
@@ -59,7 +59,7 @@
         "tokens": 318190131,
         "vocab_size": 3115002
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 164820.97826799998,
         "query": {
           "count": 1535,
@@ -67,7 +67,7 @@
           "total_ms": 504791.86428
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 2854166528,
         "build_ms": 52735.130433,
         "query": {
@@ -78,7 +78,7 @@
           "qps": 57.780518366271764
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 2893324288,
         "build_ms": 91728.48343499993,
         "query": {
@@ -101,7 +101,7 @@
         "tokens": 44857487,
         "vocab_size": 873200
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 15677.542047999963,
         "query": {
           "count": 13145,
@@ -109,7 +109,7 @@
           "total_ms": 117830.47523099997
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 339632128,
         "build_ms": 5827.169133000041,
         "query": {
@@ -120,7 +120,7 @@
           "qps": 443.13249675192736
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 351059968,
         "build_ms": 9291.73428400003,
         "query": {
@@ -143,7 +143,7 @@
         "tokens": 162336259,
         "vocab_size": 2744583
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 99599.22849599997,
         "query": {
           "count": 467,
@@ -151,7 +151,7 @@
           "total_ms": 134762.150701
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 1612824576,
         "build_ms": 26370.406444000026,
         "query": {
@@ -162,7 +162,7 @@
           "qps": 128.1871701770858
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 1648541696,
         "build_ms": 45047.597964999964,
         "query": {
@@ -185,7 +185,7 @@
         "tokens": 318184332,
         "vocab_size": 3115013
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 156450.797019,
         "query": {
           "count": 123142,
@@ -193,7 +193,7 @@
           "total_ms": 39110323.926136
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 2854125568,
         "build_ms": 52830.13254399998,
         "query": {
@@ -204,7 +204,7 @@
           "qps": 97.56122052507216
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 2893283328,
         "build_ms": 94593.96311400007,
         "query": {
@@ -227,7 +227,7 @@
         "tokens": 5189073,
         "vocab_size": 59853
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 1877.2248589999947,
         "query": {
           "count": 6648,
@@ -235,7 +235,7 @@
           "total_ms": 8202.201704999992
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 45047808,
         "build_ms": 671.7647749999998,
         "query": {
@@ -246,7 +246,7 @@
           "qps": 1409.5183870498
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 45744128,
         "build_ms": 1059.3052269999957,
         "query": {
@@ -269,7 +269,7 @@
         "tokens": 169530288,
         "vocab_size": 2549160
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 107660.79175799996,
         "query": {
           "count": 97852,
@@ -277,7 +277,7 @@
           "total_ms": 23516751.488284998
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 1672863744,
         "build_ms": 30792.22733099999,
         "query": {
@@ -288,7 +288,7 @@
           "qps": 55.398088019132814
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 1705336832,
         "build_ms": 50378.30390499999,
         "query": {
@@ -311,7 +311,7 @@
         "tokens": 340859911,
         "vocab_size": 1431983
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 193947.50312799998,
         "query": {
           "count": 509962,
@@ -319,7 +319,7 @@
           "total_ms": 317044668.205229
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 3204751360,
         "build_ms": 56057.54913299995,
         "query": {
@@ -330,7 +330,7 @@
           "qps": 96.66552289343474
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 3222036480,
         "build_ms": 87827.69346700002,
         "query": {
@@ -353,7 +353,7 @@
         "tokens": 614081,
         "vocab_size": 19117
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 167.41157700000286,
         "query": {
           "count": 3237,
@@ -361,7 +361,7 @@
           "total_ms": 1025.8780460000025
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 4825088,
         "build_ms": 81.53869599999553,
         "query": {
@@ -372,7 +372,7 @@
           "qps": 3373.9447323360637
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 5029888,
         "build_ms": 113.11808300000337,
         "query": {
@@ -395,7 +395,7 @@
         "tokens": 148249812,
         "vocab_size": 892745
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 72682.627761,
         "query": {
           "count": 3452,
@@ -403,7 +403,7 @@
           "total_ms": 327288.5750480001
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 1439391744,
         "build_ms": 23712.073369999984,
         "query": {
@@ -414,7 +414,7 @@
           "qps": 174.3449133694574
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 1449902080,
         "build_ms": 40803.48065899994,
         "query": {
@@ -437,7 +437,7 @@
         "tokens": 4202151,
         "vocab_size": 65377
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 5795.618351999999,
         "query": {
           "count": 15000,
@@ -445,7 +445,7 @@
           "total_ms": 165643.778727
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 54829056,
         "build_ms": 787.8471659999917,
         "query": {
@@ -456,7 +456,7 @@
           "qps": 637.9800963276181
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 55517184,
         "build_ms": 1064.5575770000023,
         "query": {
@@ -479,7 +479,7 @@
         "tokens": 3211248,
         "vocab_size": 58804
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 974.177662999999,
         "query": {
           "count": 1000,
@@ -487,7 +487,7 @@
           "total_ms": 831.1946309999953
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 26017792,
         "build_ms": 394.76593500000945,
         "query": {
@@ -498,7 +498,7 @@
           "qps": 1835.8534935681103
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 26664960,
         "build_ms": 633.0072209999997,
         "query": {
@@ -521,7 +521,7 @@
         "tokens": 812074,
         "vocab_size": 26559
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 223.6609449999989,
         "query": {
           "count": 1109,
@@ -529,7 +529,7 @@
           "total_ms": 374.0486270000005
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 6381568,
         "build_ms": 98.73040799999444,
         "query": {
@@ -540,7 +540,7 @@
           "qps": 2557.466886285814
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 6660096,
         "build_ms": 150.08957000000578,
         "query": {
@@ -563,7 +563,7 @@
         "tokens": 20231413,
         "vocab_size": 174893
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 6667.7678929999975,
         "query": {
           "count": 50,
@@ -571,7 +571,7 @@
           "total_ms": 237.52533500000084
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 159334400,
         "build_ms": 2652.9776269999984,
         "query": {
@@ -582,7 +582,7 @@
           "qps": 191.94006065082579
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 161382400,
         "build_ms": 4605.911388999999,
         "query": {
@@ -605,7 +605,7 @@
         "tokens": 74180347,
         "vocab_size": 354228
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 21183.247323000003,
         "query": {
           "count": 49,
@@ -613,7 +613,7 @@
           "total_ms": 203.85836600000573
         }
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "build_bytes": 507535360,
         "build_ms": 9842.923301000013,
         "query": {
@@ -624,7 +624,7 @@
           "qps": 82.97233158403225
         }
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "build_bytes": 512172032,
         "build_ms": 16510.605417999985,
         "query": {

@@ -1,0 +1,200 @@
+{
+  "all_gates_passed": true,
+  "backend_pid": 180139,
+  "failed_session_phase": {
+    "expected_failures": true,
+    "growth_kb": 1156,
+    "iterations": 1000,
+    "observed_failures": 1000,
+    "samples": [
+      {
+        "iteration": 0,
+        "rss_kb": 50296
+      },
+      {
+        "iteration": 50,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 100,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 150,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 200,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 250,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 300,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 350,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 400,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 450,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 500,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 550,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 600,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 650,
+        "rss_kb": 51448
+      },
+      {
+        "iteration": 700,
+        "rss_kb": 51452
+      },
+      {
+        "iteration": 750,
+        "rss_kb": 51452
+      },
+      {
+        "iteration": 800,
+        "rss_kb": 51452
+      },
+      {
+        "iteration": 850,
+        "rss_kb": 51452
+      },
+      {
+        "iteration": 900,
+        "rss_kb": 51452
+      },
+      {
+        "iteration": 950,
+        "rss_kb": 51452
+      },
+      {
+        "iteration": 1000,
+        "rss_kb": 51452
+      }
+    ],
+    "tail_slope_kb_per_iteration": 0.0102
+  },
+  "gates": {
+    "all_failures_observed": true,
+    "failed_growth_bounded": true,
+    "healthy_cache_survives_failed_soak": true,
+    "transient_growth_bounded": true
+  },
+  "limits": {
+    "max_growth_kb": 16384,
+    "max_slope_kb_per_iteration": 64.0
+  },
+  "transient_session_phase": {
+    "expected_failures": false,
+    "growth_kb": 0,
+    "iterations": 1000,
+    "observed_failures": 0,
+    "samples": [
+      {
+        "iteration": 0,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 50,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 100,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 150,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 200,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 250,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 300,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 350,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 400,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 450,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 500,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 550,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 600,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 650,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 700,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 750,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 800,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 850,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 900,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 950,
+        "rss_kb": 50240
+      },
+      {
+        "iteration": 1000,
+        "rss_kb": 50240
+      }
+    ],
+    "tail_slope_kb_per_iteration": 0.0
+  }
+}

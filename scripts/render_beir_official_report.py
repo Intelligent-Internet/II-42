@@ -9,8 +9,8 @@ from pathlib import Path
 
 
 PATH_SPECS = (
-    ('psql_bm25s_ids', 'ids'),
-    ('psql_bm25s_text', 'text'),
+    ('ii42_ids', 'ids'),
+    ('ii42_text', 'text'),
 )
 
 
@@ -95,14 +95,14 @@ def build_query_header(path_specs: list[tuple[str, str]]) -> list[str]:
     columns = [
         'Dataset',
         'Official BM25S QPS',
-        'Local Python reference QPS',
+        'Local upstream QPS',
     ]
     for _path_key, label in path_specs:
         columns.extend([
-            f'Local psql_bm25s {label} QPS',
+            f'Local ii42 {label} QPS',
             f'{label} vs official',
             'gap vs official',
-            f'{label} vs Python reference',
+            f'{label} vs local upstream',
             f'{label} status',
         ])
     return columns
@@ -129,10 +129,8 @@ def build_summary_rows(
             continue
 
         official = entry.get('official_qps')
-        python_reference_qps = (
-            entry.get('python_reference_bm25s', {}).get('query', {}).get('qps')
-        )
-        columns = [dataset, fmt_float(official), fmt_float(python_reference_qps)]
+        upstream = entry.get('upstream_bm25s', {}).get('query', {}).get('qps')
+        columns = [dataset, fmt_float(official), fmt_float(upstream)]
 
         for path_key, _label in path_specs:
             qps = query_qps(entry, path_key)
@@ -146,7 +144,7 @@ def build_summary_rows(
                 fmt_float(qps),
                 fmt_ratio(qps, official),
                 fmt_delta(qps, official),
-                fmt_ratio(qps, python_reference_qps),
+                fmt_ratio(qps, upstream),
                 status,
             ])
 
@@ -155,11 +153,11 @@ def build_summary_rows(
 
 
 def build_build_header(path_specs: list[tuple[str, str]]) -> list[str]:
-    columns = ['Dataset', 'Local Python reference build ms']
+    columns = ['Dataset', 'Local upstream build ms']
     for _path_key, label in path_specs:
         columns.extend([
-            f'psql_bm25s {label} build ms',
-            f'psql_bm25s {label} bytes',
+            f'ii42 {label} build ms',
+            f'ii42 {label} bytes',
         ])
     columns.append('Wall time s')
     return columns
@@ -184,7 +182,7 @@ def build_build_rows(
 
         columns = [
             dataset,
-            fmt_float(entry.get('python_reference_bm25s', {}).get('build_ms'), 3),
+            fmt_float(entry.get('upstream_bm25s', {}).get('build_ms'), 3),
         ]
         for path_key, _label in path_specs:
             path_entry = entry.get(path_key, {})

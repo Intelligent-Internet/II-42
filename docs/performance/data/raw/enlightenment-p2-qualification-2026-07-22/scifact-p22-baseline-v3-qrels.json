@@ -1,0 +1,5307 @@
+{
+  "candidate_k": 1000,
+  "dataset": "scifact-p22-baseline-v3",
+  "document_count": 5183,
+  "elapsed_seconds": 21.574,
+  "extension_schema": "ii42_ext",
+  "inputs": {
+    "qrels": {
+      "bytes": 22417,
+      "path": "/var/tmp/ii42-p22-qrels/quality_qrels.json",
+      "sha256": "ef9f4e18fe1f809e5d5229ad121ad1ffca3bfa6579b3b21700bb5357dfed7efb"
+    },
+    "queries": {
+      "bytes": 2155681,
+      "path": "/var/tmp/ii42-p22-qrels/queries.jsonl",
+      "sha256": "2af8d23b334799a51db8af004fd48ff12082e61bf5230ee737ee8c73d829ac5d"
+    }
+  },
+  "methods": [
+    {
+      "label": "baseline",
+      "metadata": {
+        "index_name": "ii42_p22_qrels.scifact_p22_baseline_idx",
+        "index_options": {
+          "access_method": "ii42",
+          "atom_space": "p2_m1934_b1125_nfcorpus_3f2239c6b5ea",
+          "consistency": "manual",
+          "index_name": "ii42_p22_qrels.scifact_p22_baseline_idx",
+          "index_type": "bm25s_sae",
+          "lifecycle": "postgresql_index",
+          "model": "ii42_p2_p22_nfcorpus_v2_smoke",
+          "model_path": "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+          "model_path_source": "index",
+          "model_runtime_error": null,
+          "payload_owner": "index_relation",
+          "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+          "sae_enabled": true,
+          "sae_explicit": true,
+          "sae_route_source": "explicit",
+          "scoring_profile": "p2_unified_sparse_dot_v1",
+          "semantic_configuration_error": null,
+          "semantic_configuration_ready": true
+        },
+        "index_size_bytes": 30294016,
+        "index_status": {
+          "api_version": "ii42_index_v1",
+          "blocker": "none",
+          "details": {
+            "auto_rebuild_churn_ratio": null,
+            "auto_rebuild_delta_bytes": null,
+            "auto_rebuild_threshold": null,
+            "consistency": "manual",
+            "delta_bytes": 0,
+            "delta_records": 0,
+            "docs": 5183,
+            "index_bytes": 30067880,
+            "index_name": "ii42_p22_qrels.scifact_p22_baseline_idx",
+            "pages": 3698,
+            "pending_deletes": 0,
+            "pending_writes": 0,
+            "query_overlay_max_bytes": null,
+            "query_overlay_max_records": null,
+            "rebuilds": 1,
+            "source_type": "text",
+            "stale": false
+          },
+          "generation": {
+            "atomic": true,
+            "cache_epoch": 1,
+            "contract_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+            "delta": {
+              "bytes": 0,
+              "pages": 0,
+              "records": 0,
+              "start_block": 3698
+            },
+            "docs": 5183,
+            "generation": 1,
+            "generation_id": "487636898/1/1",
+            "health": "ok",
+            "health_reason": "ok",
+            "layout": {
+              "matches": true,
+              "physical": "bm25s_sae",
+              "requested": "bm25s_sae"
+            },
+            "posting": {
+              "active": true,
+              "bytes": 30067880,
+              "pages": 3693,
+              "present": true,
+              "reason": "ok",
+              "record_count": 5183,
+              "role": "unified_posting",
+              "signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+              "start_block": 5,
+              "valid": true
+            },
+            "primary": {
+              "bytes": 31098,
+              "pages": 4,
+              "payload_bytes": 0,
+              "role": "identity_map",
+              "start_block": 1,
+              "tid_bytes": 31098
+            },
+            "rebuilds": 1,
+            "valid": true
+          },
+          "index_name": "ii42_p22_qrels.scifact_p22_baseline_idx",
+          "index_ready": true,
+          "index_type": "bm25s_sae",
+          "index_valid": true,
+          "model_artifacts_valid": true,
+          "options": {
+            "access_method": "ii42",
+            "atom_space": "p2_m1934_b1125_nfcorpus_3f2239c6b5ea",
+            "consistency": "manual",
+            "index_name": "ii42_p22_qrels.scifact_p22_baseline_idx",
+            "index_type": "bm25s_sae",
+            "lifecycle": "postgresql_index",
+            "model": "ii42_p2_p22_nfcorpus_v2_smoke",
+            "model_path": "/var/lib/postgresql/18/ii42/models/ii42_p2_p22_nfcorpus_v2_smoke",
+            "model_path_source": "index",
+            "model_runtime_error": null,
+            "payload_owner": "index_relation",
+            "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+            "sae_enabled": true,
+            "sae_explicit": true,
+            "sae_route_source": "explicit",
+            "scoring_profile": "p2_unified_sparse_dot_v1",
+            "semantic_configuration_error": null,
+            "semantic_configuration_ready": true
+          },
+          "query_ready": true,
+          "runtime_signature": "5f24130eb550dd59f88fdab3cc1c1dda",
+          "runtime_signature_matches": true,
+          "sae_enabled": true,
+          "status_error": null
+        }
+      },
+      "query_input_mode": "plain_text",
+      "query_rows": [
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.192122009117156,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:1",
+          "relevant_ranks": {
+            "beir15:scifact:d:31715818": 103
+          },
+          "score_max": 21.213772,
+          "score_min": 3.2557209
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 63.2587909931317,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:3",
+          "relevant_ranks": {
+            "beir15:scifact:d:14717500": 6
+          },
+          "score_max": 88.28983,
+          "score_min": 30.924305
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.25333297858015,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:5",
+          "relevant_ranks": {
+            "beir15:scifact:d:13734012": 1
+          },
+          "score_max": 40.739132,
+          "score_min": 5.3524294
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.965895992703736,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.01639344262295082,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:13",
+          "relevant_ranks": {
+            "beir15:scifact:d:1606628": 61
+          },
+          "score_max": 45.42645,
+          "score_min": 5.562882
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.2110759797506,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.12406015037593984,
+            "mrr_at_20": 0.14285714285714285,
+            "ndcg_at_10": 0.20438239758848611,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:36",
+          "relevant_ranks": {
+            "beir15:scifact:d:11705328": 7,
+            "beir15:scifact:d:5152028": 19
+          },
+          "score_max": 51.7213,
+          "score_min": 5.182425
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.36091696983203,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:42",
+          "relevant_ranks": {
+            "beir15:scifact:d:18174210": 2
+          },
+          "score_max": 68.96546,
+          "score_min": 5.8659353
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 62.391893996391445,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:48",
+          "relevant_ranks": {
+            "beir15:scifact:d:13734012": 2
+          },
+          "score_max": 44.54982,
+          "score_min": 8.905145
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.32107201218605,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:49",
+          "relevant_ranks": {
+            "beir15:scifact:d:5953485": 1
+          },
+          "score_max": 51.729378,
+          "score_min": 8.107396
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.58399700606242,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:50",
+          "relevant_ranks": {
+            "beir15:scifact:d:12580014": 3
+          },
+          "score_max": 46.767982,
+          "score_min": 6.920918
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.23116000322625,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:51",
+          "relevant_ranks": {
+            "beir15:scifact:d:45638119": 1
+          },
+          "score_max": 58.758022,
+          "score_min": 9.091648
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.27087499527261,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:53",
+          "relevant_ranks": {
+            "beir15:scifact:d:45638119": 1
+          },
+          "score_max": 58.53915,
+          "score_min": 8.404964
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.10834895540029,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:54",
+          "relevant_ranks": {
+            "beir15:scifact:d:49556906": 1
+          },
+          "score_max": 63.82164,
+          "score_min": 10.771651
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 65.17012603580952,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:56",
+          "relevant_ranks": {
+            "beir15:scifact:d:4709641": 1
+          },
+          "score_max": 96.4077,
+          "score_min": 10.33016
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 76.44899800652638,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:57",
+          "relevant_ranks": {
+            "beir15:scifact:d:4709641": 1
+          },
+          "score_max": 92.47757,
+          "score_min": 9.901872
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 63.003777991980314,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:70",
+          "relevant_ranks": {
+            "beir15:scifact:d:4414547": 2,
+            "beir15:scifact:d:5956380": 1
+          },
+          "score_max": 48.60054,
+          "score_min": 7.8401794
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.75041002500802,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:72",
+          "relevant_ranks": {
+            "beir15:scifact:d:6076903": 3
+          },
+          "score_max": 26.47728,
+          "score_min": 8.022225
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.80334603553638,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:75",
+          "relevant_ranks": {
+            "beir15:scifact:d:4387784": 1
+          },
+          "score_max": 59.876865,
+          "score_min": 10.091501
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 41.43016302259639,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.041666666666666664,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:94",
+          "relevant_ranks": {
+            "beir15:scifact:d:1215116": 24
+          },
+          "score_max": 21.256859,
+          "score_min": 3.9903154
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 39.77547195972875,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:99",
+          "relevant_ranks": {
+            "beir15:scifact:d:18810195": 3
+          },
+          "score_max": 32.176075,
+          "score_min": 6.370854
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.72084097284824,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:100",
+          "relevant_ranks": {
+            "beir15:scifact:d:4381486": 1
+          },
+          "score_max": 56.70337,
+          "score_min": 12.002518
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.55823297193274,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:113",
+          "relevant_ranks": {
+            "beir15:scifact:d:6157837": 1
+          },
+          "score_max": 70.38222,
+          "score_min": 7.612654
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.21684699365869,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:115",
+          "relevant_ranks": {
+            "beir15:scifact:d:33872649": 1
+          },
+          "score_max": 58.451237,
+          "score_min": 4.0387125
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.31127200042829,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:118",
+          "relevant_ranks": {
+            "beir15:scifact:d:6372244": 1
+          },
+          "score_max": 77.82205,
+          "score_min": 5.8664236
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 84.64633900439367,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:124",
+          "relevant_ranks": {
+            "beir15:scifact:d:4883040": 1
+          },
+          "score_max": 111.766846,
+          "score_min": 7.565625
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.07649401947856,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:127",
+          "relevant_ranks": {
+            "beir15:scifact:d:21598000": 2
+          },
+          "score_max": 37.67732,
+          "score_min": 7.398754
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.98027497297153,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.058823529411764705,
+            "mrr_at_20": 0.058823529411764705,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:128",
+          "relevant_ranks": {
+            "beir15:scifact:d:8290953": 17
+          },
+          "score_max": 21.553736,
+          "score_min": 2.6445532
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.48448299244046,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:129",
+          "relevant_ranks": {
+            "beir15:scifact:d:27768226": 1
+          },
+          "score_max": 118.66664,
+          "score_min": 3.299232
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.84768802812323,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:130",
+          "relevant_ranks": {
+            "beir15:scifact:d:27768226": 1
+          },
+          "score_max": 117.67989,
+          "score_min": 3.3441346
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.49798100581393,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:132",
+          "relevant_ranks": {
+            "beir15:scifact:d:7975937": 149
+          },
+          "score_max": 33.17009,
+          "score_min": 6.174832
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 72.83738697879016,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.6533333333333333,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.8051628502199797,
+            "recall_at_100": 0.8
+          },
+          "query_id": "beir15:scifact:q:133",
+          "relevant_ranks": {
+            "beir15:scifact:d:12640810": 5,
+            "beir15:scifact:d:16280642": 1,
+            "beir15:scifact:d:17934082": 2,
+            "beir15:scifact:d:38485364": 153,
+            "beir15:scifact:d:6969753": 6
+          },
+          "score_max": 68.611595,
+          "score_min": 11.355595
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.93695902219042,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:137",
+          "relevant_ranks": {
+            "beir15:scifact:d:26016929": 1
+          },
+          "score_max": 86.46073,
+          "score_min": 5.0956445
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.12812195532024,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.8333333333333333,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.9197207891481876,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:141",
+          "relevant_ranks": {
+            "beir15:scifact:d:14437255": 1,
+            "beir15:scifact:d:6955746": 3
+          },
+          "score_max": 98.55991,
+          "score_min": 2.2633986
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 66.97027495829388,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:142",
+          "relevant_ranks": {
+            "beir15:scifact:d:10582939": 1
+          },
+          "score_max": 165.42592,
+          "score_min": 27.291077
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 64.10379201406613,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:143",
+          "relevant_ranks": {
+            "beir15:scifact:d:10582939": 1
+          },
+          "score_max": 148.19505,
+          "score_min": 24.430744
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 66.51463196612895,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:146",
+          "relevant_ranks": {
+            "beir15:scifact:d:10582939": 1
+          },
+          "score_max": 166.81311,
+          "score_min": 26.993181
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.65214901231229,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:148",
+          "relevant_ranks": {
+            "beir15:scifact:d:1084345": 1
+          },
+          "score_max": 52.177315,
+          "score_min": 4.1656713
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.48459197860211,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:163",
+          "relevant_ranks": {
+            "beir15:scifact:d:18872233": 1
+          },
+          "score_max": 50.48529,
+          "score_min": 5.0720406
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.90228296769783,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:171",
+          "relevant_ranks": {
+            "beir15:scifact:d:12670680": 1
+          },
+          "score_max": 66.336975,
+          "score_min": 5.622929
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.22225298266858,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.9166666666666666,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.9709286432396581,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:179",
+          "relevant_ranks": {
+            "beir15:scifact:d:16322674": 1,
+            "beir15:scifact:d:17450673": 2,
+            "beir15:scifact:d:23557241": 6,
+            "beir15:scifact:d:27123743": 3
+          },
+          "score_max": 55.74205,
+          "score_min": 7.195653
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 64.50252095237374,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:180",
+          "relevant_ranks": {
+            "beir15:scifact:d:16966326": 1
+          },
+          "score_max": 120.30593,
+          "score_min": 14.808758
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.66789305722341,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:183",
+          "relevant_ranks": {
+            "beir15:scifact:d:12827098": 1
+          },
+          "score_max": 49.135227,
+          "score_min": 10.197274
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.01215904485434,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:185",
+          "relevant_ranks": {
+            "beir15:scifact:d:18340282": 2
+          },
+          "score_max": 46.970272,
+          "score_min": 13.740863
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.859472983982414,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0625,
+            "mrr_at_20": 0.0625,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:198",
+          "relevant_ranks": {
+            "beir15:scifact:d:2177022": 16
+          },
+          "score_max": 30.599981,
+          "score_min": 6.580855
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.69947402039543,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:208",
+          "relevant_ranks": {
+            "beir15:scifact:d:13519661": 1
+          },
+          "score_max": 51.114067,
+          "score_min": 8.517762
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.48482300480828,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.25,
+            "mrr_at_20": 0.25,
+            "ndcg_at_10": 0.43067655807339306,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:212",
+          "relevant_ranks": {
+            "beir15:scifact:d:22038539": 4
+          },
+          "score_max": 40.02379,
+          "score_min": 8.209362
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 60.75166899245232,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:213",
+          "relevant_ranks": {
+            "beir15:scifact:d:13625993": 6
+          },
+          "score_max": 83.86845,
+          "score_min": 6.2299833
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.68622302496806,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:216",
+          "relevant_ranks": {
+            "beir15:scifact:d:21366394": 1
+          },
+          "score_max": 47.363327,
+          "score_min": 15.325109
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.91042599128559,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:217",
+          "relevant_ranks": {
+            "beir15:scifact:d:21366394": 1
+          },
+          "score_max": 46.938118,
+          "score_min": 13.443033
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.20446003274992,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:218",
+          "relevant_ranks": {
+            "beir15:scifact:d:21366394": 1
+          },
+          "score_max": 54.554512,
+          "score_min": 8.8690815
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.11402504937723,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:219",
+          "relevant_ranks": {
+            "beir15:scifact:d:21366394": 1
+          },
+          "score_max": 56.25748,
+          "score_min": 9.256469
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.72532203607261,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:230",
+          "relevant_ranks": {
+            "beir15:scifact:d:3067015": 1
+          },
+          "score_max": 42.73395,
+          "score_min": 7.604458
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.10638698190451,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:232",
+          "relevant_ranks": {
+            "beir15:scifact:d:10536636": 3
+          },
+          "score_max": 64.67658,
+          "score_min": 3.3343008
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.21442699339241,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:233",
+          "relevant_ranks": {
+            "beir15:scifact:d:4388470": 1
+          },
+          "score_max": 55.65499,
+          "score_min": 11.925945
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.86877701897174,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:236",
+          "relevant_ranks": {
+            "beir15:scifact:d:4388470": 1
+          },
+          "score_max": 46.93654,
+          "score_min": 9.558228
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.835934991482645,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:237",
+          "relevant_ranks": {
+            "beir15:scifact:d:4942718": 2
+          },
+          "score_max": 40.781376,
+          "score_min": 7.7081017
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.03939398052171,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:238",
+          "relevant_ranks": {
+            "beir15:scifact:d:2251426": 5
+          },
+          "score_max": 37.96833,
+          "score_min": 9.629853
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.523932012263685,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.029411764705882353,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:239",
+          "relevant_ranks": {
+            "beir15:scifact:d:14079881": 34
+          },
+          "score_max": 37.437424,
+          "score_min": 9.4664755
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.42509403312579,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:248",
+          "relevant_ranks": {
+            "beir15:scifact:d:1568684": 1
+          },
+          "score_max": 49.57456,
+          "score_min": 4.8844028
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 88.88588001718745,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:249",
+          "relevant_ranks": {
+            "beir15:scifact:d:1568684": 1
+          },
+          "score_max": 47.916607,
+          "score_min": 4.925885
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 76.62889396306127,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.25,
+            "mrr_at_20": 0.25,
+            "ndcg_at_10": 0.45749452618986164,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:261",
+          "relevant_ranks": {
+            "beir15:scifact:d:10697096": 8,
+            "beir15:scifact:d:1122279": 4
+          },
+          "score_max": 68.58256,
+          "score_min": 6.2609715
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.34420902747661,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:268",
+          "relevant_ranks": {
+            "beir15:scifact:d:970012": 2
+          },
+          "score_max": 31.780113,
+          "score_min": 1.9923947
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.077166985720396,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:269",
+          "relevant_ranks": {
+            "beir15:scifact:d:970012": 1
+          },
+          "score_max": 33.102577,
+          "score_min": 1.9813948
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.97910699341446,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:274",
+          "relevant_ranks": {
+            "beir15:scifact:d:11614737": 1
+          },
+          "score_max": 159.0562,
+          "score_min": 9.63681
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.30940300459042,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5121212121212121,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.6508205185601091,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:275",
+          "relevant_ranks": {
+            "beir15:scifact:d:14241418": 22,
+            "beir15:scifact:d:14819804": 5,
+            "beir15:scifact:d:4961038": 1
+          },
+          "score_max": 82.378784,
+          "score_min": 13.024275
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.06645203381777,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:279",
+          "relevant_ranks": {
+            "beir15:scifact:d:14376683": 1
+          },
+          "score_max": 46.865932,
+          "score_min": 6.8977084
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.86445198766887,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.25,
+            "mrr_at_20": 0.25,
+            "ndcg_at_10": 0.43067655807339306,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:294",
+          "relevant_ranks": {
+            "beir15:scifact:d:10874408": 4
+          },
+          "score_max": 57.378418,
+          "score_min": 15.291472
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 61.68356898706406,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:295",
+          "relevant_ranks": {
+            "beir15:scifact:d:20310709": 1
+          },
+          "score_max": 74.92851,
+          "score_min": 12.215646
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.043396016117185,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:298",
+          "relevant_ranks": {
+            "beir15:scifact:d:39381118": 1
+          },
+          "score_max": 61.016094,
+          "score_min": 11.421333
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 68.84869403438643,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:300",
+          "relevant_ranks": {
+            "beir15:scifact:d:3553087": 2
+          },
+          "score_max": 109.4712,
+          "score_min": 20.024382
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.53540196362883,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:303",
+          "relevant_ranks": {
+            "beir15:scifact:d:4388470": 127
+          },
+          "score_max": 50.23097,
+          "score_min": 11.228251
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.7371280323714,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.05555555555555555,
+            "mrr_at_20": 0.05555555555555555,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:312",
+          "relevant_ranks": {
+            "beir15:scifact:d:6173523": 18
+          },
+          "score_max": 101.12381,
+          "score_min": 21.21739
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.57225797465071,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:314",
+          "relevant_ranks": {
+            "beir15:scifact:d:4347374": 3
+          },
+          "score_max": 62.0766,
+          "score_min": 12.39365
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.94520296854898,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:324",
+          "relevant_ranks": {
+            "beir15:scifact:d:2014909": 3
+          },
+          "score_max": 32.08703,
+          "score_min": 4.6793766
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.89243404613808,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:327",
+          "relevant_ranks": {
+            "beir15:scifact:d:17997584": 1
+          },
+          "score_max": 46.983086,
+          "score_min": 7.720972
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.3522710534744,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:338",
+          "relevant_ranks": {
+            "beir15:scifact:d:23349986": 1
+          },
+          "score_max": 66.14891,
+          "score_min": 3.0789537
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.468812013510615,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.45,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6240505200038379,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:343",
+          "relevant_ranks": {
+            "beir15:scifact:d:5884524": 2,
+            "beir15:scifact:d:7873737": 5
+          },
+          "score_max": 83.23388,
+          "score_min": 9.200545
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.57324397098273,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:350",
+          "relevant_ranks": {
+            "beir15:scifact:d:16927286": 1
+          },
+          "score_max": 65.412254,
+          "score_min": 12.466825
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.47653300547972,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:354",
+          "relevant_ranks": {
+            "beir15:scifact:d:8774475": 1
+          },
+          "score_max": 61.08107,
+          "score_min": 6.2763286
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 62.34906299505383,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:362",
+          "relevant_ranks": {
+            "beir15:scifact:d:38587347": 1
+          },
+          "score_max": 94.318214,
+          "score_min": 22.241608
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.25823403755203,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:380",
+          "relevant_ranks": {
+            "beir15:scifact:d:19005293": 1
+          },
+          "score_max": 58.06357,
+          "score_min": 9.898679
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.69733300479129,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.125,
+            "mrr_at_20": 0.125,
+            "ndcg_at_10": 0.31546487678572877,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:384",
+          "relevant_ranks": {
+            "beir15:scifact:d:13770184": 8
+          },
+          "score_max": 47.252476,
+          "score_min": 7.2283745
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.09523100126535,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5833333333333333,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6934264036172708,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:385",
+          "relevant_ranks": {
+            "beir15:scifact:d:9767444": 2,
+            "beir15:scifact:d:9955779": 3
+          },
+          "score_max": 49.90482,
+          "score_min": 13.687022
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.93587702605873,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:386",
+          "relevant_ranks": {
+            "beir15:scifact:d:16495649": 1
+          },
+          "score_max": 96.26842,
+          "score_min": 9.107369
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.7578440210782,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:388",
+          "relevant_ranks": {
+            "beir15:scifact:d:1148122": 2
+          },
+          "score_max": 38.17755,
+          "score_min": 7.062906
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.31643904233351,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:399",
+          "relevant_ranks": {
+            "beir15:scifact:d:791050": 1
+          },
+          "score_max": 71.09003,
+          "score_min": 2.6325283
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.524092046543956,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:410",
+          "relevant_ranks": {
+            "beir15:scifact:d:14924526": 1
+          },
+          "score_max": 74.03114,
+          "score_min": 2.4535236
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.42604403104633,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:411",
+          "relevant_ranks": {
+            "beir15:scifact:d:14924526": 1
+          },
+          "score_max": 73.21949,
+          "score_min": 2.0097704
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.57966497913003,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:415",
+          "relevant_ranks": {
+            "beir15:scifact:d:6309659": 2
+          },
+          "score_max": 51.57487,
+          "score_min": 6.236231
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 60.26132503757253,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.012048192771084338,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:421",
+          "relevant_ranks": {
+            "beir15:scifact:d:11172205": 83
+          },
+          "score_max": 29.075157,
+          "score_min": 7.925497
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.54261100385338,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.07692307692307693,
+            "mrr_at_20": 0.07692307692307693,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:431",
+          "relevant_ranks": {
+            "beir15:scifact:d:28937856": 13
+          },
+          "score_max": 47.263195,
+          "score_min": 9.624244
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.01150699192658,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:436",
+          "relevant_ranks": {
+            "beir15:scifact:d:14637235": 1
+          },
+          "score_max": 85.62671,
+          "score_min": 18.167923
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 62.2950519900769,
+          "metrics": {
+            "candidate_upper_bound": 0.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:437",
+          "relevant_ranks": {
+            "beir15:scifact:d:18399038": null
+          },
+          "score_max": 81.276184,
+          "score_min": 19.195229
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.62424803106114,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:439",
+          "relevant_ranks": {
+            "beir15:scifact:d:4423559": 1
+          },
+          "score_max": 42.584076,
+          "score_min": 10.208727
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.19106797873974,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:440",
+          "relevant_ranks": {
+            "beir15:scifact:d:4423559": 1
+          },
+          "score_max": 37.147636,
+          "score_min": 6.7411504
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.49421998066828,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:443",
+          "relevant_ranks": {
+            "beir15:scifact:d:10165258": 1
+          },
+          "score_max": 76.80949,
+          "score_min": 9.743553
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.924454022198915,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.12631578947368421,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.23719771276929622,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:452",
+          "relevant_ranks": {
+            "beir15:scifact:d:12804937": 5,
+            "beir15:scifact:d:464511": 38
+          },
+          "score_max": 52.761402,
+          "score_min": 23.926695
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.52377696847543,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:475",
+          "relevant_ranks": {
+            "beir15:scifact:d:18678095": 5
+          },
+          "score_max": 41.76566,
+          "score_min": 9.47742
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 62.896804010961205,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:478",
+          "relevant_ranks": {
+            "beir15:scifact:d:14767844": 1
+          },
+          "score_max": 80.629265,
+          "score_min": 22.209808
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.15296400152147,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:491",
+          "relevant_ranks": {
+            "beir15:scifact:d:56893404": 1
+          },
+          "score_max": 40.358967,
+          "score_min": 10.1876955
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.46283702459186,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:501",
+          "relevant_ranks": {
+            "beir15:scifact:d:17930286": 1
+          },
+          "score_max": 45.755714,
+          "score_min": 2.9867017
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.83349500596523,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.09090909090909091,
+            "mrr_at_20": 0.09090909090909091,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:502",
+          "relevant_ranks": {
+            "beir15:scifact:d:13071728": 11
+          },
+          "score_max": 40.26349,
+          "score_min": 5.493735
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 69.85402497230098,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:507",
+          "relevant_ranks": {
+            "beir15:scifact:d:30774694": 2
+          },
+          "score_max": 98.48266,
+          "score_min": 15.4761505
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.49191201478243,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.07692307692307693,
+            "mrr_at_20": 0.07692307692307693,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:508",
+          "relevant_ranks": {
+            "beir15:scifact:d:13980338": 13
+          },
+          "score_max": 57.18954,
+          "score_min": 8.189792
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.24415302230045,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:513",
+          "relevant_ranks": {
+            "beir15:scifact:d:13230773": 2
+          },
+          "score_max": 44.89296,
+          "score_min": 5.902438
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.038555027451366,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:514",
+          "relevant_ranks": {
+            "beir15:scifact:d:16256507": 1
+          },
+          "score_max": 79.234116,
+          "score_min": 6.33571
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.2677939995192,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:516",
+          "relevant_ranks": {
+            "beir15:scifact:d:29564505": 1
+          },
+          "score_max": 82.52897,
+          "score_min": 7.2360134
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.67713398905471,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.05555555555555555,
+            "mrr_at_20": 0.05555555555555555,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:517",
+          "relevant_ranks": {
+            "beir15:scifact:d:15663829": 18
+          },
+          "score_max": 37.62893,
+          "score_min": 4.854757
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 68.71199497254565,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:521",
+          "relevant_ranks": {
+            "beir15:scifact:d:34873974": 1
+          },
+          "score_max": 112.967285,
+          "score_min": 15.170975
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 60.9387619770132,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:525",
+          "relevant_ranks": {
+            "beir15:scifact:d:13639330": 1
+          },
+          "score_max": 130.0204,
+          "score_min": 20.144186
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 80.85861796280369,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:527",
+          "relevant_ranks": {
+            "beir15:scifact:d:3863543": 1
+          },
+          "score_max": 44.659306,
+          "score_min": 9.096308
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 81.98554901173338,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:528",
+          "relevant_ranks": {
+            "beir15:scifact:d:5476778": 1
+          },
+          "score_max": 142.06323,
+          "score_min": 18.719442
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.55948102846742,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:532",
+          "relevant_ranks": {
+            "beir15:scifact:d:12991445": 1
+          },
+          "score_max": 34.11829,
+          "score_min": 2.8333864
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.01450300309807,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:533",
+          "relevant_ranks": {
+            "beir15:scifact:d:12991445": 1
+          },
+          "score_max": 34.36956,
+          "score_min": 2.9471936
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 42.951433977577835,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:535",
+          "relevant_ranks": {
+            "beir15:scifact:d:39368721": 6
+          },
+          "score_max": 46.924114,
+          "score_min": 6.1988664
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.63179996330291,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:536",
+          "relevant_ranks": {
+            "beir15:scifact:d:16056514": 1
+          },
+          "score_max": 39.110832,
+          "score_min": 3.035922
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.288998008705676,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:539",
+          "relevant_ranks": {
+            "beir15:scifact:d:13282296": 1
+          },
+          "score_max": 62.263176,
+          "score_min": 5.5924325
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.70654797600582,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.17965367965367965,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.3065735963827292,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:540",
+          "relevant_ranks": {
+            "beir15:scifact:d:11886686": 3,
+            "beir15:scifact:d:25007443": 77
+          },
+          "score_max": 44.489853,
+          "score_min": 5.2087774
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 61.76526995841414,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.019230769230769232,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:544",
+          "relevant_ranks": {
+            "beir15:scifact:d:24221369": 52
+          },
+          "score_max": 38.08892,
+          "score_min": 7.770278
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.76403699442744,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:549",
+          "relevant_ranks": {
+            "beir15:scifact:d:9433958": 1
+          },
+          "score_max": 35.83119,
+          "score_min": 6.692625
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 64.18159295571968,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:551",
+          "relevant_ranks": {
+            "beir15:scifact:d:33499189": 5
+          },
+          "score_max": 108.914116,
+          "score_min": 23.693764
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 60.5928729637526,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:552",
+          "relevant_ranks": {
+            "beir15:scifact:d:1471041": 1
+          },
+          "score_max": 92.36976,
+          "score_min": 10.64763
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.902592022903264,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.08333333333333333,
+            "mrr_at_20": 0.08333333333333333,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:554",
+          "relevant_ranks": {
+            "beir15:scifact:d:1049501": 12
+          },
+          "score_max": 61.774967,
+          "score_min": 13.971541
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.08227199828252,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:560",
+          "relevant_ranks": {
+            "beir15:scifact:d:40096222": 216
+          },
+          "score_max": 68.72067,
+          "score_min": 14.542117
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 44.82778999954462,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:569",
+          "relevant_ranks": {
+            "beir15:scifact:d:23460562": 1
+          },
+          "score_max": 78.590324,
+          "score_min": 18.132704
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 44.556357024703175,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.125,
+            "mrr_at_20": 0.125,
+            "ndcg_at_10": 0.31546487678572877,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:575",
+          "relevant_ranks": {
+            "beir15:scifact:d:10300888": 8
+          },
+          "score_max": 39.351414,
+          "score_min": 8.366615
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.2039789725095,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:577",
+          "relevant_ranks": {
+            "beir15:scifact:d:5289038": 3
+          },
+          "score_max": 86.48764,
+          "score_min": 19.827381
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.19073402136564,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:578",
+          "relevant_ranks": {
+            "beir15:scifact:d:8764879": 1
+          },
+          "score_max": 41.229885,
+          "score_min": 9.188324
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.65746095171198,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:587",
+          "relevant_ranks": {
+            "beir15:scifact:d:16999023": 3
+          },
+          "score_max": 107.90444,
+          "score_min": 27.997396
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.69360297219828,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:589",
+          "relevant_ranks": {
+            "beir15:scifact:d:10984005": 1
+          },
+          "score_max": 116.75207,
+          "score_min": 10.29592
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.14887198153883,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:593",
+          "relevant_ranks": {
+            "beir15:scifact:d:19675911": 1
+          },
+          "score_max": 56.32929,
+          "score_min": 4.8746185
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.68042498128489,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.8333333333333334,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.9325210919548239,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:597",
+          "relevant_ranks": {
+            "beir15:scifact:d:12779444": 6,
+            "beir15:scifact:d:25742130": 1,
+            "beir15:scifact:d:36355784": 2
+          },
+          "score_max": 46.982544,
+          "score_min": 6.308136
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.32537299627438,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:598",
+          "relevant_ranks": {
+            "beir15:scifact:d:25742130": 3
+          },
+          "score_max": 98.882645,
+          "score_min": 14.341404
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.2114000110887,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:613",
+          "relevant_ranks": {
+            "beir15:scifact:d:9638032": 1
+          },
+          "score_max": 60.592617,
+          "score_min": 5.936524
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.06158701144159,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.08333333333333333,
+            "mrr_at_20": 0.14285714285714285,
+            "ndcg_at_10": 0.20438239758848611,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:619",
+          "relevant_ranks": {
+            "beir15:scifact:d:20888849": 7,
+            "beir15:scifact:d:2565138": 84
+          },
+          "score_max": 31.826464,
+          "score_min": 7.7674007
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.715647008270025,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:623",
+          "relevant_ranks": {
+            "beir15:scifact:d:17000834": 5
+          },
+          "score_max": 77.500015,
+          "score_min": 6.5577955
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.862084973137826,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:628",
+          "relevant_ranks": {
+            "beir15:scifact:d:24512064": 3
+          },
+          "score_max": 75.34284,
+          "score_min": 16.239225
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 65.52994303638116,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:636",
+          "relevant_ranks": {
+            "beir15:scifact:d:24294572": 1
+          },
+          "score_max": 89.64998,
+          "score_min": 10.3418
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.59026601258665,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:637",
+          "relevant_ranks": {
+            "beir15:scifact:d:25649714": 1
+          },
+          "score_max": 75.33585,
+          "score_min": 4.843627
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.89796401746571,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.75,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.8772153153380493,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:641",
+          "relevant_ranks": {
+            "beir15:scifact:d:31554917": 4,
+            "beir15:scifact:d:5912283": 1
+          },
+          "score_max": 67.81727,
+          "score_min": 5.2649727
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.7827450055629,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:644",
+          "relevant_ranks": {
+            "beir15:scifact:d:13619127": 1
+          },
+          "score_max": 42.33316,
+          "score_min": 5.5242662
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.38257098244503,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:649",
+          "relevant_ranks": {
+            "beir15:scifact:d:12789595": 2
+          },
+          "score_max": 56.30863,
+          "score_min": 4.288146
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.51846503233537,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.07692307692307693,
+            "mrr_at_20": 0.07692307692307693,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:659",
+          "relevant_ranks": {
+            "beir15:scifact:d:1215116": 13
+          },
+          "score_max": 19.240528,
+          "score_min": 3.9521222
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.67702297633514,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:660",
+          "relevant_ranks": {
+            "beir15:scifact:d:1215116": 146
+          },
+          "score_max": 21.420969,
+          "score_min": 4.1682773
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.42061799718067,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:674",
+          "relevant_ranks": {
+            "beir15:scifact:d:2095573": 1
+          },
+          "score_max": 58.068024,
+          "score_min": 7.0875173
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.551365996710956,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:684",
+          "relevant_ranks": {
+            "beir15:scifact:d:4942718": 2
+          },
+          "score_max": 48.985043,
+          "score_min": 7.436347
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.761422998737544,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.058823529411764705,
+            "mrr_at_20": 0.058823529411764705,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:690",
+          "relevant_ranks": {
+            "beir15:scifact:d:18750453": 17
+          },
+          "score_max": 31.778177,
+          "score_min": 7.7429104
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.619591016788036,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:691",
+          "relevant_ranks": {
+            "beir15:scifact:d:10991183": 1
+          },
+          "score_max": 63.40581,
+          "score_min": 8.96813
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.926821978762746,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:692",
+          "relevant_ranks": {
+            "beir15:scifact:d:24088502": 1
+          },
+          "score_max": 61.3204,
+          "score_min": 7.151411
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.20620199199766,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:693",
+          "relevant_ranks": {
+            "beir15:scifact:d:24088502": 1
+          },
+          "score_max": 60.506096,
+          "score_min": 6.843836
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.357461023144424,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:700",
+          "relevant_ranks": {
+            "beir15:scifact:d:4350400": 1
+          },
+          "score_max": 43.20652,
+          "score_min": 10.768258
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.455812994390726,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:702",
+          "relevant_ranks": {
+            "beir15:scifact:d:4350400": 2
+          },
+          "score_max": 44.863976,
+          "score_min": 7.476857
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.66239598253742,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0625,
+            "mrr_at_20": 0.0625,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:715",
+          "relevant_ranks": {
+            "beir15:scifact:d:18421962": 16
+          },
+          "score_max": 63.94017,
+          "score_min": 10.902
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.09784601861611,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.016666666666666666,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:716",
+          "relevant_ranks": {
+            "beir15:scifact:d:18421962": 60
+          },
+          "score_max": 37.76702,
+          "score_min": 7.212121
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.740550002548844,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:718",
+          "relevant_ranks": {
+            "beir15:scifact:d:17587795": 1
+          },
+          "score_max": 46.1251,
+          "score_min": 9.258628
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.54812501557171,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:721",
+          "relevant_ranks": {
+            "beir15:scifact:d:1834762": 1
+          },
+          "score_max": 74.78233,
+          "score_min": 11.14325
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.040259004570544,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:723",
+          "relevant_ranks": {
+            "beir15:scifact:d:5531479": 1
+          },
+          "score_max": 92.697685,
+          "score_min": 8.922917
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.18448297819123,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:727",
+          "relevant_ranks": {
+            "beir15:scifact:d:7521113": 5
+          },
+          "score_max": 63.421154,
+          "score_min": 10.849814
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.74051601393148,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.7,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.8503449055347546,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:728",
+          "relevant_ranks": {
+            "beir15:scifact:d:36444198": 1,
+            "beir15:scifact:d:7521113": 5
+          },
+          "score_max": 58.49623,
+          "score_min": 9.238909
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.120846029836684,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:729",
+          "relevant_ranks": {
+            "beir15:scifact:d:26851674": 1
+          },
+          "score_max": 47.451946,
+          "score_min": 10.309651
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.69736500363797,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:742",
+          "relevant_ranks": {
+            "beir15:scifact:d:32159283": 1
+          },
+          "score_max": 49.35167,
+          "score_min": 5.4648466
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.74551100935787,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:743",
+          "relevant_ranks": {
+            "beir15:scifact:d:32159283": 1
+          },
+          "score_max": 47.017227,
+          "score_min": 4.8422976
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.66288497438654,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:744",
+          "relevant_ranks": {
+            "beir15:scifact:d:8460275": 2
+          },
+          "score_max": 77.154396,
+          "score_min": 12.390149
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.14600296737626,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:756",
+          "relevant_ranks": {
+            "beir15:scifact:d:2831620": 5
+          },
+          "score_max": 75.57721,
+          "score_min": 18.305695
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.95707894908264,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:759",
+          "relevant_ranks": {
+            "beir15:scifact:d:1805641": 1
+          },
+          "score_max": 121.22267,
+          "score_min": 11.859645
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.5403610127978,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.024390243902439025,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:768",
+          "relevant_ranks": {
+            "beir15:scifact:d:6421792": 41
+          },
+          "score_max": 44.072132,
+          "score_min": 3.8112655
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 65.5680779600516,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:770",
+          "relevant_ranks": {
+            "beir15:scifact:d:15476777": 1
+          },
+          "score_max": 129.22871,
+          "score_min": 17.725943
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.95168199297041,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.014925373134328358,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:775",
+          "relevant_ranks": {
+            "beir15:scifact:d:32275758": 67
+          },
+          "score_max": 83.40339,
+          "score_min": 13.531953
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.730353019200265,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:781",
+          "relevant_ranks": {
+            "beir15:scifact:d:24338780": 2
+          },
+          "score_max": 76.561745,
+          "score_min": 14.313233
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.14201198518276,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.043478260869565216,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:783",
+          "relevant_ranks": {
+            "beir15:scifact:d:40632104": 23
+          },
+          "score_max": 66.89146,
+          "score_min": 14.545722
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.308615010697395,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:784",
+          "relevant_ranks": {
+            "beir15:scifact:d:2356950": 1
+          },
+          "score_max": 67.11761,
+          "score_min": 19.622866
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.33888298505917,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:785",
+          "relevant_ranks": {
+            "beir15:scifact:d:12471115": 1
+          },
+          "score_max": 75.525154,
+          "score_min": 8.384861
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 44.957439007703215,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:793",
+          "relevant_ranks": {
+            "beir15:scifact:d:8551160": 2
+          },
+          "score_max": 47.110664,
+          "score_min": 8.099135
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.96531898481771,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.25,
+            "mrr_at_20": 0.25,
+            "ndcg_at_10": 0.43067655807339306,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:800",
+          "relevant_ranks": {
+            "beir15:scifact:d:22543403": 4
+          },
+          "score_max": 66.383514,
+          "score_min": 13.8647585
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.93864196492359,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:805",
+          "relevant_ranks": {
+            "beir15:scifact:d:22180793": 1
+          },
+          "score_max": 66.97752,
+          "score_min": 6.98395
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.60444901371375,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:808",
+          "relevant_ranks": {
+            "beir15:scifact:d:36606083": 1
+          },
+          "score_max": 78.53271,
+          "score_min": 5.4931707
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 60.13175001135096,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:811",
+          "relevant_ranks": {
+            "beir15:scifact:d:19799455": 1
+          },
+          "score_max": 54.38678,
+          "score_min": 12.954771
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 67.77022499591112,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:814",
+          "relevant_ranks": {
+            "beir15:scifact:d:33387953": 1
+          },
+          "score_max": 130.28023,
+          "score_min": 23.350216
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.68341898731887,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.010752688172043012,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:820",
+          "relevant_ranks": {
+            "beir15:scifact:d:8646760": 93
+          },
+          "score_max": 60.799423,
+          "score_min": 19.912312
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.29618800897151,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.014705882352941176,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:821",
+          "relevant_ranks": {
+            "beir15:scifact:d:8646760": 68
+          },
+          "score_max": 58.39372,
+          "score_min": 18.945868
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.679400017950684,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:823",
+          "relevant_ranks": {
+            "beir15:scifact:d:15319019": 1
+          },
+          "score_max": 50.044117,
+          "score_min": 4.454467
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 63.49673797376454,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.012345679012345678,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:830",
+          "relevant_ranks": {
+            "beir15:scifact:d:1897324": 81
+          },
+          "score_max": 34.125538,
+          "score_min": 7.3658733
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.09932998474687,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:831",
+          "relevant_ranks": {
+            "beir15:scifact:d:1897324": 231
+          },
+          "score_max": 29.248611,
+          "score_min": 5.9186788
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.93754198867828,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:832",
+          "relevant_ranks": {
+            "beir15:scifact:d:30303335": 1
+          },
+          "score_max": 53.903023,
+          "score_min": 8.262908
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.78243197547272,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.14285714285714285,
+            "mrr_at_20": 0.14285714285714285,
+            "ndcg_at_10": 0.3333333333333333,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:834",
+          "relevant_ranks": {
+            "beir15:scifact:d:5483793": 7
+          },
+          "score_max": 38.8509,
+          "score_min": 6.6082172
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.56911801127717,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:837",
+          "relevant_ranks": {
+            "beir15:scifact:d:15928989": 1
+          },
+          "score_max": 44.099674,
+          "score_min": 6.6964874
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.9229529844597,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:839",
+          "relevant_ranks": {
+            "beir15:scifact:d:1469751": 1
+          },
+          "score_max": 82.18271,
+          "score_min": 12.89521
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.5576059804298,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:845",
+          "relevant_ranks": {
+            "beir15:scifact:d:17741440": 1
+          },
+          "score_max": 82.92457,
+          "score_min": 5.4981303
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.732087010052055,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:847",
+          "relevant_ranks": {
+            "beir15:scifact:d:16787954": 1
+          },
+          "score_max": 94.125916,
+          "score_min": 7.9329057
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.56166202202439,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:852",
+          "relevant_ranks": {
+            "beir15:scifact:d:13843341": 2
+          },
+          "score_max": 73.71975,
+          "score_min": 9.482919
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 40.99397303070873,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:859",
+          "relevant_ranks": {
+            "beir15:scifact:d:1982286": 1
+          },
+          "score_max": 38.4429,
+          "score_min": 10.22899
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 35.064658033661544,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:870",
+          "relevant_ranks": {
+            "beir15:scifact:d:195689316": 126
+          },
+          "score_max": 36.633682,
+          "score_min": 4.6770773
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 40.20602104719728,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.573374613003096,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.6739577727076379,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:873",
+          "relevant_ranks": {
+            "beir15:scifact:d:1180972": 6,
+            "beir15:scifact:d:19307912": 38,
+            "beir15:scifact:d:27393799": 17,
+            "beir15:scifact:d:29025270": 1,
+            "beir15:scifact:d:3315558": 2
+          },
+          "score_max": 35.194996,
+          "score_min": 5.5623083
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.99361599422991,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:879",
+          "relevant_ranks": {
+            "beir15:scifact:d:8426046": 1
+          },
+          "score_max": 56.160713,
+          "score_min": 7.4505157
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.553325986489654,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:880",
+          "relevant_ranks": {
+            "beir15:scifact:d:8426046": 1
+          },
+          "score_max": 43.960598,
+          "score_min": 10.470319
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 60.47472497448325,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:882",
+          "relevant_ranks": {
+            "beir15:scifact:d:14803797": 1
+          },
+          "score_max": 62.789642,
+          "score_min": 4.4110765
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.71779001830146,
+          "metrics": {
+            "candidate_upper_bound": 0.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:887",
+          "relevant_ranks": {
+            "beir15:scifact:d:18855191": null
+          },
+          "score_max": 46.324726,
+          "score_min": 18.149464
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.760901988018304,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:903",
+          "relevant_ranks": {
+            "beir15:scifact:d:10648422": 1
+          },
+          "score_max": 99.21184,
+          "score_min": 13.300535
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 65.39107795106247,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:904",
+          "relevant_ranks": {
+            "beir15:scifact:d:7370282": 1
+          },
+          "score_max": 191.78876,
+          "score_min": 11.801112
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.8982919533737,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:907",
+          "relevant_ranks": {
+            "beir15:scifact:d:6923961": 1
+          },
+          "score_max": 86.151634,
+          "score_min": 13.432709
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.428497980348766,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:911",
+          "relevant_ranks": {
+            "beir15:scifact:d:11254556": 1
+          },
+          "score_max": 79.04387,
+          "score_min": 12.689465
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.23156003840268,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.037037037037037035,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:913",
+          "relevant_ranks": {
+            "beir15:scifact:d:3203590": 27
+          },
+          "score_max": 36.002434,
+          "score_min": 7.3124323
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 45.43535999255255,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.038461538461538464,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:914",
+          "relevant_ranks": {
+            "beir15:scifact:d:3203590": 26
+          },
+          "score_max": 37.602608,
+          "score_min": 6.9630404
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 42.08509100135416,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:921",
+          "relevant_ranks": {
+            "beir15:scifact:d:1642727": 1
+          },
+          "score_max": 47.456074,
+          "score_min": 3.6907744
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.710174054373056,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:922",
+          "relevant_ranks": {
+            "beir15:scifact:d:17077004": 1
+          },
+          "score_max": 89.8974,
+          "score_min": 7.043758
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.38816294493154,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:936",
+          "relevant_ranks": {
+            "beir15:scifact:d:5483793": 1
+          },
+          "score_max": 54.05738,
+          "score_min": 4.386354
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.179102044552565,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:956",
+          "relevant_ranks": {
+            "beir15:scifact:d:12956194": 2
+          },
+          "score_max": 43.237057,
+          "score_min": 11.037566
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.33543904917315,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:957",
+          "relevant_ranks": {
+            "beir15:scifact:d:123859": 1
+          },
+          "score_max": 44.036114,
+          "score_min": 6.97487
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 43.643951998092234,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:960",
+          "relevant_ranks": {
+            "beir15:scifact:d:8780599": 1
+          },
+          "score_max": 41.684414,
+          "score_min": 5.6894884
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.40516201592982,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.8333333333333333,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.9197207891481876,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:967",
+          "relevant_ranks": {
+            "beir15:scifact:d:2119889": 3,
+            "beir15:scifact:d:8997410": 1
+          },
+          "score_max": 47.419926,
+          "score_min": 4.8751564
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.02594400988892,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5595238095238095,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.710675276578257,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:971",
+          "relevant_ranks": {
+            "beir15:scifact:d:27873158": 2,
+            "beir15:scifact:d:28617573": 3,
+            "beir15:scifact:d:46695481": 7,
+            "beir15:scifact:d:9764256": 6
+          },
+          "score_max": 157.99629,
+          "score_min": 12.324023
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.13965001469478,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:975",
+          "relevant_ranks": {
+            "beir15:scifact:d:5304891": 123
+          },
+          "score_max": 49.20985,
+          "score_min": 11.193861
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.241466040257365,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:982",
+          "relevant_ranks": {
+            "beir15:scifact:d:2988714": 1
+          },
+          "score_max": 104.72533,
+          "score_min": 23.532425
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.84908302221447,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:985",
+          "relevant_ranks": {
+            "beir15:scifact:d:6828370": 1
+          },
+          "score_max": 55.38948,
+          "score_min": 8.308373
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.686746020801365,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:993",
+          "relevant_ranks": {
+            "beir15:scifact:d:16472469": 1
+          },
+          "score_max": 44.79622,
+          "score_min": 6.003949
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.09407495567575,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1012",
+          "relevant_ranks": {
+            "beir15:scifact:d:9745001": 1
+          },
+          "score_max": 66.83301,
+          "score_min": 3.3045678
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.428329999092966,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1014",
+          "relevant_ranks": {
+            "beir15:scifact:d:6277638": 1
+          },
+          "score_max": 41.586464,
+          "score_min": 2.061974
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.44616302661598,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1019",
+          "relevant_ranks": {
+            "beir15:scifact:d:11603066": 2
+          },
+          "score_max": 42.416546,
+          "score_min": 5.753712
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 65.43543701991439,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1020",
+          "relevant_ranks": {
+            "beir15:scifact:d:9433958": 2
+          },
+          "score_max": 148.84586,
+          "score_min": 20.97547
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 63.570999016519636,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1021",
+          "relevant_ranks": {
+            "beir15:scifact:d:9433958": 2
+          },
+          "score_max": 147.18918,
+          "score_min": 20.889269
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.51508195558563,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1024",
+          "relevant_ranks": {
+            "beir15:scifact:d:5373138": 1
+          },
+          "score_max": 37.574516,
+          "score_min": 11.05872
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.66365402471274,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.9166666666666666,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.9674679834891693,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1029",
+          "relevant_ranks": {
+            "beir15:scifact:d:11899391": 1,
+            "beir15:scifact:d:13923140": 2,
+            "beir15:scifact:d:13940200": 4
+          },
+          "score_max": 113.58289,
+          "score_min": 25.117645
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.069891984108835,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.24358974358974358,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.3065735963827292,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1041",
+          "relevant_ranks": {
+            "beir15:scifact:d:16626264": 3,
+            "beir15:scifact:d:25254425": 13
+          },
+          "score_max": 77.02093,
+          "score_min": 8.853378
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.58888901537284,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1049",
+          "relevant_ranks": {
+            "beir15:scifact:d:12486491": 5
+          },
+          "score_max": 34.32958,
+          "score_min": 8.570032
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.2399460314773,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1062",
+          "relevant_ranks": {
+            "beir15:scifact:d:20381484": 1
+          },
+          "score_max": 51.29925,
+          "score_min": 3.8207977
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.45010000746697,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1086",
+          "relevant_ranks": {
+            "beir15:scifact:d:39281140": 1
+          },
+          "score_max": 131.62589,
+          "score_min": 6.6148944
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.09795496193692,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1088",
+          "relevant_ranks": {
+            "beir15:scifact:d:37549932": 1
+          },
+          "score_max": 41.985565,
+          "score_min": 10.040422
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.65288296202198,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1089",
+          "relevant_ranks": {
+            "beir15:scifact:d:17628888": 1
+          },
+          "score_max": 76.27608,
+          "score_min": 7.648416
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.07802996179089,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1099",
+          "relevant_ranks": {
+            "beir15:scifact:d:7662206": 6
+          },
+          "score_max": 56.55832,
+          "score_min": 5.8803153
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 44.47748401435092,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1100",
+          "relevant_ranks": {
+            "beir15:scifact:d:7662206": 5
+          },
+          "score_max": 56.48808,
+          "score_min": 5.998492
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.768707025796175,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1104",
+          "relevant_ranks": {
+            "beir15:scifact:d:3898784": 1
+          },
+          "score_max": 193.38837,
+          "score_min": 10.071924
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.78814001940191,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1107",
+          "relevant_ranks": {
+            "beir15:scifact:d:20532591": 1
+          },
+          "score_max": 64.11208,
+          "score_min": 3.4680476
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.53472200315446,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.018518518518518517,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1110",
+          "relevant_ranks": {
+            "beir15:scifact:d:13770184": 54
+          },
+          "score_max": 30.169828,
+          "score_min": 7.664507
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.394816000945866,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1121",
+          "relevant_ranks": {
+            "beir15:scifact:d:4456756": 3
+          },
+          "score_max": 66.062805,
+          "score_min": 7.6405144
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.80614399211481,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1130",
+          "relevant_ranks": {
+            "beir15:scifact:d:17997584": 1
+          },
+          "score_max": 127.514366,
+          "score_min": 22.959085
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.81394603056833,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.09821428571428571,
+            "mrr_at_20": 0.125,
+            "ndcg_at_10": 0.19342640361727081,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1132",
+          "relevant_ranks": {
+            "beir15:scifact:d:33499189": 8,
+            "beir15:scifact:d:9283422": 28
+          },
+          "score_max": 60.96906,
+          "score_min": 12.127389
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.80310898181051,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1137",
+          "relevant_ranks": {
+            "beir15:scifact:d:33370": 1
+          },
+          "score_max": 37.750996,
+          "score_min": 5.8374133
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.635726999957114,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1140",
+          "relevant_ranks": {
+            "beir15:scifact:d:12009265": 1
+          },
+          "score_max": 32.491222,
+          "score_min": 4.552421
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 79.39452998107299,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1144",
+          "relevant_ranks": {
+            "beir15:scifact:d:10071552": 1
+          },
+          "score_max": 89.95497,
+          "score_min": 4.80909
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.282320029102266,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1146",
+          "relevant_ranks": {
+            "beir15:scifact:d:13906581": 1
+          },
+          "score_max": 96.86747,
+          "score_min": 5.231034
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.985528965014964,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1150",
+          "relevant_ranks": {
+            "beir15:scifact:d:11369420": 1
+          },
+          "score_max": 58.609722,
+          "score_min": 9.884052
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.26180300815031,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1163",
+          "relevant_ranks": {
+            "beir15:scifact:d:15305881": 1
+          },
+          "score_max": 48.76202,
+          "score_min": 7.010306
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 53.44247299944982,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.011627906976744186,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1175",
+          "relevant_ranks": {
+            "beir15:scifact:d:31272411": 86
+          },
+          "score_max": 33.103985,
+          "score_min": 6.8585253
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.83552998257801,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.07142857142857142,
+            "mrr_at_20": 0.07142857142857142,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1179",
+          "relevant_ranks": {
+            "beir15:scifact:d:31272411": 14
+          },
+          "score_max": 39.661026,
+          "score_min": 9.597407
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.28817099425942,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1180",
+          "relevant_ranks": {
+            "beir15:scifact:d:31272411": 6
+          },
+          "score_max": 45.05798,
+          "score_min": 7.6723614
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 63.23185400106013,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1185",
+          "relevant_ranks": {
+            "beir15:scifact:d:16737210": 1
+          },
+          "score_max": 141.78947,
+          "score_min": 12.602366
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.915375996846706,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1187",
+          "relevant_ranks": {
+            "beir15:scifact:d:52873726": 2
+          },
+          "score_max": 102.253494,
+          "score_min": 34.85035
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.6235299827531,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.25,
+            "mrr_at_20": 0.25,
+            "ndcg_at_10": 0.43067655807339306,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1191",
+          "relevant_ranks": {
+            "beir15:scifact:d:30655442": 4
+          },
+          "score_max": 31.651033,
+          "score_min": 12.586159
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 57.25845700362697,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1194",
+          "relevant_ranks": {
+            "beir15:scifact:d:11419230": 1
+          },
+          "score_max": 63.5924,
+          "score_min": 11.957859
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.73523104470223,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1196",
+          "relevant_ranks": {
+            "beir15:scifact:d:25649714": 2
+          },
+          "score_max": 39.53397,
+          "score_min": 3.203727
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.225029001012444,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1197",
+          "relevant_ranks": {
+            "beir15:scifact:d:25649714": 3
+          },
+          "score_max": 44.788715,
+          "score_min": 3.7247977
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.7880719685927,
+          "metrics": {
+            "candidate_upper_bound": 0.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:1199",
+          "relevant_ranks": {
+            "beir15:scifact:d:16760369": null
+          },
+          "score_max": 53.588406,
+          "score_min": 8.374943
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 61.87338597374037,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1200",
+          "relevant_ranks": {
+            "beir15:scifact:d:3441524": 3
+          },
+          "score_max": 66.81295,
+          "score_min": 19.92739
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.02271297154948,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1202",
+          "relevant_ranks": {
+            "beir15:scifact:d:3475317": 1
+          },
+          "score_max": 65.67228,
+          "score_min": 13.295115
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.17896497622132,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1204",
+          "relevant_ranks": {
+            "beir15:scifact:d:31141365": 1
+          },
+          "score_max": 64.564316,
+          "score_min": 7.690109
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 77.92031503049657,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1207",
+          "relevant_ranks": {
+            "beir15:scifact:d:18909530": 1
+          },
+          "score_max": 89.62587,
+          "score_min": 10.150155
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.37779202777892,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:1213",
+          "relevant_ranks": {
+            "beir15:scifact:d:14407673": 231
+          },
+          "score_max": 47.379517,
+          "score_min": 13.583288
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.94315995788202,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1216",
+          "relevant_ranks": {
+            "beir15:scifact:d:24142891": 1
+          },
+          "score_max": 67.14083,
+          "score_min": 9.547513
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 82.60699099628255,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1221",
+          "relevant_ranks": {
+            "beir15:scifact:d:19736671": 3
+          },
+          "score_max": 48.221844,
+          "score_min": 16.149513
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.61370801134035,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1225",
+          "relevant_ranks": {
+            "beir15:scifact:d:9650982": 1
+          },
+          "score_max": 31.305357,
+          "score_min": 3.8502064
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.19492899859324,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1226",
+          "relevant_ranks": {
+            "beir15:scifact:d:13777138": 5
+          },
+          "score_max": 63.797558,
+          "score_min": 17.809824
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.415271962061524,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1232",
+          "relevant_ranks": {
+            "beir15:scifact:d:13905670": 1
+          },
+          "score_max": 92.81947,
+          "score_min": 10.412796
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.300387972034514,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1241",
+          "relevant_ranks": {
+            "beir15:scifact:d:4427392": 6
+          },
+          "score_max": 36.59039,
+          "score_min": 5.507467
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.41716504981741,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.06666666666666667,
+            "mrr_at_20": 0.06666666666666667,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1245",
+          "relevant_ranks": {
+            "beir15:scifact:d:7662395": 15
+          },
+          "score_max": 35.66616,
+          "score_min": 6.76291
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 58.64997499156743,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1259",
+          "relevant_ranks": {
+            "beir15:scifact:d:24341590": 1
+          },
+          "score_max": 98.280304,
+          "score_min": 16.696423
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.344375962391496,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1262",
+          "relevant_ranks": {
+            "beir15:scifact:d:44172171": 1
+          },
+          "score_max": 104.191086,
+          "score_min": 14.370964
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 62.16723896795884,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1266",
+          "relevant_ranks": {
+            "beir15:scifact:d:37480103": 2
+          },
+          "score_max": 83.60298,
+          "score_min": 12.566294
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.507860019337386,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1270",
+          "relevant_ranks": {
+            "beir15:scifact:d:13900610": 1
+          },
+          "score_max": 64.77685,
+          "score_min": 4.123587
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 59.408334956970066,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1271",
+          "relevant_ranks": {
+            "beir15:scifact:d:13768432": 1
+          },
+          "score_max": 81.9186,
+          "score_min": 7.248437
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.99026001011953,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1272",
+          "relevant_ranks": {
+            "beir15:scifact:d:17081238": 5
+          },
+          "score_max": 50.41882,
+          "score_min": 11.314745
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.40662903431803,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1273",
+          "relevant_ranks": {
+            "beir15:scifact:d:11041152": 1
+          },
+          "score_max": 76.309845,
+          "score_min": 7.1904893
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 63.68448497960344,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.7555555555555555,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.8854598815714874,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1274",
+          "relevant_ranks": {
+            "beir15:scifact:d:12428814": 3,
+            "beir15:scifact:d:27731651": 5,
+            "beir15:scifact:d:4406819": 1
+          },
+          "score_max": 90.34798,
+          "score_min": 10.644194
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.4653039816767,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.2,
+            "mrr_at_20": 0.2,
+            "ndcg_at_10": 0.38685280723454163,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1278",
+          "relevant_ranks": {
+            "beir15:scifact:d:11335781": 5
+          },
+          "score_max": 47.061638,
+          "score_min": 15.374304
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.250614982564,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.14285714285714285,
+            "mrr_at_20": 0.14285714285714285,
+            "ndcg_at_10": 0.3333333333333333,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1279",
+          "relevant_ranks": {
+            "beir15:scifact:d:11335781": 7
+          },
+          "score_max": 35.681442,
+          "score_min": 11.302906
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.65113399643451,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.16666666666666666,
+            "mrr_at_20": 0.16666666666666666,
+            "ndcg_at_10": 0.3562071871080222,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1280",
+          "relevant_ranks": {
+            "beir15:scifact:d:4387784": 6
+          },
+          "score_max": 39.211502,
+          "score_min": 8.124618
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.00126301497221,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:1281",
+          "relevant_ranks": {
+            "beir15:scifact:d:4387784": 148
+          },
+          "score_max": 55.478477,
+          "score_min": 5.9469905
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 54.57780498545617,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1282",
+          "relevant_ranks": {
+            "beir15:scifact:d:23649163": 1
+          },
+          "score_max": 40.636044,
+          "score_min": 7.264168
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.714536977466196,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1290",
+          "relevant_ranks": {
+            "beir15:scifact:d:4687948": 1
+          },
+          "score_max": 93.72534,
+          "score_min": 5.3651257
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.66390800150111,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1292",
+          "relevant_ranks": {
+            "beir15:scifact:d:56893404": 1
+          },
+          "score_max": 51.056156,
+          "score_min": 10.098219
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 64.42264304496348,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1298",
+          "relevant_ranks": {
+            "beir15:scifact:d:11718220": 1
+          },
+          "score_max": 182.6068,
+          "score_min": 10.47743
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 43.45817101420835,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1303",
+          "relevant_ranks": {
+            "beir15:scifact:d:12631697": 1
+          },
+          "score_max": 30.941721,
+          "score_min": 4.9684734
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.88744797790423,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.045454545454545456,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1316",
+          "relevant_ranks": {
+            "beir15:scifact:d:27910499": 22
+          },
+          "score_max": 39.86619,
+          "score_min": 10.2517
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.879130012821406,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1319",
+          "relevant_ranks": {
+            "beir15:scifact:d:16284655": 1
+          },
+          "score_max": 43.31637,
+          "score_min": 12.193168
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 47.63121000723913,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1320",
+          "relevant_ranks": {
+            "beir15:scifact:d:16284655": 1
+          },
+          "score_max": 66.48365,
+          "score_min": 13.39005
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 64.32302901521325,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.0,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 0.0
+          },
+          "query_id": "beir15:scifact:q:1332",
+          "relevant_ranks": {
+            "beir15:scifact:d:5304891": 162
+          },
+          "score_max": 121.47015,
+          "score_min": 23.48571
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.73120300564915,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1335",
+          "relevant_ranks": {
+            "beir15:scifact:d:27910499": 1
+          },
+          "score_max": 68.5126,
+          "score_min": 12.221316
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 56.047594000119716,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1336",
+          "relevant_ranks": {
+            "beir15:scifact:d:27910499": 1
+          },
+          "score_max": 61.825886,
+          "score_min": 10.678372
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 78.05357099277899,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1337",
+          "relevant_ranks": {
+            "beir15:scifact:d:20231138": 1
+          },
+          "score_max": 41.647175,
+          "score_min": 3.1861815
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.22827399848029,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1339",
+          "relevant_ranks": {
+            "beir15:scifact:d:15482274": 1
+          },
+          "score_max": 89.2949,
+          "score_min": 3.1740916
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 90.61604697490111,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.5,
+            "mrr_at_20": 0.5,
+            "ndcg_at_10": 0.6309297535714575,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1344",
+          "relevant_ranks": {
+            "beir15:scifact:d:9559146": 2
+          },
+          "score_max": 106.45201,
+          "score_min": 19.79285
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 55.711076012812555,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1352",
+          "relevant_ranks": {
+            "beir15:scifact:d:12885341": 1
+          },
+          "score_max": 72.79876,
+          "score_min": 9.528404
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 51.55409697908908,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1359",
+          "relevant_ranks": {
+            "beir15:scifact:d:11614737": 1
+          },
+          "score_max": 120.661385,
+          "score_min": 10.346089
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.79324499052018,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.045454545454545456,
+            "mrr_at_20": 0.0,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1362",
+          "relevant_ranks": {
+            "beir15:scifact:d:8290953": 22
+          },
+          "score_max": 21.725697,
+          "score_min": 3.4481409
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 52.27782600559294,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.07142857142857142,
+            "mrr_at_20": 0.07142857142857142,
+            "ndcg_at_10": 0.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1363",
+          "relevant_ranks": {
+            "beir15:scifact:d:8290953": 14
+          },
+          "score_max": 25.011105,
+          "score_min": 4.4088116
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 46.682249987497926,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1368",
+          "relevant_ranks": {
+            "beir15:scifact:d:2425364": 1
+          },
+          "score_max": 43.897663,
+          "score_min": 4.696042
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 38.21697097737342,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1370",
+          "relevant_ranks": {
+            "beir15:scifact:d:2425364": 1
+          },
+          "score_max": 48.303455,
+          "score_min": 5.118149
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 48.899565008468926,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.7678571428571428,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 0.9058653015743079,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1379",
+          "relevant_ranks": {
+            "beir15:scifact:d:16322674": 2,
+            "beir15:scifact:d:17450673": 1,
+            "beir15:scifact:d:23557241": 6,
+            "beir15:scifact:d:27123743": 7
+          },
+          "score_max": 62.706383,
+          "score_min": 10.323787
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 50.0681689591147,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 0.3333333333333333,
+            "mrr_at_20": 0.3333333333333333,
+            "ndcg_at_10": 0.5,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1382",
+          "relevant_ranks": {
+            "beir15:scifact:d:17755060": 3
+          },
+          "score_max": 38.012077,
+          "score_min": 6.886879
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 40.158596995752305,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1385",
+          "relevant_ranks": {
+            "beir15:scifact:d:306006": 1
+          },
+          "score_max": 47.755856,
+          "score_min": 9.810296
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 49.2658989969641,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1389",
+          "relevant_ranks": {
+            "beir15:scifact:d:23895668": 1
+          },
+          "score_max": 51.648335,
+          "score_min": 6.785916
+        },
+        {
+          "candidate_count": 1000,
+          "latency_ms": 61.457093979697675,
+          "metrics": {
+            "candidate_upper_bound": 1.0,
+            "map_at_100": 1.0,
+            "mrr_at_20": 1.0,
+            "ndcg_at_10": 1.0,
+            "recall_at_100": 1.0
+          },
+          "query_id": "beir15:scifact:q:1395",
+          "relevant_ranks": {
+            "beir15:scifact:d:17717391": 1
+          },
+          "score_max": 47.285774,
+          "score_min": 10.976322
+        }
+      ],
+      "summary": {
+        "candidate_count_mean": 1000.0,
+        "candidate_upper_bound": 0.99,
+        "latency_ms_mean": 54.316009775890656,
+        "latency_ms_p50": 52.51846503233537,
+        "latency_ms_p95": 67.77022499591112,
+        "map_at_100": 0.6702228120802105,
+        "mrr_at_20": 0.6796601851307734,
+        "ndcg_at_10": 0.7099022536931009,
+        "query_count": 300,
+        "recall_at_100": 0.9526666666666667
+      }
+    }
+  ],
+  "qrels_query_count": 300,
+  "route": "ii42_search",
+  "schema": "ii42_p22_qrels",
+  "server": {
+    "database": "ii_dev",
+    "ii42_version": "0.2.0",
+    "postgresql_version": "18.4 (Debian 18.4-1.pgdg12+1)"
+  },
+  "table": "scifact_docs"
+}

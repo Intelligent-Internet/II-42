@@ -21,10 +21,10 @@ DATASET_URL = (
 )
 DATASET_ZIP = Path('/tmp/scifact.zip')
 DATASET_DIR = Path('/tmp/scifact')
-DB_NAME = 'psql_bm25s_beir_scifact'
+DB_NAME = 'ii42_beir_scifact'
 TOP_K = 10
 WARMUP = 50
-PG_DSN = os.environ.get('PSQL_BM25S_BENCH_DSN', 'dbname=postgres')
+PG_DSN = os.environ.get('II42_BENCH_DSN', 'dbname=postgres')
 
 
 @dataclass
@@ -97,7 +97,7 @@ def chunked(items: list[tuple], size: int) -> Iterable[list[tuple]]:
         yield items[start:start + size]
 
 
-def benchmark_python_reference(
+def benchmark_upstream(
     corpus_tokens: list[list[str]],
     query_tokens: list[list[str]],
 ) -> tuple[float, BenchmarkStats]:
@@ -141,7 +141,7 @@ def benchmark_postgres(
 
     with psycopg.connect(db_dsn, autocommit=True) as conn:
         with conn.cursor() as cur:
-            cur.execute('CREATE EXTENSION psql_bm25s')
+            cur.execute('CREATE EXTENSION ii42')
             cur.execute('CREATE SCHEMA bench')
             cur.execute('SET search_path = bench, public')
             cur.execute(
@@ -174,7 +174,7 @@ def benchmark_postgres(
             cur.execute(
                 """
                 CREATE INDEX docs_tokens_bm25_idx
-                ON bench.docs_tokens USING psql_bm25s (tokens)
+                ON bench.docs_tokens USING ii42 (tokens)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -194,7 +194,7 @@ def benchmark_postgres(
             cur.execute(
                 """
                 CREATE INDEX docs_ids_bm25_idx
-                ON bench.docs_ids USING psql_bm25s (token_ids)
+                ON bench.docs_ids USING ii42 (token_ids)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -217,7 +217,7 @@ def benchmark_postgres(
                 cur.execute(
                     """
                     SELECT doc_id, score
-                    FROM public.psql_bm25s_query_tokens(
+                    FROM public.ii42_query_tokens(
                         'bench.docs_tokens_bm25_idx'::regclass,
                         %s,
                         %s,
@@ -236,7 +236,7 @@ def benchmark_postgres(
                 cur.execute(
                     """
                     SELECT doc_id, score
-                    FROM public.psql_bm25s_query_ids(
+                    FROM public.ii42_query_ids(
                         'bench.docs_ids_bm25_idx'::regclass,
                         %s,
                         %s,
@@ -298,7 +298,7 @@ def main() -> None:
     for tokens in query_tokens:
         query_ids.append([vocab[token] for token in tokens if token in vocab])
 
-    python_reference_build_ms, python_reference_stats = benchmark_python_reference(
+    upstream_build_ms, upstream_stats = benchmark_upstream(
         corpus_tokens=corpus_tokens,
         query_tokens=query_tokens,
     )
@@ -315,16 +315,16 @@ def main() -> None:
         'queries_total': len(query_tokens),
         'queries_measured': max(0, len(query_tokens) - WARMUP),
         'vocab_size': len(vocab),
-        'python_reference_bm25s': {
-            'build_ms': python_reference_build_ms,
-            'query': python_reference_stats.__dict__,
+        'upstream_bm25s': {
+            'build_ms': upstream_build_ms,
+            'query': upstream_stats.__dict__,
         },
-        'psql_bm25s_text': {
+        'ii42_text': {
             'build_ms': pg_results['text']['build_ms'],
             'build_bytes': pg_results['text']['build_bytes'],
             'query': pg_results['text']['query'].__dict__,
         },
-        'psql_bm25s_ids': {
+        'ii42_ids': {
             'build_ms': pg_results['ids']['build_ms'],
             'build_bytes': pg_results['ids']['build_bytes'],
             'query': pg_results['ids']['query'].__dict__,

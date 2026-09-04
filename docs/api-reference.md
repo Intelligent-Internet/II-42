@@ -1,412 +1,460 @@
 # API Reference
 
-This page groups the SQL surface by role instead of listing every
-function in implementation order.
+II-42 has one index lifecycle and one overloaded `ii42_query(...)` product
+family. Scalar overloads compose semantic ranking with ordinary table SQL;
+overloads with an explicit `k` return hit rows. Index options select exact BM25
+or semantic-enabled unified posting internally.
 
-For the full signature inventory, result types, operational helpers, and
-catalog-visible support functions, see [Functions](functions.md).
+## Application API
 
-## Canonical Exact Retrieval
+### Create
 
-Preferred exact BM25 APIs:
+```sql
+CREATE INDEX index_name
+ON table_name USING ii42 (column_name [, ...])
+WITH (...);
+```
 
-- `psql_bm25s_query_ids(regclass, int4[], k, weight_mask)`
-- `psql_bm25s_query_tokens(regclass, text[], k, weight_mask)`
+`sae = false` is the default. `sae = true` selects the semantic-enabled
+contract and is eventual-only. See [Index Parameters](index-parameters.md).
 
-These are the canonical exact BM25 interfaces and the main performance
-path.
+Single-column indexes support `int4[]`, `text[]`, `varchar[]`, `text`, or
+`varchar`. Multicolumn indexes require homogeneous `text[]`, `varchar[]`,
+`text`, or `varchar` columns. The default multicolumn shape fuses columns into
+one logical document. `field_aware = true` preserves field identity for BM25;
+it can also be combined with `sae = true` to preserve both lexical and semantic
+field identity in one unified posting index.
 
-For supported source-column types and their trade-offs, see
-[Supported Input Types](input-types.md).
+SAE indexes may declare ordinary table columns with PostgreSQL `INCLUDE`.
+Included columns are non-scoring scope dimensions: they do not enter BM25,
+semantic encoding, field weights, or document length. On a converged root,
+exact scalar `eq`/`in`/`range` and array `overlap` predicates can resolve
+through same-root scope postings; string columns also support `ILIKE`. A
+compatible published scope remains usable while linked-L0 and sealed delta
+work converges. Returned candidates are rechecked against current heap rows,
+while post-baseline matches may be temporarily absent. Unsupported predicate
+shapes fall back to the current SQL predicate resolver. When every structured
+predicate is scope-backed, the bounded serving-scope route does not materialize
+the complete current matching universe; after current-row recheck it may return
+fewer than `k` until background convergence publishes a newer scope.
 
-They are also the recommended exact retrieval surface for multicolumn
-fusion indexes. See
-[Multi-Column Fusion Indexes](multicolumn-fusion-indexes.md).
+See [Getting Started](getting-started.md) for the canonical first-use flow and
+[Supported Input Types](input-types.md) for every supported index shape.
 
-## Raw Query Retrieval
+### Planner-Native Semantic Search
 
-Convenience retrieval over text-backed indexes:
+```sql
+ii42_query(index_name regclass, query_text text) RETURNS real
 
-- `text[]`
-- `varchar[]`
-- `text`
-- `varchar`
+ii42_query(
+    index_name regclass,
+    query_text text,
+    field_names text[],
+    field_weights real[]
+) RETURNS real
+```
 
-- `psql_bm25s_query(...)`
+The two- and four-argument scalar `ii42_query(...)` overloads are planner
+markers, not row-local scoring functions. They must appear as the only
+descending sort key over one base table with a bounded `LIMIT`. PostgreSQL
+owns final `WHERE` evaluation under the statement snapshot. For predicates
+without an eligible same-root scope, PostgreSQL supplies the complete visible
+TID subset and the custom scan ranks inside it. Eligible `INCLUDE` predicates
+may instead use a compatible published scope baseline. Every returned row is
+rechecked against the current snapshot, but post-baseline matches may be absent
+when the bounded probe fills the limit. If recheck cannot fill the requested
+limit, planner-native execution discards the probe and falls back to the
+complete current subset.
 
-The optional tail arguments expose explicit query-time normalization:
+```sql
+SELECT source.*,
+       ii42_query('docs_search_idx'::regclass, 'graph retrieval') AS score
+FROM docs AS source
+WHERE source.publish_date >= DATE '2026-01-01'
+  AND source.categories && ARRAY['cs.LG']
+ORDER BY score DESC
+LIMIT 20;
+```
 
-- `lowercase`
-- `stopwords`
-- `stem_english`
-- `fold_diacritics`
+The current path rejects joins, row-dependent marker arguments, ascending or
+secondary ordering, unbounded ranking, row locking, `WITH TIES`, RLS, and
+partitioned-parent global ranking. The marker fails closed if PostgreSQL cannot
+use the II42 custom executor.
 
-Prepared/index-bound query values:
+### Explicit Hit Search
 
-- `psql_bm25s_prepared_query(...)`
-- `psql_bm25s_ranked_query(...)`
-- `psql_bm25s_fusion_weighted_query(...)`
-- `psql_bm25s_fusion_field_query(...)`
-- `psql_bm25s_fusion_weighted_queries(index_names[], query_text, weights, ...)`
-- `psql_bm25s_fusion_field_queries(field_names[], index_names[], query_text, weights, ...)`
-- `psql_bm25s_query_prepared(...)`
-- `psql_bm25s_filter_query(ranked_query)`
-- `psql_bm25s_fusion_query_weighted(weighted_queries[], k, candidate_k, weight_mask)`
-- `psql_bm25s_fusion_query_fields(field_queries[], k, candidate_k, weight_mask)`
-- `psql_bm25s_fusion_query(index_names[], query_text, weights, k, candidate_k, weight_mask, ...)`
-- `psql_bm25s_fusion_query(field_names[], index_names[], query_text, weights, k, candidate_k, weight_mask, ...)`
-- `psql_bm25s_field_aware_query_tokens(index_name, query_tokens, field_names, weights, k)`
-- `psql_bm25s_field_aware_query(index_name, query_text, field_names, weights, k)`
-- `psql_bm25s_order_tokens(prepared_query)`
-- `psql_bm25s_order_tokens(ranked_query)`
-- `psql_bm25s_order_tokens(index_name, query_text, ...)`
+```sql
+ii42_query(
+    index_name regclass,
+    query_text text,
+    k int4,
+    weight_mask real[] DEFAULT NULL,
+    lowercase boolean DEFAULT NULL,
+    stopwords text[] DEFAULT NULL,
+    stem_english boolean DEFAULT NULL,
+    fold_diacritics boolean DEFAULT NULL
+)
+RETURNS SETOF ii42_result_hit
+```
 
-These let SQL bind a parsed query configuration to an explicit index
-context without changing the canonical execution path.
+Field-aware indexes also expose an overload through the same product name:
 
-For scalar `text` and `varchar` indexes, omitted query options in
-index-bound raw-query helpers inherit the named index's text reloptions.
-That includes `psql_bm25s_prepared_query(index_name, ...)`,
-`psql_bm25s_query(...)`, and
-`psql_bm25s_query_prepared(...)`. This
-makes prepared-query predicates and helper functions stable even when the
-surrounding SQL does not use a real index scan.
+```sql
+ii42_query(
+    index_name regclass,
+    query_text text,
+    field_names text[],
+    field_weights real[],
+    k int4
+)
+RETURNS SETOF ii42_result_hit
+```
 
-`psql_bm25s_ranked_query(...)` packages:
+SAE-enabled indexes expose predicate-defined subset-ranking overloads:
 
-- a prepared/index-bound query
-- the matching `<=>` order tokens
-- the intended top-k
-- an optional `weight_mask`
+```sql
+ii42_query(
+    index_name regclass,
+    query_text text,
+    filters jsonb,
+    k int4 DEFAULT 10
+)
 
-This is a convenience bundle for common filtered/ranked SQL shapes. It
-does not change ranking semantics and it does not introduce a second
-retrieval implementation.
+ii42_query(
+    index_name regclass,
+    query_text text,
+    field_names text[],
+    field_weights real[],
+    filters jsonb,
+    k int4 DEFAULT 10
+)
 
-For a full advanced example of weighted title/abstract/body search, see
-[Multi-Field Search](multi-field-search.md).
+ii42_query(
+    index_name regclass,
+    query_text text,
+    allowed_tids tid[],
+    k int4 DEFAULT 10
+)
 
-For one-index fused `text[]` retrieval across multiple indexed columns,
-see [Multi-Column Fusion Indexes](multicolumn-fusion-indexes.md).
+ii42_query(
+    index_name regclass,
+    query_text text,
+    field_names text[],
+    field_weights real[],
+    allowed_tids tid[],
+    k int4 DEFAULT 10
+)
+```
 
-For one-index field-aware retrieval over a multicolumn index
-created with `field_aware = true`, generic direct APIs search all fields
-with equal weight for token and simple raw term queries. Use
-`psql_bm25s_field_aware_query_tokens(...)` or
-`psql_bm25s_field_aware_query(...)` when a query needs custom
-field weights or a field subset. The field-aware engine stores
-field-scoped terms in one BM25 payload, but it does not implement BM25F
-or per-field length normalization. See
-[Field-Aware Indexes](field-aware-indexes.md).
+Each predicate-defined overload returns `SETOF ii42_result_hit`.
 
-For BM25/vector late fusion that keeps vector extensions optional, see
-[Hybrid Vector/BM25 Search](hybrid-search.md) and
+The JSON overload is the explicit structured-predicate API. Filters are ANDed
+by column. Each column specifies exactly one operation: `eq`, `in`, `overlap`,
+`ilike`,
+`ilike_any`, or `range`; range accepts `gt`, `gte`, `lt`, and `lte` bounds.
+`ilike` accepts one PostgreSQL pattern and `ilike_any` accepts an OR-list of
+patterns; on a string-array column they match individual elements.
+
+An eligible same-root scope may rank a bounded published baseline and recheck
+every returned row against the active snapshot. Returned membership is current,
+but the matching universe may omit post-baseline rows and a fully scope-backed
+request may return fewer than `k`. Without an eligible scope, II42 may use a
+bounded ranked-prefix probe; if that probe is insufficient, PostgreSQL resolves
+the complete current predicate set and can use ordinary B-tree, GIN, BRIN, or
+suitable trigram/expression indexes. For a nonempty `overlap` operand, the SQL
+resolver includes the equivalent `cardinality(column) > 0` condition so a
+matching partial GIN index remains usable. All routes select top-k inside their
+selected candidate universe. Scope and SQL-subset routes are predicate-first;
+the bounded prefix route is explicitly a global overfetch probe followed by
+current predicate recheck, not an exact resumable filtered iterator. Collection
+operands are limited to 4,096 values; use a selective table predicate rather
+than transporting a large application-owned ID list.
+
+The `tid[]` overload remains a low-level exact-membership boundary: no result
+can come from outside the supplied set. Ranking still uses the index's selected
+exact or bounded-approximate route, so a stale accelerator may omit an allowed
+post-baseline row. Generate TIDs in the same statement and do not persist them
+across table rewrites. Null and empty sets return no rows. By default filter
+metadata remains PostgreSQL-owned.
+An SAE index can opt frequently used exact dimensions into its existing root
+with `INCLUDE`; this adds no generation, worker, compaction, or fold lifecycle.
+Predicate-defined filtered top-k is reserved for SAE-enabled unified indexes;
+pure BM25 continues to use PostgreSQL's ordinary predicate path.
+
+The default overload searches all fields with weight `1.0`. The field-aware
+overload searches the selected unique fields and applies each weight to the
+field's complete unified contribution:
+`sum(weight * (BM25 + SAE))`. Weights must be finite and non-negative.
+
+`ii42_result_hit` contains:
+
+| Field | Meaning |
+| --- | --- |
+| `ctid` | Physical row identity for joining to the indexed table. |
+| `doc_id` | Index-local document slot. Do not persist it as row identity. |
+| `score` | Query-time score produced by the selected index contract. |
+
+Example:
+
+```sql
+SELECT source.id, source.body, hit.score
+FROM ii42_query(
+    'docs_body_idx'::regclass,
+    'postgres index maintenance',
+    20
+) AS hit
+JOIN docs AS source ON source.ctid = hit.ctid
+ORDER BY hit.score DESC, source.id;
+```
+
+For BM25, omitted normalization arguments inherit the named index options.
+For `sae = true`, all BM25-only overrides and `weight_mask` are rejected;
+normalization belongs to the model checkout. Field weights remain valid on a
+semantic-enabled field-aware index because they scale complete field-local
+lexical and semantic evidence after model encoding.
+
+`weight_mask` is an exact-BM25 diagnostic surface and is inherently a
+document-slot-sized operation. It is therefore admitted only when the
+physical index and all other active fallback snapshots fit the finite positive
+per-backend `ii42.workspace_cache_bytes` budget. Ordinary queries should omit
+it and use the shared resident-fold/page-native route.
+
+The caller needs `SELECT` on the indexed table. `ii42_query(...)` rejects
+row-level-security tables and partitioned parent indexes. An explicit TID set
+provides predicate-defined subset ranking, but it is not an RLS policy boundary
+and cannot combine independently ranked child corpora into one global top-k.
+
+### Inspect
+
+```sql
+ii42_index_options(index_name regclass) RETURNS jsonb
+ii42_index_status(index_name regclass) RETURNS jsonb
+ii42_index_audit(index_name regclass) RETURNS jsonb
+ii42_index_details(index_name regclass) RETURNS TABLE (
+    index_name regclass,
+    source_type text,
+    docs int8,
+    index_bytes int8,
+    pages int8,
+    stale bool,
+    consistency text,
+    rebuilds int8,
+    pending_writes int8,
+    pending_deletes int8,
+    delta_records int8,
+    delta_bytes int8
+)
+```
+
+- `ii42_index_options(...)` reports effective type, source shape, reloptions,
+  and semantic configuration. Semantic indexes report
+  `semantic_impact_precision`, `semantic_alpha_mass`, and an `exact` or
+  `approximate` `semantic_accuracy_profile`; defaults are `f32` and `1.0`.
+  The packed semantic authority always uses 64-document blocks; precision is
+  selectable per index, but block geometry is not.
+- `ii42_index_status(...)` is the application readiness surface. Check
+  `query_ready` and `blocker` rather than interpreting internal counters.
+  `query_usable` and `query_ready` mean the exact fallback remains correct.
+  For semantic indexes, `performance_ready` additionally requires either a
+  serving semantic accelerator or a current exact-root resident fold. A
+  serving accelerator may report `state=ready_baseline_delta` and
+  `baseline_current=false`: the immutable baseline remains authoritative while
+  bounded overfetch and current-row validation reject stale candidates. Newer
+  rows may be temporarily omitted under the declared approximate profile. This
+  is an expected online state, not a fallback or an invalid accelerator, and it
+  has no maximum serving age. Small debt is still scheduled periodically by
+  `ii42.maintenance_low_debt_interval_ms`; record and byte high-water marks
+  bypass that interval. Status exposes `periodic_refresh_eligible` separately
+  from immediate `refresh_due`. Failed publication or a concurrent builder is
+  retried no sooner than `ii42.maintenance_timer_interval_ms`; that internal
+  cooldown applies only to accelerator construction and never invalidates the
+  serving baseline. It becomes
+  `state=ready` and `baseline_current=true` after sealing and derived
+  publication catch up. A compatible manifest seal does not clear
+  `query_metadata_warm`; that marker follows the unchanged accelerator
+  directory and baseline sequence while exact manifest projections converge
+  in the background. A false marker in this state therefore indicates startup,
+  shared-runtime admission pressure, or a genuine serving-authority change,
+  not ordinary baseline drift. This keeps the established query-readiness contract
+  while preventing a relation-sized semantic fallback from passing
+  performance qualification. `performance_blocker` identifies outstanding
+  convergence work even when the existing baseline remains usable. If
+  `auto_preload > 0`, it also reports
+  `query_metadata_not_warm` until accelerator metadata is warm or an exact
+  resident fold is current. Its
+  generation projection is bounded to root metadata even on relation-sized
+  indexes; `diagnostics_complete=false` and null reachability/reclaim fields
+  mean that no full storage walk was requested. A semantic accelerator reports
+  authenticated fixed-header metadata and `directory_bytes`; aggregate
+  artifact `bytes` remains null because calculating it requires walking every
+  child reference.
+- `ii42_index_audit(...)` is the explicit heavy integrity surface. It validates
+  the complete generation closure and SHA-256 hashes every SAE model artifact.
+  Do not call it from readiness polling or request paths.
+- `ii42_index_details(...)` exposes operator-oriented root, mutation,
+  maintenance, and builder details.
+
+These functions enforce access to the indexed table. Status validates bounded
+manifest/runtime identity but deliberately reports `model_artifacts_valid` as
+null. Audit validates server-local model bytes under the guarded
+extension-owner boundary; callers cannot supply arbitrary paths.
+
+### Maintain
+
+```sql
+ii42_index_refresh(index_name regclass)
+ii42_index_maintain(index_name regclass)
+ii42_index_try_maintain(index_name regclass)
+ii42_index_maintain_due(max_indexes integer DEFAULT 1)
+```
+
+- `ii42_index_maintain(...)` may wait and performs one needed bounded action or
+  returns a no-op.
+- `ii42_index_try_maintain(...)` avoids waiting on a busy publication boundary
+  and returns retryable no-op results when necessary. This is non-blocking lock
+  admission, not a deadline on the maintenance action once admitted.
+- `ii42_index_maintain_due(...)` uses the same native selector for a bounded
+  number of automatic-policy indexes. It is revoked from `PUBLIC` and is meant
+  for a trusted maintenance role.
+- `ii42_index_refresh(...)` is an explicit operator refresh surface. Use
+  `REINDEX` when options or model contract changed.
+
+Per-index mutation and maintenance require index ownership. Semantic
+completion, sealing, compaction, fold, and reclamation all act on the same
+page-native v3 root and linked L0.
+
+### Drop
+
+```sql
+DROP INDEX index_name;
+```
+
+PostgreSQL relation lifecycle is authoritative for both modes. All II-42
+payloads are owned by the index relation, so there is no semantic side object
+or external cleanup step.
+
+## Text Utilities
+
+The public value-local helpers are:
+
+- `ii42_tokenize_text(text, ...)`;
+- `ii42_normalize_tokens(text[], ...)`;
+- `ii42_highlight(text[] | text | varchar, query_text, ...)`;
+- `ii42_snippet(text[] | text | varchar, query_text, ...)`.
+
+They operate on supplied values. They do not perform index retrieval.
+
+## BM25 Planner Surface
+
+BM25 indexes support PostgreSQL operator integration:
+
+- `tokens @@ 'query text'` for `text[]` and `varchar[]` predicates;
+- `value @@@ ii42_prepared_query(...)` for owner diagnostics and scalar text;
+- `ORDER BY value <=> query_tokens ASC LIMIT k` for index-ordered retrieval.
+
+`@@` is a boolean predicate, not a ranking API. `<=>` has index ranking
+semantics only when PostgreSQL chooses an actual `ii42` index scan. Application
+code that needs an explicit hit set can use `ii42_query(...)`; semantic table
+queries should prefer `ii42_query(...)`.
+
+These operators are BM25 surfaces. They do not dispatch to semantic scoring.
+
+## Owner-Only BM25 Diagnostics
+
+The extension owner can use exact BM25 functions for regression, benchmark,
+and implementation diagnostics:
+
+- `ii42_query_ids(...)`;
+- `ii42_query_tokens(...)`;
+- `ii42_prepared_query(...)`, `ii42_order_tokens(...)`, and local match/score
+  helpers;
+- single-index token-level field-weight helpers.
+
+These functions are revoked from `PUBLIC`. Exact BM25 rowset and scoring
+helpers reject `sae = true` indexes. None may become an alternate application
+API.
+Use PostgreSQL `EXPLAIN (FORMAT JSON)` directly when validating planner paths.
+II-42 does not wrap or execute caller-supplied SQL text.
+
+## Public Composition APIs
+
+The `ii42_fusion_*` family combines top-k results from multiple independently
+maintained `ii42` indexes. The `ii42_hybrid_*` family combines II-42 candidates
+with externally retrieved candidates such as vector-index distances. These
+families are granted to `PUBLIC`; each II-42 source still enforces source-table
+`SELECT` through `ii42_query(...)`.
+
+Fusion hit rows are keyed by `ctid`, so both `ii42_fusion_*` and `ii42_hybrid_*`
+sources must belong to the same base table and SQL snapshot. For different
+tables or partitions, map hits to stable document IDs and aggregate in
+application SQL outside these helpers. Both families fuse finite source
+prefixes, not the complete matching universes; candidate limits can affect
+recall. See [Multi-Index Fusion](multi-index-fusion.md) and
 [Hybrid Fusion Engine](hybrid-fusion-engine.md).
 
-For type-specific usage guidance, see
-[Supported Input Types](input-types.md).
-
-Recommended score-carrying SQL surface:
-
-- `psql_bm25s_query(...)`
-- `psql_bm25s_query_prepared(...)`
-- `psql_bm25s_fusion(left_hits, left_weight, right_hits, right_weight, k)`
-
-These return `psql_bm25s_result_hit`, which carries:
-
-- `ctid`
-- `doc_id`
-- `score`
-
-The intended pattern is to join `ctid` back to application rows when a
-query needs both row data and the query-time score.
-
-This is preferred over a hypothetical scalar `score(id)` API because:
-
-- retrieval and scoring stay on the same exact top-k path
-- scores remain attached to the current query execution
-- SQL avoids row-by-row re-scoring outside the retrieval executor
-- planner behavior stays easier to reason about
-
-For limited multi-field or multi-index score fusion, use:
-
-- `psql_bm25s_fusion(...)`
-- `psql_bm25s_fusion_weighted_query(...)`
-- `psql_bm25s_fusion_field_query(...)`
-- `psql_bm25s_fusion_query_weighted(...)`
-- `psql_bm25s_fusion_query_fields(...)`
-
-These helpers return `SETOF psql_bm25s_result_hit`. Fusion is post-retrieval
-composition of query-scoped hit rows, not a replacement for the
-underlying exact retrieval path.
-
-`psql_bm25s_fusion_query_weighted(...)` is the more structured helper
-for a small set of field- or index-specific prepared queries with
-weights. It runs exact retrieval per query, then fuses the top-k result
-sets by weighted score sum.
-
-`psql_bm25s_fusion_field_query(...)` and
-`psql_bm25s_fusion_query_fields(...)` make the field-labeled fusion contract
-more explicit:
-
-- each field has a stable field name
-- each field still owns one weighted prepared query
-- retrieval stays per field/index
-- fusion still happens only after those top-k results exist
-
-`psql_bm25s_fusion_weighted_queries(...)`, `psql_bm25s_fusion_field_queries(...)`,
-and `psql_bm25s_fusion_query(...)` are the convenience layer for the
-common case where multiple field indexes share the same query text and
-normalization options.
-
-For end-to-end examples, see
-[Multi-Field Search](multi-field-search.md) and
-[Multi-Column Fusion Indexes](multicolumn-fusion-indexes.md).
-
-For the opt-in single-index field-aware engine, see
-[Field-Aware Indexes](field-aware-indexes.md).
-
-## Hybrid Vector/BM25 Fusion
-
-Hybrid fusion accepts generic candidate rows and therefore does not require
-`pgvector`, VectorChord, or any vector type at extension install time.
-
-Types:
-
-- `psql_bm25s_result_hybrid_candidate`
-- `psql_bm25s_result_hybrid_hit`
-
-Candidate constructors:
-
-- `psql_bm25s_hybrid_candidate(source_name, ctid, raw_value, source_rank, weight, normalizer, direction)`
-- `psql_bm25s_hybrid_bm25_candidate(source_name, ctid, score, source_rank, weight, normalizer)`
-- `psql_bm25s_hybrid_vector_candidate(source_name, ctid, distance, source_rank, weight, normalizer)`
-- `psql_bm25s_hybrid_bm25_candidates(source_name, index_name, query_text, weight, candidate_k, normalizer, ...)`
-
-Fusion:
-
-- `psql_bm25s_hybrid_fuse_candidates(candidates, k, fusion, rrf_k, epsilon)`
-
-The public fusion function is C-backed and is the supported API surface.
-
-See [Hybrid Fusion Engine](hybrid-fusion-engine.md) for the execution model,
-performance boundary, and validation coverage.
-
-Supported fusion methods:
-
-- `rrf`
-- `score`
-
-Supported score normalizers:
-
-- `identity`
-- `negative_distance`
-- `inverse_distance`
-- `minmax`
-- `zscore`
-- `rank`
-
-Use `rrf` as the default for mixed BM25/vector retrieval. Use `score` only
-when the application has chosen and benchmarked a normalization strategy.
-
-## Operators
-
-Document predicate:
-
-- `tokens @@ 'query text'`
-- `tokens @@@ psql_bm25s_prepared_query(...)`
-- `tokens @@@ psql_bm25s_filter_query(psql_bm25s_ranked_query(...))`
-- `column @@ 'query text'`
-- `column @@@ psql_bm25s_prepared_query(...)`
-
-Ordered retrieval surface:
-
-- `ORDER BY tokens <=> ... ASC LIMIT k`
-- `ORDER BY token_ids <=> ... ASC LIMIT k`
-- `ORDER BY tokens <=> psql_bm25s_order_tokens(psql_bm25s_prepared_query(...))`
-- `ORDER BY tokens <=> psql_bm25s_order_tokens(psql_bm25s_ranked_query(...))`
-- `ORDER BY tokens <=> psql_bm25s_order_tokens(index_name, query_text, ...)`
-
-Important:
-
-- `@@` is a boolean document-match predicate
-- `@@@` is the prepared-query boolean predicate
-- if you want prepared-query filtering and SQL-native ranking together,
-  use `@@@` plus `psql_bm25s_order_tokens(prepared_query)`
-- `@@` is useful for filtering, not for ranking
-- for scalar `text` and `varchar`, raw `@@` outside a real index scan
-  does not discover hidden index reloptions on its own
-- for scalar `text` and `varchar`, `@@@ psql_bm25s_prepared_query(...)`
-  inherits omitted query options from the named index reloptions
-- `<=>` is only true BM25 ordering when PostgreSQL chooses a real
-  `psql_bm25s` index scan
-- if you need the clearest exact BM25 contract regardless of planner
-  shape, prefer `psql_bm25s_query_tokens(...)` or
-  `psql_bm25s_query_ids(...)`
-
-## Local Scalar / Token Helpers
-
-These helpers operate on one provided document value at a time. They are
-useful for SQL composition, diagnostics, UI rendering, and explicit scalar
-text handling outside an index scan. They do not run index top-k retrieval
-and should not be used as the primary search path for large tables.
-
-- `psql_bm25s_tokenize_text(text, ...)`
-- `psql_bm25s_normalize_tokens(text[], ...)`
-- `psql_bm25s_match_prepared_query(text[], psql_bm25s_result_prepared_query)`
-- `psql_bm25s_match_prepared_query(text, psql_bm25s_result_prepared_query)`
-- `psql_bm25s_match_prepared_query(varchar, psql_bm25s_result_prepared_query)`
-- `psql_bm25s_match_query(text, index_name, query_text, ...)`
-- `psql_bm25s_match_query(varchar, index_name, query_text, ...)`
-- `psql_bm25s_score_prepared_query(text[], psql_bm25s_result_prepared_query)`
-- `psql_bm25s_score_prepared_query(text, psql_bm25s_result_prepared_query)`
-- `psql_bm25s_score_prepared_query(varchar, psql_bm25s_result_prepared_query)`
-- `psql_bm25s_score_query(text, index_name, query_text, ...)`
-- `psql_bm25s_score_query(varchar, index_name, query_text, ...)`
-- `psql_bm25s_highlight(text[], text, ...)`
-- `psql_bm25s_highlight(text, text, ...)`
-- `psql_bm25s_highlight(varchar, text, ...)`
-- `psql_bm25s_snippet(text[], text, ...)`
-- `psql_bm25s_snippet(text, text, ...)`
-- `psql_bm25s_snippet(varchar, text, ...)`
-
-Important:
-
-- the local match and score helpers are document-local convenience helpers
-- they use the existing local token match/score paths
-- they do not access an index payload for top-k retrieval
-- they are not the canonical exact BM25 retrieval contract
-- wrappers that take `index_name, query_text, ...` are thin convenience
-  layers over prepared-query helpers, not a separate scoring model
-- when scalar text options are omitted, `index_name` overloads resolve them
-  from the named index reloptions and then apply the local helper path
-
-## Introspection and Maintenance
-
-- `psql_bm25s_index_details(regclass)`
-- `psql_bm25s_index_policy_recommend(regclass, profile text)`
-- `psql_bm25s_index_refresh(regclass)`
-- `psql_bm25s_index_maintain(regclass)`
-- `psql_bm25s_index_try_maintain(regclass)`
-- `psql_bm25s_index_maintain_due(max_indexes integer DEFAULT 1)`
-- `psql_bm25s_generation_cache_clear()`
-- `psql_bm25s_generation_cache_state(regclass)`
-- `psql_bm25s_generation_cache_preload(regclass)`
-
-`psql_bm25s_index_maintain(...)` is intended for scheduled convergence of
-pending or stale indexes. It no-ops when no maintenance is needed.
-
-`psql_bm25s_index_try_maintain(...)` is the non-blocking scheduler primitive.
-For query-first eventual indexes, it builds a replacement payload first and
-takes only a short non-blocking swap lock. If the lock is busy, it returns a
-retryable no-op result. Append-only delta records created while the replacement
-was building are carried forward after the swap; non-tail-compatible concurrent
-changes still return a retryable no-op result.
-
-`psql_bm25s_index_maintain_due(...)` scans due `eventual` indexes owned by
-the current role, then calls the same try-maintenance primitive. It is suitable
-for pg_cron, systemd timers, or application schedulers. It prioritizes stale
-indexes first, then larger record and byte maintenance debt.
-
-`psql_bm25s_index_details(...)` is the structured inspection surface for index
-metadata, persisted maintenance state, consistency mode, and active reloptions.
-
-`psql_bm25s_index_policy_recommend(...)` returns a structured recommendation
-for a workload profile. Use it as planning guidance; it does not change the
-index.
-
-`psql_bm25s_generation_cache_state(...)` reports the observable immutable
-generation key and shared-cache state for one index, including DSM descriptor
-state, optional shared-preload arena counters, and whether that specific index
-is resident or currently loading in the shared-preload arena. Use it for
-debugging shared generation reuse and invalidation, not in latency-sensitive
-query paths.
-The shared-preload counters intentionally separate background worker slots from
-current phase: `active_background_workers` is the total worker-slot usage,
-while `active_preload_workers` and `active_index_maintenance_workers` show
-whether active workers are warming resident generations or rebuilding indexes.
-
-`psql_bm25s_generation_cache_clear()` clears backend-local cache state and
-best-effort volatile shared-generation descriptors, failure markers,
-interrupted temp descriptors, old lock files, and shared-preload registry
-entries. It does not modify durable index contents; later readers can rebuild
-from the index relation.
-
-## Advanced Diagnostics
-
-These functions are for inspecting planner behavior and index eligibility.
-They are not retrieval APIs and should not be presented as part of the
-ordinary query flow:
-
-- `psql_bm25s_fast_path_advice(index_name)`
-- `psql_bm25s_fast_path_plan(index_name, explain_plan_json)`
-- `psql_bm25s_fast_path_explain(index_name, sql_text)`
-
-`psql_bm25s_fast_path_advice(index_name)` returns a JSON summary of:
-
-- the index key type
-- which predicate/order surfaces are supported
-- whether filtered ranked SQL is eligible
-- the canonical API
-- the recommended SQL filter/order shape
-
-`psql_bm25s_fast_path_plan(...)` and
-`psql_bm25s_fast_path_explain(...)` report whether a concrete plan
-actually used:
-
-- a `psql_bm25s` index node
-- bitmap versus ordered index scan
-- `@@` / `@@@`-style match predicates
-- `<=>` ordering inside the plan
-
-`psql_bm25s_generation_cache_preload(...)` opens the index and warms the best
-available generation-cache tier for the current deployment. In a configured
-shared-preload deployment it can populate the main shared-memory arena before
-application traffic reaches an index; otherwise it warms the DSM tier for
-share-eligible generations or the selected backend-local path for small
-indexes.
-
-Indexes can also set `auto_preload = <priority>` as a reloption. The default
-priority is `0`, which disables automatic preload. Positive priorities are
-best-effort hints consumed by the shared-preload background worker; larger
-values are attempted first.
-Warmup uses `psql_bm25s.preload_timer_interval_ms`, drains all currently due
-marked indexes per cycle, and is intentionally independent from
-`psql_bm25s.maintenance_timer_interval_ms` so rebuild throttling does not slow
-startup residency.
-Automatic rebuilds are separately guarded by
-`psql_bm25s.maintenance_rebuild_memory_budget`. Maintenance reports
-`builder=standard`, `builder=compact`, or `builder=spill` when a rebuild is
-admitted. Automatic workers choose `standard` only when
-`standard_estimated_bytes <= budget_bytes * 0.60` and the active payload is
-below the standard payload cap, choose `compact` only when
-`compact_estimated_bytes <= budget_bytes * 0.75` and the active payload is
-below the compact payload cap, and otherwise choose `spill` when
-`spill_estimated_bytes <= budget_bytes`. If even spill does not fit,
-maintenance reports `reason=memory_budget` with the estimate fields and leaves
-the readable resident generation in place instead of risking swap pressure.
-Explicit `CREATE INDEX` / `REINDEX` uses the same estimates for builder choice,
-but falls through to `spill` with a `NOTICE` because the operator asked for a
-controlled rebuild.
-
-See [Index Policy](index-policy.md) for consistency modes, maintenance
-behavior, and scheduler guidance.
-See [Shared Generation Cache](shared-generation-cache.md) for cache tiers,
-large connection-pool deployment guidance, and the optional shared-preload
-arena.
-See [Connection Memory and Index Prewarming](connection-memory.md) for
-workspace retention settings, memory sizing, and active warmup examples.
-See [Index Parameters](index-parameters.md) for the complete
-`CREATE INDEX ... WITH (...)` option reference.
-
-## Policy Recommendation Profiles
-
-Current helper profiles:
-
-- `query_first`
-- `balanced`
-- `small_mixed_churn`
-- `heavy_mixed_churn`
-- `heavy_insert_skew`
-- `longrun_mixed_churn`
-- `write_tolerant_query_first`
+Composition is a product layer above single-index retrieval. It does not alter
+an index's unified posting layout, mutation lifecycle, maintenance policy, or
+native scorer. Use planner-native SQL or `ii42_query(...)` when one index is
+sufficient; use fusion or hybrid APIs only when the product intentionally
+combines independent indexes or retrieval engines.
+
+## Runtime And Residency Diagnostics
+
+Runtime and residency surfaces include:
+
+```sql
+ii42_index_runtime_state(index_name regclass)
+ii42_index_runtime_state_json(index_name regclass)
+ii42_index_preload(index_name regclass)
+ii42_runtime_cache_clear()
+ii42_runtime_service_status()
+```
+
+The state functions require `SELECT` on the indexed table.
+`ii42_index_preload(...)` requires index ownership, while cache clearing and
+runtime-service status are extension-owner diagnostics revoked from `PUBLIC`.
+These functions report or control checked-root markers, relation page warming,
+optional HOT_FOLD and exact-root resident-fold state, bounded workspace, and
+shared runtime state. They do not expose posting storage or a second mutation
+authority. `ii42_index_runtime_state_json(...)` reports
+`resident_fold_current`, `resident_fold_entries`, and `resident_fold_bytes`.
+The text and JSON forms use the same C snapshot collector; JSON diagnostics do
+not parse the human-readable state string.
+
+`ii42_index_preload(...)` first attempts to publish one pointer-free exact-root
+fold when the index is converged and the complete image fits
+`ii42.shared_runtime_size`. Its result then reports
+`tier=shared_resident_fold`, `prewarm_scope=exact`, and `resident_bytes`.
+Otherwise it performs exact relation-page warming within
+`ii42.prewarm_max_bytes` or bounded roots-and-payload warming for a larger
+index. Query readers still validate the checked root; durable authority never
+moves out of the index relation.
+
+`ii42_runtime_cache_clear()` is revoked from `PUBLIC`. Clearing disposable
+residency may change cold latency but cannot change results.
+
+## Privilege Summary
+
+| Surface | Intended caller |
+| --- | --- |
+| `ii42_query` | Application role with source-table `SELECT`. |
+| `ii42_fusion_*`, `ii42_hybrid_*` | Application role; source queries retain their own authorization. |
+| Options/status/details | Role allowed to inspect the source relation. |
+| Per-index maintenance | Index owner. |
+| PostgreSQL `DROP INDEX` | Index owner under the normal PostgreSQL lifecycle. |
+| `ii42_index_maintain_due` | Trusted maintenance role. |
+| Text utilities | Application role. |
+| Runtime state | Role allowed to inspect the source relation. |
+| Per-index preload | Index owner. |
+| Exact BM25, model, cache, and runtime internals | Extension owner/diagnostics. |
+
+Internal functions ending in `_internal` are implementation boundaries. Do not
+grant them to application roles.
+
+## See Also
+
+- [Function Index](functions.md)
+- [Query Semantics](query-semantics.md)
+- [Index Parameters](index-parameters.md)
+- [Index Policy](index-policy.md)
+- [Semantic Query API](examples/semantic-query-api.md)

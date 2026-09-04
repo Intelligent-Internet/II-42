@@ -1,0 +1,449 @@
+{
+  "config": {
+    "cycle_count": 8,
+    "db_name": "ii42_v2_churn_bench_heavy",
+    "delete_per_cycle": 100,
+    "doc_count": 10000,
+    "doc_len": 24,
+    "insert_per_cycle": 100,
+    "query_count": 150,
+    "seed": 20260324,
+    "top_k": 20,
+    "update_per_cycle": 100,
+    "vocab_size": 4000
+  },
+  "modes": {
+    "docs_auto_eager": {
+      "config": {
+        "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 0",
+        "table_name": "docs_auto_eager"
+      },
+      "cycles": [
+        {
+          "commit_ms": 0.0,
+          "cycle": 0,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=1, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.4048627723629276,
+            "p50_ms": 0.2195419801864773,
+            "p95_ms": 0.6249170401133597,
+            "qps": 2469.9727123924813
+          },
+          "rebuild_count": 1,
+          "vacuum_ms": 0.0
+        },
+        {
+          "commit_ms": 45.14537495560944,
+          "cycle": 1,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=3, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.07828549869979422,
+            "p50_ms": 0.0609164999332279,
+            "p95_ms": 0.1580830430611968,
+            "qps": 12773.757804555298
+          },
+          "rebuild_count": 3,
+          "vacuum_ms": 46.88037501182407
+        },
+        {
+          "commit_ms": 43.24833396822214,
+          "cycle": 2,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=5, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.19702861085534096,
+            "p50_ms": 0.1173749624285847,
+            "p95_ms": 0.405374972615391,
+            "qps": 5075.4050168592175
+          },
+          "rebuild_count": 5,
+          "vacuum_ms": 82.46487495489419
+        },
+        {
+          "commit_ms": 27.68545795697719,
+          "cycle": 3,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.07841410697437823,
+            "p50_ms": 0.05679100286215544,
+            "p95_ms": 0.1378750312142074,
+            "qps": 12752.80735297731
+          },
+          "rebuild_count": 7,
+          "vacuum_ms": 48.17099997308105
+        },
+        {
+          "commit_ms": 60.42816600529477,
+          "cycle": 4,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=9, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.19850496629563472,
+            "p50_ms": 0.1384374627377838,
+            "p95_ms": 0.45929098268970847,
+            "qps": 5037.657337553427
+          },
+          "rebuild_count": 9,
+          "vacuum_ms": 74.53008403535932
+        },
+        {
+          "commit_ms": 28.768124990165234,
+          "cycle": 5,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=11, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.21960634466571113,
+            "p50_ms": 0.16814548871479928,
+            "p95_ms": 0.4069580463692546,
+            "qps": 4553.602499610012
+          },
+          "rebuild_count": 11,
+          "vacuum_ms": 65.38750004256144
+        },
+        {
+          "commit_ms": 25.619457999709994,
+          "cycle": 6,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=13, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.10210636925573151,
+            "p50_ms": 0.076395517680794,
+            "p95_ms": 0.21129101514816284,
+            "qps": 9793.708338560547
+          },
+          "rebuild_count": 13,
+          "vacuum_ms": 35.78329196898267
+        },
+        {
+          "commit_ms": 22.515541990287602,
+          "cycle": 7,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=15, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.4105925268959254,
+            "p50_ms": 0.19595850608311594,
+            "p95_ms": 1.0150839807465672,
+            "qps": 2435.5046292731827
+          },
+          "rebuild_count": 15,
+          "vacuum_ms": 44.81566697359085
+        },
+        {
+          "commit_ms": 54.2109590023756,
+          "cycle": 8,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=17, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.06587467971257865,
+            "p50_ms": 0.0481664901599288,
+            "p95_ms": 0.13562495587393641,
+            "qps": 15180.339462190232
+          },
+          "rebuild_count": 17,
+          "vacuum_ms": 46.454207971692085
+        }
+      ],
+      "summary": {
+        "avg_commit_ms": 34.18015742984911,
+        "avg_vacuum_ms": 49.387444547998406,
+        "final_rebuild_count": 17,
+        "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+        "max_qps": 15180.339462190232,
+        "max_rebuild_increment": 2,
+        "median_qps": 5075.4050168592175,
+        "min_qps": 2435.5046292731827
+      }
+    },
+    "docs_auto_threshold_count": {
+      "config": {
+        "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 1000",
+        "table_name": "docs_auto_threshold_count"
+      },
+      "cycles": [
+        {
+          "commit_ms": 0.0,
+          "cycle": 0,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=1, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.07192025776021183,
+            "p50_ms": 0.05062500713393092,
+            "p95_ms": 0.12600002810359,
+            "qps": 13904.288320741061
+          },
+          "rebuild_count": 1,
+          "vacuum_ms": 0.0
+        },
+        {
+          "commit_ms": 16.83908299310133,
+          "cycle": 1,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=1, pending_writes=200, pending_deletes=0, delta_records=200, delta_bytes=24000, stale=false)",
+          "query": {
+            "avg_ms": 0.2285085835804542,
+            "p50_ms": 0.10647898307070136,
+            "p95_ms": 0.2726669772528112,
+            "qps": 4376.203223227788
+          },
+          "rebuild_count": 1,
+          "vacuum_ms": 29.879084031563252
+        },
+        {
+          "commit_ms": 9.957707952708006,
+          "cycle": 2,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=1, pending_writes=400, pending_deletes=400, delta_records=800, delta_bytes=49600, stale=false)",
+          "query": {
+            "avg_ms": 0.1616085801894466,
+            "p50_ms": 0.09799998952075839,
+            "p95_ms": 0.2934170188382268,
+            "qps": 6187.790269722957
+          },
+          "rebuild_count": 1,
+          "vacuum_ms": 11.08508399920538
+        },
+        {
+          "commit_ms": 83.0907910130918,
+          "cycle": 3,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=2, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.2695452976816644,
+            "p50_ms": 0.21822901908308268,
+            "p95_ms": 0.5976250395178795,
+            "qps": 3709.9515688120428
+          },
+          "rebuild_count": 2,
+          "vacuum_ms": 24.46541702374816
+        },
+        {
+          "commit_ms": 15.759499976411462,
+          "cycle": 4,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=2, pending_writes=200, pending_deletes=200, delta_records=400, delta_bytes=24800, stale=false)",
+          "query": {
+            "avg_ms": 0.1519008722001066,
+            "p50_ms": 0.07508302223868668,
+            "p95_ms": 0.16900000628083944,
+            "qps": 6583.240672131561
+          },
+          "rebuild_count": 2,
+          "vacuum_ms": 16.341166046913713
+        },
+        {
+          "commit_ms": 5.720874993130565,
+          "cycle": 5,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=2, pending_writes=400, pending_deletes=400, delta_records=800, delta_bytes=49600, stale=false)",
+          "query": {
+            "avg_ms": 0.10752607913066943,
+            "p50_ms": 0.04458302282728255,
+            "p95_ms": 0.1634579966776073,
+            "qps": 9300.06941650653
+          },
+          "rebuild_count": 2,
+          "vacuum_ms": 9.247625013813376
+        },
+        {
+          "commit_ms": 56.93116603652015,
+          "cycle": 6,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=3, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.08067719250296553,
+            "p50_ms": 0.04916699253953993,
+            "p95_ms": 0.1569580053910613,
+            "qps": 12395.076836160877
+          },
+          "rebuild_count": 3,
+          "vacuum_ms": 76.11212501069531
+        },
+        {
+          "commit_ms": 5.572125024627894,
+          "cycle": 7,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=3, pending_writes=200, pending_deletes=200, delta_records=400, delta_bytes=24800, stale=false)",
+          "query": {
+            "avg_ms": 0.09111687929059069,
+            "p50_ms": 0.04389550304040313,
+            "p95_ms": 0.09983399650081992,
+            "qps": 10974.914942058012
+          },
+          "rebuild_count": 3,
+          "vacuum_ms": 10.40395797463134
+        },
+        {
+          "commit_ms": 8.755915972869843,
+          "cycle": 8,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=3, pending_writes=400, pending_deletes=400, delta_records=800, delta_bytes=49600, stale=false)",
+          "query": {
+            "avg_ms": 0.10545381344854832,
+            "p50_ms": 0.03902052412740886,
+            "p95_ms": 0.10008300887420774,
+            "qps": 9482.824445110346
+          },
+          "rebuild_count": 3,
+          "vacuum_ms": 8.452125010080636
+        }
+      ],
+      "summary": {
+        "avg_commit_ms": 22.51412932916234,
+        "avg_vacuum_ms": 20.665176012294573,
+        "final_rebuild_count": 3,
+        "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)",
+        "max_qps": 13904.288320741061,
+        "max_rebuild_increment": 1,
+        "median_qps": 9300.06941650653,
+        "min_qps": 3709.9515688120428
+      }
+    },
+    "docs_auto_threshold_tuned": {
+      "config": {
+        "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 1000, auto_rebuild_delta_bytes = 50000, auto_rebuild_churn_ratio = 0.05",
+        "table_name": "docs_auto_threshold_tuned"
+      },
+      "cycles": [
+        {
+          "commit_ms": 0.0,
+          "cycle": 0,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=1, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.08701859274879098,
+            "p50_ms": 0.06685397238470614,
+            "p95_ms": 0.17283303895965219,
+            "qps": 11491.79696443544
+          },
+          "rebuild_count": 1,
+          "vacuum_ms": 0.0
+        },
+        {
+          "commit_ms": 17.724958015605807,
+          "cycle": 1,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=1, pending_writes=200, pending_deletes=200, delta_records=400, delta_bytes=24800, stale=false)",
+          "query": {
+            "avg_ms": 0.26024945196695626,
+            "p50_ms": 0.12535398127511144,
+            "p95_ms": 0.2988749765790999,
+            "qps": 3842.4672653180824
+          },
+          "rebuild_count": 1,
+          "vacuum_ms": 35.33679200336337
+        },
+        {
+          "commit_ms": 67.41254200460389,
+          "cycle": 2,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=2, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.052506313659250736,
+            "p50_ms": 0.04056302714161575,
+            "p95_ms": 0.09283400140702724,
+            "qps": 19045.32865303936
+          },
+          "rebuild_count": 2,
+          "vacuum_ms": 7.912542030680925
+        },
+        {
+          "commit_ms": 5.7446249993517995,
+          "cycle": 3,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=2, pending_writes=200, pending_deletes=200, delta_records=400, delta_bytes=24800, stale=false)",
+          "query": {
+            "avg_ms": 0.44864673633128405,
+            "p50_ms": 0.2525624877307564,
+            "p95_ms": 0.7737079868093133,
+            "qps": 2228.925163208125
+          },
+          "rebuild_count": 2,
+          "vacuum_ms": 11.972833017352968
+        },
+        {
+          "commit_ms": 95.44391697272658,
+          "cycle": 4,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=3, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.10075581104805072,
+            "p50_ms": 0.07902097422629595,
+            "p95_ms": 0.21412497153505683,
+            "qps": 9924.985860350003
+          },
+          "rebuild_count": 3,
+          "vacuum_ms": 7.288374996278435
+        },
+        {
+          "commit_ms": 7.709499972406775,
+          "cycle": 5,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=3, pending_writes=200, pending_deletes=200, delta_records=400, delta_bytes=24800, stale=false)",
+          "query": {
+            "avg_ms": 0.12448941900705297,
+            "p50_ms": 0.06900000153109431,
+            "p95_ms": 0.1711249933578074,
+            "qps": 8032.811205772796
+          },
+          "rebuild_count": 3,
+          "vacuum_ms": 11.219083971809596
+        },
+        {
+          "commit_ms": 125.73404097929597,
+          "cycle": 6,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=4, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.11317138598921399,
+            "p50_ms": 0.08316701860167086,
+            "p95_ms": 0.2767500118352473,
+            "qps": 8836.155811463746
+          },
+          "rebuild_count": 4,
+          "vacuum_ms": 14.522249985020608
+        },
+        {
+          "commit_ms": 8.651374955661595,
+          "cycle": 7,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=4, pending_writes=200, pending_deletes=200, delta_records=400, delta_bytes=24800, stale=false)",
+          "query": {
+            "avg_ms": 0.11036362149752676,
+            "p50_ms": 0.04768700455315411,
+            "p95_ms": 0.17245800700038671,
+            "qps": 9060.956739466998
+          },
+          "rebuild_count": 4,
+          "vacuum_ms": 16.45045797340572
+        },
+        {
+          "commit_ms": 174.13966596359387,
+          "cycle": 8,
+          "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+          "maintenance_state": "ii42_maintenance_state(rebuilds=5, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "query": {
+            "avg_ms": 0.08638858678750694,
+            "p50_ms": 0.07268748595379293,
+            "p95_ms": 0.15091599198058248,
+            "qps": 11575.603180773582
+          },
+          "rebuild_count": 5,
+          "vacuum_ms": 71.17325003491715
+        }
+      ],
+      "summary": {
+        "avg_commit_ms": 55.840069318138475,
+        "avg_vacuum_ms": 19.541731556980974,
+        "final_rebuild_count": 5,
+        "maintenance_policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)",
+        "max_qps": 19045.32865303936,
+        "max_rebuild_increment": 1,
+        "median_qps": 9060.956739466998,
+        "min_qps": 2228.925163208125
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "created_at": "2026-04-01T01:16:24.164066+00:00",
+  "machine_type": "n2-standard-16",
+  "project": "gcp-project-redacted",
+  "tasks": [
+    {
+      "dataset": "arguana",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/arguana/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/arguana/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-arg-psql"
+    },
+    {
+      "dataset": "arguana",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/arguana/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/arguana/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-arg-txt"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/climate-fever/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/climate-fever/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-clf-psql"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/climate-fever/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/climate-fever/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-clf-txt"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/cqadupstack/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/cqadupstack/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-cqa-psql"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/cqadupstack/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/cqadupstack/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-cqa-txt"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/dbpedia-entity/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/dbpedia-entity/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-dbe-psql"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/dbpedia-entity/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/dbpedia-entity/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-dbe-txt"
+    },
+    {
+      "dataset": "fever",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/fever/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/fever/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-fev-psql"
+    },
+    {
+      "dataset": "fever",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/fever/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/fever/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-fev-txt"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/fiqa/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/fiqa/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-fiq-psql"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/fiqa/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/fiqa/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-fiq-txt"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/hotpotqa/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/hotpotqa/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-hqa-psql"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/hotpotqa/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/hotpotqa/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-hqa-txt"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/msmarco/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/msmarco/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-msm-psql"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/msmarco/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/msmarco/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-msm-txt"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/nfcorpus/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/nfcorpus/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-nfc-psql"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/nfcorpus/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/nfcorpus/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-nfc-txt"
+    },
+    {
+      "dataset": "nq",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/nq/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/nq/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-nq-psql"
+    },
+    {
+      "dataset": "nq",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/nq/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/nq/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-nq-txt"
+    },
+    {
+      "dataset": "quora",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/quora/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/quora/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-quo-psql"
+    },
+    {
+      "dataset": "quora",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/quora/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/quora/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-quo-txt"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/scidocs/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/scidocs/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-scd-psql"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/scidocs/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/scidocs/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-scd-txt"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/scifact/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/scifact/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-scf-psql"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/scifact/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/scifact/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-scf-txt"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/trec-covid/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/trec-covid/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-trc-psql"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/trec-covid/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/trec-covid/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-trc-txt"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/webis-touche2020/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/webis-touche2020/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:psql_bm25s_ids",
+      "vm_name": "pg18hd2-0331-wbt-psql"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/logs/webis-touche2020/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_hardening_20260331/results/webis-touche2020/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:psql_bm25s_text",
+      "vm_name": "pg18hd2-0331-wbt-txt"
+    }
+  ],
+  "zone": "us-east4-a"
+}

@@ -1,0 +1,76 @@
+{
+  "baseline": {
+    "label": "baseline",
+    "metadata": {
+      "bytes": 160692,
+      "path": "/var/tmp/ii42-p22-lossy/scifact-p22-baseline-v3-postreboot-qrels.json",
+      "sha256": "0e0bea8eec354132f5b9f2c0f39cfd26e7b1f2fab09f329b39e3d34b30a1244a"
+    },
+    "model": "ii42_p2_p22_nfcorpus_v2_smoke",
+    "summary": {
+      "candidate_count_mean": 1000.0,
+      "candidate_upper_bound": 0.99,
+      "latency_ms_mean": 52.6104336933228,
+      "latency_ms_p50": 51.74881599987202,
+      "latency_ms_p95": 62.84464000009393,
+      "map_at_100": 0.6702228120802105,
+      "mrr_at_20": 0.6796601851307734,
+      "ndcg_at_10": 0.7099022536931009,
+      "query_count": 300,
+      "recall_at_100": 0.9526666666666667
+    }
+  },
+  "gate": {
+    "latency_passed": false,
+    "max_metric_drop": 0.001,
+    "passed": false,
+    "quality_passed": false,
+    "required_resource_improvement_percent": 20.0,
+    "resource_passed": false,
+    "storage_passed": false
+  },
+  "quality_delta": {
+    "candidate_upper_bound": 0.0,
+    "map_at_100": -0.0042520374445590425,
+    "mrr_at_20": -0.0036047441836916105,
+    "ndcg_at_10": -0.005447778344746301,
+    "recall_at_100": -0.0050000000000000044
+  },
+  "resource_improvement_percent": {
+    "index_bytes": 9.789075175770687,
+    "latency_ms_p50": 4.528642742442701,
+    "latency_ms_p95": 3.336551852840993
+  },
+  "route": "ii42_search",
+  "surface_signature": {
+    "candidate_k": 1000,
+    "document_count": 5183,
+    "qrels_query_count": 300,
+    "qrels_sha256": "ef9f4e18fe1f809e5d5229ad121ad1ffca3bfa6579b3b21700bb5357dfed7efb",
+    "queries_sha256": "2af8d23b334799a51db8af004fd48ff12082e61bf5230ee737ee8c73d829ac5d",
+    "route": "ii42_search",
+    "schema": "ii42_p22_qrels",
+    "table": "scifact_docs"
+  },
+  "variant": {
+    "label": "budget075",
+    "metadata": {
+      "bytes": 160660,
+      "path": "/var/tmp/ii42-p22-lossy/scifact-p22-budget075-v3-postreboot-qrels.json",
+      "sha256": "5cee28b8fcdea2c4b341e3c3d3dac68337a56fa99a3985a58ef991359776a6f9"
+    },
+    "model": "ii42_p2_p22_nfcorpus_v2_budget075",
+    "summary": {
+      "candidate_count_mean": 1000.0,
+      "candidate_upper_bound": 0.99,
+      "latency_ms_mean": 50.34408268000637,
+      "latency_ms_p50": 49.40529699979379,
+      "latency_ms_p95": 60.747795999759546,
+      "map_at_100": 0.6659707746356515,
+      "mrr_at_20": 0.6760554409470818,
+      "ndcg_at_10": 0.7044544753483546,
+      "query_count": 300,
+      "recall_at_100": 0.9476666666666667
+    }
+  }
+}

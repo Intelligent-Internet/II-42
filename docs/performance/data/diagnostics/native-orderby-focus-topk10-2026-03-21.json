@@ -1,0 +1,81 @@
+{
+  "datasets": {
+    "scifact": {
+      "dataset": "scifact",
+      "ii42_ids": {
+        "build_bytes": 4259840,
+        "build_ms": 93.0117079988122,
+        "orderby_query": {
+          "avg_ms": 0.3204571976675652,
+          "count": 300,
+          "p50_ms": 0.3253545000916347,
+          "p95_ms": 0.4816872024093755,
+          "qps": 3120.5415490070427
+        },
+        "plan_default": [
+          "Limit",
+          "  ->  Index Scan using docs_ids_bm25_idx on docs_ids",
+          "        Order By: (token_ids <=> '{39,16598,78,105,622}'::integer[])"
+        ],
+        "plan_forced": [
+          "Aggregate",
+          "  ->  Limit",
+          "        ->  Index Scan using docs_ids_bm25_idx on docs_ids",
+          "              Order By: (token_ids <=> '{39,16598,78,105,622}'::integer[])"
+        ],
+        "result_query": {
+          "avg_ms": 0.23349345254246145,
+          "count": 300,
+          "p50_ms": 0.17722899792715907,
+          "p95_ms": 0.546339301217813,
+          "qps": 4282.775337428989
+        }
+      },
+      "ii42_text": {
+        "build_bytes": 4538368,
+        "build_ms": 414.5635000022594,
+        "orderby_query": {
+          "avg_ms": 0.37546291646625224,
+          "count": 300,
+          "p50_ms": 0.3783749998547137,
+          "p95_ms": 0.5751059637987056,
+          "qps": 2663.3788748345887
+        },
+        "plan_default": [
+          "Limit",
+          "  ->  Index Scan using docs_tokens_bm25_idx on docs_tokens",
+          "        Order By: (tokens <=> '{dimension,biomateri,show,induct,properti}'::text[])"
+        ],
+        "plan_forced": [
+          "Aggregate",
+          "  ->  Limit",
+          "        ->  Index Scan using docs_tokens_bm25_idx on docs_tokens",
+          "              Order By: (tokens <=> '{dimension,biomateri,show,induct,properti}'::text[])"
+        ],
+        "result_query": {
+          "avg_ms": 0.09995192687104766,
+          "count": 300,
+          "p50_ms": 0.07010399713180959,
+          "p95_ms": 0.1441148880985566,
+          "qps": 10004.809625032478
+        }
+      },
+      "stats": {
+        "documents": 5183,
+        "queries": 300,
+        "query_tokens": 2816,
+        "tokens": 812074,
+        "vocab_size": 26559
+      },
+      "upstream_bm25s_local": {
+        "build_ms": 203.2448330137413,
+        "query": {
+          "count": 300,
+          "qps": 9451.808050982114,
+          "total_ms": 31.73995899851434
+        }
+      }
+    }
+  },
+  "top_k": 10
+}

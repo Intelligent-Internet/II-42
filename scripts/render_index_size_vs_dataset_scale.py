@@ -30,8 +30,8 @@ PLOT_W = WIDTH - LEFT - RIGHT
 PLOT_H = HEIGHT - TOP - BOTTOM
 
 ENGINES = [
-    ('psql_bm25s_ids', 'psql_bm25s ids', '#d62728', 'triangle_up'),
-    ('psql_bm25s_text', 'psql_bm25s text[]', '#ff7f0e', 'triangle_down'),
+    ('ii42_ids', 'ii42 ids', '#d62728', 'triangle_up'),
+    ('ii42_text', 'ii42 text[]', '#ff7f0e', 'triangle_down'),
     ('pg_search', 'pg_search', '#2ca02c', 'square'),
     ('vchord_bm25', 'vchord_bm25', '#9467bd', 'diamond'),
 ]

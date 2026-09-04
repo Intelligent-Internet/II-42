@@ -1,0 +1,97 @@
+{
+    "indexes": [
+        {
+            "oid": "487635116",
+            "name": "ii42_qual_20260722.arxiv_bm25_idx",
+            "bytes": 75628544,
+            "ready": true,
+            "table": "ii42_qual_20260722.arxiv_docs",
+            "valid": true,
+            "filenode": "487635116",
+            "definition": "CREATE INDEX arxiv_bm25_idx ON ii42_qual_20260722.arxiv_docs USING ii42 (body) WITH (sae='false', consistency=realtime, auto_preload='20')"
+        },
+        {
+            "oid": "487635117",
+            "name": "ii42_qual_20260722.pubmed_bm25_idx",
+            "bytes": 86671360,
+            "ready": true,
+            "table": "ii42_qual_20260722.pubmed_docs",
+            "valid": true,
+            "filenode": "487635117",
+            "definition": "CREATE INDEX pubmed_bm25_idx ON ii42_qual_20260722.pubmed_docs USING ii42 (body) WITH (sae='false', consistency=realtime, auto_preload='20')"
+        },
+        {
+            "oid": "487635188",
+            "name": "ii42_qual_20260722.partition_p0_query_probe_idx",
+            "bytes": 335872,
+            "ready": true,
+            "table": "ii42_qual_20260722.partition_docs_p0",
+            "valid": true,
+            "filenode": "487635188",
+            "definition": "CREATE INDEX partition_p0_query_probe_idx ON ii42_qual_20260722.partition_docs_p0 USING ii42 (body) WITH (sae='true', consistency=realtime)"
+        },
+        {
+            "oid": "487635189",
+            "name": "ii42_qual_20260722.arxiv_p2_idx",
+            "bytes": 92872704,
+            "ready": true,
+            "table": "ii42_qual_20260722.arxiv_docs",
+            "valid": true,
+            "filenode": "487635189",
+            "definition": "CREATE INDEX arxiv_p2_idx ON ii42_qual_20260722.arxiv_docs USING ii42 (body) WITH (sae='true', consistency=eventual, auto_rebuild_threshold='1000', auto_preload='10')"
+        },
+        {
+            "oid": "487636644",
+            "name": "ii42_qual_20260722.pubmed_p2_smoke_bm25_idx",
+            "bytes": 3694592,
+            "ready": true,
+            "table": "ii42_qual_20260722.pubmed_p2_smoke_docs",
+            "valid": true,
+            "filenode": "487636644",
+            "definition": "CREATE INDEX pubmed_p2_smoke_bm25_idx ON ii42_qual_20260722.pubmed_p2_smoke_docs USING ii42 (body) WITH (sae='false', consistency=manual)"
+        },
+        {
+            "oid": "487636645",
+            "name": "ii42_qual_20260722.pubmed_p2_smoke_p2_idx",
+            "bytes": 5390336,
+            "ready": true,
+            "table": "ii42_qual_20260722.pubmed_p2_smoke_docs",
+            "valid": true,
+            "filenode": "487636645",
+            "definition": "CREATE INDEX pubmed_p2_smoke_p2_idx ON ii42_qual_20260722.pubmed_p2_smoke_docs USING ii42 (body) WITH (sae='true', model_path='/var/lib/postgresql/18/ii42/models/ii42_p2_m1934_b1125_nfcorpus_full_b2', consistency=manual)"
+        },
+        {
+            "oid": "487636741",
+            "name": "ii42_p22_qrels.model_smoke_p2_idx",
+            "bytes": 360448,
+            "ready": true,
+            "table": "ii42_p22_qrels.model_smoke",
+            "valid": true,
+            "filenode": "487636741",
+            "definition": "CREATE INDEX model_smoke_p2_idx ON ii42_p22_qrels.model_smoke USING ii42 (text_content) WITH (sae='true', model_path='/var/lib/postgresql/18/ii42/models/ii42_p2_m1934_b1125_scifact_full', consistency=eventual, auto_rebuild_threshold='1000')"
+        },
+        {
+            "oid": "487636796",
+            "name": "ii42_p22_qrels.scifact_bm25_idx",
+            "bytes": 8601600,
+            "ready": true,
+            "table": "ii42_p22_qrels.scifact_docs",
+            "valid": true,
+            "filenode": "487636796",
+            "definition": "CREATE INDEX scifact_bm25_idx ON ii42_p22_qrels.scifact_docs USING ii42 (text_content) WITH (sae='false', consistency=eventual, auto_rebuild_threshold='1000')"
+        },
+        {
+            "oid": "487636797",
+            "name": "ii42_p22_qrels.scifact_p2_idx",
+            "bytes": 13033472,
+            "ready": true,
+            "table": "ii42_p22_qrels.scifact_docs",
+            "valid": true,
+            "filenode": "487636797",
+            "definition": "CREATE INDEX scifact_p2_idx ON ii42_p22_qrels.scifact_docs USING ii42 (text_content) WITH (sae='true', model_path='/var/lib/postgresql/18/ii42/models/ii42_p2_m1934_b1125_scifact_full', consistency=eventual, auto_rebuild_threshold='1000')"
+        }
+    ],
+    "extversion": "0.2.0",
+    "captured_at": "2026-07-23T03:32:04.692481-04:00",
+    "batch_api_present": true
+}

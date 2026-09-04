@@ -1,0 +1,2693 @@
+{
+  "base_documents": 4096,
+  "concurrency": {
+    "after": {
+      "cache_epoch": 1,
+      "debt": {
+        "counter_only": false,
+        "delta_bytes": 558272,
+        "delta_records": 1000,
+        "pending_deletes": 0,
+        "pending_total": 1000,
+        "pending_writes": 1000
+      },
+      "generation": {
+        "auto_preload_priority": 0,
+        "descriptor_present": false,
+        "descriptor_valid": false,
+        "docs": 4096,
+        "generation_bytes": 6076940,
+        "identity_bytes": 24576,
+        "index_bytes": 0,
+        "locator": "1663/5/16593",
+        "mapped_size": 0,
+        "payload_capacity_bytes": 32576,
+        "payload_expected_bytes": 24576,
+        "payload_health": "ok",
+        "payload_health_reason": "ok",
+        "posting_bytes": 6052364,
+        "rebuild_admitted": true,
+        "rebuild_builder": "semantic_stream",
+        "rebuild_required": false,
+        "share_eligible": false,
+        "share_required": false
+      },
+      "maintenance": {
+        "active_background_workers": 0,
+        "active_index_maintenance_workers": 0,
+        "active_preload_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "maintenance_cycle_age_ms": 1615,
+        "pending_maintenance_worker_launches": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=4015352, shared_preload_free_bytes=264420104, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=1256, maintenance_cycle_age_ms=1615, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+      "sae_enabled": true,
+      "shared_holder_effective": {
+        "base_resident": false,
+        "counter_only_debt": false,
+        "covered_delta_fold_due": false,
+        "covered_delta_query_complete": false,
+        "foreground_offload_observed": false,
+        "has_shared_delta": true,
+        "lexical_delta_covered": false,
+        "lexical_delta_publish_due": false,
+        "needs_background_convergence": false,
+        "tombstone_delta_covered": true,
+        "tombstone_delta_publish_due": false,
+        "unified_delta_covered": true,
+        "unified_delta_publish_due": false
+      },
+      "shared_preload": {
+        "access_clock": 1256,
+        "admission_miss_bytes": 0,
+        "admission_misses": 0,
+        "admission_state": "admissible",
+        "arena_size": 268435456,
+        "available": true,
+        "base_entries": 0,
+        "candidate_bytes": 1,
+        "candidate_fits_empty": true,
+        "configured_mb": 256,
+        "entries": 1,
+        "free_bytes": 264420104,
+        "has_evictable_relation": false,
+        "has_free_slot": true,
+        "has_reusable_slot": false,
+        "last_admission_miss": {
+          "age_ms": -1,
+          "bytes": 0,
+          "index_oid": 0,
+          "priority": 0
+        },
+        "lexical_delta_cache_current": false,
+        "lexical_delta_cache_entries": 0,
+        "lexical_delta_cache_loading": false,
+        "loading": false,
+        "obsolete_entries": 0,
+        "ready_entries": 1,
+        "refcounted_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "relation_entry_evictions": 0,
+        "resident": false,
+        "reusable_bytes": 0,
+        "reusable_entries": 0,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "unified_delta_cache_current": true,
+        "unified_delta_cache_entries": 1,
+        "unified_delta_cache_loading": false,
+        "unified_warm_entries": 0,
+        "used": 4015352
+      }
+    },
+    "before": {
+      "cache_epoch": 1,
+      "debt": {
+        "counter_only": false,
+        "delta_bytes": 558272,
+        "delta_records": 1000,
+        "pending_deletes": 0,
+        "pending_total": 1000,
+        "pending_writes": 1000
+      },
+      "generation": {
+        "auto_preload_priority": 0,
+        "descriptor_present": false,
+        "descriptor_valid": false,
+        "docs": 4096,
+        "generation_bytes": 6076940,
+        "identity_bytes": 24576,
+        "index_bytes": 0,
+        "locator": "1663/5/16593",
+        "mapped_size": 0,
+        "payload_capacity_bytes": 32576,
+        "payload_expected_bytes": 24576,
+        "payload_health": "ok",
+        "payload_health_reason": "ok",
+        "posting_bytes": 6052364,
+        "rebuild_admitted": true,
+        "rebuild_builder": "semantic_stream",
+        "rebuild_required": false,
+        "share_eligible": false,
+        "share_required": false
+      },
+      "maintenance": {
+        "active_background_workers": 0,
+        "active_index_maintenance_workers": 0,
+        "active_preload_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "maintenance_cycle_age_ms": 1531,
+        "pending_maintenance_worker_launches": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=0, shared_preload_free_bytes=268435456, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=0, shared_preload_ready_entries=0, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=1224, maintenance_cycle_age_ms=1531, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+      "sae_enabled": true,
+      "shared_holder_effective": {
+        "base_resident": false,
+        "counter_only_debt": false,
+        "covered_delta_fold_due": false,
+        "covered_delta_query_complete": false,
+        "foreground_offload_observed": false,
+        "has_shared_delta": false,
+        "lexical_delta_covered": false,
+        "lexical_delta_publish_due": false,
+        "needs_background_convergence": false,
+        "tombstone_delta_covered": true,
+        "tombstone_delta_publish_due": false,
+        "unified_delta_covered": false,
+        "unified_delta_publish_due": false
+      },
+      "shared_preload": {
+        "access_clock": 1224,
+        "admission_miss_bytes": 0,
+        "admission_misses": 0,
+        "admission_state": "admissible",
+        "arena_size": 268435456,
+        "available": true,
+        "base_entries": 0,
+        "candidate_bytes": 1,
+        "candidate_fits_empty": true,
+        "configured_mb": 256,
+        "entries": 0,
+        "free_bytes": 268435456,
+        "has_evictable_relation": false,
+        "has_free_slot": true,
+        "has_reusable_slot": false,
+        "last_admission_miss": {
+          "age_ms": -1,
+          "bytes": 0,
+          "index_oid": 0,
+          "priority": 0
+        },
+        "lexical_delta_cache_current": false,
+        "lexical_delta_cache_entries": 0,
+        "lexical_delta_cache_loading": false,
+        "loading": false,
+        "obsolete_entries": 0,
+        "ready_entries": 0,
+        "refcounted_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "relation_entry_evictions": 0,
+        "resident": false,
+        "reusable_bytes": 0,
+        "reusable_entries": 0,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "unified_delta_cache_current": false,
+        "unified_delta_cache_entries": 0,
+        "unified_delta_cache_loading": false,
+        "unified_warm_entries": 0,
+        "used": 0
+      }
+    },
+    "builds": 1,
+    "hits": 31,
+    "p50_ms": 35.231,
+    "p95_ms": 38.479,
+    "row_digests": [
+      "ea06998df3a1c233910b7a3c836258cf1da89e348934884617b0307903d02b2e"
+    ],
+    "workers": 32
+  },
+  "expectation": "delta_cache",
+  "failures": [],
+  "levels": [
+    0,
+    1,
+    32,
+    256,
+    1000
+  ],
+  "model_path": "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+  "passed": true,
+  "performance_gates": {
+    "failures": [],
+    "observed": {
+      "base_only_ratio": 1.015,
+      "delta_1_32_max_ratio": 1.1005,
+      "full_overlay_speedup": 11.0576,
+      "full_overlay_threshold_p95_ms": 15.171,
+      "threshold_p95_ms": 1.372,
+      "threshold_ratio": 1.088
+    },
+    "passed": true,
+    "thresholds": {
+      "base_only_max_ratio": 1.03,
+      "delta_1_32_max_ratio": 1.15,
+      "full_overlay_min_speedup": 10.0,
+      "threshold_max_ratio": 1.3
+    }
+  },
+  "performance_trials": 3,
+  "restart": {
+    "after_cold_query": {
+      "cache_epoch": 1,
+      "debt": {
+        "counter_only": false,
+        "delta_bytes": 558272,
+        "delta_records": 1000,
+        "pending_deletes": 0,
+        "pending_total": 1000,
+        "pending_writes": 1000
+      },
+      "generation": {
+        "auto_preload_priority": 0,
+        "descriptor_present": false,
+        "descriptor_valid": false,
+        "docs": 4096,
+        "generation_bytes": 6076940,
+        "identity_bytes": 24576,
+        "index_bytes": 0,
+        "locator": "1663/5/16593",
+        "mapped_size": 0,
+        "payload_capacity_bytes": 32576,
+        "payload_expected_bytes": 24576,
+        "payload_health": "ok",
+        "payload_health_reason": "ok",
+        "posting_bytes": 6052364,
+        "rebuild_admitted": true,
+        "rebuild_builder": "semantic_stream",
+        "rebuild_required": false,
+        "share_eligible": false,
+        "share_required": false
+      },
+      "maintenance": {
+        "active_background_workers": 0,
+        "active_index_maintenance_workers": 0,
+        "active_preload_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "maintenance_cycle_age_ms": -1,
+        "pending_maintenance_worker_launches": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=4015352, shared_preload_free_bytes=264420104, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=1, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+      "sae_enabled": true,
+      "shared_holder_effective": {
+        "base_resident": false,
+        "counter_only_debt": false,
+        "covered_delta_fold_due": false,
+        "covered_delta_query_complete": false,
+        "foreground_offload_observed": false,
+        "has_shared_delta": true,
+        "lexical_delta_covered": false,
+        "lexical_delta_publish_due": false,
+        "needs_background_convergence": false,
+        "tombstone_delta_covered": true,
+        "tombstone_delta_publish_due": false,
+        "unified_delta_covered": true,
+        "unified_delta_publish_due": false
+      },
+      "shared_preload": {
+        "access_clock": 1,
+        "admission_miss_bytes": 0,
+        "admission_misses": 0,
+        "admission_state": "admissible",
+        "arena_size": 268435456,
+        "available": true,
+        "base_entries": 0,
+        "candidate_bytes": 1,
+        "candidate_fits_empty": true,
+        "configured_mb": 256,
+        "entries": 1,
+        "free_bytes": 264420104,
+        "has_evictable_relation": false,
+        "has_free_slot": true,
+        "has_reusable_slot": false,
+        "last_admission_miss": {
+          "age_ms": -1,
+          "bytes": 0,
+          "index_oid": 0,
+          "priority": 0
+        },
+        "lexical_delta_cache_current": false,
+        "lexical_delta_cache_entries": 0,
+        "lexical_delta_cache_loading": false,
+        "loading": false,
+        "obsolete_entries": 0,
+        "ready_entries": 1,
+        "refcounted_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "relation_entry_evictions": 0,
+        "resident": false,
+        "reusable_bytes": 0,
+        "reusable_entries": 0,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "unified_delta_cache_current": true,
+        "unified_delta_cache_entries": 1,
+        "unified_delta_cache_loading": false,
+        "unified_warm_entries": 0,
+        "used": 4015352
+      }
+    },
+    "after_restart_before_query": {
+      "cache_epoch": 1,
+      "debt": {
+        "counter_only": false,
+        "delta_bytes": 558272,
+        "delta_records": 1000,
+        "pending_deletes": 0,
+        "pending_total": 1000,
+        "pending_writes": 1000
+      },
+      "generation": {
+        "auto_preload_priority": 0,
+        "descriptor_present": false,
+        "descriptor_valid": false,
+        "docs": 4096,
+        "generation_bytes": 6076940,
+        "identity_bytes": 24576,
+        "index_bytes": 0,
+        "locator": "1663/5/16593",
+        "mapped_size": 0,
+        "payload_capacity_bytes": 32576,
+        "payload_expected_bytes": 24576,
+        "payload_health": "ok",
+        "payload_health_reason": "ok",
+        "posting_bytes": 6052364,
+        "rebuild_admitted": true,
+        "rebuild_builder": "semantic_stream",
+        "rebuild_required": false,
+        "share_eligible": false,
+        "share_required": false
+      },
+      "maintenance": {
+        "active_background_workers": 0,
+        "active_index_maintenance_workers": 0,
+        "active_preload_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "maintenance_cycle_age_ms": -1,
+        "pending_maintenance_worker_launches": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=0, shared_preload_free_bytes=268435456, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=0, shared_preload_ready_entries=0, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=0, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+      "sae_enabled": true,
+      "shared_holder_effective": {
+        "base_resident": false,
+        "counter_only_debt": false,
+        "covered_delta_fold_due": false,
+        "covered_delta_query_complete": false,
+        "foreground_offload_observed": false,
+        "has_shared_delta": false,
+        "lexical_delta_covered": false,
+        "lexical_delta_publish_due": false,
+        "needs_background_convergence": false,
+        "tombstone_delta_covered": true,
+        "tombstone_delta_publish_due": false,
+        "unified_delta_covered": false,
+        "unified_delta_publish_due": false
+      },
+      "shared_preload": {
+        "access_clock": 0,
+        "admission_miss_bytes": 0,
+        "admission_misses": 0,
+        "admission_state": "admissible",
+        "arena_size": 268435456,
+        "available": true,
+        "base_entries": 0,
+        "candidate_bytes": 1,
+        "candidate_fits_empty": true,
+        "configured_mb": 256,
+        "entries": 0,
+        "free_bytes": 268435456,
+        "has_evictable_relation": false,
+        "has_free_slot": true,
+        "has_reusable_slot": false,
+        "last_admission_miss": {
+          "age_ms": -1,
+          "bytes": 0,
+          "index_oid": 0,
+          "priority": 0
+        },
+        "lexical_delta_cache_current": false,
+        "lexical_delta_cache_entries": 0,
+        "lexical_delta_cache_loading": false,
+        "loading": false,
+        "obsolete_entries": 0,
+        "ready_entries": 0,
+        "refcounted_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "relation_entry_evictions": 0,
+        "resident": false,
+        "reusable_bytes": 0,
+        "reusable_entries": 0,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "unified_delta_cache_current": false,
+        "unified_delta_cache_entries": 0,
+        "unified_delta_cache_loading": false,
+        "unified_warm_entries": 0,
+        "used": 0
+      }
+    },
+    "after_warm_query": {
+      "cache_epoch": 1,
+      "debt": {
+        "counter_only": false,
+        "delta_bytes": 558272,
+        "delta_records": 1000,
+        "pending_deletes": 0,
+        "pending_total": 1000,
+        "pending_writes": 1000
+      },
+      "generation": {
+        "auto_preload_priority": 0,
+        "descriptor_present": false,
+        "descriptor_valid": false,
+        "docs": 4096,
+        "generation_bytes": 6076940,
+        "identity_bytes": 24576,
+        "index_bytes": 0,
+        "locator": "1663/5/16593",
+        "mapped_size": 0,
+        "payload_capacity_bytes": 32576,
+        "payload_expected_bytes": 24576,
+        "payload_health": "ok",
+        "payload_health_reason": "ok",
+        "posting_bytes": 6052364,
+        "rebuild_admitted": true,
+        "rebuild_builder": "semantic_stream",
+        "rebuild_required": false,
+        "share_eligible": false,
+        "share_required": false
+      },
+      "maintenance": {
+        "active_background_workers": 0,
+        "active_index_maintenance_workers": 0,
+        "active_preload_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "maintenance_cycle_age_ms": -1,
+        "pending_maintenance_worker_launches": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=4015352, shared_preload_free_bytes=264420104, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=2, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+      "sae_enabled": true,
+      "shared_holder_effective": {
+        "base_resident": false,
+        "counter_only_debt": false,
+        "covered_delta_fold_due": false,
+        "covered_delta_query_complete": false,
+        "foreground_offload_observed": false,
+        "has_shared_delta": true,
+        "lexical_delta_covered": false,
+        "lexical_delta_publish_due": false,
+        "needs_background_convergence": false,
+        "tombstone_delta_covered": true,
+        "tombstone_delta_publish_due": false,
+        "unified_delta_covered": true,
+        "unified_delta_publish_due": false
+      },
+      "shared_preload": {
+        "access_clock": 2,
+        "admission_miss_bytes": 0,
+        "admission_misses": 0,
+        "admission_state": "admissible",
+        "arena_size": 268435456,
+        "available": true,
+        "base_entries": 0,
+        "candidate_bytes": 1,
+        "candidate_fits_empty": true,
+        "configured_mb": 256,
+        "entries": 1,
+        "free_bytes": 264420104,
+        "has_evictable_relation": false,
+        "has_free_slot": true,
+        "has_reusable_slot": false,
+        "last_admission_miss": {
+          "age_ms": -1,
+          "bytes": 0,
+          "index_oid": 0,
+          "priority": 0
+        },
+        "lexical_delta_cache_current": false,
+        "lexical_delta_cache_entries": 0,
+        "lexical_delta_cache_loading": false,
+        "loading": false,
+        "obsolete_entries": 0,
+        "ready_entries": 1,
+        "refcounted_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "relation_entry_evictions": 0,
+        "resident": false,
+        "reusable_bytes": 0,
+        "reusable_entries": 0,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "unified_delta_cache_current": true,
+        "unified_delta_cache_entries": 1,
+        "unified_delta_cache_loading": false,
+        "unified_warm_entries": 0,
+        "used": 4015352
+      }
+    },
+    "before_restart": {
+      "cache_epoch": 1,
+      "debt": {
+        "counter_only": false,
+        "delta_bytes": 558272,
+        "delta_records": 1000,
+        "pending_deletes": 0,
+        "pending_total": 1000,
+        "pending_writes": 1000
+      },
+      "generation": {
+        "auto_preload_priority": 0,
+        "descriptor_present": false,
+        "descriptor_valid": false,
+        "docs": 4096,
+        "generation_bytes": 6076940,
+        "identity_bytes": 24576,
+        "index_bytes": 0,
+        "locator": "1663/5/16593",
+        "mapped_size": 0,
+        "payload_capacity_bytes": 32576,
+        "payload_expected_bytes": 24576,
+        "payload_health": "ok",
+        "payload_health_reason": "ok",
+        "posting_bytes": 6052364,
+        "rebuild_admitted": true,
+        "rebuild_builder": "semantic_stream",
+        "rebuild_required": false,
+        "share_eligible": false,
+        "share_required": false
+      },
+      "maintenance": {
+        "active_background_workers": 0,
+        "active_index_maintenance_workers": 0,
+        "active_preload_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "maintenance_cycle_age_ms": 1620,
+        "pending_maintenance_worker_launches": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=4015352, shared_preload_free_bytes=264420104, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=1257, maintenance_cycle_age_ms=1620, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+      "sae_enabled": true,
+      "shared_holder_effective": {
+        "base_resident": false,
+        "counter_only_debt": false,
+        "covered_delta_fold_due": false,
+        "covered_delta_query_complete": false,
+        "foreground_offload_observed": false,
+        "has_shared_delta": true,
+        "lexical_delta_covered": false,
+        "lexical_delta_publish_due": false,
+        "needs_background_convergence": false,
+        "tombstone_delta_covered": true,
+        "tombstone_delta_publish_due": false,
+        "unified_delta_covered": true,
+        "unified_delta_publish_due": false
+      },
+      "shared_preload": {
+        "access_clock": 1257,
+        "admission_miss_bytes": 0,
+        "admission_misses": 0,
+        "admission_state": "admissible",
+        "arena_size": 268435456,
+        "available": true,
+        "base_entries": 0,
+        "candidate_bytes": 1,
+        "candidate_fits_empty": true,
+        "configured_mb": 256,
+        "entries": 1,
+        "free_bytes": 264420104,
+        "has_evictable_relation": false,
+        "has_free_slot": true,
+        "has_reusable_slot": false,
+        "last_admission_miss": {
+          "age_ms": -1,
+          "bytes": 0,
+          "index_oid": 0,
+          "priority": 0
+        },
+        "lexical_delta_cache_current": false,
+        "lexical_delta_cache_entries": 0,
+        "lexical_delta_cache_loading": false,
+        "loading": false,
+        "obsolete_entries": 0,
+        "ready_entries": 1,
+        "refcounted_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "relation_entry_evictions": 0,
+        "resident": false,
+        "reusable_bytes": 0,
+        "reusable_entries": 0,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "unified_delta_cache_current": true,
+        "unified_delta_cache_entries": 1,
+        "unified_delta_cache_loading": false,
+        "unified_warm_entries": 0,
+        "used": 4015352
+      }
+    },
+    "cold_exact_comparison": {
+      "max_score_delta": 0.0,
+      "passed": true,
+      "same_ids_and_order": true,
+      "score_tolerance": 1e-06
+    },
+    "cold_ms": 30.872,
+    "cold_trace": {
+      "candidate_docs": 1221,
+      "candidate_postings": 2520,
+      "delta_cache_builds": 1,
+      "delta_cache_decoded_postings": 1417,
+      "delta_cache_hits": 0,
+      "delta_cache_misses": 1,
+      "generator_decoded_postings": 3191,
+      "memory_bytes": 6610636,
+      "overlay_base_docs_scanned": 0,
+      "overlay_delta_docs_scanned": 1000,
+      "overlay_full_scan_calls": 0,
+      "rerank_binary_steps": 0,
+      "rerank_doc_terms": 12077,
+      "rerank_score_terms": 4460,
+      "rerank_slice_hits": 4460,
+      "scored_docs": 1221
+    },
+    "warm_exact_comparison": {
+      "max_score_delta": 0.0,
+      "passed": true,
+      "same_ids_and_order": true,
+      "score_tolerance": 1e-06
+    },
+    "warm_ms": 1.746,
+    "warm_trace": {
+      "candidate_docs": 1221,
+      "candidate_postings": 2520,
+      "delta_cache_builds": 0,
+      "delta_cache_decoded_postings": 1417,
+      "delta_cache_hits": 1,
+      "delta_cache_misses": 0,
+      "generator_decoded_postings": 3191,
+      "memory_bytes": 6610636,
+      "overlay_base_docs_scanned": 0,
+      "overlay_delta_docs_scanned": 0,
+      "overlay_full_scan_calls": 0,
+      "rerank_binary_steps": 0,
+      "rerank_doc_terms": 12077,
+      "rerank_score_terms": 4460,
+      "rerank_slice_hits": 4460,
+      "scored_docs": 1221
+    }
+  },
+  "results": [
+    {
+      "benchmark": {
+        "backend_memory_after": 10705224,
+        "backend_memory_before": 10621480,
+        "backend_memory_growth": 83744,
+        "cold_ms": 1.781,
+        "cold_trace": {
+          "candidate_docs": 1098,
+          "candidate_postings": 2485,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2485,
+          "memory_bytes": 6052364,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 9915,
+          "rerank_score_terms": 3930,
+          "rerank_slice_hits": 0,
+          "scored_docs": 1098
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 0.894,
+            "warm_p95_ms": 1.085
+          },
+          {
+            "warm_p50_ms": 0.826,
+            "warm_p95_ms": 1.052
+          },
+          {
+            "warm_p50_ms": 0.886,
+            "warm_p95_ms": 1.091
+          }
+        ],
+        "row_digest": "31eb1f3cf789f90debebed2dd21c447cc1e7e6b0e74d5f89e0175f1f3d6e0fc5",
+        "rows": [
+          [
+            "base-2008",
+            27.520584917492215
+          ],
+          [
+            "base-0",
+            26.541515224788157
+          ],
+          [
+            "base-56",
+            26.44608630987966
+          ],
+          [
+            "base-32",
+            26.4423237481937
+          ],
+          [
+            "base-1000",
+            26.43220692886706
+          ],
+          [
+            "base-120",
+            26.431439767749737
+          ],
+          [
+            "base-160",
+            26.4286993536237
+          ],
+          [
+            "base-16",
+            26.42515566379052
+          ],
+          [
+            "base-600",
+            26.42387656994009
+          ],
+          [
+            "base-72",
+            26.41605839665516
+          ],
+          [
+            "base-176",
+            26.41531262726653
+          ],
+          [
+            "base-40",
+            26.41351064699188
+          ],
+          [
+            "base-96",
+            26.4068195085228
+          ],
+          [
+            "base-376",
+            26.405107197177642
+          ],
+          [
+            "base-1200",
+            26.404409749701472
+          ],
+          [
+            "base-368",
+            26.402346825019663
+          ],
+          [
+            "base-80",
+            26.400578699268692
+          ],
+          [
+            "base-1600",
+            26.399212791736375
+          ],
+          [
+            "base-168",
+            26.39917066109041
+          ],
+          [
+            "base-1400",
+            26.39438729197451
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1098,
+          "candidate_postings": 2485,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2485,
+          "memory_bytes": 6052364,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 9915,
+          "rerank_score_terms": 3930,
+          "rerank_slice_hits": 0,
+          "scored_docs": 1098
+        },
+        "warm_p50_ms": 0.886,
+        "warm_p95_ms": 1.085
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 0,
+          "delta_records": 0,
+          "pending_deletes": 0,
+          "pending_total": 0,
+          "pending_writes": 0
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=0, shared_preload_free_bytes=268435456, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=0, shared_preload_ready_entries=0, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=0, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=0, relation_blocks=749, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": false,
+          "lexical_delta_covered": true,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 0,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 0,
+          "free_bytes": 268435456,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 0,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": false,
+          "unified_delta_cache_entries": 0,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 0
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 11034208,
+          "backend_memory_before": 11034208,
+          "backend_memory_growth": 0,
+          "cold_ms": 0.942,
+          "cold_trace": {
+            "candidate_docs": 1098,
+            "candidate_postings": 2485,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2485,
+            "memory_bytes": 6052364,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9915,
+            "rerank_score_terms": 3930,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1098
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 0.975,
+              "warm_p95_ms": 1.207
+            },
+            {
+              "warm_p50_ms": 0.939,
+              "warm_p95_ms": 1.069
+            },
+            {
+              "warm_p50_ms": 0.908,
+              "warm_p95_ms": 1.033
+            }
+          ],
+          "row_digest": "31eb1f3cf789f90debebed2dd21c447cc1e7e6b0e74d5f89e0175f1f3d6e0fc5",
+          "rows": [
+            [
+              "base-2008",
+              27.520584917492215
+            ],
+            [
+              "base-0",
+              26.541515224788157
+            ],
+            [
+              "base-56",
+              26.44608630987966
+            ],
+            [
+              "base-32",
+              26.4423237481937
+            ],
+            [
+              "base-1000",
+              26.43220692886706
+            ],
+            [
+              "base-120",
+              26.431439767749737
+            ],
+            [
+              "base-160",
+              26.4286993536237
+            ],
+            [
+              "base-16",
+              26.42515566379052
+            ],
+            [
+              "base-600",
+              26.42387656994009
+            ],
+            [
+              "base-72",
+              26.41605839665516
+            ],
+            [
+              "base-176",
+              26.41531262726653
+            ],
+            [
+              "base-40",
+              26.41351064699188
+            ],
+            [
+              "base-96",
+              26.4068195085228
+            ],
+            [
+              "base-376",
+              26.405107197177642
+            ],
+            [
+              "base-1200",
+              26.404409749701472
+            ],
+            [
+              "base-368",
+              26.402346825019663
+            ],
+            [
+              "base-80",
+              26.400578699268692
+            ],
+            [
+              "base-1600",
+              26.399212791736375
+            ],
+            [
+              "base-168",
+              26.39917066109041
+            ],
+            [
+              "base-1400",
+              26.39438729197451
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1098,
+            "candidate_postings": 2485,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2485,
+            "memory_bytes": 6052364,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9915,
+            "rerank_score_terms": 3930,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1098
+          },
+          "warm_p50_ms": 0.939,
+          "warm_p95_ms": 1.069
+        },
+        "delta_to_compacted_p95_ratio": 1.015,
+        "documents": 4096,
+        "exact_comparison": {
+          "max_score_delta": 0.0,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 0,
+      "delta_records": 0
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 11676584,
+        "backend_memory_before": 11676584,
+        "backend_memory_growth": 0,
+        "cold_ms": 1.136,
+        "cold_trace": {
+          "candidate_docs": 1099,
+          "candidate_postings": 2485,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 772,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2489,
+          "memory_bytes": 6053000,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 10827,
+          "rerank_score_terms": 3936,
+          "rerank_slice_hits": 3936,
+          "scored_docs": 1099
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 0.997,
+            "warm_p95_ms": 1.262
+          },
+          {
+            "warm_p50_ms": 0.966,
+            "warm_p95_ms": 1.204
+          },
+          {
+            "warm_p50_ms": 0.818,
+            "warm_p95_ms": 1.095
+          }
+        ],
+        "row_digest": "025e42615bfabbbbd3a8576b5e5ff7ec413e57fb1e3d0982fcf04bf641c59090",
+        "rows": [
+          [
+            "base-2008",
+            27.51897183699066
+          ],
+          [
+            "base-0",
+            26.5399021442866
+          ],
+          [
+            "base-56",
+            26.444473229378104
+          ],
+          [
+            "base-32",
+            26.440710667692144
+          ],
+          [
+            "base-1000",
+            26.430593848365504
+          ],
+          [
+            "base-120",
+            26.42982668724818
+          ],
+          [
+            "base-160",
+            26.427086273122143
+          ],
+          [
+            "base-16",
+            26.423542583288963
+          ],
+          [
+            "base-600",
+            26.422263489438535
+          ],
+          [
+            "base-72",
+            26.414445316153603
+          ],
+          [
+            "base-176",
+            26.413699546764974
+          ],
+          [
+            "base-40",
+            26.411897566490325
+          ],
+          [
+            "base-96",
+            26.405206428021245
+          ],
+          [
+            "base-376",
+            26.403494116676086
+          ],
+          [
+            "base-1200",
+            26.402796669199915
+          ],
+          [
+            "base-368",
+            26.400733744518107
+          ],
+          [
+            "base-80",
+            26.398965618767136
+          ],
+          [
+            "base-1600",
+            26.397599711234818
+          ],
+          [
+            "base-168",
+            26.397557580588852
+          ],
+          [
+            "base-1400",
+            26.392774211472954
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1099,
+          "candidate_postings": 2485,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 772,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2489,
+          "memory_bytes": 6053000,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 10827,
+          "rerank_score_terms": 3936,
+          "rerank_slice_hits": 3936,
+          "scored_docs": 1099
+        },
+        "warm_p50_ms": 0.966,
+        "warm_p95_ms": 1.204
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 636,
+          "delta_records": 1,
+          "pending_deletes": 0,
+          "pending_total": 1,
+          "pending_writes": 1
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=23800, shared_preload_free_bytes=268411656, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=306, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1, pending_deletes=0, delta_records=1, delta_bytes=636, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=1, relation_blocks=750, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 306,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 1,
+          "free_bytes": 268411656,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 1,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 23800
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 11010192,
+          "backend_memory_before": 11047056,
+          "backend_memory_growth": -36864,
+          "cold_ms": 0.953,
+          "cold_trace": {
+            "candidate_docs": 1099,
+            "candidate_postings": 2485,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2485,
+            "memory_bytes": 6054012,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9925,
+            "rerank_score_terms": 3936,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1099
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 0.918,
+              "warm_p95_ms": 1.261
+            },
+            {
+              "warm_p50_ms": 0.831,
+              "warm_p95_ms": 1.029
+            },
+            {
+              "warm_p50_ms": 0.848,
+              "warm_p95_ms": 1.094
+            }
+          ],
+          "row_digest": "f145fd14368e804a0756ebeea68e3951ab3034104d98c4d5a4b5763b0fe9806a",
+          "rows": [
+            [
+              "base-2008",
+              27.518971658176724
+            ],
+            [
+              "base-0",
+              26.539901965472666
+            ],
+            [
+              "base-56",
+              26.44447305056417
+            ],
+            [
+              "base-32",
+              26.44071048887821
+            ],
+            [
+              "base-1000",
+              26.43059366955157
+            ],
+            [
+              "base-120",
+              26.429826508434246
+            ],
+            [
+              "base-160",
+              26.42708609430821
+            ],
+            [
+              "base-16",
+              26.42354240447503
+            ],
+            [
+              "base-600",
+              26.4222633106246
+            ],
+            [
+              "base-72",
+              26.41444513733967
+            ],
+            [
+              "base-176",
+              26.41369936795104
+            ],
+            [
+              "base-40",
+              26.41189738767639
+            ],
+            [
+              "base-96",
+              26.40520624920731
+            ],
+            [
+              "base-376",
+              26.40349393786215
+            ],
+            [
+              "base-1200",
+              26.40279649038598
+            ],
+            [
+              "base-368",
+              26.400733565704172
+            ],
+            [
+              "base-80",
+              26.3989654399532
+            ],
+            [
+              "base-1600",
+              26.397599532420884
+            ],
+            [
+              "base-168",
+              26.397557401774918
+            ],
+            [
+              "base-1400",
+              26.39277403265902
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1099,
+            "candidate_postings": 2485,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2485,
+            "memory_bytes": 6054012,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9925,
+            "rerank_score_terms": 3936,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1099
+          },
+          "warm_p50_ms": 0.848,
+          "warm_p95_ms": 1.094
+        },
+        "delta_to_compacted_p95_ratio": 1.1005,
+        "documents": 4097,
+        "exact_comparison": {
+          "max_score_delta": 1.7881393432617188e-07,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 1,
+      "delta_records": 1
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 11676584,
+        "backend_memory_before": 11676584,
+        "backend_memory_growth": 0,
+        "cold_ms": 8.757,
+        "cold_trace": {
+          "candidate_docs": 1102,
+          "candidate_postings": 2486,
+          "delta_cache_builds": 1,
+          "delta_cache_decoded_postings": 786,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 2505,
+          "memory_bytes": 6071532,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 32,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 10859,
+          "rerank_score_terms": 3949,
+          "rerank_slice_hits": 3949,
+          "scored_docs": 1102
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 0.877,
+            "warm_p95_ms": 1.141
+          },
+          {
+            "warm_p50_ms": 0.882,
+            "warm_p95_ms": 1.144
+          },
+          {
+            "warm_p50_ms": 0.898,
+            "warm_p95_ms": 1.099
+          }
+        ],
+        "row_digest": "5c036f0dc4c6d839a8171981aedacbc1ce885d0d1edd0d9c88dfee581ceb5115",
+        "rows": [
+          [
+            "base-2008",
+            27.520590639538113
+          ],
+          [
+            "base-0",
+            26.541520946834055
+          ],
+          [
+            "base-56",
+            26.44609203192556
+          ],
+          [
+            "base-32",
+            26.4423294702396
+          ],
+          [
+            "base-1000",
+            26.43221265091296
+          ],
+          [
+            "base-120",
+            26.431445489795635
+          ],
+          [
+            "base-160",
+            26.428705075669598
+          ],
+          [
+            "base-16",
+            26.425161385836418
+          ],
+          [
+            "base-600",
+            26.42388229198599
+          ],
+          [
+            "base-72",
+            26.41606411870106
+          ],
+          [
+            "base-176",
+            26.41531834931243
+          ],
+          [
+            "base-40",
+            26.41351636903778
+          ],
+          [
+            "base-96",
+            26.4068252305687
+          ],
+          [
+            "base-376",
+            26.40511291922354
+          ],
+          [
+            "base-1200",
+            26.40441547174737
+          ],
+          [
+            "base-368",
+            26.40235254706556
+          ],
+          [
+            "base-80",
+            26.40058442131459
+          ],
+          [
+            "base-1600",
+            26.399218513782273
+          ],
+          [
+            "base-168",
+            26.399176383136307
+          ],
+          [
+            "base-1400",
+            26.39439301402041
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1102,
+          "candidate_postings": 2486,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 786,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2505,
+          "memory_bytes": 6071532,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 10859,
+          "rerank_score_terms": 3949,
+          "rerank_slice_hits": 3949,
+          "scored_docs": 1102
+        },
+        "warm_p50_ms": 0.882,
+        "warm_p95_ms": 1.141
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 19168,
+          "delta_records": 32,
+          "pending_deletes": 0,
+          "pending_total": 32,
+          "pending_writes": 32
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=229192, shared_preload_free_bytes=268206264, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=612, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=32, pending_deletes=0, delta_records=32, delta_bytes=19168, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=3, relation_blocks=752, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 612,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 1,
+          "free_bytes": 268206264,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 1,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 229192
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 11045696,
+          "backend_memory_before": 11045696,
+          "backend_memory_growth": 0,
+          "cold_ms": 0.918,
+          "cold_trace": {
+            "candidate_docs": 1102,
+            "candidate_postings": 2486,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2486,
+            "memory_bytes": 6102628,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9954,
+            "rerank_score_terms": 3949,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1102
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 0.902,
+              "warm_p95_ms": 1.259
+            },
+            {
+              "warm_p50_ms": 0.945,
+              "warm_p95_ms": 1.159
+            },
+            {
+              "warm_p50_ms": 0.888,
+              "warm_p95_ms": 1.069
+            }
+          ],
+          "row_digest": "c243ee8a39ee518064467e45f115cfe38684be44d033a4fed5920525d712d175",
+          "rows": [
+            [
+              "base-2008",
+              27.520590818352048
+            ],
+            [
+              "base-0",
+              26.54152112564799
+            ],
+            [
+              "base-56",
+              26.446092210739494
+            ],
+            [
+              "base-32",
+              26.442329649053534
+            ],
+            [
+              "base-1000",
+              26.432212829726893
+            ],
+            [
+              "base-120",
+              26.43144566860957
+            ],
+            [
+              "base-160",
+              26.428705254483532
+            ],
+            [
+              "base-16",
+              26.425161564650352
+            ],
+            [
+              "base-600",
+              26.423882470799924
+            ],
+            [
+              "base-72",
+              26.416064297514993
+            ],
+            [
+              "base-176",
+              26.415318528126363
+            ],
+            [
+              "base-40",
+              26.413516547851714
+            ],
+            [
+              "base-96",
+              26.406825409382634
+            ],
+            [
+              "base-376",
+              26.405113098037475
+            ],
+            [
+              "base-1200",
+              26.404415650561305
+            ],
+            [
+              "base-368",
+              26.402352725879496
+            ],
+            [
+              "base-80",
+              26.400584600128525
+            ],
+            [
+              "base-1600",
+              26.399218692596207
+            ],
+            [
+              "base-168",
+              26.39917656195024
+            ],
+            [
+              "base-1400",
+              26.394393192834343
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1102,
+            "candidate_postings": 2486,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2486,
+            "memory_bytes": 6102628,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9954,
+            "rerank_score_terms": 3949,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1102
+          },
+          "warm_p50_ms": 0.902,
+          "warm_p95_ms": 1.159
+        },
+        "delta_to_compacted_p95_ratio": 0.9845,
+        "documents": 4128,
+        "exact_comparison": {
+          "max_score_delta": 1.7881393432617188e-07,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 32,
+      "delta_records": 32
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 11676584,
+        "backend_memory_before": 11676584,
+        "backend_memory_growth": 0,
+        "cold_ms": 0.851,
+        "cold_trace": {
+          "candidate_docs": 1117,
+          "candidate_postings": 2486,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 925,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2667,
+          "memory_bytes": 6199860,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 11035,
+          "rerank_score_terms": 4033,
+          "rerank_slice_hits": 4033,
+          "scored_docs": 1117
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 0.905,
+            "warm_p95_ms": 1.256
+          },
+          {
+            "warm_p50_ms": 0.887,
+            "warm_p95_ms": 1.226
+          },
+          {
+            "warm_p50_ms": 0.859,
+            "warm_p95_ms": 1.227
+          }
+        ],
+        "row_digest": "b3b1e8e1782ce943d8fb1714feb8fc72e10fa748cf1243644a10f2d94f6cf4aa",
+        "rows": [
+          [
+            "base-2008",
+            27.52062854809219
+          ],
+          [
+            "base-0",
+            26.541558855388132
+          ],
+          [
+            "base-56",
+            26.446129940479636
+          ],
+          [
+            "base-32",
+            26.442367378793676
+          ],
+          [
+            "base-1000",
+            26.432250559467036
+          ],
+          [
+            "base-120",
+            26.431483398349712
+          ],
+          [
+            "base-160",
+            26.428742984223675
+          ],
+          [
+            "base-16",
+            26.425199294390495
+          ],
+          [
+            "base-600",
+            26.423920200540067
+          ],
+          [
+            "base-72",
+            26.416102027255135
+          ],
+          [
+            "delta-160",
+            26.415481279736184
+          ],
+          [
+            "base-176",
+            26.415356257866506
+          ],
+          [
+            "base-40",
+            26.413554277591857
+          ],
+          [
+            "delta-48",
+            26.407056238850885
+          ],
+          [
+            "base-96",
+            26.406863139122777
+          ],
+          [
+            "base-376",
+            26.405150827777618
+          ],
+          [
+            "base-1200",
+            26.404453380301447
+          ],
+          [
+            "base-368",
+            26.40239045561964
+          ],
+          [
+            "base-80",
+            26.400622329868668
+          ],
+          [
+            "base-1600",
+            26.39925642233635
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1117,
+          "candidate_postings": 2486,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 925,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2667,
+          "memory_bytes": 6199860,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 11035,
+          "rerank_score_terms": 4033,
+          "rerank_slice_hits": 4033,
+          "scored_docs": 1117
+        },
+        "warm_p50_ms": 0.887,
+        "warm_p95_ms": 1.227
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 147496,
+          "delta_records": 256,
+          "pending_deletes": 0,
+          "pending_total": 256,
+          "pending_writes": 256
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": 981,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=1137400, shared_preload_free_bytes=267298056, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=918, maintenance_cycle_age_ms=981, shared_preload_resident=false, shared_preload_loading=false, pending_writes=256, pending_deletes=0, delta_records=256, delta_bytes=147496, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=20, relation_blocks=769, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 918,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 1,
+          "free_bytes": 267298056,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 1,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 1137400
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 11033520,
+          "backend_memory_before": 11033520,
+          "backend_memory_growth": 0,
+          "cold_ms": 0.932,
+          "cold_trace": {
+            "candidate_docs": 1117,
+            "candidate_postings": 2486,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2486,
+            "memory_bytes": 6439932,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 10117,
+            "rerank_score_terms": 4033,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1117
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 0.888,
+              "warm_p95_ms": 1.252
+            },
+            {
+              "warm_p50_ms": 0.846,
+              "warm_p95_ms": 1.108
+            },
+            {
+              "warm_p50_ms": 0.889,
+              "warm_p95_ms": 1.031
+            }
+          ],
+          "row_digest": "4a65ebfd7791e1a6a73ca09dfd252d23cffb07578d021bafcfe806a9c7707946",
+          "rows": [
+            [
+              "base-2008",
+              27.520628369278256
+            ],
+            [
+              "base-0",
+              26.541558676574198
+            ],
+            [
+              "base-56",
+              26.446129761665702
+            ],
+            [
+              "base-32",
+              26.442367199979742
+            ],
+            [
+              "base-1000",
+              26.4322503806531
+            ],
+            [
+              "base-120",
+              26.431483219535778
+            ],
+            [
+              "base-160",
+              26.42874280540974
+            ],
+            [
+              "base-16",
+              26.42519911557656
+            ],
+            [
+              "base-600",
+              26.423920021726133
+            ],
+            [
+              "base-72",
+              26.4161018484412
+            ],
+            [
+              "delta-160",
+              26.41548110092225
+            ],
+            [
+              "base-176",
+              26.41535607905257
+            ],
+            [
+              "base-40",
+              26.413554098777922
+            ],
+            [
+              "delta-48",
+              26.40705606003695
+            ],
+            [
+              "base-96",
+              26.406862960308843
+            ],
+            [
+              "base-376",
+              26.405150648963684
+            ],
+            [
+              "base-1200",
+              26.404453201487513
+            ],
+            [
+              "base-368",
+              26.402390276805704
+            ],
+            [
+              "base-80",
+              26.400622151054733
+            ],
+            [
+              "base-1600",
+              26.399256243522416
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1117,
+            "candidate_postings": 2486,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2486,
+            "memory_bytes": 6439932,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 10117,
+            "rerank_score_terms": 4033,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1117
+          },
+          "warm_p50_ms": 0.888,
+          "warm_p95_ms": 1.108
+        },
+        "delta_to_compacted_p95_ratio": 1.1074,
+        "documents": 4352,
+        "exact_comparison": {
+          "max_score_delta": 1.7881393432617188e-07,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 256,
+      "delta_records": 256
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 11676584,
+        "backend_memory_before": 11676584,
+        "backend_memory_growth": 0,
+        "cold_ms": 0.975,
+        "cold_trace": {
+          "candidate_docs": 1221,
+          "candidate_postings": 2520,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 1417,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 3191,
+          "memory_bytes": 6610636,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 12077,
+          "rerank_score_terms": 4460,
+          "rerank_slice_hits": 4460,
+          "scored_docs": 1221
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 0.988,
+            "warm_p95_ms": 1.387
+          },
+          {
+            "warm_p50_ms": 0.983,
+            "warm_p95_ms": 1.372
+          },
+          {
+            "warm_p50_ms": 1.033,
+            "warm_p95_ms": 1.354
+          }
+        ],
+        "row_digest": "ea06998df3a1c233910b7a3c836258cf1da89e348934884617b0307903d02b2e",
+        "rows": [
+          [
+            "base-2008",
+            27.520730293220822
+          ],
+          [
+            "base-0",
+            26.541660600516764
+          ],
+          [
+            "base-56",
+            26.446231685608268
+          ],
+          [
+            "base-32",
+            26.442469123922308
+          ],
+          [
+            "base-1000",
+            26.432352304595668
+          ],
+          [
+            "base-120",
+            26.431585143478344
+          ],
+          [
+            "base-160",
+            26.428844729352306
+          ],
+          [
+            "base-16",
+            26.425301039519127
+          ],
+          [
+            "base-600",
+            26.4240219456687
+          ],
+          [
+            "base-72",
+            26.416203772383767
+          ],
+          [
+            "delta-160",
+            26.415583024864816
+          ],
+          [
+            "base-176",
+            26.415458002995138
+          ],
+          [
+            "base-40",
+            26.413656022720488
+          ],
+          [
+            "delta-48",
+            26.407157983979516
+          ],
+          [
+            "base-96",
+            26.40696488425141
+          ],
+          [
+            "base-376",
+            26.40525257290625
+          ],
+          [
+            "base-1200",
+            26.40455512543008
+          ],
+          [
+            "base-368",
+            26.40249220074827
+          ],
+          [
+            "base-80",
+            26.4007240749973
+          ],
+          [
+            "base-1600",
+            26.39935816746498
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1221,
+          "candidate_postings": 2520,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 1417,
+          "delta_cache_hits": 1,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 3191,
+          "memory_bytes": 6610636,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 12077,
+          "rerank_score_terms": 4460,
+          "rerank_slice_hits": 4460,
+          "scored_docs": 1221
+        },
+        "warm_p50_ms": 0.988,
+        "warm_p95_ms": 1.372
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 558272,
+          "delta_records": 1000,
+          "pending_deletes": 0,
+          "pending_total": 1000,
+          "pending_writes": 1000
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": 1523,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=4015352, shared_preload_free_bytes=264420104, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=1, shared_preload_ready_entries=1, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=1, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=true, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=1224, maintenance_cycle_age_ms=1523, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": true,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 1224,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 1,
+          "free_bytes": 264420104,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 1,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": true,
+          "unified_delta_cache_entries": 1,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 4015352
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 10981760,
+          "backend_memory_before": 11018624,
+          "backend_memory_growth": -36864,
+          "cold_ms": 0.929,
+          "cold_trace": {
+            "candidate_docs": 1221,
+            "candidate_postings": 2520,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2520,
+            "memory_bytes": 7502560,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 11060,
+            "rerank_score_terms": 4460,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1221
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 0.992,
+              "warm_p95_ms": 1.349
+            },
+            {
+              "warm_p50_ms": 0.91,
+              "warm_p95_ms": 1.127
+            },
+            {
+              "warm_p50_ms": 1.025,
+              "warm_p95_ms": 1.261
+            }
+          ],
+          "row_digest": "ea06998df3a1c233910b7a3c836258cf1da89e348934884617b0307903d02b2e",
+          "rows": [
+            [
+              "base-2008",
+              27.520730293220822
+            ],
+            [
+              "base-0",
+              26.541660600516764
+            ],
+            [
+              "base-56",
+              26.446231685608268
+            ],
+            [
+              "base-32",
+              26.442469123922308
+            ],
+            [
+              "base-1000",
+              26.432352304595668
+            ],
+            [
+              "base-120",
+              26.431585143478344
+            ],
+            [
+              "base-160",
+              26.428844729352306
+            ],
+            [
+              "base-16",
+              26.425301039519127
+            ],
+            [
+              "base-600",
+              26.4240219456687
+            ],
+            [
+              "base-72",
+              26.416203772383767
+            ],
+            [
+              "delta-160",
+              26.415583024864816
+            ],
+            [
+              "base-176",
+              26.415458002995138
+            ],
+            [
+              "base-40",
+              26.413656022720488
+            ],
+            [
+              "delta-48",
+              26.407157983979516
+            ],
+            [
+              "base-96",
+              26.40696488425141
+            ],
+            [
+              "base-376",
+              26.40525257290625
+            ],
+            [
+              "base-1200",
+              26.40455512543008
+            ],
+            [
+              "base-368",
+              26.40249220074827
+            ],
+            [
+              "base-80",
+              26.4007240749973
+            ],
+            [
+              "base-1600",
+              26.39935816746498
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1221,
+            "candidate_postings": 2520,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2520,
+            "memory_bytes": 7502560,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 11060,
+            "rerank_score_terms": 4460,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1221
+          },
+          "warm_p50_ms": 0.992,
+          "warm_p95_ms": 1.261
+        },
+        "delta_to_compacted_p95_ratio": 1.088,
+        "documents": 5096,
+        "exact_comparison": {
+          "max_score_delta": 0.0,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 1000,
+      "delta_records": 1000
+    }
+  ],
+  "route": "unified SAE delta query benchmark",
+  "shared_cache": true,
+  "shared_preload": true,
+  "top_k": 20,
+  "warm_runs": 101
+}

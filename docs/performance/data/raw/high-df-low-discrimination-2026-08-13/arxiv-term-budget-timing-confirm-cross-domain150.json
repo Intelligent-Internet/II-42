@@ -1,0 +1,5160 @@
+{
+  "index_name": "commons.data_arxiv__title_abstract__field_aware_bm25_idx",
+  "k": 100,
+  "queries": [
+    {
+      "base_atom_count": 62,
+      "query_text": "Future Perspectives on Next Generation e-Sports Infrastructure and Exploring Their Benefits",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Pooled motion features for first-person videos",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "General transformations for GPU execution of tree traversals",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "Characterizing cloud computing hardware reliability",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "Agile Team Perceptions of Productivity Factors",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Improve Chinese Word Embeddings by Exploiting Internal Structure",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Improved Statistical Machine Translation Using Monolingually-Derived Paraphrases",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Training Faster by Separating Modes of Variation in Batch-normalized Models",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Control Flow Analysis for Reverse Engineering of Sequence Diagrams",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Algorithmic Nuggets in Content Delivery",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Verification based ECG biometrics with cardiac irregular conditions using heartbeat level and segment level information fusion",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Recipient Revocable Identity-Based Broadcast Encryption: How to Revoke Some Recipients in IBBE without Knowledge of the Plaintext",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Let's go public! taking a spoken dialog system to the real world",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Solving Constraint Satisfaction Problems through Belief Propagation-guided decimation",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Region-based CNN for Logo Detection",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 64,
+      "query_text": "A New Fast and Efficient Decision-Based Algorithm for Removal of High-Density Impulse Noises",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Learning Sensor-Specific Spatial-Spectral Features of Hyperspectral Images via Convolutional Neural Networks",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Multi-user interaction using handheld projectors",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Perspectives to Predict Dropout in University Students with Machine Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "An environmental energy harvesting framework for sensor networks",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "Towards edge-caching for image recognition",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "PRACTICAL HYPERPARAMETER OPTIMIZATION",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Stochastic Variational Deep Kernel Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Efficient Large-Scale Graph Processing on Hybrid CPU and GPU Systems",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Statistical Syntax-Directed Translation with Extended Domain of Locality",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "rev.ng: a unified binary analysis framework to recover CFGs and function boundaries",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Deep Structured Scene Parsing by Learning with Image Descriptions",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Optimal Target Assignment and Path Finding for Teams of Agents",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Internet of Things: a New Application for Intelligent Traffic Monitoring System",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Human behavior prediction for smart homes using deep learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "Smoothing of Piecewise Linear Paths",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "High-fidelity simulation for evaluating robotic vision performance",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "The impact of Web quality and playfulness on user acceptance of online retailing",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "Weakly Supervised Deep Detection Networks",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "DeepX: A Software Accelerator for Low-Power Deep Learning Inference on Mobile Devices",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Linking a domain thesaurus to WordNet and conversion to WordNet-LMF",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Secu Wear: An Open Source, Multi-component Hardware/Software Platform for Exploring Wearable Security",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Recurrence networks \u2014 a novel paradigm for nonlinear time series analysis",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Smart antennas for satellite communications on the move",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Spectral Network Embedding: A Fast and Scalable Method via Sparsity",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "NTU RGB+D: A Large Scale Dataset for 3D Human Activity Analysis",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Democrats, republicans and starbucks afficionados: user classification in twitter",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "Person Re-identification by Multi-Channel Parts-Based CNN with Improved Triplet Loss Function",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Question Passage Question & Passage Encoding Question-Passage Matching Passage Self-Matching Word Character Answer Prediction",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "A New View of Predictive State Methods for Dynamical System Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "OCA: Opinion corpus for Arabic",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Reconnaissance d'\u00e9v\u00e9nements et d'actions \u00e0 partir de la profondeur thermique 3D. (Event and action recognition from thermal and 3D depth Sensing)",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Analyzing inter-application communication in Android",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Argument Mining: A Machine Learning Perspective",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Flexible and Fine-Grained Attribute-Based Data Storage in Cloud Computing",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Do individual investors use Google to obtain stock quotes?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.85,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "Why diversify stocks/investments?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "F-1 student investing in foreign markets",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "How are various types of income taxed differently in the USA?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Looking for good investment vehicle for seasonal work and savings",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.87,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.8,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Understanding the T + 3 settlement days rule",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Investing/business with other people's money: How does it work?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Is there an advantage to a traditional but non-deductable IRA over a taxable account? [duplicate]",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.84,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Is it okay to be married, 30 years old and have no retirement?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Rollover into bond fund to do dollar cost averaging [duplicate]",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.89,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Why would you elect to apply a refund to next year's tax bill?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "How much do brokerages pay exchanges per trade?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 67,
+      "query_text": "What happens with the \u201clong\u201d buyer of a stock when somebody else's short fails (that is, unlimited loss bankrupts short seller)",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.87,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Short term parking of a large inheritance?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Explain the details and benefits of rebalancing a retirement portfolio?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "How to sell a stock in a crashing market?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "How do you translate a per year salary into a part-time per hour job?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.89,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Definitions of leverage and of leverage factor",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Is is possible to dispute IRS underpayment penalties?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.89,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "How much should I be contributing to my 401k given my employer's contribution?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.83,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Rationale behind using 12, 26 and 9 to calculate MACD",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "How do disputed debts work on credit reports?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "How to account for money earned and spent prior to establishing business bank accounts?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 51,
+      "query_text": "Forex independent investments",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Short Term Capital Gains tax vs. IRA Withdrawal Tax w/o Quarterly Est. Taxes",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 53,
+      "query_text": "Personal taxes for Shopify / Paypal shop?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "How does Walmart account their expired food",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "How FTB and IRS find mistakes in amended tax returns? Are their processes reliable?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Why aren't there solutions for electronic itemized receipt for retail in-store purchases?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "I made an investment with a company that contacted me, was it safe?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Why does FlagStar Bank harass you about payments within grace period?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Is is possible to take a mortgage using Bitcoin as collateral?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Are social media accounts (e.g. YouTube, Twitter, Instagram, etc.) considered assets?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Which is better when working as a contractor, 1099 or incorporating?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "What's the difference between Market Cap and NAV?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Can I send a money order from USPS as a business?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Rules for SEP contributions in an LLC?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.87,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 64,
+      "query_text": "Is there a way to open a U.S. bank account for my LLC remotely?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.87,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Warren Buffett and Charles Munger advice for small investors?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Is there any US bank that does not charge for incoming wire transfers?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "As a Sole Proprietor, will \u201cemployer\u201d Solo 401k contributions count towards gross income?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 70,
+      "query_text": "UK sole trader who often buys products/services on behalf of clients \u2013 do I deduct from declared income or claim as allowable expenses?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.87,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Where to find the 5 or 10 year returns for a mutual fund?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Advantage of credit union or local community bank over larger nationwide banks such as BOA, Chase, etc.?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Are stories of turning a few thousands into millions by trading stocks real?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Can vet / veterinary bills be considered deductions (tax-deductible) for Income Tax purposes [Canada]?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "How would I go about selling the stock of a privately held company?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 64,
+      "query_text": "What happened in Argentina in 2001 bank sector? did the banks closed? all or some?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "What tax software automatically determines the best filing status, etc?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Personal Tax Return software for Linux?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "What edible, juicy fruit is grown on a deciduous tree called 'pesco' in Italian?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 48,
+      "query_text": "Which film was released first, Laura's Star or Wonder Woman?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.66,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "What football club plays in the area between the old tool gates: Brook Bar and Trafford bar?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Where does the state legislature in which John Coffin Talbot served convene?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 43,
+      "query_text": "Who starred in Love and other drugs and The Simpsons?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "What year did Lindsey Broad star in the movie with Russell Brand and Jonah Hill?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "What star of \"Attack of the Gryphon\" was also a voice artist in Johnny Bravo?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Who was the architect of a Dutch museum dedicated to the arts and history in Amsterdam, located at the Museum Square?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Which Member of Parliament for Macclesfield was married to Jane Ann Winterton?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Which member of the boy group Shinee released their first studio album \"She is\"?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.89,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.78,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Gail Matthius co-anchored the Weekend Update segment of \"Saturday Night Live\" with the actor who played the villain Nicholas Andre in what movie?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.78,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 71,
+      "query_text": "This work of literature _______ , known by its Greek title Oedipus Tyrannus was argued by Sigmund Freud to be one of the greatest works of world literature in his 1928 article.",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.76,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Is Velvetpark or Shape magazine written more for a lesbian and queer-identified female readership?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.85,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Which author lived longer, Nelson Algren or Nathanael West?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Which technique did the director at Pzena Investment Management outline?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.89,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Which one of Ricardo Rodr\u00edguez Sa\u00e1's relatives would become governor from 1983 to 2001?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 69,
+      "query_text": "What memeber of the artistic gymanstic team known as the \"Final Five\" who won a team gold medal at the Rio games was born on May 25, 1994?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 46,
+      "query_text": "Was either Craig Melville or Grover Jones born in Indiana?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "If the Charhki  Dadri crash was less dangerous than the Tenerife airport disaster, which occured firat?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 53,
+      "query_text": "For which Thomas Rickman film did Sissy Spacek win an Academy Award for Best Actress?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Which was published first Timothy McSweeney's Quarterly Concern or Scrye?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.81,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Which of the three main psychedelic compounds found in the Psilocybin genus mushroom are converted to psilocin by the body?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Alex Haley wrote what novel about a man that was born in 1750?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.89,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 51,
+      "query_text": "Which Avalanche happened first, Rigopiano avalanche or 1999 Galt\u00fcr avalanche ?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Which composer was born first out of Gaspare Spontini and Wolfgang Amadeus Mozart?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "On which television network did Joe Penny play an investigator named Jake Styles?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.66,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Which Bob Stoops coached team beat the 2016 Auburn Tigers football team?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 41,
+      "query_text": "Which magazine began publication first, Reunions magazine or Money?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "What Actor whose birth name was Charles Dennis Buchinsky, was part of the Leslie Nielsen comedy?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.87,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.88,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.8,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Which Republican Chairman was born June 1, 1956?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "What wrestling team is Mathew Thomas Rehwoldt a part of?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.84,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "What was the album by Coldplay after the one with a song referencing Chris Martin's unrequited love?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Simone de Beauvoir partnered with the person whose journal would be called what?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Which TV series, written by the creators of Robocalypse, is set in Bikini Bottom?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.83,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 67,
+      "query_text": "What musician is ranked 9th in the Top 100 Greatest Metal Guitarists and started a band in 1990 in Los Angeles, California?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Kate Ashfield plays what role in the 2004 British horror comedy film about a zombie uprising?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.82,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Who starred in Umm-e-Kulsoom whose mother was Afshan Qureshi?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.8,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "What is the official currency in the country that hosts the Asahi-Ryokuken Yomiuri Memorial tournament?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "Which actress appeared in Studio 60 on the Sunset Strip in 2007 and American Horror Story in 2014?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 51,
+      "query_text": "What is the species of animal which the town of Antelope, Kansas was named after?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "The Bee Cliff in northeast Tennessee overlooks a river that is how many miles long?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.9,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 47,
+      "query_text": "Which board game is newer, Splendor or Power Grid?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Which super bowl that took place at the Miami Dolphins home stadium, featured the San Francisco 49ers defeating the San Diego Chargers?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "What book did the president and CEO of Tracinda Corporation buy?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.91,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Joan Bennett Kennedy, who had three children including Kara Kennedy, was known for pursuing which career?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "The southernmost administrative region of Denmark is well-known for creating what products?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "What date did the movement Hans Knirsch was an activist for officially gain traction?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 68,
+      "query_text": "Of the two Sopranos co-stars who starred in a 2009 American thriller film together, which went on to secure the role as Tony Soprano?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.96,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.81,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "This man who was born on April 25th, 1947, was a member of this lower house of the Hawaii State Legislature.",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "term_budget_0p01": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p02": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "term_budget_0p05": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    }
+  ],
+  "query_count": 150,
+  "repetitions": 3,
+  "routes": {
+    "exact": {
+      "error_budget_ratio": 0.0,
+      "latency_ms": {
+        "p50": 219.1971510183066,
+        "p95": 280.12425906490535,
+        "p99": 313.84355609770864,
+        "samples": [
+          209.11435305606574,
+          211.3670239923522,
+          209.30833101738244,
+          193.81443690508604,
+          197.86820595618337,
+          194.16805391665548,
+          214.14099901448935,
+          217.3959850333631,
+          219.4319919217378,
+          188.6855970369652,
+          182.49258201103657,
+          183.70057397987694,
+          191.32963300216943,
+          190.2174709830433,
+          187.15456500649452,
+          203.92200001515448,
+          208.98673101328313,
+          202.7681580511853,
+          194.00787900667638,
+          194.13325493223965,
+          190.61171810608357,
+          270.1551569625735,
+          264.59638599772006,
+          265.6354370992631,
+          231.17872700095177,
+          231.46988602820784,
+          226.84306895826012,
+          203.41510302387178,
+          197.14301801286638,
+          198.75365810003132,
+          241.93498399108648,
+          241.57057900447398,
+          241.57526704948395,
+          273.63972004968673,
+          276.0360810207203,
+          277.1039910148829,
+          244.88379794638604,
+          262.8587499493733,
+          250.7201450644061,
+          193.07627493981272,
+          197.45093397796154,
+          191.42157898750156,
+          207.5802399776876,
+          205.7494519976899,
+          205.1724729826674,
+          308.41444502584636,
+          309.2253259383142,
+          308.9806690113619,
+          241.45457602571696,
+          240.91137491632253,
+          242.77179304044694,
+          187.85327393561602,
+          187.8670809092,
+          188.83357907179743,
+          246.78410403430462,
+          238.59020206145942,
+          244.76442497689277,
+          225.85625108331442,
+          234.1529349796474,
+          229.29367306642234,
+          220.61394504271448,
+          214.51493096537888,
+          214.4784179981798,
+          184.24890108872205,
+          179.49112900532782,
+          182.16692900750786,
+          218.38905406184494,
+          220.1137039810419,
+          220.41288204491138,
+          240.5292500043288,
+          242.75655404198915,
+          243.14522603526711,
+          224.62212305981666,
+          223.04080403409898,
+          224.2949230130762,
+          259.62789391633123,
+          264.95688292197883,
+          258.31210997421294,
+          220.0732200872153,
+          219.1103029763326,
+          220.38281697314233,
+          252.47041799593717,
+          251.18208897765726,
+          252.40587501320988,
+          259.9282059818506,
+          258.5699709597975,
+          252.43795895949006,
+          230.18033907283098,
+          222.49129589181393,
+          221.1730849230662,
+          219.14237295277417,
+          223.27595599927008,
+          221.98727808427066,
+          212.48713601380587,
+          211.9230410316959,
+          213.02556293085217,
+          246.85708596371114,
+          257.98258709255606,
+          246.48559896741062,
+          215.5331940157339,
+          213.36931094992906,
+          213.80491997115314,
+          254.11860400345176,
+          254.80797002092004,
+          250.6650190334767,
+          228.55534707196057,
+          234.27553800866008,
+          243.1268299696967,
+          222.91216591838747,
+          219.38841394148767,
+          219.99536198563874,
+          250.20784395746887,
+          253.34714795462787,
+          250.09430292993784,
+          231.97249602526426,
+          231.2318169279024,
+          228.84684207383543,
+          251.38773792423308,
+          248.8786040339619,
+          250.09382795542479,
+          236.83392303064466,
+          237.4393360223621,
+          233.46233903430402,
+          218.77440297976136,
+          212.97516394406557,
+          220.70367401465774,
+          223.83170993998647,
+          235.0972960703075,
+          222.35557599924505,
+          201.27586903981864,
+          204.6916380058974,
+          204.3543969048187,
+          297.02707997057587,
+          293.3560829842463,
+          293.55496307834983,
+          187.07510398235172,
+          193.33195209037513,
+          194.85555693972856,
+          236.38874606695026,
+          244.20553899835795,
+          239.64834096841514,
+          191.35947991162539,
+          198.2665950199589,
+          194.53885790426284,
+          213.6388251092285,
+          217.99604105763137,
+          213.76667998265475,
+          234.72561803646386,
+          231.5722769126296,
+          231.07239499222487,
+          181.43011105712503,
+          185.40252197999507,
+          181.42669892404228,
+          167.704758932814,
+          166.00239800754935,
+          169.83348806388676,
+          184.53198403585702,
+          183.47202509175986,
+          183.55248298030347,
+          237.85250796936452,
+          238.52906504180282,
+          239.79361297097057,
+          201.3341389829293,
+          207.61295594274998,
+          203.97316897287965,
+          194.7247179923579,
+          198.55832203757018,
+          202.27214694023132,
+          187.50692799221724,
+          184.82121406123042,
+          185.4808540083468,
+          247.94372904580086,
+          248.12471505720168,
+          252.14515498373657,
+          235.32621609047055,
+          237.8478719620034,
+          230.36357306409627,
+          186.10665702726692,
+          183.39772999752313,
+          184.84467698726803,
+          202.74150907061994,
+          203.03520106244832,
+          199.68711805995554,
+          173.62164403311908,
+          177.96165705658495,
+          174.4867319939658,
+          293.5392929939553,
+          292.67167195212096,
+          299.7955019818619,
+          233.42377797234803,
+          227.57645102683455,
+          239.9632770102471,
+          250.37819799035788,
+          251.0619170498103,
+          251.57922902144492,
+          211.27050591167063,
+          215.90114501304924,
+          210.3655169485137,
+          200.54298208560795,
+          196.30083302035928,
+          197.33590597752482,
+          214.48014210909605,
+          210.8637799974531,
+          213.33128993865103,
+          191.39700301457196,
+          194.08220308832824,
+          194.09719901159406,
+          180.25315005797893,
+          183.98540501948446,
+          182.35868797637522,
+          236.44476605113596,
+          233.83762093726546,
+          231.07022501062602,
+          172.665850026533,
+          171.44598998129368,
+          171.5789008885622,
+          211.0664489446208,
+          211.84418792836368,
+          219.39281502272934,
+          177.72102600429207,
+          174.15657604578882,
+          173.54007298126817,
+          180.7971140369773,
+          169.0255970461294,
+          183.66185494232923,
+          174.3609580444172,
+          171.4529839809984,
+          169.8405280476436,
+          169.35420397203416,
+          168.2018639985472,
+          165.51605402491987,
+          227.81317797489464,
+          222.62299002613872,
+          226.22190101537853,
+          213.06680305860937,
+          218.89483905397356,
+          210.46327706426382,
+          228.92539203166962,
+          221.087108948268,
+          219.12598994094878,
+          167.16080100741237,
+          168.16413693595678,
+          168.58558100648224,
+          220.26622400153428,
+          220.77674802858382,
+          221.1946949828416,
+          191.5918169543147,
+          197.88372702896595,
+          195.94151503406465,
+          230.01209006179124,
+          225.69971403572708,
+          229.75638799834996,
+          215.8315839478746,
+          212.17000007163733,
+          212.37576403655112,
+          202.15658796951175,
+          204.0619319304824,
+          199.8541090870276,
+          204.91676800884306,
+          201.24417205806822,
+          207.45417708531022,
+          235.84707092959434,
+          238.089004997164,
+          236.12981592305005,
+          200.33493998926133,
+          192.9264049977064,
+          194.50880901422352,
+          221.55514603946358,
+          221.68786404654384,
+          219.41382810473442,
+          194.43040003534406,
+          187.87133891601115,
+          189.75226895418018,
+          228.57669601216912,
+          227.54996898584068,
+          231.0702980030328,
+          247.12863995227963,
+          250.58005400933325,
+          253.05147597100586,
+          225.4895770456642,
+          220.51858098711818,
+          226.90756001975387,
+          230.88342405389994,
+          234.67024008277804,
+          232.94169397559017,
+          198.58676195144653,
+          191.68592803180218,
+          193.41953098773956,
+          224.92751304525882,
+          227.38822596147656,
+          226.89161403104663,
+          209.75794293917716,
+          214.98781396076083,
+          209.89952504169196,
+          194.45633399300277,
+          191.9474198948592,
+          194.65991004835814,
+          177.07493307534605,
+          172.4124139873311,
+          175.1868079882115,
+          256.5643849084154,
+          244.83438895549625,
+          244.62694895919412,
+          183.16874001175165,
+          184.885868919082,
+          179.30105596315116,
+          225.4585800692439,
+          235.33083591610193,
+          240.81106099765748,
+          198.56112799607217,
+          200.96815400756896,
+          198.25330295134336,
+          214.24434008076787,
+          211.6340509383008,
+          209.41455895081162,
+          241.13897397182882,
+          240.79177097883075,
+          238.6391689069569,
+          267.6489449804649,
+          269.5186960045248,
+          270.2055110130459,
+          304.14861906319857,
+          295.95394199714065,
+          298.14672702923417,
+          226.70079197268933,
+          226.8839500611648,
+          231.36527510359883,
+          234.89281302317977,
+          241.41815805342048,
+          233.13336598221213,
+          251.66804296895862,
+          253.7558930926025,
+          252.94845004100353,
+          313.4306410793215,
+          322.3044000333175,
+          313.84355609770864,
+          237.41723306011409,
+          250.91882597189397,
+          235.8479789691046,
+          170.69617507513613,
+          169.58819702267647,
+          169.2520451033488,
+          206.00055996328592,
+          208.19998008664697,
+          202.52212299965322,
+          224.57817394752055,
+          225.1240770565346,
+          231.77994997240603,
+          294.11045904271305,
+          270.4897739458829,
+          280.12425906490535,
+          165.96140700858086,
+          171.63611692376435,
+          168.04456990212202,
+          197.58503697812557,
+          195.58690395206213,
+          195.98257902543992,
+          202.34521001111716,
+          207.44890999048948,
+          207.4874269310385,
+          180.44498399831355,
+          183.08110802900046,
+          183.78937907982618,
+          296.76238307729363,
+          293.1200619786978,
+          291.8658190174028,
+          220.94868298154324,
+          214.2581039806828,
+          215.47281998209655,
+          172.92191402520984,
+          174.36682409606874,
+          175.7110389880836,
+          237.336635007523,
+          234.0327718993649,
+          233.52837399579585,
+          195.51840296480805,
+          189.7231260081753,
+          194.11968102212995,
+          187.18422204256058,
+          188.6961569543928,
+          191.77089899312705,
+          165.26422405149788,
+          165.00620497390628,
+          165.73576198425144,
+          202.11859000846744,
+          201.06990600470454,
+          203.59300100244582,
+          177.0773580064997,
+          178.50984702818096,
+          178.0153539730236,
+          218.69350597262383,
+          219.25192908383906,
+          215.97067406401038,
+          243.2154470589012,
+          244.72921306733042,
+          244.9862950015813,
+          221.1076719686389,
+          212.0110869873315,
+          224.4194330414757,
+          205.36148000974208,
+          211.52159804478288,
+          204.77671106345952,
+          264.1656529158354,
+          268.03504792042077,
+          263.95254500675946,
+          274.4553639786318,
+          273.91617093235254,
+          273.52121204603463,
+          223.05763803888112,
+          220.64621502067894,
+          221.1179130245,
+          188.7665579561144,
+          195.0282360194251,
+          194.37237503007054,
+          228.46614406444132,
+          232.26381395943463,
+          227.8602330479771,
+          247.29345401283354,
+          245.44057506136596,
+          249.161156010814,
+          223.15958293620497,
+          234.7360160201788,
+          222.33456803951412,
+          249.39309898763895,
+          264.0312840230763,
+          262.58757803589106,
+          188.90616996213794,
+          193.0533410049975,
+          186.7226039757952,
+          213.5055010439828,
+          209.92658205796033,
+          212.04473602119833,
+          221.44796198699623,
+          222.57310000713915,
+          215.38799698464572,
+          197.57959991693497,
+          200.06729499436915,
+          196.4162599761039,
+          244.88026194740087,
+          245.30811898875982,
+          244.77349396329373,
+          204.63284198194742,
+          207.13647198863328,
+          202.99299899488688,
+          323.0480799684301,
+          320.78497600741684,
+          324.99072898644954,
+          263.8417899142951,
+          262.38232909236103,
+          261.8662390159443
+        ]
+      },
+      "mean_overlap_at_k": 1.0,
+      "minimum_overlap_at_k": 1.0
+    },
+    "term_budget_0p01": {
+      "error_budget_ratio": 0.01,
+      "latency_ms": {
+        "p50": 212.4040520284325,
+        "p95": 275.7889539934695,
+        "p99": 315.18106209114194,
+        "samples": [
+          205.72623098269105,
+          201.68275700416416,
+          200.49624796956778,
+          185.50130107905716,
+          187.04519199673086,
+          184.22545306384563,
+          214.28576996549964,
+          209.05589498579502,
+          212.81188796274364,
+          179.86717610619962,
+          181.61813798360527,
+          183.60950995702296,
+          183.69827407877892,
+          182.71419708617032,
+          188.61419998575002,
+          190.54736895486712,
+          195.23498904891312,
+          191.36641104705632,
+          187.8151500131935,
+          184.48023905511945,
+          183.65741905290633,
+          256.7562690237537,
+          255.4029719904065,
+          252.32186005450785,
+          220.91465909034014,
+          225.32326192595065,
+          228.18613389972597,
+          191.6079520015046,
+          193.4783199103549,
+          192.99013691488653,
+          226.16298194043338,
+          234.3162790639326,
+          235.38778792135417,
+          275.7889539934695,
+          273.23041507042944,
+          272.57303008809686,
+          234.2998010572046,
+          243.49141702987254,
+          241.63976695854217,
+          188.05621296633035,
+          188.69718594942242,
+          187.1067399624735,
+          198.0925890384242,
+          195.98224305082113,
+          198.68740404490381,
+          300.8239030605182,
+          298.9124379819259,
+          299.1294510429725,
+          233.42091694939882,
+          238.59536601230502,
+          234.89293397869915,
+          190.28470502234995,
+          184.58839098457247,
+          183.33089398220181,
+          235.05853803362697,
+          236.13537999335676,
+          234.74353598430753,
+          211.54911804478616,
+          214.28953704889864,
+          212.71590795367956,
+          206.49109897203743,
+          203.62618600483984,
+          202.85988005343825,
+          180.10721902828664,
+          179.009257000871,
+          182.08388099446893,
+          202.95173197519034,
+          204.95977206155658,
+          201.15183002781123,
+          222.59770799428225,
+          222.6800819626078,
+          220.80281400121748,
+          218.42013904824853,
+          219.86415807623416,
+          222.05422702245414,
+          257.20901996828616,
+          252.15959607157856,
+          250.5664339987561,
+          211.40955400187522,
+          216.04050497990102,
+          210.51632694434375,
+          237.9960099933669,
+          240.45165802817792,
+          239.39690296538174,
+          249.6496110688895,
+          244.15028106886894,
+          244.73892897367477,
+          213.639319059439,
+          217.8056879201904,
+          214.03402206487954,
+          209.96604906395078,
+          205.90263803023845,
+          213.14850100316107,
+          202.97559502068907,
+          207.52000203356147,
+          201.95851509924978,
+          244.6926039410755,
+          241.89086200203747,
+          242.4731459468603,
+          202.35303207300603,
+          204.80194000992924,
+          207.47148105874658,
+          240.20977702457458,
+          240.86114100646228,
+          245.15401397366077,
+          218.45061401836574,
+          232.7607600018382,
+          223.5704360064119,
+          217.0182931004092,
+          217.94552309438586,
+          221.81514301337302,
+          245.78298395499587,
+          242.38008295651525,
+          244.69586298801005,
+          219.78120994754136,
+          222.26149193011224,
+          218.11844198964536,
+          239.92557602468878,
+          241.84249993413687,
+          243.8718230696395,
+          233.293232973665,
+          232.022171956487,
+          233.83671802002937,
+          211.88545203767717,
+          211.18496300186962,
+          211.27534995321184,
+          230.30605295207351,
+          218.15021696966141,
+          218.8307560281828,
+          197.34854402486235,
+          200.00418496783823,
+          194.69216302968562,
+          277.90436800569296,
+          280.89994098991156,
+          277.31819299515337,
+          185.33321400173008,
+          185.06816995795816,
+          189.53148100990802,
+          232.51596395857632,
+          232.72394691593945,
+          242.39246000070125,
+          187.9751830128953,
+          189.71000297460705,
+          184.60115510970354,
+          208.99181300774217,
+          207.70653302315623,
+          209.74613400176167,
+          229.14249391760677,
+          224.3310969788581,
+          224.62884697597474,
+          177.14982305187732,
+          180.78861199319363,
+          179.39601000398397,
+          160.23534606210887,
+          166.89937200862914,
+          160.40319402236491,
+          174.74092601332814,
+          175.60580698773265,
+          173.09842898976058,
+          229.72035803832114,
+          230.4340999107808,
+          233.26924699358642,
+          200.4242140101269,
+          208.11524300370365,
+          200.53418492898345,
+          194.80675598606467,
+          189.54039097297937,
+          189.10749908536673,
+          184.1844259761274,
+          179.56146004144102,
+          181.00850703194737,
+          248.32538806367666,
+          245.69013505242765,
+          251.76736898720264,
+          229.84021401498467,
+          232.516580959782,
+          229.01897400151938,
+          184.12595707923174,
+          180.12278201058507,
+          184.49793697800487,
+          200.50459390040487,
+          196.50875008665025,
+          200.1279090764001,
+          171.77980102133006,
+          173.07974200230092,
+          169.79681490920484,
+          289.3364009214565,
+          295.0926019111648,
+          289.39122904557735,
+          223.2598370173946,
+          225.71805503685027,
+          226.22061299625784,
+          244.68602798879147,
+          249.87245595548302,
+          244.65338396839797,
+          206.98699599597603,
+          212.03665190842003,
+          207.97539793420583,
+          202.69452594220638,
+          192.72250402718782,
+          196.92093902267516,
+          200.4456960130483,
+          205.22304705809802,
+          202.75166002102196,
+          187.74371698964387,
+          187.6813240814954,
+          189.42456098739058,
+          186.28359702415764,
+          183.2227079430595,
+          179.051773971878,
+          226.2409790419042,
+          220.1371550327167,
+          222.47082099784166,
+          167.63338900636882,
+          167.21925092861056,
+          171.3044720236212,
+          208.23518105316907,
+          214.60710908286273,
+          212.53297000657767,
+          168.5763520654291,
+          171.13528796471655,
+          171.6978910844773,
+          174.86300400923938,
+          175.32841593492776,
+          175.48375495243818,
+          168.8933060504496,
+          166.65949602611363,
+          169.79174700099975,
+          161.49472002871335,
+          161.7127429926768,
+          162.09282190538943,
+          221.6797579312697,
+          220.83458001725376,
+          222.61499101296067,
+          206.55387092847377,
+          219.62648804765195,
+          205.96774097066373,
+          220.67809209693223,
+          220.39970802143216,
+          216.88622096553445,
+          165.26919801253825,
+          166.31157300435007,
+          166.70887300278991,
+          222.63786604162306,
+          220.04887403454632,
+          217.20821899361908,
+          189.8933530319482,
+          196.6854949714616,
+          192.08588998299092,
+          227.80742298346013,
+          222.72639290895313,
+          226.0921609122306,
+          206.80463395547122,
+          206.07562200166285,
+          207.01835595536977,
+          198.7650980008766,
+          194.16409207042307,
+          193.15729197114706,
+          200.37041301839054,
+          198.9971010480076,
+          201.6224489780143,
+          232.5107860378921,
+          234.40949502401054,
+          233.38908702135086,
+          192.90523906238377,
+          193.21097899228334,
+          193.27859103213996,
+          214.6662879968062,
+          217.04262495040894,
+          215.1314599905163,
+          191.45083497278392,
+          185.89501397218555,
+          192.669179989025,
+          225.7545100292191,
+          230.91765097342432,
+          230.23272503633052,
+          246.9663480296731,
+          242.99621093086898,
+          250.6981900660321,
+          216.82407392654568,
+          219.07419001217932,
+          221.0415949812159,
+          226.46636597346514,
+          225.74695700313896,
+          227.5354820303619,
+          194.74359299056232,
+          190.56812301278114,
+          192.14323593769222,
+          222.55345503799617,
+          224.7700779698789,
+          220.55079601705074,
+          210.956305032596,
+          207.63677009381354,
+          207.3976460378617,
+          187.8405980532989,
+          186.26528198365122,
+          194.1874490585178,
+          177.80590197071433,
+          168.84391207713634,
+          174.97412709053606,
+          252.04271997790784,
+          244.00604597758502,
+          241.80484598036855,
+          177.80048993881792,
+          179.80174801778048,
+          175.07532599847764,
+          236.51069100014865,
+          231.87364998739213,
+          232.07409796305,
+          197.9617039905861,
+          199.85715101938695,
+          195.85539202671498,
+          210.21294803358614,
+          209.76537594106048,
+          207.51756301615387,
+          235.96661200281233,
+          239.5534300012514,
+          238.64840890746564,
+          265.2237119618803,
+          266.1128550535068,
+          269.04600905254483,
+          300.5659219343215,
+          292.750203050673,
+          293.0605800356716,
+          224.52295396942645,
+          230.11503997258842,
+          231.7582069663331,
+          233.23261504992843,
+          228.0789869837463,
+          226.65697697084397,
+          249.09176293294877,
+          254.593737074174,
+          248.21370898280293,
+          313.1609970005229,
+          317.0121309813112,
+          315.18106209114194,
+          242.14023107197136,
+          243.39679803233594,
+          232.51488502137363,
+          168.6367739457637,
+          165.48619896639138,
+          167.51280007883906,
+          202.90894096251577,
+          197.52446794882417,
+          199.83656099066138,
+          221.16452304180712,
+          224.13044795393944,
+          220.60482006054372,
+          270.01095097512007,
+          270.6463389331475,
+          268.6542799929157,
+          165.97130906302482,
+          165.58931302279234,
+          162.2015539323911,
+          193.0905720219016,
+          200.59870195109397,
+          196.23301399406046,
+          197.07581400871277,
+          199.7594899730757,
+          187.51153908669949,
+          176.58714507706463,
+          176.48995702620596,
+          177.2889840649441,
+          288.15748693887144,
+          296.40501202084124,
+          292.06255089957267,
+          211.5679660346359,
+          212.8688640659675,
+          211.7938429582864,
+          167.82678407616913,
+          171.23521806206554,
+          170.05018901545554,
+          222.63704997021705,
+          221.87600599136204,
+          223.0642739450559,
+          186.59863993525505,
+          185.50826201681048,
+          190.55230403319,
+          185.46802597120404,
+          184.7254189196974,
+          185.9561230521649,
+          161.67227108962834,
+          163.27457397710532,
+          161.4898219704628,
+          209.3577909981832,
+          217.8073120303452,
+          197.81659299042076,
+          174.0454750834033,
+          173.70100296102464,
+          172.9147300356999,
+          214.85267602838576,
+          212.07750297617167,
+          216.34268492925912,
+          240.08792801760137,
+          239.64104801416397,
+          242.7502089412883,
+          218.87887408956885,
+          216.39082697220147,
+          219.26494198851287,
+          208.63441994879395,
+          204.73210094496608,
+          204.12716805003583,
+          249.53687598463148,
+          259.9236509995535,
+          260.66447398625314,
+          271.65980194695294,
+          269.4881019415334,
+          278.91532506328076,
+          219.93812103755772,
+          221.51234198827296,
+          217.0945309335366,
+          190.08438102900982,
+          192.07267998717725,
+          188.0110539495945,
+          231.380408979021,
+          228.85448404122144,
+          227.58669196628034,
+          243.40080504771322,
+          242.33029095921665,
+          241.10745009966195,
+          234.48000708594918,
+          219.28827895317227,
+          219.91100499872118,
+          245.68217701744288,
+          260.76961192302406,
+          247.20289697870612,
+          179.43685490172356,
+          183.98454203270376,
+          181.49853602517396,
+          212.2751340502873,
+          208.17808900028467,
+          211.28535096067935,
+          213.93927501048893,
+          211.3265710650012,
+          212.89564692415297,
+          193.94475093577057,
+          195.58982003945857,
+          196.39334408566356,
+          241.87928601168096,
+          245.2392460545525,
+          240.3054659953341,
+          202.70478795282543,
+          202.80169299803674,
+          204.6286219265312,
+          320.32987708225846,
+          320.4834091011435,
+          322.7965079713613,
+          259.7536329412833,
+          260.41854498907924,
+          259.45629202760756
+        ]
+      },
+      "mean_overlap_at_k": 0.9770000000000001,
+      "minimum_overlap_at_k": 0.87
+    },
+    "term_budget_0p02": {
+      "error_budget_ratio": 0.02,
+      "latency_ms": {
+        "p50": 209.11298744613305,
+        "p95": 272.524971049279,
+        "p99": 312.92853003833443,
+        "samples": [
+          200.38817601744086,
+          200.86091198027134,
+          201.59670896828175,
+          184.5782899763435,
+          183.46904299687594,
+          182.8577220439911,
+          204.6886970056221,
+          204.64808505494148,
+          210.52778302691877,
+          174.06254599336535,
+          179.77836006321013,
+          174.97331404592842,
+          181.63165205623955,
+          182.70769296213984,
+          178.46941202878952,
+          187.690390041098,
+          188.49945405963808,
+          190.19661203492433,
+          184.6297699958086,
+          182.11710406467319,
+          184.41158800851554,
+          248.92663396894932,
+          256.1020739376545,
+          248.4250080306083,
+          219.64452206157148,
+          224.36086600646377,
+          217.6100630313158,
+          192.8838019957766,
+          190.2115559205413,
+          188.8566550333053,
+          231.1720730504021,
+          229.94958306662738,
+          229.4093689415604,
+          270.1399349607527,
+          274.4663739576936,
+          270.19371499773115,
+          232.2353470372036,
+          248.35661693941802,
+          241.97679397184402,
+          184.62647800333798,
+          184.4171250704676,
+          182.49746097717434,
+          191.18397706188262,
+          193.15397192258388,
+          196.41574600245804,
+          296.18325899355114,
+          298.5162299592048,
+          295.21205101627856,
+          226.38617106713355,
+          232.3509210254997,
+          230.31139897648245,
+          183.26030392199755,
+          182.19591199886054,
+          179.22833398915827,
+          227.70680801477283,
+          231.378716067411,
+          229.8792729852721,
+          212.7080619102344,
+          208.11092597432435,
+          212.06639800220728,
+          199.37569799367338,
+          201.05227595195174,
+          200.33300295472145,
+          177.06549703143537,
+          180.78423105180264,
+          181.91761698108166,
+          201.8365600379184,
+          202.34100194647908,
+          200.34167601261288,
+          223.5078780213371,
+          218.63235998898745,
+          221.19033196941018,
+          215.484382933937,
+          220.93999199569225,
+          217.43738104123622,
+          248.28358797822148,
+          248.3334360877052,
+          247.51046090386808,
+          210.4388220468536,
+          212.07839797716588,
+          205.89040801860392,
+          239.0078370226547,
+          243.95454896148294,
+          235.9451309312135,
+          248.9565450232476,
+          241.130523965694,
+          241.62860598880798,
+          214.759684051387,
+          211.54804003890604,
+          212.3967430088669,
+          196.78114901762456,
+          200.53222309798002,
+          200.59007697273046,
+          197.35478598158807,
+          201.4456830220297,
+          203.00805801525712,
+          243.10925893951207,
+          238.3781949756667,
+          246.60074606072158,
+          198.2379910768941,
+          203.95768096204847,
+          198.763299966231,
+          253.6229200195521,
+          236.19059601332992,
+          251.46508996840566,
+          217.51649002544582,
+          229.10533600952476,
+          218.02112902514637,
+          216.02940396405756,
+          217.4989660270512,
+          215.05284192971885,
+          237.49985999893397,
+          234.3933869851753,
+          240.8746510045603,
+          225.2898869337514,
+          220.1396010350436,
+          217.04271691851318,
+          233.19825809448957,
+          243.0915719596669,
+          236.49163299705833,
+          236.83202802203596,
+          230.50888697616756,
+          233.13346598297358,
+          207.57527102250606,
+          207.40746392402798,
+          207.34760200139135,
+          230.10833992157131,
+          214.12765607237816,
+          216.42939990852028,
+          192.2548400470987,
+          192.1587100951001,
+          189.39991400111467,
+          272.524971049279,
+          277.825991041027,
+          273.15681299660355,
+          179.74569101352245,
+          178.76673699356616,
+          184.55267790704966,
+          231.1026839306578,
+          230.91188201215118,
+          229.2381040751934,
+          185.81129203084856,
+          183.77560004591942,
+          181.4093670109287,
+          208.5746139055118,
+          207.0154210086912,
+          208.82580592297018,
+          221.399731002748,
+          220.37313203327358,
+          221.16645507048815,
+          178.36034297943115,
+          180.1692609442398,
+          177.3920280393213,
+          159.3712760368362,
+          157.85833995323628,
+          159.36941897962242,
+          176.8032250693068,
+          173.96820802241564,
+          172.50733799301088,
+          228.98924304172397,
+          234.9424329586327,
+          235.44565995689481,
+          203.28677899669856,
+          205.66340303048491,
+          200.48718096222728,
+          195.10683591943234,
+          186.99224898591638,
+          189.55529097002,
+          183.23248403612524,
+          179.16652304120362,
+          184.17819100432098,
+          243.01790504250675,
+          245.62417389824986,
+          247.60991509538144,
+          230.81219696905464,
+          224.86808989197016,
+          228.79033000208437,
+          176.38247297145426,
+          179.66677306685597,
+          178.66611701902002,
+          194.92549600545317,
+          199.04954591766,
+          198.35417193826288,
+          166.63516697008163,
+          168.9859270118177,
+          167.1961189713329,
+          292.5218070158735,
+          293.6233780346811,
+          291.7758879484609,
+          214.94061802513897,
+          214.28217994980514,
+          223.0994129786268,
+          243.74350509606302,
+          245.84550689905882,
+          245.3912110067904,
+          203.15469603519887,
+          205.82392998039722,
+          213.23623589705676,
+          188.2841340266168,
+          189.27904299926013,
+          201.0268319863826,
+          197.21071200910956,
+          201.25390298198909,
+          198.62488890066743,
+          185.53681101184338,
+          185.9708660049364,
+          189.94346691761166,
+          182.3246239218861,
+          177.9528479091823,
+          177.44714103173465,
+          217.8290190640837,
+          216.20261599309742,
+          217.7470609312877,
+          168.41990896500647,
+          167.1312670223415,
+          172.02826403081417,
+          205.78149799257517,
+          213.38044991716743,
+          207.99722406081855,
+          168.40070893522352,
+          168.16330899018794,
+          170.66568799782544,
+          160.8929680660367,
+          163.54498406872153,
+          171.20401200372726,
+          165.58441298548132,
+          165.4682920780033,
+          167.0865979976952,
+          160.83415888715535,
+          163.29669894184917,
+          160.63165408559144,
+          220.16487701330334,
+          222.60821098461747,
+          220.62563803046942,
+          205.44355199672282,
+          205.52538998890668,
+          203.39396898634732,
+          218.98092795163393,
+          216.68882004451007,
+          219.23550206702203,
+          163.24016405269504,
+          165.08761991281062,
+          160.2071620291099,
+          222.32833004090935,
+          216.16110496688634,
+          216.1829899996519,
+          189.73443401046097,
+          192.12949101347476,
+          192.46393290814012,
+          217.5861339783296,
+          226.4805700397119,
+          227.47623699251562,
+          207.55982003174722,
+          204.28867090959102,
+          205.23484493605793,
+          193.16525803878903,
+          196.66603102814406,
+          195.26440696790814,
+          198.5954949632287,
+          200.4534249426797,
+          200.85136801935732,
+          232.68872511107475,
+          231.60413594450802,
+          242.94010107405484,
+          190.48546301200986,
+          195.93180099036545,
+          188.71828506235033,
+          216.84072795324028,
+          214.1320500522852,
+          215.4969909461215,
+          182.8319060150534,
+          185.4832828976214,
+          186.17587606422603,
+          227.2970339981839,
+          233.76981704495847,
+          227.5176850380376,
+          241.89974705222994,
+          239.35111903119832,
+          240.3634670190513,
+          217.15666400268674,
+          216.82580304332078,
+          217.0243909349665,
+          234.2355630826205,
+          224.93010805919766,
+          227.40385390352458,
+          192.29256396647543,
+          189.62632096372545,
+          195.1180180767551,
+          219.6072901133448,
+          224.5940009597689,
+          220.11579503305256,
+          207.50106603372842,
+          205.90864797122777,
+          205.27666003908962,
+          182.02482897322625,
+          183.08702704962343,
+          191.20778900105506,
+          175.1379369525239,
+          169.73021090961993,
+          174.06168393790722,
+          245.85720908362418,
+          238.44980995636433,
+          243.3622640091926,
+          177.14152799453586,
+          175.48426904249936,
+          174.63065206538886,
+          219.95135000906885,
+          233.18349197506905,
+          229.77008007001132,
+          194.0160869853571,
+          196.5153309283778,
+          194.71893308218569,
+          205.97535197157413,
+          209.04771191999316,
+          206.96413097903132,
+          238.89052402228117,
+          232.9670590115711,
+          236.7797199403867,
+          260.2772330865264,
+          261.58907695207745,
+          263.21990008000284,
+          293.0358450394124,
+          299.54190901480615,
+          296.2142589967698,
+          219.82156799640507,
+          226.2302179588005,
+          220.06335901096463,
+          242.13468295056373,
+          227.0181030035019,
+          228.06344297714531,
+          247.8761370293796,
+          251.71210803091526,
+          246.8647740315646,
+          313.62469599116594,
+          311.52513495180756,
+          312.92853003833443,
+          243.14168002456427,
+          233.07892703451216,
+          242.99942899961025,
+          167.09458199329674,
+          168.77064399886876,
+          164.9190270109102,
+          197.52393604721874,
+          194.01607697363943,
+          198.72354995459318,
+          219.55403801985085,
+          224.05516193248332,
+          218.43773301225156,
+          266.89341093879193,
+          265.01179893966764,
+          265.24838898330927,
+          161.4657900063321,
+          159.50552897993475,
+          160.47191398683935,
+          194.7641730075702,
+          197.28750502690673,
+          192.45406205300242,
+          188.39473696425557,
+          186.94424303248525,
+          187.05607193987817,
+          179.78356103412807,
+          173.42992802150548,
+          178.60499094240367,
+          286.5222590044141,
+          290.7152679981664,
+          293.3879870688543,
+          211.1838130513206,
+          214.85137497074902,
+          210.25396103505045,
+          170.31706997659057,
+          171.2856680387631,
+          166.01130401249975,
+          222.2464990336448,
+          225.56370496749878,
+          219.80961109511554,
+          185.3605950018391,
+          185.05653191823512,
+          184.78905002120882,
+          183.80913697183132,
+          183.6837490554899,
+          180.5767030455172,
+          160.38987098727375,
+          165.52705701906234,
+          160.4436159832403,
+          212.66372897662222,
+          198.87974997982383,
+          201.54021005146205,
+          170.28116597793996,
+          171.21095804031938,
+          169.73082500044256,
+          208.33676401525736,
+          208.57967401389033,
+          208.997692912817,
+          244.09228295553476,
+          238.9062528964132,
+          243.01478103734553,
+          217.89128496311605,
+          202.63987395446748,
+          201.844459050335,
+          204.4407200301066,
+          201.53633994050324,
+          204.92583594750613,
+          269.7743270546198,
+          245.803649071604,
+          265.6662149820477,
+          275.10565402917564,
+          269.67537601012737,
+          267.767139011994,
+          217.3535800538957,
+          217.87942305672914,
+          221.01871599443257,
+          184.3602480366826,
+          186.42376200295985,
+          185.238545993343,
+          226.58453101757914,
+          226.03675804566592,
+          227.76709601748735,
+          241.83744308538735,
+          246.2798620108515,
+          241.93750601261854,
+          216.38225705828518,
+          219.26136501133442,
+          216.262819012627,
+          249.6943810256198,
+          242.256645928137,
+          242.24127805791795,
+          177.50513297505677,
+          177.61141702067107,
+          179.22645900398493,
+          210.23707604035735,
+          210.30083496589214,
+          209.7272900864482,
+          209.47235799394548,
+          209.17826297227293,
+          212.55526808090508,
+          194.31495491880924,
+          196.58951193559915,
+          197.06931500695646,
+          243.86862001847476,
+          240.82453397568315,
+          240.35900901071727,
+          204.68735799659044,
+          201.8614870030433,
+          203.40744801796973,
+          315.2552330866456,
+          320.19469991791993,
+          322.9393919464201,
+          260.51691197790205,
+          259.67353500891477,
+          262.95156206469983
+        ]
+      },
+      "mean_overlap_at_k": 0.963,
+      "minimum_overlap_at_k": 0.87
+    },
+    "term_budget_0p05": {
+      "error_budget_ratio": 0.05,
+      "latency_ms": {
+        "p50": 207.1773490170017,
+        "p95": 268.69599404744804,
+        "p99": 308.6672880453989,
+        "samples": [
+          197.59536697529256,
+          195.0647149933502,
+          198.15124198794365,
+          180.82640203647316,
+          183.1975559471175,
+          178.00175200682133,
+          197.70260399673134,
+          200.57859702501446,
+          202.28915696498007,
+          177.51703597605228,
+          175.58480391744524,
+          167.7360360044986,
+          177.2957219509408,
+          176.5671040629968,
+          173.94261294975877,
+          185.07130001671612,
+          185.24577491916716,
+          183.22448898106813,
+          178.77335799857974,
+          182.18515103217214,
+          183.099212939851,
+          241.96071701589972,
+          241.24234705232084,
+          239.61447598412633,
+          215.46053502243012,
+          213.30974390730262,
+          211.72424999531358,
+          186.84677896089852,
+          180.9512700419873,
+          185.81816798541695,
+          222.36571996472776,
+          225.07876006420702,
+          223.7580189248547,
+          266.07612904626876,
+          267.67642493359745,
+          269.81410500593483,
+          229.41395291127264,
+          245.397143997252,
+          243.9639000222087,
+          177.22233198583126,
+          178.50480799097568,
+          176.2125319801271,
+          187.13650200515985,
+          190.34105201717466,
+          191.1714590387419,
+          289.10472500137985,
+          289.685538969934,
+          291.43802903126925,
+          219.3833040073514,
+          224.3067220551893,
+          225.24598403833807,
+          175.9611879242584,
+          180.0178810954094,
+          179.3307129992172,
+          222.97530004289,
+          221.77082300186157,
+          221.6404229402542,
+          205.05499001592398,
+          202.87275302689523,
+          210.07126301992685,
+          191.1267979303375,
+          195.7447079475969,
+          193.97702696733177,
+          174.45267492439598,
+          173.56075101997703,
+          177.73644893895835,
+          188.0307130049914,
+          188.69609897956252,
+          193.16099002026021,
+          213.72673998121172,
+          208.87323399074376,
+          210.74508305173367,
+          206.52834605425596,
+          209.20411206316203,
+          207.014590036124,
+          239.61812106426805,
+          244.84776693861932,
+          236.89017596188933,
+          205.05411294288933,
+          199.90450597833842,
+          203.04302999284118,
+          233.20579493883997,
+          233.94246899988502,
+          230.84591899532825,
+          237.66759096179157,
+          238.3260449860245,
+          235.20129907410592,
+          213.80577597301453,
+          204.21631704084575,
+          207.62051409110427,
+          188.5606440482661,
+          189.32438699994236,
+          186.28768809139729,
+          190.96052390523255,
+          191.14503602031618,
+          191.10955204814672,
+          240.7635700656101,
+          240.91588601004332,
+          238.2279320154339,
+          189.89638204220682,
+          193.2525640586391,
+          189.91380895022303,
+          235.89110001921654,
+          230.65954505000263,
+          233.46229002345353,
+          218.30548497382551,
+          214.10464111249894,
+          225.7254389114678,
+          209.51748196966946,
+          218.82995800115168,
+          209.73093691281974,
+          224.91682996042073,
+          227.5346100796014,
+          223.2498680241406,
+          215.3046710882336,
+          212.42440899368376,
+          211.0112130176276,
+          229.13256497122347,
+          235.2906990563497,
+          228.04143803659827,
+          228.07736101094633,
+          226.19932400994003,
+          237.0322640053928,
+          206.50974696036428,
+          202.71268102806062,
+          207.4077109573409,
+          225.35658301785588,
+          225.43243900872767,
+          221.9859529286623,
+          187.59660609066486,
+          187.55395605694503,
+          185.41701906360686,
+          267.18204899225384,
+          266.1666300846264,
+          272.1434560371563,
+          175.01299199648201,
+          176.13641894422472,
+          178.62912500277162,
+          235.4511390440166,
+          225.28769297059625,
+          220.9243760444224,
+          180.58553093578666,
+          177.6834890479222,
+          181.78061407525092,
+          198.6339440336451,
+          203.23649502824992,
+          198.299748939462,
+          220.07018502335995,
+          215.88780300226063,
+          220.4348420491442,
+          175.580739043653,
+          172.66728705726564,
+          177.97983903437853,
+          149.80417001061141,
+          152.86863001529127,
+          154.0338440099731,
+          176.24311905819923,
+          169.96196506079286,
+          173.7027500057593,
+          228.47567207645625,
+          229.28571805823594,
+          232.26975300349295,
+          195.5401609884575,
+          199.28352697752416,
+          195.41465595830232,
+          185.76999206561595,
+          184.19321603141725,
+          189.82009089086205,
+          178.1517070485279,
+          177.95109294820577,
+          182.65560897998512,
+          236.77066795062274,
+          241.13673099782318,
+          243.1512090843171,
+          226.23263206332922,
+          225.1086599426344,
+          232.6268389588222,
+          174.81518699787557,
+          176.96434492245317,
+          178.3211639849469,
+          191.52648805174977,
+          198.7783779622987,
+          193.97435197606683,
+          163.1974979536608,
+          168.54313598014414,
+          164.49745697900653,
+          291.2172379437834,
+          286.2966089742258,
+          293.76126010902226,
+          209.473388036713,
+          212.13692403398454,
+          215.41883307509124,
+          244.4010319886729,
+          240.02610403113067,
+          241.22193595394492,
+          203.04200891405344,
+          207.64209097251296,
+          201.99642702937126,
+          187.25542398169637,
+          187.8949779784307,
+          189.2986010061577,
+          199.330062023364,
+          194.35616594273597,
+          193.8691649120301,
+          183.17965103778988,
+          183.07078594807535,
+          188.56743990909308,
+          183.41219797730446,
+          181.5198860131204,
+          182.3050909442827,
+          208.82747904397547,
+          212.60770806111395,
+          207.4116530129686,
+          170.63206899911165,
+          171.15195107180625,
+          167.30640700552613,
+          204.89315793383867,
+          210.97741299308836,
+          205.96610708162189,
+          163.72008400503546,
+          160.21532996091992,
+          158.5815519792959,
+          167.97695902641863,
+          164.80420192237943,
+          167.45081695262343,
+          166.4702210109681,
+          169.9480179231614,
+          163.01106300670654,
+          159.74513697437942,
+          162.82317298464477,
+          159.84967804979533,
+          217.08832494914532,
+          218.7269430141896,
+          214.3497399520129,
+          204.447525087744,
+          205.08722309023142,
+          209.13719304371625,
+          219.69184093177319,
+          217.8952640388161,
+          216.10306901857257,
+          160.77231604140252,
+          159.13803910370916,
+          157.70882705692202,
+          215.51993594039232,
+          217.7641550078988,
+          216.1399379838258,
+          186.016702093184,
+          193.39622207917273,
+          189.00164298247546,
+          219.92064302321523,
+          218.09289103839546,
+          217.13470097165555,
+          204.53065703622997,
+          202.51589303370565,
+          201.41848793718964,
+          192.71632994059473,
+          197.10370805114508,
+          193.07010201737285,
+          203.36652104742825,
+          198.2406040187925,
+          201.04481605812907,
+          229.06016290653497,
+          229.82064099051058,
+          227.7358410647139,
+          187.79217801056802,
+          187.89546797052026,
+          186.37943710200489,
+          215.9695300506428,
+          211.60483395215124,
+          210.14855394605547,
+          186.59387796651572,
+          184.10369101911783,
+          186.10959802754223,
+          224.72496004775167,
+          226.61305801011622,
+          224.50836200732738,
+          234.6927539911121,
+          240.35283003468066,
+          236.49729089811444,
+          215.0358750950545,
+          212.45758095756173,
+          215.5180670088157,
+          221.40262206085026,
+          221.86192905064672,
+          224.81702896766365,
+          191.82359497062862,
+          194.3308940390125,
+          188.97771800402552,
+          222.53862803336233,
+          219.82943010516465,
+          219.32350494898856,
+          204.32956097647548,
+          205.04942699335515,
+          202.83078600186855,
+          180.77425996307284,
+          180.25055690668523,
+          182.42015899159014,
+          166.91851802170277,
+          166.9039619155228,
+          168.15054905600846,
+          245.29819702729583,
+          237.77957796119153,
+          241.8072810396552,
+          173.52771398145705,
+          173.54122700635344,
+          173.51044807583094,
+          218.52010709699243,
+          232.737647020258,
+          226.98629298247397,
+          193.1835199939087,
+          194.38135903328657,
+          196.05316303204745,
+          206.35874499566853,
+          212.22416893579066,
+          206.1682300409302,
+          235.38014199584723,
+          230.4151860298589,
+          232.8505211044103,
+          257.7924069482833,
+          264.509353088215,
+          258.4777820156887,
+          294.6719710016623,
+          294.1704849945381,
+          303.17144200671464,
+          220.25753802154213,
+          220.1204280136153,
+          220.29467998072505,
+          221.57516004517674,
+          220.52566695492715,
+          222.2881109919399,
+          250.52707607392222,
+          246.33703602012247,
+          250.5987419281155,
+          316.416283021681,
+          308.6672880453989,
+          299.82491896953434,
+          244.9444499798119,
+          230.66039802506566,
+          239.84141706023365,
+          169.7071969974786,
+          167.25359507836401,
+          163.73967099934816,
+          196.4988069375977,
+          196.48401101585478,
+          194.6256220107898,
+          222.16133202891797,
+          219.5349569665268,
+          220.50376806873828,
+          268.3004499413073,
+          264.40415997058153,
+          268.69599404744804,
+          161.10957809723914,
+          161.3149680197239,
+          163.94936200231314,
+          190.1500599924475,
+          188.3449819870293,
+          189.4778759451583,
+          193.830078933388,
+          194.95727797038853,
+          185.05187204573303,
+          172.8496819268912,
+          169.4598440080881,
+          172.7421209216118,
+          285.7673520920798,
+          283.3661469630897,
+          287.51004696823657,
+          216.25313395634294,
+          211.23094798531383,
+          211.6212509572506,
+          167.30983194429427,
+          166.62453790195286,
+          167.23632800858468,
+          219.38720194157213,
+          226.96908400394022,
+          217.5600880291313,
+          184.17663301806897,
+          179.26423100288957,
+          180.40653504431248,
+          178.45323006622493,
+          180.71041605435312,
+          178.0412660446018,
+          160.61815700959414,
+          163.05333201307803,
+          161.19931102730334,
+          211.14086091984063,
+          203.97860696539283,
+          208.30539299640805,
+          171.20768001768738,
+          176.11659900285304,
+          176.30791396368295,
+          202.9347000643611,
+          207.3401079978794,
+          203.0239230953157,
+          240.01243489328772,
+          236.64735001511872,
+          240.01945403870195,
+          220.93239706009626,
+          213.35947408806533,
+          219.16019800119102,
+          199.05670906882733,
+          211.31417399737984,
+          198.1953768990934,
+          257.7152249868959,
+          245.39138202089816,
+          260.58717200066894,
+          268.7156789470464,
+          269.49716405943036,
+          266.6192869655788,
+          220.626228954643,
+          216.9490170199424,
+          229.5417949790135,
+          183.01248201169074,
+          186.17014097981155,
+          186.661254032515,
+          223.63733302336186,
+          226.02484503295273,
+          227.3232649313286,
+          246.91502994392067,
+          243.10022906865925,
+          241.7957450961694,
+          216.9858649140224,
+          226.85951902531087,
+          215.94273101072758,
+          242.93529498390853,
+          240.30172091443092,
+          245.18706207163632,
+          176.66911997366697,
+          175.7207689806819,
+          175.22528301924467,
+          206.01991307921708,
+          208.7604630505666,
+          210.7964790193364,
+          208.88580894097686,
+          213.71355501469225,
+          212.2988230548799,
+          193.82769195362926,
+          191.17444299627095,
+          193.2750450214371,
+          242.50645306892693,
+          238.45801199786365,
+          244.5840680738911,
+          196.86395407188684,
+          199.95522999670357,
+          197.1086880657822,
+          313.6232050601393,
+          315.6905210344121,
+          314.21033502556384,
+          260.7255110051483,
+          255.19999105017632,
+          257.7078790636733
+        ]
+      },
+      "mean_overlap_at_k": 0.9202666666666666,
+      "minimum_overlap_at_k": 0.66
+    }
+  },
+  "schema": "ii42_semantic_accelerator_scale_v2",
+  "warmups": 1
+}

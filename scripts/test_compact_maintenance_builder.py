@@ -11,9 +11,10 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from ii42_test_support import extension_control_root
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-ITEM_POINTER_BYTES = 6
 MB = 1024 * 1024
 STANDARD_HEADROOM_NUM = 3
 STANDARD_HEADROOM_DEN = 5
@@ -57,6 +58,19 @@ def parse_args() -> argparse.Namespace:
         choices=('compact', 'spill'),
         default='compact',
         help='Low-memory builder path to force with the memory budget.',
+    )
+    parser.add_argument(
+        '--extension-libdir',
+        type=Path,
+        help='Directory containing the staged ii42 shared library.',
+    )
+    parser.add_argument(
+        '--extension-control-dir',
+        type=Path,
+        help=(
+            'PostgreSQL share root containing extension/ii42.control, or '
+            'the extension directory itself.'
+        ),
     )
     return parser.parse_args()
 
@@ -124,10 +138,24 @@ def init_cluster(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         conf.write("\nlisten_addresses = ''\n")
         conf.write(f"unix_socket_directories = '{pgdata}'\n")
         conf.write(f'port = {port}\n')
-        conf.write("shared_preload_libraries = 'psql_bm25s'\n")
-        conf.write("psql_bm25s.shared_generation_cache_size = '16MB'\n")
-        conf.write("psql_bm25s.preload_timer_interval_ms = '1h'\n")
-        conf.write("psql_bm25s.maintenance_timer_interval_ms = '1h'\n")
+        conf.write("shared_preload_libraries = 'ii42'\n")
+        if args.extension_libdir is not None:
+            libdir = str(args.extension_libdir).replace("'", "''")
+            conf.write(
+                "dynamic_library_path = '"
+                f'{libdir}:$libdir'
+                "'\n"
+            )
+        if args.extension_control_dir is not None:
+            control_dir = str(args.extension_control_dir).replace("'", "''")
+            conf.write(
+                "extension_control_path = '"
+                f'{control_dir}:$system'
+                "'\n"
+            )
+        conf.write("ii42.shared_runtime_size = '16MB'\n")
+        conf.write("ii42.preload_timer_interval_ms = '1h'\n")
+        conf.write("ii42.maintenance_timer_interval_ms = '1h'\n")
 
 
 def start_cluster(args: argparse.Namespace, pgdata: Path) -> None:
@@ -164,13 +192,20 @@ def stop_cluster(args: argparse.Namespace, pgdata: Path) -> None:
     )
 
 
-def payload_from_state(state: str) -> int:
-    match = re.search(r'index_bytes=([0-9]+), docs=([0-9]+)', state)
-    if match is None:
-        raise AssertionError(f'could not parse generation state: {state}')
-    index_bytes = int(match.group(1))
-    docs = int(match.group(2))
-    return index_bytes + docs * ITEM_POINTER_BYTES
+def estimates_from_state(state: str) -> tuple[int, int, int]:
+    values = []
+    for name in (
+        'standard_estimated_bytes',
+        'compact_estimated_bytes',
+        'spill_estimated_bytes',
+    ):
+        match = re.search(rf'{name}=([0-9]+)', state)
+        if match is None:
+            raise AssertionError(
+                f'could not parse {name} from generation state: {state}'
+            )
+        values.append(int(match.group(1)))
+    return values[0], values[1], values[2]
 
 
 def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
@@ -179,7 +214,7 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         pgdata,
         port,
         '''
-        CREATE EXTENSION psql_bm25s;
+        CREATE EXTENSION ii42;
         CREATE TABLE docs (
             id int primary key,
             tokens text[] not null
@@ -193,10 +228,9 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         ]
         FROM generate_series(1, 30000) gs;
         CREATE INDEX docs_bm25_idx
-            ON docs USING psql_bm25s (tokens)
+            ON docs USING ii42 (tokens)
             WITH (
-                consistency = 'eventual',
-                auto_rebuild_threshold = 1
+                consistency = 'eventual'
             );
         ''',
     )
@@ -204,12 +238,23 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         args,
         pgdata,
         port,
-        "SELECT public.psql_bm25s_generation_cache_state('docs_bm25_idx');",
+        "SELECT public.ii42_index_runtime_state('docs_bm25_idx');",
     )
-    payload_bytes = payload_from_state(state)
-    standard_estimate = payload_bytes * 6
-    compact_estimate = payload_bytes * 4
-    spill_estimate = payload_bytes * 2
+    standard_estimate, compact_estimate, spill_estimate = (
+        estimates_from_state(state)
+    )
+    if (
+        standard_estimate <= 0
+        or compact_estimate <= 0
+        or spill_estimate <= 0
+        or standard_estimate != spill_estimate * 3
+        or compact_estimate != spill_estimate * 2
+    ):
+        raise AssertionError(
+            'v3 rebuild estimates do not describe the live payload: '
+            f'standard={standard_estimate} compact={compact_estimate} '
+            f'spill={spill_estimate}; state={state}'
+        )
     if args.builder == 'compact':
         target_budget_bytes = headroom_budget_bytes(
             compact_estimate,
@@ -240,7 +285,7 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
     if not budget_matches:
         raise AssertionError(
             'test corpus did not produce the requested builder budget window: '
-            f'builder={args.builder} payload={payload_bytes} '
+            f'builder={args.builder} '
             f'spill={spill_estimate} compact={compact_estimate} '
             f'standard={standard_estimate} budget={budget_bytes} '
             f'standard_admitted={standard_admitted} '
@@ -253,35 +298,46 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         pgdata,
         port,
         f'''
-        ALTER SYSTEM SET psql_bm25s.maintenance_rebuild_memory_budget =
+        ALTER SYSTEM SET ii42.maintenance_rebuild_memory_budget =
             '{budget_mb}MB';
         SELECT pg_reload_conf();
         INSERT INTO docs VALUES
             (30001, ARRAY['compact', 'maintenance', 'fresh']);
         ''',
     )
-    result = psql(
+    budget_state = psql(
         args,
         pgdata,
         port,
-        '''
-        SELECT result
-        FROM public.psql_bm25s_index_maintain_due(10)
-        WHERE index_oid = 'docs_bm25_idx'::regclass;
-        ''',
+        "SELECT public.ii42_index_runtime_state('docs_bm25_idx');",
     )
-    expected_builder = f'builder={args.builder}'
-    if 'maintained=true' not in result or expected_builder not in result:
+    if f'rebuild_builder={args.builder}' not in budget_state:
         raise AssertionError(
-            f'{args.builder} builder was not selected: {result}; '
-            f'payload={payload_bytes} budget_mb={budget_mb}'
+            f'v3 status did not select {args.builder}: {budget_state}'
+        )
+    psql(
+        args,
+        pgdata,
+        port,
+        'REINDEX INDEX docs_bm25_idx;',
+    )
+    rebuilt_state = psql(
+        args,
+        pgdata,
+        port,
+        "SELECT public.ii42_index_runtime_state('docs_bm25_idx');",
+    )
+    if f'rebuild_builder={args.builder}' not in rebuilt_state:
+        raise AssertionError(
+            f'v3 REINDEX did not preserve the {args.builder} admission '
+            f'window: {rebuilt_state}; budget_mb={budget_mb}'
         )
 
     psql(
         args,
         pgdata,
         port,
-        "SELECT public.psql_bm25s_generation_cache_preload('docs_bm25_idx');",
+        "SELECT public.ii42_index_preload('docs_bm25_idx');",
     )
     rows = psql(
         args,
@@ -289,7 +345,7 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         port,
         '''
         SELECT count(*)
-        FROM public.psql_bm25s_query(
+        FROM public.ii42_query(
             'docs_bm25_idx',
             'fresh',
             10,
@@ -300,13 +356,37 @@ def run_smoke(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         ''',
     )
     if rows != '1':
-        raise AssertionError(f'compact rebuild did not publish fresh row: {rows}')
+        raise AssertionError(
+            f'{args.builder} rebuild did not publish fresh row: {rows}'
+        )
 
 
 def main() -> None:
     args = parse_args()
+    if (args.extension_libdir is None) != (
+        args.extension_control_dir is None
+    ):
+        raise ValueError(
+            '--extension-libdir and --extension-control-dir must be '
+            'provided together'
+        )
+    if args.extension_libdir is not None:
+        args.extension_libdir = args.extension_libdir.expanduser().resolve()
+        libraries = (
+            args.extension_libdir / 'ii42.so',
+            args.extension_libdir / 'ii42.dylib',
+        )
+        if not any(path.is_file() for path in libraries):
+            raise FileNotFoundError(
+                'ii42 extension library is missing from '
+                f'{args.extension_libdir}'
+            )
+    if args.extension_control_dir is not None:
+        args.extension_control_dir = extension_control_root(
+            args.extension_control_dir
+        )
     tmpdir = Path(tempfile.mkdtemp(
-        prefix='psql-bm25s-compact-builder-',
+        prefix='ii42-compact-builder-',
         dir='/tmp',
     ))
     pgdata = tmpdir / 'pgdata'

@@ -47,9 +47,9 @@ METRICS = [
 ]
 
 ENGINES = [
-    ('python_reference_bm25s', 'Python reference'),
-    ('psql_bm25s_ids', 'psql_bm25s ids'),
-    ('psql_bm25s_text', 'psql_bm25s text[]'),
+    ('upstream_bm25s', 'bm25s'),
+    ('ii42_ids', 'ii42 ids'),
+    ('ii42_text', 'ii42 text[]'),
     ('pg_search', 'pg_search'),
     ('vchord_bm25', 'vchord_bm25'),
 ]

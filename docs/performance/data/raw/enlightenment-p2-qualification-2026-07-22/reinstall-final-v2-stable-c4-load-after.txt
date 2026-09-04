@@ -1,0 +1,34 @@
+2026-07-23T02:25:49-04:00
+ 02:25:49 up 3 days, 21:27,  4 users,  load average: 10.81, 14.01, 16.74
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 4  2 191292 61045680 30381680 248621452    0    2 18286  5187 20244   11 10  5 78  3  0  5
+ 5  1 191292 61062224 30381680 248621536    0    0   120  2266 25550 38311  5  3 78  3  0 10
+ 4  1 191292 61069456 30381680 248621536    0    0   168  1294 26470 38108  5  3 77  2  0 12
+ 6  0 191292 61089376 30381680 248621624    0    0   180  2729 28370 40712  7  5 76  4  0  9
+ 5  1 191292 61082824 30381680 248621628    0    0    96  2142 23621 33316  5  3 79  3  0  9
+Linux 7.0.14-5-pve (Enlightenment) 	07/23/2026 	_x86_64_	(24 CPU)
+
+02:25:53 AM   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+02:25:54 AM   118   3253975    0.00    1.00    0.00    0.00    1.00    20  postgres
+02:25:54 AM   118   3259711    0.00    0.00    0.00    1.00    0.00    10  postgres
+
+02:25:54 AM   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+02:25:55 AM   118   3253975    0.00    0.00    0.00    0.00    0.00    20  postgres
+02:25:55 AM   118   3259711    0.00    1.00    0.00    0.00    1.00    18  postgres
+
+02:25:55 AM   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+02:25:56 AM   118   3253975    0.00    0.00    0.00    0.00    0.00    20  postgres
+02:25:56 AM   118   3259711    1.00    0.00    0.00    1.00    1.00    11  postgres
+
+02:25:56 AM   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+02:25:57 AM   118   3253975    0.00    0.00    0.00    0.00    0.00    20  postgres
+02:25:57 AM   118   3259711    0.00    0.00    0.00    0.00    0.00    20  postgres
+
+02:25:57 AM   UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+02:25:58 AM   118   3253975    0.00    0.00    0.00    0.00    0.00    20  postgres
+02:25:58 AM   118   3259711    1.00    0.00    0.00    1.00    1.00     9  postgres
+
+Average:      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+Average:      118   3253975    0.00    0.20    0.00    0.00    0.20     -  postgres
+Average:      118   3259711    0.40    0.20    0.00    0.60    0.60     -  postgres

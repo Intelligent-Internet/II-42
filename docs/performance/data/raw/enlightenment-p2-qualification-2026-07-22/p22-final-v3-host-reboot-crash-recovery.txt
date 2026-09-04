@@ -1,0 +1,33 @@
+== boots ==
+IDX BOOT ID                          FIRST ENTRY                 LAST ENTRY
+ -1 3f20aaead8664030ab8df05278f3729c Thu 2026-07-23 01:17:23 EDT Thu 2026-07-23 04:10:17 EDT
+  0 67e8d6daa72b412ea5a5cccaaf9cab2d Thu 2026-07-23 04:13:16 EDT Thu 2026-07-23 04:17:02 EDT
+
+== previous boot tail ==
+Jul 23 04:10:14 Enlightenment systemd[1]: session-120190.scope: Consumed 1.802s CPU time, 8.5M memory peak.
+Jul 23 04:10:14 Enlightenment systemd-logind[1908]: Session 120190 logged out. Waiting for processes to exit.
+Jul 23 04:10:14 Enlightenment systemd-logind[1908]: Removed session 120190.
+Jul 23 04:10:15 Enlightenment su[3591908]: pam_unix(su:session): session closed for user leask
+Jul 23 04:10:15 Enlightenment systemd[1]: session-120187.scope: Deactivated successfully.
+Jul 23 04:10:15 Enlightenment su[3592345]: (to leask) root on none
+Jul 23 04:10:15 Enlightenment su[3592345]: pam_unix(su:session): session opened for user leask(uid=1000) by root(uid=0)
+Jul 23 04:10:15 Enlightenment systemd[1]: Started session-120187.scope - Session 120187 of User leask.
+Jul 23 04:10:17 Enlightenment sshd-session[3592413]: Received disconnect from 192.168.1.202 port 39308:11: disconnected by user
+Jul 23 04:10:17 Enlightenment sshd-session[3592413]: Disconnected from user leask 192.168.1.202 port 39308
+Jul 23 04:10:17 Enlightenment sshd-session[3592399]: Received disconnect from 192.168.1.202 port 39298:11: disconnected by user
+Jul 23 04:10:17 Enlightenment sshd-session[3592399]: Disconnected from user leask 192.168.1.202 port 39298
+
+== recovery ==
+2026-07-23 04:15:10.430 EDT [2416] LOG:  starting PostgreSQL 18.4 (Debian 18.4-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-07-23 04:15:10.461 EDT [11390] LOG:  database system was interrupted; last known up at 2026-07-23 04:05:51 EDT
+2026-07-23 04:15:11.067 EDT [11390] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-07-23 04:15:11.074 EDT [11390] LOG:  redo starts at 1495/EA612BA0
+2026-07-23 04:15:11.082 EDT [11390] LOG:  redo done at 1495/EA6831F8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-07-23 04:15:11.304 EDT [11388] LOG:  checkpoint complete: wrote 23 buffers (0.0%), wrote 2 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.146 s, sync=0.045 s, total=0.207 s; sync files=20, longest=0.005 s, average=0.003 s; distance=449 kB, estimate=449 kB; lsn=1495/EA683230, redo lsn=1495/EA683230
+2026-07-23 04:15:11.316 EDT [2416] LOG:  database system is ready to accept connections
+
+== catalog and indexes ==
+0.2.0
+ii42_p22_qrels.scifact_p22_baseline_idx|
+ii42_p22_qrels.scifact_p22_baseline_idx|true|true|none|true
+ii42_qual_20260722.arxiv_p2_idx|true|true|none|true

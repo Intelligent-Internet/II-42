@@ -1,0 +1,489 @@
+{
+  "api_version": "ii42_index_v1",
+  "benchmark_output": null,
+  "elapsed_ms": 392962.721,
+  "failed_step": null,
+  "output": "/tmp/ii42-unified-delta-product-maturity-final.json",
+  "package_binding": {
+    "postflight": {
+      "artifacts": [
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "7d36788297e67452770c9c1b4ce31596819d5316c743b5e23108a5ff59099fc0"
+          },
+          "installed_path": "/opt/homebrew/lib/postgresql@18/ii42.dylib",
+          "matched": true,
+          "name": "ii42.dylib",
+          "staged": {
+            "kind": "file",
+            "sha256": "7d36788297e67452770c9c1b4ce31596819d5316c743b5e23108a5ff59099fc0"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/lib/postgresql@18/ii42.dylib"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "7ca220e11d5304982709e2300389394c0930a8b82c7248d4d105429d477989db"
+          },
+          "installed_path": "/opt/homebrew/share/postgresql@18/extension/ii42.control",
+          "matched": true,
+          "name": "ii42.control",
+          "staged": {
+            "kind": "file",
+            "sha256": "7ca220e11d5304982709e2300389394c0930a8b82c7248d4d105429d477989db"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/share/postgresql@18/extension/ii42.control"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "8427060869af585102b40b7966e19cbfd9c65fbfe0aeb65399dd25ebca715703"
+          },
+          "installed_path": "/opt/homebrew/share/postgresql@18/extension/ii42--0.2.0.sql",
+          "matched": true,
+          "name": "ii42--0.2.0.sql",
+          "staged": {
+            "kind": "file",
+            "sha256": "8427060869af585102b40b7966e19cbfd9c65fbfe0aeb65399dd25ebca715703"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/share/postgresql@18/extension/ii42--0.2.0.sql"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "30afadcfc3c704f7671f8430d6252956651c1972373901d2be629da2e6a4d8ee"
+          },
+          "installed_path": "/opt/homebrew/lib/postgresql@18/libonnxruntime.1.26.0.dylib",
+          "matched": true,
+          "name": "libonnxruntime.1.26.0.dylib",
+          "staged": {
+            "kind": "file",
+            "sha256": "30afadcfc3c704f7671f8430d6252956651c1972373901d2be629da2e6a4d8ee"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/lib/postgresql@18/libonnxruntime.1.26.0.dylib"
+        },
+        {
+          "installed": {
+            "kind": "symlink",
+            "target": "libonnxruntime.1.26.0.dylib"
+          },
+          "installed_path": "/opt/homebrew/lib/postgresql@18/libonnxruntime.1.dylib",
+          "matched": true,
+          "name": "libonnxruntime.1.dylib",
+          "staged": {
+            "kind": "symlink",
+            "target": "libonnxruntime.1.26.0.dylib"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/lib/postgresql@18/libonnxruntime.1.dylib"
+        }
+      ],
+      "build_info": {
+        "Built at": "2026-07-27T00:07:49Z",
+        "Git commit": "3bc9327f0934c30319d40eec73d41b52b6848eca",
+        "Git tree": "dirty",
+        "ONNX Runtime": "1.26.0",
+        "ONNX Runtime linkage": "bundled in PostgreSQL pkglibdir",
+        "Package": "ii42-unified-delta-final",
+        "PostgreSQL major": "18",
+        "Version": "0.2.0",
+        "pg_config": "/opt/homebrew/opt/postgresql@18/bin/pg_config"
+      },
+      "build_info_sha256": "ccd6d8087e4255266d0289a6000701034fe07e332727c06c78d39a36b1e8d468",
+      "errors": [],
+      "extension_version": "0.2.0",
+      "fingerprint": "3ef56f72926c09224735be2795c5e454c97857e5ca56691265a0c2aeb3359fe9",
+      "package_root": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl",
+      "passed": true,
+      "pg_bin": "/opt/homebrew/opt/postgresql@18/bin",
+      "pg_config": {
+        "pkglibdir": "/opt/homebrew/lib/postgresql@18",
+        "sharedir": "/opt/homebrew/share/postgresql@18",
+        "version": "PostgreSQL 18.4 (Homebrew)"
+      }
+    },
+    "preflight": {
+      "artifacts": [
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "7d36788297e67452770c9c1b4ce31596819d5316c743b5e23108a5ff59099fc0"
+          },
+          "installed_path": "/opt/homebrew/lib/postgresql@18/ii42.dylib",
+          "matched": true,
+          "name": "ii42.dylib",
+          "staged": {
+            "kind": "file",
+            "sha256": "7d36788297e67452770c9c1b4ce31596819d5316c743b5e23108a5ff59099fc0"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/lib/postgresql@18/ii42.dylib"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "7ca220e11d5304982709e2300389394c0930a8b82c7248d4d105429d477989db"
+          },
+          "installed_path": "/opt/homebrew/share/postgresql@18/extension/ii42.control",
+          "matched": true,
+          "name": "ii42.control",
+          "staged": {
+            "kind": "file",
+            "sha256": "7ca220e11d5304982709e2300389394c0930a8b82c7248d4d105429d477989db"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/share/postgresql@18/extension/ii42.control"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "8427060869af585102b40b7966e19cbfd9c65fbfe0aeb65399dd25ebca715703"
+          },
+          "installed_path": "/opt/homebrew/share/postgresql@18/extension/ii42--0.2.0.sql",
+          "matched": true,
+          "name": "ii42--0.2.0.sql",
+          "staged": {
+            "kind": "file",
+            "sha256": "8427060869af585102b40b7966e19cbfd9c65fbfe0aeb65399dd25ebca715703"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/share/postgresql@18/extension/ii42--0.2.0.sql"
+        },
+        {
+          "installed": {
+            "kind": "file",
+            "sha256": "30afadcfc3c704f7671f8430d6252956651c1972373901d2be629da2e6a4d8ee"
+          },
+          "installed_path": "/opt/homebrew/lib/postgresql@18/libonnxruntime.1.26.0.dylib",
+          "matched": true,
+          "name": "libonnxruntime.1.26.0.dylib",
+          "staged": {
+            "kind": "file",
+            "sha256": "30afadcfc3c704f7671f8430d6252956651c1972373901d2be629da2e6a4d8ee"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/lib/postgresql@18/libonnxruntime.1.26.0.dylib"
+        },
+        {
+          "installed": {
+            "kind": "symlink",
+            "target": "libonnxruntime.1.26.0.dylib"
+          },
+          "installed_path": "/opt/homebrew/lib/postgresql@18/libonnxruntime.1.dylib",
+          "matched": true,
+          "name": "libonnxruntime.1.dylib",
+          "staged": {
+            "kind": "symlink",
+            "target": "libonnxruntime.1.26.0.dylib"
+          },
+          "staged_path": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl/opt/homebrew/lib/postgresql@18/libonnxruntime.1.dylib"
+        }
+      ],
+      "build_info": {
+        "Built at": "2026-07-27T00:07:49Z",
+        "Git commit": "3bc9327f0934c30319d40eec73d41b52b6848eca",
+        "Git tree": "dirty",
+        "ONNX Runtime": "1.26.0",
+        "ONNX Runtime linkage": "bundled in PostgreSQL pkglibdir",
+        "Package": "ii42-unified-delta-final",
+        "PostgreSQL major": "18",
+        "Version": "0.2.0",
+        "pg_config": "/opt/homebrew/opt/postgresql@18/bin/pg_config"
+      },
+      "build_info_sha256": "ccd6d8087e4255266d0289a6000701034fe07e332727c06c78d39a36b1e8d468",
+      "errors": [],
+      "extension_version": "0.2.0",
+      "fingerprint": "3ef56f72926c09224735be2795c5e454c97857e5ca56691265a0c2aeb3359fe9",
+      "package_root": "/private/tmp/ii42-stage-unified-delta-final.lkuNdl",
+      "passed": true,
+      "pg_bin": "/opt/homebrew/opt/postgresql@18/bin",
+      "pg_config": {
+        "pkglibdir": "/opt/homebrew/lib/postgresql@18",
+        "sharedir": "/opt/homebrew/share/postgresql@18",
+        "version": "PostgreSQL 18.4 (Homebrew)"
+      }
+    },
+    "stable": true
+  },
+  "passed": true,
+  "pg_bin": "/opt/homebrew/opt/postgresql@18/bin",
+  "steps": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_product_convergence_inventory.py"
+      ],
+      "elapsed_ms": 770.997,
+      "name": "product convergence inventory",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "product convergence inventory ok\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "py_compile",
+        "scripts/test_onnxruntime_smoke.py",
+        "scripts/test_onnxruntime_provider_matrix.py",
+        "scripts/test_extension_schema_smoke.py",
+        "scripts/test_extension_regression_temp_pg.py",
+        "scripts/test_empty_unlogged_lifecycle_smoke.py",
+        "scripts/test_v2_crash_smoke.py",
+        "scripts/test_payload_health_corruption_smoke.py",
+        "scripts/test_p2_mutable_lifecycle_smoke.py",
+        "scripts/test_concurrent_ddl_lifecycle_smoke.py",
+        "scripts/test_onnxruntime_resource_soak.py",
+        "scripts/test_runtime_service_required_smoke.py",
+        "scripts/test_runtime_service_temp_pg.py",
+        "scripts/test_runtime_service_privilege_smoke.py",
+        "scripts/test_runtime_service_restart_smoke.py",
+        "scripts/test_replication_lifecycle_smoke.py",
+        "scripts/test_psql_bm25s_source_migration_smoke.py",
+        "scripts/test_model_lifecycle_medium_perf.py",
+        "scripts/benchmark_ii42_product_path.py",
+        "scripts/run_product_maturity_suite.py"
+      ],
+      "elapsed_ms": 99.252,
+      "name": "product script py_compile",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_extension_regression_temp_pg.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin"
+      ],
+      "elapsed_ms": 1437.184,
+      "name": "isolated product regression",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "# initializing database system by running initdb\n# using temp instance on port 55933 with PID 94493\nok 1         - ii42_integration                          293 ms\n1..1\n# All 1 tests passed.\nIsolated extension regression passed\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_extension_schema_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin"
+      ],
+      "elapsed_ms": 1668.1,
+      "name": "isolated extension schema placement smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "extension schema smoke passed\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_onnxruntime_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin"
+      ],
+      "elapsed_ms": 1097.311,
+      "name": "isolated ONNX Runtime ABI smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"api_version\": \"ii42_index_v1\",\n  \"route\": \"shared ONNX Runtime worker\",\n  \"status\": \"passed\"\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_onnxruntime_provider_matrix.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--providers",
+        "cpu",
+        "--iterations",
+        "2",
+        "--strict",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 1681.443,
+      "name": "ONNX Runtime CPU provider matrix",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "0.84773347\n        },\n        \"latency_ms\": 3.041,\n        \"provider\": {\n          \"active\": \"cpu\",\n          \"available\": [\n            \"CoreMLExecutionProvider\",\n            \"CPUExecutionProvider\"\n          ],\n          \"requested\": \"cpu\"\n        },\n        \"runtime\": \"onnxruntime\",\n        \"runtime_abi\": \"ii42_p2_unified_text_atoms_v2\",\n        \"runtime_io\": {\n          \"attention_mask\": \"attention_mask\",\n          \"input_ids\": \"input_ids\",\n          \"semantic_ids\": \"semantic_ids\",\n          \"semantic_weights\": \"semantic_weights\"\n        },\n        \"session_cache_hit\": true,\n        \"session_load_ms\": 0.0,\n        \"tokenizer\": {\n          \"aggregation\": \"dimension_max_top_k\",\n          \"max_length\": 512,\n          \"token_count\": 7,\n          \"truncated\": false,\n          \"type\": \"roberta_byte_bpe\",\n          \"window_count\": 1,\n          \"window_overlap\": 64,\n          \"window_stride\": 446\n        },\n        \"weights\": [\n          1,\n          1,\n          1,\n          2.65482926,\n          1.68897092,\n          1.8757931,\n          0.123340882,\n          0.314644068,\n          0.572318256,\n          0.242760986,\n          0.243163109,\n          0.281962335,\n          0.895555556,\n          0.193635315,\n          0.243135586,\n          0.424835742,\n          3.56689525,\n          0.336028665,\n          0.779614985,\n          4.3893137,\n          0.365970492,\n          0.194473833,\n          0.326345623,\n          0.487480581,\n          0.138006076,\n          0.728484213,\n          0.743733943,\n          0.65384078,\n          3.28221989,\n          4.39449978,\n          0.746960044,\n          2.26736617,\n          0.160456046,\n          0.654701471,\n          0.4163526,\n          0.240782425,\n          0.399211556,\n          0.237112895,\n          0.216690004,\n          0.321751952,\n          3.80158067,\n          7.23254299,\n          0.509546399,\n          1.16981459,\n          3.40306973,\n          1.18499267,\n          0.388496846,\n          0.523016274,\n          0.49443084,\n          0.359977603,\n          0.566121876,\n          2.53184414,\n          0.542615592\n        ]\n      },\n      \"iterations\": 2,\n      \"native_index\": true,\n      \"provider\": \"cpu\",\n      \"service_last\": {\n        \"accelerator_packages\": [\n          \"cuda\",\n          \"coreml\"\n        ],\n        \"active_provider\": \"cpu\",\n        \"api_version\": \"ii42_index_v1\",\n        \"backend_model_loading_allowed\": false,\n        \"batch_successes\": 1,\n        \"busy_rejections\": 0,\n        \"canceled_requests\": 0,\n        \"completed_request_id\": 0,\n        \"cpu_builtin\": true,\n        \"encoded_texts\": 7,\n        \"failures\": 0,\n        \"fallback_order\": [\n          \"cuda\",\n          \"coreml\",\n          \"cpu\"\n        ],\n        \"last_batch_size\": 1,\n        \"last_request_at\": 838426311887527,\n        \"last_response_at\": 838426311892149,\n        \"max_observed_batch_size\": 3,\n        \"max_supported_batch_size\": 32,\n        \"model_owner\": \"runtime_worker\",\n        \"onnxruntime_intra_op_threads\": 0,\n        \"operation\": \"runtime_service_status\",\n        \"orphan_responses\": 0,\n        \"processing_batch_count\": 0,\n        \"provider\": \"cpu\",\n        \"queue_capacity\": 64,\n        \"queue_depth\": 0,\n        \"queue_max_depth\": 1,\n        \"queue_max_wait_ms\": 1,\n        \"queue_policy\": \"fifo_bounded\",\n        \"queue_timeout_policy\": \"none\",\n        \"queue_total_wait_ms\": 1,\n        \"queue_waits\": 1,\n        \"ready_for_text_encoding\": true,\n        \"request_id\": 5,\n        \"request_pending\": false,\n        \"request_processing\": false,\n        \"requests\": 5,\n        \"response_ready\": false,\n        \"runtime_max_us\": 392717,\n        \"runtime_runs\": 5,\n        \"runtime_total_us\": 526749,\n        \"shared_memory_available\": true,\n        \"successes\": 5,\n        \"worker_pid\": 94705,\n        \"worker_ready\": true,\n        \"worker_recoveries\": 0,\n        \"worker_started\": true,\n        \"worker_started_at\": 838426311180732\n      },\n      \"status\": \"passed\"\n    }\n  ],\n  \"status\": \"passed\"\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_empty_unlogged_lifecycle_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 5539.755,
+      "name": "empty and UNLOGGED lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "      \"details\": {\n          \"auto_rebuild_churn_ratio\": null,\n          \"auto_rebuild_delta_bytes\": null,\n          \"auto_rebuild_threshold\": null,\n          \"consistency\": \"realtime\",\n          \"delta_bytes\": 0,\n          \"delta_records\": 0,\n          \"docs\": 2,\n          \"index_bytes\": 641856,\n          \"index_name\": \"lifecycle.unlogged_sae_idx\",\n          \"pages\": 81,\n          \"pending_deletes\": 0,\n          \"pending_writes\": 0,\n          \"query_overlay_max_bytes\": null,\n          \"query_overlay_max_records\": null,\n          \"rebuilds\": 1,\n          \"source_type\": \"text\",\n          \"stale\": false\n        },\n        \"generation\": {\n          \"atomic\": true,\n          \"cache_epoch\": 1,\n          \"contract_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n          \"delta\": {\n            \"bytes\": 0,\n            \"pages\": 0,\n            \"records\": 0,\n            \"start_block\": 81\n          },\n          \"docs\": 2,\n          \"generation\": 1,\n          \"generation_id\": \"16611/1/1\",\n          \"health\": \"ok\",\n          \"health_reason\": \"ok\",\n          \"layout\": {\n            \"matches\": true,\n            \"physical\": \"bm25s_sae\",\n            \"requested\": \"bm25s_sae\"\n          },\n          \"posting\": {\n            \"active\": true,\n            \"bytes\": 641856,\n            \"pages\": 79,\n            \"present\": true,\n            \"reason\": \"ok\",\n            \"record_count\": 2,\n            \"role\": \"unified_posting\",\n            \"signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n            \"start_block\": 2,\n            \"valid\": true\n          },\n          \"primary\": {\n            \"bytes\": 12,\n            \"pages\": 1,\n            \"payload_bytes\": 0,\n            \"role\": \"identity_map\",\n            \"start_block\": 1,\n            \"tid_bytes\": 12\n          },\n          \"rebuilds\": 1,\n          \"valid\": true\n        },\n        \"index_name\": \"lifecycle.unlogged_sae_idx\",\n        \"index_ready\": true,\n        \"index_type\": \"bm25s_sae\",\n        \"index_valid\": true,\n        \"model_artifacts_valid\": true,\n        \"options\": {\n          \"access_method\": \"ii42\",\n          \"atom_space\": \"p2_m1934_b1125_nfcorpus_3f2239c6b5ea\",\n          \"consistency\": \"realtime\",\n          \"index_name\": \"lifecycle.unlogged_sae_idx\",\n          \"index_type\": \"bm25s_sae\",\n          \"lifecycle\": \"postgresql_index\",\n          \"model\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n          \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n          \"model_path_source\": \"index\",\n          \"model_runtime_error\": null,\n          \"payload_owner\": \"index_relation\",\n          \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n          \"sae_enabled\": true,\n          \"sae_explicit\": true,\n          \"sae_route_source\": \"explicit\",\n          \"scoring_profile\": \"p2_unified_sparse_dot_v1\",\n          \"semantic_configuration_error\": null,\n          \"semantic_configuration_ready\": true\n        },\n        \"query_ready\": true,\n        \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"runtime_signature_matches\": true,\n        \"sae_enabled\": true,\n        \"status_error\": null\n      }\n    },\n    \"sae_contract_stability\": {\n      \"after_crash\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"after_insert\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"initial\": \"5f24130eb550dd59f88fdab3cc1c1dda\"\n    },\n    \"unlogged_rows_after_crash\": {\n      \"unlogged_bm25\": 0,\n      \"unlogged_sae\": 0\n    }\n  },\n  \"gates\": {\n    \"crash_restores_valid_empty_unlogged_generations\": true,\n    \"fast_restart_preserves_all_generations\": true,\n    \"first_insert_advances_empty_indexes\": true,\n    \"first_insert_after_crash_rebuilds_both_routes\": true,\n    \"logged_empty_indexes_are_query_ready\": true,\n    \"unlogged_build_preserves_main_generation\": true,\n    \"unlogged_contract_remains_current\": true\n  },\n  \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"passed_gates\": 7,\n  \"route\": \"empty and UNLOGGED unified index lifecycle\",\n  \"total_gates\": 7\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_v2_crash_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin"
+      ],
+      "elapsed_ms": 1481.932,
+      "name": "mutable BM25 crash recovery smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_runtime_service_required_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 1057.593,
+      "name": "runtime service required smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Runtime service required smoke passed\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_runtime_service_privilege_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 1856.249,
+      "name": "runtime service privilege smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Runtime service privilege smoke passed\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_runtime_service_temp_pg.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 22237.077,
+      "name": "runtime service temp pg smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "Runtime service temp PostgreSQL smoke passed\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_replication_lifecycle_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 23914.687,
+      "name": "physical replication lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "ady_entries\": 2,\n          \"refcounted_entries\": 0,\n          \"relation_entry_eviction_bytes\": 0,\n          \"relation_entry_evictions\": 0,\n          \"resident\": false,\n          \"reusable_bytes\": 0,\n          \"reusable_entries\": 0,\n          \"tombstone_current\": false,\n          \"tombstone_entries\": 0,\n          \"tombstone_loading\": false,\n          \"unified_delta_cache_current\": false,\n          \"unified_delta_cache_entries\": 0,\n          \"unified_delta_cache_loading\": false,\n          \"unified_warm_entries\": 0,\n          \"used\": 880\n        }\n      }\n    },\n    \"initial_replay\": {\n      \"bm25_generation\": \"16610/1/1\",\n      \"conversion_generation\": \"16612/1/1\",\n      \"conversion_hits\": [\n        [\n          1,\n          0.6337457\n        ],\n        [\n          2,\n          0.24141401\n        ],\n        [\n          3,\n          0.053412557\n        ]\n      ],\n      \"semantic_generation\": \"16611/1/1\",\n      \"semantic_hits\": [\n        [\n          1,\n          9.789966\n        ],\n        [\n          2,\n          9.234287\n        ]\n      ]\n    },\n    \"reindex\": {\n      \"after\": {\n        \"bm25\": 16613,\n        \"semantic\": 16614\n      },\n      \"before\": {\n        \"bm25\": 16610,\n        \"semantic\": 16611\n      },\n      \"semantic_hits\": [\n        [\n          2,\n          27.901812\n        ]\n      ]\n    },\n    \"same_relation_type_conversion_replay\": {\n      \"bm25_to_sae\": {\n        \"after_filenode\": 16615,\n        \"before_filenode\": 16612,\n        \"hits\": [\n          [\n            1,\n            31.502348\n          ],\n          [\n            2,\n            17.921776\n          ],\n          [\n            3,\n            17.278482\n          ]\n        ],\n        \"pending_error\": \"ii42 index generation does not match the configured model\\nDETAIL:  generation signature 106f62828780c85098ac5bad7740c019, runtime signature 5f24130eb550dd59f88fdab3cc1c1dda\\nHINT:  REINDEX the ii42 index after changing model_path, the default model checkout, or any model artifact.\\nCONTEXT:  PL/pgSQL function ii42_encode_text_internal(regclass,text) line 32 at RAISE\\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer) line 14 at assignment\\nSQL statement \\\"SELECT\\n            model_hit.ctid,\\n            model_hit.doc_ord AS doc_id,\\n            model_hit.score::real\\n        FROM ii42_search_semantic_internal(\\n            index_name,\\n            query_text,\\n            k\\n        ) AS model_hit\\n        ORDER BY model_hit.rank\\\"\\nPL/pgSQL function ii42_search(regclass,text,integer,real[],boolean,text[],boolean,boolean) line 116 at RETURN QUERY\",\n        \"pending_layout\": {\n          \"matches\": false,\n          \"physical\": \"bm25s\",\n          \"requested\": \"bm25s_sae\"\n        }\n      },\n      \"sae_to_bm25\": {\n        \"after_filenode\": 16616,\n        \"before_filenode\": 16615,\n        \"hits\": [\n          [\n            1,\n            0.6337457\n          ],\n          [\n            2,\n            0.24141401\n          ],\n          [\n            3,\n            0.053412557\n          ]\n        ],\n        \"pending_error\": \"exact BM25 access is unavailable for this ii42 generation\\nDETAIL:  The index stores one unified posting payload, not a duplicate exact-BM25 payload.\\nHINT:  Use ii42_search(index_name, query_text, k).\\nCONTEXT:  SQL statement \\\"SELECT *\\n    FROM ii42_query(\\n        index_name,\\n        query_text,\\n        k,\\n        weight_mask,\\n        lowercase,\\n        stopwords,\\n        stem_english,\\n        fold_diacritics\\n    )\\\"\\nPL/pgSQL function ii42_search(regclass,text,integer,real[],boolean,text[],boolean,boolean) line 130 at RETURN QUERY\",\n        \"pending_layout\": {\n          \"matches\": false,\n          \"physical\": \"bm25s_sae\",\n          \"requested\": \"bm25s\"\n        }\n      }\n    },\n    \"update_and_insert_replay\": {\n      \"semantic_hits\": [\n        [\n          4,\n          18.780245\n        ],\n        [\n          2,\n          17.704489\n        ]\n      ]\n    }\n  },\n  \"passed\": true,\n  \"suite\": \"physical_replication_lifecycle\"\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_payload_health_corruption_smoke.py",
+        "--bindir",
+        "/opt/homebrew/opt/postgresql@18/bin"
+      ],
+      "elapsed_ms": 1771.295,
+      "name": "payload health corruption smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "payload health corruption smoke passed\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_onnxruntime_resource_soak.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--iterations",
+        "1000",
+        "--sample-every",
+        "50",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+        "--output",
+        "/tmp/ii42-unified-delta-product-maturity-final.onnx-soak.json"
+      ],
+      "elapsed_ms": 6191.309,
+      "name": "ONNX Runtime resource soak",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "e_intra_op_threads\": 0,\n    \"operation\": \"runtime_service_status\",\n    \"orphan_responses\": 0,\n    \"processing_batch_count\": 0,\n    \"provider\": \"cpu\",\n    \"queue_capacity\": 64,\n    \"queue_depth\": 0,\n    \"queue_max_depth\": 1,\n    \"queue_max_wait_ms\": 1,\n    \"queue_policy\": \"fifo_bounded\",\n    \"queue_timeout_policy\": \"none\",\n    \"queue_total_wait_ms\": 93,\n    \"queue_waits\": 93,\n    \"ready_for_text_encoding\": true,\n    \"request_id\": 1020,\n    \"request_pending\": false,\n    \"request_processing\": false,\n    \"requests\": 1020,\n    \"response_ready\": false,\n    \"runtime_max_us\": 390203,\n    \"runtime_runs\": 1020,\n    \"runtime_total_us\": 3571219,\n    \"shared_memory_available\": true,\n    \"successes\": 1020,\n    \"worker_pid\": 96866,\n    \"worker_ready\": true,\n    \"worker_recoveries\": 0,\n    \"worker_started\": true,\n    \"worker_started_at\": 838426370762017\n  },\n  \"runtime_before\": {\n    \"accelerator_packages\": [\n      \"cuda\",\n      \"coreml\"\n    ],\n    \"active_provider\": \"cpu\",\n    \"api_version\": \"ii42_index_v1\",\n    \"backend_model_loading_allowed\": false,\n    \"batch_successes\": 0,\n    \"busy_rejections\": 0,\n    \"canceled_requests\": 0,\n    \"completed_request_id\": 0,\n    \"cpu_builtin\": true,\n    \"encoded_texts\": 20,\n    \"failures\": 0,\n    \"fallback_order\": [\n      \"cuda\",\n      \"coreml\",\n      \"cpu\"\n    ],\n    \"last_batch_size\": 1,\n    \"last_request_at\": 838426371321991,\n    \"last_response_at\": 838426371325049,\n    \"max_observed_batch_size\": 1,\n    \"max_supported_batch_size\": 32,\n    \"model_owner\": \"runtime_worker\",\n    \"onnxruntime_intra_op_threads\": 0,\n    \"operation\": \"runtime_service_status\",\n    \"orphan_responses\": 0,\n    \"processing_batch_count\": 0,\n    \"provider\": \"cpu\",\n    \"queue_capacity\": 64,\n    \"queue_depth\": 0,\n    \"queue_max_depth\": 1,\n    \"queue_max_wait_ms\": 1,\n    \"queue_policy\": \"fifo_bounded\",\n    \"queue_timeout_policy\": \"none\",\n    \"queue_total_wait_ms\": 1,\n    \"queue_waits\": 1,\n    \"ready_for_text_encoding\": true,\n    \"request_id\": 20,\n    \"request_pending\": false,\n    \"request_processing\": false,\n    \"requests\": 20,\n    \"response_ready\": false,\n    \"runtime_max_us\": 390203,\n    \"runtime_runs\": 20,\n    \"runtime_total_us\": 442748,\n    \"shared_memory_available\": true,\n    \"successes\": 20,\n    \"worker_pid\": 96866,\n    \"worker_ready\": true,\n    \"worker_recoveries\": 0,\n    \"worker_started\": true,\n    \"worker_started_at\": 838426370762017\n  },\n  \"shared_runtime_phase\": {\n    \"growth_kb\": 6528,\n    \"iterations\": 1000,\n    \"samples\": [\n      {\n        \"iteration\": 0,\n        \"rss_kb\": 393600\n      },\n      {\n        \"iteration\": 50,\n        \"rss_kb\": 399664\n      },\n      {\n        \"iteration\": 100,\n        \"rss_kb\": 399696\n      },\n      {\n        \"iteration\": 150,\n        \"rss_kb\": 399728\n      },\n      {\n        \"iteration\": 200,\n        \"rss_kb\": 399728\n      },\n      {\n        \"iteration\": 250,\n        \"rss_kb\": 399728\n      },\n      {\n        \"iteration\": 300,\n        \"rss_kb\": 399728\n      },\n      {\n        \"iteration\": 350,\n        \"rss_kb\": 399728\n      },\n      {\n        \"iteration\": 400,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 450,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 500,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 550,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 600,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 650,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 700,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 750,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 800,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 850,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 900,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 950,\n        \"rss_kb\": 400128\n      },\n      {\n        \"iteration\": 1000,\n        \"rss_kb\": 400128\n      }\n    ],\n    \"successful_rows\": 1000,\n    \"tail_slope_kb_per_iteration\": 0.0\n  },\n  \"worker_pid\": 96866\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_p2_mutable_lifecycle_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+        "--soak-queries",
+        "300",
+        "--mixed-soak-cycles",
+        "8",
+        "--output",
+        "/tmp/ii42-unified-delta-product-maturity-final.model-lifecycle.json"
+      ],
+      "elapsed_ms": 23952.314,
+      "name": "production model unified lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "\"consistency\": \"realtime\",\n        \"index_name\": \"p2_mutable.docs_idx\",\n        \"index_type\": \"bm25s_sae\",\n        \"lifecycle\": \"postgresql_index\",\n        \"model\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path_source\": \"index\",\n        \"model_runtime_error\": null,\n        \"payload_owner\": \"index_relation\",\n        \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"sae_enabled\": true,\n        \"sae_explicit\": true,\n        \"sae_route_source\": \"explicit\",\n        \"scoring_profile\": \"p2_unified_sparse_dot_v1\",\n        \"semantic_configuration_error\": null,\n        \"semantic_configuration_ready\": true\n      },\n      \"query_ready\": true,\n      \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"runtime_signature_matches\": true,\n      \"sae_enabled\": true,\n      \"status_error\": null\n    }\n  },\n  \"gates\": {\n    \"aborted_dml_does_not_publish_generation\": true,\n    \"bm25_aborted_dml_is_hidden_and_converges\": true,\n    \"bm25_build_options_are_generation_bound\": true,\n    \"bm25_cold_restart_preserves_results\": true,\n    \"bm25_contract_drift_forces_heap_rebuild\": true,\n    \"bm25_crash_restart_preserves_results\": true,\n    \"bm25_savepoint_rollback_is_hidden_and_converges\": true,\n    \"bm25_uses_primary_generation_without_posting_section\": true,\n    \"cold_restart_preserves_results\": true,\n    \"corrupt_artifact_fails_closed\": true,\n    \"crash_restart_preserves_results\": true,\n    \"create_index_builds_unified_generation\": true,\n    \"delete_is_immediately_hidden\": true,\n    \"delete_waits_for_physical_vacuum\": true,\n    \"drop_removes_complete_index_only\": true,\n    \"drop_reports_complete_relation_payloads\": true,\n    \"eventual_deferred_maintain_converges_generation\": true,\n    \"eventual_maintain_converges_unified_generation\": true,\n    \"eventual_sae_uses_relation_owned_unified_delta\": true,\n    \"eventual_uses_one_pending_generation\": true,\n    \"failed_rebuild_rolls_back_complete_generation\": true,\n    \"index_type_change_requires_atomic_reindex\": true,\n    \"insert_advances_shared_generation\": true,\n    \"insert_is_semantically_visible\": true,\n    \"long_tail_changes_semantic_atoms\": true,\n    \"long_text_single_batch_runtime_parity\": true,\n    \"long_text_uses_complete_windowed_input\": true,\n    \"mixed_crud_soak_converges\": true,\n    \"model_change_fails_closed_until_reindex\": true,\n    \"no_generation_or_sidecar_relations\": true,\n    \"nonindexed_hot_update_preserves_generation\": true,\n    \"oversized_input_fails_explicitly\": true,\n    \"query_soak_is_stable\": true,\n    \"reindex_preserves_results\": true,\n    \"restoring_generation_model_restores_readiness\": true,\n    \"restoring_valid_artifacts_restores_readiness\": true,\n    \"sae_preload_tracks_generation_replacement\": true,\n    \"sae_preload_warms_only_unified_generation\": true,\n    \"sae_rejects_duplicate_exact_bm25_routes\": true,\n    \"savepoint_commit_publishes_generation\": true,\n    \"savepoint_rollback_does_not_publish_generation\": true,\n    \"short_text_frozen_runtime_parity\": true,\n    \"short_text_single_batch_runtime_parity\": true,\n    \"unified_delta_matches_compaction_and_reindex\": true,\n    \"unified_inspection_is_available_to_product_role\": true,\n    \"unified_search_is_available_to_product_role\": true,\n    \"update_advances_shared_generation\": true,\n    \"update_is_semantically_visible\": true,\n    \"vacuum_converges_unified_generation\": true\n  },\n  \"metrics_ms\": {\n    \"cluster_start_ms\": 230.531,\n    \"cold_restart_ms\": 421.882,\n    \"crash_restart_ms\": 343.334,\n    \"create_index_ms\": 437.852,\n    \"full_text_window_audit_ms\": 1045.595,\n    \"unified_delta_crud_differential_ms\": 1903.77\n  },\n  \"model_id\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"passed_gates\": 49,\n  \"route\": \"unified relation-owned P2 SAE index lifecycle\",\n  \"runtime_abi\": \"ii42_p2_unified_text_atoms_v2\",\n  \"total_gates\": 49\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_concurrent_ddl_lifecycle_smoke.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+        "--output",
+        "/tmp/ii42-unified-delta-product-maturity-final.concurrent-ddl.json"
+      ],
+      "elapsed_ms": 6963.232,
+      "name": "concurrent DDL and relation rewrite lifecycle smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"api_version\": \"ii42_index_v1\",\n  \"concurrent_reindex_writer_seconds\": 2.848371,\n  \"gate_count\": 8,\n  \"gates\": [\n    \"create_index_concurrently\",\n    \"reindex_concurrently_with_writer\",\n    \"crud_before_reindex\",\n    \"reindex_concurrently\",\n    \"vacuum_full_relation_rewrite\",\n    \"truncate_to_empty_generation\",\n    \"post_truncate_realtime_insert\",\n    \"drop_index_concurrently\"\n  ],\n  \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"passed\": true,\n  \"route\": \"concurrent_ddl_and_relation_rewrite\"\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/test_model_lifecycle_medium_perf.py",
+        "--pg-bin",
+        "/opt/homebrew/opt/postgresql@18/bin",
+        "--docs",
+        "50000",
+        "--output",
+        "/tmp/ii42-unified-delta-product-maturity-final.medium-lifecycle.json",
+        "--model-path",
+        "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+      ],
+      "elapsed_ms": 291173.951,
+      "name": "mutable lifecycle medium smoke",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "bled\": true,\n      \"status_error\": null\n    }\n  },\n  \"initial_query_diagnostics_ms\": 251.709,\n  \"maintain_result\": \"ii42_access_index(type=text, docs=50000, bytes=91074688, pages=11222, stale=false, payload_health=ok, rebuild_required=false)\",\n  \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n  \"model_source\": \"production_checkout\",\n  \"post_mutation_query\": {\n    \"count\": 20,\n    \"max_score\": 33.867798\n  },\n  \"post_mutation_query_diagnostics\": {\n    \"joined_count\": 20,\n    \"raw_count\": 20,\n    \"raw_tids\": [\n      \"(577,47)\",\n      \"(658,18)\",\n      \"(335,59)\",\n      \"(255,13)\",\n      \"(470,71)\"\n    ],\n    \"status\": {\n      \"api_version\": \"ii42_index_v1\",\n      \"blocker\": \"none\",\n      \"details\": {\n        \"auto_rebuild_churn_ratio\": null,\n        \"auto_rebuild_delta_bytes\": null,\n        \"auto_rebuild_threshold\": 1,\n        \"consistency\": \"eventual\",\n        \"delta_bytes\": 0,\n        \"delta_records\": 0,\n        \"docs\": 50000,\n        \"index_bytes\": 91074688,\n        \"index_name\": \"medium.docs_body_idx\",\n        \"pages\": 11222,\n        \"pending_deletes\": 0,\n        \"pending_writes\": 0,\n        \"query_overlay_max_bytes\": null,\n        \"query_overlay_max_records\": null,\n        \"rebuilds\": 2,\n        \"source_type\": \"text\",\n        \"stale\": false\n      },\n      \"generation\": {\n        \"atomic\": true,\n        \"cache_epoch\": 2,\n        \"contract_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"delta\": {\n          \"bytes\": 0,\n          \"pages\": 0,\n          \"records\": 0,\n          \"start_block\": 11222\n        },\n        \"docs\": 50000,\n        \"generation\": 2,\n        \"generation_id\": \"16593/2/2\",\n        \"health\": \"ok\",\n        \"health_reason\": \"ok\",\n        \"layout\": {\n          \"matches\": true,\n          \"physical\": \"bm25s_sae\",\n          \"requested\": \"bm25s_sae\"\n        },\n        \"posting\": {\n          \"active\": true,\n          \"bytes\": 91074688,\n          \"pages\": 11184,\n          \"present\": true,\n          \"reason\": \"ok\",\n          \"record_count\": 50000,\n          \"role\": \"unified_posting\",\n          \"signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n          \"start_block\": 38,\n          \"valid\": true\n        },\n        \"primary\": {\n          \"bytes\": 300000,\n          \"pages\": 37,\n          \"payload_bytes\": 0,\n          \"role\": \"identity_map\",\n          \"start_block\": 1,\n          \"tid_bytes\": 300000\n        },\n        \"rebuilds\": 2,\n        \"valid\": true\n      },\n      \"index_name\": \"medium.docs_body_idx\",\n      \"index_ready\": true,\n      \"index_type\": \"bm25s_sae\",\n      \"index_valid\": true,\n      \"model_artifacts_valid\": true,\n      \"options\": {\n        \"access_method\": \"ii42\",\n        \"atom_space\": \"p2_m1934_b1125_nfcorpus_3f2239c6b5ea\",\n        \"consistency\": \"eventual\",\n        \"index_name\": \"medium.docs_body_idx\",\n        \"index_type\": \"bm25s_sae\",\n        \"lifecycle\": \"postgresql_index\",\n        \"model\": \"ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path\": \"/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke\",\n        \"model_path_source\": \"index\",\n        \"model_runtime_error\": null,\n        \"payload_owner\": \"index_relation\",\n        \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n        \"sae_enabled\": true,\n        \"sae_explicit\": true,\n        \"sae_route_source\": \"explicit\",\n        \"scoring_profile\": \"p2_unified_sparse_dot_v1\",\n        \"semantic_configuration_error\": null,\n        \"semantic_configuration_ready\": true\n      },\n      \"query_ready\": true,\n      \"runtime_signature\": \"5f24130eb550dd59f88fdab3cc1c1dda\",\n      \"runtime_signature_matches\": true,\n      \"sae_enabled\": true,\n      \"status_error\": null\n    }\n  },\n  \"post_mutation_query_diagnostics_ms\": 259.784,\n  \"post_mutation_query_ms\": 173.707,\n  \"query_first_ms\": 172.275,\n  \"query_second_ms\": 36.228,\n  \"reindex_ms\": 98115.011,\n  \"second_query\": {\n    \"count\": 20,\n    \"max_score\": 33.867844\n  },\n  \"setup_and_native_index_build_ms\": 94987.71,\n  \"unified_maintain_ms\": 95026.825\n}\n"
+    }
+  ],
+  "suite": "ii42_product_maturity"
+}

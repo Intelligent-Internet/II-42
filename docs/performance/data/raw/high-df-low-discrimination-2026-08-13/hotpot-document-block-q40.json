@@ -1,0 +1,1979 @@
+{
+  "schema": "ii42_document_block_candidate_oracle_v1",
+  "dataset": "hotpotqa",
+  "documents": 5233329,
+  "queries": 40,
+  "vocabulary": 50265,
+  "document_postings": 766086512,
+  "block_shift": 4,
+  "block_size": 16,
+  "block_count": 327084,
+  "block_ref_ratio": {
+    "mean": 0.5274251044331859,
+    "p50": 0.5244190157560591,
+    "p95": 0.5892608917629465,
+    "maximum": 0.64459549165413
+  },
+  "block_accumulation_latency_ms": {
+    "mean": 85.17838289990323,
+    "p50": 83.53192500362638,
+    "p95": 119.56204799935222,
+    "maximum": 131.04030798422173
+  },
+  "exact_metrics": {
+    "ndcg_at_10": 0.7197670811071559,
+    "map_at_100": 0.6381858936399031,
+    "recall_at_100": 0.875,
+    "mrr_at_20": 0.8602083333333332
+  },
+  "variants": {
+    "4": {
+      "candidate_multiplier": 4,
+      "candidate_documents": {
+        "mean": 400.0,
+        "p50": 400.0,
+        "p95": 400,
+        "maximum": 400
+      },
+      "selected_blocks": {
+        "mean": 25.0,
+        "p50": 25.0,
+        "p95": 25,
+        "maximum": 25
+      },
+      "mean_overlap_at_k": 0.0965,
+      "minimum_overlap_at_k": 0.01,
+      "mean_exact_topk_candidate_coverage": 0.0965,
+      "minimum_exact_topk_candidate_coverage": 0.01,
+      "work_ratio": {
+        "mean": 0.5290093382335772,
+        "p50": 0.526113807114942,
+        "p95": 0.591114059707218,
+        "maximum": 0.6488494106301607
+      },
+      "completion_latency_ms": {
+        "mean": 2.1686863743525464,
+        "p50": 2.2399949957616627,
+        "p95": 2.7382440166547894,
+        "maximum": 2.8699240065179765
+      },
+      "metrics": {
+        "ndcg_at_10": 0.6292511489744035,
+        "map_at_100": 0.5533333333333333,
+        "recall_at_100": 0.6375,
+        "mrr_at_20": 0.7958333333333333
+      }
+    },
+    "8": {
+      "candidate_multiplier": 8,
+      "candidate_documents": {
+        "mean": 800.0,
+        "p50": 800.0,
+        "p95": 800,
+        "maximum": 800
+      },
+      "selected_blocks": {
+        "mean": 50.0,
+        "p50": 50.0,
+        "p95": 50,
+        "maximum": 50
+      },
+      "mean_overlap_at_k": 0.1565,
+      "minimum_overlap_at_k": 0.02,
+      "mean_exact_topk_candidate_coverage": 0.1565,
+      "minimum_exact_topk_candidate_coverage": 0.02,
+      "work_ratio": {
+        "mean": 0.5305935720339685,
+        "p50": 0.527808598473825,
+        "p95": 0.5929672276514896,
+        "maximum": 0.6531033296061913
+      },
+      "completion_latency_ms": {
+        "mean": 2.090523250080878,
+        "p50": 2.164938996429555,
+        "p95": 2.6699730078689754,
+        "maximum": 2.796259999740869
+      },
+      "metrics": {
+        "ndcg_at_10": 0.6659624119784304,
+        "map_at_100": 0.5881547619047619,
+        "recall_at_100": 0.6875,
+        "mrr_at_20": 0.8208333333333334
+      }
+    },
+    "16": {
+      "candidate_multiplier": 16,
+      "candidate_documents": {
+        "mean": 1600.0,
+        "p50": 1600.0,
+        "p95": 1600,
+        "maximum": 1600
+      },
+      "selected_blocks": {
+        "mean": 100.0,
+        "p50": 100.0,
+        "p95": 100,
+        "maximum": 100
+      },
+      "mean_overlap_at_k": 0.24175,
+      "minimum_overlap_at_k": 0.04,
+      "mean_exact_topk_candidate_coverage": 0.24175,
+      "minimum_exact_topk_candidate_coverage": 0.04,
+      "work_ratio": {
+        "mean": 0.5337620396347513,
+        "p50": 0.5311981811915907,
+        "p95": 0.5966735635400326,
+        "maximum": 0.6616111675582527
+      },
+      "completion_latency_ms": {
+        "mean": 2.190014822554076,
+        "p50": 2.254187988000922,
+        "p95": 2.749187988229096,
+        "maximum": 2.8924679791089147
+      },
+      "metrics": {
+        "ndcg_at_10": 0.6725641150427452,
+        "map_at_100": 0.5942469336219336,
+        "recall_at_100": 0.725,
+        "mrr_at_20": 0.8270833333333334
+      }
+    },
+    "32": {
+      "candidate_multiplier": 32,
+      "candidate_documents": {
+        "mean": 3200.0,
+        "p50": 3200.0,
+        "p95": 3200,
+        "maximum": 3200
+      },
+      "selected_blocks": {
+        "mean": 200.0,
+        "p50": 200.0,
+        "p95": 200,
+        "maximum": 200
+      },
+      "mean_overlap_at_k": 0.35550000000000004,
+      "minimum_overlap_at_k": 0.08,
+      "mean_exact_topk_candidate_coverage": 0.35550000000000004,
+      "minimum_exact_topk_candidate_coverage": 0.08,
+      "work_ratio": {
+        "mean": 0.5400989748363167,
+        "p50": 0.5379773466271223,
+        "p95": 0.6040862353171187,
+        "maximum": 0.6786268434623752
+      },
+      "completion_latency_ms": {
+        "mean": 2.393940374167869,
+        "p50": 2.465099998516962,
+        "p95": 2.963140024803579,
+        "maximum": 3.113812010269612
+      },
+      "metrics": {
+        "ndcg_at_10": 0.7020786408688365,
+        "map_at_100": 0.620627990430622,
+        "recall_at_100": 0.775,
+        "mrr_at_20": 0.8550000000000001
+      }
+    },
+    "64": {
+      "candidate_multiplier": 64,
+      "candidate_documents": {
+        "mean": 6400.0,
+        "p50": 6400.0,
+        "p95": 6400,
+        "maximum": 6400
+      },
+      "selected_blocks": {
+        "mean": 400.0,
+        "p50": 400.0,
+        "p95": 400,
+        "maximum": 400
+      },
+      "mean_overlap_at_k": 0.49474999999999997,
+      "minimum_overlap_at_k": 0.13,
+      "mean_exact_topk_candidate_coverage": 0.49474999999999997,
+      "minimum_exact_topk_candidate_coverage": 0.13,
+      "work_ratio": {
+        "mean": 0.5527728452394477,
+        "p50": 0.5503517380278502,
+        "p95": 0.618911578871291,
+        "maximum": 0.7126581952706205
+      },
+      "completion_latency_ms": {
+        "mean": 2.8056266979547217,
+        "p50": 2.8735165105899796,
+        "p95": 3.397765976842493,
+        "maximum": 3.492676973110065
+      },
+      "metrics": {
+        "ndcg_at_10": 0.7131653780428411,
+        "map_at_100": 0.6293169616331381,
+        "recall_at_100": 0.825,
+        "mrr_at_20": 0.8602083333333332
+      }
+    }
+  },
+  "query_rows": [
+    {
+      "query_id": "5a70eee85542994082a3e3f0",
+      "query_terms": 45,
+      "query_postings": 12357373,
+      "block_refs": 6138402,
+      "exact_latency_ms": 980.6327160040382,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.07,
+          "candidate_coverage_at_k": 0.07,
+          "completion_latency_ms": 2.2307710023596883
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.2402600152418017
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.16,
+          "candidate_coverage_at_k": 0.16,
+          "completion_latency_ms": 2.314370998647064
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.33,
+          "candidate_coverage_at_k": 0.33,
+          "completion_latency_ms": 2.506995981093496
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.49,
+          "candidate_coverage_at_k": 0.49,
+          "completion_latency_ms": 2.898180013289675
+        }
+      }
+    },
+    {
+      "query_id": "5a70f0a75542994082a3e403",
+      "query_terms": 50,
+      "query_postings": 15807200,
+      "block_refs": 7364474,
+      "exact_latency_ms": 1036.2416630086955,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 1.5412979992106557
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 1.4484350103884935
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.16,
+          "candidate_coverage_at_k": 0.16,
+          "completion_latency_ms": 1.536050025606528
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.27,
+          "candidate_coverage_at_k": 0.27,
+          "completion_latency_ms": 1.7158739792648703
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.41,
+          "candidate_coverage_at_k": 0.41,
+          "completion_latency_ms": 2.1058440033812076
+        }
+      }
+    },
+    {
+      "query_id": "5a70f0e75542994082a3e408",
+      "query_terms": 47,
+      "query_postings": 14683094,
+      "block_refs": 7147123,
+      "exact_latency_ms": 991.4895499823615,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 2.2989320277702063
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.21,
+          "candidate_coverage_at_k": 0.21,
+          "completion_latency_ms": 2.208771009463817
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.34,
+          "candidate_coverage_at_k": 0.34,
+          "completion_latency_ms": 2.293012017617002
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.57,
+          "candidate_coverage_at_k": 0.57,
+          "completion_latency_ms": 2.5021309847943485
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.79,
+          "candidate_coverage_at_k": 0.79,
+          "completion_latency_ms": 2.8755730018019676
+        }
+      }
+    },
+    {
+      "query_id": "5a70f11a5542994082a3e40b",
+      "query_terms": 33,
+      "query_postings": 6901681,
+      "block_refs": 3864197,
+      "exact_latency_ms": 885.5470279813744,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.17,
+          "candidate_coverage_at_k": 0.17,
+          "completion_latency_ms": 1.3682100106962025
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.3,
+          "candidate_coverage_at_k": 0.3,
+          "completion_latency_ms": 1.289025996811688
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.52,
+          "candidate_coverage_at_k": 0.52,
+          "completion_latency_ms": 1.3797299761790782
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.73,
+          "candidate_coverage_at_k": 0.73,
+          "completion_latency_ms": 1.5950909873936325
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.92,
+          "candidate_coverage_at_k": 0.92,
+          "completion_latency_ms": 1.9610430172178894
+        }
+      }
+    },
+    {
+      "query_id": "5a70f1685542994082a3e40f",
+      "query_terms": 50,
+      "query_postings": 14075364,
+      "block_refs": 7425449,
+      "exact_latency_ms": 1021.857934014406,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.31,
+          "candidate_coverage_at_k": 0.31,
+          "completion_latency_ms": 2.023459004703909
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.49,
+          "candidate_coverage_at_k": 0.49,
+          "completion_latency_ms": 1.9472030107863247
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.68,
+          "candidate_coverage_at_k": 0.68,
+          "completion_latency_ms": 2.0394590101204813
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.85,
+          "candidate_coverage_at_k": 0.85,
+          "completion_latency_ms": 2.2274439979810268
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.96,
+          "candidate_coverage_at_k": 0.96,
+          "completion_latency_ms": 2.612883021356538
+        }
+      }
+    },
+    {
+      "query_id": "5a70f39c5542994082a3e429",
+      "query_terms": 49,
+      "query_postings": 11580773,
+      "block_refs": 6106312,
+      "exact_latency_ms": 959.9670599855017,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.14,
+          "candidate_coverage_at_k": 0.14,
+          "completion_latency_ms": 2.476915979059413
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.22,
+          "candidate_coverage_at_k": 0.22,
+          "completion_latency_ms": 2.379155979724601
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.37,
+          "candidate_coverage_at_k": 0.37,
+          "completion_latency_ms": 2.4798109952826053
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.5,
+          "candidate_coverage_at_k": 0.5,
+          "completion_latency_ms": 2.68272400717251
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.77,
+          "candidate_coverage_at_k": 0.77,
+          "completion_latency_ms": 3.0907089821994305
+        }
+      }
+    },
+    {
+      "query_id": "5a70f4695542994082a3e435",
+      "query_terms": 38,
+      "query_postings": 9960411,
+      "block_refs": 4862057,
+      "exact_latency_ms": 940.0655769859441,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 2.8699240065179765
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.15,
+          "candidate_coverage_at_k": 0.15,
+          "completion_latency_ms": 2.796259999740869
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.23,
+          "candidate_coverage_at_k": 0.23,
+          "completion_latency_ms": 2.8924679791089147
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.44,
+          "candidate_coverage_at_k": 0.44,
+          "completion_latency_ms": 3.113812010269612
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.75,
+          "candidate_coverage_at_k": 0.75,
+          "completion_latency_ms": 3.492676973110065
+        }
+      }
+    },
+    {
+      "query_id": "5a70f4c45542994082a3e437",
+      "query_terms": 50,
+      "query_postings": 17717073,
+      "block_refs": 8806231,
+      "exact_latency_ms": 1073.423999012448,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.04,
+          "candidate_coverage_at_k": 0.04,
+          "completion_latency_ms": 2.832099999068305
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 2.7584200142882764
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.86344499909319
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.17,
+          "candidate_coverage_at_k": 0.17,
+          "completion_latency_ms": 3.075059998081997
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.26,
+          "candidate_coverage_at_k": 0.26,
+          "completion_latency_ms": 3.468484996119514
+        }
+      }
+    },
+    {
+      "query_id": "5a70f6425542994082a3e44c",
+      "query_terms": 50,
+      "query_postings": 12427182,
+      "block_refs": 7094997,
+      "exact_latency_ms": 972.433099988848,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.3800669878255576
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.18,
+          "candidate_coverage_at_k": 0.18,
+          "completion_latency_ms": 2.299412008142099
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.25,
+          "candidate_coverage_at_k": 0.25,
+          "completion_latency_ms": 2.3871549929026514
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.3,
+          "candidate_coverage_at_k": 0.3,
+          "completion_latency_ms": 2.6023079990409315
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.36,
+          "candidate_coverage_at_k": 0.36,
+          "completion_latency_ms": 3.0323410173878074
+        }
+      }
+    },
+    {
+      "query_id": "5a70f9335542994082a3e46a",
+      "query_terms": 47,
+      "query_postings": 9713106,
+      "block_refs": 5621559,
+      "exact_latency_ms": 943.3351699844934,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.16,
+          "candidate_coverage_at_k": 0.16,
+          "completion_latency_ms": 2.310291019966826
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.23,
+          "candidate_coverage_at_k": 0.23,
+          "completion_latency_ms": 2.2600679949391633
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.32,
+          "candidate_coverage_at_k": 0.32,
+          "completion_latency_ms": 2.351219009142369
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.4,
+          "candidate_coverage_at_k": 0.4,
+          "completion_latency_ms": 2.555284008849412
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.52,
+          "candidate_coverage_at_k": 0.52,
+          "completion_latency_ms": 3.005540987942368
+        }
+      }
+    },
+    {
+      "query_id": "5a70ff335542994082a3e49c",
+      "query_terms": 50,
+      "query_postings": 12732156,
+      "block_refs": 7126460,
+      "exact_latency_ms": 984.6687039826065,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 2.602323977043852
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.07,
+          "candidate_coverage_at_k": 0.07,
+          "completion_latency_ms": 2.517907996661961
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 2.6127560122404248
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.8045000217389315
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.23,
+          "candidate_coverage_at_k": 0.23,
+          "completion_latency_ms": 3.1995569879654795
+        }
+      }
+    },
+    {
+      "query_id": "5a7100435542994082a3e4a3",
+      "query_terms": 48,
+      "query_postings": 8401211,
+      "block_refs": 5274633,
+      "exact_latency_ms": 931.330530991545,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 2.723364974372089
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.6357950118836015
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.738963987212628
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.25,
+          "candidate_coverage_at_k": 0.25,
+          "completion_latency_ms": 2.9502600082196295
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.37,
+          "candidate_coverage_at_k": 0.37,
+          "completion_latency_ms": 3.33421299001202
+        }
+      }
+    },
+    {
+      "query_id": "5a7103b35542994082a3e4c0",
+      "query_terms": 49,
+      "query_postings": 13945516,
+      "block_refs": 7116178,
+      "exact_latency_ms": 1020.3610490134452,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.07,
+          "candidate_coverage_at_k": 0.07,
+          "completion_latency_ms": 2.249218989163637
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 2.1544829942286015
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.14,
+          "candidate_coverage_at_k": 0.14,
+          "completion_latency_ms": 2.248371980385855
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.17,
+          "candidate_coverage_at_k": 0.17,
+          "completion_latency_ms": 2.458564005792141
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.26,
+          "candidate_coverage_at_k": 0.26,
+          "completion_latency_ms": 2.8714600193779916
+        }
+      }
+    },
+    {
+      "query_id": "5a7108fa5542994082a3e4ef",
+      "query_terms": 32,
+      "query_postings": 7110641,
+      "block_refs": 3977046,
+      "exact_latency_ms": 906.5029130142648,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.14,
+          "candidate_coverage_at_k": 0.14,
+          "completion_latency_ms": 1.3889299880247563
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.18,
+          "candidate_coverage_at_k": 0.18,
+          "completion_latency_ms": 1.2909780198242515
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.28,
+          "candidate_coverage_at_k": 0.28,
+          "completion_latency_ms": 1.3967059785500169
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.43,
+          "candidate_coverage_at_k": 0.43,
+          "completion_latency_ms": 1.6249789914581925
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.6,
+          "candidate_coverage_at_k": 0.6,
+          "completion_latency_ms": 1.9855389837175608
+        }
+      }
+    },
+    {
+      "query_id": "5a71095e5542994082a3e4f3",
+      "query_terms": 39,
+      "query_postings": 11744366,
+      "block_refs": 6259663,
+      "exact_latency_ms": 946.219197998289,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 2.1427390165627003
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.16,
+          "candidate_coverage_at_k": 0.16,
+          "completion_latency_ms": 2.076851000310853
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.28,
+          "candidate_coverage_at_k": 0.28,
+          "completion_latency_ms": 2.18097900506109
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.44,
+          "candidate_coverage_at_k": 0.44,
+          "completion_latency_ms": 2.386115986155346
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.68,
+          "candidate_coverage_at_k": 0.68,
+          "completion_latency_ms": 2.7688679983839393
+        }
+      }
+    },
+    {
+      "query_id": "5a7109e95542994082a3e4fa",
+      "query_terms": 50,
+      "query_postings": 17690710,
+      "block_refs": 8489921,
+      "exact_latency_ms": 1057.5827730062883,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.03,
+          "candidate_coverage_at_k": 0.03,
+          "completion_latency_ms": 2.2792189847677946
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 2.175394998630509
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.260003995615989
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.471635991241783
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.2,
+          "candidate_coverage_at_k": 0.2,
+          "completion_latency_ms": 2.9017160122748464
+        }
+      }
+    },
+    {
+      "query_id": "5a710a1e5542994082a3e4fd",
+      "query_terms": 50,
+      "query_postings": 4701547,
+      "block_refs": 3030596,
+      "exact_latency_ms": 842.884438985493,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.18,
+          "candidate_coverage_at_k": 0.18,
+          "completion_latency_ms": 1.6404179914388806
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.29,
+          "candidate_coverage_at_k": 0.29,
+          "completion_latency_ms": 1.5606589731760323
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.45,
+          "candidate_coverage_at_k": 0.45,
+          "completion_latency_ms": 1.6573620087001473
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.79,
+          "candidate_coverage_at_k": 0.79,
+          "completion_latency_ms": 1.8646270036697388
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.98,
+          "candidate_coverage_at_k": 0.98,
+          "completion_latency_ms": 2.276866987813264
+        }
+      }
+    },
+    {
+      "query_id": "5a710a915542994082a3e504",
+      "query_terms": 50,
+      "query_postings": 11167428,
+      "block_refs": 6109578,
+      "exact_latency_ms": 950.7519600156229,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.12,
+          "candidate_coverage_at_k": 0.12,
+          "completion_latency_ms": 2.4659229966346174
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.22,
+          "candidate_coverage_at_k": 0.22,
+          "completion_latency_ms": 2.379234996624291
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.37,
+          "candidate_coverage_at_k": 0.37,
+          "completion_latency_ms": 2.47701199259609
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.52,
+          "candidate_coverage_at_k": 0.52,
+          "completion_latency_ms": 2.6755240105558187
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.72,
+          "candidate_coverage_at_k": 0.72,
+          "completion_latency_ms": 3.085381002165377
+        }
+      }
+    },
+    {
+      "query_id": "5a710bb15542994082a3e50d",
+      "query_terms": 50,
+      "query_postings": 10792330,
+      "block_refs": 6359498,
+      "exact_latency_ms": 956.3090100127738,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.05,
+          "candidate_coverage_at_k": 0.05,
+          "completion_latency_ms": 2.494546992238611
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.09,
+          "candidate_coverage_at_k": 0.09,
+          "completion_latency_ms": 2.4052349908743054
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.4993959814310074
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.27,
+          "candidate_coverage_at_k": 0.27,
+          "completion_latency_ms": 2.708835992962122
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.45,
+          "candidate_coverage_at_k": 0.45,
+          "completion_latency_ms": 3.097396984230727
+        }
+      }
+    },
+    {
+      "query_id": "5a710d155542994082a3e520",
+      "query_terms": 50,
+      "query_postings": 12378247,
+      "block_refs": 6493227,
+      "exact_latency_ms": 996.4428470120765,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.07,
+          "candidate_coverage_at_k": 0.07,
+          "completion_latency_ms": 1.7914909985847771
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 1.719890977256
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 1.8323700060136616
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.0459550141822547
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.18,
+          "candidate_coverage_at_k": 0.18,
+          "completion_latency_ms": 2.42171497666277
+        }
+      }
+    },
+    {
+      "query_id": "5a71148b5542994082a3e567",
+      "query_terms": 50,
+      "query_postings": 21226128,
+      "block_refs": 9313460,
+      "exact_latency_ms": 1124.7840650030412,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.05,
+          "candidate_coverage_at_k": 0.05,
+          "completion_latency_ms": 1.9504509982652962
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.09,
+          "candidate_coverage_at_k": 0.09,
+          "completion_latency_ms": 1.859298994531855
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.19,
+          "candidate_coverage_at_k": 0.19,
+          "completion_latency_ms": 1.9558269996196032
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.29,
+          "candidate_coverage_at_k": 0.29,
+          "completion_latency_ms": 2.171795000322163
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.34,
+          "candidate_coverage_at_k": 0.34,
+          "completion_latency_ms": 2.543588023399934
+        }
+      }
+    },
+    {
+      "query_id": "5a7115475542994082a3e56d",
+      "query_terms": 50,
+      "query_postings": 18682588,
+      "block_refs": 9001917,
+      "exact_latency_ms": 1076.2515300011728,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.02,
+          "candidate_coverage_at_k": 0.02,
+          "completion_latency_ms": 1.9384509942028672
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.05,
+          "candidate_coverage_at_k": 0.05,
+          "completion_latency_ms": 1.8607389938551933
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 1.960259018233046
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 2.328579023014754
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.15,
+          "candidate_coverage_at_k": 0.15,
+          "completion_latency_ms": 2.5705159932840616
+        }
+      }
+    },
+    {
+      "query_id": "5a71166d5542994082a3e576",
+      "query_terms": 31,
+      "query_postings": 7390633,
+      "block_refs": 4323872,
+      "exact_latency_ms": 915.0070350151509,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.4444830196443945
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.21,
+          "candidate_coverage_at_k": 0.21,
+          "completion_latency_ms": 2.3458760115318
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.31,
+          "candidate_coverage_at_k": 0.31,
+          "completion_latency_ms": 2.4612359993625432
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.44,
+          "candidate_coverage_at_k": 0.44,
+          "completion_latency_ms": 2.6699879963416606
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.65,
+          "candidate_coverage_at_k": 0.65,
+          "completion_latency_ms": 3.202964988304302
+        }
+      }
+    },
+    {
+      "query_id": "5a7119095542994082a3e589",
+      "query_terms": 47,
+      "query_postings": 12244340,
+      "block_refs": 6302768,
+      "exact_latency_ms": 974.6689809835516,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.5065319787245244
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.17,
+          "candidate_coverage_at_k": 0.17,
+          "completion_latency_ms": 2.429699001368135
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.36,
+          "candidate_coverage_at_k": 0.36,
+          "completion_latency_ms": 2.511956001399085
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.47,
+          "candidate_coverage_at_k": 0.47,
+          "completion_latency_ms": 2.712115994654596
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.7,
+          "candidate_coverage_at_k": 0.7,
+          "completion_latency_ms": 3.1393810058943927
+        }
+      }
+    },
+    {
+      "query_id": "5a7119f75542994082a3e58e",
+      "query_terms": 50,
+      "query_postings": 12064755,
+      "block_refs": 5957509,
+      "exact_latency_ms": 995.8238459948916,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.01,
+          "candidate_coverage_at_k": 0.01,
+          "completion_latency_ms": 1.6909789992496371
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.02,
+          "candidate_coverage_at_k": 0.02,
+          "completion_latency_ms": 1.6103549860417843
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.04,
+          "candidate_coverage_at_k": 0.04,
+          "completion_latency_ms": 1.6927380056586117
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 1.9010270189028233
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.27306000306271
+        }
+      }
+    },
+    {
+      "query_id": "5a711bb55542994082a3e597",
+      "query_terms": 50,
+      "query_postings": 10998454,
+      "block_refs": 6067202,
+      "exact_latency_ms": 946.3860770047177,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.519987989217043
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.451843989547342
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.2,
+          "candidate_coverage_at_k": 0.2,
+          "completion_latency_ms": 2.552082994952798
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.3,
+          "candidate_coverage_at_k": 0.3,
+          "completion_latency_ms": 2.736163994995877
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.36,
+          "candidate_coverage_at_k": 0.36,
+          "completion_latency_ms": 3.1446280190721154
+        }
+      }
+    },
+    {
+      "query_id": "5a711c535542994082a3e59b",
+      "query_terms": 50,
+      "query_postings": 14194367,
+      "block_refs": 6365696,
+      "exact_latency_ms": 1003.0519880237989,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.080834994558245
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 2.0315709989517927
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.23,
+          "candidate_coverage_at_k": 0.23,
+          "completion_latency_ms": 2.1234750165604055
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.34,
+          "candidate_coverage_at_k": 0.34,
+          "completion_latency_ms": 2.3574600054416806
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.56,
+          "candidate_coverage_at_k": 0.56,
+          "completion_latency_ms": 2.6834119926206768
+        }
+      }
+    },
+    {
+      "query_id": "5a711cb45542994082a3e59f",
+      "query_terms": 50,
+      "query_postings": 11274942,
+      "block_refs": 5911119,
+      "exact_latency_ms": 951.9538639870007,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.24,
+          "candidate_coverage_at_k": 0.24,
+          "completion_latency_ms": 1.9119390053674579
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.42,
+          "candidate_coverage_at_k": 0.42,
+          "completion_latency_ms": 1.830051012802869
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.59,
+          "candidate_coverage_at_k": 0.59,
+          "completion_latency_ms": 1.9201469840481877
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.78,
+          "candidate_coverage_at_k": 0.78,
+          "completion_latency_ms": 2.1047230111435056
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.93,
+          "candidate_coverage_at_k": 0.93,
+          "completion_latency_ms": 2.5343080051243305
+        }
+      }
+    },
+    {
+      "query_id": "5a711ef85542994082a3e5ac",
+      "query_terms": 50,
+      "query_postings": 13598185,
+      "block_refs": 7225520,
+      "exact_latency_ms": 1001.6563090030104,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 1.928498997585848
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 1.8619869952090085
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.17,
+          "candidate_coverage_at_k": 0.17,
+          "completion_latency_ms": 2.0083870040252805
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.26,
+          "candidate_coverage_at_k": 0.26,
+          "completion_latency_ms": 2.1993629925418645
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.44,
+          "candidate_coverage_at_k": 0.44,
+          "completion_latency_ms": 2.7170770044904202
+        }
+      }
+    },
+    {
+      "query_id": "5a71214d5542994082a3e5b9",
+      "query_terms": 50,
+      "query_postings": 14949613,
+      "block_refs": 7837358,
+      "exact_latency_ms": 1038.0071969993878,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.1,
+          "candidate_coverage_at_k": 0.1,
+          "completion_latency_ms": 2.645316009875387
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.18,
+          "candidate_coverage_at_k": 0.18,
+          "completion_latency_ms": 2.5688680179882795
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.24,
+          "candidate_coverage_at_k": 0.24,
+          "completion_latency_ms": 2.6381959905847907
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.41,
+          "candidate_coverage_at_k": 0.41,
+          "completion_latency_ms": 2.8414439875632524
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.5,
+          "candidate_coverage_at_k": 0.5,
+          "completion_latency_ms": 3.302005003206432
+        }
+      }
+    },
+    {
+      "query_id": "5a71224f5542994082a3e5c1",
+      "query_terms": 50,
+      "query_postings": 14873125,
+      "block_refs": 7705721,
+      "exact_latency_ms": 1029.3135220126715,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.05,
+          "candidate_coverage_at_k": 0.05,
+          "completion_latency_ms": 1.5034420066513121
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.07,
+          "candidate_coverage_at_k": 0.07,
+          "completion_latency_ms": 1.432210992788896
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 1.5274259785655886
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.12,
+          "candidate_coverage_at_k": 0.12,
+          "completion_latency_ms": 1.73688298673369
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.21,
+          "candidate_coverage_at_k": 0.21,
+          "completion_latency_ms": 2.1849469922017306
+        }
+      }
+    },
+    {
+      "query_id": "5a71231a5542994082a3e5c4",
+      "query_terms": 50,
+      "query_postings": 9086175,
+      "block_refs": 5132878,
+      "exact_latency_ms": 936.9533519784454,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.04,
+          "candidate_coverage_at_k": 0.04,
+          "completion_latency_ms": 2.0449789881240577
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.11,
+          "candidate_coverage_at_k": 0.11,
+          "completion_latency_ms": 1.9657950033433735
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.14,
+          "candidate_coverage_at_k": 0.14,
+          "completion_latency_ms": 2.069843001663685
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.2,
+          "candidate_coverage_at_k": 0.2,
+          "completion_latency_ms": 2.2569799912162125
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.27,
+          "candidate_coverage_at_k": 0.27,
+          "completion_latency_ms": 2.722692006500438
+        }
+      }
+    },
+    {
+      "query_id": "5a7125165542994082a3e5d0",
+      "query_terms": 50,
+      "query_postings": 16047556,
+      "block_refs": 8190173,
+      "exact_latency_ms": 1035.8549270022195,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.6525479916017503
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.21,
+          "candidate_coverage_at_k": 0.21,
+          "completion_latency_ms": 2.5733159855008125
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.36,
+          "candidate_coverage_at_k": 0.36,
+          "completion_latency_ms": 2.6571079797577113
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.47,
+          "candidate_coverage_at_k": 0.47,
+          "completion_latency_ms": 2.8608360153157264
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.59,
+          "candidate_coverage_at_k": 0.59,
+          "completion_latency_ms": 3.2936049974523485
+        }
+      }
+    },
+    {
+      "query_id": "5a7125b95542994082a3e5d5",
+      "query_terms": 48,
+      "query_postings": 17329395,
+      "block_refs": 7626541,
+      "exact_latency_ms": 1055.8300950215198,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.14,
+          "candidate_coverage_at_k": 0.14,
+          "completion_latency_ms": 1.9989140273537487
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.2,
+          "candidate_coverage_at_k": 0.2,
+          "completion_latency_ms": 1.8891700019594282
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.34,
+          "candidate_coverage_at_k": 0.34,
+          "completion_latency_ms": 1.9832669931929559
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.52,
+          "candidate_coverage_at_k": 0.52,
+          "completion_latency_ms": 2.1740349766332656
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.75,
+          "candidate_coverage_at_k": 0.75,
+          "completion_latency_ms": 2.6114439824596047
+        }
+      }
+    },
+    {
+      "query_id": "5a71278c5542994082a3e5e2",
+      "query_terms": 40,
+      "query_postings": 13936116,
+      "block_refs": 7040489,
+      "exact_latency_ms": 1013.9953610196244,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.04,
+          "candidate_coverage_at_k": 0.04,
+          "completion_latency_ms": 2.71642001462169
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 2.6338119932916015
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 2.7334119949955493
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.12,
+          "candidate_coverage_at_k": 0.12,
+          "completion_latency_ms": 2.942916995380074
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.23,
+          "candidate_coverage_at_k": 0.23,
+          "completion_latency_ms": 3.391268983250484
+        }
+      }
+    },
+    {
+      "query_id": "5a7128b05542994082a3e5f2",
+      "query_terms": 37,
+      "query_postings": 10408283,
+      "block_refs": 5795120,
+      "exact_latency_ms": 964.1043099982198,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.05,
+          "candidate_coverage_at_k": 0.05,
+          "completion_latency_ms": 2.7382440166547894
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.13,
+          "candidate_coverage_at_k": 0.13,
+          "completion_latency_ms": 2.6699730078689754
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.17,
+          "candidate_coverage_at_k": 0.17,
+          "completion_latency_ms": 2.749187988229096
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.26,
+          "candidate_coverage_at_k": 0.26,
+          "completion_latency_ms": 2.963140024803579
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.38,
+          "candidate_coverage_at_k": 0.38,
+          "completion_latency_ms": 3.397765976842493
+        }
+      }
+    },
+    {
+      "query_id": "5a7129685542994082a3e5fa",
+      "query_terms": 50,
+      "query_postings": 11288971,
+      "block_refs": 6404423,
+      "exact_latency_ms": 955.4068580036983,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.04,
+          "candidate_coverage_at_k": 0.04,
+          "completion_latency_ms": 2.478643989888951
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 2.4167080118786544
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.16,
+          "candidate_coverage_at_k": 0.16,
+          "completion_latency_ms": 2.6642279990483075
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.3,
+          "candidate_coverage_at_k": 0.3,
+          "completion_latency_ms": 2.719459997024387
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.49,
+          "candidate_coverage_at_k": 0.49,
+          "completion_latency_ms": 3.1548849947284907
+        }
+      }
+    },
+    {
+      "query_id": "5a71299e5542994082a3e5fe",
+      "query_terms": 44,
+      "query_postings": 13362957,
+      "block_refs": 6797293,
+      "exact_latency_ms": 994.3267590133473,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.02,
+          "candidate_coverage_at_k": 0.02,
+          "completion_latency_ms": 1.597747002961114
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.04,
+          "candidate_coverage_at_k": 0.04,
+          "completion_latency_ms": 1.5196340100374073
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.06,
+          "candidate_coverage_at_k": 0.06,
+          "completion_latency_ms": 1.626098994165659
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.12,
+          "candidate_coverage_at_k": 0.12,
+          "completion_latency_ms": 1.8111219978891313
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.18,
+          "candidate_coverage_at_k": 0.18,
+          "completion_latency_ms": 2.2319080017041415
+        }
+      }
+    },
+    {
+      "query_id": "5a712af15542994082a3e614",
+      "query_terms": 50,
+      "query_postings": 16238872,
+      "block_refs": 8213289,
+      "exact_latency_ms": 1039.7702220070641,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.05,
+          "candidate_coverage_at_k": 0.05,
+          "completion_latency_ms": 1.9923869986087084
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.08,
+          "candidate_coverage_at_k": 0.08,
+          "completion_latency_ms": 1.8980349996127188
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.09,
+          "candidate_coverage_at_k": 0.09,
+          "completion_latency_ms": 2.0081470138393342
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.12,
+          "candidate_coverage_at_k": 0.12,
+          "completion_latency_ms": 2.198754984419793
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.24,
+          "candidate_coverage_at_k": 0.24,
+          "completion_latency_ms": 2.7000519912689924
+        }
+      }
+    },
+    {
+      "query_id": "5a712beb5542994082a3e61c",
+      "query_terms": 43,
+      "query_postings": 10598172,
+      "block_refs": 5840117,
+      "exact_latency_ms": 956.7111679934897,
+      "variants": {
+        "4": {
+          "candidate_documents": 400,
+          "selected_blocks": 25,
+          "overlap_at_k": 0.21,
+          "candidate_coverage_at_k": 0.21,
+          "completion_latency_ms": 1.2965140049345791
+        },
+        "8": {
+          "candidate_documents": 800,
+          "selected_blocks": 50,
+          "overlap_at_k": 0.35,
+          "candidate_coverage_at_k": 0.35,
+          "completion_latency_ms": 1.2285459961276501
+        },
+        "16": {
+          "candidate_documents": 1600,
+          "selected_blocks": 100,
+          "overlap_at_k": 0.55,
+          "candidate_coverage_at_k": 0.55,
+          "completion_latency_ms": 1.3169299927540123
+        },
+        "32": {
+          "candidate_documents": 3200,
+          "selected_blocks": 200,
+          "overlap_at_k": 0.69,
+          "candidate_coverage_at_k": 0.69,
+          "completion_latency_ms": 1.5031069924589247
+        },
+        "64": {
+          "candidate_documents": 6400,
+          "selected_blocks": 400,
+          "overlap_at_k": 0.79,
+          "candidate_coverage_at_k": 0.79,
+          "completion_latency_ms": 1.9395709969103336
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 58.35280220099958
+}

@@ -1,0 +1,18 @@
+{
+  "api_version": "ii42_index_v1",
+  "concurrent_reindex_writer_seconds": 5.650391,
+  "gate_count": 8,
+  "gates": [
+    "create_index_concurrently",
+    "reindex_concurrently_with_writer",
+    "crud_before_reindex",
+    "reindex_concurrently",
+    "vacuum_full_relation_rewrite",
+    "truncate_to_empty_generation",
+    "post_truncate_realtime_insert",
+    "drop_index_concurrently"
+  ],
+  "model_path": "/dev/shm/ii42-concurrent-model-qos",
+  "passed": true,
+  "route": "concurrent_ddl_and_relation_rewrite"
+}

@@ -1,0 +1,816 @@
+{
+  "base_documents": 4096,
+  "concurrency": null,
+  "expectation": "full_overlay",
+  "failures": [],
+  "levels": [
+    0,
+    1000
+  ],
+  "model_path": "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+  "passed": true,
+  "performance_gates": null,
+  "performance_trials": 3,
+  "restart": null,
+  "results": [
+    {
+      "benchmark": {
+        "backend_memory_after": 10705224,
+        "backend_memory_before": 10705224,
+        "backend_memory_growth": 0,
+        "cold_ms": 0.966,
+        "cold_trace": {
+          "candidate_docs": 1098,
+          "candidate_postings": 2485,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2485,
+          "memory_bytes": 6052364,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 9915,
+          "rerank_score_terms": 3930,
+          "rerank_slice_hits": 0,
+          "scored_docs": 1098
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 0.924,
+            "warm_p95_ms": 1.188
+          },
+          {
+            "warm_p50_ms": 0.904,
+            "warm_p95_ms": 1.021
+          },
+          {
+            "warm_p50_ms": 0.914,
+            "warm_p95_ms": 1.006
+          }
+        ],
+        "row_digest": "31eb1f3cf789f90debebed2dd21c447cc1e7e6b0e74d5f89e0175f1f3d6e0fc5",
+        "rows": [
+          [
+            "base-2008",
+            27.520584917492215
+          ],
+          [
+            "base-0",
+            26.541515224788157
+          ],
+          [
+            "base-56",
+            26.44608630987966
+          ],
+          [
+            "base-32",
+            26.4423237481937
+          ],
+          [
+            "base-1000",
+            26.43220692886706
+          ],
+          [
+            "base-120",
+            26.431439767749737
+          ],
+          [
+            "base-160",
+            26.4286993536237
+          ],
+          [
+            "base-16",
+            26.42515566379052
+          ],
+          [
+            "base-600",
+            26.42387656994009
+          ],
+          [
+            "base-72",
+            26.41605839665516
+          ],
+          [
+            "base-176",
+            26.41531262726653
+          ],
+          [
+            "base-40",
+            26.41351064699188
+          ],
+          [
+            "base-96",
+            26.4068195085228
+          ],
+          [
+            "base-376",
+            26.405107197177642
+          ],
+          [
+            "base-1200",
+            26.404409749701472
+          ],
+          [
+            "base-368",
+            26.402346825019663
+          ],
+          [
+            "base-80",
+            26.400578699268692
+          ],
+          [
+            "base-1600",
+            26.399212791736375
+          ],
+          [
+            "base-168",
+            26.39917066109041
+          ],
+          [
+            "base-1400",
+            26.39438729197451
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1098,
+          "candidate_postings": 2485,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 2485,
+          "memory_bytes": 6052364,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 9915,
+          "rerank_score_terms": 3930,
+          "rerank_slice_hits": 0,
+          "scored_docs": 1098
+        },
+        "warm_p50_ms": 0.914,
+        "warm_p95_ms": 1.021
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 0,
+          "delta_records": 0,
+          "pending_deletes": 0,
+          "pending_total": 0,
+          "pending_writes": 0
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": -1,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=0, shared_preload_free_bytes=268435456, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=0, shared_preload_ready_entries=0, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=0, maintenance_cycle_age_ms=-1, shared_preload_resident=false, shared_preload_loading=false, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=0, relation_blocks=749, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": false,
+          "lexical_delta_covered": true,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": true,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 0,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 0,
+          "free_bytes": 268435456,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 0,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": false,
+          "unified_delta_cache_entries": 0,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 0
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 11717032,
+          "backend_memory_before": 11753896,
+          "backend_memory_growth": -36864,
+          "cold_ms": 0.887,
+          "cold_trace": {
+            "candidate_docs": 1098,
+            "candidate_postings": 2485,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2485,
+            "memory_bytes": 6052364,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9915,
+            "rerank_score_terms": 3930,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1098
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 0.968,
+              "warm_p95_ms": 1.251
+            },
+            {
+              "warm_p50_ms": 0.918,
+              "warm_p95_ms": 1.025
+            },
+            {
+              "warm_p50_ms": 0.963,
+              "warm_p95_ms": 1.121
+            }
+          ],
+          "row_digest": "31eb1f3cf789f90debebed2dd21c447cc1e7e6b0e74d5f89e0175f1f3d6e0fc5",
+          "rows": [
+            [
+              "base-2008",
+              27.520584917492215
+            ],
+            [
+              "base-0",
+              26.541515224788157
+            ],
+            [
+              "base-56",
+              26.44608630987966
+            ],
+            [
+              "base-32",
+              26.4423237481937
+            ],
+            [
+              "base-1000",
+              26.43220692886706
+            ],
+            [
+              "base-120",
+              26.431439767749737
+            ],
+            [
+              "base-160",
+              26.4286993536237
+            ],
+            [
+              "base-16",
+              26.42515566379052
+            ],
+            [
+              "base-600",
+              26.42387656994009
+            ],
+            [
+              "base-72",
+              26.41605839665516
+            ],
+            [
+              "base-176",
+              26.41531262726653
+            ],
+            [
+              "base-40",
+              26.41351064699188
+            ],
+            [
+              "base-96",
+              26.4068195085228
+            ],
+            [
+              "base-376",
+              26.405107197177642
+            ],
+            [
+              "base-1200",
+              26.404409749701472
+            ],
+            [
+              "base-368",
+              26.402346825019663
+            ],
+            [
+              "base-80",
+              26.400578699268692
+            ],
+            [
+              "base-1600",
+              26.399212791736375
+            ],
+            [
+              "base-168",
+              26.39917066109041
+            ],
+            [
+              "base-1400",
+              26.39438729197451
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1098,
+            "candidate_postings": 2485,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2485,
+            "memory_bytes": 6052364,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 9915,
+            "rerank_score_terms": 3930,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1098
+          },
+          "warm_p50_ms": 0.963,
+          "warm_p95_ms": 1.121
+        },
+        "delta_to_compacted_p95_ratio": 0.9108,
+        "documents": 4096,
+        "exact_comparison": {
+          "max_score_delta": 0.0,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 0,
+      "delta_records": 0
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 11676584,
+        "backend_memory_before": 11676584,
+        "backend_memory_growth": 0,
+        "cold_ms": 15.03,
+        "cold_trace": {
+          "candidate_docs": 1221,
+          "candidate_postings": 2520,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 2520,
+          "memory_bytes": 6610636,
+          "overlay_base_docs_scanned": 4096,
+          "overlay_delta_docs_scanned": 1000,
+          "overlay_full_scan_calls": 1,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 64713,
+          "rerank_score_terms": 4460,
+          "rerank_slice_hits": 4460,
+          "scored_docs": 1221
+        },
+        "latency_trials": [
+          {
+            "warm_p50_ms": 14.571,
+            "warm_p95_ms": 15.117
+          },
+          {
+            "warm_p50_ms": 14.587,
+            "warm_p95_ms": 15.313
+          },
+          {
+            "warm_p50_ms": 14.564,
+            "warm_p95_ms": 15.171
+          }
+        ],
+        "row_digest": "ea06998df3a1c233910b7a3c836258cf1da89e348934884617b0307903d02b2e",
+        "rows": [
+          [
+            "base-2008",
+            27.520730293220822
+          ],
+          [
+            "base-0",
+            26.541660600516764
+          ],
+          [
+            "base-56",
+            26.446231685608268
+          ],
+          [
+            "base-32",
+            26.442469123922308
+          ],
+          [
+            "base-1000",
+            26.432352304595668
+          ],
+          [
+            "base-120",
+            26.431585143478344
+          ],
+          [
+            "base-160",
+            26.428844729352306
+          ],
+          [
+            "base-16",
+            26.425301039519127
+          ],
+          [
+            "base-600",
+            26.4240219456687
+          ],
+          [
+            "base-72",
+            26.416203772383767
+          ],
+          [
+            "delta-160",
+            26.415583024864816
+          ],
+          [
+            "base-176",
+            26.415458002995138
+          ],
+          [
+            "base-40",
+            26.413656022720488
+          ],
+          [
+            "delta-48",
+            26.407157983979516
+          ],
+          [
+            "base-96",
+            26.40696488425141
+          ],
+          [
+            "base-376",
+            26.40525257290625
+          ],
+          [
+            "base-1200",
+            26.40455512543008
+          ],
+          [
+            "base-368",
+            26.40249220074827
+          ],
+          [
+            "base-80",
+            26.4007240749973
+          ],
+          [
+            "base-1600",
+            26.39935816746498
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 1221,
+          "candidate_postings": 2520,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 2520,
+          "memory_bytes": 6610636,
+          "overlay_base_docs_scanned": 4096,
+          "overlay_delta_docs_scanned": 1000,
+          "overlay_full_scan_calls": 1,
+          "rerank_binary_steps": 0,
+          "rerank_doc_terms": 64713,
+          "rerank_score_terms": 4460,
+          "rerank_slice_hits": 4460,
+          "scored_docs": 1221
+        },
+        "warm_p50_ms": 14.571,
+        "warm_p95_ms": 15.171
+      },
+      "cache_state": {
+        "cache_epoch": 1,
+        "debt": {
+          "counter_only": false,
+          "delta_bytes": 558272,
+          "delta_records": 1000,
+          "pending_deletes": 0,
+          "pending_total": 1000,
+          "pending_writes": 1000
+        },
+        "generation": {
+          "auto_preload_priority": 0,
+          "descriptor_present": false,
+          "descriptor_valid": false,
+          "docs": 4096,
+          "generation_bytes": 6076940,
+          "identity_bytes": 24576,
+          "index_bytes": 0,
+          "locator": "1663/5/16593",
+          "mapped_size": 0,
+          "payload_capacity_bytes": 32576,
+          "payload_expected_bytes": 24576,
+          "payload_health": "ok",
+          "payload_health_reason": "ok",
+          "posting_bytes": 6052364,
+          "rebuild_admitted": true,
+          "rebuild_builder": "semantic_stream",
+          "rebuild_required": false,
+          "share_eligible": false,
+          "share_required": false
+        },
+        "maintenance": {
+          "active_background_workers": 0,
+          "active_index_maintenance_workers": 0,
+          "active_preload_workers": 0,
+          "foreground_delta_local_builds": 0,
+          "foreground_delta_offload_wakeups": 0,
+          "maintenance_cycle_age_ms": 6420,
+          "pending_maintenance_worker_launches": 0
+        },
+        "raw_state": "ii42_generation_cache_state(cache_epoch=1, sae_enabled=true, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=256, shared_preload_available=true, shared_preload_arena_size=268435456, shared_preload_used=0, shared_preload_free_bytes=268435456, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_relation=false, shared_preload_admission_state=admissible, shared_preload_entries=0, shared_preload_ready_entries=0, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_base_entries=0, shared_preload_unified_warm_entries=0, shared_preload_lexical_delta_cache_entries=0, shared_preload_unified_delta_cache_entries=0, shared_preload_tombstone_entries=0, shared_lexical_delta_cache_current=false, shared_lexical_delta_cache_loading=false, shared_unified_delta_cache_current=false, shared_unified_delta_cache_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=0, maintenance_cycle_age_ms=6420, shared_preload_resident=false, shared_preload_loading=false, pending_writes=1000, pending_deletes=0, delta_records=1000, delta_bytes=558272, flags=0x0, active_start_blkno=1, active_data_pages=4, delta_start_blkno=749, delta_data_pages=74, relation_blocks=823, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=24576, payload_capacity_bytes=32576, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37830664, rebuild_budget_bytes=34359738368, identity_bytes=24576, index_bytes=0, posting_bytes=6052364, generation_bytes=6076940, docs=4096, auto_preload_priority=0, locator=1663/5/16593)",
+        "sae_enabled": true,
+        "shared_holder_effective": {
+          "base_resident": false,
+          "counter_only_debt": false,
+          "covered_delta_fold_due": false,
+          "covered_delta_query_complete": false,
+          "foreground_offload_observed": false,
+          "has_shared_delta": false,
+          "lexical_delta_covered": false,
+          "lexical_delta_publish_due": false,
+          "needs_background_convergence": false,
+          "tombstone_delta_covered": true,
+          "tombstone_delta_publish_due": false,
+          "unified_delta_covered": false,
+          "unified_delta_publish_due": false
+        },
+        "shared_preload": {
+          "access_clock": 0,
+          "admission_miss_bytes": 0,
+          "admission_misses": 0,
+          "admission_state": "admissible",
+          "arena_size": 268435456,
+          "available": true,
+          "base_entries": 0,
+          "candidate_bytes": 1,
+          "candidate_fits_empty": true,
+          "configured_mb": 256,
+          "entries": 0,
+          "free_bytes": 268435456,
+          "has_evictable_relation": false,
+          "has_free_slot": true,
+          "has_reusable_slot": false,
+          "last_admission_miss": {
+            "age_ms": -1,
+            "bytes": 0,
+            "index_oid": 0,
+            "priority": 0
+          },
+          "lexical_delta_cache_current": false,
+          "lexical_delta_cache_entries": 0,
+          "lexical_delta_cache_loading": false,
+          "loading": false,
+          "obsolete_entries": 0,
+          "ready_entries": 0,
+          "refcounted_entries": 0,
+          "relation_entry_eviction_bytes": 0,
+          "relation_entry_evictions": 0,
+          "resident": false,
+          "reusable_bytes": 0,
+          "reusable_entries": 0,
+          "tombstone_current": false,
+          "tombstone_entries": 0,
+          "tombstone_loading": false,
+          "unified_delta_cache_current": false,
+          "unified_delta_cache_entries": 0,
+          "unified_delta_cache_loading": false,
+          "unified_warm_entries": 0,
+          "used": 0
+        }
+      },
+      "compacted": {
+        "benchmark": {
+          "backend_memory_after": 11746040,
+          "backend_memory_before": 11746040,
+          "backend_memory_growth": 0,
+          "cold_ms": 1.063,
+          "cold_trace": {
+            "candidate_docs": 1221,
+            "candidate_postings": 2520,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2520,
+            "memory_bytes": 7502560,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 11060,
+            "rerank_score_terms": 4460,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1221
+          },
+          "latency_trials": [
+            {
+              "warm_p50_ms": 1.074,
+              "warm_p95_ms": 1.413
+            },
+            {
+              "warm_p50_ms": 1.05,
+              "warm_p95_ms": 1.325
+            },
+            {
+              "warm_p50_ms": 1.058,
+              "warm_p95_ms": 1.188
+            }
+          ],
+          "row_digest": "ea06998df3a1c233910b7a3c836258cf1da89e348934884617b0307903d02b2e",
+          "rows": [
+            [
+              "base-2008",
+              27.520730293220822
+            ],
+            [
+              "base-0",
+              26.541660600516764
+            ],
+            [
+              "base-56",
+              26.446231685608268
+            ],
+            [
+              "base-32",
+              26.442469123922308
+            ],
+            [
+              "base-1000",
+              26.432352304595668
+            ],
+            [
+              "base-120",
+              26.431585143478344
+            ],
+            [
+              "base-160",
+              26.428844729352306
+            ],
+            [
+              "base-16",
+              26.425301039519127
+            ],
+            [
+              "base-600",
+              26.4240219456687
+            ],
+            [
+              "base-72",
+              26.416203772383767
+            ],
+            [
+              "delta-160",
+              26.415583024864816
+            ],
+            [
+              "base-176",
+              26.415458002995138
+            ],
+            [
+              "base-40",
+              26.413656022720488
+            ],
+            [
+              "delta-48",
+              26.407157983979516
+            ],
+            [
+              "base-96",
+              26.40696488425141
+            ],
+            [
+              "base-376",
+              26.40525257290625
+            ],
+            [
+              "base-1200",
+              26.40455512543008
+            ],
+            [
+              "base-368",
+              26.40249220074827
+            ],
+            [
+              "base-80",
+              26.4007240749973
+            ],
+            [
+              "base-1600",
+              26.39935816746498
+            ]
+          ],
+          "trace": {
+            "candidate_docs": 1221,
+            "candidate_postings": 2520,
+            "delta_cache_builds": 0,
+            "delta_cache_decoded_postings": 0,
+            "delta_cache_hits": 0,
+            "delta_cache_misses": 0,
+            "generator_decoded_postings": 2520,
+            "memory_bytes": 7502560,
+            "overlay_base_docs_scanned": 0,
+            "overlay_delta_docs_scanned": 0,
+            "overlay_full_scan_calls": 0,
+            "rerank_binary_steps": 0,
+            "rerank_doc_terms": 11060,
+            "rerank_score_terms": 4460,
+            "rerank_slice_hits": 0,
+            "scored_docs": 1221
+          },
+          "warm_p50_ms": 1.058,
+          "warm_p95_ms": 1.325
+        },
+        "delta_to_compacted_p95_ratio": 11.4498,
+        "documents": 5096,
+        "exact_comparison": {
+          "max_score_delta": 0.0,
+          "passed": true,
+          "same_ids_and_order": true,
+          "score_tolerance": 1e-06
+        }
+      },
+      "delta_documents": 1000,
+      "delta_records": 1000
+    }
+  ],
+  "route": "unified SAE delta query benchmark",
+  "shared_cache": true,
+  "shared_preload": true,
+  "top_k": 20,
+  "warm_runs": 101
+}

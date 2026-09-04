@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "bundle_name": "ii42-p2.2-nfcorpus-v2",
+  "upstream": {
+    "model": "ibm-granite/granite-embedding-30m-sparse",
+    "revision": "ad82b1fd09541c998c8d45045d601c51fdb8a9b7",
+    "license": "Apache-2.0"
+  },
+  "manifest_sha256": "419e3521eff91bdca149d7014dc71a5cd9538d6904854849056f4f327dd30364",
+  "manifest_contract": {
+    "api_version": "ii42_model_v1",
+    "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+    "runtime": "onnxruntime",
+    "runtime_abi": "ii42_p2_unified_text_atoms_v2",
+    "model_format": "onnx",
+    "encoder_type": "granite_sparse_exact_lexical_unified_postings",
+    "latent_dims": 79787
+  },
+  "artifacts": {
+    "atom_space": {
+      "path": "sae/atom_space.json",
+      "sha256": "0935e32c1be670aeafc9364401ac33e6d9a8f538bf7df00c97c32033954ffa04"
+    },
+    "document_encoder": {
+      "path": "encoder/semantic_document_compiler.onnx",
+      "sha256": "9e04d78c9cb14a73dbda4dba66d0e14ce0840d76ff6ab2ff6bdee8e4671cb79f"
+    },
+    "lexical_vocabulary": {
+      "path": "lexical/vocabulary.json",
+      "sha256": "3f2239c6b5eafb3b21eade201d2cac23fa6912fac417befcce9c15aa932fec9c"
+    },
+    "p2_contract": {
+      "path": "provenance/p2_contract.json",
+      "sha256": "435dc02e56ad72044fda8ac94575eef0a2a09e36d5b326e0dbebdf92f1e6e42c"
+    },
+    "query_calibration_runtime": {
+      "path": "calibration/query_calibration_rms.f32",
+      "sha256": "0a5f21a54cdf36740eeceac5a78397098a71c486ab3ec3097b44738a5e5ccd33"
+    },
+    "query_calibration_statistics": {
+      "path": "calibration/query_calibration_stats.npz",
+      "sha256": "342a973bef0a995e7a7cacc21b97a54fbfbe89f32c428e51fffa20be970c5622"
+    },
+    "query_encoder": {
+      "path": "encoder/semantic_query_compiler.onnx",
+      "sha256": "d93d38d1e9d34e26a08b9b87ccf4013a2d7357002c09e797abbe4aea7349f9b3"
+    },
+    "scoring_profile": {
+      "path": "calibration/scoring_profile.json",
+      "sha256": "d765be8b428f623a772f3a94104c4aa58948a96aac2d60aa8acd3064e5cfbad6"
+    },
+    "semantic_runtime": {
+      "path": "encoder/semantic_runtime.json",
+      "sha256": "fbb34a7b5d86d283eda50f827f747959d27500a61454e9e56debe35827b2dfec"
+    },
+    "tokenizer": {
+      "path": "encoder/tokenizer.json",
+      "sha256": "33465117406b9007673e8ba283f7f1383d9b5094df947481af60eec94ed7d7bd"
+    },
+    "tokenizer_config": {
+      "path": "encoder/tokenizer_config.json",
+      "sha256": "37d6615d67cc6d6ca861957eafd9edee2bcec5c5b3301c4acb629bde1925f2cb"
+    },
+    "tokenizer_merges": {
+      "path": "encoder/merges.txt",
+      "sha256": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862"
+    },
+    "tokenizer_vocabulary": {
+      "path": "encoder/vocab.json",
+      "sha256": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e"
+    }
+  }
+}

@@ -1,316 +1,334 @@
-# Testing and Validation
+# Testing And Validation
 
-For source-build commands and release workflow notes, see
-[Contribution](contribution.md).
+II-42 validation is layered so a scorer unit test cannot hide an invalid
+PostgreSQL lifecycle. Product acceptance uses the installed or explicitly
+staged extension, one page-native index path, the public explicit-hit
+`ii42_query(..., k, ...)` route, and planner-native scalar `ii42_query(...)`
+SQL.
 
-## Core Test Layers
-
-### Unit tests
-
-```bash
-cmake -S . -B build
-cmake --build build
-ctest --test-dir build --output-on-failure
-```
-
-### PostgreSQL integration tests
+## Fast Checks
 
 ```bash
-make installcheck
+python3 -m pytest -q
+python3 scripts/test_product_convergence_inventory.py
+python3 -m compileall -q scripts tests
+
+find scripts packaging \
+    -type f -name '*.sh' -print0 \
+    | xargs -0 -n1 bash -n
+
+git diff --check
 ```
 
-## What Integration Tests Cover
+`pytest` owns deterministic Python units for packaging, native evaluation,
+release provenance, and maturity-runner composition. It does not claim
+PostgreSQL lifecycle coverage. The inventory gate enforces one
+rank/search/status/maintenance/drop lifecycle, eventual-only SAE, current
+page-native documentation, and absence of split storage authorities.
 
-- extension installation
-- `CREATE INDEX USING psql_bm25s`
-- `text[]`, `varchar[]`, `text`, `varchar`, and `int4[]` indexing
-- canonical BM25 search APIs
-- raw-query retrieval
-- `@@` predicate behavior
-- `<=>` ordered scans
-- table-index diagnostics through supported SQL helpers
-- automatic maintenance
-- manual stale mode
-- maintenance-state introspection
-- maintenance-policy introspection
-- maintenance-policy recommendation
-- shared generation cache diagnostics and invalidation checks
+All `scripts/test_*.py` entrypoints belong to the canonical product maturity
+suite. Focused invocation is supported for diagnosis, but standalone smoke
+wrappers are not a second acceptance surface. `scripts/benchmark_*.py` and the
+native qrels tools produce performance or quality evidence; they are not
+correctness gates unless the maturity runner invokes them explicitly.
 
-## Mutable-Maintenance Smoke Tests
+## Build And Core Tests
 
-Dedicated scripts in the main repository cover:
+```bash
+cmake -S . -B build_tmp -DCMAKE_BUILD_TYPE=Release
+cmake --build build_tmp --parallel 4
+ctest --test-dir build_tmp --output-on-failure
+```
 
-- restart
-- crash recovery
-- local physical replication
-- concurrent maintenance stability smoke
-- query-first eventual clean-but-stale tail convergence smoke
-- query-first eventual staged-maintenance cancellation smoke
-- query-first eventual self-triggered background maintenance smoke
-- payload-health corruption and repair smoke
-- non-public extension schema wrapper smoke
-- broader concurrent stress
-- broader family soak
+These C tests are independent of the PostgreSQL extension build. Build the
+extension with the pinned ONNX Runtime and PostgreSQL development files using
+the [contributing workflow](../CONTRIBUTING.md#build-from-source). Do not reuse
+a CMake cache copied from a differently located checkout; build directories are
+local generated state, not release inputs.
 
-The concrete smoke scripts live in `scripts/` in the main repository.
-They cover restart, crash recovery, local physical replication,
-concurrent maintenance stability, query-first eventual clean-but-stale tail
-convergence, staged-maintenance cancellation, payload-health corruption repair,
-broader concurrent stress, non-public extension-schema wrapper resolution, and
-family soak behavior.
+Run PostgreSQL regressions in an isolated temporary cluster so a resident
+preloaded library cannot mask the candidate build:
 
-Focused extension schema smoke:
+```bash
+python3 scripts/test_extension_regression_temp_pg.py \
+    --pg-bin /opt/homebrew/opt/postgresql@18/bin
+```
+
+`make installcheck` remains appropriate for a fresh CI cluster.
+
+## Unified Lifecycle
+
+```bash
+python3 scripts/test_unified_index_lifecycle_smoke.py \
+    --model-path /path/to/model-checkout \
+    --mixed-soak-cycles 10 \
+    --concurrent-crud-cycles 8 \
+    --concurrent-readers 4 \
+    --concurrent-writers 2 \
+    --soak-queries 100 \
+    --output /tmp/ii42-unified-lifecycle.json
+```
+
+To bind the run to staged source, provide both `--extension-libdir` and
+`--extension-control-dir`. The harness rejects a partial binding and records
+the resolved package roots.
+
+The lifecycle gate must prove:
+
+1. BM25 and `sae = true` publish one checked relation root and use
+   `ii42_query(...)`.
+2. Lexical and semantic atoms occupy one posting namespace; no second index,
+   registry, or application-managed payload exists.
+3. SAE is eventual-only: foreground DML publishes lexical evidence and pending
+   identity with zero document inference; shared workers complete semantics.
+4. Commit, abort, savepoint, two-phase commit, old snapshots, HOT/non-HOT
+   updates, delete, and TID reuse obey heap MVCC. Structured filters must keep
+   metadata membership exact across same-transaction changes and concurrent
+   `REPEATABLE READ` snapshots.
+5. Semantic completion consumes bounded linked-L0 intervals and does not
+   re-encode unchanged or already completed document versions. Structural
+   maintenance reuses persisted postings. Derived scope construction may read
+   corpus-wide INCLUDE metadata in bounded snapshot batches; this is not a
+   full-corpus semantic re-encoding pass.
+6. `VACUUM (INDEX_CLEANUP ON)` supplies immediate exact dead-TID retirement
+   and reader-safe reclamation. `INDEX_CLEANUP AUTO` may defer physical
+   convergence without changing MVCC-visible query correctness.
+7. Concurrent reader, writer, maintenance, fold, and root publication cannot
+   expose mixed-root results.
+8. Cold restart, immediate crash, `REINDEX`, and physical replay preserve
+   readiness and the selected exact or bounded-approximate ranking contract.
+9. Shared workers own model sessions; backends retain no index-sized semantic
+   state. Warm metadata remains attached across active linked-L0 ingress when
+   its serving authority is unchanged. A compatible older accelerator baseline
+   and its projections remain usable until replacement or a genuine authority
+   incompatibility, not merely until the next manifest publication.
+10. A failed build or model-contract mismatch preserves the previous readable
+    root and fails closed.
+11. `ii42_index_status(...)` exposes readiness, semantic debt, convergence,
+    and blockers without a relation-sized or model-sized walk.
+    `ii42_index_audit(...)` separately validates COW closure, reachability,
+    reclaim markers, derived accelerator objects, and model SHA-256 identities.
+12. PostgreSQL `DROP INDEX` removes the complete relation-owned index lifecycle
+    without an external cleanup step.
+
+Any failed invariant is a product failure, not a known-warning baseline.
+
+## Focused Mutation And Concurrency Gates
+
+```bash
+python3 scripts/test_transactional_delta_lifecycle.py \
+    --model-path /path/to/model-checkout
+
+python3 scripts/test_same_index_writer_concurrency_temp_pg.py \
+    --model-path /path/to/model-checkout
+
+python3 scripts/test_eventual_semantic_maintenance_fairness.py \
+    --model-path /path/to/model-checkout
+```
+
+These isolate transaction callbacks, writer serialization, semantic
+completion and accelerator-publication fairness, restart reconciliation,
+query admission while a writer is open, and bounded storage under sustained
+CRUD. The fairness gate includes a continuously written high-OID root and a
+lower-OID root waiting for its accelerator, so pending-L0 urgency cannot bypass
+cross-index rotation. During the accelerator build it also samples the
+builder's advisory locks, probes same-root maintenance, writes to that root,
+and requires structural progress before checked accelerator publication
+retries. This prevents a transaction or cross-transaction discovery lock from
+serializing mutation convergence behind corpus-sized derived work. The staged
+same-index writer gate owns both writer and public-query admission coverage so
+those contracts cannot drift across separate database fixtures. It records a
+single-reader warm baseline, a parallel-reader control, concurrent
+reader/worker activity, and post-drain query latency distributions so a
+correctness pass cannot hide a query stall. Reader waits longer than
+`deadlock_timeout` are also checked against PostgreSQL `log_lock_waits`;
+maintenance may compete for CPU and I/O but must not serialize a public query
+behind a heavyweight lock. The gates must compare
+result identities, order, and scores with the independent oracle rather than
+merely checking that SQL completed.
+
+The fairness gate drains both axes separately: semantic/L0 debt must reach
+zero first, and every admitted semantic accelerator must then advance from a
+compatible baseline-delta state to a current baseline. This prevents an early
+correctness pass from hiding a permanently stale performance path. Accelerator
+prepare samples may not hold `backend_xid`. Posting and transpose phases may
+not hold `backend_xmin`; scope extraction may expose it only for the bounded
+256-document MVCC batches needed to read external TOAST values. The atomic
+publication may briefly assign a write XID but must not hold `backend_xmin`.
+
+Release qualification repeats the convergent lifecycle and concurrent-reader
+gate. Latency evidence must include p50, p95, and maximum values before, during,
+and after maintenance. Hardware-specific ratios are reported rather than
+encoded as portable correctness assertions; statement timeouts, empty results,
+runtime failures, or failure to return to a stable post-drain range are release
+failures.
+
+## Page-Native Exactness And Memory
+
+```bash
+python3 scripts/test_unified_index_lifecycle_smoke.py \
+    --model-path /path/to/model-checkout \
+    --output /tmp/ii42-page-native-lifecycle.json
+
+python3 scripts/test_backend_memory_ownership.py \
+    --output /tmp/ii42-backend-memory.json
+
+python3 scripts/test_convergent_segment_read_smoke.py
+python3 scripts/test_convergent_vacuum_frontier_smoke.py
+```
+
+Acceptance requires:
+
+- exact result rows/order and documented float tolerance;
+- checked-root plus snapshot-visible linked-L0 parity;
+- exactness before and after seal, compaction, fold, `VACUUM`, and restart;
+- bounded query-specific L0 projection and no corpus scan;
+- no foreground document inference;
+- bounded backend private memory and worker-owned model sessions;
+- storage plateau for a fixed live set after reader-safe reclamation.
+
+For an accelerator-eligible index, the unified lifecycle smoke reaches
+`state=ready`, `baseline_current=true`, and `scope_current=true` before it
+accepts `no_pending`. Core semantic debt reaching zero is not by itself a
+complete derived-performance convergence result. Stability soak baselines are
+taken only after both axes reach that idle state. Long-snapshot checks compare
+sealed authority rather than manifest identity because accelerator publication
+and active-L0 rotation may safely advance the checked root while the old MVCC
+horizon remains protected.
+
+The same smoke stops immediately after a pending-L0 seal and requires the
+unchanged accelerator to report `state=ready_baseline_delta`,
+`baseline_current=false`, and a valid `query_metadata_warm=true` marker before
+derived convergence continues. This catches manifest churn that incorrectly
+invalidates serving query metadata. Planner-native and structured filters must
+reject stale baseline TIDs after UPDATE or DELETE, while a newly inserted
+post-baseline row may remain absent. The background due selector must leave
+sub-threshold debt alone before the configured low-debt interval, then rotate
+it after that interval without running inference or invalidating the serving
+marker. Explicit per-index maintenance may advance it immediately. A forced
+test threshold then
+seals the delta, refreshes the accelerator, and requires the new row to appear
+with the marker valid
+throughout.
+
+The backend-memory gate uses allocator-zone and private-writable ownership from
+`vmmap` on macOS. On Linux it uses PSS from `smaps_rollup` as an observational
+resident metric and counts only writable private mappings from `smaps` for the
+hard ownership gate. Linux does not expose the macOS allocator-zone split, so
+that unavailable metric remains explicit rather than being reported as zero.
+
+Cache clear, eviction, and cold warmup may change latency only. Disposable
+residency is never correctness evidence.
+
+## Shared Runtime And Preload
+
+```bash
+python3 scripts/test_shared_preload_lifecycle_closure.py \
+    --bindir /opt/homebrew/opt/postgresql@18/bin
+
+python3 scripts/test_shared_preload_auto_preload.py \
+    --bindir /opt/homebrew/opt/postgresql@18/bin
+
+python3 scripts/test_runtime_service_required_smoke.py
+python3 scripts/test_runtime_service_privilege_smoke.py
+python3 scripts/test_runtime_service_restart_smoke.py
+```
+
+These gates require semantic operation to fail closed without the shared
+runtime, enforce privilege boundaries, validate worker restart/liveness, warm
+relation pages through PostgreSQL shared buffers, and retain only bounded
+markers or derived residency in the II-42 arena.
+
+## Schema And Package Boundaries
 
 ```bash
 python3 scripts/test_extension_schema_smoke.py \
-    --psql /path/to/postgresql/bin/psql
+    --pg-bin /opt/homebrew/opt/postgresql@18/bin
+
+python3 scripts/run_product_maturity_suite.py \
+    --package-root /path/to/staged/package \
+    --source-package-root /path/to/psql_bm25s-package \
+    --model-path /path/to/model-checkout \
+    --skip-benchmark \
+    --output /tmp/ii42-product-maturity.json
 ```
 
-This script verifies fresh install and `0.2.0` to current-version upgrade when the
-extension is created in a non-`public` schema. It also verifies that
-`ALTER EXTENSION ... SET SCHEMA` is rejected, because SQL helper functions
-capture the extension schema for safe wrapper resolution.
+The package suite verifies the extension binary, control file, install SQL,
+bundled runtime, licenses, and `BUILD-INFO.txt` before database tests. A staged
+package must remain byte-identical throughout qualification. Restart,
+independent golden, low-memory maintenance, backend RSS, semantic fairness,
+shared-preload, and replication gates run by default. Use
+`--skip-restart-smoke` only for focused diagnosis, never for release
+qualification.
 
-Hybrid search coverage is part of the main regression test. It uses
-synthetic vector-like candidates so the test suite does not require
-`pgvector` or VectorChord:
-
-- RRF fusion
-- score fusion with `minmax`, `zscore`, `rank`, and `inverse_distance`
-- mixed BM25-like and vector-distance-like candidates
-- BM25 adapter output from `psql_bm25s_query(...)`
-
-The schema smoke test also calls the hybrid fusion API from a non-`public`
-extension schema, including the `0.2.0` to current-version upgrade path.
-
-Shared generation diagnostics are covered by the main integration regression.
-The regression checks that small indexes stay off the shared-cache descriptor
-path, that `cache_epoch` advances after explicit refresh, and that
-maintenance/REINDEX paths produce a new observable generation key.
-
-The cache deployment model and connection-pool benchmark requirements are
-documented in [Shared Generation Cache](shared-generation-cache.md). Runtime
-memory sizing, workspace retention, and active warmup guidance are documented
-in [Connection Memory and Index Prewarming](connection-memory.md).
-
-Focused generation cache lifecycle smoke:
+The only historical product migration gate is source-table migration from a
+self-consistent `psql_bm25s` package:
 
 ```bash
-python3 scripts/test_generation_cache_smoke.py \
-    --psql /path/to/postgresql/bin/psql \
-    --dbname contrib_regression
+python3 scripts/test_psql_bm25s_source_migration_smoke.py \
+    --source-package-root /path/to/psql_bm25s-package \
+    --extension-libdir /path/to/ii42-stage/pkglibdir \
+    --extension-control-dir /path/to/ii42-stage/sharedir \
+    --output /tmp/ii42-source-migration.json
 ```
 
-This script verifies that operational cache clear removes corrupt descriptor
-files, interrupted descriptor temp files, stale lock files, and failure
-markers. It also uses independent psql backends to verify that maintenance
-publishes a new observable generation key and that the new generation is
-searchable.
+It keeps both products queryable during side-by-side validation, exercises
+CRUD, and removes the old extension only after result and dependency checks.
+Intermediate II-42 experiment catalogs are not a compatibility target.
 
-Focused shared-preload generation cache smoke:
+## Restart And Replication
+
+`scripts/test_replication_lifecycle_smoke.py` must run BM25 and semantic-enabled
+indexes through create, CRUD, maintenance, `VACUUM`, restart, `REINDEX`, replay,
+promotion readiness, and drop. Primary and standby must agree on checked-root
+contract, document count, readiness, and representative ordered results.
+
+Logical replication copies source rows rather than index relations and is
+validated by independently building the subscriber index.
+
+## Performance Qualification
+
+Performance work is a separate evidence gate. It must measure the same
+installed page-native product path used by applications and keep these surfaces
+separate:
+
+- BM25 query throughput and tail latency;
+- semantic query encoding plus posting traversal;
+- build and `REINDEX` encoding throughput;
+- eventual completion latency under sustained writes;
+- batch versus single-text atom/weight parity;
+- worker/session RSS, backend private memory, and storage plateau;
+- cold versus warm relation-page behavior.
+
+Query encoding remains single-text. Only build and maintenance document work
+may batch. Do not copy historical measurements into product claims; publish
+new numbers only with a reproducible workload, package fingerprint, hardware,
+provider, raw artifacts, and current dataset.
+
+See [Performance Evidence](performance/README.md).
+
+## Native Quality Evaluation
+
+Quality evaluation must query relation-owned indexes through
+`ii42_query(...)` and join TIDs back to the corpus table:
 
 ```bash
-python3 scripts/test_shared_preload_generation_cache.py \
-    --bindir /path/to/postgresql/bin
+python3 scripts/evaluate_ii42_native_qrels.py \
+    --dsn 'host=/path/to/socket port=55432 dbname=postgres' \
+    --dataset scifact \
+    --schema bench \
+    --table docs \
+    --id-column id \
+    --index bm25=bench.docs_body_idx \
+    --index semantic=bench.docs_semantic_idx \
+    --queries-jsonl /path/to/queries.jsonl \
+    --qrels-json /path/to/qrels.json \
+    --k 1000 \
+    --output-json /tmp/scifact-native-qrels.json
 ```
 
-This script starts a temporary PostgreSQL cluster with
-`shared_preload_libraries = 'psql_bm25s'`, configures
-`psql_bm25s.shared_generation_cache_size`, creates a BM25 index, prewarms it,
-queries it from independent `psql` backends, and verifies that the main
-shared-memory arena has one ready resident generation.
+The evaluator rejects invalid or non-query-ready indexes. A sampled candidate
+surface is a canary, not a substitute for the official full corpus.
 
-Focused shared-preload automatic preload smoke:
-
-```bash
-python3 scripts/test_shared_preload_auto_preload.py \
-    --bindir /path/to/postgresql/bin
-```
-
-This script verifies the `auto_preload` reloption validation, priority order,
-background preload through the shared-preload worker, and the no-op behavior for
-unmarked indexes.
-
-Focused shared-preload standby smoke:
-
-```bash
-python3 scripts/test_shared_preload_standby_auto_preload.py \
-    --bindir /path/to/postgresql/bin
-```
-
-This script starts a temporary primary/standby pair, verifies that the standby
-auto-preloads a marked index without performing maintenance, then rebuilds the
-index on the primary and verifies that the standby reloads the replicated
-current generation.
-
-Focused generation cache connection-churn benchmark:
-
-```bash
-python3 scripts/benchmark_generation_cache_churn.py \
-    --dataset webis-touche2020 \
-    --max-cases 50 \
-    --connections 4 \
-    --parallelism 4 \
-    --cases-per-connection 1
-```
-
-This benchmark prepares a large enough index to use the DSM generation cache,
-clears volatile cache state, then launches fresh PostgreSQL backends against
-the same index. The expected DSM V2 behavior is single-flight publish,
-serialized attach, and a valid descriptor after the run.
-
-Focused query-first eventual maintenance smoke:
-
-```bash
-python3 scripts/test_query_first_eventual_tail_smoke.py \
-    --psql /path/to/postgresql/bin/psql \
-    --dbname contrib_regression
-```
-
-This script verifies that query-first eventual maintenance can tolerate
-concurrent tail inserts by publishing a complete clean-but-stale generation,
-then retrying maintenance to converge the index to a clean state with the
-inserted documents searchable.
-
-Focused cancellation smoke:
-
-```bash
-python3 scripts/test_query_first_eventual_cancel_smoke.py \
-    --psql /path/to/postgresql/bin/psql \
-    --dbname contrib_regression
-```
-
-This script terminates a backend during the long staged-build phase, before the
-final publish. It verifies the old base index remains readable with retryable
-debt, then reruns maintenance to converge the index.
-
-Focused self-triggered background maintenance smoke:
-
-```bash
-python3 scripts/test_query_first_eventual_background_smoke.py \
-    --psql /path/to/postgresql/bin/psql \
-    --dbname contrib_regression
-```
-
-This script verifies that committed pending debt can wake a dynamic background
-worker and converge without an explicit pg_cron call.
-
-Focused payload-health corruption smoke:
-
-```bash
-python3 scripts/test_payload_health_corruption_smoke.py \
-    --bindir /opt/homebrew/opt/postgresql@18/bin
-```
-
-This script truncates a temporary index relation after build, verifies cheap
-payload-health diagnostics report `corrupt/rebuild_required`, verifies query
-fails fast instead of cold-loading a bad payload, then verifies maintenance can
-rebuild a new generation from the heap.
-
-Focused compact maintenance builder smoke:
-
-```bash
-python3 scripts/test_compact_maintenance_builder.py \
-    --bindir /opt/homebrew/opt/postgresql@18/bin \
-    --builder compact
-```
-
-This script starts a temporary shared-preload cluster, creates an eventual
-`text[]` index, sets a rebuild memory budget that rejects the standard builder
-under the `60%` headroom rule but admits the compact builder under the `75%`
-headroom rule, runs due-index maintenance, and verifies the result reports
-`builder=compact` with the new row searchable after publish.
-
-Focused spill maintenance builder smoke:
-
-```bash
-python3 scripts/test_compact_maintenance_builder.py \
-    --bindir /opt/homebrew/opt/postgresql@18/bin \
-    --builder spill
-```
-
-This runs the same online maintenance path with a tighter memory budget that
-rejects standard and compact builders under their headroom rules but admits the
-spill builder. It verifies `builder=spill` and confirms the streamed
-append-only generation is searchable.
-
-## Benchmark Validation
-
-Benchmark tooling is also part of validation because maintenance policy
-is benchmark-backed.
-
-Important benchmark scripts also live in `scripts/` in the main
-repository. They cover automatic maintenance, churn benchmarks, policy
-sweeps, policy matrices, long-run profiles, and production-shaped trace
-profiles.
-
-For query-first eventual backfill behavior, use:
-
-```bash
-PSQL_BM25S_BENCH_DSN='dbname=postgres' \
-python3 scripts/benchmark_query_first_eventual_backfill.py \
-    --output /tmp/psql_bm25s_eventual_backfill.json
-```
-
-This benchmark compares eager exact maintenance with query-first eventual
-maintenance while a non-indexed text column is backfilled and concurrent
-queries hit the indexed title-token column.
-
-## Filtered Ranked SQL Validation Gate
-
-For SQL-surface changes that affect filtered/ranked query composition,
-validation should include all of the following:
-
-- unit tests and `make installcheck`
-- at least one integration case for:
-  - `@@` plus `<=>`
-  - `@@@` plus `<=>`
-  - `psql_bm25s_ranked_query(...)`
-- `EXPLAIN (FORMAT JSON)` inspection through:
-  - `psql_bm25s_fast_path_plan(...)`
-  - or `psql_bm25s_fast_path_explain(...)`
-
-The goal is not just functional correctness. The goal is to confirm
-that the intended SQL shape still uses a `psql_bm25s` index-aware plan
-instead of silently degrading into a broader executor path.
-
-If a new helper only wraps an existing exact surface, the benchmark gate
-can stay narrow. At minimum it should cover:
-
-- one canonical `rowset` case
-- one combined filter/rank SQL case
-
-If a new helper changes how filtered/ranked SQL is composed, it should
-also be checked against a representative benchmark slice before the
-surface is treated as stable.
-
-## Field-Aware Helper Validation Slice
-
-The structured field-aware helpers have one focused benchmark slice:
-
-- [`../scripts/benchmark_sql_field_helpers.py`](../scripts/benchmark_sql_field_helpers.py)
-
-It validates:
-
-- result equivalence against explicit `psql_bm25s_fusion(...)`
-- latency overhead for:
-  - `psql_bm25s_fusion_query_weighted(...)`
-  - `psql_bm25s_fusion_query_fields(...)`
-  - `psql_bm25s_fusion_query(...)`
-
-Current benchmark summary:
-
-- all helper variants matched the explicit baseline exactly
-- all variants stayed sub-millisecond on the focused synthetic slice
-
-## Practical Rule
-
-For code changes:
-
-- run unit and integration tests
-
-For maintenance-path changes:
-
-- run unit and integration tests
-- run the dedicated smoke scripts
-- run the relevant benchmark slice again
+See [Contributing](../CONTRIBUTING.md), [Architecture](architecture-and-design.md),
+and [Semantic Index Operations](examples/semantic-index-operations.md).

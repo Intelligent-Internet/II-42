@@ -1,0 +1,9 @@
+Package: ii42-v0.2.0-linux-x86_64-pg18
+Version: 0.2.0
+PostgreSQL major: 18
+pg_config: /usr/lib/postgresql/18/bin/pg_config
+Git commit: 2b8e6203227ee651f3cacafe118c0bd5aba18c06
+Git tree: dirty-p22-final-v3
+Built at: 2026-07-23T07:19:52Z
+ONNX Runtime: 1.26.0
+ONNX Runtime linkage: bundled in PostgreSQL pkglibdir

@@ -1,3 +1,0 @@
--- No SQL surface changes are required for 0.1.5.
--- This upgrade updates the extension version so databases can pick up
--- the new shared library implementation.

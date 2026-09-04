@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-03-27 23:00:59",
+  "datasets_dir": "/var/tmp/pg18_benchmark_matrix_task/datasets",
+  "db_prefix": "psql_bm25s_pg18_matrix_",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "upstream_bm25s"
+  ],
+  "results": {
+    "trec-covid": {
+      "dataset": "trec-covid",
+      "stats": {
+        "documents": 171332,
+        "queries": 50,
+        "query_tokens": 404,
+        "tokens": 20231413,
+        "vocab_size": 174893
+      },
+      "upstream_bm25s": {
+        "build_ms": 6667.7678929999975,
+        "query": {
+          "count": 50,
+          "qps": 210.5038605671257,
+          "total_ms": 237.52533500000084
+        }
+      },
+      "wall_time_s": 17.639219499
+    }
+  },
+  "top_k": 1000
+}

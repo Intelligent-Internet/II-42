@@ -1,0 +1,61 @@
+{
+  "commit": "12399465",
+  "host": "aws-shadow-isolated",
+  "index": {
+    "documents": 500000,
+    "field_aware": true,
+    "name": "bench.pubmed_v2_idx",
+    "relation_size_bytes": 2880880640,
+    "semantic_format": 2
+  },
+  "query": {
+    "atom_count": 45,
+    "k": 50,
+    "text": "cancer immunotherapy biomarkers"
+  },
+  "results": [
+    {
+      "allowed_documents": 2893,
+      "baseline_p50_ms": 1076.860,
+      "baseline_p95_ms": 1421.460,
+      "cache_p50_ms": 610.729,
+      "cache_p95_ms": 1083.901,
+      "filter": "p006",
+      "speedup_p50": 1.763
+    },
+    {
+      "allowed_documents": 47371,
+      "baseline_p50_ms": 2777.626,
+      "baseline_p95_ms": 2787.050,
+      "cache_p50_ms": 1134.727,
+      "cache_p95_ms": 1141.322,
+      "filter": "p100",
+      "speedup_p50": 2.448
+    },
+    {
+      "allowed_documents": 236787,
+      "baseline_p50_ms": 1807.805,
+      "baseline_p95_ms": 1881.284,
+      "cache_p50_ms": 972.977,
+      "cache_p95_ms": 989.103,
+      "filter": "p500",
+      "speedup_p50": 1.858
+    }
+  ],
+  "correctness": {
+    "compared_hits": 150,
+    "rank_doc_score_differences": 0,
+    "scoring_work_differences": 0
+  },
+  "memory": {
+    "queries": 30,
+    "rss_kib_max": 334572,
+    "rss_kib_min": 330960,
+    "work_budget_bytes": 67108864
+  },
+  "verification": {
+    "cmake_ctest": "passed",
+    "query_contracts": "38/38",
+    "staged_lifecycle": "56/56"
+  }
+}

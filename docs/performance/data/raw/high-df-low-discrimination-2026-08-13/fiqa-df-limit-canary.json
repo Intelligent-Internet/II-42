@@ -1,0 +1,303 @@
+{
+  "candidate_multipliers": [],
+  "index_name": "ii42_beir15.docs_fiqa_bm25_idx",
+  "k": 100,
+  "query_count": 50,
+  "ratios": [
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 1.0,
+      "latency_ms": {
+        "p50": 118.88374949990066,
+        "p95": 157.3689580000064
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": 0.0,
+      "mean_pruned_terms": 0.0,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2750945259093524,
+        "mrr_at_20": 0.3505169172932331,
+        "ndcg_at_10": 0.3173260015592585,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 0.95,
+      "latency_ms": {
+        "p50": 89.80543750010384,
+        "p95": 113.98674999986724
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": 0.0,
+      "mean_pruned_terms": 0.0,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2750945259093524,
+        "mrr_at_20": 0.3505169172932331,
+        "ndcg_at_10": 0.3173260015592585,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "mrr_at_20": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "ndcg_at_10": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 0.9,
+      "latency_ms": {
+        "p50": 89.71925000003012,
+        "p95": 159.5563329997276
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": 0.0,
+      "mean_pruned_terms": 0.0,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2750945259093524,
+        "mrr_at_20": 0.3505169172932331,
+        "ndcg_at_10": 0.3173260015592585,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "mrr_at_20": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "ndcg_at_10": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.976,
+      "budget_ratio": 0.75,
+      "latency_ms": {
+        "p50": 99.82202100013637,
+        "p95": 111.24800000015966
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": 39862.68,
+      "mean_pruned_terms": 0.92,
+      "metric_delta": {
+        "map_at_100": 0.00195326741666918,
+        "mrr_at_20": -0.00010818713450289064,
+        "ndcg_at_10": 0.0011088350264510938,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2770477933260216,
+        "mrr_at_20": 0.3504087301587302,
+        "ndcg_at_10": 0.3184348365857096,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.05714285714285716,
+          "gain_queries": 12,
+          "harm_queries": 15,
+          "worst": -0.010468631897203318
+        },
+        "mrr_at_20": {
+          "best": 0.0111111111111111,
+          "gain_queries": 1,
+          "harm_queries": 2,
+          "worst": -0.013888888888888895
+        },
+        "ndcg_at_10": {
+          "best": 0.0328153151808101,
+          "gain_queries": 4,
+          "harm_queries": 1,
+          "worst": -0.006773982623103636
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.945,
+      "budget_ratio": 0.5,
+      "latency_ms": {
+        "p50": 89.2192710002746,
+        "p95": 114.98016699988511
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": 85675.5,
+      "mean_pruned_terms": 2.36,
+      "metric_delta": {
+        "map_at_100": 0.005676485358273364,
+        "mrr_at_20": 0.009947368421052594,
+        "ndcg_at_10": 0.0070193697397401555,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.28077101126762577,
+        "mrr_at_20": 0.3604642857142857,
+        "ndcg_at_10": 0.32434537129899865,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.25501253132832075,
+          "gain_queries": 15,
+          "harm_queries": 13,
+          "worst": -0.08333333333333331
+        },
+        "mrr_at_20": {
+          "best": 0.5,
+          "gain_queries": 3,
+          "harm_queries": 3,
+          "worst": -0.08333333333333331
+        },
+        "ndcg_at_10": {
+          "best": 0.22629438553091674,
+          "gain_queries": 7,
+          "harm_queries": 2,
+          "worst": -0.06932344192660694
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.873,
+      "budget_ratio": 0.35,
+      "latency_ms": {
+        "p50": 93.95041700008733,
+        "p95": 118.32029200013494
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": 140427.82,
+      "mean_pruned_terms": 4.68,
+      "metric_delta": {
+        "map_at_100": 0.007356807606659577,
+        "mrr_at_20": 0.005200837174521411,
+        "ndcg_at_10": 0.005557038692546423,
+        "recall_at_100": -0.0025000000000000577
+      },
+      "metrics": {
+        "map_at_100": 0.282451333516012,
+        "mrr_at_20": 0.3557177544677545,
+        "ndcg_at_10": 0.3228830402518049,
+        "recall_at_100": 0.6935238095238095
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.19047619047619047,
+          "gain_queries": 21,
+          "harm_queries": 11,
+          "worst": -0.009720746649750478
+        },
+        "mrr_at_20": {
+          "best": 0.08333333333333334,
+          "gain_queries": 7,
+          "harm_queries": 3,
+          "worst": -0.01785714285714285
+        },
+        "ndcg_at_10": {
+          "best": 0.11284514134893522,
+          "gain_queries": 9,
+          "harm_queries": 3,
+          "worst": -0.07311683844390995
+        },
+        "recall_at_100": {
+          "best": 0.25,
+          "gain_queries": 2,
+          "harm_queries": 1,
+          "worst": -0.5
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    }
+  ],
+  "semantic_work_target_postings": 0,
+  "strategy": "df-limit",
+  "support_ratio": 0.0
+}

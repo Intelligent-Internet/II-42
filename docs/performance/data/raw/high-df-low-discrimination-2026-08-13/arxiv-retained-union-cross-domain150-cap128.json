@@ -1,0 +1,2433 @@
+{
+  "index_name": "commons.data_arxiv__title_abstract__field_aware_bm25_idx",
+  "k": 100,
+  "queries": [
+    {
+      "base_atom_count": 62,
+      "query_text": "Future Perspectives on Next Generation e-Sports Infrastructure and Exploring Their Benefits",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Pooled motion features for first-person videos",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "General transformations for GPU execution of tree traversals",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.76,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "Characterizing cloud computing hardware reliability",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "Agile Team Perceptions of Productivity Factors",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Improve Chinese Word Embeddings by Exploiting Internal Structure",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Improved Statistical Machine Translation Using Monolingually-Derived Paraphrases",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Training Faster by Separating Modes of Variation in Batch-normalized Models",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Control Flow Analysis for Reverse Engineering of Sequence Diagrams",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Algorithmic Nuggets in Content Delivery",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Verification based ECG biometrics with cardiac irregular conditions using heartbeat level and segment level information fusion",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Recipient Revocable Identity-Based Broadcast Encryption: How to Revoke Some Recipients in IBBE without Knowledge of the Plaintext",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Let's go public! taking a spoken dialog system to the real world",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Solving Constraint Satisfaction Problems through Belief Propagation-guided decimation",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Region-based CNN for Logo Detection",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 64,
+      "query_text": "A New Fast and Efficient Decision-Based Algorithm for Removal of High-Density Impulse Noises",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Learning Sensor-Specific Spatial-Spectral Features of Hyperspectral Images via Convolutional Neural Networks",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Multi-user interaction using handheld projectors",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Perspectives to Predict Dropout in University Students with Machine Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "An environmental energy harvesting framework for sensor networks",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "Towards edge-caching for image recognition",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "PRACTICAL HYPERPARAMETER OPTIMIZATION",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Stochastic Variational Deep Kernel Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Efficient Large-Scale Graph Processing on Hybrid CPU and GPU Systems",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Statistical Syntax-Directed Translation with Extended Domain of Locality",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "rev.ng: a unified binary analysis framework to recover CFGs and function boundaries",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Deep Structured Scene Parsing by Learning with Image Descriptions",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Optimal Target Assignment and Path Finding for Teams of Agents",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Internet of Things: a New Application for Intelligent Traffic Monitoring System",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Human behavior prediction for smart homes using deep learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "Smoothing of Piecewise Linear Paths",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "High-fidelity simulation for evaluating robotic vision performance",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "The impact of Web quality and playfulness on user acceptance of online retailing",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "Weakly Supervised Deep Detection Networks",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "DeepX: A Software Accelerator for Low-Power Deep Learning Inference on Mobile Devices",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Linking a domain thesaurus to WordNet and conversion to WordNet-LMF",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.72,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Secu Wear: An Open Source, Multi-component Hardware/Software Platform for Exploring Wearable Security",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Recurrence networks \u2014 a novel paradigm for nonlinear time series analysis",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Smart antennas for satellite communications on the move",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Spectral Network Embedding: A Fast and Scalable Method via Sparsity",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "NTU RGB+D: A Large Scale Dataset for 3D Human Activity Analysis",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Democrats, republicans and starbucks afficionados: user classification in twitter",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "Person Re-identification by Multi-Channel Parts-Based CNN with Improved Triplet Loss Function",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Question Passage Question & Passage Encoding Question-Passage Matching Passage Self-Matching Word Character Answer Prediction",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "A New View of Predictive State Methods for Dynamical System Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "OCA: Opinion corpus for Arabic",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Reconnaissance d'\u00e9v\u00e9nements et d'actions \u00e0 partir de la profondeur thermique 3D. (Event and action recognition from thermal and 3D depth Sensing)",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Analyzing inter-application communication in Android",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Argument Mining: A Machine Learning Perspective",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Flexible and Fine-Grained Attribute-Based Data Storage in Cloud Computing",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Do individual investors use Google to obtain stock quotes?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 52,
+      "query_text": "Why diversify stocks/investments?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "F-1 student investing in foreign markets",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "How are various types of income taxed differently in the USA?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Looking for good investment vehicle for seasonal work and savings",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Understanding the T + 3 settlement days rule",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.77,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Investing/business with other people's money: How does it work?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Is there an advantage to a traditional but non-deductable IRA over a taxable account? [duplicate]",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Is it okay to be married, 30 years old and have no retirement?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Rollover into bond fund to do dollar cost averaging [duplicate]",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Why would you elect to apply a refund to next year's tax bill?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "How much do brokerages pay exchanges per trade?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 67,
+      "query_text": "What happens with the \u201clong\u201d buyer of a stock when somebody else's short fails (that is, unlimited loss bankrupts short seller)",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Short term parking of a large inheritance?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Explain the details and benefits of rebalancing a retirement portfolio?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "How to sell a stock in a crashing market?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "How do you translate a per year salary into a part-time per hour job?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Definitions of leverage and of leverage factor",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Is is possible to dispute IRS underpayment penalties?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "How much should I be contributing to my 401k given my employer's contribution?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Rationale behind using 12, 26 and 9 to calculate MACD",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "How do disputed debts work on credit reports?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "How to account for money earned and spent prior to establishing business bank accounts?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 51,
+      "query_text": "Forex independent investments",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Short Term Capital Gains tax vs. IRA Withdrawal Tax w/o Quarterly Est. Taxes",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 53,
+      "query_text": "Personal taxes for Shopify / Paypal shop?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "How does Walmart account their expired food",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "How FTB and IRS find mistakes in amended tax returns? Are their processes reliable?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Why aren't there solutions for electronic itemized receipt for retail in-store purchases?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "I made an investment with a company that contacted me, was it safe?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Why does FlagStar Bank harass you about payments within grace period?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Is is possible to take a mortgage using Bitcoin as collateral?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Are social media accounts (e.g. YouTube, Twitter, Instagram, etc.) considered assets?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "Which is better when working as a contractor, 1099 or incorporating?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "What's the difference between Market Cap and NAV?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Can I send a money order from USPS as a business?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Rules for SEP contributions in an LLC?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 64,
+      "query_text": "Is there a way to open a U.S. bank account for my LLC remotely?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Warren Buffett and Charles Munger advice for small investors?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Is there any US bank that does not charge for incoming wire transfers?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "As a Sole Proprietor, will \u201cemployer\u201d Solo 401k contributions count towards gross income?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 70,
+      "query_text": "UK sole trader who often buys products/services on behalf of clients \u2013 do I deduct from declared income or claim as allowable expenses?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Where to find the 5 or 10 year returns for a mutual fund?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Advantage of credit union or local community bank over larger nationwide banks such as BOA, Chase, etc.?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Are stories of turning a few thousands into millions by trading stocks real?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Can vet / veterinary bills be considered deductions (tax-deductible) for Income Tax purposes [Canada]?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "How would I go about selling the stock of a privately held company?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 64,
+      "query_text": "What happened in Argentina in 2001 bank sector? did the banks closed? all or some?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "What tax software automatically determines the best filing status, etc?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Personal Tax Return software for Linux?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "What edible, juicy fruit is grown on a deciduous tree called 'pesco' in Italian?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 48,
+      "query_text": "Which film was released first, Laura's Star or Wonder Woman?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "What football club plays in the area between the old tool gates: Brook Bar and Trafford bar?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.85,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Where does the state legislature in which John Coffin Talbot served convene?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 43,
+      "query_text": "Who starred in Love and other drugs and The Simpsons?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "What year did Lindsey Broad star in the movie with Russell Brand and Jonah Hill?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "What star of \"Attack of the Gryphon\" was also a voice artist in Johnny Bravo?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Who was the architect of a Dutch museum dedicated to the arts and history in Amsterdam, located at the Museum Square?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Which Member of Parliament for Macclesfield was married to Jane Ann Winterton?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Which member of the boy group Shinee released their first studio album \"She is\"?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Gail Matthius co-anchored the Weekend Update segment of \"Saturday Night Live\" with the actor who played the villain Nicholas Andre in what movie?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 71,
+      "query_text": "This work of literature _______ , known by its Greek title Oedipus Tyrannus was argued by Sigmund Freud to be one of the greatest works of world literature in his 1928 article.",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Is Velvetpark or Shape magazine written more for a lesbian and queer-identified female readership?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Which author lived longer, Nelson Algren or Nathanael West?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Which technique did the director at Pzena Investment Management outline?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Which one of Ricardo Rodr\u00edguez Sa\u00e1's relatives would become governor from 1983 to 2001?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 69,
+      "query_text": "What memeber of the artistic gymanstic team known as the \"Final Five\" who won a team gold medal at the Rio games was born on May 25, 1994?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 46,
+      "query_text": "Was either Craig Melville or Grover Jones born in Indiana?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "If the Charhki  Dadri crash was less dangerous than the Tenerife airport disaster, which occured firat?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 53,
+      "query_text": "For which Thomas Rickman film did Sissy Spacek win an Academy Award for Best Actress?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Which was published first Timothy McSweeney's Quarterly Concern or Scrye?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Which of the three main psychedelic compounds found in the Psilocybin genus mushroom are converted to psilocin by the body?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 58,
+      "query_text": "Alex Haley wrote what novel about a man that was born in 1750?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 51,
+      "query_text": "Which Avalanche happened first, Rigopiano avalanche or 1999 Galt\u00fcr avalanche ?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Which composer was born first out of Gaspare Spontini and Wolfgang Amadeus Mozart?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "On which television network did Joe Penny play an investigator named Jake Styles?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Which Bob Stoops coached team beat the 2016 Auburn Tigers football team?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 41,
+      "query_text": "Which magazine began publication first, Reunions magazine or Money?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "What Actor whose birth name was Charles Dennis Buchinsky, was part of the Leslie Nielsen comedy?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Which Republican Chairman was born June 1, 1956?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "What wrestling team is Mathew Thomas Rehwoldt a part of?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "What was the album by Coldplay after the one with a song referencing Chris Martin's unrequited love?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Simone de Beauvoir partnered with the person whose journal would be called what?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Which TV series, written by the creators of Robocalypse, is set in Bikini Bottom?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 67,
+      "query_text": "What musician is ranked 9th in the Top 100 Greatest Metal Guitarists and started a band in 1990 in Los Angeles, California?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 61,
+      "query_text": "Kate Ashfield plays what role in the 2004 British horror comedy film about a zombie uprising?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Who starred in Umm-e-Kulsoom whose mother was Afshan Qureshi?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "What is the official currency in the country that hosts the Asahi-Ryokuken Yomiuri Memorial tournament?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "Which actress appeared in Studio 60 on the Sunset Strip in 2007 and American Horror Story in 2014?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 51,
+      "query_text": "What is the species of animal which the town of Antelope, Kansas was named after?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "The Bee Cliff in northeast Tennessee overlooks a river that is how many miles long?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 47,
+      "query_text": "Which board game is newer, Splendor or Power Grid?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "Which super bowl that took place at the Miami Dolphins home stadium, featured the San Francisco 49ers defeating the San Diego Chargers?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 59,
+      "query_text": "What book did the president and CEO of Tracinda Corporation buy?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "Joan Bennett Kennedy, who had three children including Kara Kennedy, was known for pursuing which career?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "The southernmost administrative region of Denmark is well-known for creating what products?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "What date did the movement Hans Knirsch was an activist for officially gain traction?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 68,
+      "query_text": "Of the two Sopranos co-stars who starred in a 2009 American thriller film together, which went on to secure the role as Tony Soprano?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "This man who was born on April 25th, 1947, was a member of this lower house of the Hawaii State Legislature.",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    }
+  ],
+  "query_count": 150,
+  "repetitions": 1,
+  "routes": {
+    "exact": {
+      "latency_ms": {
+        "p50": 218.67773350095376,
+        "p95": 291.84919293038547,
+        "p99": 321.3413479970768,
+        "samples": [
+          2811.674562981352,
+          204.6104649780318,
+          222.43898001033813,
+          185.46929908916354,
+          189.66510007157922,
+          208.70432897936553,
+          197.58369901683182,
+          270.4763290239498,
+          233.0154849914834,
+          196.5883671073243,
+          243.80666203796864,
+          280.8665418997407,
+          250.29486208222806,
+          193.77652392722666,
+          205.88228898122907,
+          313.48216510377824,
+          240.7001390820369,
+          184.4941460294649,
+          235.17053900286555,
+          225.04441696219146,
+          212.6073109684512,
+          177.72806202992797,
+          214.98802595306188,
+          235.13551300857216,
+          222.83835301641375,
+          256.53682893607765,
+          219.24773300997913,
+          244.08143700566143,
+          252.6631219079718,
+          218.1077339919284,
+          215.28959402348846,
+          210.27199795935303,
+          246.42256693914533,
+          208.49874801933765,
+          245.66389399114996,
+          238.49913605954498,
+          217.27552800439298,
+          245.71468704380095,
+          229.9349680542946,
+          245.5780589953065,
+          235.91974703595042,
+          217.66451804433018,
+          235.61164399143308,
+          202.25563005078584,
+          291.84919293038547,
+          187.6254080561921,
+          236.16088996641338,
+          191.0277990391478,
+          217.093987041153,
+          234.84553198795766,
+          185.45634497422725,
+          164.88120995927602,
+          189.19857393484563,
+          241.84715503361076,
+          204.27692506927997,
+          196.55663799494505,
+          190.48783602192998,
+          247.35662597231567,
+          232.858058065176,
+          184.9339100299403,
+          199.69170703552663,
+          177.39298997912556,
+          297.41524904966354,
+          234.84571906737983,
+          257.71263299975544,
+          213.63747399300337,
+          197.19215703662485,
+          210.9723970061168,
+          196.66641298681498,
+          188.1061439635232,
+          230.57987506035715,
+          173.1395199894905,
+          216.25654306262732,
+          178.40288497973233,
+          182.3739049723372,
+          172.2013900289312,
+          167.30219998862594,
+          240.3220960404724,
+          228.5377630032599,
+          220.61315004248172,
+          168.92805602401495,
+          223.57841697521508,
+          195.35794702824205,
+          229.4490779750049,
+          212.2667389921844,
+          203.2251349883154,
+          205.29044000431895,
+          231.8721889751032,
+          200.02095901872963,
+          221.6042629443109,
+          189.4504299852997,
+          224.99954898376018,
+          248.39869793504477,
+          221.96349606383592,
+          237.091594026424,
+          195.24837902281433,
+          221.88772400841117,
+          223.3639459591359,
+          198.76131508499384,
+          174.14694093167782,
+          246.71769607812166,
+          181.58351897727698,
+          236.05967906769365,
+          197.0252359751612,
+          209.96938995085657,
+          242.54679202567786,
+          269.9270829325542,
+          292.1240529976785,
+          227.36413998063654,
+          231.7305620526895,
+          252.79016594868153,
+          306.1711030313745,
+          253.63371102139354,
+          169.14774500764906,
+          206.17788296658546,
+          228.14996796660125,
+          275.7040209835395,
+          168.50110795348883,
+          197.6143040228635,
+          192.90114496834576,
+          186.50816101580858,
+          293.65213797427714,
+          214.44558107759804,
+          177.03226092271507,
+          239.79860299732536,
+          190.75258495286107,
+          186.99664203450084,
+          162.9157119896263,
+          204.99657501932234,
+          176.5073499409482,
+          215.7424659235403,
+          245.23103598039597,
+          224.4264199398458,
+          207.78738404624164,
+          253.38079000357538,
+          276.84689906891435,
+          231.4733830280602,
+          191.63391995243728,
+          224.97068694792688,
+          243.6809859937057,
+          228.77701406832784,
+          259.0797549346462,
+          189.43349097389728,
+          213.47931306809187,
+          220.16578004695475,
+          195.72790409438312,
+          241.65382201317698,
+          206.35167707223445,
+          321.3413479970768,
+          258.98005394265056
+        ]
+      },
+      "mean_overlap_at_k": 1.0,
+      "minimum_overlap_at_k": 1.0
+    },
+    "retained_union32": {
+      "latency_ms": {
+        "p50": 143.1501439656131,
+        "p95": 182.52239108551294,
+        "p99": 197.3828530171886,
+        "samples": [
+          208.04041007068008,
+          190.60463597998023,
+          182.52239108551294,
+          168.70390204712749,
+          151.31860692054033,
+          172.80983307864517,
+          159.20725697651505,
+          183.65850602276623,
+          173.6268940148875,
+          153.55982910841703,
+          181.51843396481127,
+          167.9838050622493,
+          161.1495439428836,
+          164.65162008535117,
+          159.9795159418136,
+          197.3828530171886,
+          188.0518210818991,
+          155.14235198497772,
+          157.2831349913031,
+          169.76010997314006,
+          159.9921309389174,
+          142.65279693063349,
+          174.34374103322625,
+          172.8328709723428,
+          158.4988699760288,
+          171.08019499573857,
+          165.23102798964828,
+          161.14941192790866,
+          167.05856402404606,
+          168.95874601323158,
+          156.10040992032737,
+          167.5105239264667,
+          144.11658502649516,
+          168.59015100635588,
+          169.17777201160789,
+          170.1343300519511,
+          167.04711399506778,
+          172.81101003754884,
+          157.44112397078425,
+          174.24279102124274,
+          172.9447430698201,
+          140.27435600291938,
+          176.2046180665493,
+          165.17175803892314,
+          187.30730703100562,
+          144.39948496874422,
+          191.20133097749203,
+          153.8987160893157,
+          157.06286393105984,
+          166.87045502476394,
+          133.54142592288554,
+          132.2163479635492,
+          142.17506302520633,
+          145.8244090899825,
+          133.71814310085028,
+          144.37506604008377,
+          137.98982102889568,
+          156.73619089648128,
+          132.69041606690735,
+          136.5886899875477,
+          135.00854303129017,
+          136.8385300738737,
+          165.28636601287872,
+          160.17186595126987,
+          141.53112401254475,
+          132.82361801248044,
+          139.7895240224898,
+          147.37433509435505,
+          132.31011992320418,
+          132.68239598255605,
+          159.15896405931562,
+          128.19630408193916,
+          130.79729909077287,
+          142.16421300079674,
+          142.27474108338356,
+          122.45515699032694,
+          124.38126094639301,
+          166.02765605784953,
+          149.37427802942693,
+          131.05216703843325,
+          126.1381950462237,
+          127.60489003267139,
+          145.33447404392064,
+          149.85945692751557,
+          139.6279400214553,
+          129.6659610234201,
+          133.7215059902519,
+          135.7153810095042,
+          136.2277880543843,
+          153.42016704380512,
+          136.9031510548666,
+          147.0699980854988,
+          151.56484802719206,
+          151.18601499125361,
+          149.72481899894774,
+          130.03571494482458,
+          125.18375599756837,
+          132.46021908707917,
+          143.23154999874532,
+          118.76213096547872,
+          141.7123880237341,
+          120.87248906027526,
+          128.8778929738328,
+          122.2749229054898,
+          103.75965002458543,
+          131.15775398910046,
+          142.6630220375955,
+          141.80514903273433,
+          124.35654504224658,
+          143.06873793248087,
+          133.5758159402758,
+          178.6798759130761,
+          145.49337700009346,
+          123.67530702613294,
+          143.8248259946704,
+          140.3532549738884,
+          146.04847703594714,
+          111.78178898990154,
+          133.62538802903146,
+          123.20636096410453,
+          135.94563002698123,
+          162.11041097994894,
+          121.81347201112658,
+          125.51928800530732,
+          149.25362495705485,
+          127.72411399055272,
+          114.00005698669702,
+          114.28942100610584,
+          119.2932550329715,
+          110.29268999118358,
+          129.03489195741713,
+          132.11893499828875,
+          143.94773403182626,
+          137.21739198081195,
+          144.85010702628642,
+          151.81093791034073,
+          133.08480405248702,
+          137.80489098280668,
+          133.00999894272536,
+          138.85125808883458,
+          126.37753295712173,
+          134.64287295937538,
+          133.12166300602257,
+          131.84245105367154,
+          131.67289702687413,
+          138.01325007807463,
+          132.44445796590298,
+          120.87050708942115,
+          153.74365099705756,
+          134.47285001166165
+        ]
+      },
+      "mean_overlap_at_k": 0.9920000000000001,
+      "minimum_overlap_at_k": 0.72
+    }
+  },
+  "warmups": 0
+}

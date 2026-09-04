@@ -1,0 +1,113 @@
+{
+  "counts": {
+    "done": 75
+  },
+  "rows": {
+    "arguana": {
+      "pg_search": "done 12.13s",
+      "psql_bm25s_ids": "done 1.23s",
+      "psql_bm25s_text": "done 1.28s",
+      "upstream_bm25s": "done 1.21s",
+      "vchord_bm25": "done 17.85s"
+    },
+    "climate-fever": {
+      "pg_search": "done 9.0m",
+      "psql_bm25s_ids": "done 38.70s",
+      "psql_bm25s_text": "done 40.11s",
+      "upstream_bm25s": "done 8.4m",
+      "vchord_bm25": "done 4.9m"
+    },
+    "cqadupstack": {
+      "pg_search": "done 15.7m",
+      "psql_bm25s_ids": "done 40.92s",
+      "psql_bm25s_text": "done 56.20s",
+      "upstream_bm25s": "done 2.0m",
+      "vchord_bm25": "done 3.6m"
+    },
+    "dbpedia-entity": {
+      "pg_search": "done 1.5m",
+      "psql_bm25s_ids": "done 5.27s",
+      "psql_bm25s_text": "done 7.04s",
+      "upstream_bm25s": "done 2.2m",
+      "vchord_bm25": "done 19.74s"
+    },
+    "fever": {
+      "pg_search": "done 364.9m",
+      "psql_bm25s_ids": "done 30.2m",
+      "psql_bm25s_text": "done 28.5m",
+      "upstream_bm25s": "done 651.8m",
+      "vchord_bm25": "done 169.1m"
+    },
+    "fiqa": {
+      "pg_search": "done 6.2m",
+      "psql_bm25s_ids": "done 6.75s",
+      "psql_bm25s_text": "done 7.38s",
+      "upstream_bm25s": "done 8.20s",
+      "vchord_bm25": "done 34.88s"
+    },
+    "hotpotqa": {
+      "pg_search": "done 476.4m",
+      "psql_bm25s_ids": "done 28.8m",
+      "psql_bm25s_text": "done 34.3m",
+      "upstream_bm25s": "done 391.9m",
+      "vchord_bm25": "done 175.2m"
+    },
+    "msmarco": {
+      "pg_search": "done 1916.2m",
+      "psql_bm25s_ids": "done 142.3m",
+      "psql_bm25s_text": "done 182.6m",
+      "upstream_bm25s": "done 5284.1m",
+      "vchord_bm25": "done 467.0m"
+    },
+    "nfcorpus": {
+      "pg_search": "done 2.86s",
+      "psql_bm25s_ids": "done 957ms",
+      "psql_bm25s_text": "done 1.00s",
+      "upstream_bm25s": "done 1.03s",
+      "vchord_bm25": "done 2.58s"
+    },
+    "nq": {
+      "pg_search": "done 9.2m",
+      "psql_bm25s_ids": "done 29.77s",
+      "psql_bm25s_text": "done 29.51s",
+      "upstream_bm25s": "done 5.5m",
+      "vchord_bm25": "done 2.6m"
+    },
+    "quora": {
+      "pg_search": "done 18.9m",
+      "psql_bm25s_ids": "done 33.46s",
+      "psql_bm25s_text": "done 33.69s",
+      "upstream_bm25s": "done 2.8m",
+      "vchord_bm25": "done 1.6m"
+    },
+    "scidocs": {
+      "pg_search": "done 55.90s",
+      "psql_bm25s_ids": "done 728ms",
+      "psql_bm25s_text": "done 698ms",
+      "upstream_bm25s": "done 831ms",
+      "vchord_bm25": "done 2.72s"
+    },
+    "scifact": {
+      "pg_search": "done 2.22s",
+      "psql_bm25s_ids": "done 503ms",
+      "psql_bm25s_text": "done 508ms",
+      "upstream_bm25s": "done 374ms",
+      "vchord_bm25": "done 1.76s"
+    },
+    "trec-covid": {
+      "pg_search": "done 5.71s",
+      "psql_bm25s_ids": "done 311ms",
+      "psql_bm25s_text": "done 376ms",
+      "upstream_bm25s": "done 238ms",
+      "vchord_bm25": "done 661ms"
+    },
+    "webis-touche2020": {
+      "pg_search": "done 6.02s",
+      "psql_bm25s_ids": "done 646ms",
+      "psql_bm25s_text": "done 703ms",
+      "upstream_bm25s": "done 204ms",
+      "vchord_bm25": "done 570ms"
+    }
+  },
+  "updated_at": "2026-03-31T15:15:57.865651+00:00"
+}

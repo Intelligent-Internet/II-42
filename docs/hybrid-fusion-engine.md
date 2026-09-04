@@ -1,32 +1,36 @@
 # Hybrid Fusion Engine
 
+The public hybrid fusion engine is a composition layer above independent
+retrieval sources. Applications use `ii42_query(...)` for each II-42 source
+and use this engine only when they intentionally combine sources.
+
 The hybrid fusion engine is the implementation layer behind
-[Hybrid Vector/BM25 Search](hybrid-search.md). It lets PostgreSQL combine
-lexical BM25 candidates, vector candidates, and other ranked candidate sources
+[Hybrid Vector/II-42 Search](hybrid-search.md). It lets PostgreSQL combine
+BM25 or unified SAE candidates, vector candidates, and other ranked candidate sources
 into one weighted top-k result set.
 
 The feature is intentionally a late-fusion layer. Each retrieval source keeps
 its own best access path:
 
-- `psql_bm25s` indexes produce BM25 candidates.
+- `ii42` indexes produce BM25 or unified lexical/semantic candidates.
 - Vector extensions such as `pgvector` or VectorChord produce vector
   candidates.
 - Ordinary SQL can produce any additional ranked candidate source.
 
-`psql_bm25s` only owns the final candidate normalization, weighting,
+`ii42` only owns the final candidate normalization, weighting,
 de-duplication, fusion, and ordering step.
 
 ## What Is Complete
 
-The current implementation includes the pieces needed for production-style
-hybrid ranking experiments inside PostgreSQL:
+The current implementation includes the pieces needed for hybrid ranking
+inside PostgreSQL:
 
-- A generic candidate type, `psql_bm25s_result_hybrid_candidate`.
-- A generic hit type, `psql_bm25s_result_hybrid_hit`.
+- A generic candidate type, `ii42_result_hybrid_candidate`.
+- A generic hit type, `ii42_result_hybrid_hit`.
 - BM25 candidate constructors and a direct BM25 index adapter.
 - Vector candidate constructors that accept ordinary SQL distances.
 - A public C-backed fusion function,
-  `psql_bm25s_hybrid_fuse_candidates(...)`.
+  `ii42_hybrid_fuse_candidates(...)`.
 - Reciprocal-rank fusion through `fusion => 'rrf'`.
 - Weighted score fusion through `fusion => 'score'`.
 - Explicit normalizers: `identity`, `negative_distance`,
@@ -34,8 +38,8 @@ hybrid ranking experiments inside PostgreSQL:
 - Per-result debug arrays for source names, raw values, normalized scores,
   weighted scores, and source ranks.
 - Regression coverage that does not require a vector extension.
-- A non-`public` schema smoke test, including the `0.2.0` to current-version
-  upgrade path.
+- A non-`public` schema smoke test for fresh installation and schema-safe
+  helper resolution.
 - A local benchmark that compares the C fast path with the SQL reference.
 
 The core extension has no hard dependency on `pgvector`, VectorChord, or any
@@ -44,11 +48,11 @@ just SQL that emits hybrid candidates.
 
 ## Execution Model
 
-The public fusion function accepts an array of candidate rows:
+The fusion function accepts an array of candidate rows:
 
 ```sql
-psql_bm25s_hybrid_fuse_candidates(
-    candidates psql_bm25s_result_hybrid_candidate[],
+ii42_hybrid_fuse_candidates(
+    candidates ii42_result_hybrid_candidate[],
     k integer,
     fusion text DEFAULT 'rrf',
     rrf_k real DEFAULT 60,
@@ -67,6 +71,11 @@ Internally, the C fast path performs these steps:
 7. Aggregate weighted source contributions by `ctid`.
 8. Sort final hits by fused score and deterministic `ctid` tie-breaker.
 9. Return the top `k` rows with debug arrays.
+
+Every `ctid` must identify a row in the same base table and SQL snapshot.
+The candidate type has no table OID or document-ID field. Cross-table or
+cross-partition sources require application SQL to map and aggregate stable
+document IDs, not a mixed TID array.
 
 This keeps expensive windowing, grouping, and final sorting out of ordinary
 SQL plans while preserving the same observable result semantics as the SQL
@@ -118,14 +127,14 @@ Degenerate cases are explicit:
 - Zero-variance `zscore` sources normalize to `0.0`.
 - NULL, NaN, and infinite raw values are ignored.
 
-## Recommended Query Shape
+## Product Query Shape
 
 For RAG-style search with SQL filters, keep retrieval source ownership clear:
 
 ```sql
 WITH title_candidates AS (
     SELECT c
-    FROM psql_bm25s_hybrid_bm25_candidates(
+    FROM ii42_hybrid_bm25_candidates(
         'title',
         'docs_title_bm25_idx'::regclass,
         'how to use a computer',
@@ -134,7 +143,7 @@ WITH title_candidates AS (
     ) AS c
 ),
 vector_candidates AS (
-    SELECT psql_bm25s_hybrid_vector_candidate(
+    SELECT ii42_hybrid_vector_candidate(
         'embedding',
         d.ctid,
         (d.embedding <-> '[0.1,0.2,0.3]'::vector)::real,
@@ -152,7 +161,7 @@ vector_candidates AS (
 ),
 hybrid_hits AS (
     SELECT *
-    FROM psql_bm25s_hybrid_fuse_candidates(
+    FROM ii42_hybrid_fuse_candidates(
         ARRAY(
             SELECT c FROM title_candidates
             UNION ALL
@@ -170,28 +179,33 @@ WHERE d.published_at >= DATE '2022-01-01'
 ORDER BY h.score DESC, d.id;
 ```
 
-The final filter keeps returned rows aligned with the requested SQL predicate.
-If the filter is narrow, either increase each source's `candidate_k` or
-partition the table so PostgreSQL can restrict BM25 and vector retrieval
-before candidate generation.
+The final filter keeps returned rows aligned with the requested SQL predicate,
+but can remove rows after the fused top-k cutoff. Push filters into each
+source's supported retrieval path where possible. Increasing `candidate_k`
+can improve coverage but cannot guarantee global fused top-k from truncated
+source prefixes. See [Filtering and Recall](hybrid-search.md#filtering-and-recall).
 
 ## Performance Boundary
 
-The C fast path is designed for candidate pools in the low thousands for
-database-internal weighted top-k. Validation covers equivalence against the
-SQL reference implementation.
+The recorded local benchmark covers candidate counts up to `5000` and shows
+a large improvement over its SQL reference. This is dated evidence for that
+candidate-only workload, not a latency guarantee for source retrieval,
+filtering, or a current deployment.
 
 The feature is still late fusion over a materialized candidate array. If a
 future workload needs very high QPS with candidate pools far above `5000` per
 source, the next likely optimization is a streaming or table-source API that
 avoids building one large composite array before fusion.
 
-## Operational Guidance
+See [Hybrid Fusion Benchmark](performance/reports/hybrid-fusion-benchmark.md)
+for measured results.
 
-Use the public C-backed function in application queries:
+## Usage Guidance
+
+Applications may use the C-backed function directly:
 
 ```sql
-psql_bm25s_hybrid_fuse_candidates(...)
+ii42_hybrid_fuse_candidates(...)
 ```
 
 Recommended defaults:
@@ -200,7 +214,7 @@ Recommended defaults:
 - Start with weights that express source importance, not raw score scale.
 - Use `score` only after selecting and benchmarking a normalizer.
 - Keep vector retrieval in the vector extension's own indexed SQL path.
-- Keep BM25 retrieval in `psql_bm25s` candidate helpers.
+- Keep II-42 retrieval in `ii42_query(...)` or its public candidate adapters.
 - Use the debug arrays to inspect why a document won.
 
 ## Validation
@@ -214,11 +228,13 @@ Current validation covers:
 - BM25 adapter output
 - C fast path versus SQL reference comparison
 - schema-qualified extension usage
-- upgrade from `0.2.0` to the current extension version
+- fresh installation in both `public` and non-`public` schemas
+- local C-versus-SQL benchmark results
 
 See also:
 
-- [Hybrid Vector/BM25 Search](hybrid-search.md)
-- [API Reference](api-reference.md#hybrid-vectorbm25-fusion)
-- [Query Semantics](query-semantics.md#hybrid-vectorbm25-fusion)
+- [Hybrid Vector/II-42 Search](hybrid-search.md)
+- [API Reference](api-reference.md#public-composition-apis)
+- [Query Semantics](query-semantics.md#prepared-diagnostics-and-product-composition)
 - [Testing and Validation](testing-and-validation.md)
+- [Hybrid Fusion Benchmark](performance/reports/hybrid-fusion-benchmark.md)

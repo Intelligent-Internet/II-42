@@ -1,8 +1,12 @@
-EXTENSION = psql_bm25s
-MODULE_big = psql_bm25s
+EXTENSION = ii42
+MODULE_big = ii42
+.DEFAULT_GOAL := all
 
 PG_CONFIG ?= pg_config
-PGXS := $(shell $(PG_CONFIG) --pgxs)
+PGXS := $(shell $(PG_CONFIG) --pgxs 2>/dev/null)
+PG_SHAREDIR := $(shell $(PG_CONFIG) --sharedir 2>/dev/null)
+II42_PACKAGED_MODEL_PATH := \
+    $(if $(PG_SHAREDIR),$(PG_SHAREDIR),/usr/local/share)/ii42/models/default
 
 ICU_CPPFLAGS := $(shell \
     if pkg-config --exists icu-i18n icu-uc 2>/dev/null; then \
@@ -27,6 +31,31 @@ ICU_LIBS := $(shell \
     else \
         echo -licui18n -licuuc -licudata; \
     fi)
+
+OPENSSL_CPPFLAGS := $(shell \
+    if pkg-config --exists openssl 2>/dev/null; then \
+        pkg-config --cflags openssl; \
+    elif [ -d /opt/homebrew/opt/openssl@3/include ]; then \
+        echo -I/opt/homebrew/opt/openssl@3/include; \
+    elif [ -d /opt/homebrew/opt/openssl/include ]; then \
+        echo -I/opt/homebrew/opt/openssl/include; \
+    else \
+        echo; \
+    fi)
+
+OPENSSL_LIBS := $(shell \
+    if pkg-config --exists openssl 2>/dev/null; then \
+        pkg-config --libs openssl; \
+    elif [ -d /opt/homebrew/opt/openssl@3/lib ]; then \
+        echo -L/opt/homebrew/opt/openssl@3/lib -lcrypto; \
+    elif [ -d /opt/homebrew/opt/openssl/lib ]; then \
+        echo -L/opt/homebrew/opt/openssl/lib -lcrypto; \
+    else \
+        echo -lcrypto; \
+    fi)
+
+DL_LIBS := $(shell \
+    uname -s 2>/dev/null | grep -q '^Linux' && echo -ldl || true)
 
 HOST_CPU_AVX2_STATUS := $(shell \
     if command -v lscpu >/dev/null 2>&1; then \
@@ -56,33 +85,185 @@ HOST_CPU_AVX2_STATUS := $(shell \
         echo unknown; \
     fi)
 
-ifeq ($(PSQL_BM25S_FORCE_SCALAR),1)
-PG_CPPFLAGS += -DPSQL_BM25S_FORCE_SCALAR=1
-$(warning Building psql_bm25s with AVX2 dispatch disabled; query scoring \
+ifeq ($(II42_FORCE_SCALAR),1)
+PG_CPPFLAGS += -DII42_FORCE_SCALAR=1
+$(warning Building ii42 with AVX2 dispatch disabled; query scoring \
 may be slower on this machine.)
 else ifeq ($(HOST_CPU_AVX2_STATUS),no)
-$(warning Building psql_bm25s on a host without AVX2 support; the \
+$(warning Building ii42 on a host without AVX2 support; the \
 extension will build and run, but this machine will use the scalar \
 scoring path and may be slower.)
 else ifeq ($(HOST_CPU_AVX2_STATUS),unknown)
-$(warning Could not detect host AVX2 support; psql_bm25s will still \
+$(warning Could not detect host AVX2 support; ii42 will still \
 build, but may fall back to the scalar scoring path on this machine.)
 endif
 
 OBJS = \
-    src/psql_bm25s_am.o \
-    src/psql_bm25s_pg.o \
-    src/psql_bm25s_pg_common.o \
-    src/psql_bm25s_core.o \
-    src/psql_bm25s_query.o \
-    src/psql_bm25s_storage.o \
-    src/psql_bm25s_stem.o
-OBJS += src/psql_bm25s_text.o
+	src/ii42_am.o \
+	src/ii42_am_accelerator.o \
+    src/ii42_am_build.o \
+    src/ii42_am_hot_fold.o \
+    src/ii42_am_maintenance.o \
+    src/ii42_am_meta.o \
+    src/ii42_am_mutation.o \
+    src/ii42_am_options.o \
+    src/ii42_am_preload.o \
+    src/ii42_am_resident_fold.o \
+    src/ii42_am_reclamation.o \
+    src/ii42_am_scheduler.o \
+    src/ii42_am_scan.o \
+    src/ii42_am_sql.o \
+    src/ii42_am_test_support.o \
+    src/ii42_filter.o \
+    src/ii42_pg.o \
+    src/ii42_pg_common.o \
+    src/ii42_planner.o \
+    src/ii42_semantic.o \
+    src/ii42_semantic_accelerator.o \
+    src/ii42_semantic_accelerator_builder.o \
+    src/ii42_semantic_accelerator_directory.o \
+    src/ii42_semantic_forward.o \
+    src/ii42_semantic_forward_bound.o \
+	src/ii42_semantic_impact_frontier.o \
+	src/ii42_scope.o \
+	src/ii42_scope_pg.o \
+    src/ii42_weighted_space_saving.o \
+    src/ii42_semantic_bmp.o \
+    src/ii42_block_ranges.o \
+    src/ii42_core.o \
+    src/ii42_page_query.o \
+    src/ii42_query.o \
+    src/ii42_p2_runtime.o \
+	src/ii42_document_tid_lookup.o \
+    src/ii42_document_cow.o \
+    src/ii42_initial_fold_stream.o \
+    src/ii42_lexicon_cow.o \
+    src/ii42_prefix_cow.o \
+    src/ii42_posting_heat.o \
+    src/ii42_segment_pages.o \
+    src/ii42_segments.o \
+    src/ii42_term_cow.o \
+    src/ii42_storage.o \
+    src/ii42_stem.o
+OBJS += src/ii42_text.o
 
-DATA = $(wildcard sql/psql_bm25s--*.sql)
-REGRESS = psql_bm25s_integration
+II42_HEADERS := $(wildcard src/*.h)
+$(OBJS): $(II42_HEADERS)
 
-PG_CPPFLAGS = -I$(CURDIR)/src $(ICU_CPPFLAGS)
-SHLIB_LINK += $(ICU_LIBS)
+src/ii42_am.o src/ii42_semantic.o: \
+    src/ii42_semantic.h \
+    src/ii42_runtime_service.h
+
+src/ii42_segment_pages.o: \
+    src/ii42_segment_pages.h \
+    src/ii42_segments.h
+
+src/ii42_document_cow.o: \
+    src/ii42_document_cow.h \
+    src/ii42_segments.h
+
+src/ii42_lexicon_cow.o: \
+    src/ii42_lexicon_cow.h \
+    src/ii42_core.h
+
+src/ii42_prefix_cow.o: \
+    src/ii42_prefix_cow.h \
+    src/ii42_segments.h
+
+src/ii42_term_cow.o: \
+    src/ii42_term_cow.h \
+    src/ii42_segments.h
+
+II42_EXTENSION_VERSION := $(shell sed -n \
+    "s/^default_version = '\(.*\)'$$/\1/p" ii42.control)
+DATA = sql/ii42--$(II42_EXTENSION_VERSION).sql
+REGRESS = ii42_integration
+
+II42_RUNTIME_SERVER := build/ii42-runtime-server
+II42_RUNTIME_SERVER_SRC := src/ii42_runtime_server.cc
+II42_RUNTIME_SERVER_CXXFLAGS ?= \
+    -std=c++17 -Wall -Wextra -Wpedantic -O2
+II42_RUNTIME_SERVER_CPPFLAGS := \
+    $(shell pkg-config --cflags jansson 2>/dev/null) \
+    $(ICU_CPPFLAGS) \
+    $(OPENSSL_CPPFLAGS) \
+    $(shell pkg-config --cflags libonnxruntime 2>/dev/null) \
+    -DII42_PACKAGED_MODEL_PATH='"$(II42_PACKAGED_MODEL_PATH)"'
+II42_RUNTIME_SERVER_LDFLAGS :=
+II42_RUNTIME_SERVER_LIBS := \
+    $(shell pkg-config --libs jansson 2>/dev/null || echo -ljansson) \
+    $(ICU_LIBS) \
+    $(OPENSSL_LIBS) \
+    $(shell pkg-config --libs libonnxruntime 2>/dev/null || \
+        echo -lonnxruntime) \
+    -pthread
+
+.PHONY: runtime-server
+runtime-server: $(II42_RUNTIME_SERVER)
+
+$(II42_RUNTIME_SERVER): $(II42_RUNTIME_SERVER_SRC)
+	mkdir -p $(dir $@)
+	$(CXX) $(II42_RUNTIME_SERVER_CXXFLAGS) \
+	    $(II42_RUNTIME_SERVER_CPPFLAGS) \
+	    -o $@ $< \
+	    $(II42_RUNTIME_SERVER_LDFLAGS) \
+	    $(II42_RUNTIME_SERVER_LIBS)
+
+PG_CPPFLAGS += \
+    -I$(CURDIR)/src \
+    $(ICU_CPPFLAGS) \
+    -DII42_PACKAGED_MODEL_PATH='"$(II42_PACKAGED_MODEL_PATH)"'
+SHLIB_LINK += $(ICU_LIBS) $(DL_LIBS)
+
+II42_ENABLE_ONNXRUNTIME ?= 1
+ifneq ($(II42_ENABLE_ONNXRUNTIME),0)
+ifneq ($(II42_ENABLE_ONNXRUNTIME),1)
+$(error II42_ENABLE_ONNXRUNTIME must be 0 or 1)
+endif
+endif
+
+II42_ONNXRUNTIME_REQUIRED_VERSION := $(shell tr -d '[:space:]' \
+    < packaging/onnxruntime.version)
+
+II42_CLEAN_ONLY_GOALS := clean clean-ii42-runtime-server
+II42_BUILD_GOALS := $(if $(MAKECMDGOALS),\
+    $(filter-out $(II42_CLEAN_ONLY_GOALS),$(MAKECMDGOALS)),default)
+
+ifneq ($(strip $(II42_BUILD_GOALS)),)
+ifeq ($(II42_ENABLE_ONNXRUNTIME),1)
+ONNXRUNTIME_CPPFLAGS := $(shell pkg-config --cflags libonnxruntime 2>/dev/null)
+ONNXRUNTIME_LIBS := $(shell pkg-config --libs libonnxruntime 2>/dev/null)
+ONNXRUNTIME_VERSION := $(shell pkg-config --modversion libonnxruntime 2>/dev/null)
+ONNXRUNTIME_LIB_DIRS := $(filter -L%,$(ONNXRUNTIME_LIBS))
+ONNXRUNTIME_LINK_LIBS := $(filter-out -L%,$(ONNXRUNTIME_LIBS))
+HOST_OS := $(shell uname -s)
+ifeq ($(strip $(ONNXRUNTIME_CPPFLAGS)),)
+$(error II42_ENABLE_ONNXRUNTIME=1 requires pkg-config libonnxruntime)
+endif
+ifneq ($(ONNXRUNTIME_VERSION),$(II42_ONNXRUNTIME_REQUIRED_VERSION))
+$(error II42 requires ONNX Runtime $(II42_ONNXRUNTIME_REQUIRED_VERSION), \
+    but pkg-config resolved $(ONNXRUNTIME_VERSION))
+endif
+PG_CPPFLAGS += -DII42_ENABLE_ONNXRUNTIME=1 $(ONNXRUNTIME_CPPFLAGS)
+# Put ONNX Runtime library directories before PostgreSQL's default linker
+# search path. Some distributions ship a CPU-only libonnxruntime under
+# /usr/lib; accelerator builds must not accidentally bind that library when a
+# CUDA/CoreML package is supplied through pkg-config.
+PG_LDFLAGS += $(ONNXRUNTIME_LIB_DIRS)
+ifeq ($(HOST_OS),Darwin)
+PG_LDFLAGS += -Wl,-rpath,@loader_path
+else
+# Release packages place libonnxruntime beside the extension in pkglibdir.
+PG_LDFLAGS += -Wl,-rpath,\$$ORIGIN
+endif
+SHLIB_LINK += $(ONNXRUNTIME_LINK_LIBS)
+endif
+endif
 
 include $(PGXS)
+
+.PHONY: clean-ii42-runtime-server
+clean: clean-ii42-runtime-server
+
+clean-ii42-runtime-server:
+	rm -f $(II42_RUNTIME_SERVER)

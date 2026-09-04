@@ -1,0 +1,758 @@
+{
+  "created_at": "2026-03-28T22:35:48.613575+00:00",
+  "machine_type": "n2-standard-16",
+  "project": "gcp-project-redacted",
+  "tasks": [
+    {
+      "dataset": "arguana",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/arguana/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/arguana/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:upstream_bm25s",
+      "vm_name": "pg18mx-0327-arg-up"
+    },
+    {
+      "dataset": "arguana",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/arguana/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/arguana/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-arg-psql"
+    },
+    {
+      "dataset": "arguana",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/arguana/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/arguana/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-arg-txt"
+    },
+    {
+      "dataset": "arguana",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/arguana/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/arguana/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:pg_search",
+      "vm_name": "pg18mx-0327-arg-pgs"
+    },
+    {
+      "dataset": "arguana",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/arguana/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/arguana/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/arguana-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "arguana:vchord_bm25",
+      "vm_name": "pg18mx-0327-arg-vcb"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/climate-fever/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/climate-fever/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:upstream_bm25s",
+      "vm_name": "pg18mx-0327-clf-up"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/climate-fever/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/climate-fever/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-clf-psql"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/climate-fever/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/climate-fever/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-clf-txt"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/climate-fever/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/climate-fever/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:pg_search",
+      "vm_name": "pg18mx-0327-clf-pgs"
+    },
+    {
+      "dataset": "climate-fever",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/climate-fever/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/climate-fever/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/climate-fever-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "climate-fever:vchord_bm25",
+      "vm_name": "pg18mx-0327-clf-vcb"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/cqadupstack/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/cqadupstack/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:upstream_bm25s",
+      "vm_name": "pg18mx-0327-cqa-up"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/cqadupstack/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/cqadupstack/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-cqa-psql"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/cqadupstack/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/cqadupstack/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-cqa-txt"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/cqadupstack/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/cqadupstack/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:pg_search",
+      "vm_name": "pg18mx-0327-cqa-pgs"
+    },
+    {
+      "dataset": "cqadupstack",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/cqadupstack/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/cqadupstack/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/cqadupstack-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "cqadupstack:vchord_bm25",
+      "vm_name": "pg18mx-0327-cqa-vcb"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/dbpedia-entity/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/dbpedia-entity/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:upstream_bm25s",
+      "vm_name": "pg18mx-0327-dbe-up"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/dbpedia-entity/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/dbpedia-entity/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-dbe-psql"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/dbpedia-entity/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/dbpedia-entity/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-dbe-txt"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/dbpedia-entity/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/dbpedia-entity/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:pg_search",
+      "vm_name": "pg18mx-0327-dbe-pgs"
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/dbpedia-entity/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/dbpedia-entity/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/dbpedia-entity-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "dbpedia-entity:vchord_bm25",
+      "vm_name": "pg18mx-0327-dbe-vcb"
+    },
+    {
+      "dataset": "fever",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fever/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fever/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:upstream_bm25s",
+      "vm_name": "pg18mx-0327-fev-up"
+    },
+    {
+      "dataset": "fever",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fever/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fever/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-fev-psql"
+    },
+    {
+      "dataset": "fever",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fever/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fever/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-fev-txt"
+    },
+    {
+      "dataset": "fever",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fever/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fever/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:pg_search",
+      "vm_name": "pg18mx-0327-fev-pgs"
+    },
+    {
+      "dataset": "fever",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fever/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fever/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fever-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fever:vchord_bm25",
+      "vm_name": "pg18mx-0327-fev-vcb"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fiqa/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fiqa/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:upstream_bm25s",
+      "vm_name": "pg18mx-0327-fiq-up"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fiqa/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fiqa/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-fiq-psql"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fiqa/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fiqa/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-fiq-txt"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fiqa/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fiqa/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:pg_search",
+      "vm_name": "pg18mx-0327-fiq-pgs"
+    },
+    {
+      "dataset": "fiqa",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/fiqa/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/fiqa/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/fiqa-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "fiqa:vchord_bm25",
+      "vm_name": "pg18mx-0327-fiq-vcb"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/hotpotqa/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/hotpotqa/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:upstream_bm25s",
+      "vm_name": "pg18mx-0327-hqa-up"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/hotpotqa/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/hotpotqa/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-hqa-psql"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/hotpotqa/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/hotpotqa/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-hqa-txt"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/hotpotqa/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/hotpotqa/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:pg_search",
+      "vm_name": "pg18mx-0327-hqa-pgs"
+    },
+    {
+      "dataset": "hotpotqa",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/hotpotqa/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/hotpotqa/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/hotpotqa-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "hotpotqa:vchord_bm25",
+      "vm_name": "pg18mx-0327-hqa-vcb"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/msmarco/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/msmarco/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:upstream_bm25s",
+      "vm_name": "pg18mx-0327-msm-up"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/msmarco/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/msmarco/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-msm-psql"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/msmarco/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/msmarco/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-msm-txt"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/msmarco/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/msmarco/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:pg_search",
+      "vm_name": "pg18mx-0327-msm-pgs"
+    },
+    {
+      "dataset": "msmarco",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/msmarco/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/msmarco/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/msmarco-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "msmarco:vchord_bm25",
+      "vm_name": "pg18mx-0327-msm-vcb"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nfcorpus/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nfcorpus/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:upstream_bm25s",
+      "vm_name": "pg18mx-0327-nfc-up"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nfcorpus/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nfcorpus/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-nfc-psql"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nfcorpus/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nfcorpus/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-nfc-txt"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nfcorpus/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nfcorpus/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:pg_search",
+      "vm_name": "pg18mx-0327-nfc-pgs"
+    },
+    {
+      "dataset": "nfcorpus",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nfcorpus/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nfcorpus/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nfcorpus-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nfcorpus:vchord_bm25",
+      "vm_name": "pg18mx-0327-nfc-vcb"
+    },
+    {
+      "dataset": "nq",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nq/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nq/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:upstream_bm25s",
+      "vm_name": "pg18mx-0327-nq-up"
+    },
+    {
+      "dataset": "nq",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nq/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nq/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-nq-psql"
+    },
+    {
+      "dataset": "nq",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nq/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nq/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-nq-txt"
+    },
+    {
+      "dataset": "nq",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nq/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nq/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:pg_search",
+      "vm_name": "pg18mx-0327-nq-pgs"
+    },
+    {
+      "dataset": "nq",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/nq/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/nq/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/nq-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "nq:vchord_bm25",
+      "vm_name": "pg18mx-0327-nq-vcb"
+    },
+    {
+      "dataset": "quora",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/quora/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/quora/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:upstream_bm25s",
+      "vm_name": "pg18mx-0327-quo-up"
+    },
+    {
+      "dataset": "quora",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/quora/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/quora/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-quo-psql"
+    },
+    {
+      "dataset": "quora",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/quora/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/quora/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-quo-txt"
+    },
+    {
+      "dataset": "quora",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/quora/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/quora/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:pg_search",
+      "vm_name": "pg18mx-0327-quo-pgs"
+    },
+    {
+      "dataset": "quora",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/quora/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/quora/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/quora-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "quora:vchord_bm25",
+      "vm_name": "pg18mx-0327-quo-vcb"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scidocs/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scidocs/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:upstream_bm25s",
+      "vm_name": "pg18mx-0327-scd-up"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scidocs/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scidocs/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-scd-psql"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scidocs/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scidocs/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-scd-txt"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scidocs/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scidocs/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:pg_search",
+      "vm_name": "pg18mx-0327-scd-pgs"
+    },
+    {
+      "dataset": "scidocs",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scidocs/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scidocs/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scidocs-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scidocs:vchord_bm25",
+      "vm_name": "pg18mx-0327-scd-vcb"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scifact/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scifact/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:upstream_bm25s",
+      "vm_name": "pg18mx-0327-scf-up"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scifact/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scifact/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-scf-psql"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scifact/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scifact/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-scf-txt"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scifact/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scifact/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:pg_search",
+      "vm_name": "pg18mx-0327-scf-pgs"
+    },
+    {
+      "dataset": "scifact",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/scifact/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/scifact/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/scifact-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "scifact:vchord_bm25",
+      "vm_name": "pg18mx-0327-scf-vcb"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/trec-covid/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/trec-covid/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:upstream_bm25s",
+      "vm_name": "pg18mx-0327-trc-up"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/trec-covid/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/trec-covid/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-trc-psql"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/trec-covid/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/trec-covid/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-trc-txt"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/trec-covid/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/trec-covid/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:pg_search",
+      "vm_name": "pg18mx-0327-trc-pgs"
+    },
+    {
+      "dataset": "trec-covid",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/trec-covid/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/trec-covid/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/trec-covid-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "trec-covid:vchord_bm25",
+      "vm_name": "pg18mx-0327-trc-vcb"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "upstream_bm25s",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/webis-touche2020/upstream_bm25s",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/webis-touche2020/upstream_bm25s.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-upstream_bm25s.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:upstream_bm25s",
+      "vm_name": "pg18mx-0327-wbt-up"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "psql_bm25s_ids",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/webis-touche2020/psql_bm25s_ids",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/webis-touche2020/psql_bm25s_ids.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-psql_bm25s_ids.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:psql_bm25s_ids",
+      "vm_name": "pg18mx-0327-wbt-psql"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "psql_bm25s_text",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/webis-touche2020/psql_bm25s_text",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/webis-touche2020/psql_bm25s_text.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-psql_bm25s_text.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:psql_bm25s_text",
+      "vm_name": "pg18mx-0327-wbt-txt"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "pg_search",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/webis-touche2020/pg_search",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/webis-touche2020/pg_search.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-pg_search.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:pg_search",
+      "vm_name": "pg18mx-0327-wbt-pgs"
+    },
+    {
+      "dataset": "webis-touche2020",
+      "engine": "vchord_bm25",
+      "local_log_dir": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/logs/webis-touche2020/vchord_bm25",
+      "local_result": "/Volumes/Betty/Tmp/pg18_benchmark_matrix_full_20260327/results/webis-touche2020/vchord_bm25.json",
+      "remote_result": "/var/tmp/pg18_benchmark_matrix_task/results/webis-touche2020-vchord_bm25.json",
+      "remote_root": "/var/tmp/pg18_benchmark_matrix_task",
+      "task_id": "webis-touche2020:vchord_bm25",
+      "vm_name": "pg18mx-0327-wbt-vcb"
+    }
+  ],
+  "zone": "us-east4-a"
+}

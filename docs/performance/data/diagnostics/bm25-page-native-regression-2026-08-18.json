@@ -1,0 +1,62 @@
+{
+  "benchmark": "SciFact BM25-only hot-query regression audit",
+  "date": "2026-08-18",
+  "fixture": {
+    "documents": 5183,
+    "queries": 1109,
+    "corpus_tokens": 812074,
+    "query_tokens": 10343,
+    "vocab_size": 26559,
+    "top_k": 1000,
+    "dataset_drift_detected": false,
+    "tokenizer_drift_detected": false
+  },
+  "historical_official_psql_bm25s": {
+    "source": "docs/performance/data/raw/pg18-beir-extension-matrix-2026-03-31/results/scifact/psql_bm25s_ids.json",
+    "mean_ms": 0.4538595157797937,
+    "p50_ms": 0.4511149999899544,
+    "p95_ms": 0.5248234000021057,
+    "qps": 2203.3249612093314
+  },
+  "ii42_before_repair": {
+    "mean_ms": 63.430,
+    "p50_ms": 63.370,
+    "p95_ms": 65.896,
+    "qps": 15.8
+  },
+  "ii42_after_repair": {
+    "sample_count": 3327,
+    "mean_ms": 0.44760555785993383,
+    "p50_ms": 0.435125,
+    "p95_ms": 0.5576374999999999,
+    "p99_ms": 0.67216532,
+    "qps": 2234.10988188159
+  },
+  "same_cluster_same_srf_shape": {
+    "historical_binary_mean_ms": 0.3142541487826871,
+    "historical_binary_p95_ms": 0.4085875,
+    "ii42_mean_ms": 0.44760555785993383,
+    "ii42_p95_ms": 0.5576374999999999
+  },
+  "correctness": {
+    "resident_page_queries_checked": 101,
+    "resident_page_mismatches": 0,
+    "resident_page_max_score_delta": 0.0,
+    "current_upstream_mean_overlap_at_1000": 0.9877,
+    "historical_upstream_mean_overlap_at_1000": 0.5527,
+    "current_exact_top10_queries": 100,
+    "historical_exact_top10_queries": 59,
+    "upstream_sample_queries": 100
+  },
+  "clean_root": {
+    "table_rows": 5183,
+    "document_slot_high_watermark": 5183,
+    "retired_documents": 0,
+    "index_bytes": 29327360
+  },
+  "lifecycle_smoke": {
+    "passed_gates": 83,
+    "total_gates": 83,
+    "all_gates_passed": true
+  }
+}

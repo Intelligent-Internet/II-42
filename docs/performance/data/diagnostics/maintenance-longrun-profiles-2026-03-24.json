@@ -1,0 +1,321 @@
+{
+  "aggregate": {
+    "best_deferred_policy_wins": {
+      "bytes_40000": 1,
+      "tuned_relaxed": 2
+    },
+    "best_policy_wins": {
+      "eager": 1,
+      "tuned_relaxed": 2
+    },
+    "modes": {
+      "bytes_40000": {
+        "avg_commit_ms_avg": 25.100738256393623,
+        "avg_vacuum_ms_avg": 8.86307691838831,
+        "final_rebuild_count_values": [
+          7,
+          7,
+          7
+        ],
+        "median_qps_avg": 10019.339687459606,
+        "median_qps_max": 11377.964603681747,
+        "median_qps_min": 8305.053002884457,
+        "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=40000, auto_rebuild_churn_ratio=0)"
+      },
+      "count_only": {
+        "avg_commit_ms_avg": 8.538509584748402,
+        "avg_vacuum_ms_avg": 32.07107043514649,
+        "final_rebuild_count_values": [
+          7,
+          7,
+          7
+        ],
+        "median_qps_avg": 8787.36850156134,
+        "median_qps_max": 9683.3322490073,
+        "median_qps_min": 7172.443845404598,
+        "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+      },
+      "eager": {
+        "avg_commit_ms_avg": 32.88050959310613,
+        "avg_vacuum_ms_avg": 40.171547003317244,
+        "final_rebuild_count_values": [
+          25,
+          25,
+          25
+        ],
+        "median_qps_avg": 10442.3378652529,
+        "median_qps_max": 11479.193436417156,
+        "median_qps_min": 9473.513919784093,
+        "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+      },
+      "tuned_current": {
+        "avg_commit_ms_avg": 23.672774590802593,
+        "avg_vacuum_ms_avg": 8.792378175526094,
+        "final_rebuild_count_values": [
+          7,
+          7,
+          7
+        ],
+        "median_qps_avg": 8710.410288482997,
+        "median_qps_max": 10443.745639110286,
+        "median_qps_min": 7565.471922568717,
+        "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)"
+      },
+      "tuned_relaxed": {
+        "avg_commit_ms_avg": 24.91099576656826,
+        "avg_vacuum_ms_avg": 8.857567334929719,
+        "final_rebuild_count_values": [
+          7,
+          7,
+          7
+        ],
+        "median_qps_avg": 10071.303780257329,
+        "median_qps_max": 10889.758106205176,
+        "median_qps_min": 8457.73228609991,
+        "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.09)"
+      }
+    },
+    "repeat_count": 3
+  },
+  "base_seed": 20260324,
+  "policies": [
+    {
+      "name": "eager",
+      "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 0"
+    },
+    {
+      "name": "count_only",
+      "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 1000"
+    },
+    {
+      "name": "bytes_40000",
+      "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 1000, auto_rebuild_delta_bytes = 40000"
+    },
+    {
+      "name": "tuned_current",
+      "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 1000, auto_rebuild_delta_bytes = 50000, auto_rebuild_churn_ratio = 0.05"
+    },
+    {
+      "name": "tuned_relaxed",
+      "reloptions": "method = 'lucene', idf_method = 'lucene', auto_rebuild_threshold = 1000, auto_rebuild_delta_bytes = 50000, auto_rebuild_churn_ratio = 0.09"
+    }
+  ],
+  "repeat_count": 3,
+  "repeats": [
+    {
+      "best_deferred_policy": "tuned_relaxed",
+      "best_policy": "tuned_relaxed",
+      "modes": {
+        "bytes_40000": {
+          "avg_commit_ms": 26.589865379859337,
+          "avg_vacuum_ms": 8.430317303953835,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 15298.902839466524,
+          "median_qps": 10375.00145581261,
+          "min_qps": 6213.345089962255,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=40000, auto_rebuild_churn_ratio=0)"
+        },
+        "count_only": {
+          "avg_commit_ms": 8.479961614984159,
+          "avg_vacuum_ms": 29.683672993157344,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 14024.814628172639,
+          "median_qps": 9683.3322490073,
+          "min_qps": 7254.788430769206,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+        },
+        "eager": {
+          "avg_commit_ms": 32.08750000116057,
+          "avg_vacuum_ms": 39.73374031305026,
+          "final_rebuild_count": 25,
+          "final_state": "ii42_maintenance_state(rebuilds=25, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 12132.211994547873,
+          "median_qps": 10374.306239557454,
+          "min_qps": 6151.09550914287,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+        },
+        "tuned_current": {
+          "avg_commit_ms": 23.291099306124334,
+          "avg_vacuum_ms": 8.936076760829355,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13170.35820733961,
+          "median_qps": 8122.013303769988,
+          "min_qps": 4532.583211658843,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)"
+        },
+        "tuned_relaxed": {
+          "avg_commit_ms": 22.844804607582493,
+          "avg_vacuum_ms": 8.890891156625003,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 14447.737815191405,
+          "median_qps": 10889.758106205176,
+          "min_qps": 7130.154013384804,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.09)"
+        }
+      },
+      "repeat": 1,
+      "scenario": {
+        "cycle_count": 12,
+        "db_name": "ii42_v2_longrun_mixed",
+        "delete_per_cycle": 150,
+        "doc_count": 15000,
+        "insert_per_cycle": 150,
+        "name": "longrun_mixed",
+        "query_count": 150,
+        "update_per_cycle": 150
+      },
+      "seed": 20260324
+    },
+    {
+      "best_deferred_policy": "bytes_40000",
+      "best_policy": "eager",
+      "modes": {
+        "bytes_40000": {
+          "avg_commit_ms": 24.265294845323435,
+          "avg_vacuum_ms": 9.03135898988694,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13579.382253757989,
+          "median_qps": 11377.964603681747,
+          "min_qps": 7398.564896014202,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=40000, auto_rebuild_churn_ratio=0)"
+        },
+        "count_only": {
+          "avg_commit_ms": 8.429118458969661,
+          "avg_vacuum_ms": 36.89871783941411,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13915.466368094752,
+          "median_qps": 7172.443845404598,
+          "min_qps": 4029.4817543356316,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+        },
+        "eager": {
+          "avg_commit_ms": 31.911470998938267,
+          "avg_vacuum_ms": 39.72345515369223,
+          "final_rebuild_count": 25,
+          "final_state": "ii42_maintenance_state(rebuilds=25, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13116.610618390956,
+          "median_qps": 11479.193436417156,
+          "min_qps": 6199.554208001232,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+        },
+        "tuned_current": {
+          "avg_commit_ms": 24.318394228780214,
+          "avg_vacuum_ms": 8.758820611267137,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13322.82976391223,
+          "median_qps": 10443.745639110286,
+          "min_qps": 7007.096019715644,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)"
+        },
+        "tuned_relaxed": {
+          "avg_commit_ms": 23.61359299930672,
+          "avg_vacuum_ms": 9.102673086230284,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 14246.760478438055,
+          "median_qps": 8457.73228609991,
+          "min_qps": 3933.8113351974366,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.09)"
+        }
+      },
+      "repeat": 2,
+      "scenario": {
+        "cycle_count": 12,
+        "db_name": "ii42_v2_longrun_mixed",
+        "delete_per_cycle": 150,
+        "doc_count": 15000,
+        "insert_per_cycle": 150,
+        "name": "longrun_mixed",
+        "query_count": 150,
+        "update_per_cycle": 150
+      },
+      "seed": 20260421
+    },
+    {
+      "best_deferred_policy": "tuned_relaxed",
+      "best_policy": "tuned_relaxed",
+      "modes": {
+        "bytes_40000": {
+          "avg_commit_ms": 24.447054543998092,
+          "avg_vacuum_ms": 9.127554461324157,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13923.374175019615,
+          "median_qps": 8305.053002884457,
+          "min_qps": 4364.616212055259,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=40000, auto_rebuild_churn_ratio=0)"
+        },
+        "count_only": {
+          "avg_commit_ms": 8.706448680291382,
+          "avg_vacuum_ms": 29.630820472868017,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 13547.889610450206,
+          "median_qps": 9506.329410272117,
+          "min_qps": 6915.949489320469,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+        },
+        "eager": {
+          "avg_commit_ms": 34.64255777921957,
+          "avg_vacuum_ms": 41.057445543209234,
+          "final_rebuild_count": 25,
+          "final_state": "ii42_maintenance_state(rebuilds=25, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 12319.062817841532,
+          "median_qps": 9473.513919784093,
+          "min_qps": 4288.9103181441205,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=0, auto_rebuild_delta_bytes=0, auto_rebuild_churn_ratio=0)"
+        },
+        "tuned_current": {
+          "avg_commit_ms": 23.408830237503235,
+          "avg_vacuum_ms": 8.68223715448179,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 12860.036043806596,
+          "median_qps": 7565.471922568717,
+          "min_qps": 4131.596982678001,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.05)"
+        },
+        "tuned_relaxed": {
+          "avg_commit_ms": 28.274589692815564,
+          "avg_vacuum_ms": 8.579137761933872,
+          "final_rebuild_count": 7,
+          "final_state": "ii42_maintenance_state(rebuilds=7, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, stale=false)",
+          "max_qps": 14061.246583580782,
+          "median_qps": 10866.420948466899,
+          "min_qps": 7504.660037971597,
+          "policy": "ii42_maintenance_policy(auto_maintain=true, auto_rebuild_threshold=1000, auto_rebuild_delta_bytes=50000, auto_rebuild_churn_ratio=0.09)"
+        }
+      },
+      "repeat": 3,
+      "scenario": {
+        "cycle_count": 12,
+        "db_name": "ii42_v2_longrun_mixed",
+        "delete_per_cycle": 150,
+        "doc_count": 15000,
+        "insert_per_cycle": 150,
+        "name": "longrun_mixed",
+        "query_count": 150,
+        "update_per_cycle": 150
+      },
+      "seed": 20260518
+    }
+  ],
+  "scenario": {
+    "cycle_count": 12,
+    "db_name": "ii42_v2_longrun_mixed",
+    "delete_per_cycle": 150,
+    "doc_count": 15000,
+    "insert_per_cycle": 150,
+    "name": "longrun_mixed",
+    "query_count": 150,
+    "update_per_cycle": 150
+  },
+  "seed_step": 97
+}

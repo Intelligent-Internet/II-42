@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "source_id": "beir15:trec-covid:q:1",
+      "text": "what is the origin of COVID-19"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:2",
+      "text": "how does the coronavirus respond to changes in the weather"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:3",
+      "text": "will SARS-CoV2 infected people develop immunity? Is cross protection possible?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:4",
+      "text": "what causes death from Covid-19?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:5",
+      "text": "what drugs have been active against SARS-CoV or SARS-CoV-2 in animal studies?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:6",
+      "text": "what types of rapid testing for Covid-19 have been developed?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:7",
+      "text": "are there serological tests that detect antibodies to coronavirus?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:8",
+      "text": "how has lack of testing availability led to underreporting of true incidence of Covid-19?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:9",
+      "text": "how has COVID-19 affected Canada"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:10",
+      "text": "has social distancing had an impact on slowing the spread of COVID-19?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:11",
+      "text": "what are the guidelines for triaging patients infected with coronavirus?"
+    },
+    {
+      "source_id": "beir15:trec-covid:q:12",
+      "text": "what are best practices in hospitals and at home in maintaining quarantine?"
+    }
+  ]
+}

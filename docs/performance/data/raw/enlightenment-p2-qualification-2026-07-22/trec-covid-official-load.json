@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 9.609,
+  "expected_rows": 171331,
+  "input": "/home/huoju/leask/runs/m150-beir-full-pplx/trec-covid/documents.jsonl",
+  "input_bytes": 1435172111,
+  "input_sha256": "90e9cab4b71e9cd2454cd5cf43cb16ba705af8294bf5621f94ca582fbf78e522",
+  "rows": 171331,
+  "schema": "bench",
+  "table": "docs"
+}

@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-03-27 23:01:43",
+  "datasets_dir": "/var/tmp/pg18_benchmark_matrix_task/datasets",
+  "db_prefix": "psql_bm25s_pg18_matrix_",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "pg_search"
+  ],
+  "results": {
+    "webis-touche2020": {
+      "dataset": "webis-touche2020",
+      "pg_search": {
+        "build_bytes": 305045504,
+        "build_ms": 10649.002569999993,
+        "query": {
+          "avg_ms": 122.82953467346911,
+          "count": 49,
+          "p50_ms": 159.2175119999979,
+          "p95_ms": 182.21323179998876,
+          "qps": 8.141364393005372
+        }
+      },
+      "stats": {
+        "documents": 382545,
+        "queries": 49,
+        "query_tokens": 246,
+        "tokens": 74180347,
+        "vocab_size": 354228
+      },
+      "wall_time_s": 70.89357144999998
+    }
+  },
+  "top_k": 1000
+}

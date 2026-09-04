@@ -1,0 +1,69 @@
+{
+  "counts": {
+    "done": 25,
+    "stopped": 5
+  },
+  "rows": {
+    "arguana": {
+      "psql_bm25s_ids": "done 1.12s",
+      "psql_bm25s_text": "done 1.49s"
+    },
+    "climate-fever": {
+      "psql_bm25s_ids": "done 41.26s",
+      "psql_bm25s_text": "done 36.47s"
+    },
+    "cqadupstack": {
+      "psql_bm25s_ids": "done 41.14s",
+      "psql_bm25s_text": "done 52.70s"
+    },
+    "dbpedia-entity": {
+      "psql_bm25s_ids": "done 6.00s",
+      "psql_bm25s_text": "done 6.22s"
+    },
+    "fever": {
+      "psql_bm25s_ids": "done 26.1m",
+      "psql_bm25s_text": "stopped"
+    },
+    "fiqa": {
+      "psql_bm25s_ids": "done 6.90s",
+      "psql_bm25s_text": "done 7.31s"
+    },
+    "hotpotqa": {
+      "psql_bm25s_ids": "stopped",
+      "psql_bm25s_text": "stopped"
+    },
+    "msmarco": {
+      "psql_bm25s_ids": "stopped",
+      "psql_bm25s_text": "stopped"
+    },
+    "nfcorpus": {
+      "psql_bm25s_ids": "done 987ms",
+      "psql_bm25s_text": "done 981ms"
+    },
+    "nq": {
+      "psql_bm25s_ids": "done 32.23s",
+      "psql_bm25s_text": "done 29.85s"
+    },
+    "quora": {
+      "psql_bm25s_ids": "done 33.08s",
+      "psql_bm25s_text": "done 36.01s"
+    },
+    "scidocs": {
+      "psql_bm25s_ids": "done 798ms",
+      "psql_bm25s_text": "done 815ms"
+    },
+    "scifact": {
+      "psql_bm25s_ids": "done 508ms",
+      "psql_bm25s_text": "done 526ms"
+    },
+    "trec-covid": {
+      "psql_bm25s_ids": "done 322ms",
+      "psql_bm25s_text": "done 433ms"
+    },
+    "webis-touche2020": {
+      "psql_bm25s_ids": "done 679ms",
+      "psql_bm25s_text": "done 714ms"
+    }
+  },
+  "updated_at": "2026-03-31T23:59:59-04:00"
+}

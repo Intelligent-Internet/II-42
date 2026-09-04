@@ -1,0 +1,45 @@
+{
+  "candidate_k": 1000,
+  "dataset": "arguana-official",
+  "document_count": 8674,
+  "inputs": {
+    "qrels_sha256": "70e3326531c068aa89e1ad74b022d733a2d8a36b7f096bb066c9b2e78b2ad5ca",
+    "queries_sha256": "6a0f545806f94b2b82d0ccc6e50bca960bf501fda7d33264620c1938d105e3aa"
+  },
+  "methods": {
+    "bm25": {
+      "build_seconds": 1.456612,
+      "candidate_upper_bound": 0.990007,
+      "index_bytes": 12083200,
+      "latency_ms_p50": 2.387791,
+      "latency_ms_p95": 3.066875,
+      "map_at_100": 0.237186,
+      "mrr_at_20": 0.233893,
+      "ndcg_at_10": 0.344115,
+      "recall_at_100": 0.952891
+    },
+    "p2": {
+      "build_seconds": 329.691447,
+      "candidate_upper_bound": 0.999286,
+      "index_bytes": 42532864,
+      "latency_ms_p50": 45.57325,
+      "latency_ms_p95": 69.883834,
+      "map_at_100": 0.286933,
+      "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+      "mrr_at_20": 0.285425,
+      "ndcg_at_10": 0.410565,
+      "recall_at_100": 0.98858,
+      "runtime_abi": "ii42_p2_unified_text_atoms_v2"
+    }
+  },
+  "p2_minus_bm25": {
+    "candidate_upper_bound": 0.009279,
+    "map_at_100": 0.049747,
+    "mrr_at_20": 0.051532,
+    "ndcg_at_10": 0.06645,
+    "recall_at_100": 0.035689
+  },
+  "query_count": 1401,
+  "route": "ii42_search",
+  "surface": "isolated native PG18 full corpus"
+}

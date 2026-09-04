@@ -1,9 +1,16 @@
-# Hybrid Vector/BM25 Search
+# Hybrid Vector/II-42 Search
 
-Hybrid search combines lexical BM25 candidates with semantic vector
-candidates inside PostgreSQL. The implementation is intentionally a late
+The public `ii42_hybrid_*` APIs combine candidates from II-42 and external
+retrieval engines such as pgvector or VectorChord. This composition layer is a
+product capability above the unified single-index design; it does not split or
+modify an II-42 index internally.
+
+Hybrid search combines BM25 or unified SAE candidates with external vector
+candidates inside PostgreSQL. A single SAE index already combines lexical and
+sparse semantic evidence; this API is only for additional independent sources.
+The implementation is intentionally a late
 fusion layer: each source keeps its own best index access path, and
-`psql_bm25s` only combines already-retrieved candidates.
+`ii42` only combines already-retrieved candidates.
 
 This keeps the core extension independent from `pgvector`, VectorChord, and
 other vector extensions. Vector candidates are supplied as ordinary SQL rows
@@ -12,7 +19,7 @@ metadata.
 
 ## When To Use It
 
-Use hybrid search when a RAG workload needs both:
+Use hybrid composition when an application needs these capabilities:
 
 - lexical precision from exact BM25 fields such as title, abstract, or body
 - semantic recall from vector embeddings
@@ -25,7 +32,7 @@ simpler and faster.
 
 ## Candidate Model
 
-The fusion layer operates on `psql_bm25s_result_hybrid_candidate` values:
+The fusion layer operates on `ii42_result_hybrid_candidate` values:
 
 - `source_name`: stable source label such as `title`, `body`, or `embedding`
 - `ctid`: row identity for same-table fusion within one statement
@@ -35,7 +42,7 @@ The fusion layer operates on `psql_bm25s_result_hybrid_candidate` values:
 - `normalizer`: score normalization strategy
 - `direction`: whether higher or lower raw values are better
 
-The output is a set of `psql_bm25s_result_hybrid_hit` rows with:
+The output is a set of `ii42_result_hybrid_hit` rows with:
 
 - final fused score
 - source count
@@ -45,12 +52,19 @@ The output is a set of `psql_bm25s_result_hybrid_hit` rows with:
 - weighted scores
 - source ranks
 
-The debug fields are part of the API because hybrid ranking is only useful
+All candidate TIDs must refer to the same base table and SQL snapshot. TIDs can
+collide across tables and partitions, and these helpers carry no table OID or
+application document ID. For cross-table or document/chunk fusion, map each
+source hit to a stable document ID and combine it in application SQL instead.
+
+The per-source fields are part of the product contract because hybrid ranking
+is only useful
 when the final order can be inspected and tuned.
 
-`psql_bm25s_hybrid_fuse_candidates(...)` uses a C fast path for the actual
-normalization, de-duplication, grouping, and final ordering. Application
-queries should use that public C-backed function directly.
+`ii42_hybrid_fuse_candidates(...)` uses a C fast path for normalization,
+de-duplication, grouping, and final ordering. Use `ii42_query(...)` for each
+II-42 source and hybrid fusion only when independent retrieval engines are
+intentionally combined.
 
 For implementation boundaries, performance expectations, and validation
 coverage, see [Hybrid Fusion Engine](hybrid-fusion-engine.md).
@@ -93,18 +107,18 @@ Degenerate cases are handled deliberately:
 For mixed BM25/vector workloads, prefer `rrf` first. Use score fusion only
 after measuring whether a specific normalization improves result quality.
 
-For a concrete SQL-first use-case design where vector is the primary signal
-and BM25 acts as a lexical boost, see
-[Hybrid Vector/BM25 Search Use-Case Design](hybrid-vector-bm25-use-case-design.md).
+For the historical SQL-first dual-engine design that motivated this API
+surface, see the archived
+[Hybrid Vector/BM25 Search Use-Case Design](research-sae/reports/designs/ii42-hybrid-vector-bm25-use-case-design.md).
 
 ## BM25 Sources
 
-BM25 candidates can be created directly from a `psql_bm25s` index:
+BM25 candidates can be created directly from a `ii42` index:
 
 ```sql
 WITH bm25_candidates AS (
     SELECT c
-    FROM psql_bm25s_hybrid_bm25_candidates(
+    FROM ii42_hybrid_bm25_candidates(
         'title',
         'docs_title_bm25_idx'::regclass,
         'how to use a computer',
@@ -113,7 +127,7 @@ WITH bm25_candidates AS (
     ) AS c
 )
 SELECT h.*
-FROM psql_bm25s_hybrid_fuse_candidates(
+FROM ii42_hybrid_fuse_candidates(
     ARRAY(SELECT c FROM bm25_candidates),
     20,
     'rrf'
@@ -132,7 +146,7 @@ With VectorChord or pgvector installed, the vector side can look like this:
 
 ```sql
 WITH vector_candidates AS (
-    SELECT psql_bm25s_hybrid_vector_candidate(
+    SELECT ii42_hybrid_vector_candidate(
         'embedding',
         d.ctid,
         (d.embedding <-> '[0.1,0.2,0.3]'::vector)::real,
@@ -147,7 +161,7 @@ WITH vector_candidates AS (
     LIMIT 1000
 )
 SELECT h.*
-FROM psql_bm25s_hybrid_fuse_candidates(
+FROM ii42_hybrid_fuse_candidates(
     ARRAY(SELECT c FROM vector_candidates),
     20,
     'rrf'
@@ -156,7 +170,7 @@ FROM psql_bm25s_hybrid_fuse_candidates(
 
 For RRF, the vector normalizer is not used; only rank and weight matter. For
 score fusion, vector distances should normally use `lower_is_better` through
-`psql_bm25s_hybrid_vector_candidate(...)`, with `minmax`,
+`ii42_hybrid_vector_candidate(...)`, with `minmax`,
 `negative_distance`, or `inverse_distance`.
 
 ## Mixed BM25 And Vector Example
@@ -164,7 +178,7 @@ score fusion, vector distances should normally use `lower_is_better` through
 ```sql
 WITH title_candidates AS (
     SELECT c
-    FROM psql_bm25s_hybrid_bm25_candidates(
+    FROM ii42_hybrid_bm25_candidates(
         'title',
         'docs_title_bm25_idx'::regclass,
         'how to use a computer',
@@ -174,16 +188,16 @@ WITH title_candidates AS (
 ),
 body_candidates AS (
     SELECT c
-    FROM psql_bm25s_hybrid_bm25_candidates(
+    FROM ii42_hybrid_bm25_candidates(
         'body',
         'docs_body_bm25_idx'::regclass,
-        'how to use a computer hahhaha',
+        'how to use a computer',
         1.8,
         1000
     ) AS c
 ),
 vector_candidates AS (
-    SELECT psql_bm25s_hybrid_vector_candidate(
+    SELECT ii42_hybrid_vector_candidate(
         'embedding',
         d.ctid,
         (d.embedding <-> '[0.1,0.2,0.3]'::vector)::real,
@@ -201,7 +215,7 @@ vector_candidates AS (
 ),
 hybrid_hits AS (
     SELECT *
-    FROM psql_bm25s_hybrid_fuse_candidates(
+    FROM ii42_hybrid_fuse_candidates(
         ARRAY(
             SELECT c FROM title_candidates
             UNION ALL
@@ -222,9 +236,10 @@ ORDER BY h.score DESC, d.id;
 ```
 
 The final `WHERE` keeps the returned rows aligned with the requested time
-window. If the time predicate is highly selective, increase each source's
-`candidate_k` or use table partitioning so PostgreSQL can restrict each
-source before retrieval.
+window, but runs after fusion's `k` cutoff and can underfill. Push the predicate
+into each source when supported. For an SAE source, use a filtered
+`ii42_query(...)` overload or planner-native query before constructing hybrid
+candidates; increasing each source's candidate budget is only a recall tradeoff.
 
 ## Filtering And Recall
 
@@ -233,8 +248,14 @@ has produced candidates can remove many candidates. If the filter is narrow,
 the final result may miss rows that would have appeared with a larger
 candidate pool.
 
-For large time-windowed knowledge bases, prefer partitioning by time. Then
-the vector and BM25 indexes operate on the relevant partitions before fusion.
+Finite source prefixes also cannot guarantee global fused top-k, even without
+filters: an omitted document can have a high combined score. Measure coverage
+as candidate budgets change.
+
+Do not concatenate TIDs from several partitions into one fusion call. A
+partition-local call is valid only when every source uses that same child
+table; cross-partition ranking needs stable document-ID aggregation outside
+the TID-keyed API.
 
 ## Optional VectorChord Smoke
 
@@ -247,7 +268,7 @@ CREATE EXTENSION IF NOT EXISTS vchord;
 
 EXPLAIN
 WITH vector_candidates AS (
-    SELECT psql_bm25s_hybrid_vector_candidate(
+    SELECT ii42_hybrid_vector_candidate(
         'embedding',
         d.ctid,
         (d.embedding <-> '[0.1,0.2,0.3]'::vector)::real,
@@ -262,7 +283,7 @@ WITH vector_candidates AS (
     LIMIT 1000
 )
 SELECT *
-FROM psql_bm25s_hybrid_fuse_candidates(
+FROM ii42_hybrid_fuse_candidates(
     ARRAY(SELECT c FROM vector_candidates),
     20,
     'rrf'

@@ -1,173 +1,213 @@
-# Connection Memory and Index Prewarming
+# Connection Memory And Prewarming
 
-This page describes how `psql_bm25s` manages memory across PostgreSQL
-backends, how to size connection pools, and how to actively prewarm large BM25
-indexes.
-
-The important split is:
-
-- Immutable generation payloads are the decoded BM25 index contents. Large
-  payloads are shared through DSM by default and can use an optional
-  `shared_preload_libraries` arena for the lowest fresh-backend cost.
-- Mutable query workspace is backend-local scratch memory used while scoring
-  and ranking. It is not shared, because it is tied to one query execution and
-  one backend snapshot.
-
-## Memory Model
-
-For a large index, the ideal production shape is:
+II-42 separates durable index state, shared execution state, and query-local
+scratch:
 
 ```text
-shared immutable generation payload  +  small bounded per-backend workspace
+relation-owned page-native postings
+    + PostgreSQL shared buffers / OS page cache
+    + bounded postmaster-owned runtime and residency
+    + bounded backend query scratch
 ```
 
-The shared payload avoids `index_size * connection_count` memory growth. The
-remaining per-backend workspace is intentionally bounded by default so a large
-connection pool does not keep all query scratch buffers resident forever.
+This model applies to BM25 and semantic-enabled indexes. SAE additionally
+requires the shared runtime for text encoding; application backends never own
+tokenizers or model sessions.
 
-Resident memory tools can be misleading:
+## Ownership
 
-- RSS can count a shared DSM or shared-preload mapping in every backend.
-- PSS is usually better for understanding proportional shared-memory cost.
-- Private dirty/anonymous memory is the best signal for backend-local
-  workspace growth.
+| State | Owner | Lifetime |
+| --- | --- | --- |
+| Checked root, document COW, postings, linked L0 | Index relation | WAL-durable |
+| Relation-page cache | PostgreSQL shared buffers and OS | Disposable |
+| Runtime queues, root markers, HOT_FOLD, exact-root resident fold | Shared preload arena | Postmaster |
+| Tokenizers and ONNX sessions | Runtime workers | Worker/session LRU |
+| Ranking workspace and matching-L0 projection | Query backend | Query or bounded idle cache |
+| No-shared-runtime BM25 snapshot | Query backend | Optional, bounded by workspace policy |
+| Explicit BM25 `weight_mask` snapshot | Query backend | Optional small-index compatibility path, bounded by workspace policy |
 
-## Workspace Retention Settings
+No semantic posting image or model session is retained per connection. A
+selected, fully converged BM25 or semantic index may have one pointer-free
+exact-root fold in the postmaster arena. Backends lease that shared image and
+retain only query-local projections. When the postmaster shared runtime is
+available, BM25 and SAE use this same dispatcher and no backend-local index
+snapshot is admitted for ordinary queries. Only a pure BM25 deployment without
+shared runtime may use the bounded fallback when its physical size fits the
+workspace budget. The explicit BM25-only `weight_mask` API is the sole
+shared-runtime exception because its input already spans the complete document
+slot space; it is rejected unless the same finite physical-size bound admits
+the snapshot.
+RSS can count shared mappings in every backend, so use proportional set size
+and private dirty/anonymous memory when diagnosing connection growth.
 
-These settings are ordinary PostgreSQL GUCs. Users do not need to configure
-them for normal deployments.
+## Query Workspace
 
 | Setting | Default | Meaning |
-| --- | --- | --- |
-| `psql_bm25s.workspace_cache_bytes` | `32MB` | Maximum mutable query workspace retained by one backend after a query finishes. Workspaces larger than this are released at the end of the query. |
-| `psql_bm25s.workspace_idle_timeout` | `60s` | How long an idle backend may keep retained mutable workspace. Reclamation is lazy and happens the next time that backend touches a `psql_bm25s` index. |
+| --- | ---: | --- |
+| `ii42.workspace_cache_bytes` | `32MB` | Maximum completed-query workspace retained by one backend and admission bound for the no-shared-runtime BM25 fallback or explicit BM25 `weight_mask` snapshot. |
+| `ii42.workspace_idle_timeout` | `60s` | Idle interval before retained workspace is released on the backend's next II-42 use. |
 
-`workspace_cache_bytes = 0` releases mutable query workspace after every query.
-`workspace_cache_bytes = -1` keeps workspace without a size cap in the current
-backend. The uncapped mode is mainly useful for controlled benchmark runs or
-small fixed-size connection pools.
+`workspace_cache_bytes = 0` releases workspace after every query and disables
+both snapshot paths. `-1` removes the general workspace-retention cap but does
+not admit a backend-local index snapshot because snapshot admission must have a
+finite positive bound. It is intended only for controlled benchmarks or a
+small fixed pool.
+`workspace_idle_timeout = -1` disables idle expiry.
 
-`workspace_idle_timeout = 0ms` makes retained workspace expire on the next
-`psql_bm25s` cache entry after it was used. It does not interrupt an active
-query.
+Backend snapshot entries are leased only while a fallback query is active.
+An idle entry is reused across indexes, so a long-lived connection does not
+retain one complete snapshot for every small index it has queried. The entry
+objects themselves have stable addresses. Simultaneously leased snapshots are
+charged together against `workspace_cache_bytes` and have a separate 64-entry
+hard limit. Once a concurrent high-water mark drains, excess idle entries drop
+their snapshots; a backend retains at most one idle fallback snapshot.
 
-`workspace_idle_timeout = -1` disables idle-time workspace release. If both
-`workspace_cache_bytes` and `workspace_idle_timeout` are set to `-1`, the
-backend keeps mutable workspace until the cached index generation is
-invalidated, the backend exits, or `psql_bm25s_generation_cache_clear()` is
-called.
+An active query may temporarily exceed the retention budget; excess scratch is
+released when the query ends. Same-transaction reads project only matching
+linked-L0 records under the current snapshot and do not construct a private
+index copy.
 
-These settings only affect backend-local scratch buffers such as score arrays,
-candidate bitmaps, and touched-document lists. They do not evict immutable DSM
-or shared-preload generation payloads.
+## Shared Semantic Runtime
 
-## Shared Generation Tiers
+The relevant postmaster settings are:
 
-The immutable generation cache has three tiers:
+| Setting | Default | Meaning |
+| --- | ---: | --- |
+| `ii42.shared_runtime_size` | `0` | Shared runtime/residency arena; must be positive for SAE. The arena is not posting authority. |
+| `ii42.runtime_worker_count` | `2` | Parallel inference workers, from 1 through 16. |
+| `ii42.runtime_reserve_query_lane` | `on` | Reserve one runtime lane for foreground queries; disable only for controlled offline rebuilds. |
+| `ii42.runtime_max_batch_size` | `128` | Local runtime text batch limit and default remote service batch cap. This is a deployment throughput knob, not model identity. |
+| `ii42.runtime_document_pipeline_depth` | `16` | Builder-level active document runtime batches per backend, from 1 through 4096. Effective depth is capped by the sum of the local runtime outstanding window and configured remote accelerator `weight` windows. Completed batches may retire out of order into a bounded reorder buffer before the builder applies them to the index in original sequence order. |
+| `ii42.runtime_accelerators` | `[]` | JSON array of optional remote II-42 runtime services. Service objects accept optional positive integer `weight` as a per-service outstanding request window hint from 1 through 4096 and optional positive integer `max_batch_size` as that service's request cap; a service without `weight` starts as one schedulable slot, and shared accelerator metrics are capped at 64 services. |
+| `ii42.runtime_liveness_timeout` | `5min` | Per-run liveness guard for local runtime execution and already-submitted remote accelerator requests; `0` disables it. Remote connect/send I/O still uses short transport timeouts. |
+| `ii42.control_database` | `postgres` | Optional override for the stable, connectable database used for runtime initialization and cluster maintenance discovery. |
+| `ii42.onnxruntime_session_cache_size` | `1` | Sessions retained per worker; `0` releases after each request. |
+| `ii42.onnxruntime_intra_op_threads` | `0` | Automatic per-worker CPU allocation; positive values set an explicit cap. |
+| `ii42.onnxruntime_document_cpu_mem_arena` | `off` | Retain CPU provider document-mode arenas for higher offline rebuild throughput on memory-rich hosts. |
+| `ii42.sae_transaction_mutation_max_bytes` | `64MB` | Per-transaction retained source-text budget before lexical L0 serialization. |
 
-1. Optional shared-preload arena, configured at PostgreSQL start.
-2. Zero-configuration DSM cache.
-3. Backend-local selected path for small indexes and query-sensitive overlay
-   materializations.
+With multiple runtime workers, automatic CPU allocation prevents nested ONNX
+thread pools from consuming every PostgreSQL CPU. Each worker has an
+independent bounded session LRU, so the runtime memory term is approximately:
 
-For very large connection pools, the optional shared-preload arena can remove
-most fresh-backend mapping overhead:
+```text
+runtime_worker_count * measured session RSS per worker
+```
+
+Measure this with the production checkout and provider. Model file size is not
+a reliable expanded-session estimate.
+
+## Build And Maintenance Memory
+
+Semantic `CREATE INDEX`, `REINDEX`, and background completion send bounded
+document batches to the shared worker pool. Application query encoding remains
+single-text and immediate.
+
+A full builder uses `ii42.runtime_document_pipeline_depth` (default `16`),
+capped by the available local and remote outstanding-request windows. Completed
+batches can release runtime handles out of order into a bounded reorder buffer;
+the builder applies results in source-row order. A slow earlier batch can still
+cause backpressure when that buffer fills. With query-lane reservation enabled
+and at least two healthy local workers, document work leaves capacity for query
+inference. One-worker mode serializes document and query inference.
+
+Large builds do not materialize all postings in backend memory:
+
+- document authority stays proportional to document count;
+- decoder rowsets are released after each batch;
+- posting streams and compact payloads use PostgreSQL temporary files;
+- `tuplesort` and `work_mem` bound in-memory ordering;
+- completed pages are copied into the relation before one checked root switch.
+
+Capacity-plan `temp_tablespaces` for the posting streams and external-sort
+runs. Automatic maintenance respects
+`ii42.maintenance_rebuild_memory_budget`; an over-budget optional action keeps
+the readable root and reports a blocker rather than forcing swap.
+
+## Prewarming
+
+A converged index selected by `auto_preload > 0`, or explicitly preloaded, uses
+an exact-root resident fold when its source relation fits the global
+`ii42.shared_runtime_size` arena, the priority-aware arena admission policy,
+and host materialization headroom. `ii42.prewarm_max_bytes` does not cap shared
+residency; it bounds only relation-page warming work. BM25 and SAE use the same
+format and scorer. Indexes not admitted to the shared arena record a
+checked-root marker and warm relation pages through PostgreSQL shared buffers.
+They use a bounded roots-and-payload pass so startup cannot cycle the entire
+shared-buffer cache.
+It may also warm an exact term-local HOT_FOLD.
+
+```sql
+SELECT ii42_index_preload(
+    'docs_search_idx'::regclass
+);
+```
+
+The exact resident fold is disposable and exact-root keyed. A mutation
+invalidates that exact projection and returns affected queries to page-native
+execution until the same preload worker publishes its replacement. This rule
+does not invalidate a compatible durable semantic accelerator: that artifact
+remains an older baseline and queries revalidate its bounded candidate set.
+Small post-baseline additions may wait for the next debt-driven refresh.
+Run warmup after a restart or major rebuild before opening a large application
+pool.
+
+BM25 can operate without shared preload. Every semantic-enabled index requires:
 
 ```conf
-shared_preload_libraries = 'psql_bm25s'
-psql_bm25s.shared_generation_cache_size = '32GB'
+shared_preload_libraries = 'ii42'
+ii42.shared_runtime_size = '1GB'
 ```
 
-The arena must be sized for the resident hot indexes that should stay warm.
-If the arena is not configured, DSM sharing still prevents every backend from
-privately decoding and copying the same large immutable generation.
+`64MB` remains sufficient for minimal runtime smoke tests. GB-scale values are
+supported for explicit resident-index policy; the configured arena is reserved
+at postmaster start. Size it from measured `resident_fold_bytes`, runtime state,
+and safety headroom. Durable postings remain in relation pages.
 
-See [Shared Generation Cache](shared-generation-cache.md) for the cache-tier
-design and failure behavior.
+## Capacity Formula
 
-## Active Prewarming
-
-Use `psql_bm25s_generation_cache_preload(index regclass)` to warm the best
-available cache tier for one index:
-
-```sql
-SELECT public.psql_bm25s_generation_cache_preload(
-    'commons.data_pubmed__introduction__bm25_idx'::regclass
-);
-```
-
-The function returns a diagnostic string describing the warmed generation. In
-a shared-preload deployment it can populate the main shared-memory arena before
-application traffic reaches the index. This is an optional deployment hook:
-if a share-capable index is first queried before manual warmup, psql_bm25s
-still uses shared publication instead of privately loading one copy per backend.
-Without shared-preload it warms the DSM tier for share-eligible large
-generations.
-
-A simple warmup script can preload selected indexes after deploy or restart:
-
-```sql
-SELECT public.psql_bm25s_generation_cache_preload(indexrelid)
-FROM pg_index
-WHERE indexrelid::regclass::text IN (
-    'commons.data_arxiv__title__bm25_idx',
-    'commons.data_pubmed__abstract__bm25_idx',
-    'commons.data_pubmed__introduction__bm25_idx'
-);
-```
-
-For large deployments, run warmup from one administrative session before
-opening the full application connection pool. That avoids a cold connection
-stampede and lets later backends attach or inherit the resident generation.
-
-## Sizing Guidance
-
-For a service with many PostgreSQL backends:
+Use this planning model:
 
 ```text
 required RAM ~= PostgreSQL baseline
-             + hot shared BM25 generation bytes
-             + connection_count * retained workspace budget
-             + OS page cache and safety margin
+             + shared_buffers and OS page cache
+             + shared runtime/residency arena
+             + worker count * measured session RSS
+             + connection count * retained workspace budget
+             + operating-system safety margin
 ```
 
-With defaults, the retained workspace term is bounded around:
-
-```text
-connection_count * 32MB
-```
-
-The actual active-query peak can be higher while a query is executing on a
-very large index, but the backend releases workspace above the configured
-budget after the query finishes.
-
-Practical guidance:
-
-- Keep `workspace_cache_bytes` at the default for general connection pools.
-- Lower it to `0` or a small value when connection count is very high and
-  first-query scratch allocation cost is acceptable.
-- Raise it only for fixed-size pools where repeat-query latency matters more
-  than private memory.
-- Use `psql_bm25s_generation_cache_preload(...)` for hot large indexes after
-  deploy, restart, or major index maintenance.
-- Use shared-preload when fresh-backend latency is important and operators can
-  change PostgreSQL configuration.
+For large connection pools, reduce `workspace_cache_bytes` before reducing the
+shared runtime required by SAE. Increase worker count only after measuring both
+throughput and session RSS.
 
 ## Diagnostics
 
-Inspect the immutable generation cache:
-
 ```sql
-SELECT public.psql_bm25s_generation_cache_state(
-    'commons.data_pubmed__introduction__bm25_idx'::regclass
+SELECT ii42_index_status('docs_search_idx'::regclass);
+
+SELECT ii42_index_runtime_state(
+    'docs_search_idx'::regclass
+);
+
+SELECT ii42_index_runtime_state_json(
+    'docs_search_idx'::regclass
 );
 ```
 
-Clear volatile generation-cache state when testing cold-load behavior:
+The text and JSON diagnostics report current runtime, root-marker, workspace,
+and residency state from one C snapshot collector. They do not describe a
+second index lifecycle.
+
+For controlled cold-start testing, a privileged operator may call:
 
 ```sql
-SELECT public.psql_bm25s_generation_cache_clear();
+SELECT ii42_runtime_cache_clear();
 ```
 
-This does not change durable index contents. It only clears backend-local
-state and best-effort volatile generation descriptors.
+This clears disposable workspace, markers, and derived residency only. It does
+not change the checked root, postings, linked L0, model contract, or results.
+
+See [Shared Runtime And Residency](shared-runtime-and-residency.md),
+[Semantic Runtime](examples/semantic-runtime.md), and
+[Semantic Index Operations](examples/semantic-index-operations.md).

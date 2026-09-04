@@ -1,0 +1,134 @@
+{
+  "surface": "Enlightenment native arXiv 75k P2 exact query optimization",
+  "measured_at": "2026-07-22",
+  "database": "ii_dev",
+  "index": "ii42_qual_20260722.arxiv_p2_idx",
+  "documents": 75000,
+  "k": 100,
+  "queries": 12,
+  "warm_repeats_per_query": 5,
+  "runtime": {
+    "postgresql": "18",
+    "extension": "0.1.2",
+    "old_binary_sha256": "21db255f463d82f687931fb4062b944295b6c4e30b5558e1ee79423f748e3ce4",
+    "visibility_binary_sha256": "541e4c395eb3ceeb849345a2eff79e0bb02686b5e6ab35ed597929b810236144",
+    "doc_starts_binary_sha256": "510190dfa812effed328024357d9013b5037bdc75a35819bc38eaa47ad767708",
+    "rollback_path": "/var/tmp/ii42-backups/20260722-p22-exact-visibility"
+  },
+  "changes": [
+    "Defer heap visibility checks until after exact score ordering.",
+    "Read and validate the 300 KB document-start table once per query.",
+    "Keep candidate generation, score arithmetic, tie-breaks, and top-k exact."
+  ],
+  "baseline": {
+    "full_query_ms": {
+      "count": 60,
+      "p50": 96.333,
+      "p95": 110.437,
+      "mean": 94.584,
+      "min": 70.219,
+      "max": 118.014
+    },
+    "fixed_atom_scorer_ms": {
+      "count": 20,
+      "p50": 53.303,
+      "p95": 67.042,
+      "mean": 55.336,
+      "min": 51.345,
+      "max": 69.631
+    }
+  },
+  "visibility_deferred": {
+    "full_query_ms": {
+      "count": 60,
+      "p50": 77.004,
+      "p95": 90.736,
+      "mean": 76.575,
+      "min": 59.175,
+      "max": 114.403
+    },
+    "fixed_atom_scorer_ms": {
+      "count": 20,
+      "p50": 39.245,
+      "p95": 40.960,
+      "mean": 39.872,
+      "min": 37.928,
+      "max": 51.666
+    }
+  },
+  "doc_starts_prefetch": {
+    "full_query_ms": {
+      "count": 60,
+      "p50": 73.793,
+      "p95": 85.032,
+      "mean": 72.685,
+      "min": 57.545,
+      "max": 95.461
+    },
+    "fixed_atom_scorer_ms": {
+      "count": 20,
+      "p50": 37.871,
+      "p95": 41.453,
+      "mean": 38.410,
+      "min": 35.814,
+      "max": 46.783
+    },
+    "improvement_percent": {
+      "full_p50": 23.398,
+      "full_p95": 23.004,
+      "scorer_p50": 28.951,
+      "scorer_p95": 38.169
+    }
+  },
+  "parity": {
+    "ranked_rows": 1200,
+    "rank_ctid_doc_id_mismatches": 0,
+    "score_differences": 92,
+    "max_absolute_score_delta": 0.0001,
+    "allowed_absolute_score_delta": 0.0001,
+    "visibility_to_doc_starts_bitwise_equal": true,
+    "baseline_digest_sha256": "4765da314d92abfbcf6ac3c1ec0078c3ef449ae680a915f1621f24dd03533ba2",
+    "optimized_digest_sha256": "a8d2e858d9bf71b2bd5d0e705573a14587f3dcb7473bc8915b17f9e0b20dc43e"
+  },
+  "trace": {
+    "candidate_docs": 7813,
+    "scored_docs": 7813,
+    "candidate_postings": 11696,
+    "rerank_doc_terms": 955856,
+    "rerank_score_terms": 28217
+  },
+  "soak": {
+    "queries": 240,
+    "p50_ms": 74.347,
+    "p95_ms": 84.759,
+    "mean_ms": 72.732,
+    "rounds": [
+      {
+        "queries": 120,
+        "p50_ms": 75.169,
+        "p95_ms": 84.637
+      },
+      {
+        "queries": 120,
+        "p50_ms": 73.642,
+        "p95_ms": 85.413
+      }
+    ],
+    "backend_memory_bytes": {
+      "warm": 7457320,
+      "after_round_1": 7603752,
+      "after_round_2": 7586344,
+      "monotonic_growth": false
+    }
+  },
+  "verification": {
+    "local_lifecycle_gates": "47/47",
+    "local_lifecycle_passed": true,
+    "remote_index_ready": true,
+    "remote_query_ready": true,
+    "postgresql_warning_or_higher_after_restart": 0,
+    "full_query_p50_improvement_at_least_20_percent": true,
+    "full_query_p95_improvement_at_least_20_percent": true,
+    "exact_latency_gate_passed": true
+  }
+}

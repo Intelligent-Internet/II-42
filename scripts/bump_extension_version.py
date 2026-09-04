@@ -5,16 +5,25 @@ from __future__ import annotations
 import argparse
 import pathlib
 import re
-import shutil
 import subprocess
 import sys
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description='Version the single current II-42 install catalog.',
+    )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--version')
     group.add_argument('--series')
+    parser.add_argument(
+        '--rename-current-sql',
+        action='store_true',
+        help=(
+            'Confirm that the current install SQL remains the reviewed '
+            'catalog for the new version.'
+        ),
+    )
     return parser.parse_args()
 
 
@@ -63,8 +72,15 @@ def replace_default_version(control_path: pathlib.Path, version: str) -> None:
 
 def main() -> int:
     args = parse_args()
+    if not args.rename_current_sql:
+        raise RuntimeError(
+            'refusing to rename the current extension SQL without '
+            '--rename-current-sql; update and review the install SQL first '
+            'when the SQL surface changes'
+        )
+
     root = repo_root()
-    control_path = root / 'psql_bm25s.control'
+    control_path = root / 'ii42.control'
     sql_dir = root / 'sql'
 
     current_version = read_current_version(control_path)
@@ -77,23 +93,20 @@ def main() -> int:
             f'next version {next_version} matches current version'
         )
 
-    current_sql = sql_dir / f'psql_bm25s--{current_version}.sql'
-    next_sql = sql_dir / f'psql_bm25s--{next_version}.sql'
-    update_sql = sql_dir / (
-        f'psql_bm25s--{current_version}--{next_version}.sql'
-    )
-
+    current_sql = sql_dir / f'ii42--{current_version}.sql'
+    next_sql = sql_dir / f'ii42--{next_version}.sql'
     if not current_sql.exists():
         raise RuntimeError(f'missing install script: {current_sql.name}')
-    if next_sql.exists() or update_sql.exists():
-        raise RuntimeError('target version files already exist')
+    if next_sql.exists():
+        raise RuntimeError('target version file already exists')
+    versioned_sql_files = sorted(sql_dir.glob('ii42--*.sql'))
+    if versioned_sql_files != [current_sql]:
+        raise RuntimeError(
+            'expected exactly one current install SQL before versioning; '
+            f'found {[path.name for path in versioned_sql_files]}'
+        )
 
-    shutil.copyfile(current_sql, next_sql)
-    update_sql.write_text(
-        '-- generated release upgrade\n'
-        f'-- SQL surface unchanged from {current_version} to {next_version}\n',
-        encoding='utf-8',
-    )
+    current_sql.rename(next_sql)
     replace_default_version(control_path, next_version)
 
     print(next_version)

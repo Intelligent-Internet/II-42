@@ -1,0 +1,2 @@
+50
+{"query_route": "ordered_block", "memory_bytes": "3533305", "blocks_scored": "27603", "blocks_skipped": "33178", "blocks_considered": "60781", "ordered_block_query_path": null}

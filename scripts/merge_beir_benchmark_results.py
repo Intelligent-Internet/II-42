@@ -36,7 +36,7 @@ def merge_entry(
     if 'wall_time_s' in entry:
         target['wall_time_s'] = entry['wall_time_s']
 
-    for key in ('python_reference_bm25s', 'psql_bm25s_ids', 'psql_bm25s_text'):
+    for key in ('upstream_bm25s', 'ii42_ids', 'ii42_text'):
         if key in entry:
             target[key] = entry[key]
 
@@ -50,11 +50,11 @@ def merge_entry(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description='Merge Python reference, ids, and text BEIR benchmark results.'
+        description='Merge upstream, ids, and text BEIR benchmark results.'
     )
     parser.add_argument('--ids', type=Path, required=True)
     parser.add_argument('--text', type=Path, required=True)
-    parser.add_argument('--python-reference', type=Path, required=True)
+    parser.add_argument('--upstream', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     return parser.parse_args()
 
@@ -63,30 +63,30 @@ def main() -> int:
     args = parse_args()
     ids = load_payload(args.ids)
     text = load_payload(args.text)
-    python_reference = load_payload(args.python_reference)
+    upstream = load_payload(args.upstream)
 
     datasets = sorted(
         set(ids.get('results', {}))
         | set(text.get('results', {}))
-        | set(python_reference.get('results', {}))
+        | set(upstream.get('results', {}))
     )
 
     merged: dict[str, Any] = {
-        'created_at': python_reference.get('created_at')
+        'created_at': upstream.get('created_at')
         or text.get('created_at')
         or ids.get('created_at'),
-        'official_source': python_reference.get('official_source')
+        'official_source': upstream.get('official_source')
         or text.get('official_source')
         or ids.get('official_source'),
-        'top_k': python_reference.get('top_k')
+        'top_k': upstream.get('top_k')
         or text.get('top_k')
         or ids.get('top_k'),
-        'paths': ['ids', 'text', 'python_reference'],
+        'paths': ['ids', 'text', 'upstream'],
         'results': {},
     }
 
     for dataset in datasets:
-        merge_entry(merged, python_reference, dataset)
+        merge_entry(merged, upstream, dataset)
         merge_entry(merged, ids, dataset)
         merge_entry(merged, text, dataset)
 

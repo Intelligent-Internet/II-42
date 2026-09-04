@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-04-02 15:17:05",
+  "datasets_dir": "/var/tmp/psql_bm25s_pg18_task/datasets",
+  "db_prefix": "psql_bm25s_cloud_tantivy_",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "psql_bm25s_ids"
+  ],
+  "results": {
+    "nfcorpus": {
+      "dataset": "nfcorpus",
+      "psql_bm25s_ids": {
+        "build_bytes": 4825088,
+        "build_ms": 81.53869599999553,
+        "query": {
+          "avg_ms": 0.2963889687984357,
+          "count": 3237,
+          "p50_ms": 0.27650399999856745,
+          "p95_ms": 0.3892715999910478,
+          "qps": 3373.9447323360637
+        }
+      },
+      "stats": {
+        "documents": 3633,
+        "queries": 3237,
+        "query_tokens": 8947,
+        "tokens": 614081,
+        "vocab_size": 19117
+      },
+      "wall_time_s": 1.8848000700000114
+    }
+  },
+  "top_k": 1000
+}

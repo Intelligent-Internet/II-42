@@ -1,13 +1,14 @@
 # Field-Aware Indexes
 
-`psql_bm25s` supports field-aware retrieval in two production shapes:
+`ii42` provides two field-aware product shapes:
 
-- separate single-column indexes fused at query time
+- public fusion of separate single-column indexes
 - one multicolumn index with `field_aware = true`
 
-The second shape is the single-index field-aware mode. It preserves field
-identity inside one BM25 payload and allows query-time field weighting without
-building one index per field.
+The second shape preserves field identity inside one physical index without
+building one index per field. Applications query it through
+`ii42_query(...)` with equal or explicit field weights. It supports exact
+BM25 and semantic-enabled unified postings through the same public API.
 
 ## When To Use This
 
@@ -15,14 +16,17 @@ Use a field-aware index when:
 
 - the table has several searchable text-like fields
 - one index object is operationally simpler than several field indexes
-- queries need weights such as `title^3 + body^1`
+- applications need weights such as `title^3 + body^1`
 - BM25F-style per-field length normalization is not required
+- an SAE-enabled index should keep lexical field identity while sharing one
+  physical index and lifecycle
 
-For the strongest field-isolated model, keep separate field indexes and use
-the multi-index helpers documented in [Multi-Field Search](multi-field-search.md).
+To weight independently maintained indexes at query time, keep separate field
+indexes and use the public composition helpers documented in
+[Multi-Index Fusion](multi-index-fusion.md).
 For columns that are simply one logical document, use the default fused
 multicolumn index documented in
-[Multi-Column Fusion Indexes](multicolumn-fusion-indexes.md).
+[Multicolumn Indexes](multicolumn-indexes.md).
 
 ## Supported Column Types
 
@@ -43,7 +47,7 @@ Pretokenized fields:
 
 ```sql
 CREATE INDEX docs_field_bm25_idx
-    ON docs USING psql_bm25s (title_tokens, body_tokens)
+    ON docs USING ii42 (title_tokens, body_tokens)
     WITH (field_aware = true);
 ```
 
@@ -51,25 +55,92 @@ Scalar text fields:
 
 ```sql
 CREATE INDEX docs_text_field_bm25_idx
-    ON docs USING psql_bm25s (title, body)
+    ON docs USING ii42 (title, body)
     WITH (
         field_aware = true,
         text_lowercase = true,
         text_fold_diacritics = true
+);
+```
+
+Semantic-enabled field-aware index:
+
+```sql
+CREATE INDEX docs_text_field_semantic_idx
+    ON docs USING ii42 (title, body)
+    WITH (
+        sae = true,
+        field_aware = true
     );
 ```
+
+This remains one relation-owned unified posting index with one mutation and
+maintenance lifecycle. Foreground writes publish field-scoped lexical atoms
+immediately; the shared worker batch-encodes changed nonempty fields and
+publishes one semantic completion for the document version asynchronously.
 
 `field_aware = true` is opt-in. Without it, the same multicolumn index is a
 fused-document index: columns are appended into one logical token stream and
 field identity is not preserved.
 
-## Query With Field Weights
+## Application Query
 
-For token arrays, use `psql_bm25s_field_aware_query_tokens(...)`:
+Applications use the same product entrypoint as every other index:
 
 ```sql
 SELECT d.id, h.score
-FROM psql_bm25s_field_aware_query_tokens(
+FROM ii42_query(
+    'docs_field_bm25_idx'::regclass,
+    'bird migration',
+    10
+) AS h
+JOIN docs AS d ON d.ctid = h.ctid
+ORDER BY h.score DESC, d.id;
+```
+
+This searches every field with equal weight.
+
+To search a subset of fields or apply explicit weights, use the public
+field-aware overload:
+
+```sql
+SELECT d.id, h.score
+FROM ii42_query(
+    'docs_text_field_semantic_idx'::regclass,
+    'bird migration',
+    ARRAY['title', 'body'],
+    ARRAY[3.0, 1.0]::real[],
+    10
+) AS h
+JOIN docs AS d ON d.ctid = h.ctid
+ORDER BY h.score DESC, d.id;
+```
+
+The score is:
+
+```text
+sum(field_weight * (field_BM25 + field_SAE))
+```
+
+This is one native accumulation over one posting index. It is not score fusion
+between independent BM25 and semantic indexes. Field names must be unique and
+belong to the index. Weights must be finite and non-negative. Passing `NULL`
+weights uses `1.0` for every selected field.
+
+The query expands lexical and, for SAE, semantic atoms into field-scoped terms
+with the selected field weight, then uses the same route dispatcher as a
+single-column index. BM25 uses resident-fold or page-native execution; SAE can
+use the published semantic accelerator. It does not materialize one corpus score array per field
+or retain a private index snapshot in each backend when shared runtime exists.
+
+## Owner-Only Token Diagnostics
+
+Extension owners may use `ii42_field_aware_query_tokens(...)` for token-array
+diagnostics:
+
+```sql
+SELECT d.id, h.score
+FROM ii42_field_aware_query_tokens(
     'docs_field_bm25_idx'::regclass,
     ARRAY['bird'],
     ARRAY['title_tokens', 'body_tokens'],
@@ -80,13 +151,13 @@ JOIN docs AS d ON d.ctid = h.ctid
 ORDER BY h.score DESC, d.id;
 ```
 
-For scalar `text` or `varchar` fields, use
-`psql_bm25s_field_aware_query(...)` so the query text is tokenized with
+For scalar `text` or `varchar` diagnostics, use
+`ii42_field_aware_query(...)` so the query text is tokenized with
 the index text options before field-aware retrieval:
 
 ```sql
 SELECT d.id, h.score
-FROM psql_bm25s_field_aware_query(
+FROM ii42_field_aware_query(
     'docs_text_field_bm25_idx'::regclass,
     'bird migration',
     ARRAY['title', 'body'],
@@ -101,32 +172,51 @@ Pass `NULL` for weights, or omit the argument, to use equal weights.
 
 ## Generic Query Behavior
 
-Generic direct APIs work on field-aware indexes:
+The public `ii42_query(...)` family searches all indexed fields with equal
+weight by default. Its field-aware overload selects a field subset and optional
+weights for either BM25 or SAE indexes.
 
-- `psql_bm25s_query_tokens(...)`
-- `psql_bm25s_query(...)`
+The owner-only `ii42_query_tokens(...)` diagnostic also searches every indexed
+field with equal weight on BM25 indexes. Explicit field-aware diagnostics can
+select fields and weights; they are not the public semantic query route.
 
-On `field_aware = true` indexes, these APIs search every indexed field with
-equal weight for token queries and simple raw term queries. Use the explicit
-field-aware APIs when the query needs custom weights or only a subset of
-fields.
-
-Complex raw-query semantics such as phrase and boolean filters remain
-available on non-field-aware fused indexes. Field-aware generic raw queries
-intentionally reject complex raw query forms instead of silently applying
-non-field-aware planning to field-scoped terms.
+For BM25, complex raw-query semantics such as phrase and boolean filters remain
+available on non-field-aware fused indexes. Field-aware BM25 generic raw queries
+reject complex forms rather than silently using non-field-aware planning.
+SAE input is model-compiled text, not the BM25 raw-query language; its tokenizer
+and normalization come from the model checkout rather than BM25 text reloptions.
 
 ## Internal Semantics
 
-The field-aware engine stores field-scoped internal tokens in one BM25 payload.
+The field-aware engine stores field-scoped lexical atoms in one posting
+payload.
 For example:
 
 - `title_tokens = ARRAY['bird']` becomes one internal token namespace
 - `body_tokens = ARRAY['bird']` becomes a different internal token namespace
 - a query over both fields scores both streams and sums the weighted scores
 
-This gives one multicolumn BM25 index with query-time field weighting. It is
-not BM25F:
+For `sae = true`, lexical and semantic atoms both use one namespace per indexed
+field. The shared runtime batch-encodes each changed nonempty field and maps
+the result into that field's semantic namespace. Query lexical and semantic
+atoms are copied into every selected field namespace, multiplied by the same
+field weight, and accumulated by the same native scorer.
+
+Semantic admission is also field-local. The configured document semantic
+budget ratio is applied independently to each field's mapped lexical atom
+count, then the retained field atoms are merged into the document's one
+unified posting row. This prevents a long field from consuming a short field's
+semantic budget before query-time weights are applied. The summed budget stays
+approximately proportional to the document's total mapped lexical atoms.
+
+This field expansion does not create per-field roots, generations, pending
+queues, or maintenance policies. A row has one document version and one
+semantic-pending identity; the worker merges the completed fields and publishes
+one atomic completion for that version. `REINDEX` encodes the full corpus, while
+ordinary maintenance only encodes changed document versions.
+
+This gives one multicolumn index with field-aware lexical evidence. It is not
+BM25F:
 
 - document length normalization uses the combined indexed document length
 - there is no per-field length normalization
@@ -155,7 +245,7 @@ Use a default multicolumn fused-document index when:
 Use `field_aware = true` when:
 
 - one multicolumn index object is preferred
-- query-time field weights are required
+- lexical and semantic field identity or query-time field weights are required
 - BM25F-style per-field normalization is not required
 
 ## Current Limits

@@ -1,5 +1,7 @@
 {
   "created_at": "2026-05-06 22:20:04",
+  "datasets_dir": "/Volumes/Betty/Tmp/ii42_dataset_cache/beir_official",
+  "db_prefix": "ii42_pg18_matrix_",
   "metrics": [
     "ndcg@10",
     "map@100",
@@ -7,9 +9,9 @@
     "precision@10"
   ],
   "paths": [
-    "python_reference_bm25s",
-    "psql_bm25s_ids",
-    "psql_bm25s_text",
+    "upstream_bm25s",
+    "ii42_ids",
+    "ii42_text",
     "pg_search",
     "vchord_bm25"
   ],
@@ -34,7 +36,7 @@
         "qps": 189.1789123908648,
         "query_ms": 7432.11799999699
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 1406,
         "metric_query_counts": {
           "map@100": 1406,
@@ -51,7 +53,7 @@
         "qps": 776.2214014241227,
         "query_ms": 1811.338874991634
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 1406,
         "metric_query_counts": {
           "map@100": 1406,
@@ -77,7 +79,7 @@
         "tokens": 947471,
         "vocab_size": 22713
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 239.47716600378044,
         "evaluated_queries": 1406,
         "metric_query_counts": {
@@ -133,7 +135,7 @@
         "qps": 2.2732377550936844,
         "query_ms": 675248.3309590025
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 1535,
         "metric_query_counts": {
           "map@100": 1535,
@@ -150,7 +152,7 @@
         "qps": 71.49815056744725,
         "query_ms": 21469.08679199987
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 1535,
         "metric_query_counts": {
           "map@100": 1535,
@@ -176,7 +178,7 @@
         "tokens": 318190131,
         "vocab_size": 3115002
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 131495.90962499497,
         "evaluated_queries": 1535,
         "metric_query_counts": {
@@ -232,7 +234,7 @@
         "qps": 12.76792239899397,
         "query_ms": 1029533.1996250025
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 13145,
         "metric_query_counts": {
           "map@100": 13145,
@@ -249,7 +251,7 @@
         "qps": 640.0415625315482,
         "query_ms": 20537.728750001406
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 13145,
         "metric_query_counts": {
           "map@100": 13145,
@@ -275,7 +277,7 @@
         "tokens": 44857487,
         "vocab_size": 873200
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 12393.664667004487,
         "evaluated_queries": 13145,
         "metric_query_counts": {
@@ -331,7 +333,7 @@
         "qps": 6.0289848987836,
         "query_ms": 66346.1605420016
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 400,
         "metric_query_counts": {
           "map@100": 400,
@@ -348,7 +350,7 @@
         "qps": 133.12817358735796,
         "query_ms": 3004.623208005796
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 400,
         "metric_query_counts": {
           "map@100": 400,
@@ -374,7 +376,7 @@
         "tokens": 162336259,
         "vocab_size": 2744583
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 75730.07812499418,
         "evaluated_queries": 400,
         "metric_query_counts": {
@@ -430,7 +432,7 @@
         "qps": 3.667905800532948,
         "query_ms": 1817385.822457989
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 6666,
         "metric_query_counts": {
           "map@100": 6666,
@@ -447,7 +449,7 @@
         "qps": 187.70798092859454,
         "query_ms": 35512.60829200328
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 6666,
         "metric_query_counts": {
           "map@100": 6666,
@@ -473,7 +475,7 @@
         "tokens": 318184332,
         "vocab_size": 3115013
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 117801.81687499862,
         "evaluated_queries": 6666,
         "metric_query_counts": {
@@ -529,7 +531,7 @@
         "qps": 13.364372845480185,
         "query_ms": 48487.123750004685
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 648,
         "metric_query_counts": {
           "map@100": 648,
@@ -546,7 +548,7 @@
         "qps": 735.8285226214954,
         "query_ms": 880.6399590102956
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 648,
         "metric_query_counts": {
           "map@100": 648,
@@ -572,7 +574,7 @@
         "tokens": 5189073,
         "vocab_size": 59853
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 1355.3791659942362,
         "evaluated_queries": 648,
         "metric_query_counts": {
@@ -628,7 +630,7 @@
         "qps": 2.7007507803424113,
         "query_ms": 2741830.1806659726
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 7405,
         "metric_query_counts": {
           "map@100": 7405,
@@ -645,7 +647,7 @@
         "qps": 126.91661513975282,
         "query_ms": 58345.39466598653
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 7405,
         "metric_query_counts": {
           "map@100": 7405,
@@ -671,7 +673,7 @@
         "tokens": 169530288,
         "vocab_size": 2549160
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 72925.84508299478,
         "evaluated_queries": 7405,
         "metric_query_counts": {
@@ -727,7 +729,7 @@
         "qps": 3.548193332304948,
         "query_ms": 12118.843584001297
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 43,
         "metric_query_counts": {
           "map@100": 43,
@@ -744,7 +746,7 @@
         "qps": 19.47437161073461,
         "query_ms": 2208.0301670066547
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 43,
         "metric_query_counts": {
           "map@100": 43,
@@ -770,7 +772,7 @@
         "tokens": 340859911,
         "vocab_size": 1431983
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 135852.6405839948,
         "evaluated_queries": 43,
         "metric_query_counts": {
@@ -826,7 +828,7 @@
         "qps": 2014.123294248739,
         "query_ms": 160.36754101514816
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 323,
         "metric_query_counts": {
           "map@100": 323,
@@ -843,7 +845,7 @@
         "qps": 2099.536790385103,
         "query_ms": 153.8434579852037
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 323,
         "metric_query_counts": {
           "map@100": 323,
@@ -869,7 +871,7 @@
         "tokens": 614081,
         "vocab_size": 19117
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 132.87066601333208,
         "evaluated_queries": 323,
         "metric_query_counts": {
@@ -925,7 +927,7 @@
         "qps": 4.887372909391512,
         "query_ms": 706309.9264160264
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 3452,
         "metric_query_counts": {
           "map@100": 3452,
@@ -942,7 +944,7 @@
         "qps": 284.3141116635826,
         "query_ms": 12141.500750003615
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 3452,
         "metric_query_counts": {
           "map@100": 3452,
@@ -968,7 +970,7 @@
         "tokens": 148249812,
         "vocab_size": 892745
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 54592.63091601315,
         "evaluated_queries": 3452,
         "metric_query_counts": {
@@ -1024,7 +1026,7 @@
         "qps": 11.619152811470565,
         "query_ms": 860647.9458750109
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 10000,
         "metric_query_counts": {
           "map@100": 10000,
@@ -1041,7 +1043,7 @@
         "qps": 808.6497626183296,
         "query_ms": 12366.293125000084
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 10000,
         "metric_query_counts": {
           "map@100": 10000,
@@ -1067,7 +1069,7 @@
         "tokens": 4202151,
         "vocab_size": 65377
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 3536.2369590147864,
         "evaluated_queries": 10000,
         "metric_query_counts": {
@@ -1123,7 +1125,7 @@
         "qps": 13.749379118857151,
         "query_ms": 72730.55687500164
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 1000,
         "metric_query_counts": {
           "map@100": 1000,
@@ -1140,7 +1142,7 @@
         "qps": 337.3901499459241,
         "query_ms": 2963.927667005919
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 1000,
         "metric_query_counts": {
           "map@100": 1000,
@@ -1166,7 +1168,7 @@
         "tokens": 3211248,
         "vocab_size": 58804
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 721.5229159919545,
         "evaluated_queries": 1000,
         "metric_query_counts": {
@@ -1222,7 +1224,7 @@
         "qps": 693.4521545119458,
         "query_ms": 432.61816701851785
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 300,
         "metric_query_counts": {
           "map@100": 300,
@@ -1239,7 +1241,7 @@
         "qps": 1290.2007246638525,
         "query_ms": 232.52195899840444
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 300,
         "metric_query_counts": {
           "map@100": 300,
@@ -1265,7 +1267,7 @@
         "tokens": 812074,
         "vocab_size": 26559
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 181.30829100846313,
         "evaluated_queries": 300,
         "metric_query_counts": {
@@ -1321,7 +1323,7 @@
         "qps": 13.071114718735304,
         "query_ms": 3825.228458008496
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 50,
         "metric_query_counts": {
           "map@100": 50,
@@ -1338,7 +1340,7 @@
         "qps": 255.85404676836322,
         "query_ms": 195.42391700088046
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 50,
         "metric_query_counts": {
           "map@100": 50,
@@ -1364,7 +1366,7 @@
         "tokens": 20231413,
         "vocab_size": 174893
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 5288.052666990552,
         "evaluated_queries": 50,
         "metric_query_counts": {
@@ -1420,7 +1422,7 @@
         "qps": 20.038714936514147,
         "query_ms": 2445.266582974
       },
-      "psql_bm25s_ids": {
+      "ii42_ids": {
         "evaluated_queries": 49,
         "metric_query_counts": {
           "map@100": 49,
@@ -1437,7 +1439,7 @@
         "qps": 140.85794237811695,
         "query_ms": 347.86820801673457
       },
-      "psql_bm25s_text": {
+      "ii42_text": {
         "evaluated_queries": 49,
         "metric_query_counts": {
           "map@100": 49,
@@ -1463,7 +1465,7 @@
         "tokens": 74180347,
         "vocab_size": 354228
       },
-      "python_reference_bm25s": {
+      "upstream_bm25s": {
         "build_ms": 16924.87625000649,
         "evaluated_queries": 49,
         "metric_query_counts": {

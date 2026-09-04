@@ -1,0 +1,425 @@
+{
+  "surface": "enlightenment_arxiv_shadow_75k_matched",
+  "documents": 75001,
+  "vector_documents": 74834,
+  "sample_queries": 12,
+  "k": 100,
+  "warm_repeats_per_query": 5,
+  "quality_claim": false,
+  "limitations": [
+    "identity/self-retrieval proxy; no qrels",
+    "VectorChord excludes external query-encoder latency",
+    "P2 and stored 256d vector model identity is not proven equal"
+  ],
+  "index_bytes": {
+    "arxiv_bm25_idx": 75628544,
+    "arxiv_p2_idx": 92872704,
+    "arxiv_vector_idx": 36831232
+  },
+  "warm_latency": {
+    "bm25": {
+      "count": 60,
+      "mean_ms": 4.08290803025011,
+      "p50_ms": 2.6402099756523967,
+      "p95_ms": 19.228368008043617,
+      "min_ms": 2.0608020131476223,
+      "max_ms": 19.448341976385564
+    },
+    "p2": {
+      "count": 60,
+      "mean_ms": 97.11303568231718,
+      "p50_ms": 99.00377949816175,
+      "p95_ms": 109.42619398701936,
+      "min_ms": 74.17761796386912,
+      "max_ms": 118.56910702772439
+    },
+    "vectorchord": {
+      "count": 60,
+      "mean_ms": 5.236298100013907,
+      "p50_ms": 5.196366488235071,
+      "p95_ms": 6.788737024180591,
+      "min_ms": 3.512914991006255,
+      "max_ms": 8.129380003083497
+    },
+    "exact_vector": {
+      "count": 12,
+      "mean_ms": 17.409106503085543,
+      "p50_ms": 4.851131001487374,
+      "p95_ms": 85.22671600803733,
+      "min_ms": 3.543736005667597,
+      "max_ms": 85.22671600803733
+    }
+  },
+  "identity_proxy": {
+    "bm25": {
+      "at_1": 1.0,
+      "at_10": 1.0,
+      "at_100": 1.0
+    },
+    "p2": {
+      "at_1": 1.0,
+      "at_10": 1.0,
+      "at_100": 1.0
+    },
+    "vectorchord": {
+      "at_1": 0.5833333333333334,
+      "at_10": 0.5833333333333334,
+      "at_100": 1.0
+    },
+    "exact_vector": {
+      "at_1": 0.5833333333333334,
+      "at_10": 0.5833333333333334,
+      "at_100": 1.0
+    }
+  },
+  "overlap_at_100": {
+    "vectorchord_vs_exact": 0.9958333333333332,
+    "p2_vs_exact_vector": 0.24,
+    "bm25_vs_exact_vector": 0.22166666666666668,
+    "p2_vs_bm25": 0.3233333333333333
+  },
+  "rows": [
+    {
+      "source_id": "0806.0931",
+      "title": "Public Channel Cryptography: Chaos Synchronization and Hilbert's Tenth\n  Problem",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 0.96,
+        "p2_vs_exact_vector": 0.31,
+        "bm25_vs_exact_vector": 0.32,
+        "p2_vs_bm25": 0.32
+      }
+    },
+    {
+      "source_id": "0801.3794",
+      "title": "Resonant Energy Transfer from Organics to Quantum Dots and Carrier\n  Multiplication",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 0.99,
+        "p2_vs_exact_vector": 0.06,
+        "bm25_vs_exact_vector": 0.13,
+        "p2_vs_bm25": 0.43
+      }
+    },
+    {
+      "source_id": "0709.0369",
+      "title": "Sea-quark effects in the pion charge form factor",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 32,
+        "exact_vector": 32
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.41,
+        "bm25_vs_exact_vector": 0.37,
+        "p2_vs_bm25": 0.5
+      }
+    },
+    {
+      "source_id": "0804.2347",
+      "title": "Quantitative predictions with detuned normal forms",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 32,
+        "exact_vector": 32
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.02,
+        "bm25_vs_exact_vector": 0.04,
+        "p2_vs_bm25": 0.11
+      }
+    },
+    {
+      "source_id": "0710.3907",
+      "title": "Impacts of preference and geography on epidemic spreading",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.42,
+        "bm25_vs_exact_vector": 0.29,
+        "p2_vs_bm25": 0.46
+      }
+    },
+    {
+      "source_id": "0707.1144",
+      "title": "Surface subgroups of right-angled Artin groups",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.25,
+        "bm25_vs_exact_vector": 0.3,
+        "p2_vs_bm25": 0.27
+      }
+    },
+    {
+      "source_id": "0806.1112",
+      "title": "Radiative and Auger decay data for modelling nickel K lines",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.11,
+        "bm25_vs_exact_vector": 0.17,
+        "p2_vs_bm25": 0.26
+      }
+    },
+    {
+      "source_id": "0712.1054",
+      "title": "A Spectro-photometric Search for Galaxy Clusters in SDSS",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 32,
+        "exact_vector": 32
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.31,
+        "bm25_vs_exact_vector": 0.29,
+        "p2_vs_bm25": 0.36
+      }
+    },
+    {
+      "source_id": "0712.1588",
+      "title": "Frequency Domain Simulations of Charge-Density-Wave Strains: Comparison\n  with Electro-Optic Measurements",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.05,
+        "bm25_vs_exact_vector": 0.02,
+        "p2_vs_bm25": 0.12
+      }
+    },
+    {
+      "source_id": "0710.2938",
+      "title": "The R(S^1)-graded equivariant homotopy of THH(F_p)",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 32,
+        "exact_vector": 32
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.14,
+        "bm25_vs_exact_vector": 0.2,
+        "p2_vs_bm25": 0.3
+      }
+    },
+    {
+      "source_id": "0710.1739",
+      "title": "Lagrangian statistics in forced two-dimensional turbulence",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 32,
+        "exact_vector": 32
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.43,
+        "bm25_vs_exact_vector": 0.33,
+        "p2_vs_bm25": 0.47
+      }
+    },
+    {
+      "source_id": "0711.1422",
+      "title": "Number of distinct sites visited by a subdiffusive random walker",
+      "identity_rank": {
+        "bm25": 1,
+        "p2": 1,
+        "vectorchord": 1,
+        "exact_vector": 1
+      },
+      "overlap_at_100": {
+        "vectorchord_vs_exact": 1.0,
+        "p2_vs_exact_vector": 0.37,
+        "bm25_vs_exact_vector": 0.2,
+        "p2_vs_bm25": 0.28
+      }
+    }
+  ],
+  "concurrency": {
+    "bm25": {
+      "workers": 8,
+      "wall_ms": 56.022819015197456,
+      "latency": {
+        "count": 8,
+        "mean_ms": 20.978003507480025,
+        "p50_ms": 21.53331652516499,
+        "p95_ms": 24.316259019542485,
+        "min_ms": 16.791992995422333,
+        "max_ms": 24.316259019542485
+      }
+    },
+    "p2": {
+      "workers": 8,
+      "wall_ms": 262.78381602605805,
+      "latency": {
+        "count": 8,
+        "mean_ms": 220.30255374556873,
+        "p50_ms": 217.17658097622916,
+        "p95_ms": 250.77517196768895,
+        "min_ms": 197.10377202136442,
+        "max_ms": 250.77517196768895
+      }
+    },
+    "vectorchord": {
+      "workers": 8,
+      "wall_ms": 42.382967949379236,
+      "latency": {
+        "count": 8,
+        "mean_ms": 25.41239950369345,
+        "p50_ms": 26.342908531660214,
+        "p95_ms": 29.368723975494504,
+        "min_ms": 19.329286995343864,
+        "max_ms": 29.368723975494504
+      }
+    }
+  },
+  "runtime_before": {
+    "failures": 0,
+    "provider": "cpu",
+    "requests": 2,
+    "operation": "runtime_service_status",
+    "successes": 2,
+    "request_id": 2,
+    "worker_pid": 3288494,
+    "api_version": "ii42_index_v1",
+    "cpu_builtin": true,
+    "model_owner": "runtime_worker",
+    "queue_depth": 0,
+    "queue_waits": 0,
+    "queue_policy": "fifo_bounded",
+    "runtime_runs": 2,
+    "worker_ready": true,
+    "encoded_texts": 2,
+    "fallback_order": [
+      "cuda",
+      "coreml",
+      "cpu"
+    ],
+    "queue_capacity": 64,
+    "response_ready": false,
+    "runtime_max_us": 1907867,
+    "worker_started": true,
+    "active_provider": "cpu",
+    "batch_successes": 0,
+    "busy_rejections": 0,
+    "last_batch_size": 1,
+    "last_request_at": 838029670489402,
+    "queue_max_depth": 1,
+    "request_pending": false,
+    "last_response_at": 838029670502099,
+    "orphan_responses": 0,
+    "runtime_total_us": 1919720,
+    "canceled_requests": 0,
+    "queue_max_wait_ms": 0,
+    "worker_recoveries": 0,
+    "worker_started_at": 838029621397095,
+    "request_processing": false,
+    "queue_total_wait_ms": 0,
+    "accelerator_packages": [
+      "cuda",
+      "coreml"
+    ],
+    "completed_request_id": 0,
+    "queue_timeout_policy": "none",
+    "processing_batch_count": 0,
+    "max_observed_batch_size": 1,
+    "ready_for_text_encoding": true,
+    "shared_memory_available": true,
+    "max_supported_batch_size": 32,
+    "onnxruntime_intra_op_threads": 0,
+    "backend_model_loading_allowed": false
+  },
+  "runtime_after": {
+    "failures": 0,
+    "provider": "cpu",
+    "requests": 74,
+    "operation": "runtime_service_status",
+    "successes": 74,
+    "request_id": 74,
+    "worker_pid": 3288494,
+    "api_version": "ii42_index_v1",
+    "cpu_builtin": true,
+    "model_owner": "runtime_worker",
+    "queue_depth": 0,
+    "queue_waits": 4,
+    "queue_policy": "fifo_bounded",
+    "runtime_runs": 74,
+    "worker_ready": true,
+    "encoded_texts": 74,
+    "fallback_order": [
+      "cuda",
+      "coreml",
+      "cpu"
+    ],
+    "queue_capacity": 64,
+    "response_ready": false,
+    "runtime_max_us": 1907867,
+    "worker_started": true,
+    "active_provider": "cpu",
+    "batch_successes": 0,
+    "busy_rejections": 0,
+    "last_batch_size": 1,
+    "last_request_at": 838030423185848,
+    "queue_max_depth": 1,
+    "request_pending": false,
+    "last_response_at": 838030423198734,
+    "orphan_responses": 0,
+    "runtime_total_us": 3012321,
+    "canceled_requests": 0,
+    "queue_max_wait_ms": 1,
+    "worker_recoveries": 0,
+    "worker_started_at": 838029621397095,
+    "request_processing": false,
+    "queue_total_wait_ms": 4,
+    "accelerator_packages": [
+      "cuda",
+      "coreml"
+    ],
+    "completed_request_id": 0,
+    "queue_timeout_policy": "none",
+    "processing_batch_count": 0,
+    "max_observed_batch_size": 1,
+    "ready_for_text_encoding": true,
+    "shared_memory_available": true,
+    "max_supported_batch_size": 32,
+    "onnxruntime_intra_op_threads": 0,
+    "backend_model_loading_allowed": false
+  }
+}

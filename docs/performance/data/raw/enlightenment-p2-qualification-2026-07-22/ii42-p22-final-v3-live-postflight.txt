@@ -1,0 +1,12 @@
+checked_at=2026-07-23T05:40:36-04:00
+service=active
+binary_sha256=14f7d948da1de927bef49be4a216d312c61716b4ade2df650222c76b398fdee2
+extversion=0.2.0
+batch_api_count=4
+runtime={"failures": 0, "successes": 24, "queue_depth": 0, "worker_ready": true, "worker_recoveries": 0}
+index=ii42_qual_20260722.arxiv_p2_idx|query_ready=true|valid=true|signature_match=true|blocker=none
+index=ii42_p22_qrels.scifact_p22_baseline_idx|query_ready=true|valid=true|signature_match=true|blocker=none
+index=ii42_p22_qrels.scifact_p22_budget075_idx|query_ready=true|valid=true|signature_match=true|blocker=none
+postgres_tmux=absent
+maturity_processes=absent
+temp_cluster=absent

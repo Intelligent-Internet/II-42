@@ -1,0 +1,197 @@
+{
+  "candidate_multipliers": [],
+  "index_name": "ii42_beir15.docs_fiqa_bm25_idx",
+  "k": 100,
+  "query_count": 50,
+  "ratios": [
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 0.0,
+      "latency_ms": {
+        "p50": 87.78241699997125,
+        "p95": 107.09229099984441
+      },
+      "mean_omitted_bound_fraction": 0.0,
+      "mean_pruned_postings": 0.0,
+      "mean_pruned_terms": 0.0,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2750945259093524,
+        "mrr_at_20": 0.3505169172932331,
+        "ndcg_at_10": 0.3173260015592585,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.992,
+      "budget_ratio": 0.005,
+      "latency_ms": {
+        "p50": 87.36970849986392,
+        "p95": 107.50504200041178
+      },
+      "mean_omitted_bound_fraction": 0.004363007803298166,
+      "mean_pruned_postings": 40523.26,
+      "mean_pruned_terms": 3.6,
+      "metric_delta": {
+        "map_at_100": -0.0001410767022155257,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": -0.000219119879424301,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2749534492071369,
+        "mrr_at_20": 0.3505169172932331,
+        "ndcg_at_10": 0.3171068816798342,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.003988231448185692,
+          "gain_queries": 9,
+          "harm_queries": 8,
+          "worst": -0.01785714285714285
+        },
+        "mrr_at_20": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        },
+        "ndcg_at_10": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 1,
+          "worst": -0.010955993971215328
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9858,
+      "budget_ratio": 0.01,
+      "latency_ms": {
+        "p50": 96.40566650023175,
+        "p95": 107.13762500017765
+      },
+      "mean_omitted_bound_fraction": 0.009436978453472869,
+      "mean_pruned_postings": 61653.12,
+      "mean_pruned_terms": 5.84,
+      "metric_delta": {
+        "map_at_100": -0.00042717427332661373,
+        "mrr_at_20": -0.00043358395989978593,
+        "ndcg_at_10": -0.000401388347804954,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.2746673516360258,
+        "mrr_at_20": 0.3500833333333333,
+        "ndcg_at_10": 0.31692461321145354,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.012172747887033597,
+          "gain_queries": 13,
+          "harm_queries": 15,
+          "worst": -0.01785714285714285
+        },
+        "mrr_at_20": {
+          "best": 0.004761904761904759,
+          "gain_queries": 1,
+          "harm_queries": 2,
+          "worst": -0.023809523809523808
+        },
+        "ndcg_at_10": {
+          "best": 0.004911615810643893,
+          "gain_queries": 1,
+          "harm_queries": 2,
+          "worst": -0.014025039229678071
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9716,
+      "budget_ratio": 0.02,
+      "latency_ms": {
+        "p50": 88.02556249997906,
+        "p95": 146.26466699974117
+      },
+      "mean_omitted_bound_fraction": 0.019364049514903624,
+      "mean_pruned_postings": 86524.84,
+      "mean_pruned_terms": 8.1,
+      "metric_delta": {
+        "map_at_100": 0.005520217848696607,
+        "mrr_at_20": 0.00911006683375104,
+        "ndcg_at_10": 0.005984411704504311,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.280614743758049,
+        "mrr_at_20": 0.35962698412698413,
+        "ndcg_at_10": 0.3233104132637628,
+        "recall_at_100": 0.6960238095238096
+      },
+      "query_count": 50,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.25501253132832075,
+          "gain_queries": 10,
+          "harm_queries": 15,
+          "worst": -0.01785714285714285
+        },
+        "mrr_at_20": {
+          "best": 0.5,
+          "gain_queries": 1,
+          "harm_queries": 4,
+          "worst": -0.023809523809523808
+        },
+        "ndcg_at_10": {
+          "best": 0.22629438553091674,
+          "gain_queries": 3,
+          "harm_queries": 3,
+          "worst": -0.014025039229678071
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 0,
+          "worst": 0.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    }
+  ],
+  "semantic_work_target_postings": 0,
+  "strategy": "term-budget",
+  "support_ratio": 0.0
+}

@@ -1,0 +1,445 @@
+{
+  "index_name": "commons.data_arxiv__title_abstract__field_aware_bm25_idx",
+  "k": 100,
+  "queries": [
+    {
+      "base_atom_count": 56,
+      "query_text": "Linking a domain thesaurus to WordNet and conversion to WordNet-LMF",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.72,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 0.92,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 55,
+      "query_text": "General transformations for GPU execution of tree traversals",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.74,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 0.97,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 57,
+      "query_text": "Understanding the T + 3 settlement days rule",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.77,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 0.95,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 63,
+      "query_text": "What football club plays in the area between the old tool gates: Brook Bar and Trafford bar?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.85,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "F-1 student investing in foreign markets",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.93,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 48,
+      "query_text": "Which film was released first, Laura's Star or Wonder Woman?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 53,
+      "query_text": "For which Thomas Rickman film did Sissy Spacek win an Academy Award for Best Actress?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.94,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 62,
+      "query_text": "rev.ng: a unified binary analysis framework to recover CFGs and function boundaries",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "A New View of Predictive State Methods for Dynamical System Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Reconnaissance d'\u00e9v\u00e9nements et d'actions \u00e0 partir de la profondeur thermique 3D. (Event and action recognition from thermal and 3D depth Sensing)",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 56,
+      "query_text": "Who starred in Umm-e-Kulsoom whose mother was Afshan Qureshi?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.98,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Stochastic Variational Deep Kernel Learning",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 60,
+      "query_text": "The impact of Web quality and playfulness on user acceptance of online retailing",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 54,
+      "query_text": "Democrats, republicans and starbucks afficionados: user classification in twitter",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    },
+    {
+      "base_atom_count": 65,
+      "query_text": "Which of the three main psychedelic compounds found in the Psilocybin genus mushroom are converted to psilocin by the body?",
+      "routes": {
+        "exact": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union128": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        },
+        "retained_union32": {
+          "overlap_at_k": 0.99,
+          "telemetry": null
+        },
+        "retained_union64": {
+          "overlap_at_k": 1.0,
+          "telemetry": null
+        }
+      }
+    }
+  ],
+  "query_count": 15,
+  "repetitions": 1,
+  "routes": {
+    "exact": {
+      "latency_ms": {
+        "p50": 220.685153035447,
+        "p95": 296.9646640121937,
+        "p99": 296.9646640121937,
+        "samples": [
+          254.75509092211723,
+          220.685153035447,
+          199.77447704877704,
+          235.76713900547475,
+          186.1261009471491,
+          180.94040197320282,
+          202.1032430930063,
+          257.8283619368449,
+          296.9646640121937,
+          232.41177294403315,
+          192.8044690284878,
+          216.78323799278587,
+          248.2760950224474,
+          213.63761799875647,
+          292.910018004477
+        ]
+      },
+      "mean_overlap_at_k": 1.0,
+      "minimum_overlap_at_k": 1.0
+    },
+    "retained_union128": {
+      "latency_ms": {
+        "p50": 227.74703800678253,
+        "p95": 258.83993296884,
+        "p99": 258.83993296884,
+        "samples": [
+          258.83993296884,
+          239.63502398692071,
+          221.9541920349002,
+          235.33559392672032,
+          214.56633403431624,
+          194.84767992980778,
+          194.99865593388677,
+          239.46758406236768,
+          243.16977092530578,
+          246.48193991743028,
+          199.051673989743,
+          239.22492703422904,
+          218.22675003204495,
+          208.4227540763095,
+          227.74703800678253
+        ]
+      },
+      "mean_overlap_at_k": 0.9993333333333333,
+      "minimum_overlap_at_k": 0.99
+    },
+    "retained_union32": {
+      "latency_ms": {
+        "p50": 140.21178102120757,
+        "p95": 192.1849399805069,
+        "p99": 192.1849399805069,
+        "samples": [
+          192.1849399805069,
+          173.7516790162772,
+          136.14807301200926,
+          120.58123596943915,
+          140.21178102120757,
+          125.50218508113176,
+          116.54212593566626,
+          152.96323702204973,
+          167.56004898343235,
+          170.69420299958438,
+          133.5466979071498,
+          152.20246207900345,
+          140.00311505515128,
+          133.65397707093507,
+          148.39273295365274
+        ]
+      },
+      "mean_overlap_at_k": 0.9179999999999999,
+      "minimum_overlap_at_k": 0.72
+    },
+    "retained_union64": {
+      "latency_ms": {
+        "p50": 177.81474895309657,
+        "p95": 207.9543829895556,
+        "p99": 207.9543829895556,
+        "samples": [
+          199.27893299609423,
+          186.11818097997457,
+          185.04312506411225,
+          143.4356380486861,
+          166.03685799054801,
+          148.9792539505288,
+          162.16347902081907,
+          182.98007000703365,
+          188.52815800346434,
+          207.9543829895556,
+          157.60149608831853,
+          177.81474895309657,
+          167.73850901518017,
+          157.3948529548943,
+          181.5362919587642
+        ]
+      },
+      "mean_overlap_at_k": 0.9886666666666667,
+      "minimum_overlap_at_k": 0.92
+    }
+  },
+  "warmups": 0
+}

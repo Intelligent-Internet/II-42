@@ -1,0 +1,21 @@
+{
+  "api_version": "ii42_index_v1",
+  "checks": {
+    "drop": "ok",
+    "initial_replay": {
+      "bm25_generation": "16625/1/1",
+      "semantic_generation": "16626/1/1",
+      "semantic_hits": [[1, 9.789982], [2, 9.234285]]
+    },
+    "reindex": {
+      "after_filenodes": {"bm25": 16627, "semantic": 16628},
+      "before_filenodes": {"bm25": 16625, "semantic": 16626},
+      "semantic_hits": [[4, 18.78024], [2, 17.704487]]
+    },
+    "update_and_maintain": {
+      "semantic_hits": [[4, 18.78024], [2, 17.704487]]
+    }
+  },
+  "passed": true,
+  "suite": "physical_replication_lifecycle"
+}

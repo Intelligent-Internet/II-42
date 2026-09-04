@@ -1,0 +1,951 @@
+{
+  "workdir": "/dev/shm/ii42_product_pg_gd4uxdnd",
+  "workdir_retained": false,
+  "onnxruntime_intra_op_threads": 2,
+  "extension_libdir": "/dev/shm/ii42-deploy-qos-final/ii42-v0.1.2-linux-x86_64-pg18/usr/lib/postgresql/18/lib",
+  "extension_control_dir": "/dev/shm/ii42-deploy-qos-final/ii42-v0.1.2-linux-x86_64-pg18/usr/share/postgresql/18/extension",
+  "onnx_build_info": "enabled:api=26",
+  "runtime_initial": {
+    "failures": 0,
+    "provider": "auto",
+    "requests": 0,
+    "operation": "runtime_service_status",
+    "successes": 0,
+    "request_id": 0,
+    "worker_pid": 3272779,
+    "api_version": "ii42_index_v1",
+    "cpu_builtin": true,
+    "model_owner": "runtime_worker",
+    "queue_depth": 0,
+    "queue_waits": 0,
+    "queue_policy": "fifo_bounded",
+    "runtime_runs": 0,
+    "worker_ready": true,
+    "encoded_texts": 0,
+    "fallback_order": [
+      "cuda",
+      "coreml",
+      "cpu"
+    ],
+    "queue_capacity": 64,
+    "response_ready": false,
+    "runtime_max_us": 0,
+    "worker_started": true,
+    "active_provider": "cpu",
+    "batch_successes": 0,
+    "busy_rejections": 0,
+    "last_batch_size": 0,
+    "last_request_at": 0,
+    "queue_max_depth": 0,
+    "request_pending": false,
+    "last_response_at": 0,
+    "orphan_responses": 0,
+    "runtime_total_us": 0,
+    "canceled_requests": 0,
+    "queue_max_wait_ms": 0,
+    "worker_recoveries": 0,
+    "worker_started_at": 838029343140087,
+    "request_processing": false,
+    "queue_total_wait_ms": 0,
+    "accelerator_packages": [
+      "cuda",
+      "coreml"
+    ],
+    "completed_request_id": 0,
+    "queue_timeout_policy": "none",
+    "processing_batch_count": 0,
+    "max_observed_batch_size": 0,
+    "ready_for_text_encoding": true,
+    "shared_memory_available": true,
+    "max_supported_batch_size": 32,
+    "onnxruntime_intra_op_threads": 2,
+    "backend_model_loading_allowed": false
+  },
+  "bm25": {
+    "requested_docs": 256,
+    "corpus_jsonl": null,
+    "insert_seconds": 0.0051702349446713924,
+    "docs": 256,
+    "body_index_seconds": 0.010132175986655056,
+    "field_index_seconds": 0.014500096964184195,
+    "relation_sizes": [
+      [
+        "docs",
+        65536
+      ],
+      [
+        "docs_body_ii42_idx",
+        81920
+      ],
+      [
+        "docs_title_body_field_ii42_idx",
+        106496
+      ]
+    ],
+    "queries": {
+      "CUDA graph neural network optimization": {
+        "body": {
+          "count": 8,
+          "mean_ms": 2.1974025075905956,
+          "p50_ms": 1.679304987192154,
+          "p95_ms": 7.604723039548844,
+          "min_ms": 0.7101430092006922,
+          "max_ms": 7.604723039548844,
+          "sample_rows": [
+            [
+              "110",
+              2.7454371
+            ],
+            [
+              "132",
+              2.7454371
+            ],
+            [
+              "154",
+              2.7454371
+            ]
+          ]
+        },
+        "body_direct_diagnostic": {
+          "count": 8,
+          "mean_ms": 0.4796361245098524,
+          "p50_ms": 0.4742660094052553,
+          "p95_ms": 0.5940390401519835,
+          "min_ms": 0.4007399547845125,
+          "max_ms": 0.5940390401519835,
+          "sample_rows": [
+            [
+              "110",
+              2.7454371
+            ],
+            [
+              "132",
+              2.7454371
+            ],
+            [
+              "154",
+              2.7454371
+            ]
+          ]
+        },
+        "field_aware": {
+          "count": 8,
+          "mean_ms": 0.7722536320216022,
+          "p50_ms": 0.6534029962494969,
+          "p95_ms": 1.6521199722774327,
+          "min_ms": 0.5340490024536848,
+          "max_ms": 1.6521199722774327,
+          "sample_rows": [
+            [
+              "110",
+              4.5859504
+            ],
+            [
+              "220",
+              4.5859504
+            ],
+            [
+              "132",
+              4.1804028
+            ]
+          ]
+        }
+      },
+      "policy climate graph retrieval": {
+        "body": {
+          "count": 8,
+          "mean_ms": 0.6932702381163836,
+          "p50_ms": 0.6467289640568197,
+          "p95_ms": 0.9376229718327522,
+          "min_ms": 0.6002989830449224,
+          "max_ms": 0.9376229718327522,
+          "sample_rows": [
+            [
+              "12",
+              0.71748275
+            ],
+            [
+              "15",
+              0.71748275
+            ],
+            [
+              "18",
+              0.71748275
+            ]
+          ]
+        },
+        "body_direct_diagnostic": {
+          "count": 8,
+          "mean_ms": 0.38739899173378944,
+          "p50_ms": 0.35440002102404833,
+          "p95_ms": 0.5540470010600984,
+          "min_ms": 0.30729896388947964,
+          "max_ms": 0.5540470010600984,
+          "sample_rows": [
+            [
+              "12",
+              0.71748275
+            ],
+            [
+              "15",
+              0.71748275
+            ],
+            [
+              "18",
+              0.71748275
+            ]
+          ]
+        },
+        "field_aware": {
+          "count": 8,
+          "mean_ms": 0.4799665111931972,
+          "p50_ms": 0.47884101513773203,
+          "p95_ms": 0.6155910086818039,
+          "min_ms": 0.3893270040862262,
+          "max_ms": 0.6155910086818039,
+          "sample_rows": [
+            [
+              "105",
+              2.1524482
+            ],
+            [
+              "111",
+              2.1524482
+            ],
+            [
+              "117",
+              2.1524482
+            ]
+          ]
+        }
+      },
+      "semantic sparse atom ranking": {
+        "body": {
+          "count": 8,
+          "mean_ms": 0.6192752480274066,
+          "p50_ms": 0.62616600189358,
+          "p95_ms": 0.7215390214696527,
+          "min_ms": 0.5593110108748078,
+          "max_ms": 0.7215390214696527,
+          "sample_rows": [
+            [
+              "105",
+              2.441859
+            ],
+            [
+              "126",
+              2.441859
+            ],
+            [
+              "147",
+              2.441859
+            ]
+          ]
+        },
+        "body_direct_diagnostic": {
+          "count": 8,
+          "mean_ms": 0.30684564262628555,
+          "p50_ms": 0.3002429730258882,
+          "p95_ms": 0.3773050266318023,
+          "min_ms": 0.2749740378931165,
+          "max_ms": 0.3773050266318023,
+          "sample_rows": [
+            [
+              "105",
+              2.441859
+            ],
+            [
+              "126",
+              2.441859
+            ],
+            [
+              "147",
+              2.441859
+            ]
+          ]
+        },
+        "field_aware": {
+          "count": 8,
+          "mean_ms": 0.4094551259186119,
+          "p50_ms": 0.4182440461590886,
+          "p95_ms": 0.47368701780214906,
+          "min_ms": 0.35291898529976606,
+          "max_ms": 0.47368701780214906,
+          "sample_rows": [
+            [
+              "105",
+              2.441859
+            ],
+            [
+              "126",
+              2.441859
+            ],
+            [
+              "147",
+              2.441859
+            ]
+          ]
+        }
+      },
+      "genomics vaccine trial evidence": {
+        "body": {
+          "count": 8,
+          "mean_ms": 0.6784756405977532,
+          "p50_ms": 0.6341730477288365,
+          "p95_ms": 0.8756350143812597,
+          "min_ms": 0.6029439973644912,
+          "max_ms": 0.8756350143812597,
+          "sample_rows": [
+            [
+              "1",
+              0.16179714
+            ],
+            [
+              "10",
+              0.16179714
+            ],
+            [
+              "11",
+              0.16179714
+            ]
+          ]
+        },
+        "body_direct_diagnostic": {
+          "count": 8,
+          "mean_ms": 0.3063578769797459,
+          "p50_ms": 0.3022410091944039,
+          "p95_ms": 0.366893014870584,
+          "min_ms": 0.28096098685637116,
+          "max_ms": 0.366893014870584,
+          "sample_rows": [
+            [
+              "1",
+              0.16179714
+            ],
+            [
+              "10",
+              0.16179714
+            ],
+            [
+              "11",
+              0.16179714
+            ]
+          ]
+        },
+        "field_aware": {
+          "count": 8,
+          "mean_ms": 0.38479449722217396,
+          "p50_ms": 0.3882460296154022,
+          "p95_ms": 0.44034799793735147,
+          "min_ms": 0.35451300209388137,
+          "max_ms": 0.44034799793735147,
+          "sample_rows": [
+            [
+              "1",
+              0.34070116
+            ],
+            [
+              "11",
+              0.34070116
+            ],
+            [
+              "13",
+              0.34070116
+            ]
+          ]
+        }
+      }
+    },
+    "body_explain": "Limit  (cost=64.37..64.42 rows=20 width=7) (actual time=0.606..0.611 rows=20.00 loops=1)\n  Output: d.id, h.score\n  Buffers: shared hit=48\n  ->  Sort  (cost=64.37..66.87 rows=1000 width=7) (actual time=0.606..0.608 rows=20.00 loops=1)\n        Output: d.id, h.score\n        Sort Key: h.score DESC, d.id\n        Sort Method: quicksort  Memory: 25kB\n        Buffers: shared hit=48\n        ->  Hash Join  (cost=14.01..37.76 rows=1000 width=7) (actual time=0.581..0.590 rows=20.00 loops=1)\n              Output: d.id, h.score\n              Hash Cond: (h.ctid = d.ctid)\n              Buffers: shared hit=48\n              ->  Function Scan on public.ii42_search h  (cost=0.25..10.25 rows=1000 width=10) (actual time=0.476..0.478 rows=20.00 loops=1)\n                    Output: h.ctid, h.doc_id, h.score\n                    Function Call: ii42_search('bench.docs_body_ii42_idx'::regclass, 'CUDA graph neural network optimization'::text, 20, NULL::real[], NULL::boolean, NULL::text[], NULL::boolean, NULL::boolean)\n                    Buffers: shared hit=40\n              ->  Hash  (cost=10.56..10.56 rows=256 width=9) (actual time=0.094..0.094 rows=256.00 loops=1)\n                    Output: d.id, d.ctid\n                    Buckets: 1024  Batches: 1  Memory Usage: 19kB\n                    Buffers: shared hit=8\n                    ->  Seq Scan on bench.docs d  (cost=0.00..10.56 rows=256 width=9) (actual time=0.007..0.041 rows=256.00 loops=1)\n                          Output: d.id, d.ctid\n                          Buffers: shared hit=8\nPlanning Time: 0.202 ms\nExecution Time: 0.634 ms",
+    "field_explain": "Limit  (cost=64.37..64.42 rows=20 width=7) (actual time=0.384..0.388 rows=20.00 loops=1)\n  Output: d.id, h.score\n  Buffers: shared hit=31\n  ->  Sort  (cost=64.37..66.87 rows=1000 width=7) (actual time=0.383..0.386 rows=20.00 loops=1)\n        Output: d.id, h.score\n        Sort Key: h.score DESC, d.id\n        Sort Method: quicksort  Memory: 25kB\n        Buffers: shared hit=31\n        ->  Hash Join  (cost=14.01..37.76 rows=1000 width=7) (actual time=0.351..0.363 rows=20.00 loops=1)\n              Output: d.id, h.score\n              Hash Cond: (h.ctid = d.ctid)\n              Buffers: shared hit=31\n              ->  Function Scan on public.ii42_field_aware_query h  (cost=0.25..10.25 rows=1000 width=10) (actual time=0.220..0.223 rows=20.00 loops=1)\n                    Output: h.ctid, h.doc_id, h.score\n                    Function Call: ii42_field_aware_query('bench.docs_title_body_field_ii42_idx'::regclass, 'CUDA graph neural network optimization'::text, '{title,body}'::text[], '{2,1}'::real[], 20)\n                    Buffers: shared hit=23\n              ->  Hash  (cost=10.56..10.56 rows=256 width=9) (actual time=0.127..0.128 rows=256.00 loops=1)\n                    Output: d.id, d.ctid\n                    Buckets: 1024  Batches: 1  Memory Usage: 19kB\n                    Buffers: shared hit=8\n                    ->  Seq Scan on bench.docs d  (cost=0.00..10.56 rows=256 width=9) (actual time=0.007..0.067 rows=256.00 loops=1)\n                          Output: d.id, d.ctid\n                          Buffers: shared hit=8\nPlanning Time: 0.129 ms\nExecution Time: 0.412 ms"
+  },
+  "semantic_enabled": {
+    "docs": 256,
+    "index_seconds": 23.30888219299959,
+    "index_runtime_phase": {
+      "requests": 128,
+      "successes": 128,
+      "failures": 0,
+      "runtime_runs": 128,
+      "runtime_total_us": 23028833,
+      "encoded_texts": 256,
+      "batch_successes": 128,
+      "worker_recoveries": 0,
+      "wall_seconds": 23.30888219299959,
+      "runtime_seconds": 23.028833,
+      "non_runtime_seconds": 0.2800491929995914,
+      "runtime_wall_share": 0.9879853014537222,
+      "average_batch_size": 2.0,
+      "single_request_execution": false,
+      "last_batch_size": 2,
+      "max_observed_batch_size": 2,
+      "max_supported_batch_size": 32,
+      "runtime_max_us": 1978985
+    },
+    "index_bytes": 589824,
+    "status": {
+      "blocker": "none",
+      "details": {
+        "docs": 256,
+        "pages": 72,
+        "stale": false,
+        "rebuilds": 1,
+        "index_name": "bench.docs_body_semantic_idx",
+        "consistency": "manual",
+        "delta_bytes": 0,
+        "index_bytes": 563392,
+        "source_type": "text",
+        "delta_records": 0,
+        "pending_writes": 0,
+        "pending_deletes": 0,
+        "auto_rebuild_threshold": null,
+        "query_overlay_max_bytes": null,
+        "auto_rebuild_churn_ratio": null,
+        "auto_rebuild_delta_bytes": null,
+        "query_overlay_max_records": null
+      },
+      "options": {
+        "model": "ii42_p2_m1934_b1125_nfcorpus_full_b2",
+        "lifecycle": "postgresql_index",
+        "atom_space": "p2_m1934_b1125_nfcorpus_full_v1",
+        "index_name": "bench.docs_body_semantic_idx",
+        "index_type": "bm25s_sae",
+        "model_path": "/var/lib/postgresql/18/ii42/models/ii42_p2_m1934_b1125_nfcorpus_full_b2",
+        "consistency": "manual",
+        "sae_enabled": true,
+        "sae_explicit": true,
+        "access_method": "ii42",
+        "payload_owner": "index_relation",
+        "scoring_profile": "p2_unified_sparse_dot_v1",
+        "sae_route_source": "explicit",
+        "model_path_source": "index",
+        "runtime_signature": "676a4f4280e5b8347078a9fa6b79d0db",
+        "model_runtime_error": null,
+        "semantic_configuration_error": null,
+        "semantic_configuration_ready": true
+      },
+      "generation": {
+        "docs": 256,
+        "delta": {
+          "bytes": 0,
+          "pages": 0,
+          "records": 0,
+          "start_block": 72
+        },
+        "valid": true,
+        "atomic": true,
+        "health": "ok",
+        "layout": {
+          "matches": true,
+          "physical": "bm25s_sae",
+          "requested": "bm25s_sae"
+        },
+        "posting": {
+          "role": "unified_posting",
+          "bytes": 563392,
+          "pages": 70,
+          "valid": true,
+          "active": true,
+          "reason": "ok",
+          "present": true,
+          "signature": "676a4f4280e5b8347078a9fa6b79d0db",
+          "start_block": 2,
+          "record_count": 256
+        },
+        "primary": {
+          "role": "identity_map",
+          "bytes": 1536,
+          "pages": 1,
+          "tid_bytes": 1536,
+          "start_block": 1,
+          "payload_bytes": 0
+        },
+        "rebuilds": 1,
+        "generation": 1,
+        "cache_epoch": 1,
+        "generation_id": "16618/1/1",
+        "health_reason": "ok",
+        "contract_signature": "676a4f4280e5b8347078a9fa6b79d0db"
+      },
+      "index_name": "bench.docs_body_semantic_idx",
+      "index_type": "bm25s_sae",
+      "api_version": "ii42_index_v1",
+      "index_ready": true,
+      "index_valid": true,
+      "query_ready": true,
+      "sae_enabled": true,
+      "status_error": null,
+      "runtime_signature": "676a4f4280e5b8347078a9fa6b79d0db",
+      "runtime_signature_matches": true
+    },
+    "generation_cache_preload": "ii42_generation_cache_preload(index_oid=16618, cache_epoch=1, tier=postgres_buffer_cache, docs=256, index_bytes=0, unified_bytes=564928, pages_warmed=71, shared_delta_published=false, shared_text_delta_published=false, shared_tombstone_delta_published=false)",
+    "generation_cache_state": {
+      "debt": {
+        "delta_bytes": 0,
+        "counter_only": false,
+        "delta_records": 0,
+        "pending_total": 0,
+        "pending_writes": 0,
+        "pending_deletes": 0
+      },
+      "raw_state": "ii42_generation_cache_state(cache_epoch=1, share_eligible=false, share_required=false, descriptor_present=false, descriptor_valid=false, mapped_size=0, shared_preload_configured_mb=512, shared_preload_available=true, shared_preload_arena_size=536870912, shared_preload_used=175432, shared_preload_free_bytes=536695480, shared_preload_candidate_bytes=1, shared_preload_candidate_fits_empty=true, shared_preload_has_free_slot=true, shared_preload_has_reusable_slot=false, shared_preload_has_evictable_generic=false, shared_preload_has_evictable_relation=true, shared_preload_admission_state=resident, shared_preload_entries=3, shared_preload_ready_entries=3, shared_preload_obsolete_entries=0, shared_preload_reusable_entries=0, shared_preload_reusable_bytes=0, shared_preload_refcounted_entries=0, shared_preload_generic_blob_entries=0, shared_preload_generic_blob_ready_entries=0, shared_preload_generic_blob_refcounted_entries=0, shared_preload_generic_blob_bytes=0, shared_preload_generic_blob_unref_bytes=0, shared_preload_base_entries=2, shared_preload_unified_warm_entries=1, shared_preload_text_delta_entries=0, shared_preload_tombstone_entries=0, shared_text_delta_current=false, shared_text_delta_loading=false, shared_tombstone_current=false, shared_tombstone_loading=false, active_background_workers=0, active_preload_workers=0, active_index_maintenance_workers=0, active_maintenance_workers=0, pending_maintenance_worker_launches=0, foreground_delta_offload_wakeups=0, foreground_delta_local_builds=0, shared_preload_relation_entry_evictions=0, shared_preload_relation_entry_eviction_bytes=0, shared_preload_admission_misses=0, shared_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_index=0, shared_preload_last_preload_admission_miss_bytes=0, shared_preload_last_preload_admission_miss_priority=0, shared_preload_last_preload_admission_miss_age_ms=-1, shared_preload_access_clock=99, maintenance_cycle_age_ms=-1, shared_preload_resident=true, shared_preload_loading=false, pending_writes=0, pending_deletes=0, delta_records=0, delta_bytes=0, flags=0x0, active_start_blkno=1, active_data_pages=1, delta_start_blkno=72, delta_data_pages=0, relation_blocks=72, payload_health=ok, payload_health_reason=ok, payload_expected_bytes=1536, payload_capacity_bytes=8144, rebuild_required=false, rebuild_admitted=true, rebuild_builder=semantic_stream, standard_estimated_bytes=0, compact_estimated_bytes=0, spill_estimated_bytes=37753864, rebuild_budget_bytes=34359738368, identity_bytes=1536, index_bytes=0, posting_bytes=563392, generation_bytes=564928, docs=256, auto_preload_priority=0, locator=1663/5/16618)",
+      "generation": {
+        "docs": 256,
+        "locator": "1663/5/16618",
+        "index_bytes": 0,
+        "mapped_size": 0,
+        "posting_bytes": 563392,
+        "identity_bytes": 1536,
+        "payload_health": "ok",
+        "share_eligible": false,
+        "share_required": false,
+        "rebuild_builder": "semantic_stream",
+        "descriptor_valid": false,
+        "generation_bytes": 564928,
+        "rebuild_admitted": true,
+        "rebuild_required": false,
+        "descriptor_present": false,
+        "auto_preload_priority": 0,
+        "payload_health_reason": "ok",
+        "payload_capacity_bytes": 8144,
+        "payload_expected_bytes": 1536
+      },
+      "cache_epoch": 1,
+      "maintenance": {
+        "active_preload_workers": 0,
+        "maintenance_cycle_age_ms": -1,
+        "active_background_workers": 0,
+        "active_maintenance_workers": 0,
+        "foreground_delta_local_builds": 0,
+        "active_index_maintenance_workers": 0,
+        "foreground_delta_offload_wakeups": 0,
+        "pending_maintenance_worker_launches": 0
+      },
+      "shared_preload": {
+        "used": 175432,
+        "entries": 3,
+        "loading": false,
+        "resident": true,
+        "available": true,
+        "arena_size": 536870912,
+        "free_bytes": 536695480,
+        "access_clock": 99,
+        "base_entries": 2,
+        "configured_mb": 512,
+        "has_free_slot": true,
+        "ready_entries": 3,
+        "reusable_bytes": 0,
+        "admission_state": "resident",
+        "candidate_bytes": 1,
+        "admission_misses": 0,
+        "obsolete_entries": 0,
+        "reusable_entries": 0,
+        "has_reusable_slot": false,
+        "tombstone_current": false,
+        "tombstone_entries": 0,
+        "tombstone_loading": false,
+        "generic_blob_bytes": 0,
+        "refcounted_entries": 0,
+        "text_delta_current": false,
+        "text_delta_entries": 0,
+        "text_delta_loading": false,
+        "last_admission_miss": {
+          "bytes": 0,
+          "age_ms": -1,
+          "priority": 0,
+          "index_oid": 0
+        },
+        "admission_miss_bytes": 0,
+        "candidate_fits_empty": true,
+        "generic_blob_entries": 0,
+        "unified_warm_entries": 1,
+        "has_evictable_generic": false,
+        "has_evictable_relation": true,
+        "generic_blob_unref_bytes": 0,
+        "relation_entry_evictions": 0,
+        "generic_blob_ready_entries": 0,
+        "relation_entry_eviction_bytes": 0,
+        "generic_blob_refcounted_entries": 0
+      },
+      "shared_holder_effective": {
+        "base_resident": true,
+        "has_shared_delta": false,
+        "counter_only_debt": false,
+        "lexical_delta_covered": true,
+        "covered_delta_fold_due": false,
+        "tombstone_delta_covered": true,
+        "lexical_delta_publish_due": false,
+        "foreground_offload_observed": false,
+        "tombstone_delta_publish_due": false,
+        "covered_delta_query_complete": true,
+        "needs_background_convergence": false
+      }
+    },
+    "queries": {
+      "CUDA graph neural network optimization": {
+        "count": 8,
+        "mean_ms": 29.52276074938709,
+        "p50_ms": 29.128540016245097,
+        "p95_ms": 35.648382967337966,
+        "min_ms": 26.574758056085557,
+        "max_ms": 35.648382967337966,
+        "sample_rows": [
+          [
+            "132",
+            96.26475
+          ],
+          [
+            "78",
+            96.05005
+          ],
+          [
+            "234",
+            95.97185
+          ]
+        ]
+      },
+      "policy climate graph retrieval": {
+        "count": 8,
+        "mean_ms": 26.243907130265143,
+        "p50_ms": 26.405877026263624,
+        "p95_ms": 28.068458021152765,
+        "min_ms": 24.641471973154694,
+        "max_ms": 28.068458021152765,
+        "sample_rows": [
+          [
+            "111",
+            69.65415
+          ],
+          [
+            "15",
+            69.566
+          ],
+          [
+            "57",
+            68.75753
+          ]
+        ]
+      },
+      "semantic sparse atom ranking": {
+        "count": 8,
+        "mean_ms": 29.449625879351515,
+        "p50_ms": 29.30504601681605,
+        "p95_ms": 32.51958900364116,
+        "min_ms": 27.124862011987716,
+        "max_ms": 32.51958900364116,
+        "sample_rows": [
+          [
+            "63",
+            221.25856
+          ],
+          [
+            "147",
+            215.75447
+          ],
+          [
+            "105",
+            215.10954
+          ]
+        ]
+      },
+      "genomics vaccine trial evidence": {
+        "count": 8,
+        "mean_ms": 27.895773644559085,
+        "p50_ms": 28.24615204008296,
+        "p95_ms": 28.82564003812149,
+        "min_ms": 26.487338007427752,
+        "max_ms": 28.82564003812149,
+        "sample_rows": [
+          [
+            "127",
+            13.033361
+          ],
+          [
+            "47",
+            11.725202
+          ],
+          [
+            "241",
+            11.692539
+          ]
+        ]
+      }
+    },
+    "explain": "Limit  (cost=64.37..64.42 rows=20 width=7) (actual time=30.812..30.820 rows=20.00 loops=1)\n  Output: source.id, hit.score\n  Buffers: shared hit=1152\n  ->  Sort  (cost=64.37..66.87 rows=1000 width=7) (actual time=30.811..30.814 rows=20.00 loops=1)\n        Output: source.id, hit.score\n        Sort Key: hit.score DESC, source.id\n        Sort Method: quicksort  Memory: 25kB\n        Buffers: shared hit=1152\n        ->  Hash Join  (cost=14.01..37.76 rows=1000 width=7) (actual time=30.781..30.795 rows=20.00 loops=1)\n              Output: source.id, hit.score\n              Hash Cond: (hit.ctid = source.ctid)\n              Buffers: shared hit=1152\n              ->  Function Scan on public.ii42_search hit  (cost=0.25..10.25 rows=1000 width=10) (actual time=30.619..30.622 rows=20.00 loops=1)\n                    Output: hit.ctid, hit.doc_id, hit.score\n                    Function Call: ii42_search('bench.docs_body_semantic_idx'::regclass, 'CUDA graph neural network optimization'::text, 20, NULL::real[], NULL::boolean, NULL::text[], NULL::boolean, NULL::boolean)\n                    Buffers: shared hit=1144\n              ->  Hash  (cost=10.56..10.56 rows=256 width=9) (actual time=0.153..0.154 rows=256.00 loops=1)\n                    Output: source.id, source.ctid\n                    Buckets: 1024  Batches: 1  Memory Usage: 19kB\n                    Buffers: shared hit=8\n                    ->  Seq Scan on bench.docs source  (cost=0.00..10.56 rows=256 width=9) (actual time=0.009..0.068 rows=256.00 loops=1)\n                          Output: source.id, source.ctid\n                          Buffers: shared hit=8\nPlanning Time: 0.150 ms\nExecution Time: 30.865 ms",
+    "query_runtime_phase": {
+      "requests": 33,
+      "successes": 33,
+      "failures": 0,
+      "runtime_runs": 33,
+      "runtime_total_us": 596316,
+      "encoded_texts": 33,
+      "batch_successes": 0,
+      "worker_recoveries": 0,
+      "wall_seconds": 0.9370929060387425,
+      "runtime_seconds": 0.596316,
+      "non_runtime_seconds": 0.34077690603874256,
+      "runtime_wall_share": 0.6363467231021236,
+      "average_batch_size": 1.0,
+      "single_request_execution": true,
+      "last_batch_size": 1,
+      "max_observed_batch_size": 2,
+      "max_supported_batch_size": 32,
+      "runtime_max_us": 1978985
+    },
+    "runtime_status": {
+      "failures": 0,
+      "provider": "cpu",
+      "requests": 161,
+      "operation": "runtime_service_status",
+      "successes": 161,
+      "request_id": 161,
+      "worker_pid": 3272779,
+      "api_version": "ii42_index_v1",
+      "cpu_builtin": true,
+      "model_owner": "runtime_worker",
+      "queue_depth": 0,
+      "queue_waits": 10,
+      "queue_policy": "fifo_bounded",
+      "runtime_runs": 161,
+      "worker_ready": true,
+      "encoded_texts": 289,
+      "fallback_order": [
+        "cuda",
+        "coreml",
+        "cpu"
+      ],
+      "queue_capacity": 64,
+      "response_ready": false,
+      "runtime_max_us": 1978985,
+      "worker_started": true,
+      "active_provider": "cpu",
+      "batch_successes": 128,
+      "busy_rejections": 0,
+      "last_batch_size": 1,
+      "last_request_at": 838029367602588,
+      "queue_max_depth": 1,
+      "request_pending": false,
+      "last_response_at": 838029367621575,
+      "orphan_responses": 0,
+      "runtime_total_us": 23625149,
+      "canceled_requests": 0,
+      "queue_max_wait_ms": 1,
+      "worker_recoveries": 0,
+      "worker_started_at": 838029343140087,
+      "request_processing": false,
+      "queue_total_wait_ms": 10,
+      "accelerator_packages": [
+        "cuda",
+        "coreml"
+      ],
+      "completed_request_id": 0,
+      "queue_timeout_policy": "none",
+      "processing_batch_count": 0,
+      "max_observed_batch_size": 2,
+      "ready_for_text_encoding": true,
+      "shared_memory_available": true,
+      "max_supported_batch_size": 32,
+      "onnxruntime_intra_op_threads": 2,
+      "backend_model_loading_allowed": false
+    },
+    "internal_semantic_diagnostics": [
+      180,
+      1891,
+      10796,
+      563392
+    ],
+    "batch_encoding_diagnostic": {
+      "text_count": 64,
+      "batch_size": 2,
+      "parity_mismatches": 0,
+      "single": {
+        "requests": 64,
+        "successes": 64,
+        "failures": 0,
+        "runtime_runs": 64,
+        "runtime_total_us": 1270549,
+        "encoded_texts": 64,
+        "batch_successes": 0,
+        "worker_recoveries": 0,
+        "wall_seconds": 1.389250201988034,
+        "runtime_seconds": 1.270549,
+        "non_runtime_seconds": 0.11870120198803402,
+        "runtime_wall_share": 0.9145573620805157,
+        "average_batch_size": 1.0,
+        "single_request_execution": true,
+        "last_batch_size": 1,
+        "max_observed_batch_size": 2,
+        "max_supported_batch_size": 32,
+        "runtime_max_us": 1978985
+      },
+      "batch": {
+        "requests": 32,
+        "successes": 32,
+        "failures": 0,
+        "runtime_runs": 32,
+        "runtime_total_us": 1062868,
+        "encoded_texts": 64,
+        "batch_successes": 32,
+        "worker_recoveries": 0,
+        "wall_seconds": 1.1250730290194042,
+        "runtime_seconds": 1.062868,
+        "non_runtime_seconds": 0.06220502901940428,
+        "runtime_wall_share": 0.9447102299895845,
+        "average_batch_size": 2.0,
+        "single_request_execution": false,
+        "last_batch_size": 2,
+        "max_observed_batch_size": 2,
+        "max_supported_batch_size": 32,
+        "runtime_max_us": 1978985
+      },
+      "wall_speedup": 1.234808911203642
+    }
+  },
+  "semantic_concurrency": [
+    {
+      "worker": 0,
+      "ok": true,
+      "ms": 85.07577999262139,
+      "query_ms": 85.07577999262139,
+      "connection_ms": 5.480576015543193,
+      "warmup_ms": 103.90716302208602,
+      "barrier_wait_ms": 18.81208800477907,
+      "total_ms": 213.27560703502968,
+      "rows": 20
+    },
+    {
+      "worker": 1,
+      "ok": true,
+      "ms": 28.06121198227629,
+      "query_ms": 28.06121198227629,
+      "connection_ms": 4.02397703146562,
+      "warmup_ms": 122.76993796695024,
+      "barrier_wait_ms": 0.06520602619275451,
+      "total_ms": 154.9203330068849,
+      "rows": 20
+    },
+    {
+      "worker": 2,
+      "ok": true,
+      "ms": 45.75517599005252,
+      "query_ms": 45.75517599005252,
+      "connection_ms": 4.167096049059182,
+      "warmup_ms": 81.74715895438567,
+      "barrier_wait_ms": 40.56020302232355,
+      "total_ms": 172.22963401582092,
+      "rows": 20
+    },
+    {
+      "worker": 3,
+      "ok": true,
+      "ms": 61.366880021523684,
+      "query_ms": 61.366880021523684,
+      "connection_ms": 4.082034982275218,
+      "warmup_ms": 48.18198399152607,
+      "barrier_wait_ms": 73.99459602311254,
+      "total_ms": 187.6254950184375,
+      "rows": 20
+    }
+  ],
+  "semantic_concurrency_summary": {
+    "workers": 4,
+    "successes": 4,
+    "failures": 0,
+    "query_ms": {
+      "count": 4,
+      "mean_ms": 55.06476199661847,
+      "p50_ms": 61.366880021523684,
+      "p95_ms": 85.07577999262139,
+      "min_ms": 28.06121198227629,
+      "max_ms": 85.07577999262139
+    },
+    "connection_ms": {
+      "count": 4,
+      "mean_ms": 4.438421019585803,
+      "p50_ms": 4.167096049059182,
+      "p95_ms": 5.480576015543193,
+      "min_ms": 4.02397703146562,
+      "max_ms": 5.480576015543193
+    },
+    "warmup_ms": {
+      "count": 4,
+      "mean_ms": 89.151560983737,
+      "p50_ms": 103.90716302208602,
+      "p95_ms": 122.76993796695024,
+      "min_ms": 48.18198399152607,
+      "max_ms": 122.76993796695024
+    },
+    "barrier_wait_ms": {
+      "count": 4,
+      "mean_ms": 33.35802326910198,
+      "p50_ms": 40.56020302232355,
+      "p95_ms": 73.99459602311254,
+      "min_ms": 0.06520602619275451,
+      "max_ms": 73.99459602311254
+    },
+    "total_ms": {
+      "count": 4,
+      "mean_ms": 182.01276726904325,
+      "p50_ms": 187.6254950184375,
+      "p95_ms": 213.27560703502968,
+      "min_ms": 154.9203330068849,
+      "max_ms": 213.27560703502968
+    }
+  },
+  "runtime_after_concurrency": {
+    "failures": 0,
+    "provider": "cpu",
+    "requests": 266,
+    "operation": "runtime_service_status",
+    "successes": 266,
+    "request_id": 266,
+    "worker_pid": 3272779,
+    "api_version": "ii42_index_v1",
+    "cpu_builtin": true,
+    "model_owner": "runtime_worker",
+    "queue_depth": 0,
+    "queue_waits": 24,
+    "queue_policy": "fifo_bounded",
+    "runtime_runs": 266,
+    "worker_ready": true,
+    "encoded_texts": 426,
+    "fallback_order": [
+      "cuda",
+      "coreml",
+      "cpu"
+    ],
+    "queue_capacity": 64,
+    "response_ready": false,
+    "runtime_max_us": 1978985,
+    "worker_started": true,
+    "active_provider": "cpu",
+    "batch_successes": 160,
+    "busy_rejections": 0,
+    "last_batch_size": 1,
+    "last_request_at": 838029370313531,
+    "queue_max_depth": 3,
+    "request_pending": false,
+    "last_response_at": 838029370383997,
+    "orphan_responses": 0,
+    "runtime_total_us": 26140442,
+    "canceled_requests": 0,
+    "queue_max_wait_ms": 69,
+    "worker_recoveries": 0,
+    "worker_started_at": 838029343140087,
+    "request_processing": false,
+    "queue_total_wait_ms": 259,
+    "accelerator_packages": [
+      "cuda",
+      "coreml"
+    ],
+    "completed_request_id": 0,
+    "queue_timeout_policy": "none",
+    "processing_batch_count": 0,
+    "max_observed_batch_size": 2,
+    "ready_for_text_encoding": true,
+    "shared_memory_available": true,
+    "max_supported_batch_size": 32,
+    "onnxruntime_intra_op_threads": 2,
+    "backend_model_loading_allowed": false
+  }
+}

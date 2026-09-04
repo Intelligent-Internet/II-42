@@ -74,11 +74,11 @@ OFFICIAL_ORDER = [
 ]
 TOP_K = 1000
 DEFAULT_RESULTS_DIR = Path('benchmarks')
-DEFAULT_DATASETS_DIR = Path('/tmp/psql_bm25s_beir')
-DB_PREFIX = 'psql_bm25s_official_'
+DEFAULT_DATASETS_DIR = Path('/tmp/ii42_beir')
+DB_PREFIX = 'ii42_official_'
 ARIA2C = shutil.which('aria2c')
-BOOTSTRAP_SQL = os.environ.get('PSQL_BM25S_BENCH_BOOTSTRAP_SQL')
-MODULE_PATH = os.environ.get('PSQL_BM25S_BENCH_MODULE_PATH')
+BOOTSTRAP_SQL = os.environ.get('II42_BENCH_BOOTSTRAP_SQL')
+MODULE_PATH = os.environ.get('II42_BENCH_MODULE_PATH')
 
 
 @dataclass
@@ -117,7 +117,7 @@ def summarize_latencies(latencies_ms: list[float]) -> QueryStats:
 
 
 def benchmark_admin_dsn() -> str:
-    base_dsn = os.environ.get('PSQL_BM25S_BENCH_DSN', 'dbname=postgres')
+    base_dsn = os.environ.get('II42_BENCH_DSN', 'dbname=postgres')
     params = conninfo.conninfo_to_dict(base_dsn)
     if not params.get('user'):
         params['user'] = 'postgres'
@@ -203,12 +203,12 @@ def extension_is_current(cur: psycopg.Cursor[Any]) -> bool:
             EXISTS (
                 SELECT 1
                 FROM pg_proc
-                WHERE proname = 'psql_bm25s_query_ids'
+                WHERE proname = 'ii42_query_ids'
             )
             AND EXISTS (
                 SELECT 1
                 FROM pg_proc
-                WHERE proname = 'psql_bm25s_query_tokens'
+                WHERE proname = 'ii42_query_tokens'
             )
         """
     )
@@ -219,8 +219,8 @@ def install_extension_via_sql(cur: psycopg.Cursor[Any]) -> None:
     if not BOOTSTRAP_SQL or not MODULE_PATH:
         raise RuntimeError(
             'Manual extension bootstrap requires both '
-            'PSQL_BM25S_BENCH_BOOTSTRAP_SQL and '
-            'PSQL_BM25S_BENCH_MODULE_PATH'
+            'II42_BENCH_BOOTSTRAP_SQL and '
+            'II42_BENCH_MODULE_PATH'
         )
     sql_path = pathlib.Path(BOOTSTRAP_SQL)
     sql_text = sql_path.read_text(encoding='utf-8')
@@ -253,14 +253,14 @@ def ensure_extension(cur: psycopg.Cursor[Any], reuse_db: bool) -> None:
         install_extension_via_sql(cur)
         return
     if not reuse_db:
-        cur.execute('DROP EXTENSION IF EXISTS psql_bm25s CASCADE')
-        cur.execute('CREATE EXTENSION psql_bm25s')
+        cur.execute('DROP EXTENSION IF EXISTS ii42 CASCADE')
+        cur.execute('CREATE EXTENSION ii42')
         return
-    cur.execute('CREATE EXTENSION IF NOT EXISTS psql_bm25s')
+    cur.execute('CREATE EXTENSION IF NOT EXISTS ii42')
     if extension_is_current(cur):
         return
-    cur.execute('DROP EXTENSION psql_bm25s CASCADE')
-    cur.execute('CREATE EXTENSION psql_bm25s')
+    cur.execute('DROP EXTENSION ii42 CASCADE')
+    cur.execute('CREATE EXTENSION ii42')
 
 
 def count_lines(path: Path) -> int:
@@ -423,7 +423,7 @@ def result_is_success(result: dict[str, Any]) -> bool:
     return 'error' not in result
 
 
-def benchmark_python_reference(
+def benchmark_upstream(
     corpus_ids: list[str],
     corpus_tokenized: Any,
     query_ids: list[list[int]],
@@ -483,7 +483,7 @@ def benchmark_postgres_ids(
     db_dsn = conninfo.make_conninfo(
         PG_DSN,
         dbname=db_name,
-        application_name='psql_bm25s_bench',
+        application_name='ii42_bench',
     )
     with psycopg.connect(db_dsn, autocommit=True) as conn:
         with conn.cursor() as cur:
@@ -515,7 +515,7 @@ def benchmark_postgres_ids(
             cur.execute(
                 """
                 CREATE INDEX docs_ids_bm25_idx
-                ON bench.docs_ids USING psql_bm25s (token_ids)
+                ON bench.docs_ids USING ii42 (token_ids)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -539,7 +539,7 @@ def benchmark_postgres_ids(
                     count(*),
                     coalesce(min(doc_id), 0),
                     coalesce(max(score), 0::real)
-                FROM public.psql_bm25s_query_ids(
+                FROM public.ii42_query_ids(
                     'bench.docs_ids_bm25_idx'::regclass,
                     %s::int4[],
                     %s::int4,
@@ -577,7 +577,7 @@ def maybe_benchmark_postgres_text(
     db_dsn = conninfo.make_conninfo(
         PG_DSN,
         dbname=db_name,
-        application_name='psql_bm25s_bench',
+        application_name='ii42_bench',
     )
     with psycopg.connect(db_dsn, autocommit=True) as conn:
         with conn.cursor() as cur:
@@ -609,7 +609,7 @@ def maybe_benchmark_postgres_text(
             cur.execute(
                 """
                 CREATE INDEX docs_tokens_bm25_idx
-                ON bench.docs_tokens USING psql_bm25s (tokens)
+                ON bench.docs_tokens USING ii42 (tokens)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -632,7 +632,7 @@ def maybe_benchmark_postgres_text(
                     count(*),
                     coalesce(min(doc_id), 0),
                     coalesce(max(score), 0::real)
-                FROM public.psql_bm25s_query_tokens(
+                FROM public.ii42_query_tokens(
                     'bench.docs_tokens_bm25_idx'::regclass,
                     %s::text[],
                     %s::int4,
@@ -776,7 +776,7 @@ def run_dataset(
     datasets_dir: Path,
     top_k: int,
     reuse_db: bool,
-    skip_python_reference: bool,
+    skip_upstream: bool,
 ) -> dict[str, Any]:
     corpus_ids, corpus_texts, query_texts = load_dataset(dataset, datasets_dir)
     corpus_tokenized, query_ids, vocab_by_id = tokenize_dataset(
@@ -790,22 +790,22 @@ def run_dataset(
         'stats': dataset_stats(corpus_tokenized, query_ids),
     }
     if path_mode in ('ids', 'both'):
-        result['psql_bm25s_ids'] = benchmark_postgres_ids(
+        result['ii42_ids'] = benchmark_postgres_ids(
             dataset,
             corpus_tokenized.ids,
             query_ids,
             top_k,
             reuse_db,
         )
-    if not skip_python_reference:
-        result['python_reference_bm25s'] = benchmark_python_reference(
+    if not skip_upstream:
+        result['upstream_bm25s'] = benchmark_upstream(
             corpus_ids,
             corpus_tokenized,
             query_ids,
             top_k,
         )
     if path_mode in ('text', 'both'):
-        result['psql_bm25s_text'] = maybe_benchmark_postgres_text(
+        result['ii42_text'] = maybe_benchmark_postgres_text(
             dataset,
             corpus_tokenized.ids,
             query_ids,
@@ -831,7 +831,7 @@ def run_dataset_with_retries(
     datasets_dir: Path,
     top_k: int,
     reuse_db: bool,
-    skip_python_reference: bool,
+    skip_upstream: bool,
     retry_failures: int,
 ) -> dict[str, Any]:
     max_attempts = retry_failures + 1
@@ -843,7 +843,7 @@ def run_dataset_with_retries(
                 datasets_dir,
                 top_k,
                 reuse_db,
-                skip_python_reference,
+                skip_upstream,
             )
             if attempt > 1:
                 result['retry_attempts'] = attempt - 1
@@ -862,7 +862,7 @@ def run_dataset_with_retries(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description='Benchmark official BEIR datasets.'
+        description='Benchmark official upstream BEIR datasets.'
     )
     parser.add_argument(
         '--datasets',
@@ -877,7 +877,7 @@ def parse_args() -> argparse.Namespace:
         choices=['ids', 'text', 'both', 'none'],
         help=(
             'Benchmark ids only, text only, both ids and text, '
-            'or none for Python-reference-only.'
+            'or none for upstream-only.'
         ),
     )
     parser.add_argument(
@@ -914,9 +914,9 @@ def parse_args() -> argparse.Namespace:
         help='Reuse loaded benchmark databases when they already exist.',
     )
     parser.add_argument(
-        '--skip-python-reference',
+        '--skip-upstream',
         action='store_true',
-        help='Skip the local Python reference implementation run and compare only to official QPS.',
+        help='Skip the local upstream bm25s rerun and compare only to official QPS.',
     )
     parser.add_argument(
         '--retry-failures',
@@ -963,7 +963,7 @@ def main() -> int:
                 args.datasets_dir,
                 args.top_k,
                 args.reuse_db,
-                args.skip_python_reference,
+                args.skip_upstream,
                 args.retry_failures,
             )
             payload['results'][dataset]['wall_time_s'] = (

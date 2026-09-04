@@ -9,7 +9,7 @@ from dataclasses import dataclass
 import psycopg
 
 
-DB_NAME = 'psql_bm25s_auto_maintenance_bench'
+DB_NAME = 'ii42_auto_maintenance_bench'
 DOC_COUNT = 5000
 DOC_LEN = 24
 VOCAB_SIZE = 4000
@@ -56,7 +56,7 @@ def measure_query(
         cur.execute(
             '''
             SELECT *
-            FROM public.psql_bm25s_query_ids(
+            FROM public.ii42_query_ids(
                 %s::regclass,
                 %s::int4[],
                 %s,
@@ -81,7 +81,7 @@ def maintenance_state(cur: psycopg.Cursor, index_name: str) -> str:
     cur.execute(
         '''
         SELECT format(
-            'psql_bm25s_maintenance_state(rebuilds=%s, '
+            'maintenance_state(rebuilds=%s, '
             'pending_writes=%s, pending_deletes=%s, delta_records=%s, '
             'delta_bytes=%s, stale=%s)',
             rebuilds,
@@ -91,7 +91,7 @@ def maintenance_state(cur: psycopg.Cursor, index_name: str) -> str:
             delta_bytes,
             stale
         )
-        FROM public.psql_bm25s_index_details(%s::regclass)
+        FROM public.ii42_index_details(%s::regclass)
         ''',
         (index_name,),
     )
@@ -146,17 +146,12 @@ def setup_table(
     table_name: str,
     docs: list[tuple[int, list[int]]],
     consistency: str = 'realtime',
-    auto_rebuild_threshold: int = 0,
 ) -> None:
     reloptions = [
         "method = 'lucene'",
         "idf_method = 'lucene'",
         f"consistency = '{consistency}'",
     ]
-    if consistency != 'manual':
-        reloptions.append(
-            f'auto_rebuild_threshold = {auto_rebuild_threshold}'
-        )
     reloptions_sql = ',\n                '.join(reloptions)
 
     cur.execute(f'DROP TABLE IF EXISTS {table_name} CASCADE')
@@ -175,7 +170,7 @@ def setup_table(
     cur.execute(
         f'''
         CREATE INDEX {table_name}_bm25_idx
-            ON {table_name} USING psql_bm25s (token_ids)
+            ON {table_name} USING ii42 (token_ids)
             WITH (
                 {reloptions_sql}
             )
@@ -210,7 +205,7 @@ def main() -> None:
 
     with psycopg.connect(f'dbname={DB_NAME}') as conn:
         with conn.cursor() as cur:
-            cur.execute('CREATE EXTENSION psql_bm25s')
+            cur.execute('CREATE EXTENSION ii42')
             setup_table(cur, 'docs_manual', docs, consistency='manual')
             setup_table(cur, 'docs_auto', docs)
             setup_table(cur, 'docs_auto_txn', docs)
@@ -218,19 +213,16 @@ def main() -> None:
                 cur,
                 'docs_auto_threshold_update',
                 docs,
-                auto_rebuild_threshold=200,
             )
             setup_table(
                 cur,
                 'docs_auto_threshold',
                 docs,
-                auto_rebuild_threshold=200,
             )
             setup_table(
                 cur,
                 'docs_auto_threshold_delete',
                 docs,
-                auto_rebuild_threshold=200,
             )
             conn.commit()
 
@@ -252,7 +244,7 @@ def main() -> None:
                 cur.execute(
                     '''
                     SELECT *
-                    FROM public.psql_bm25s_query_ids(
+                    FROM public.ii42_query_ids(
                         'docs_manual_bm25_idx'::regclass,
                         %s::int4[],
                         %s,
@@ -271,7 +263,7 @@ def main() -> None:
             )
 
             cur.execute(
-                "SELECT public.psql_bm25s_index_refresh('docs_manual_bm25_idx'::regclass)"
+                "SELECT public.ii42_index_refresh('docs_manual_bm25_idx'::regclass)"
             )
             manual_after_insert = measure_query(cur, 'docs_manual_bm25_idx', queries)
             auto_after_insert = measure_query(cur, 'docs_auto_bm25_idx', queries)
@@ -291,7 +283,7 @@ def main() -> None:
                 cur.execute(
                     '''
                     SELECT *
-                    FROM public.psql_bm25s_query_ids(
+                    FROM public.ii42_query_ids(
                         'docs_manual_bm25_idx'::regclass,
                         %s::int4[],
                         %s,
@@ -310,7 +302,7 @@ def main() -> None:
             )
 
             cur.execute(
-                "SELECT public.psql_bm25s_index_refresh('docs_manual_bm25_idx'::regclass)"
+                "SELECT public.ii42_index_refresh('docs_manual_bm25_idx'::regclass)"
             )
             manual_after_update = measure_query(cur, 'docs_manual_bm25_idx', queries)
             auto_after_update = measure_query(cur, 'docs_auto_bm25_idx', queries)
@@ -336,7 +328,7 @@ def main() -> None:
                 cur.execute(
                     '''
                     SELECT *
-                    FROM public.psql_bm25s_query_ids(
+                    FROM public.ii42_query_ids(
                         'docs_manual_bm25_idx'::regclass,
                         %s::int4[],
                         %s,
@@ -355,7 +347,7 @@ def main() -> None:
             )
 
             cur.execute(
-                "SELECT public.psql_bm25s_index_refresh('docs_manual_bm25_idx'::regclass)"
+                "SELECT public.ii42_index_refresh('docs_manual_bm25_idx'::regclass)"
             )
             manual_after_delete_refresh = measure_query(
                 cur,
@@ -395,7 +387,7 @@ def main() -> None:
             cur.execute(
                 '''
                 SELECT *
-                FROM public.psql_bm25s_query_ids(
+                FROM public.ii42_query_ids(
                     'docs_auto_threshold_bm25_idx'::regclass,
                     %s::int4[],
                     %s,
@@ -430,7 +422,7 @@ def main() -> None:
             cur.execute(
                 '''
                 SELECT *
-                FROM public.psql_bm25s_query_ids(
+                FROM public.ii42_query_ids(
                     'docs_auto_threshold_update_bm25_idx'::regclass,
                     %s::int4[],
                     %s,
@@ -469,7 +461,7 @@ def main() -> None:
             cur.execute(
                 '''
                 SELECT *
-                FROM public.psql_bm25s_query_ids(
+                FROM public.ii42_query_ids(
                     'docs_auto_threshold_delete_bm25_idx'::regclass,
                     %s::int4[],
                     %s,

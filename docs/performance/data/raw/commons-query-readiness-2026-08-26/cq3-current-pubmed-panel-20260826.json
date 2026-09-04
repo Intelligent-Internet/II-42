@@ -1,0 +1,6353 @@
+{
+  "active_sessions_after": [],
+  "capture_passed": true,
+  "cases": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 448.373,
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(1621399,3)",
+              7224540,
+              "4305d179"
+            ],
+            [
+              "(918882,2)",
+              4127941,
+              "43051b61"
+            ],
+            [
+              "(745977,5)",
+              3322523,
+              "43024df1"
+            ],
+            [
+              "(107603,4)",
+              470381,
+              "43012464"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(1723471,3)",
+              7683817,
+              "42ff0270"
+            ],
+            [
+              "(652303,3)",
+              2894054,
+              "42feaacd"
+            ],
+            [
+              "(965515,3)",
+              4330939,
+              "42fe168b"
+            ],
+            [
+              "(958389,4)",
+              4299366,
+              "42fd2b1d"
+            ],
+            [
+              "(86389,3)",
+              372805,
+              "42fd29a9"
+            ],
+            [
+              "(41212,2)",
+              179457,
+              "42fb19d5"
+            ],
+            [
+              "(52259,2)",
+              225594,
+              "42faf888"
+            ],
+            [
+              "(851124,3)",
+              3809044,
+              "42fa9f49"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(1002452,1)",
+              4490905,
+              "42f96554"
+            ],
+            [
+              "(1595354,2)",
+              7108582,
+              "42f8ab14"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(417177,4)",
+              1833285,
+              "42f8564a"
+            ],
+            [
+              "(315743,4)",
+              1397228,
+              "42f841ab"
+            ],
+            [
+              "(44725,3)",
+              194204,
+              "42f79684"
+            ],
+            [
+              "(983794,2)",
+              4409215,
+              "42f6cf9b"
+            ],
+            [
+              "(199076,2)",
+              874772,
+              "42f653f5"
+            ],
+            [
+              "(546872,2)",
+              2418736,
+              "42f63658"
+            ],
+            [
+              "(407296,4)",
+              1792126,
+              "42f60e8e"
+            ],
+            [
+              "(1031047,3)",
+              4629400,
+              "42f5dc1c"
+            ],
+            [
+              "(1845547,2)",
+              8195951,
+              "42f58da7"
+            ],
+            [
+              "(151304,2)",
+              672344,
+              "42f560c4"
+            ],
+            [
+              "(62769,1)",
+              269483,
+              "42f52463"
+            ],
+            [
+              "(774098,2)",
+              3445241,
+              "42f4e5b6"
+            ],
+            [
+              "(1799437,3)",
+              8002611,
+              "42f4ddf8"
+            ],
+            [
+              "(833631,3)",
+              3702071,
+              "42f4c112"
+            ],
+            [
+              "(1468700,1)",
+              6540880,
+              "42f47f19"
+            ],
+            [
+              "(1655299,4)",
+              7375500,
+              "42f46ce2"
+            ],
+            [
+              "(806883,3)",
+              3586608,
+              "42f4173f"
+            ],
+            [
+              "(1039228,4)",
+              4669037,
+              "42f40f9a"
+            ],
+            [
+              "(777272,4)",
+              3458625,
+              "42f3a1b4"
+            ],
+            [
+              "(964116,1)",
+              4324786,
+              "42f37cef"
+            ],
+            [
+              "(4530,1)",
+              19161,
+              "42f36597"
+            ],
+            [
+              "(691455,4)",
+              3064615,
+              "42f35c82"
+            ],
+            [
+              "(1055456,5)",
+              4741278,
+              "42f326fd"
+            ],
+            [
+              "(1803567,3)",
+              8019960,
+              "42f30087"
+            ],
+            [
+              "(493699,1)",
+              2189121,
+              "42f2f981"
+            ],
+            [
+              "(708284,2)",
+              3138056,
+              "42f2f648"
+            ],
+            [
+              "(16020,4)",
+              68962,
+              "42f2d4db"
+            ],
+            [
+              "(124356,4)",
+              552622,
+              "42f2c989"
+            ],
+            [
+              "(1355878,3)",
+              6061234,
+              "42f281f0"
+            ],
+            [
+              "(1534648,4)",
+              6839368,
+              "42f272ca"
+            ],
+            [
+              "(1443595,1)",
+              6431109,
+              "42f21180"
+            ],
+            [
+              "(854104,2)",
+              3822577,
+              "42f16cde"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "1097890",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "65370945",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "0",
+            "accelerator_forward_row_reads": "5499",
+            "accelerator_forward_scratch_bytes": "13226",
+            "accelerator_membership_bytes": "1026754",
+            "accelerator_owned_index_bytes": "605792",
+            "accelerator_residual_documents": "3200",
+            "accelerator_residual_postings": "6151235",
+            "accelerator_residual_scratch_bytes": "33090776",
+            "allowed_documents": "0",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "0",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "0",
+            "filtered_forward_allowed_b512_ranges": "0",
+            "filtered_forward_allowed_b64_ranges": "0",
+            "filtered_forward_allowed_b8_blocks": "0",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "0",
+            "filtered_forward_allowed_b8_runs": "0",
+            "filtered_forward_allowed_b8_span": "0",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "0",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "0",
+            "filtered_forward_direct_work": "0",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "0",
+            "filtered_forward_transpose_lane_bytes": "0",
+            "filtered_forward_transpose_planning_bytes": "0",
+            "filtered_forward_transpose_stream_bytes": "0",
+            "filtered_forward_transpose_work": "0",
+            "memory_bytes": "36005728",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "semantic_accelerator",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 0,
+            "scope_resolved_predicates": 0,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "35834438",
+            "semantic_accelerator_residual_dense_accumulation": true,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 474.25245004706085
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 453.793,
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(1621399,3)",
+              7224540,
+              "4305d179"
+            ],
+            [
+              "(918882,2)",
+              4127941,
+              "43051b61"
+            ],
+            [
+              "(745977,5)",
+              3322523,
+              "43024df1"
+            ],
+            [
+              "(107603,4)",
+              470381,
+              "43012464"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(1723471,3)",
+              7683817,
+              "42ff0270"
+            ],
+            [
+              "(652303,3)",
+              2894054,
+              "42feaacd"
+            ],
+            [
+              "(965515,3)",
+              4330939,
+              "42fe168b"
+            ],
+            [
+              "(958389,4)",
+              4299366,
+              "42fd2b1d"
+            ],
+            [
+              "(86389,3)",
+              372805,
+              "42fd29a9"
+            ],
+            [
+              "(41212,2)",
+              179457,
+              "42fb19d5"
+            ],
+            [
+              "(52259,2)",
+              225594,
+              "42faf888"
+            ],
+            [
+              "(851124,3)",
+              3809044,
+              "42fa9f49"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(1002452,1)",
+              4490905,
+              "42f96554"
+            ],
+            [
+              "(1595354,2)",
+              7108582,
+              "42f8ab14"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(417177,4)",
+              1833285,
+              "42f8564a"
+            ],
+            [
+              "(315743,4)",
+              1397228,
+              "42f841ab"
+            ],
+            [
+              "(44725,3)",
+              194204,
+              "42f79684"
+            ],
+            [
+              "(983794,2)",
+              4409215,
+              "42f6cf9b"
+            ],
+            [
+              "(199076,2)",
+              874772,
+              "42f653f5"
+            ],
+            [
+              "(546872,2)",
+              2418736,
+              "42f63658"
+            ],
+            [
+              "(407296,4)",
+              1792126,
+              "42f60e8e"
+            ],
+            [
+              "(1031047,3)",
+              4629400,
+              "42f5dc1c"
+            ],
+            [
+              "(1845547,2)",
+              8195951,
+              "42f58da7"
+            ],
+            [
+              "(151304,2)",
+              672344,
+              "42f560c4"
+            ],
+            [
+              "(62769,1)",
+              269483,
+              "42f52463"
+            ],
+            [
+              "(774098,2)",
+              3445241,
+              "42f4e5b6"
+            ],
+            [
+              "(1799437,3)",
+              8002611,
+              "42f4ddf8"
+            ],
+            [
+              "(833631,3)",
+              3702071,
+              "42f4c112"
+            ],
+            [
+              "(1468700,1)",
+              6540880,
+              "42f47f19"
+            ],
+            [
+              "(1655299,4)",
+              7375500,
+              "42f46ce2"
+            ],
+            [
+              "(806883,3)",
+              3586608,
+              "42f4173f"
+            ],
+            [
+              "(1039228,4)",
+              4669037,
+              "42f40f9a"
+            ],
+            [
+              "(777272,4)",
+              3458625,
+              "42f3a1b4"
+            ],
+            [
+              "(964116,1)",
+              4324786,
+              "42f37cef"
+            ],
+            [
+              "(4530,1)",
+              19161,
+              "42f36597"
+            ],
+            [
+              "(691455,4)",
+              3064615,
+              "42f35c82"
+            ],
+            [
+              "(1055456,5)",
+              4741278,
+              "42f326fd"
+            ],
+            [
+              "(1803567,3)",
+              8019960,
+              "42f30087"
+            ],
+            [
+              "(493699,1)",
+              2189121,
+              "42f2f981"
+            ],
+            [
+              "(708284,2)",
+              3138056,
+              "42f2f648"
+            ],
+            [
+              "(16020,4)",
+              68962,
+              "42f2d4db"
+            ],
+            [
+              "(124356,4)",
+              552622,
+              "42f2c989"
+            ],
+            [
+              "(1355878,3)",
+              6061234,
+              "42f281f0"
+            ],
+            [
+              "(1534648,4)",
+              6839368,
+              "42f272ca"
+            ],
+            [
+              "(1443595,1)",
+              6431109,
+              "42f21180"
+            ],
+            [
+              "(854104,2)",
+              3822577,
+              "42f16cde"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "1097890",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "65370945",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "0",
+            "accelerator_forward_row_reads": "5499",
+            "accelerator_forward_scratch_bytes": "13226",
+            "accelerator_membership_bytes": "1026754",
+            "accelerator_owned_index_bytes": "605792",
+            "accelerator_residual_documents": "3200",
+            "accelerator_residual_postings": "6151235",
+            "accelerator_residual_scratch_bytes": "33090776",
+            "allowed_documents": "0",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "0",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "0",
+            "filtered_forward_allowed_b512_ranges": "0",
+            "filtered_forward_allowed_b64_ranges": "0",
+            "filtered_forward_allowed_b8_blocks": "0",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "0",
+            "filtered_forward_allowed_b8_runs": "0",
+            "filtered_forward_allowed_b8_span": "0",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "0",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "0",
+            "filtered_forward_direct_work": "0",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "0",
+            "filtered_forward_transpose_lane_bytes": "0",
+            "filtered_forward_transpose_planning_bytes": "0",
+            "filtered_forward_transpose_stream_bytes": "0",
+            "filtered_forward_transpose_work": "0",
+            "memory_bytes": "36005728",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "semantic_accelerator",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 0,
+            "scope_resolved_predicates": 0,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "35834438",
+            "semantic_accelerator_residual_dense_accumulation": true,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 481.4577929209918
+        },
+        {
+          "attempt": 3,
+          "elapsed_ms": 432.971,
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(1621399,3)",
+              7224540,
+              "4305d179"
+            ],
+            [
+              "(918882,2)",
+              4127941,
+              "43051b61"
+            ],
+            [
+              "(745977,5)",
+              3322523,
+              "43024df1"
+            ],
+            [
+              "(107603,4)",
+              470381,
+              "43012464"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(1723471,3)",
+              7683817,
+              "42ff0270"
+            ],
+            [
+              "(652303,3)",
+              2894054,
+              "42feaacd"
+            ],
+            [
+              "(965515,3)",
+              4330939,
+              "42fe168b"
+            ],
+            [
+              "(958389,4)",
+              4299366,
+              "42fd2b1d"
+            ],
+            [
+              "(86389,3)",
+              372805,
+              "42fd29a9"
+            ],
+            [
+              "(41212,2)",
+              179457,
+              "42fb19d5"
+            ],
+            [
+              "(52259,2)",
+              225594,
+              "42faf888"
+            ],
+            [
+              "(851124,3)",
+              3809044,
+              "42fa9f49"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(1002452,1)",
+              4490905,
+              "42f96554"
+            ],
+            [
+              "(1595354,2)",
+              7108582,
+              "42f8ab14"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(417177,4)",
+              1833285,
+              "42f8564a"
+            ],
+            [
+              "(315743,4)",
+              1397228,
+              "42f841ab"
+            ],
+            [
+              "(44725,3)",
+              194204,
+              "42f79684"
+            ],
+            [
+              "(983794,2)",
+              4409215,
+              "42f6cf9b"
+            ],
+            [
+              "(199076,2)",
+              874772,
+              "42f653f5"
+            ],
+            [
+              "(546872,2)",
+              2418736,
+              "42f63658"
+            ],
+            [
+              "(407296,4)",
+              1792126,
+              "42f60e8e"
+            ],
+            [
+              "(1031047,3)",
+              4629400,
+              "42f5dc1c"
+            ],
+            [
+              "(1845547,2)",
+              8195951,
+              "42f58da7"
+            ],
+            [
+              "(151304,2)",
+              672344,
+              "42f560c4"
+            ],
+            [
+              "(62769,1)",
+              269483,
+              "42f52463"
+            ],
+            [
+              "(774098,2)",
+              3445241,
+              "42f4e5b6"
+            ],
+            [
+              "(1799437,3)",
+              8002611,
+              "42f4ddf8"
+            ],
+            [
+              "(833631,3)",
+              3702071,
+              "42f4c112"
+            ],
+            [
+              "(1468700,1)",
+              6540880,
+              "42f47f19"
+            ],
+            [
+              "(1655299,4)",
+              7375500,
+              "42f46ce2"
+            ],
+            [
+              "(806883,3)",
+              3586608,
+              "42f4173f"
+            ],
+            [
+              "(1039228,4)",
+              4669037,
+              "42f40f9a"
+            ],
+            [
+              "(777272,4)",
+              3458625,
+              "42f3a1b4"
+            ],
+            [
+              "(964116,1)",
+              4324786,
+              "42f37cef"
+            ],
+            [
+              "(4530,1)",
+              19161,
+              "42f36597"
+            ],
+            [
+              "(691455,4)",
+              3064615,
+              "42f35c82"
+            ],
+            [
+              "(1055456,5)",
+              4741278,
+              "42f326fd"
+            ],
+            [
+              "(1803567,3)",
+              8019960,
+              "42f30087"
+            ],
+            [
+              "(493699,1)",
+              2189121,
+              "42f2f981"
+            ],
+            [
+              "(708284,2)",
+              3138056,
+              "42f2f648"
+            ],
+            [
+              "(16020,4)",
+              68962,
+              "42f2d4db"
+            ],
+            [
+              "(124356,4)",
+              552622,
+              "42f2c989"
+            ],
+            [
+              "(1355878,3)",
+              6061234,
+              "42f281f0"
+            ],
+            [
+              "(1534648,4)",
+              6839368,
+              "42f272ca"
+            ],
+            [
+              "(1443595,1)",
+              6431109,
+              "42f21180"
+            ],
+            [
+              "(854104,2)",
+              3822577,
+              "42f16cde"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "1097890",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "65370945",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "0",
+            "accelerator_forward_row_reads": "5499",
+            "accelerator_forward_scratch_bytes": "13226",
+            "accelerator_membership_bytes": "1026754",
+            "accelerator_owned_index_bytes": "605792",
+            "accelerator_residual_documents": "3200",
+            "accelerator_residual_postings": "6151235",
+            "accelerator_residual_scratch_bytes": "33090776",
+            "allowed_documents": "0",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "0",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "0",
+            "filtered_forward_allowed_b512_ranges": "0",
+            "filtered_forward_allowed_b64_ranges": "0",
+            "filtered_forward_allowed_b8_blocks": "0",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "0",
+            "filtered_forward_allowed_b8_runs": "0",
+            "filtered_forward_allowed_b8_span": "0",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "0",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "0",
+            "filtered_forward_direct_work": "0",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "0",
+            "filtered_forward_transpose_lane_bytes": "0",
+            "filtered_forward_transpose_planning_bytes": "0",
+            "filtered_forward_transpose_stream_bytes": "0",
+            "filtered_forward_transpose_work": "0",
+            "memory_bytes": "36005728",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "semantic_accelerator",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 0,
+            "scope_resolved_predicates": 0,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "35834438",
+            "semantic_accelerator_residual_dense_accumulation": true,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 462.0128208771348
+        }
+      ],
+      "completed": 3,
+      "concurrency": 1,
+      "expected_first_max_ms": 2000.0,
+      "expected_max_ms": 300.0,
+      "expected_p95_max_ms": 600.0,
+      "first": {
+        "count": 1,
+        "max_ms": 448.373,
+        "mean_ms": 448.373,
+        "min_ms": 448.373,
+        "p50_ms": 448.373,
+        "p95_ms": 448.373
+      },
+      "first_ms": 448.373,
+      "name": "pubmed_unfiltered",
+      "passed": false,
+      "result_stability": {
+        "attempts": 3,
+        "passed": true
+      },
+      "violations": 0,
+      "warm": {
+        "count": 2,
+        "max_ms": 453.793,
+        "mean_ms": 443.382,
+        "min_ms": 432.971,
+        "p50_ms": 443.382,
+        "p95_ms": 453.793
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 300.833,
+          "filter_oracle": {
+            "allowed_documents": 39614
+          },
+          "hit_signature": [
+            [
+              "(637096,4)",
+              2830894,
+              "42d806da"
+            ],
+            [
+              "(1842932,1)",
+              8184976,
+              "42ce02d6"
+            ],
+            [
+              "(423994,2)",
+              1861547,
+              "42cdf6b9"
+            ],
+            [
+              "(312816,5)",
+              1384302,
+              "42cd280c"
+            ],
+            [
+              "(1728876,4)",
+              7706448,
+              "42c9a782"
+            ],
+            [
+              "(1843905,4)",
+              8189065,
+              "42c7cf33"
+            ],
+            [
+              "(245131,3)",
+              1072134,
+              "42c006f7"
+            ],
+            [
+              "(667237,5)",
+              2959887,
+              "42bf948a"
+            ],
+            [
+              "(1546752,5)",
+              6892856,
+              "42bdcd0b"
+            ],
+            [
+              "(1259833,2)",
+              5642987,
+              "42bdbfd6"
+            ],
+            [
+              "(1659846,2)",
+              7395743,
+              "42bda10b"
+            ],
+            [
+              "(224262,2)",
+              985051,
+              "42bd488b"
+            ],
+            [
+              "(1419437,4)",
+              6330112,
+              "42bce83d"
+            ],
+            [
+              "(1531966,5)",
+              6827497,
+              "42bcc59d"
+            ],
+            [
+              "(1177747,1)",
+              5288991,
+              "42bc7278"
+            ],
+            [
+              "(1609398,3)",
+              7171322,
+              "42bbe663"
+            ],
+            [
+              "(956575,2)",
+              4291332,
+              "42bb7daa"
+            ],
+            [
+              "(606785,3)",
+              2697221,
+              "42bb79d7"
+            ],
+            [
+              "(168802,4)",
+              746823,
+              "42bae068"
+            ],
+            [
+              "(1668065,5)",
+              7432890,
+              "42b9d9b1"
+            ],
+            [
+              "(1309508,4)",
+              5857155,
+              "42b7c247"
+            ],
+            [
+              "(1522415,1)",
+              6784727,
+              "42b78a8a"
+            ],
+            [
+              "(797400,3)",
+              3544333,
+              "42b78371"
+            ],
+            [
+              "(4681,3)",
+              19801,
+              "42b73a4d"
+            ],
+            [
+              "(972321,3)",
+              4361102,
+              "42b70de5"
+            ],
+            [
+              "(526920,2)",
+              2330627,
+              "42b6300d"
+            ],
+            [
+              "(1330459,4)",
+              5947858,
+              "42b62791"
+            ],
+            [
+              "(1790485,3)",
+              7964943,
+              "42b60339"
+            ],
+            [
+              "(130836,1)",
+              582143,
+              "42b5fe39"
+            ],
+            [
+              "(194755,3)",
+              855789,
+              "42b5ac57"
+            ],
+            [
+              "(1508750,4)",
+              6722648,
+              "42b56faa"
+            ],
+            [
+              "(431265,4)",
+              1893847,
+              "42b53b7d"
+            ],
+            [
+              "(1684114,3)",
+              7507253,
+              "42b4cb2d"
+            ],
+            [
+              "(1583484,2)",
+              7056049,
+              "42b4bde5"
+            ],
+            [
+              "(1484766,3)",
+              6612361,
+              "42b42c65"
+            ],
+            [
+              "(1545555,4)",
+              6887571,
+              "42b36beb"
+            ],
+            [
+              "(1569969,4)",
+              6995949,
+              "42b32e22"
+            ],
+            [
+              "(107662,4)",
+              470671,
+              "42b30add"
+            ],
+            [
+              "(1744725,3)",
+              7772883,
+              "42b24db1"
+            ],
+            [
+              "(291375,3)",
+              1281123,
+              "42b1e38a"
+            ],
+            [
+              "(1435778,3)",
+              6398195,
+              "42b19863"
+            ],
+            [
+              "(1770863,4)",
+              7882849,
+              "42b0c1aa"
+            ],
+            [
+              "(1804747,1)",
+              8024928,
+              "42b09e70"
+            ],
+            [
+              "(1411934,2)",
+              6298629,
+              "42b0345b"
+            ],
+            [
+              "(1385091,2)",
+              6184906,
+              "42afe240"
+            ],
+            [
+              "(342032,3)",
+              1511543,
+              "42af471a"
+            ],
+            [
+              "(75194,5)",
+              322437,
+              "42ae0f07"
+            ],
+            [
+              "(1296366,1)",
+              5800519,
+              "42acf5b9"
+            ],
+            [
+              "(130704,1)",
+              581594,
+              "42ace73c"
+            ],
+            [
+              "(400284,2)",
+              1761723,
+              "42acc50b"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "49838829",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "9545127",
+            "accelerator_forward_row_reads": "39614",
+            "accelerator_forward_scratch_bytes": "6005",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "39614",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "39614",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "1995",
+            "filtered_forward_allowed_b512_ranges": "10249",
+            "filtered_forward_allowed_b64_ranges": "24909",
+            "filtered_forward_allowed_b8_blocks": "36282",
+            "filtered_forward_allowed_b8_first": "17",
+            "filtered_forward_allowed_b8_last": "1026711",
+            "filtered_forward_allowed_b8_runs": "30758",
+            "filtered_forward_allowed_b8_span": "1026695",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "51897601",
+            "filtered_forward_direct_work": "10142682",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "146616979",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "13124744574",
+            "filtered_forward_transpose_work": "46323536",
+            "memory_bytes": "722791",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "102",
+            "scope_ilike_blocks_skipped": "42",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "3017",
+            "scope_ilike_values": 25893,
+            "scope_ilike_values_examined": "3017",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "551501",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_date_journal",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 815.0135527830571
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 272.739,
+          "filter_oracle": {
+            "allowed_documents": 39614
+          },
+          "hit_signature": [
+            [
+              "(637096,4)",
+              2830894,
+              "42d806da"
+            ],
+            [
+              "(1842932,1)",
+              8184976,
+              "42ce02d6"
+            ],
+            [
+              "(423994,2)",
+              1861547,
+              "42cdf6b9"
+            ],
+            [
+              "(312816,5)",
+              1384302,
+              "42cd280c"
+            ],
+            [
+              "(1728876,4)",
+              7706448,
+              "42c9a782"
+            ],
+            [
+              "(1843905,4)",
+              8189065,
+              "42c7cf33"
+            ],
+            [
+              "(245131,3)",
+              1072134,
+              "42c006f7"
+            ],
+            [
+              "(667237,5)",
+              2959887,
+              "42bf948a"
+            ],
+            [
+              "(1546752,5)",
+              6892856,
+              "42bdcd0b"
+            ],
+            [
+              "(1259833,2)",
+              5642987,
+              "42bdbfd6"
+            ],
+            [
+              "(1659846,2)",
+              7395743,
+              "42bda10b"
+            ],
+            [
+              "(224262,2)",
+              985051,
+              "42bd488b"
+            ],
+            [
+              "(1419437,4)",
+              6330112,
+              "42bce83d"
+            ],
+            [
+              "(1531966,5)",
+              6827497,
+              "42bcc59d"
+            ],
+            [
+              "(1177747,1)",
+              5288991,
+              "42bc7278"
+            ],
+            [
+              "(1609398,3)",
+              7171322,
+              "42bbe663"
+            ],
+            [
+              "(956575,2)",
+              4291332,
+              "42bb7daa"
+            ],
+            [
+              "(606785,3)",
+              2697221,
+              "42bb79d7"
+            ],
+            [
+              "(168802,4)",
+              746823,
+              "42bae068"
+            ],
+            [
+              "(1668065,5)",
+              7432890,
+              "42b9d9b1"
+            ],
+            [
+              "(1309508,4)",
+              5857155,
+              "42b7c247"
+            ],
+            [
+              "(1522415,1)",
+              6784727,
+              "42b78a8a"
+            ],
+            [
+              "(797400,3)",
+              3544333,
+              "42b78371"
+            ],
+            [
+              "(4681,3)",
+              19801,
+              "42b73a4d"
+            ],
+            [
+              "(972321,3)",
+              4361102,
+              "42b70de5"
+            ],
+            [
+              "(526920,2)",
+              2330627,
+              "42b6300d"
+            ],
+            [
+              "(1330459,4)",
+              5947858,
+              "42b62791"
+            ],
+            [
+              "(1790485,3)",
+              7964943,
+              "42b60339"
+            ],
+            [
+              "(130836,1)",
+              582143,
+              "42b5fe39"
+            ],
+            [
+              "(194755,3)",
+              855789,
+              "42b5ac57"
+            ],
+            [
+              "(1508750,4)",
+              6722648,
+              "42b56faa"
+            ],
+            [
+              "(431265,4)",
+              1893847,
+              "42b53b7d"
+            ],
+            [
+              "(1684114,3)",
+              7507253,
+              "42b4cb2d"
+            ],
+            [
+              "(1583484,2)",
+              7056049,
+              "42b4bde5"
+            ],
+            [
+              "(1484766,3)",
+              6612361,
+              "42b42c65"
+            ],
+            [
+              "(1545555,4)",
+              6887571,
+              "42b36beb"
+            ],
+            [
+              "(1569969,4)",
+              6995949,
+              "42b32e22"
+            ],
+            [
+              "(107662,4)",
+              470671,
+              "42b30add"
+            ],
+            [
+              "(1744725,3)",
+              7772883,
+              "42b24db1"
+            ],
+            [
+              "(291375,3)",
+              1281123,
+              "42b1e38a"
+            ],
+            [
+              "(1435778,3)",
+              6398195,
+              "42b19863"
+            ],
+            [
+              "(1770863,4)",
+              7882849,
+              "42b0c1aa"
+            ],
+            [
+              "(1804747,1)",
+              8024928,
+              "42b09e70"
+            ],
+            [
+              "(1411934,2)",
+              6298629,
+              "42b0345b"
+            ],
+            [
+              "(1385091,2)",
+              6184906,
+              "42afe240"
+            ],
+            [
+              "(342032,3)",
+              1511543,
+              "42af471a"
+            ],
+            [
+              "(75194,5)",
+              322437,
+              "42ae0f07"
+            ],
+            [
+              "(1296366,1)",
+              5800519,
+              "42acf5b9"
+            ],
+            [
+              "(130704,1)",
+              581594,
+              "42ace73c"
+            ],
+            [
+              "(400284,2)",
+              1761723,
+              "42acc50b"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "49838829",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "9545127",
+            "accelerator_forward_row_reads": "39614",
+            "accelerator_forward_scratch_bytes": "6005",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "39614",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "39614",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "1995",
+            "filtered_forward_allowed_b512_ranges": "10249",
+            "filtered_forward_allowed_b64_ranges": "24909",
+            "filtered_forward_allowed_b8_blocks": "36282",
+            "filtered_forward_allowed_b8_first": "17",
+            "filtered_forward_allowed_b8_last": "1026711",
+            "filtered_forward_allowed_b8_runs": "30758",
+            "filtered_forward_allowed_b8_span": "1026695",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "51897601",
+            "filtered_forward_direct_work": "10142682",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "146616979",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "13124744574",
+            "filtered_forward_transpose_work": "46323536",
+            "memory_bytes": "722791",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "102",
+            "scope_ilike_blocks_skipped": "42",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "3017",
+            "scope_ilike_values": 25893,
+            "scope_ilike_values_examined": "3017",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "551501",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_date_journal",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 788.5643099434674
+        },
+        {
+          "attempt": 3,
+          "elapsed_ms": 272.325,
+          "filter_oracle": {
+            "allowed_documents": 39614
+          },
+          "hit_signature": [
+            [
+              "(637096,4)",
+              2830894,
+              "42d806da"
+            ],
+            [
+              "(1842932,1)",
+              8184976,
+              "42ce02d6"
+            ],
+            [
+              "(423994,2)",
+              1861547,
+              "42cdf6b9"
+            ],
+            [
+              "(312816,5)",
+              1384302,
+              "42cd280c"
+            ],
+            [
+              "(1728876,4)",
+              7706448,
+              "42c9a782"
+            ],
+            [
+              "(1843905,4)",
+              8189065,
+              "42c7cf33"
+            ],
+            [
+              "(245131,3)",
+              1072134,
+              "42c006f7"
+            ],
+            [
+              "(667237,5)",
+              2959887,
+              "42bf948a"
+            ],
+            [
+              "(1546752,5)",
+              6892856,
+              "42bdcd0b"
+            ],
+            [
+              "(1259833,2)",
+              5642987,
+              "42bdbfd6"
+            ],
+            [
+              "(1659846,2)",
+              7395743,
+              "42bda10b"
+            ],
+            [
+              "(224262,2)",
+              985051,
+              "42bd488b"
+            ],
+            [
+              "(1419437,4)",
+              6330112,
+              "42bce83d"
+            ],
+            [
+              "(1531966,5)",
+              6827497,
+              "42bcc59d"
+            ],
+            [
+              "(1177747,1)",
+              5288991,
+              "42bc7278"
+            ],
+            [
+              "(1609398,3)",
+              7171322,
+              "42bbe663"
+            ],
+            [
+              "(956575,2)",
+              4291332,
+              "42bb7daa"
+            ],
+            [
+              "(606785,3)",
+              2697221,
+              "42bb79d7"
+            ],
+            [
+              "(168802,4)",
+              746823,
+              "42bae068"
+            ],
+            [
+              "(1668065,5)",
+              7432890,
+              "42b9d9b1"
+            ],
+            [
+              "(1309508,4)",
+              5857155,
+              "42b7c247"
+            ],
+            [
+              "(1522415,1)",
+              6784727,
+              "42b78a8a"
+            ],
+            [
+              "(797400,3)",
+              3544333,
+              "42b78371"
+            ],
+            [
+              "(4681,3)",
+              19801,
+              "42b73a4d"
+            ],
+            [
+              "(972321,3)",
+              4361102,
+              "42b70de5"
+            ],
+            [
+              "(526920,2)",
+              2330627,
+              "42b6300d"
+            ],
+            [
+              "(1330459,4)",
+              5947858,
+              "42b62791"
+            ],
+            [
+              "(1790485,3)",
+              7964943,
+              "42b60339"
+            ],
+            [
+              "(130836,1)",
+              582143,
+              "42b5fe39"
+            ],
+            [
+              "(194755,3)",
+              855789,
+              "42b5ac57"
+            ],
+            [
+              "(1508750,4)",
+              6722648,
+              "42b56faa"
+            ],
+            [
+              "(431265,4)",
+              1893847,
+              "42b53b7d"
+            ],
+            [
+              "(1684114,3)",
+              7507253,
+              "42b4cb2d"
+            ],
+            [
+              "(1583484,2)",
+              7056049,
+              "42b4bde5"
+            ],
+            [
+              "(1484766,3)",
+              6612361,
+              "42b42c65"
+            ],
+            [
+              "(1545555,4)",
+              6887571,
+              "42b36beb"
+            ],
+            [
+              "(1569969,4)",
+              6995949,
+              "42b32e22"
+            ],
+            [
+              "(107662,4)",
+              470671,
+              "42b30add"
+            ],
+            [
+              "(1744725,3)",
+              7772883,
+              "42b24db1"
+            ],
+            [
+              "(291375,3)",
+              1281123,
+              "42b1e38a"
+            ],
+            [
+              "(1435778,3)",
+              6398195,
+              "42b19863"
+            ],
+            [
+              "(1770863,4)",
+              7882849,
+              "42b0c1aa"
+            ],
+            [
+              "(1804747,1)",
+              8024928,
+              "42b09e70"
+            ],
+            [
+              "(1411934,2)",
+              6298629,
+              "42b0345b"
+            ],
+            [
+              "(1385091,2)",
+              6184906,
+              "42afe240"
+            ],
+            [
+              "(342032,3)",
+              1511543,
+              "42af471a"
+            ],
+            [
+              "(75194,5)",
+              322437,
+              "42ae0f07"
+            ],
+            [
+              "(1296366,1)",
+              5800519,
+              "42acf5b9"
+            ],
+            [
+              "(130704,1)",
+              581594,
+              "42ace73c"
+            ],
+            [
+              "(400284,2)",
+              1761723,
+              "42acc50b"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "49838829",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "9545127",
+            "accelerator_forward_row_reads": "39614",
+            "accelerator_forward_scratch_bytes": "6005",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "39614",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "39614",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "1995",
+            "filtered_forward_allowed_b512_ranges": "10249",
+            "filtered_forward_allowed_b64_ranges": "24909",
+            "filtered_forward_allowed_b8_blocks": "36282",
+            "filtered_forward_allowed_b8_first": "17",
+            "filtered_forward_allowed_b8_last": "1026711",
+            "filtered_forward_allowed_b8_runs": "30758",
+            "filtered_forward_allowed_b8_span": "1026695",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "51897601",
+            "filtered_forward_direct_work": "10142682",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "146616979",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "13124744574",
+            "filtered_forward_transpose_work": "46323536",
+            "memory_bytes": "722791",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "102",
+            "scope_ilike_blocks_skipped": "42",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "3017",
+            "scope_ilike_values": 25893,
+            "scope_ilike_values_examined": "3017",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "551501",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_date_journal",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 833.1791870296001
+        }
+      ],
+      "completed": 3,
+      "concurrency": 1,
+      "expected_first_max_ms": 2000.0,
+      "expected_max_ms": 500.0,
+      "expected_p95_max_ms": 1000.0,
+      "filter_oracle": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "native_allowed_documents": 39614,
+            "passed": true,
+            "sql_allowed_documents": 39614
+          },
+          {
+            "attempt": 2,
+            "native_allowed_documents": 39614,
+            "passed": true,
+            "sql_allowed_documents": 39614
+          },
+          {
+            "attempt": 3,
+            "native_allowed_documents": 39614,
+            "passed": true,
+            "sql_allowed_documents": 39614
+          }
+        ],
+        "passed": true
+      },
+      "first": {
+        "count": 1,
+        "max_ms": 300.833,
+        "mean_ms": 300.833,
+        "min_ms": 300.833,
+        "p50_ms": 300.833,
+        "p95_ms": 300.833
+      },
+      "first_ms": 300.833,
+      "name": "pubmed_date_journal",
+      "passed": true,
+      "result_stability": {
+        "attempts": 3,
+        "passed": true
+      },
+      "violations": 0,
+      "warm": {
+        "count": 2,
+        "max_ms": 272.739,
+        "mean_ms": 272.532,
+        "min_ms": 272.325,
+        "p50_ms": 272.532,
+        "p95_ms": 272.739
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 644.427,
+          "filter_oracle": {
+            "allowed_documents": 2356781
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(1621399,3)",
+              7224540,
+              "4305d179"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(652303,3)",
+              2894054,
+              "42feaacd"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(151304,2)",
+              672344,
+              "42f560c4"
+            ],
+            [
+              "(1799437,3)",
+              8002611,
+              "42f4ddf8"
+            ],
+            [
+              "(1655299,4)",
+              7375500,
+              "42f46ce2"
+            ],
+            [
+              "(4530,1)",
+              19161,
+              "42f36597"
+            ],
+            [
+              "(1355878,3)",
+              6061234,
+              "42f281f0"
+            ],
+            [
+              "(1534648,4)",
+              6839368,
+              "42f272ca"
+            ],
+            [
+              "(1443595,1)",
+              6431109,
+              "42f21180"
+            ],
+            [
+              "(1547952,3)",
+              6898154,
+              "42f0e5a6"
+            ],
+            [
+              "(1833115,3)",
+              8144067,
+              "42f06b9e"
+            ],
+            [
+              "(1083371,2)",
+              4859108,
+              "42ef7016"
+            ],
+            [
+              "(77330,1)",
+              332003,
+              "42ef5ede"
+            ],
+            [
+              "(1632806,3)",
+              7274981,
+              "42ef5db7"
+            ],
+            [
+              "(1713846,2)",
+              7642555,
+              "42ee5d35"
+            ],
+            [
+              "(1698441,5)",
+              7573484,
+              "42ee4347"
+            ],
+            [
+              "(1621707,2)",
+              7225894,
+              "42eddbb7"
+            ],
+            [
+              "(1535778,3)",
+              6844423,
+              "42edc21e"
+            ],
+            [
+              "(1696744,5)",
+              7565897,
+              "42ed667f"
+            ],
+            [
+              "(1352245,4)",
+              6046033,
+              "42ed3cfd"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(26486,2)",
+              114846,
+              "42ecaed1"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(1414350,1)",
+              6308748,
+              "42ec0821"
+            ],
+            [
+              "(329348,1)",
+              1456862,
+              "42eb7742"
+            ],
+            [
+              "(1698348,2)",
+              7573075,
+              "42eb1a99"
+            ],
+            [
+              "(6898,4)",
+              29140,
+              "42eaa064"
+            ],
+            [
+              "(1393054,3)",
+              6218533,
+              "42eaa04a"
+            ],
+            [
+              "(1277510,4)",
+              5719428,
+              "42ea9a57"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1416517,4)",
+              6317825,
+              "42ea4e03"
+            ],
+            [
+              "(1584043,4)",
+              7058524,
+              "42ea159c"
+            ],
+            [
+              "(542734,3)",
+              2400708,
+              "42e9e6a3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(1725355,2)",
+              7691713,
+              "42e8c956"
+            ],
+            [
+              "(1769251,6)",
+              7875919,
+              "42e8a8fc"
+            ],
+            [
+              "(1242720,3)",
+              5569280,
+              "42e886e7"
+            ],
+            [
+              "(179880,5)",
+              792857,
+              "42e867d3"
+            ],
+            [
+              "(1727529,1)",
+              7700828,
+              "42e86617"
+            ],
+            [
+              "(1316937,4)",
+              5888894,
+              "42e84c30"
+            ],
+            [
+              "(349266,4)",
+              1542165,
+              "42e7c53b"
+            ],
+            [
+              "(1531720,3)",
+              6826393,
+              "42e75b23"
+            ],
+            [
+              "(1538717,4)",
+              6857433,
+              "42e75410"
+            ],
+            [
+              "(1283186,3)",
+              5744097,
+              "42e75402"
+            ],
+            [
+              "(1790236,3)",
+              7963906,
+              "42e74cfe"
+            ],
+            [
+              "(1544027,1)",
+              6880783,
+              "42e73b90"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "156655771",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "2975254",
+            "accelerator_forward_row_reads": "10010",
+            "accelerator_forward_scratch_bytes": "13778589",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "2356781",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "10010",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2006",
+            "filtered_forward_allowed_b512_ranges": "16026",
+            "filtered_forward_allowed_b64_ranges": "117811",
+            "filtered_forward_allowed_b8_blocks": "694584",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "1026753",
+            "filtered_forward_allowed_b8_runs": "101468",
+            "filtered_forward_allowed_b8_span": "1026754",
+            "filtered_forward_bound_blocks_considered": "694560",
+            "filtered_forward_bound_blocks_scored": "2606",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "147130342",
+            "filtered_forward_bound_entries": "29412347",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "1525650257",
+            "filtered_forward_direct_work": "608232864",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "181681395",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "16330068602",
+            "filtered_forward_transpose_work": "57400751",
+            "memory_bytes": "14495375",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_bound",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 1,
+            "scope_resolved_predicates": 1,
+            "semantic_accelerator_forward_bounded": true,
+            "semantic_accelerator_query_bytes": "14324085",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 2538.0224741529673
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 664.368,
+          "filter_oracle": {
+            "allowed_documents": 2356781
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(1621399,3)",
+              7224540,
+              "4305d179"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(652303,3)",
+              2894054,
+              "42feaacd"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(151304,2)",
+              672344,
+              "42f560c4"
+            ],
+            [
+              "(1799437,3)",
+              8002611,
+              "42f4ddf8"
+            ],
+            [
+              "(1655299,4)",
+              7375500,
+              "42f46ce2"
+            ],
+            [
+              "(4530,1)",
+              19161,
+              "42f36597"
+            ],
+            [
+              "(1355878,3)",
+              6061234,
+              "42f281f0"
+            ],
+            [
+              "(1534648,4)",
+              6839368,
+              "42f272ca"
+            ],
+            [
+              "(1443595,1)",
+              6431109,
+              "42f21180"
+            ],
+            [
+              "(1547952,3)",
+              6898154,
+              "42f0e5a6"
+            ],
+            [
+              "(1833115,3)",
+              8144067,
+              "42f06b9e"
+            ],
+            [
+              "(1083371,2)",
+              4859108,
+              "42ef7016"
+            ],
+            [
+              "(77330,1)",
+              332003,
+              "42ef5ede"
+            ],
+            [
+              "(1632806,3)",
+              7274981,
+              "42ef5db7"
+            ],
+            [
+              "(1713846,2)",
+              7642555,
+              "42ee5d35"
+            ],
+            [
+              "(1698441,5)",
+              7573484,
+              "42ee4347"
+            ],
+            [
+              "(1621707,2)",
+              7225894,
+              "42eddbb7"
+            ],
+            [
+              "(1535778,3)",
+              6844423,
+              "42edc21e"
+            ],
+            [
+              "(1696744,5)",
+              7565897,
+              "42ed667f"
+            ],
+            [
+              "(1352245,4)",
+              6046033,
+              "42ed3cfd"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(26486,2)",
+              114846,
+              "42ecaed1"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(1414350,1)",
+              6308748,
+              "42ec0821"
+            ],
+            [
+              "(329348,1)",
+              1456862,
+              "42eb7742"
+            ],
+            [
+              "(1698348,2)",
+              7573075,
+              "42eb1a99"
+            ],
+            [
+              "(6898,4)",
+              29140,
+              "42eaa064"
+            ],
+            [
+              "(1393054,3)",
+              6218533,
+              "42eaa04a"
+            ],
+            [
+              "(1277510,4)",
+              5719428,
+              "42ea9a57"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1416517,4)",
+              6317825,
+              "42ea4e03"
+            ],
+            [
+              "(1584043,4)",
+              7058524,
+              "42ea159c"
+            ],
+            [
+              "(542734,3)",
+              2400708,
+              "42e9e6a3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(1725355,2)",
+              7691713,
+              "42e8c956"
+            ],
+            [
+              "(1769251,6)",
+              7875919,
+              "42e8a8fc"
+            ],
+            [
+              "(1242720,3)",
+              5569280,
+              "42e886e7"
+            ],
+            [
+              "(179880,5)",
+              792857,
+              "42e867d3"
+            ],
+            [
+              "(1727529,1)",
+              7700828,
+              "42e86617"
+            ],
+            [
+              "(1316937,4)",
+              5888894,
+              "42e84c30"
+            ],
+            [
+              "(349266,4)",
+              1542165,
+              "42e7c53b"
+            ],
+            [
+              "(1531720,3)",
+              6826393,
+              "42e75b23"
+            ],
+            [
+              "(1538717,4)",
+              6857433,
+              "42e75410"
+            ],
+            [
+              "(1283186,3)",
+              5744097,
+              "42e75402"
+            ],
+            [
+              "(1790236,3)",
+              7963906,
+              "42e74cfe"
+            ],
+            [
+              "(1544027,1)",
+              6880783,
+              "42e73b90"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "156655771",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "2975254",
+            "accelerator_forward_row_reads": "10010",
+            "accelerator_forward_scratch_bytes": "13778589",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "2356781",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "10010",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2006",
+            "filtered_forward_allowed_b512_ranges": "16026",
+            "filtered_forward_allowed_b64_ranges": "117811",
+            "filtered_forward_allowed_b8_blocks": "694584",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "1026753",
+            "filtered_forward_allowed_b8_runs": "101468",
+            "filtered_forward_allowed_b8_span": "1026754",
+            "filtered_forward_bound_blocks_considered": "694560",
+            "filtered_forward_bound_blocks_scored": "2606",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "147130342",
+            "filtered_forward_bound_entries": "29412347",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "1525650257",
+            "filtered_forward_direct_work": "608232864",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "181681395",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "16330068602",
+            "filtered_forward_transpose_work": "57400751",
+            "memory_bytes": "14495375",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_bound",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 1,
+            "scope_resolved_predicates": 1,
+            "semantic_accelerator_forward_bounded": true,
+            "semantic_accelerator_query_bytes": "14324085",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 2609.6146660856903
+        },
+        {
+          "attempt": 3,
+          "elapsed_ms": 643.148,
+          "filter_oracle": {
+            "allowed_documents": 2356781
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(1621399,3)",
+              7224540,
+              "4305d179"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(652303,3)",
+              2894054,
+              "42feaacd"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(151304,2)",
+              672344,
+              "42f560c4"
+            ],
+            [
+              "(1799437,3)",
+              8002611,
+              "42f4ddf8"
+            ],
+            [
+              "(1655299,4)",
+              7375500,
+              "42f46ce2"
+            ],
+            [
+              "(4530,1)",
+              19161,
+              "42f36597"
+            ],
+            [
+              "(1355878,3)",
+              6061234,
+              "42f281f0"
+            ],
+            [
+              "(1534648,4)",
+              6839368,
+              "42f272ca"
+            ],
+            [
+              "(1443595,1)",
+              6431109,
+              "42f21180"
+            ],
+            [
+              "(1547952,3)",
+              6898154,
+              "42f0e5a6"
+            ],
+            [
+              "(1833115,3)",
+              8144067,
+              "42f06b9e"
+            ],
+            [
+              "(1083371,2)",
+              4859108,
+              "42ef7016"
+            ],
+            [
+              "(77330,1)",
+              332003,
+              "42ef5ede"
+            ],
+            [
+              "(1632806,3)",
+              7274981,
+              "42ef5db7"
+            ],
+            [
+              "(1713846,2)",
+              7642555,
+              "42ee5d35"
+            ],
+            [
+              "(1698441,5)",
+              7573484,
+              "42ee4347"
+            ],
+            [
+              "(1621707,2)",
+              7225894,
+              "42eddbb7"
+            ],
+            [
+              "(1535778,3)",
+              6844423,
+              "42edc21e"
+            ],
+            [
+              "(1696744,5)",
+              7565897,
+              "42ed667f"
+            ],
+            [
+              "(1352245,4)",
+              6046033,
+              "42ed3cfd"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(26486,2)",
+              114846,
+              "42ecaed1"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(1414350,1)",
+              6308748,
+              "42ec0821"
+            ],
+            [
+              "(329348,1)",
+              1456862,
+              "42eb7742"
+            ],
+            [
+              "(1698348,2)",
+              7573075,
+              "42eb1a99"
+            ],
+            [
+              "(6898,4)",
+              29140,
+              "42eaa064"
+            ],
+            [
+              "(1393054,3)",
+              6218533,
+              "42eaa04a"
+            ],
+            [
+              "(1277510,4)",
+              5719428,
+              "42ea9a57"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1416517,4)",
+              6317825,
+              "42ea4e03"
+            ],
+            [
+              "(1584043,4)",
+              7058524,
+              "42ea159c"
+            ],
+            [
+              "(542734,3)",
+              2400708,
+              "42e9e6a3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(1725355,2)",
+              7691713,
+              "42e8c956"
+            ],
+            [
+              "(1769251,6)",
+              7875919,
+              "42e8a8fc"
+            ],
+            [
+              "(1242720,3)",
+              5569280,
+              "42e886e7"
+            ],
+            [
+              "(179880,5)",
+              792857,
+              "42e867d3"
+            ],
+            [
+              "(1727529,1)",
+              7700828,
+              "42e86617"
+            ],
+            [
+              "(1316937,4)",
+              5888894,
+              "42e84c30"
+            ],
+            [
+              "(349266,4)",
+              1542165,
+              "42e7c53b"
+            ],
+            [
+              "(1531720,3)",
+              6826393,
+              "42e75b23"
+            ],
+            [
+              "(1538717,4)",
+              6857433,
+              "42e75410"
+            ],
+            [
+              "(1283186,3)",
+              5744097,
+              "42e75402"
+            ],
+            [
+              "(1790236,3)",
+              7963906,
+              "42e74cfe"
+            ],
+            [
+              "(1544027,1)",
+              6880783,
+              "42e73b90"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "156655771",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "2975254",
+            "accelerator_forward_row_reads": "10010",
+            "accelerator_forward_scratch_bytes": "13778589",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "2356781",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "10010",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2006",
+            "filtered_forward_allowed_b512_ranges": "16026",
+            "filtered_forward_allowed_b64_ranges": "117811",
+            "filtered_forward_allowed_b8_blocks": "694584",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "1026753",
+            "filtered_forward_allowed_b8_runs": "101468",
+            "filtered_forward_allowed_b8_span": "1026754",
+            "filtered_forward_bound_blocks_considered": "694560",
+            "filtered_forward_bound_blocks_scored": "2606",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "147130342",
+            "filtered_forward_bound_entries": "29412347",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "1525650257",
+            "filtered_forward_direct_work": "608232864",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "181681395",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "16330068602",
+            "filtered_forward_transpose_work": "57400751",
+            "memory_bytes": "14495375",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_bound",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 1,
+            "scope_resolved_predicates": 1,
+            "semantic_accelerator_forward_bounded": true,
+            "semantic_accelerator_query_bytes": "14324085",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 2572.7481378708035
+        }
+      ],
+      "completed": 3,
+      "concurrency": 1,
+      "expected_first_max_ms": 2000.0,
+      "expected_max_ms": 1000.0,
+      "expected_p95_max_ms": 2000.0,
+      "filter_oracle": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "native_allowed_documents": 2356781,
+            "passed": true,
+            "sql_allowed_documents": 2356781
+          },
+          {
+            "attempt": 2,
+            "native_allowed_documents": 2356781,
+            "passed": true,
+            "sql_allowed_documents": 2356781
+          },
+          {
+            "attempt": 3,
+            "native_allowed_documents": 2356781,
+            "passed": true,
+            "sql_allowed_documents": 2356781
+          }
+        ],
+        "passed": true
+      },
+      "first": {
+        "count": 1,
+        "max_ms": 644.427,
+        "mean_ms": 644.427,
+        "min_ms": 644.427,
+        "p50_ms": 644.427,
+        "p95_ms": 644.427
+      },
+      "first_ms": 644.427,
+      "name": "pubmed_broad_date",
+      "passed": true,
+      "result_stability": {
+        "attempts": 3,
+        "passed": true
+      },
+      "violations": 0,
+      "warm": {
+        "count": 2,
+        "max_ms": 664.368,
+        "mean_ms": 653.758,
+        "min_ms": 643.148,
+        "p50_ms": 653.758,
+        "p95_ms": 664.368
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 572.07,
+          "filter_oracle": {
+            "allowed_documents": 839154
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(77330,1)",
+              332003,
+              "42ef5ede"
+            ],
+            [
+              "(89663,1)",
+              387364,
+              "42ed798b"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(1393054,3)",
+              6218533,
+              "42eaa04a"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1416517,4)",
+              6317825,
+              "42ea4e03"
+            ],
+            [
+              "(542734,3)",
+              2400708,
+              "42e9e6a3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(179880,5)",
+              792857,
+              "42e867d3"
+            ],
+            [
+              "(1559056,1)",
+              6947289,
+              "42e71692"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e6a16e"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593b0"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4fbfd"
+            ],
+            [
+              "(466546,2)",
+              2065178,
+              "42e49b62"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e4574b"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bfa"
+            ],
+            [
+              "(205029,1)",
+              900867,
+              "42e3c837"
+            ],
+            [
+              "(1177805,1)",
+              5289229,
+              "42e3aa02"
+            ],
+            [
+              "(1197063,4)",
+              5374578,
+              "42e2df9b"
+            ],
+            [
+              "(946555,1)",
+              4246786,
+              "42e2c114"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1ce47"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c322"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a8b"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112b3"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f61"
+            ],
+            [
+              "(1129293,4)",
+              5058037,
+              "42e073cf"
+            ],
+            [
+              "(1158546,5)",
+              5191301,
+              "42e067b0"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c8"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0022a"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee06"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda9a"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6463"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4eeb"
+            ],
+            [
+              "(1448674,4)",
+              6452880,
+              "42df3f81"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a4"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a5"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42df026c"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc9c"
+            ],
+            [
+              "(673090,3)",
+              2985812,
+              "42dee21f"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba7"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259c"
+            ],
+            [
+              "(832571,1)",
+              3697628,
+              "42de1375"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8749"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd530c"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4cef"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "153661929",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "2078960",
+            "accelerator_forward_row_reads": "7357",
+            "accelerator_forward_scratch_bytes": "11276949",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "839154",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "7357",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2006",
+            "filtered_forward_allowed_b512_ranges": "15546",
+            "filtered_forward_allowed_b64_ranges": "102554",
+            "filtered_forward_allowed_b8_blocks": "381879",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "1026752",
+            "filtered_forward_allowed_b8_runs": "162945",
+            "filtered_forward_allowed_b8_span": "1026753",
+            "filtered_forward_bound_blocks_considered": "381858",
+            "filtered_forward_bound_blocks_scored": "2861",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "147130342",
+            "filtered_forward_bound_entries": "29412347",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "562951167",
+            "filtered_forward_direct_work": "215767349",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "180095501",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "16181176129",
+            "filtered_forward_transpose_work": "56899886",
+            "memory_bytes": "11993735",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_bound",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": true,
+            "semantic_accelerator_query_bytes": "11822445",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_partial_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 3114.363976055756
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 578.955,
+          "filter_oracle": {
+            "allowed_documents": 839154
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(77330,1)",
+              332003,
+              "42ef5ede"
+            ],
+            [
+              "(89663,1)",
+              387364,
+              "42ed798b"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(1393054,3)",
+              6218533,
+              "42eaa04a"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1416517,4)",
+              6317825,
+              "42ea4e03"
+            ],
+            [
+              "(542734,3)",
+              2400708,
+              "42e9e6a3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(179880,5)",
+              792857,
+              "42e867d3"
+            ],
+            [
+              "(1559056,1)",
+              6947289,
+              "42e71692"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e6a16e"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593b0"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4fbfd"
+            ],
+            [
+              "(466546,2)",
+              2065178,
+              "42e49b62"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e4574b"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bfa"
+            ],
+            [
+              "(205029,1)",
+              900867,
+              "42e3c837"
+            ],
+            [
+              "(1177805,1)",
+              5289229,
+              "42e3aa02"
+            ],
+            [
+              "(1197063,4)",
+              5374578,
+              "42e2df9b"
+            ],
+            [
+              "(946555,1)",
+              4246786,
+              "42e2c114"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1ce47"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c322"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a8b"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112b3"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f61"
+            ],
+            [
+              "(1129293,4)",
+              5058037,
+              "42e073cf"
+            ],
+            [
+              "(1158546,5)",
+              5191301,
+              "42e067b0"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c8"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0022a"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee06"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda9a"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6463"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4eeb"
+            ],
+            [
+              "(1448674,4)",
+              6452880,
+              "42df3f81"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a4"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a5"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42df026c"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc9c"
+            ],
+            [
+              "(673090,3)",
+              2985812,
+              "42dee21f"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba7"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259c"
+            ],
+            [
+              "(832571,1)",
+              3697628,
+              "42de1375"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8749"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd530c"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4cef"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "153661929",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "2078960",
+            "accelerator_forward_row_reads": "7357",
+            "accelerator_forward_scratch_bytes": "11276949",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "839154",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "7357",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2006",
+            "filtered_forward_allowed_b512_ranges": "15546",
+            "filtered_forward_allowed_b64_ranges": "102554",
+            "filtered_forward_allowed_b8_blocks": "381879",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "1026752",
+            "filtered_forward_allowed_b8_runs": "162945",
+            "filtered_forward_allowed_b8_span": "1026753",
+            "filtered_forward_bound_blocks_considered": "381858",
+            "filtered_forward_bound_blocks_scored": "2861",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "147130342",
+            "filtered_forward_bound_entries": "29412347",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "562951167",
+            "filtered_forward_direct_work": "215767349",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "180095501",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "16181176129",
+            "filtered_forward_transpose_work": "56899886",
+            "memory_bytes": "11993735",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_bound",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": true,
+            "semantic_accelerator_query_bytes": "11822445",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_partial_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 3018.9652720000595
+        },
+        {
+          "attempt": 3,
+          "elapsed_ms": 588.917,
+          "filter_oracle": {
+            "allowed_documents": 839154
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(1130145,1)",
+              5061569,
+              "42f994cf"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(77330,1)",
+              332003,
+              "42ef5ede"
+            ],
+            [
+              "(89663,1)",
+              387364,
+              "42ed798b"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(1393054,3)",
+              6218533,
+              "42eaa04a"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1416517,4)",
+              6317825,
+              "42ea4e03"
+            ],
+            [
+              "(542734,3)",
+              2400708,
+              "42e9e6a3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(179880,5)",
+              792857,
+              "42e867d3"
+            ],
+            [
+              "(1559056,1)",
+              6947289,
+              "42e71692"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e6a16e"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593b0"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4fbfd"
+            ],
+            [
+              "(466546,2)",
+              2065178,
+              "42e49b62"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e4574b"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bfa"
+            ],
+            [
+              "(205029,1)",
+              900867,
+              "42e3c837"
+            ],
+            [
+              "(1177805,1)",
+              5289229,
+              "42e3aa02"
+            ],
+            [
+              "(1197063,4)",
+              5374578,
+              "42e2df9b"
+            ],
+            [
+              "(946555,1)",
+              4246786,
+              "42e2c114"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1ce47"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c322"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a8b"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112b3"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f61"
+            ],
+            [
+              "(1129293,4)",
+              5058037,
+              "42e073cf"
+            ],
+            [
+              "(1158546,5)",
+              5191301,
+              "42e067b0"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c8"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0022a"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee06"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda9a"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6463"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4eeb"
+            ],
+            [
+              "(1448674,4)",
+              6452880,
+              "42df3f81"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a4"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a5"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42df026c"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc9c"
+            ],
+            [
+              "(673090,3)",
+              2985812,
+              "42dee21f"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba7"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259c"
+            ],
+            [
+              "(832571,1)",
+              3697628,
+              "42de1375"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8749"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd530c"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4cef"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "153661929",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "2078960",
+            "accelerator_forward_row_reads": "7357",
+            "accelerator_forward_scratch_bytes": "11276949",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "839154",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "7357",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2006",
+            "filtered_forward_allowed_b512_ranges": "15546",
+            "filtered_forward_allowed_b64_ranges": "102554",
+            "filtered_forward_allowed_b8_blocks": "381879",
+            "filtered_forward_allowed_b8_first": "0",
+            "filtered_forward_allowed_b8_last": "1026752",
+            "filtered_forward_allowed_b8_runs": "162945",
+            "filtered_forward_allowed_b8_span": "1026753",
+            "filtered_forward_bound_blocks_considered": "381858",
+            "filtered_forward_bound_blocks_scored": "2861",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "147130342",
+            "filtered_forward_bound_entries": "29412347",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "562951167",
+            "filtered_forward_direct_work": "215767349",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "180095501",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "16181176129",
+            "filtered_forward_transpose_work": "56899886",
+            "memory_bytes": "11993735",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_bound",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "0",
+            "scope_ilike_blocks_skipped": "0",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "0",
+            "scope_ilike_values": 0,
+            "scope_ilike_values_examined": "0",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": true,
+            "semantic_accelerator_query_bytes": "11822445",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_partial_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 3046.2700698990375
+        }
+      ],
+      "completed": 3,
+      "concurrency": 1,
+      "expected_first_max_ms": 2000.0,
+      "expected_max_ms": 1000.0,
+      "expected_p95_max_ms": 2000.0,
+      "filter_oracle": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "native_allowed_documents": 839154,
+            "passed": true,
+            "sql_allowed_documents": 839154
+          },
+          {
+            "attempt": 2,
+            "native_allowed_documents": 839154,
+            "passed": true,
+            "sql_allowed_documents": 839154
+          },
+          {
+            "attempt": 3,
+            "native_allowed_documents": 839154,
+            "passed": true,
+            "sql_allowed_documents": 839154
+          }
+        ],
+        "passed": true
+      },
+      "first": {
+        "count": 1,
+        "max_ms": 572.07,
+        "mean_ms": 572.07,
+        "min_ms": 572.07,
+        "p50_ms": 572.07,
+        "p95_ms": 572.07
+      },
+      "first_ms": 572.07,
+      "name": "pubmed_partial_date",
+      "passed": true,
+      "result_stability": {
+        "attempts": 3,
+        "passed": true
+      },
+      "violations": 0,
+      "warm": {
+        "count": 2,
+        "max_ms": 588.917,
+        "mean_ms": 583.936,
+        "min_ms": 578.955,
+        "p50_ms": 583.936,
+        "p95_ms": 588.917
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 499.288,
+          "filter_oracle": {
+            "allowed_documents": 51033
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e6a16e"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593b0"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4fbfd"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e4574b"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bfa"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1ce47"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c322"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a8b"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112b3"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f61"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c8"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0022a"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee06"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda9a"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6463"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4eeb"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a4"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a5"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42df026c"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc9c"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba7"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259c"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8749"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd530c"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4cef"
+            ],
+            [
+              "(1324829,3)",
+              5923227,
+              "42dceff9"
+            ],
+            [
+              "(564029,5)",
+              2490353,
+              "42dc5911"
+            ],
+            [
+              "(1412022,2)",
+              6298998,
+              "42dc50e6"
+            ],
+            [
+              "(444713,1)",
+              1955279,
+              "42dc3c68"
+            ],
+            [
+              "(592308,4)",
+              2621593,
+              "42dc1a55"
+            ],
+            [
+              "(1405218,3)",
+              6270223,
+              "42db9fa8"
+            ],
+            [
+              "(899126,4)",
+              4039402,
+              "42db45ee"
+            ],
+            [
+              "(1397678,4)",
+              6238236,
+              "42db0d0d"
+            ],
+            [
+              "(56954,3)",
+              245189,
+              "42dad523"
+            ],
+            [
+              "(1598584,2)",
+              7123069,
+              "42da7ae7"
+            ],
+            [
+              "(400327,1)",
+              1761904,
+              "42da2c98"
+            ],
+            [
+              "(491029,4)",
+              2177202,
+              "42da2428"
+            ],
+            [
+              "(1002686,4)",
+              4491960,
+              "42d9f12f"
+            ],
+            [
+              "(207311,4)",
+              910872,
+              "42d9d8f5"
+            ],
+            [
+              "(1737290,4)",
+              7741683,
+              "42d9cee6"
+            ],
+            [
+              "(12265,3)",
+              52396,
+              "42d9bebc"
+            ],
+            [
+              "(1061903,2)",
+              4769318,
+              "42d964b2"
+            ],
+            [
+              "(582462,4)",
+              2574139,
+              "42d90d24"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "64651645",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "14500417",
+            "accelerator_forward_row_reads": "51033",
+            "accelerator_forward_scratch_bytes": "6408",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "51033",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "51033",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2004",
+            "filtered_forward_allowed_b512_ranges": "11398",
+            "filtered_forward_allowed_b64_ranges": "28621",
+            "filtered_forward_allowed_b8_blocks": "45860",
+            "filtered_forward_allowed_b8_first": "10",
+            "filtered_forward_allowed_b8_last": "1026693",
+            "filtered_forward_allowed_b8_runs": "36863",
+            "filtered_forward_allowed_b8_span": "1026684",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "61343368",
+            "filtered_forward_direct_work": "13279037",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "156087019",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "13999916216",
+            "filtered_forward_transpose_work": "49314677",
+            "memory_bytes": "723194",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "19372",
+            "scope_ilike_blocks_skipped": "8448",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "370259",
+            "scope_ilike_values": 4958998,
+            "scope_ilike_values_examined": "370259",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "551904",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_date_category",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 4687.833009986207
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 541.888,
+          "filter_oracle": {
+            "allowed_documents": 51033
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e6a16e"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593b0"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4fbfd"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e4574b"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bfa"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1ce47"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c322"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a8b"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112b3"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f61"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c8"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0022a"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee06"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda9a"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6463"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4eeb"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a4"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a5"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42df026c"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc9c"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba7"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259c"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8749"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd530c"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4cef"
+            ],
+            [
+              "(1324829,3)",
+              5923227,
+              "42dceff9"
+            ],
+            [
+              "(564029,5)",
+              2490353,
+              "42dc5911"
+            ],
+            [
+              "(1412022,2)",
+              6298998,
+              "42dc50e6"
+            ],
+            [
+              "(444713,1)",
+              1955279,
+              "42dc3c68"
+            ],
+            [
+              "(592308,4)",
+              2621593,
+              "42dc1a55"
+            ],
+            [
+              "(1405218,3)",
+              6270223,
+              "42db9fa8"
+            ],
+            [
+              "(899126,4)",
+              4039402,
+              "42db45ee"
+            ],
+            [
+              "(1397678,4)",
+              6238236,
+              "42db0d0d"
+            ],
+            [
+              "(56954,3)",
+              245189,
+              "42dad523"
+            ],
+            [
+              "(1598584,2)",
+              7123069,
+              "42da7ae7"
+            ],
+            [
+              "(400327,1)",
+              1761904,
+              "42da2c98"
+            ],
+            [
+              "(491029,4)",
+              2177202,
+              "42da2428"
+            ],
+            [
+              "(1002686,4)",
+              4491960,
+              "42d9f12f"
+            ],
+            [
+              "(207311,4)",
+              910872,
+              "42d9d8f5"
+            ],
+            [
+              "(1737290,4)",
+              7741683,
+              "42d9cee6"
+            ],
+            [
+              "(12265,3)",
+              52396,
+              "42d9bebc"
+            ],
+            [
+              "(1061903,2)",
+              4769318,
+              "42d964b2"
+            ],
+            [
+              "(582462,4)",
+              2574139,
+              "42d90d24"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "64651645",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "14500417",
+            "accelerator_forward_row_reads": "51033",
+            "accelerator_forward_scratch_bytes": "6408",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "51033",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "51033",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2004",
+            "filtered_forward_allowed_b512_ranges": "11398",
+            "filtered_forward_allowed_b64_ranges": "28621",
+            "filtered_forward_allowed_b8_blocks": "45860",
+            "filtered_forward_allowed_b8_first": "10",
+            "filtered_forward_allowed_b8_last": "1026693",
+            "filtered_forward_allowed_b8_runs": "36863",
+            "filtered_forward_allowed_b8_span": "1026684",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "61343368",
+            "filtered_forward_direct_work": "13279037",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "156087019",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "13999916216",
+            "filtered_forward_transpose_work": "49314677",
+            "memory_bytes": "723194",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "19372",
+            "scope_ilike_blocks_skipped": "8448",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "370259",
+            "scope_ilike_values": 4958998,
+            "scope_ilike_values_examined": "370259",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "551904",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_date_category",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 4760.71202987805
+        },
+        {
+          "attempt": 3,
+          "elapsed_ms": 520.881,
+          "filter_oracle": {
+            "allowed_documents": 51033
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c7"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d24"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a23c"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93d"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806e"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd7"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92edc"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e6a16e"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593b0"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4fbfd"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e4574b"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bfa"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1ce47"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c322"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a8b"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112b3"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f61"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c8"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0022a"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee06"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda9a"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6463"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4eeb"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a4"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a5"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42df026c"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc9c"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba7"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259c"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8749"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd530c"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4cef"
+            ],
+            [
+              "(1324829,3)",
+              5923227,
+              "42dceff9"
+            ],
+            [
+              "(564029,5)",
+              2490353,
+              "42dc5911"
+            ],
+            [
+              "(1412022,2)",
+              6298998,
+              "42dc50e6"
+            ],
+            [
+              "(444713,1)",
+              1955279,
+              "42dc3c68"
+            ],
+            [
+              "(592308,4)",
+              2621593,
+              "42dc1a55"
+            ],
+            [
+              "(1405218,3)",
+              6270223,
+              "42db9fa8"
+            ],
+            [
+              "(899126,4)",
+              4039402,
+              "42db45ee"
+            ],
+            [
+              "(1397678,4)",
+              6238236,
+              "42db0d0d"
+            ],
+            [
+              "(56954,3)",
+              245189,
+              "42dad523"
+            ],
+            [
+              "(1598584,2)",
+              7123069,
+              "42da7ae7"
+            ],
+            [
+              "(400327,1)",
+              1761904,
+              "42da2c98"
+            ],
+            [
+              "(491029,4)",
+              2177202,
+              "42da2428"
+            ],
+            [
+              "(1002686,4)",
+              4491960,
+              "42d9f12f"
+            ],
+            [
+              "(207311,4)",
+              910872,
+              "42d9d8f5"
+            ],
+            [
+              "(1737290,4)",
+              7741683,
+              "42d9cee6"
+            ],
+            [
+              "(12265,3)",
+              52396,
+              "42d9bebc"
+            ],
+            [
+              "(1061903,2)",
+              4769318,
+              "42d964b2"
+            ],
+            [
+              "(582462,4)",
+              2574139,
+              "42d90d24"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_candidate_scratch_bytes": "0",
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "64651645",
+            "accelerator_forward_chunk_reads": "0",
+            "accelerator_forward_postings_examined": "14500417",
+            "accelerator_forward_row_reads": "51033",
+            "accelerator_forward_scratch_bytes": "6408",
+            "accelerator_membership_bytes": "32088",
+            "accelerator_owned_index_bytes": "513408",
+            "accelerator_residual_documents": "0",
+            "accelerator_residual_postings": "0",
+            "accelerator_residual_scratch_bytes": "0",
+            "allowed_documents": "51033",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "document_block_reads": "0",
+            "documents_examined": "51033",
+            "filter_probe_attempted": false,
+            "filter_probe_complete": false,
+            "filter_probe_rows": "0",
+            "filtered_bmp_allowed_blocks": "0",
+            "filtered_bmp_allowed_superblocks": "0",
+            "filtered_bmp_matching_ref_count": "0",
+            "filtered_bmp_matching_super_ref_count": "0",
+            "filtered_forward_allowed_b4096_ranges": "2004",
+            "filtered_forward_allowed_b512_ranges": "11398",
+            "filtered_forward_allowed_b64_ranges": "28621",
+            "filtered_forward_allowed_b8_blocks": "45860",
+            "filtered_forward_allowed_b8_first": "10",
+            "filtered_forward_allowed_b8_last": "1026693",
+            "filtered_forward_allowed_b8_runs": "36863",
+            "filtered_forward_allowed_b8_span": "1026684",
+            "filtered_forward_bound_blocks_considered": "0",
+            "filtered_forward_bound_blocks_scored": "0",
+            "filtered_forward_bound_budget_exceeded": false,
+            "filtered_forward_bound_bytes": "0",
+            "filtered_forward_bound_entries": "0",
+            "filtered_forward_bound_estimated_bytes": "147130342",
+            "filtered_forward_bound_probe_fallback": false,
+            "filtered_forward_direct_estimated_bytes": "61343368",
+            "filtered_forward_direct_work": "13279037",
+            "filtered_forward_transpose_budget_exceeded": false,
+            "filtered_forward_transpose_estimated_bytes": "156087019",
+            "filtered_forward_transpose_lane_bytes": "541696",
+            "filtered_forward_transpose_planning_bytes": "3958128",
+            "filtered_forward_transpose_stream_bytes": "13999916216",
+            "filtered_forward_transpose_work": "49314677",
+            "memory_bytes": "723194",
+            "positive_document_count": "50",
+            "posting_block_metadata_reads": "0",
+            "posting_block_reads": "0",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "query_run_count": 0,
+            "query_term_count": 84,
+            "ranked_prefix_probe_attempts": 0,
+            "ranked_prefix_probe_directory_term_count": 0,
+            "ranked_prefix_probe_documents_examined": "0",
+            "ranked_prefix_probe_fallback": false,
+            "ranked_prefix_probe_matched_term_count": 0,
+            "ranked_prefix_probe_memory_bytes": "0",
+            "ranked_prefix_probe_postings_examined": "0",
+            "ranked_prefix_probe_query_term_count": 0,
+            "scope_ilike_blocks_considered": "19372",
+            "scope_ilike_blocks_skipped": "8448",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "370259",
+            "scope_ilike_values": 4958998,
+            "scope_ilike_values_examined": "370259",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "semantic_accelerator_forward_bounded": false,
+            "semantic_accelerator_query_bytes": "551904",
+            "semantic_accelerator_residual_dense_accumulation": false,
+            "semantic_bmp_direct_flat_filtered": false,
+            "semantic_bmp_filtered_sequential_scans": "0",
+            "semantic_bmp_postings_examined": "0",
+            "semantic_bmp_query_bytes": "0",
+            "semantic_bmp_query_super_ref_count": "0",
+            "semantic_bmp_record_reads": "0",
+            "semantic_bmp_ref_reads": "0",
+            "semantic_bmp_super_ref_reads": "0",
+            "sql_filter_residual": false,
+            "visibility_rank_attempts": 1,
+            "zero_score_cow_objects_loaded": "0",
+            "zero_score_cow_records_examined": "0",
+            "zero_score_documents_added": "0",
+            "zero_score_heap_peak": "0"
+          },
+          "name": "pubmed_date_category",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 4683.001434896141
+        }
+      ],
+      "completed": 3,
+      "concurrency": 1,
+      "expected_first_max_ms": 2000.0,
+      "expected_max_ms": 500.0,
+      "expected_p95_max_ms": 1000.0,
+      "filter_oracle": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "native_allowed_documents": 51033,
+            "passed": true,
+            "sql_allowed_documents": 51033
+          },
+          {
+            "attempt": 2,
+            "native_allowed_documents": 51033,
+            "passed": true,
+            "sql_allowed_documents": 51033
+          },
+          {
+            "attempt": 3,
+            "native_allowed_documents": 51033,
+            "passed": true,
+            "sql_allowed_documents": 51033
+          }
+        ],
+        "passed": true
+      },
+      "first": {
+        "count": 1,
+        "max_ms": 499.288,
+        "mean_ms": 499.288,
+        "min_ms": 499.288,
+        "p50_ms": 499.288,
+        "p95_ms": 499.288
+      },
+      "first_ms": 499.288,
+      "name": "pubmed_date_category",
+      "passed": false,
+      "result_stability": {
+        "attempts": 3,
+        "passed": true
+      },
+      "violations": 0,
+      "warm": {
+        "count": 2,
+        "max_ms": 541.888,
+        "mean_ms": 531.3845,
+        "min_ms": 520.881,
+        "p50_ms": 531.3845,
+        "p95_ms": 541.888
+      }
+    }
+  ],
+  "concurrency": 1,
+  "contract_version": 10,
+  "environment": {
+    "captured_at_epoch": 1787716967.261765,
+    "catalog_contract": {
+      "available_version": "0.2.4",
+      "c_module_path_current": true,
+      "c_module_paths": [
+        "$libdir/ii42"
+      ],
+      "catalog_identity": "ii42_catalog_v1",
+      "extension_schema": "public",
+      "installed_version": "0.2.4",
+      "required_functions": {
+        "ii42_catalog_contract_internal()": true,
+        "ii42_index_generation_status_internal(regclass)": true,
+        "ii42_index_runtime_state_json(regclass)": true,
+        "ii42_query_trace_internal()": true
+      },
+      "versions_match": true
+    },
+    "catalog_qualified": true,
+    "database": "ii_dev",
+    "extension_version": "0.2.4",
+    "filter_stats": {
+      "data_arxiv": [
+        "categories",
+        "organizations",
+        "publish_date"
+      ],
+      "data_policy_ca_chunks": [
+        "policy_ca_doc_id"
+      ],
+      "data_policy_tx": [
+        "publish_date"
+      ],
+      "data_policy_tx_chunks": [
+        "policy_tx_doc_id"
+      ],
+      "data_policy_wa_chunks": [
+        "policy_wa_doc_id"
+      ],
+      "data_pubmed": [
+        "categories",
+        "journal_title",
+        "nlm_ta",
+        "publish_date",
+        "publish_date_end_bound",
+        "publish_date_has_day",
+        "publish_date_start_bound"
+      ],
+      "sys_chunks": [
+        "document_id"
+      ]
+    },
+    "generated_columns": {
+      "publish_date_end_bound": {
+        "expression": "\nCASE\n    WHEN (((publish_date / 100) % 100) = 0) THEN (((publish_date / 10000) * 10000) + 1231)\n    WHEN ((publish_date % 100) = 0) THEN (((publish_date / 100) * 100) + 31)\n    ELSE publish_date\nEND",
+        "generated": "s",
+        "type": "integer"
+      },
+      "publish_date_has_day": {
+        "expression": "((publish_date % 100) <> 0)",
+        "generated": "s",
+        "type": "boolean"
+      },
+      "publish_date_start_bound": {
+        "expression": "\nCASE\n    WHEN (((publish_date / 100) % 100) = 0) THEN (((publish_date / 10000) * 10000) + 101)\n    WHEN ((publish_date % 100) = 0) THEN (((publish_date / 100) * 100) + 1)\n    ELSE publish_date\nEND",
+        "generated": "s",
+        "type": "integer"
+      }
+    },
+    "generation_qualified": true,
+    "indexes": {
+      "commons.data_arxiv__title_abstract__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 90,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036811/1/2156",
+        "health": "ok",
+        "query_metadata_warm": true,
+        "query_warm": true,
+        "query_warm_marker_valid": true,
+        "query_warm_pages": 11722,
+        "query_warm_state": "metadata_only",
+        "resident_fold_current": false,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": true,
+        "scope_version": 6,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_policy_ca__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 50,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036809/1/2051",
+        "health": "ok",
+        "query_metadata_warm": false,
+        "query_warm": true,
+        "query_warm_marker_valid": false,
+        "query_warm_pages": 0,
+        "query_warm_state": "resident",
+        "resident_fold_current": true,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": false,
+        "scope_version": 0,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_policy_ca_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 80,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036812/1/2213",
+        "health": "ok",
+        "query_metadata_warm": true,
+        "query_warm": true,
+        "query_warm_marker_valid": true,
+        "query_warm_pages": 13552,
+        "query_warm_state": "metadata_only",
+        "resident_fold_current": false,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": true,
+        "scope_version": 6,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_policy_tx__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 30,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036806/1/2051",
+        "health": "ok",
+        "query_metadata_warm": false,
+        "query_warm": true,
+        "query_warm_marker_valid": false,
+        "query_warm_pages": 0,
+        "query_warm_state": "resident",
+        "resident_fold_current": true,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": false,
+        "scope_version": 0,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_policy_tx_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 80,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036807/1/2062",
+        "health": "ok",
+        "query_metadata_warm": true,
+        "query_warm": true,
+        "query_warm_marker_valid": true,
+        "query_warm_pages": 861,
+        "query_warm_state": "metadata_only",
+        "resident_fold_current": false,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": true,
+        "scope_version": 6,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_policy_wa__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 40,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036808/1/2051",
+        "health": "ok",
+        "query_metadata_warm": false,
+        "query_warm": true,
+        "query_warm_marker_valid": false,
+        "query_warm_pages": 0,
+        "query_warm_state": "resident",
+        "resident_fold_current": true,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": false,
+        "scope_version": 0,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_policy_wa_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 80,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036810/1/2143",
+        "health": "ok",
+        "query_metadata_warm": true,
+        "query_warm": true,
+        "query_warm_marker_valid": true,
+        "query_warm_pages": 8375,
+        "query_warm_state": "metadata_only",
+        "resident_fold_current": false,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": true,
+        "scope_version": 6,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.data_pubmed__title_abstract__current_next_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 100,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036813/1/2440",
+        "health": "ok",
+        "query_metadata_warm": true,
+        "query_warm": true,
+        "query_warm_marker_valid": true,
+        "query_warm_pages": 49086,
+        "query_warm_state": "metadata_only",
+        "resident_fold_current": false,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": true,
+        "scope_version": 6,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      },
+      "commons.sys_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "auto_preload_priority": 20,
+        "builder_policy_id": 7,
+        "document_tid_lookup_entries": 9,
+        "forward_complete": true,
+        "generation_id": "57036804/1/2052",
+        "health": "ok",
+        "query_metadata_warm": false,
+        "query_warm": true,
+        "query_warm_marker_valid": false,
+        "query_warm_pages": 0,
+        "query_warm_state": "resident",
+        "resident_fold_current": true,
+        "resident_fold_loading": false,
+        "runtime_contract_matches": true,
+        "scope_current": true,
+        "scope_present": true,
+        "scope_version": 6,
+        "shared_preload_available": true,
+        "shared_preload_loading": false,
+        "shared_preload_resident": true,
+        "valid": true,
+        "warm_expected": true
+      }
+    },
+    "onnxruntime_contract": {
+      "build_info": "enabled:api=29",
+      "expected_build_info": "enabled:api=29",
+      "expected_version": "1.29.0",
+      "probe": "available:linked:version=1.29.0",
+      "qualified": true
+    },
+    "onnxruntime_qualified": true,
+    "planner_capture_qualified": true,
+    "planner_health": {
+      "qualified": true,
+      "reasons": []
+    },
+    "planner_plans": {
+      "pubmed_broad_date": {
+        "nodes": [
+          {
+            "Alias": "source",
+            "Filter": "((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text))",
+            "Node Type": "Bitmap Heap Scan",
+            "Plan Rows": 2338604,
+            "Recheck Cond": "(publish_date >= 20240101)",
+            "Relation Name": "data_pubmed",
+            "Total Cost": 1624290.53
+          },
+          {
+            "Index Cond": "(publish_date >= 20240101)",
+            "Index Name": "data_pubmed__publish_date__idx",
+            "Node Type": "Bitmap Index Scan",
+            "Plan Rows": 2338663,
+            "Total Cost": 19992.0
+          }
+        ],
+        "raw": [
+          {
+            "Plan": {
+              "Alias": "source",
+              "Async Capable": false,
+              "Disabled": false,
+              "Filter": "((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text))",
+              "Node Type": "Bitmap Heap Scan",
+              "Parallel Aware": false,
+              "Plan Rows": 2338604,
+              "Plan Width": 6,
+              "Plans": [
+                {
+                  "Async Capable": false,
+                  "Disabled": false,
+                  "Index Cond": "(publish_date >= 20240101)",
+                  "Index Name": "data_pubmed__publish_date__idx",
+                  "Node Type": "Bitmap Index Scan",
+                  "Parallel Aware": false,
+                  "Parent Relationship": "Outer",
+                  "Plan Rows": 2338663,
+                  "Plan Width": 0,
+                  "Startup Cost": 0.0,
+                  "Total Cost": 19992.0
+                }
+              ],
+              "Recheck Cond": "(publish_date >= 20240101)",
+              "Relation Name": "data_pubmed",
+              "Startup Cost": 20576.66,
+              "Total Cost": 1624290.53
+            },
+            "Settings": {
+              "effective_cache_size": "160GB",
+              "effective_io_concurrency": "256",
+              "jit": "off",
+              "maintenance_io_concurrency": "256",
+              "max_parallel_workers": "24",
+              "max_parallel_workers_per_gather": "4",
+              "random_page_cost": "1.2",
+              "work_mem": "64MB"
+            }
+          }
+        ]
+      },
+      "pubmed_date_category": {
+        "nodes": [
+          {
+            "Alias": "source",
+            "Filter": "(((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text)) AND EXISTS(SubPlan 1))",
+            "Node Type": "Bitmap Heap Scan",
+            "Plan Rows": 407169,
+            "Recheck Cond": "((publish_date >= 20240101) AND (publish_date <= 20241231))",
+            "Relation Name": "data_pubmed",
+            "Total Cost": 854040.44
+          },
+          {
+            "Index Cond": "((publish_date >= 20240101) AND (publish_date <= 20241231))",
+            "Index Name": "data_pubmed__publish_date__idx",
+            "Node Type": "Bitmap Index Scan",
+            "Plan Rows": 814358,
+            "Total Cost": 8998.41
+          },
+          {
+            "Alias": "item",
+            "Filter": "(value ~~* '%cancer%'::text)",
+            "Node Type": "Function Scan",
+            "Plan Rows": 1,
+            "Total Cost": 0.13
+          }
+        ],
+        "raw": [
+          {
+            "Plan": {
+              "Alias": "source",
+              "Async Capable": false,
+              "Disabled": false,
+              "Filter": "(((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text)) AND EXISTS(SubPlan 1))",
+              "Node Type": "Bitmap Heap Scan",
+              "Parallel Aware": false,
+              "Plan Rows": 407169,
+              "Plan Width": 6,
+              "Plans": [
+                {
+                  "Async Capable": false,
+                  "Disabled": false,
+                  "Index Cond": "((publish_date >= 20240101) AND (publish_date <= 20241231))",
+                  "Index Name": "data_pubmed__publish_date__idx",
+                  "Node Type": "Bitmap Index Scan",
+                  "Parallel Aware": false,
+                  "Parent Relationship": "Outer",
+                  "Plan Rows": 814358,
+                  "Plan Width": 0,
+                  "Startup Cost": 0.0,
+                  "Total Cost": 8998.41
+                },
+                {
+                  "Alias": "item",
+                  "Async Capable": false,
+                  "Disabled": false,
+                  "Filter": "(value ~~* '%cancer%'::text)",
+                  "Function Name": "unnest",
+                  "Node Type": "Function Scan",
+                  "Parallel Aware": false,
+                  "Parent Relationship": "SubPlan",
+                  "Plan Rows": 1,
+                  "Plan Width": 0,
+                  "Startup Cost": 0.0,
+                  "Subplan Name": "SubPlan 1",
+                  "Total Cost": 0.13
+                }
+              ],
+              "Recheck Cond": "((publish_date >= 20240101) AND (publish_date <= 20241231))",
+              "Relation Name": "data_pubmed",
+              "Startup Cost": 9100.2,
+              "Total Cost": 854040.44
+            },
+            "Settings": {
+              "effective_cache_size": "160GB",
+              "effective_io_concurrency": "256",
+              "jit": "off",
+              "maintenance_io_concurrency": "256",
+              "max_parallel_workers": "24",
+              "max_parallel_workers_per_gather": "4",
+              "random_page_cost": "1.2",
+              "work_mem": "64MB"
+            }
+          }
+        ]
+      },
+      "pubmed_date_journal": {
+        "nodes": [
+          {
+            "Alias": "source",
+            "Filter": "((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text))",
+            "Node Type": "Bitmap Heap Scan",
+            "Plan Rows": 22590,
+            "Recheck Cond": "(((journal_title)::text ~~* '%nature%'::text) AND (publish_date >= 20240101))",
+            "Relation Name": "data_pubmed",
+            "Total Cost": 47470.87
+          },
+          {
+            "Node Type": "BitmapAnd",
+            "Plan Rows": 22590,
+            "Total Cost": 20457.26
+          },
+          {
+            "Index Cond": "((journal_title)::text ~~* '%nature%'::text)",
+            "Index Name": "data_pubmed__journal_title__trgm_idx",
+            "Node Type": "Bitmap Index Scan",
+            "Plan Rows": 79351,
+            "Total Cost": 453.71
+          },
+          {
+            "Index Cond": "(publish_date >= 20240101)",
+            "Index Name": "data_pubmed__publish_date__idx",
+            "Node Type": "Bitmap Index Scan",
+            "Plan Rows": 2338663,
+            "Total Cost": 19992.0
+          }
+        ],
+        "raw": [
+          {
+            "Plan": {
+              "Alias": "source",
+              "Async Capable": false,
+              "Disabled": false,
+              "Filter": "((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text))",
+              "Node Type": "Bitmap Heap Scan",
+              "Parallel Aware": false,
+              "Plan Rows": 22590,
+              "Plan Width": 6,
+              "Plans": [
+                {
+                  "Async Capable": false,
+                  "Disabled": false,
+                  "Node Type": "BitmapAnd",
+                  "Parallel Aware": false,
+                  "Parent Relationship": "Outer",
+                  "Plan Rows": 22590,
+                  "Plan Width": 0,
+                  "Plans": [
+                    {
+                      "Async Capable": false,
+                      "Disabled": false,
+                      "Index Cond": "((journal_title)::text ~~* '%nature%'::text)",
+                      "Index Name": "data_pubmed__journal_title__trgm_idx",
+                      "Node Type": "Bitmap Index Scan",
+                      "Parallel Aware": false,
+                      "Parent Relationship": "Member",
+                      "Plan Rows": 79351,
+                      "Plan Width": 0,
+                      "Startup Cost": 0.0,
+                      "Total Cost": 453.71
+                    },
+                    {
+                      "Async Capable": false,
+                      "Disabled": false,
+                      "Index Cond": "(publish_date >= 20240101)",
+                      "Index Name": "data_pubmed__publish_date__idx",
+                      "Node Type": "Bitmap Index Scan",
+                      "Parallel Aware": false,
+                      "Parent Relationship": "Member",
+                      "Plan Rows": 2338663,
+                      "Plan Width": 0,
+                      "Startup Cost": 0.0,
+                      "Total Cost": 19992.0
+                    }
+                  ],
+                  "Startup Cost": 20457.26,
+                  "Total Cost": 20457.26
+                }
+              ],
+              "Recheck Cond": "(((journal_title)::text ~~* '%nature%'::text) AND (publish_date >= 20240101))",
+              "Relation Name": "data_pubmed",
+              "Startup Cost": 20457.26,
+              "Total Cost": 47470.87
+            },
+            "Settings": {
+              "effective_cache_size": "160GB",
+              "effective_io_concurrency": "256",
+              "jit": "off",
+              "maintenance_io_concurrency": "256",
+              "max_parallel_workers": "24",
+              "max_parallel_workers_per_gather": "4",
+              "random_page_cost": "1.2",
+              "work_mem": "64MB"
+            }
+          }
+        ]
+      },
+      "pubmed_partial_date": {
+        "nodes": [
+          {
+            "Alias": "source",
+            "Filter": "((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text))",
+            "Node Type": "Bitmap Heap Scan",
+            "Plan Rows": 1891444,
+            "Recheck Cond": "((publish_date_end_bound >= 20240101) AND (publish_date_start_bound <= 20241231))",
+            "Relation Name": "data_pubmed",
+            "Total Cost": 1512860.98
+          },
+          {
+            "Node Type": "BitmapAnd",
+            "Plan Rows": 1891491,
+            "Total Cost": 77687.52
+          },
+          {
+            "Index Cond": "(publish_date_end_bound >= 20240101)",
+            "Index Name": "data_pubmed__publish_date_end_bound__idx",
+            "Node Type": "Bitmap Index Scan",
+            "Plan Rows": 2340730,
+            "Total Cost": 20007.51
+          },
+          {
+            "Index Cond": "(publish_date_start_bound <= 20241231)",
+            "Index Name": "data_pubmed__publish_date_start_bound__idx",
+            "Node Type": "Bitmap Index Scan",
+            "Plan Rows": 6638241,
+            "Total Cost": 56734.04
+          }
+        ],
+        "raw": [
+          {
+            "Plan": {
+              "Alias": "source",
+              "Async Capable": false,
+              "Disabled": false,
+              "Filter": "((btrim(COALESCE(title, ''::text)) <> ''::text) OR (btrim(COALESCE(abstract, ''::text)) <> ''::text))",
+              "Node Type": "Bitmap Heap Scan",
+              "Parallel Aware": false,
+              "Plan Rows": 1891444,
+              "Plan Width": 6,
+              "Plans": [
+                {
+                  "Async Capable": false,
+                  "Disabled": false,
+                  "Node Type": "BitmapAnd",
+                  "Parallel Aware": false,
+                  "Parent Relationship": "Outer",
+                  "Plan Rows": 1891491,
+                  "Plan Width": 0,
+                  "Plans": [
+                    {
+                      "Async Capable": false,
+                      "Disabled": false,
+                      "Index Cond": "(publish_date_end_bound >= 20240101)",
+                      "Index Name": "data_pubmed__publish_date_end_bound__idx",
+                      "Node Type": "Bitmap Index Scan",
+                      "Parallel Aware": false,
+                      "Parent Relationship": "Member",
+                      "Plan Rows": 2340730,
+                      "Plan Width": 0,
+                      "Startup Cost": 0.0,
+                      "Total Cost": 20007.51
+                    },
+                    {
+                      "Async Capable": false,
+                      "Disabled": false,
+                      "Index Cond": "(publish_date_start_bound <= 20241231)",
+                      "Index Name": "data_pubmed__publish_date_start_bound__idx",
+                      "Node Type": "Bitmap Index Scan",
+                      "Parallel Aware": false,
+                      "Parent Relationship": "Member",
+                      "Plan Rows": 6638241,
+                      "Plan Width": 0,
+                      "Startup Cost": 0.0,
+                      "Total Cost": 56734.04
+                    }
+                  ],
+                  "Startup Cost": 77687.52,
+                  "Total Cost": 77687.52
+                }
+              ],
+              "Recheck Cond": "((publish_date_end_bound >= 20240101) AND (publish_date_start_bound <= 20241231))",
+              "Relation Name": "data_pubmed",
+              "Startup Cost": 77687.52,
+              "Total Cost": 1512860.98
+            },
+            "Settings": {
+              "effective_cache_size": "160GB",
+              "effective_io_concurrency": "256",
+              "jit": "off",
+              "maintenance_io_concurrency": "256",
+              "max_parallel_workers": "24",
+              "max_parallel_workers_per_gather": "4",
+              "random_page_cost": "1.2",
+              "work_mem": "64MB"
+            }
+          }
+        ]
+      }
+    },
+    "planner_qualified": true,
+    "postmaster_age_seconds": 12375.574775,
+    "postmaster_start_epoch": 1787704591.687023,
+    "pubmed_index": "commons.data_pubmed__title_abstract__current_next_idx",
+    "pubmed_index_source": "candidate_fallback",
+    "qualified": true,
+    "query_metadata_qualified": true,
+    "query_warm_qualified": false,
+    "restart_qualified": false,
+    "restart_requirement_seconds": null,
+    "runtime_health": {
+      "qualified": true,
+      "reasons": []
+    },
+    "runtime_qualified": true,
+    "schema_health": {
+      "qualified": true,
+      "reasons": []
+    },
+    "schema_qualified": true,
+    "server_version": "18.4 (Debian 18.4-1.pgdg13+1)",
+    "settings": {
+      "autovacuum": "on",
+      "default_statistics_target": "100",
+      "ii42.maintenance_worker_limit": "4",
+      "ii42.shared_runtime_size": "114688",
+      "ii42.test_disable_semantic_accelerator": "off",
+      "ii42.test_filtered_forward_route": "auto",
+      "shared_preload_libraries": "ii42,pg_stat_statements,pg_prewarm",
+      "track_counts": "on"
+    },
+    "table_stats": {
+      "data_arxiv": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 3126584
+      },
+      "data_policy_ca": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 767299
+      },
+      "data_policy_ca_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 4377668
+      },
+      "data_policy_tx": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 18981
+      },
+      "data_policy_tx_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 443601
+      },
+      "data_policy_wa": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 453505
+      },
+      "data_policy_wa_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 2764746
+      },
+      "data_pubmed": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 8214855
+      },
+      "sys_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0,
+        "reltuples": 1381
+      }
+    }
+  },
+  "finished_at_epoch": 1787717003.029692,
+  "mode": "qualification",
+  "passed": false,
+  "repeats": 3,
+  "started_at_epoch": 1787716968.1131973,
+  "suite": "commons_query_matrix"
+}

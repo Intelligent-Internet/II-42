@@ -1,0 +1,76 @@
+{
+  "base_document_sizes": [
+    256,
+    1024,
+    4096
+  ],
+  "delta_documents": 32,
+  "failures": [],
+  "max_retained_growth_bytes": 1048576,
+  "maximum_observed_positive_growth_bytes": 0,
+  "passed": true,
+  "probes": [
+    {
+      "backend_memory_after": 11713448,
+      "backend_memory_before": 11713448,
+      "backend_memory_growth": 0,
+      "base_documents": 256,
+      "base_documents_scanned": 0,
+      "candidate_documents": 133,
+      "candidate_postings": 406,
+      "delta_documents": 32,
+      "exact_comparison": {
+        "max_score_delta": 1.7881393432617188e-07,
+        "passed": true,
+        "same_ids_and_order": true,
+        "score_tolerance": 1e-06
+      },
+      "full_scan_calls": 0,
+      "scored_documents": 133,
+      "warm_p50_ms": 0.667,
+      "warm_p95_ms": 0.89
+    },
+    {
+      "backend_memory_after": 11713448,
+      "backend_memory_before": 11713448,
+      "backend_memory_growth": 0,
+      "base_documents": 1024,
+      "base_documents_scanned": 0,
+      "candidate_documents": 518,
+      "candidate_postings": 1463,
+      "delta_documents": 32,
+      "exact_comparison": {
+        "max_score_delta": 1.7881393432617188e-07,
+        "passed": true,
+        "same_ids_and_order": true,
+        "score_tolerance": 1e-06
+      },
+      "full_scan_calls": 0,
+      "scored_documents": 518,
+      "warm_p50_ms": 0.53,
+      "warm_p95_ms": 0.886
+    },
+    {
+      "backend_memory_after": 11713448,
+      "backend_memory_before": 11713448,
+      "backend_memory_growth": 0,
+      "base_documents": 4096,
+      "base_documents_scanned": 0,
+      "candidate_documents": 1102,
+      "candidate_postings": 2486,
+      "delta_documents": 32,
+      "exact_comparison": {
+        "max_score_delta": 1.7881393432617188e-07,
+        "passed": true,
+        "same_ids_and_order": true,
+        "score_tolerance": 1e-06
+      },
+      "full_scan_calls": 0,
+      "scored_documents": 1102,
+      "warm_p50_ms": 0.99,
+      "warm_p95_ms": 1.31
+    }
+  ],
+  "route": "unified delta warm-memory scaling",
+  "warm_runs": 25
+}

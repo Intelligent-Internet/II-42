@@ -1,0 +1,380 @@
+{
+  "tasks": {
+    "arguana:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:24.923492+00:00",
+      "vm_name": "pg18mx-0327-arg-pgs"
+    },
+    "arguana:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:25.516375+00:00",
+      "vm_name": "pg18mx-0327-arg-psql"
+    },
+    "arguana:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-28T22:37:47.783238+00:00",
+      "vm_name": "pg18mx-0327-arg-txt"
+    },
+    "arguana:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:24.021136+00:00",
+      "vm_name": "pg18mx-0327-arg-up"
+    },
+    "arguana:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:26.146139+00:00",
+      "vm_name": "pg18mx-0327-arg-vcb"
+    },
+    "climate-fever:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:51.089403+00:00",
+      "vm_name": "pg18mx-0327-clf-pgs"
+    },
+    "climate-fever:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:48.689292+00:00",
+      "vm_name": "pg18mx-0327-clf-psql"
+    },
+    "climate-fever:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:55:59.471115+00:00",
+      "vm_name": "pg18mx-0327-clf-txt"
+    },
+    "climate-fever:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:45.304974+00:00",
+      "vm_name": "pg18mx-0327-clf-up"
+    },
+    "climate-fever:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:57:43.825694+00:00",
+      "vm_name": "pg18mx-0327-clf-vcb"
+    },
+    "cqadupstack:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-28T14:57:52Z",
+      "vm_name": "pg18mx-0327-cqa-pgs"
+    },
+    "cqadupstack:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:08.400878+00:00",
+      "vm_name": "pg18mx-0327-cqa-psql"
+    },
+    "cqadupstack:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:57:43.592948+00:00",
+      "vm_name": "pg18mx-0327-cqa-txt"
+    },
+    "cqadupstack:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:06.980289+00:00",
+      "vm_name": "pg18mx-0327-cqa-up"
+    },
+    "cqadupstack:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-28T15:03:38Z",
+      "vm_name": "pg18mx-0327-cqa-vcb"
+    },
+    "dbpedia-entity:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:12.912779+00:00",
+      "vm_name": "pg18mx-0327-dbe-pgs"
+    },
+    "dbpedia-entity:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:07.493993+00:00",
+      "vm_name": "pg18mx-0327-dbe-psql"
+    },
+    "dbpedia-entity:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:55:56.091034+00:00",
+      "vm_name": "pg18mx-0327-dbe-txt"
+    },
+    "dbpedia-entity:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:11.477694+00:00",
+      "vm_name": "pg18mx-0327-dbe-up"
+    },
+    "dbpedia-entity:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:09.855013+00:00",
+      "vm_name": "pg18mx-0327-dbe-vcb"
+    },
+    "fever:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:35.636160+00:00",
+      "vm_name": "pg18mx-0327-fev-pgs"
+    },
+    "fever:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:31.339122+00:00",
+      "vm_name": "pg18mx-0327-fev-psql"
+    },
+    "fever:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:56:03.809902+00:00",
+      "vm_name": "pg18mx-0327-fev-txt"
+    },
+    "fever:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-28T14:48:07Z",
+      "vm_name": "pg18mx-0327-fev-up"
+    },
+    "fever:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:38.860425+00:00",
+      "vm_name": "pg18mx-0327-fev-vcb"
+    },
+    "fiqa:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:42.522027+00:00",
+      "vm_name": "pg18mx-0327-fiq-pgs"
+    },
+    "fiqa:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:41.208715+00:00",
+      "vm_name": "pg18mx-0327-fiq-psql"
+    },
+    "fiqa:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-28T22:37:48.111860+00:00",
+      "vm_name": "pg18mx-0327-fiq-txt"
+    },
+    "fiqa:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:39.765998+00:00",
+      "vm_name": "pg18mx-0327-fiq-up"
+    },
+    "fiqa:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:43.066546+00:00",
+      "vm_name": "pg18mx-0327-fiq-vcb"
+    },
+    "hotpotqa:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:57.925536+00:00",
+      "vm_name": "pg18mx-0327-hqa-pgs"
+    },
+    "hotpotqa:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:52.399697+00:00",
+      "vm_name": "pg18mx-0327-hqa-psql"
+    },
+    "hotpotqa:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:55:53.509550+00:00",
+      "vm_name": "pg18mx-0327-hqa-txt"
+    },
+    "hotpotqa:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:58:53.621687+00:00",
+      "vm_name": "pg18mx-0327-hqa-up"
+    },
+    "hotpotqa:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:10.423375+00:00",
+      "vm_name": "pg18mx-0327-hqa-vcb"
+    },
+    "msmarco:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:33.984325+00:00",
+      "vm_name": "pg18mx-0327-msm-pgs"
+    },
+    "msmarco:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:26.476804+00:00",
+      "vm_name": "pg18mx-0327-msm-psql"
+    },
+    "msmarco:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:55:57.325870+00:00",
+      "vm_name": "pg18mx-0327-msm-txt"
+    },
+    "msmarco:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:22.275247+00:00",
+      "vm_name": "pg18mx-0327-msm-up"
+    },
+    "msmarco:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:34.334791+00:00",
+      "vm_name": "pg18mx-0327-msm-vcb"
+    },
+    "nfcorpus:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:17.350855+00:00",
+      "vm_name": "pg18mx-0327-nfc-pgs"
+    },
+    "nfcorpus:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:15.202092+00:00",
+      "vm_name": "pg18mx-0327-nfc-psql"
+    },
+    "nfcorpus:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-28T22:37:48.550517+00:00",
+      "vm_name": "pg18mx-0327-nfc-txt"
+    },
+    "nfcorpus:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:19.348886+00:00",
+      "vm_name": "pg18mx-0327-nfc-up"
+    },
+    "nfcorpus:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:32.845160+00:00",
+      "vm_name": "pg18mx-0327-nfc-vcb"
+    },
+    "nq:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:50.148841+00:00",
+      "vm_name": "pg18mx-0327-nq-pgs"
+    },
+    "nq:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:38.079335+00:00",
+      "vm_name": "pg18mx-0327-nq-psql"
+    },
+    "nq:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:55:54.546309+00:00",
+      "vm_name": "pg18mx-0327-nq-txt"
+    },
+    "nq:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:32.335348+00:00",
+      "vm_name": "pg18mx-0327-nq-up"
+    },
+    "nq:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:59.049024+00:00",
+      "vm_name": "pg18mx-0327-nq-vcb"
+    },
+    "quora:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:55.030997+00:00",
+      "vm_name": "pg18mx-0327-quo-pgs"
+    },
+    "quora:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:51.359335+00:00",
+      "vm_name": "pg18mx-0327-quo-psql"
+    },
+    "quora:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:55:42.105850+00:00",
+      "vm_name": "pg18mx-0327-quo-txt"
+    },
+    "quora:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:54.470514+00:00",
+      "vm_name": "pg18mx-0327-quo-up"
+    },
+    "quora:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T22:59:56.255357+00:00",
+      "vm_name": "pg18mx-0327-quo-vcb"
+    },
+    "scidocs:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:14.133863+00:00",
+      "vm_name": "pg18mx-0327-scd-pgs"
+    },
+    "scidocs:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:06.583846+00:00",
+      "vm_name": "pg18mx-0327-scd-psql"
+    },
+    "scidocs:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:56:03.858906+00:00",
+      "vm_name": "pg18mx-0327-scd-txt"
+    },
+    "scidocs:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:01.387110+00:00",
+      "vm_name": "pg18mx-0327-scd-up"
+    },
+    "scidocs:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:08.810672+00:00",
+      "vm_name": "pg18mx-0327-scd-vcb"
+    },
+    "scifact:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:25.868710+00:00",
+      "vm_name": "pg18mx-0327-scf-pgs"
+    },
+    "scifact:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:10.822337+00:00",
+      "vm_name": "pg18mx-0327-scf-psql"
+    },
+    "scifact:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:56:42.846672+00:00",
+      "vm_name": "pg18mx-0327-scf-txt"
+    },
+    "scifact:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:07.974407+00:00",
+      "vm_name": "pg18mx-0327-scf-up"
+    },
+    "scifact:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:25.014505+00:00",
+      "vm_name": "pg18mx-0327-scf-vcb"
+    },
+    "trec-covid:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:31.851021+00:00",
+      "vm_name": "pg18mx-0327-trc-pgs"
+    },
+    "trec-covid:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:28.305195+00:00",
+      "vm_name": "pg18mx-0327-trc-psql"
+    },
+    "trec-covid:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:56:42.875834+00:00",
+      "vm_name": "pg18mx-0327-trc-txt"
+    },
+    "trec-covid:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:28.802317+00:00",
+      "vm_name": "pg18mx-0327-trc-up"
+    },
+    "trec-covid:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:31.999659+00:00",
+      "vm_name": "pg18mx-0327-trc-vcb"
+    },
+    "webis-touche2020:pg_search": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:45.016784+00:00",
+      "vm_name": "pg18mx-0327-wbt-pgs"
+    },
+    "webis-touche2020:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:43.391118+00:00",
+      "vm_name": "pg18mx-0327-wbt-psql"
+    },
+    "webis-touche2020:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-03-29T11:56:44.608722+00:00",
+      "vm_name": "pg18mx-0327-wbt-txt"
+    },
+    "webis-touche2020:upstream_bm25s": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:37.289995+00:00",
+      "vm_name": "pg18mx-0327-wbt-up"
+    },
+    "webis-touche2020:vchord_bm25": {
+      "status": "running",
+      "updated_at": "2026-03-27T23:00:42.805704+00:00",
+      "vm_name": "pg18mx-0327-wbt-vcb"
+    }
+  },
+  "updated_at": "2026-03-28T22:36:00.032406+00:00"
+}

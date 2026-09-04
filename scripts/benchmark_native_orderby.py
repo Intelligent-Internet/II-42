@@ -18,7 +18,7 @@ from benchmark_beir_official import (
     DEFAULT_DATASETS_DIR,
     PG_DSN,
     TOP_K,
-    benchmark_python_reference,
+    benchmark_upstream,
     dataset_stats,
     drop_database_if_exists,
     load_dataset,
@@ -31,8 +31,8 @@ FOCUSED_DATASETS = ['arguana', 'scifact', 'webis-touche2020']
 
 
 def benchmark_db_name(dataset: str) -> str:
-    suffix = os.environ.get('PSQL_BM25S_ORDERBY_DB_SUFFIX', '')
-    return f'psql_bm25s_orderby_{dataset.replace("-", "_")}{suffix}'
+    suffix = os.environ.get('II42_ORDERBY_DB_SUFFIX', '')
+    return f'ii42_orderby_{dataset.replace("-", "_")}{suffix}'
 
 
 def decode_ids(vocab_by_id: list[str], token_ids: list[int]) -> list[str]:
@@ -59,7 +59,7 @@ def benchmark_ids_search(
             count(*),
             coalesce(min(doc_id), 0),
             coalesce(max(score), 0::real)
-        FROM public.psql_bm25s_query_ids(
+        FROM public.ii42_query_ids(
             'bench.docs_ids_bm25_idx'::regclass,
             %s::int4[],
             %s::int4,
@@ -87,7 +87,7 @@ def benchmark_text_search(
             count(*),
             coalesce(min(doc_id), 0),
             coalesce(max(score), 0::real)
-        FROM public.psql_bm25s_query_tokens(
+        FROM public.ii42_query_tokens(
             'bench.docs_tokens_bm25_idx'::regclass,
             %s::text[],
             %s::int4,
@@ -193,12 +193,12 @@ def run_dataset(
     db_dsn = conninfo.make_conninfo(
         PG_DSN,
         dbname=db_name,
-        application_name='psql_bm25s_orderby_eval',
+        application_name='ii42_orderby_eval',
     )
     with psycopg.connect(db_dsn, autocommit=True) as conn:
         with conn.cursor() as cur:
-            cur.execute('CREATE EXTENSION psql_bm25s')
-            cur.execute('SELECT public.psql_bm25s_generation_cache_clear()')
+            cur.execute('CREATE EXTENSION ii42')
+            cur.execute('SELECT public.ii42_runtime_cache_clear()')
             cur.execute('CREATE SCHEMA bench')
             cur.execute(
                 'CREATE TABLE bench.docs_ids ('
@@ -231,7 +231,7 @@ def run_dataset(
             cur.execute(
                 """
                 CREATE INDEX docs_ids_bm25_idx
-                ON bench.docs_ids USING psql_bm25s (token_ids)
+                ON bench.docs_ids USING ii42 (token_ids)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -252,7 +252,7 @@ def run_dataset(
             cur.execute(
                 """
                 CREATE INDEX docs_tokens_bm25_idx
-                ON bench.docs_tokens USING psql_bm25s (tokens)
+                ON bench.docs_tokens USING ii42 (tokens)
                 WITH (
                     method = 'lucene',
                     idf_method = 'lucene',
@@ -294,7 +294,7 @@ def run_dataset(
             text_search = benchmark_text_search(cur, query_tokens, top_k)
             text_orderby = benchmark_text_orderby(cur, query_tokens, top_k)
 
-    python_reference = benchmark_python_reference(
+    upstream = benchmark_upstream(
         corpus_ids,
         corpus_tokenized.ids,
         query_ids,
@@ -303,8 +303,8 @@ def run_dataset(
     result = {
         'dataset': dataset,
         'stats': dataset_stats(corpus_tokenized, query_ids),
-        'python_reference_bm25s_local': python_reference,
-        'psql_bm25s_ids': {
+        'upstream_bm25s_local': upstream,
+        'ii42_ids': {
             'build_ms': ids_build_ms,
             'build_bytes': ids_build_bytes,
             'search_query': ids_search,
@@ -312,7 +312,7 @@ def run_dataset(
             'plan_default': ids_default_plan,
             'plan_forced': ids_orderby['plan_forced'],
         },
-        'psql_bm25s_text': {
+        'ii42_text': {
             'build_ms': text_build_ms,
             'build_bytes': text_build_bytes,
             'search_query': text_search,

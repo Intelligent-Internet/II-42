@@ -1,0 +1,144 @@
+{
+  "candidate_multipliers": [],
+  "index_name": "ii42_beir15.docs_fiqa_bm25_idx",
+  "k": 100,
+  "query_count": 648,
+  "ratios": [
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 1.0,
+      "latency_ms": {
+        "p50": 83.32691700002215,
+        "p95": 103.11479200026952
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.27918083664112703,
+        "mrr_at_20": 0.41773500768025484,
+        "ndcg_at_10": 0.3341804870193415,
+        "recall_at_100": 0.6187780283845099
+      },
+      "query_count": 648,
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9657253086419753,
+      "budget_ratio": 0.75,
+      "latency_ms": {
+        "p50": 86.2639995000336,
+        "p95": 104.41441700004361
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0012492779668606402,
+        "mrr_at_20": 0.0025306114928147494,
+        "ndcg_at_10": 0.0013884227136411464,
+        "recall_at_100": 0.0005511463844796172
+      },
+      "metrics": {
+        "map_at_100": 0.28043011460798767,
+        "mrr_at_20": 0.4202656191730696,
+        "ndcg_at_10": 0.33556890973298265,
+        "recall_at_100": 0.6193291747689895
+      },
+      "query_count": 648,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.5,
+          "gain_queries": 135,
+          "harm_queries": 120,
+          "worst": -0.6666666666666667
+        },
+        "mrr_at_20": {
+          "best": 0.5,
+          "gain_queries": 39,
+          "harm_queries": 31,
+          "worst": -0.6666666666666667
+        },
+        "ndcg_at_10": {
+          "best": 0.36907024642854247,
+          "gain_queries": 49,
+          "harm_queries": 26,
+          "worst": -0.5
+        },
+        "recall_at_100": {
+          "best": 1.0,
+          "gain_queries": 3,
+          "harm_queries": 5,
+          "worst": -1.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9315432098765432,
+      "budget_ratio": 0.5,
+      "latency_ms": {
+        "p50": 85.75816650022716,
+        "p95": 105.4957920000561
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0035436796111465996,
+        "mrr_at_20": 0.0067295205299017224,
+        "ndcg_at_10": 0.005080059715198981,
+        "recall_at_100": 0.005859392664948171
+      },
+      "metrics": {
+        "map_at_100": 0.2827245162522736,
+        "mrr_at_20": 0.42446452821015657,
+        "ndcg_at_10": 0.3392605467345405,
+        "recall_at_100": 0.6246374210494581
+      },
+      "query_count": 648,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.5,
+          "gain_queries": 175,
+          "harm_queries": 142,
+          "worst": -0.6666666666666667
+        },
+        "mrr_at_20": {
+          "best": 0.6666666666666667,
+          "gain_queries": 67,
+          "harm_queries": 53,
+          "worst": -0.6666666666666667
+        },
+        "ndcg_at_10": {
+          "best": 0.36907024642854247,
+          "gain_queries": 77,
+          "harm_queries": 47,
+          "worst": -0.5
+        },
+        "recall_at_100": {
+          "best": 1.0,
+          "gain_queries": 12,
+          "harm_queries": 7,
+          "worst": -1.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    }
+  ],
+  "semantic_work_target_postings": 0,
+  "strategy": "df-limit",
+  "support_ratio": 0.0
+}

@@ -1,0 +1,66 @@
+FROM nvcr.io/nvidia/pytorch:25.11-py3
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LD_LIBRARY_PATH=/usr/local/lib:/usr/local/cuda/targets/sbsa-linux/lib:/usr/lib/aarch64-linux-gnu
+
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+        build-essential \
+        ca-certificates \
+        libicu-dev \
+        libjansson-dev \
+        libssl-dev \
+        make \
+        pkg-config; \
+    rm -rf /var/lib/apt/lists/*
+
+COPY --from=ii42_onnxruntime_pkg . /tmp/ort_pkg/
+COPY packaging/onnxruntime.version /tmp/ii42-onnxruntime.version
+RUN set -eux; \
+    expected_version="$(tr -d '[:space:]' \
+        </tmp/ii42-onnxruntime.version)"; \
+    test -e "/tmp/ort_pkg/lib/libonnxruntime.so.${expected_version}"; \
+    mkdir -p /usr/local/include/onnxruntime /usr/local/lib/pkgconfig; \
+    cp -P /tmp/ort_pkg/lib/libonnxruntime*.so* /usr/local/lib/; \
+    cp -P /tmp/ort_pkg/lib/libonnxruntime_providers_cuda.so /usr/local/lib/; \
+    cp -P /tmp/ort_pkg/lib/libonnxruntime_providers_shared.so /usr/local/lib/; \
+    cp -RP /tmp/ort_pkg/include/onnxruntime/core/session/onnxruntime*.h \
+        /usr/local/include/onnxruntime/; \
+    cp -RP /tmp/ort_pkg/include/onnxruntime/core/framework/provider_options.h \
+        /usr/local/include/onnxruntime/; \
+    printf '%s\n' \
+        'prefix=/usr/local' \
+        'libdir=${prefix}/lib' \
+        'includedir=${prefix}/include/onnxruntime' \
+        '' \
+        'Name: onnxruntime' \
+        'Description: ONNX Runtime C API' \
+        "Version: ${expected_version}" \
+        'Libs: -L${libdir} -lonnxruntime' \
+        'Cflags: -I${includedir}' \
+        > /usr/local/lib/pkgconfig/libonnxruntime.pc; \
+    printf '%s\n' \
+        /usr/local/lib \
+        /usr/local/cuda/targets/sbsa-linux/lib \
+        > /etc/ld.so.conf.d/ii42-gpu.conf; \
+    ldconfig; \
+    rm -rf /tmp/ort_pkg /tmp/ii42-onnxruntime.version
+
+WORKDIR /src
+COPY Makefile CMakeLists.txt ii42.control LICENSE README.md ./
+COPY src ./src
+COPY packaging ./packaging
+COPY --from=ii42_milestone_model . /usr/local/share/ii42/models/default/
+
+RUN PKG_CONFIG_PATH=/usr/local/lib/pkgconfig \
+        make runtime-server PG_CONFIG=/no/such/pg_config \
+    && install -D -m 0755 build/ii42-runtime-server \
+        /usr/local/bin/ii42-runtime-server \
+    && install -D -m 0755 \
+        packaging/docker/runtime-gpu-aarch64/ii42-gpu-runtime-entrypoint \
+        /usr/local/bin/ii42-gpu-runtime-entrypoint \
+    && rm -rf /src/build
+
+EXPOSE 8042
+ENTRYPOINT ["/usr/local/bin/ii42-gpu-runtime-entrypoint"]

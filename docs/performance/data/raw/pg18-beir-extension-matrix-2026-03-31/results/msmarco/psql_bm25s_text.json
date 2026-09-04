@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-03-29 11:56:56",
+  "datasets_dir": "/var/tmp/pg18_benchmark_matrix_task/datasets",
+  "db_prefix": "psql_bm25s_pg18_matrix_",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "psql_bm25s_text"
+  ],
+  "results": {
+    "msmarco": {
+      "dataset": "msmarco",
+      "psql_bm25s_text": {
+        "build_bytes": 3222036480,
+        "build_ms": 93096.14285400312,
+        "query": {
+          "avg_ms": 21.489707023779637,
+          "count": 509962,
+          "p50_ms": 18.643416002305457,
+          "p95_ms": 44.51975110241618,
+          "qps": 46.5339056923131
+        }
+      },
+      "stats": {
+        "documents": 8841823,
+        "queries": 509962,
+        "query_tokens": 2275139,
+        "tokens": 340859911,
+        "vocab_size": 1431983
+      },
+      "wall_time_s": 11576.661783692005
+    }
+  },
+  "top_k": 1000
+}

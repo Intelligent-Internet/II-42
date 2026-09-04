@@ -1,2 +1,0 @@
--- generated release upgrade
--- SQL surface unchanged from 0.1.9 to 0.2.0

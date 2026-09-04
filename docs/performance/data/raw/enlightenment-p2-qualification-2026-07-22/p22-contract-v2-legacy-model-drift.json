@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "original_generation_id": "487635189/1/1",
+  "original_signature": "676a4f4280e5b8347078a9fa6b79d0db",
+  "mismatch_blocker": "runtime_generation_mismatch",
+  "mismatch_runtime_signature": "dcd86f011e84cbfdbc526d8a5cdee130",
+  "generation_signature_during_mismatch": "676a4f4280e5b8347078a9fa6b79d0db",
+  "query_error": "ERROR:  ii42 index generation does not match the configured model\nDETAIL:  generation signature 676a4f4280e5b8347078a9fa6b79d0db, runtime signature dcd86f011e84cbfdbc526d8a5cdee130\nHINT:  REINDEX the ii42 index after changing model_path, the default model checkout, or any model artifact.\nCONTEXT:  PL/pgSQL function ii42_encode_text_internal(regclass,text) line 33 at RAISE\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer) line 14 at assignment\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search(regclass,text,integer,real[],boolean,text[],boolean,boolean) line 116 at RETURN QUERY",
+  "query_rc": 1,
+  "restored_generation_id": "487635189/1/1",
+  "restored_signature": "676a4f4280e5b8347078a9fa6b79d0db",
+  "restored_model_path_source": "environment",
+  "original_reloptions": "{sae=true,consistency=eventual,auto_rebuild_threshold=1000,auto_preload=10}",
+  "restored_reloptions": "{sae=true,consistency=eventual,auto_rebuild_threshold=1000,auto_preload=10}",
+  "restored_hits": 10
+}

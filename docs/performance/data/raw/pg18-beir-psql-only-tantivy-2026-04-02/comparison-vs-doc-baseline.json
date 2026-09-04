@@ -1,0 +1,299 @@
+{
+  "summary": {
+    "ids_median_delta_pct": 37.92980035413606,
+    "ids_mean_delta_pct": 31.242567391323533,
+    "ids_wins": 13,
+    "ids_losses": 2,
+    "text_median_delta_pct": 16.11572500090423,
+    "text_mean_delta_pct": 27.620770068074638,
+    "text_wins": 15,
+    "text_losses": 0
+  },
+  "rows": [
+    {
+      "dataset": "arguana",
+      "psql_bm25s_ids": {
+        "old_qps": 1141.1726931166752,
+        "new_qps": 1402.6254668710426,
+        "delta_pct": 22.910885909853793,
+        "old_build_ms": 108.90885099999537,
+        "new_build_ms": 100.55703200001176,
+        "build_delta_pct": -7.668632001253932
+      },
+      "psql_bm25s_text": {
+        "old_qps": 1094.5342830039751,
+        "new_qps": 1112.0070624249258,
+        "delta_pct": 1.5963665727304808,
+        "old_build_ms": 175.47519400000056,
+        "new_build_ms": 167.5025070000089,
+        "build_delta_pct": -4.543483792923817
+      }
+    },
+    {
+      "dataset": "climate-fever",
+      "psql_bm25s_ids": {
+        "old_qps": 39.66050581392786,
+        "new_qps": 57.780518366271764,
+        "delta_pct": 45.68779994223011,
+        "old_build_ms": 54940.95370300011,
+        "new_build_ms": 52735.130433,
+        "build_delta_pct": -4.014898033849854
+      },
+      "psql_bm25s_text": {
+        "old_qps": 38.27387623186664,
+        "new_qps": 50.747660667739744,
+        "delta_pct": 32.59085743055075,
+        "old_build_ms": 94879.88546500128,
+        "new_build_ms": 91728.48343499993,
+        "build_delta_pct": -3.321464833727925
+      }
+    },
+    {
+      "dataset": "cqadupstack",
+      "psql_bm25s_ids": {
+        "old_qps": 321.2739347219966,
+        "new_qps": 443.13249675192736,
+        "delta_pct": 37.92980035413606,
+        "old_build_ms": 5869.118943999979,
+        "new_build_ms": 5827.169133000041,
+        "build_delta_pct": -0.7147548277722858
+      },
+      "psql_bm25s_text": {
+        "old_qps": 233.90315565679805,
+        "new_qps": 438.4171899254971,
+        "delta_pct": 87.43534634854558,
+        "old_build_ms": 10134.97195400123,
+        "new_build_ms": 9291.73428400003,
+        "build_delta_pct": -8.320078968430646
+      }
+    },
+    {
+      "dataset": "dbpedia-entity",
+      "psql_bm25s_ids": {
+        "old_qps": 88.6603724596351,
+        "new_qps": 128.1871701770858,
+        "delta_pct": 44.582259944200295,
+        "old_build_ms": 28447.65812100002,
+        "new_build_ms": 26370.406444000026,
+        "build_delta_pct": -7.302012939569774
+      },
+      "psql_bm25s_text": {
+        "old_qps": 66.32554839757589,
+        "new_qps": 91.19123002435164,
+        "delta_pct": 37.49035210040504,
+        "old_build_ms": 46473.55482199782,
+        "new_build_ms": 45047.597964999964,
+        "build_delta_pct": -3.0683188804031296
+      }
+    },
+    {
+      "dataset": "fever",
+      "psql_bm25s_ids": {
+        "old_qps": 67.93621382017785,
+        "new_qps": 97.56122052507216,
+        "delta_pct": 43.60709118013187,
+        "old_build_ms": 54558.313539999974,
+        "new_build_ms": 52830.13254399998,
+        "build_delta_pct": -3.1675850734150024
+      },
+      "psql_bm25s_text": {
+        "old_qps": 72.05187972925303,
+        "new_qps": 80.14970980850599,
+        "delta_pct": 11.238888020245838,
+        "old_build_ms": 95004.10119099979,
+        "new_build_ms": 94593.96311400007,
+        "build_delta_pct": -0.43170565465922633
+      }
+    },
+    {
+      "dataset": "fiqa",
+      "psql_bm25s_ids": {
+        "old_qps": 984.2589131694633,
+        "new_qps": 1409.5183870498,
+        "delta_pct": 43.20605769379689,
+        "old_build_ms": 691.7001770000013,
+        "new_build_ms": 671.7647749999998,
+        "build_delta_pct": -2.8820871618775814
+      },
+      "psql_bm25s_text": {
+        "old_qps": 900.8594789300669,
+        "new_qps": 1186.4060580920882,
+        "delta_pct": 31.69712766980699,
+        "old_build_ms": 1052.0045709999977,
+        "new_build_ms": 1059.3052269999957,
+        "build_delta_pct": 0.6939756918601913
+      }
+    },
+    {
+      "dataset": "hotpotqa",
+      "psql_bm25s_ids": {
+        "old_qps": 56.60833951867355,
+        "new_qps": 55.398088019132814,
+        "delta_pct": -2.137938526074431,
+        "old_build_ms": 31402.497352000013,
+        "new_build_ms": 30792.22733099999,
+        "build_delta_pct": -1.9433805348642257
+      },
+      "psql_bm25s_text": {
+        "old_qps": 47.53309058817675,
+        "new_qps": 49.86194065922938,
+        "delta_pct": 4.899429097151757,
+        "old_build_ms": 49490.62850300106,
+        "new_build_ms": 50378.30390499999,
+        "build_delta_pct": 1.7936232148377413
+      }
+    },
+    {
+      "dataset": "msmarco",
+      "psql_bm25s_ids": {
+        "old_qps": 59.72826737517373,
+        "new_qps": 96.66552289343474,
+        "delta_pct": 61.84216810818476,
+        "old_build_ms": 57120.96780399997,
+        "new_build_ms": 56057.54913299995,
+        "build_delta_pct": -1.8616958218371678
+      },
+      "psql_bm25s_text": {
+        "old_qps": 46.5339056923131,
+        "new_qps": 82.13195149520534,
+        "delta_pct": 76.49915749232427,
+        "old_build_ms": 93096.14285400312,
+        "new_build_ms": 87827.69346700002,
+        "build_delta_pct": -5.65914894590776
+      }
+    },
+    {
+      "dataset": "nfcorpus",
+      "psql_bm25s_ids": {
+        "old_qps": 3382.962730829332,
+        "new_qps": 3373.9447323360637,
+        "delta_pct": -0.2665710269606663,
+        "old_build_ms": 85.20691900000088,
+        "new_build_ms": 81.53869599999553,
+        "build_delta_pct": -4.305076445734786
+      },
+      "psql_bm25s_text": {
+        "old_qps": 3234.629320761396,
+        "new_qps": 3326.9583658378397,
+        "delta_pct": 2.8543933762002336,
+        "old_build_ms": 122.1720409999989,
+        "new_build_ms": 113.11808300000337,
+        "build_delta_pct": -7.4108265081661475
+      }
+    },
+    {
+      "dataset": "nq",
+      "psql_bm25s_ids": {
+        "old_qps": 115.9589798410117,
+        "new_qps": 174.3449133694574,
+        "delta_pct": 50.35050636742159,
+        "old_build_ms": 25100.792813,
+        "new_build_ms": 23712.073369999984,
+        "build_delta_pct": -5.532572032070564
+      },
+      "psql_bm25s_text": {
+        "old_qps": 116.97762992951439,
+        "new_qps": 176.68879325566695,
+        "delta_pct": 51.0449419791903,
+        "old_build_ms": 40360.513665000326,
+        "new_build_ms": 40803.48065899994,
+        "build_delta_pct": 1.097525660045667
+      }
+    },
+    {
+      "dataset": "quora",
+      "psql_bm25s_ids": {
+        "old_qps": 448.2480684639546,
+        "new_qps": 637.9800963276181,
+        "delta_pct": 42.32746133493279,
+        "old_build_ms": 801.5769600000056,
+        "new_build_ms": 787.8471659999917,
+        "build_delta_pct": -1.71284788425228
+      },
+      "psql_bm25s_text": {
+        "old_qps": 445.2251452677591,
+        "new_qps": 619.6361823579505,
+        "delta_pct": 39.173671780218136,
+        "old_build_ms": 1073.8985049974872,
+        "new_build_ms": 1064.5575770000023,
+        "build_delta_pct": -0.869814787339398
+      }
+    },
+    {
+      "dataset": "scidocs",
+      "psql_bm25s_ids": {
+        "old_qps": 1373.3194782247967,
+        "new_qps": 1835.8534935681103,
+        "delta_pct": 33.680001097865585,
+        "old_build_ms": 409.43429100001083,
+        "new_build_ms": 394.76593500000945,
+        "build_delta_pct": -3.582590985277536
+      },
+      "psql_bm25s_text": {
+        "old_qps": 1432.6685063287675,
+        "new_qps": 1614.9172385841218,
+        "delta_pct": 12.72092821544386,
+        "old_build_ms": 757.6907469992875,
+        "new_build_ms": 633.0072209999997,
+        "build_delta_pct": -16.45572768218127
+      }
+    },
+    {
+      "dataset": "scifact",
+      "psql_bm25s_ids": {
+        "old_qps": 2203.3249612093314,
+        "new_qps": 2557.466886285814,
+        "delta_pct": 16.073068263253635,
+        "old_build_ms": 105.90617200000452,
+        "new_build_ms": 98.73040799999444,
+        "build_delta_pct": -6.7755862236336615
+      },
+      "psql_bm25s_text": {
+        "old_qps": 2181.206913198243,
+        "new_qps": 2240.1806785506997,
+        "delta_pct": 2.7037217329366094,
+        "old_build_ms": 156.15455600000416,
+        "new_build_ms": 150.08957000000578,
+        "build_delta_pct": -3.883963526493728
+      }
+    },
+    {
+      "dataset": "trec-covid",
+      "psql_bm25s_ids": {
+        "old_qps": 160.7353206290867,
+        "new_qps": 191.94006065082579,
+        "delta_pct": 19.41374173368357,
+        "old_build_ms": 2781.2258629999887,
+        "new_build_ms": 2652.9776269999984,
+        "build_delta_pct": -4.611212548615326
+      },
+      "psql_bm25s_text": {
+        "old_qps": 133.04358710672787,
+        "new_qps": 154.4845257361866,
+        "delta_pct": 16.11572500090423,
+        "old_build_ms": 4382.881347000022,
+        "new_build_ms": 4605.911388999999,
+        "build_delta_pct": 5.088662556485482
+      }
+    },
+    {
+      "dataset": "webis-touche2020",
+      "psql_bm25s_ids": {
+        "old_qps": 75.82078025540744,
+        "new_qps": 82.97233158403225,
+        "delta_pct": 9.43217849319714,
+        "old_build_ms": 10025.629382000005,
+        "new_build_ms": 9842.923301000013,
+        "build_delta_pct": -1.822390136703251
+      },
+      "psql_bm25s_text": {
+        "old_qps": 69.74151910001812,
+        "new_qps": 74.1008133217496,
+        "delta_pct": 6.250644204465488,
+        "old_build_ms": 16121.968806000012,
+        "new_build_ms": 16510.605417999985,
+        "build_delta_pct": 2.410602679341102
+      }
+    }
+  ]
+}

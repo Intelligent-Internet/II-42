@@ -1,0 +1,624 @@
+{
+  "base_documents": 256,
+  "expectation": "full_overlay",
+  "failures": [],
+  "levels": [
+    0,
+    1,
+    32,
+    256,
+    1000
+  ],
+  "model_path": "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+  "passed": true,
+  "results": [
+    {
+      "benchmark": {
+        "backend_memory_after": 10664816,
+        "backend_memory_before": 10621480,
+        "backend_memory_growth": 43336,
+        "cold_ms": 1.288,
+        "cold_trace": {
+          "candidate_docs": 127,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 376,
+          "memory_bytes": 501120,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "scored_docs": 127
+        },
+        "row_digest": "12852fc8db6c62ab0d18fe33a013cecdb5b17ba3381c07c30c29161fff69af3a",
+        "rows": [
+          [
+            "base-0",
+            31.444946215829816
+          ],
+          [
+            "base-56",
+            31.25800905290623
+          ],
+          [
+            "base-32",
+            31.2547534126997
+          ],
+          [
+            "base-160",
+            31.244343194176793
+          ],
+          [
+            "base-40",
+            31.23684909381086
+          ],
+          [
+            "base-80",
+            31.229791872756607
+          ],
+          [
+            "base-120",
+            31.22869117462534
+          ],
+          [
+            "base-8",
+            31.221241674355838
+          ],
+          [
+            "base-136",
+            31.213747412386454
+          ],
+          [
+            "base-168",
+            31.213396590838727
+          ],
+          [
+            "base-72",
+            31.212937746254454
+          ],
+          [
+            "base-16",
+            31.209548792187434
+          ],
+          [
+            "base-208",
+            31.194915147619895
+          ],
+          [
+            "base-96",
+            31.193386731836142
+          ],
+          [
+            "base-200",
+            31.181863309977643
+          ],
+          [
+            "base-128",
+            31.177976514813963
+          ],
+          [
+            "base-88",
+            31.171804936783758
+          ],
+          [
+            "base-48",
+            31.163538592417467
+          ],
+          [
+            "base-248",
+            31.12300569472592
+          ],
+          [
+            "base-152",
+            31.116585912869425
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 127,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 0,
+          "generator_decoded_postings": 376,
+          "memory_bytes": 501120,
+          "overlay_base_docs_scanned": 0,
+          "overlay_delta_docs_scanned": 0,
+          "overlay_full_scan_calls": 0,
+          "scored_docs": 127
+        },
+        "warm_p50_ms": 0.547,
+        "warm_p95_ms": 0.74
+      },
+      "delta_documents": 0,
+      "delta_records": 0
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 10699960,
+        "backend_memory_before": 10664816,
+        "backend_memory_growth": 35144,
+        "cold_ms": 1.903,
+        "cold_trace": {
+          "candidate_docs": 128,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 384,
+          "memory_bytes": 501756,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 1,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 128
+        },
+        "row_digest": "1e22f85324acf89a657c1584ebc2f581686bf769468b616c610aa359fd5a4f39",
+        "rows": [
+          [
+            "delta-0",
+            31.510749371106215
+          ],
+          [
+            "base-0",
+            31.41997002192494
+          ],
+          [
+            "base-56",
+            31.233032859001355
+          ],
+          [
+            "base-32",
+            31.229777218794823
+          ],
+          [
+            "base-160",
+            31.219367000271916
+          ],
+          [
+            "base-40",
+            31.211872899905984
+          ],
+          [
+            "base-80",
+            31.20481567885173
+          ],
+          [
+            "base-120",
+            31.203714980720463
+          ],
+          [
+            "base-8",
+            31.19626548045096
+          ],
+          [
+            "base-136",
+            31.188771218481577
+          ],
+          [
+            "base-168",
+            31.18842039693385
+          ],
+          [
+            "base-72",
+            31.187961552349577
+          ],
+          [
+            "base-16",
+            31.184572598282557
+          ],
+          [
+            "base-208",
+            31.169938953715018
+          ],
+          [
+            "base-96",
+            31.168410537931265
+          ],
+          [
+            "base-200",
+            31.156887116072767
+          ],
+          [
+            "base-128",
+            31.153000320909086
+          ],
+          [
+            "base-88",
+            31.14682874287888
+          ],
+          [
+            "base-48",
+            31.13856239851259
+          ],
+          [
+            "base-248",
+            31.098029500821042
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 128,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 384,
+          "memory_bytes": 501756,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 1,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 128
+        },
+        "warm_p50_ms": 1.546,
+        "warm_p95_ms": 1.723
+      },
+      "delta_documents": 1,
+      "delta_records": 1
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 10663096,
+        "backend_memory_before": 10699960,
+        "backend_memory_growth": -36864,
+        "cold_ms": 1.723,
+        "cold_trace": {
+          "candidate_docs": 133,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 406,
+          "memory_bytes": 520288,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 32,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 133
+        },
+        "row_digest": "90d0b9b0816fde94116ec22964f87587d980c0673ac6b8d3a1f2a7912eb0938e",
+        "rows": [
+          [
+            "base-0",
+            31.44624047108647
+          ],
+          [
+            "base-56",
+            31.259303308162885
+          ],
+          [
+            "base-32",
+            31.256047667956352
+          ],
+          [
+            "base-160",
+            31.245637449433445
+          ],
+          [
+            "base-40",
+            31.238143349067514
+          ],
+          [
+            "base-80",
+            31.23108612801326
+          ],
+          [
+            "base-120",
+            31.229985429881992
+          ],
+          [
+            "base-8",
+            31.22253592961249
+          ],
+          [
+            "base-136",
+            31.215041667643106
+          ],
+          [
+            "base-168",
+            31.21469084609538
+          ],
+          [
+            "base-72",
+            31.214232001511107
+          ],
+          [
+            "base-16",
+            31.210843047444087
+          ],
+          [
+            "base-208",
+            31.196209402876548
+          ],
+          [
+            "base-96",
+            31.194680987092795
+          ],
+          [
+            "base-200",
+            31.183157565234296
+          ],
+          [
+            "base-128",
+            31.179270770070616
+          ],
+          [
+            "base-88",
+            31.17309919204041
+          ],
+          [
+            "base-48",
+            31.16483284767412
+          ],
+          [
+            "base-248",
+            31.12429994998257
+          ],
+          [
+            "base-152",
+            31.117880168126078
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 133,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 406,
+          "memory_bytes": 520288,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 32,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 133
+        },
+        "warm_p50_ms": 1.735,
+        "warm_p95_ms": 2.358
+      },
+      "delta_documents": 32,
+      "delta_records": 32
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 10663096,
+        "backend_memory_before": 10663096,
+        "backend_memory_growth": 0,
+        "cold_ms": 2.65,
+        "cold_trace": {
+          "candidate_docs": 190,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 629,
+          "memory_bytes": 648616,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 256,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 190
+        },
+        "row_digest": "a77c9caa0437681182401fd633f76ffe5ba54d05f9457eec4c259ca468b97fcd",
+        "rows": [
+          [
+            "base-0",
+            31.45079253741261
+          ],
+          [
+            "base-56",
+            31.263855374489026
+          ],
+          [
+            "base-32",
+            31.260599734282494
+          ],
+          [
+            "base-160",
+            31.250189515759587
+          ],
+          [
+            "base-40",
+            31.242695415393655
+          ],
+          [
+            "base-80",
+            31.2356381943394
+          ],
+          [
+            "base-120",
+            31.234537496208134
+          ],
+          [
+            "base-8",
+            31.227087995938632
+          ],
+          [
+            "base-136",
+            31.219593733969248
+          ],
+          [
+            "base-168",
+            31.21924291242152
+          ],
+          [
+            "base-72",
+            31.218784067837248
+          ],
+          [
+            "base-16",
+            31.215395113770228
+          ],
+          [
+            "base-208",
+            31.20076146920269
+          ],
+          [
+            "base-96",
+            31.199233053418936
+          ],
+          [
+            "delta-200",
+            31.191030614796375
+          ],
+          [
+            "delta-208",
+            31.188847667368464
+          ],
+          [
+            "delta-168",
+            31.188395925246596
+          ],
+          [
+            "base-200",
+            31.187709631560438
+          ],
+          [
+            "base-128",
+            31.183822836396757
+          ],
+          [
+            "base-88",
+            31.177651258366552
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 190,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 629,
+          "memory_bytes": 648616,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 256,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 190
+        },
+        "warm_p50_ms": 2.423,
+        "warm_p95_ms": 2.493
+      },
+      "delta_documents": 256,
+      "delta_records": 256
+    },
+    {
+      "benchmark": {
+        "backend_memory_after": 10663096,
+        "backend_memory_before": 10663096,
+        "backend_memory_growth": 0,
+        "cold_ms": 5.079,
+        "cold_trace": {
+          "candidate_docs": 354,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 1258,
+          "memory_bytes": 1059392,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 1000,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 354
+        },
+        "row_digest": "49430529356b6b778be344128072fb6240c6be049d700383cae53fd7113bd06a",
+        "rows": [
+          [
+            "base-0",
+            31.454282448968854
+          ],
+          [
+            "delta-704",
+            27.376521322856263
+          ],
+          [
+            "delta-904",
+            27.359986600037075
+          ],
+          [
+            "delta-0",
+            26.60999228108591
+          ],
+          [
+            "delta-56",
+            26.485858314418124
+          ],
+          [
+            "delta-72",
+            26.447148664844406
+          ],
+          [
+            "base-56",
+            26.444414041965842
+          ],
+          [
+            "delta-32",
+            26.442496265702857
+          ],
+          [
+            "base-32",
+            26.440651480279882
+          ],
+          [
+            "delta-96",
+            26.440206935295407
+          ],
+          [
+            "delta-80",
+            26.43316994039435
+          ],
+          [
+            "delta-40",
+            26.43174473156762
+          ],
+          [
+            "base-120",
+            26.42976749983592
+          ],
+          [
+            "delta-16",
+            26.428649969044045
+          ],
+          [
+            "base-160",
+            26.42702708570988
+          ],
+          [
+            "base-16",
+            26.4234833958767
+          ],
+          [
+            "delta-376",
+            26.419012833709132
+          ],
+          [
+            "delta-120",
+            26.41767889944458
+          ],
+          [
+            "base-72",
+            26.41438612874134
+          ],
+          [
+            "delta-160",
+            26.41376538122239
+          ]
+        ],
+        "trace": {
+          "candidate_docs": 354,
+          "delta_cache_builds": 0,
+          "delta_cache_decoded_postings": 0,
+          "delta_cache_hits": 0,
+          "delta_cache_misses": 1,
+          "generator_decoded_postings": 1258,
+          "memory_bytes": 1059392,
+          "overlay_base_docs_scanned": 256,
+          "overlay_delta_docs_scanned": 1000,
+          "overlay_full_scan_calls": 1,
+          "scored_docs": 354
+        },
+        "warm_p50_ms": 4.422,
+        "warm_p95_ms": 4.757
+      },
+      "delta_documents": 1000,
+      "delta_records": 1000
+    }
+  ],
+  "route": "unified SAE delta query benchmark",
+  "top_k": 20,
+  "warm_runs": 7
+}

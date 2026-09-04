@@ -1,0 +1,144 @@
+{
+  "candidate_multipliers": [],
+  "index_name": "ii42_beir15.docs_nfcorpus_bm25_idx",
+  "k": 100,
+  "query_count": 323,
+  "ratios": [
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 1.0,
+      "latency_ms": {
+        "p50": 58.1415830001788,
+        "p95": 76.42033399997672
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.16663323669425398,
+        "mrr_at_20": 0.5590950356470968,
+        "ndcg_at_10": 0.3464920769714751,
+        "recall_at_100": 0.29263497299206404
+      },
+      "query_count": 323,
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9852012383900928,
+      "budget_ratio": 0.75,
+      "latency_ms": {
+        "p50": 59.24000000004526,
+        "p95": 75.88558299994475
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0002000795375377562,
+        "mrr_at_20": 0.00023105391159827793,
+        "ndcg_at_10": 6.952500830820219e-05,
+        "recall_at_100": 0.001813163851172972
+      },
+      "metrics": {
+        "map_at_100": 0.16683331623179173,
+        "mrr_at_20": 0.5593260895586951,
+        "ndcg_at_10": 0.3465616019797833,
+        "recall_at_100": 0.294448136843237
+      },
+      "query_count": 323,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.024999999999999967,
+          "gain_queries": 58,
+          "harm_queries": 63,
+          "worst": -0.016666666666666656
+        },
+        "mrr_at_20": {
+          "best": 0.06666666666666667,
+          "gain_queries": 7,
+          "harm_queries": 4,
+          "worst": -0.08333333333333331
+        },
+        "ndcg_at_10": {
+          "best": 0.07570119259019092,
+          "gain_queries": 14,
+          "harm_queries": 15,
+          "worst": -0.07775512242353888
+        },
+        "recall_at_100": {
+          "best": 0.5,
+          "gain_queries": 15,
+          "harm_queries": 11,
+          "worst": -0.125
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.925077399380805,
+      "budget_ratio": 0.5,
+      "latency_ms": {
+        "p50": 63.055334000182484,
+        "p95": 76.62545899984252
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": -0.0001412964529214078,
+        "mrr_at_20": -0.00470399754862838,
+        "ndcg_at_10": -0.001427616273988408,
+        "recall_at_100": 0.0014409904894859826
+      },
+      "metrics": {
+        "map_at_100": 0.16649194024133257,
+        "mrr_at_20": 0.5543910380984685,
+        "ndcg_at_10": 0.3450644606974867,
+        "recall_at_100": 0.29407596348155
+      },
+      "query_count": 323,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.1,
+          "gain_queries": 102,
+          "harm_queries": 82,
+          "worst": -0.16666666666666669
+        },
+        "mrr_at_20": {
+          "best": 0.6666666666666667,
+          "gain_queries": 15,
+          "harm_queries": 25,
+          "worst": -0.6666666666666667
+        },
+        "ndcg_at_10": {
+          "best": 0.29681721951670276,
+          "gain_queries": 39,
+          "harm_queries": 50,
+          "worst": -0.23982753477153432
+        },
+        "recall_at_100": {
+          "best": 0.25,
+          "gain_queries": 44,
+          "harm_queries": 30,
+          "worst": -0.3333333333333333
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "df-limit",
+      "support_ratio": 0.0
+    }
+  ],
+  "semantic_work_target_postings": 0,
+  "strategy": "df-limit",
+  "support_ratio": 0.0
+}

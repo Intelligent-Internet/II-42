@@ -1,0 +1,310 @@
+{
+  "created_at": "2026-03-21 17:31:08",
+  "official_source": "https://github.com/xhluca/bm25-benchmarks (BM25S single-threaded table)",
+  "paths": [
+    "upstream"
+  ],
+  "results": {
+    "arguana": {
+      "dataset": "arguana",
+      "official_qps": 573.91,
+      "stats": {
+        "documents": 8674,
+        "queries": 1406,
+        "query_tokens": 176684,
+        "tokens": 947471,
+        "vocab_size": 22713
+      },
+      "upstream_bm25s": {
+        "build_ms": 256.01574999745935,
+        "query": {
+          "count": 1406,
+          "qps": 1513.3865009820445,
+          "total_ms": 929.0422500052955
+        }
+      },
+      "wall_time_s": 1.791794500022661
+    },
+    "climate-fever": {
+      "dataset": "climate-fever",
+      "official_qps": 13.09,
+      "stats": {
+        "documents": 5416593,
+        "queries": 1535,
+        "query_tokens": 21728,
+        "tokens": 318190131,
+        "vocab_size": 3115002
+      },
+      "upstream_bm25s": {
+        "build_ms": 133240.62416600646,
+        "query": {
+          "count": 1535,
+          "qps": 40.06650016666831,
+          "total_ms": 38311.307291995035
+        }
+      },
+      "wall_time_s": 381.79928533299244
+    },
+    "cqadupstack": {
+      "dataset": "cqadupstack",
+      "official_qps": 170.91,
+      "stats": {
+        "documents": 457199,
+        "queries": 13145,
+        "query_tokens": 81016,
+        "tokens": 44857487,
+        "vocab_size": 873200
+      },
+      "upstream_bm25s": {
+        "build_ms": 13133.43979199999,
+        "query": {
+          "count": 13145,
+          "qps": 276.2126048745426,
+          "total_ms": 47590.15254199039
+        }
+      },
+      "wall_time_s": 126.79329908400541
+    },
+    "dbpedia-entity": {
+      "dataset": "dbpedia-entity",
+      "official_qps": 13.44,
+      "stats": {
+        "documents": 4635922,
+        "queries": 400,
+        "query_tokens": 1786,
+        "tokens": 162336259,
+        "vocab_size": 2744583
+      },
+      "upstream_bm25s": {
+        "build_ms": 78347.54745799,
+        "query": {
+          "count": 400,
+          "qps": 53.32150365910188,
+          "total_ms": 7501.663917006226
+        }
+      },
+      "wall_time_s": 195.03620141700958
+    },
+    "fever": {
+      "dataset": "fever",
+      "official_qps": 20.19,
+      "stats": {
+        "documents": 5416568,
+        "queries": 6666,
+        "query_tokens": 38915,
+        "tokens": 318184332,
+        "vocab_size": 3115013
+      },
+      "upstream_bm25s": {
+        "build_ms": 127762.49666701187,
+        "query": {
+          "count": 6666,
+          "qps": 37.60006312229564,
+          "total_ms": 177286.93641599966
+        }
+      },
+      "wall_time_s": 493.8696221249993
+    },
+    "fiqa": {
+      "dataset": "fiqa",
+      "official_qps": 717.78,
+      "stats": {
+        "documents": 57638,
+        "queries": 648,
+        "query_tokens": 5139,
+        "tokens": 5189073,
+        "vocab_size": 59853
+      },
+      "upstream_bm25s": {
+        "build_ms": 1522.254083014559,
+        "query": {
+          "count": 648,
+          "qps": 1280.277445335686,
+          "total_ms": 506.1402919818647
+        }
+      },
+      "wall_time_s": 4.256567458010977
+    },
+    "hotpotqa": {
+      "dataset": "hotpotqa",
+      "official_qps": 20.88,
+      "stats": {
+        "documents": 5233329,
+        "queries": 7405,
+        "query_tokens": 81134,
+        "tokens": 169530288,
+        "vocab_size": 2549160
+      },
+      "upstream_bm25s": {
+        "build_ms": 82340.88158298982,
+        "query": {
+          "count": 7405,
+          "qps": 32.5434873429136,
+          "total_ms": 227541.68666599435
+        }
+      },
+      "wall_time_s": 420.1819937080145
+    },
+    "msmarco": {
+      "dataset": "msmarco",
+      "official_qps": 12.2,
+      "stats": {
+        "documents": 8841823,
+        "queries": 6980,
+        "query_tokens": 31024,
+        "tokens": 340859911,
+        "vocab_size": 1431983
+      },
+      "upstream_bm25s": {
+        "build_ms": 144710.5860839947,
+        "query": {
+          "count": 6980,
+          "qps": 26.179469408135333,
+          "total_ms": 266621.14083301276
+        }
+      },
+      "wall_time_s": 586.6962439169874
+    },
+    "nfcorpus": {
+      "dataset": "nfcorpus",
+      "official_qps": 1196.16,
+      "stats": {
+        "documents": 3633,
+        "queries": 323,
+        "query_tokens": 886,
+        "tokens": 614081,
+        "vocab_size": 19117
+      },
+      "upstream_bm25s": {
+        "build_ms": 133.78220799495466,
+        "query": {
+          "count": 323,
+          "qps": 4953.487594406575,
+          "total_ms": 65.2065830072388
+        }
+      },
+      "wall_time_s": 0.5022090419952292
+    },
+    "nq": {
+      "dataset": "nq",
+      "official_qps": 41.85,
+      "stats": {
+        "documents": 2681468,
+        "queries": 3452,
+        "query_tokens": 21779,
+        "tokens": 148249812,
+        "vocab_size": 892745
+      },
+      "upstream_bm25s": {
+        "build_ms": 57932.93350000749,
+        "query": {
+          "count": 3452,
+          "qps": 60.4884136257554,
+          "total_ms": 57068.78049997613
+        }
+      },
+      "wall_time_s": 193.99374433301273
+    },
+    "quora": {
+      "dataset": "quora",
+      "official_qps": 272.04,
+      "stats": {
+        "documents": 522931,
+        "queries": 10000,
+        "query_tokens": 67570,
+        "tokens": 4202151,
+        "vocab_size": 65377
+      },
+      "upstream_bm25s": {
+        "build_ms": 4307.229500001995,
+        "query": {
+          "count": 10000,
+          "qps": 266.60623917534724,
+          "total_ms": 37508.499541989295
+        }
+      },
+      "wall_time_s": 45.11447158298688
+    },
+    "scidocs": {
+      "dataset": "scidocs",
+      "official_qps": 767.05,
+      "stats": {
+        "documents": 25657,
+        "queries": 1000,
+        "query_tokens": 7812,
+        "tokens": 3211248,
+        "vocab_size": 58804
+      },
+      "upstream_bm25s": {
+        "build_ms": 819.3453339918051,
+        "query": {
+          "count": 1000,
+          "qps": 2180.662235697732,
+          "total_ms": 458.57629101374187
+        }
+      },
+      "wall_time_s": 3.3497754580166657
+    },
+    "scifact": {
+      "dataset": "scifact",
+      "official_qps": 1317.12,
+      "stats": {
+        "documents": 5183,
+        "queries": 300,
+        "query_tokens": 2816,
+        "tokens": 812074,
+        "vocab_size": 26559
+      },
+      "upstream_bm25s": {
+        "build_ms": 172.89216700010002,
+        "query": {
+          "count": 300,
+          "qps": 3661.2341115099666,
+          "total_ms": 81.93958399351686
+        }
+      },
+      "wall_time_s": 0.614995457988698
+    },
+    "trec-covid": {
+      "dataset": "trec-covid",
+      "official_qps": 85.64,
+      "stats": {
+        "documents": 171332,
+        "queries": 50,
+        "query_tokens": 404,
+        "tokens": 20231413,
+        "vocab_size": 174893
+      },
+      "upstream_bm25s": {
+        "build_ms": 5304.642999981297,
+        "query": {
+          "count": 50,
+          "qps": 491.4854278537544,
+          "total_ms": 101.7324159911368
+        }
+      },
+      "wall_time_s": 13.96090683300281
+    },
+    "webis-touche2020": {
+      "dataset": "webis-touche2020",
+      "official_qps": 60.59,
+      "stats": {
+        "documents": 382545,
+        "queries": 49,
+        "query_tokens": 246,
+        "tokens": 74180347,
+        "vocab_size": 354228
+      },
+      "upstream_bm25s": {
+        "build_ms": 17388.874666998163,
+        "query": {
+          "count": 49,
+          "qps": 352.43114557715217,
+          "total_ms": 139.03424999443814
+        }
+      },
+      "wall_time_s": 47.56652187500731
+    }
+  },
+  "top_k": 1000
+}

@@ -1,0 +1,196 @@
+{
+  "active_sessions_after": [
+    {
+      "application_name": "ii42 preload",
+      "pid": 1843994,
+      "query": "auto-preload",
+      "state": "active",
+      "wait_event": null,
+      "wait_event_type": null
+    },
+    {
+      "application_name": "ii42 preload",
+      "pid": 1844874,
+      "query": "auto-preload",
+      "state": "active",
+      "wait_event": null,
+      "wait_event_type": null
+    }
+  ],
+  "cases": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 5093.53,
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "94019651",
+            "accelerator_forward_chunk_reads": "6892",
+            "accelerator_forward_row_reads": "51033",
+            "allowed_documents": "51033",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "documents_examined": "51033",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "scope_ilike_comparison_limit_exceeded": true,
+            "scope_ilike_comparisons": "4958998",
+            "scope_ilike_values": 4958998,
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 1,
+            "sql_filter_residual": true
+          },
+          "name": "pubmed_date_category",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 5121.765962801874
+        }
+      ],
+      "completed": 1,
+      "expected_max_ms": 500.0,
+      "first_ms": 5093.53,
+      "name": "pubmed_date_category",
+      "passed": false,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 5093.53,
+        "mean_ms": 5093.53,
+        "min_ms": 5093.53,
+        "p50_ms": 5093.53,
+        "p95_ms": 5093.53
+      }
+    }
+  ],
+  "environment": {
+    "database": "ii_dev",
+    "extension_version": "0.2.4",
+    "indexes": {
+      "commons.data_arxiv__title_abstract__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636530/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_ca__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636533/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_ca_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636536/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_tx__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636531/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_tx_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636534/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_wa__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636532/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_wa_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636535/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_pubmed__title_abstract__current_next_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "57028352/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.sys_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636529/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      }
+    },
+    "pubmed_index": "commons.data_pubmed__title_abstract__current_next_idx",
+    "pubmed_index_source": "explicit",
+    "server_version": "18.4 (Debian 18.4-1.pgdg13+1)",
+    "settings": {
+      "ii42.maintenance_worker_limit": "4",
+      "ii42.shared_runtime_size": "114688",
+      "ii42.test_disable_semantic_accelerator": "off",
+      "shared_preload_libraries": "ii42,pg_stat_statements,pg_prewarm"
+    },
+    "table_stats": {
+      "data_arxiv": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_ca_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_tx_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_wa_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_pubmed": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      }
+    }
+  },
+  "finished_at_epoch": 1787369141.9039938,
+  "passed": false,
+  "started_at_epoch": 1787369136.704606,
+  "suite": "commons_query_matrix"
+}

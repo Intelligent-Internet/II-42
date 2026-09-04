@@ -1,0 +1,9 @@
+{
+  "elapsed_seconds": 1.462,
+  "input": "/home/huoju/leask/tmp/ii42-p22-native-qrels-20260722/data/scidocs-official/documents.jsonl",
+  "input_bytes": 217634772,
+  "input_sha256": "0b67c0fa828c523c700c0ece95854d666c16b4e4ecd707d4be16b292a7f20465",
+  "rows": 25657,
+  "schema": "bench",
+  "table": "docs"
+}

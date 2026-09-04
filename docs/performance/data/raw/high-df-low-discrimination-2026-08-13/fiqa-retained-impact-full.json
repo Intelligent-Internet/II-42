@@ -1,0 +1,485 @@
+{
+  "schema": "ii42_retained_impact_oracle_v1",
+  "dataset": "FiQA2018",
+  "documents": 57638,
+  "queries": 648,
+  "vocabulary": 50265,
+  "document_postings": 10974936,
+  "accelerated_posting_mass_requested": 0.3,
+  "accelerated_posting_mass_actual": 0.3004509547937227,
+  "accelerated_term_count": 252,
+  "exact_metrics": {
+    "ndcg_at_10": 0.2969355454393106,
+    "map_at_100": 0.2470704460213793,
+    "recall_at_100": 0.5767450613515428,
+    "mrr_at_20": 0.36895364746940684
+  },
+  "variants": {
+    "64": {
+      "retained_postings": 16128,
+      "work_ratio": {
+        "mean": 0.1285418732445128,
+        "p50": 0.11507306888637076,
+        "p95": 0.2233217013054047,
+        "maximum": 0.5387808516763943
+      },
+      "omitted_score_bound": {
+        "mean": 10.756185531616211,
+        "p95": 15.790116310119629,
+        "maximum": 18.580976486206055
+      },
+      "candidate_multipliers": {
+        "4": {
+          "candidate_count": 400,
+          "mean_overlap_at_k": 0.693966049382716,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 0.995570987654321,
+          "minimum_exact_topk_candidate_coverage": 0.17,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.2583154518791975,
+            "map_at_100": 0.21252017714151894,
+            "recall_at_100": 0.5597811910311911,
+            "mrr_at_20": 0.32156942280620043
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.24706532659711397,
+            "recall_at_100": 0.5765735935874825,
+            "mrr_at_20": 0.36895364746940684
+          }
+        },
+        "8": {
+          "candidate_count": 800,
+          "mean_overlap_at_k": 0.693966049382716,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 1.0,
+          "minimum_exact_topk_candidate_coverage": 1.0,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.2583154518791975,
+            "map_at_100": 0.21252017714151894,
+            "recall_at_100": 0.5597811910311911,
+            "mrr_at_20": 0.32156942280620043
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        },
+        "16": {
+          "candidate_count": 1600,
+          "mean_overlap_at_k": 0.693966049382716,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 1.0,
+          "minimum_exact_topk_candidate_coverage": 1.0,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.2583154518791975,
+            "map_at_100": 0.21252017714151894,
+            "recall_at_100": 0.5597811910311911,
+            "mrr_at_20": 0.32156942280620043
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        },
+        "32": {
+          "candidate_count": 3200,
+          "mean_overlap_at_k": 0.693966049382716,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 1.0,
+          "minimum_exact_topk_candidate_coverage": 1.0,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.2583154518791975,
+            "map_at_100": 0.21252017714151894,
+            "recall_at_100": 0.5597811910311911,
+            "mrr_at_20": 0.32156942280620043
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        }
+      },
+      "elapsed_seconds": 2.8811645830028283
+    },
+    "128": {
+      "retained_postings": 32256,
+      "work_ratio": {
+        "mean": 0.1312332611949888,
+        "p50": 0.1177207293391551,
+        "p95": 0.2258830572739972,
+        "maximum": 0.5417960059674929
+      },
+      "omitted_score_bound": {
+        "mean": 10.440552711486816,
+        "p95": 15.30890941619873,
+        "maximum": 18.074621200561523
+      },
+      "candidate_multipliers": {
+        "4": {
+          "candidate_count": 400,
+          "mean_overlap_at_k": 0.5902006172839506,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.9662345679012345,
+          "minimum_exact_topk_candidate_coverage": 0.11,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.250319953756277,
+            "map_at_100": 0.20457128353564907,
+            "recall_at_100": 0.54873946783669,
+            "mrr_at_20": 0.31419628952165357
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470022839329388,
+            "recall_at_100": 0.5779931017199536,
+            "mrr_at_20": 0.3690723559214486
+          }
+        },
+        "8": {
+          "candidate_count": 800,
+          "mean_overlap_at_k": 0.5902006172839506,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.9978395061728396,
+          "minimum_exact_topk_candidate_coverage": 0.44,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.250319953756277,
+            "map_at_100": 0.20457128353564907,
+            "recall_at_100": 0.54873946783669,
+            "mrr_at_20": 0.31419628952165357
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.24706863452223254,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        },
+        "16": {
+          "candidate_count": 1600,
+          "mean_overlap_at_k": 0.5902006172839506,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 1.0,
+          "minimum_exact_topk_candidate_coverage": 1.0,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.250319953756277,
+            "map_at_100": 0.20457128353564907,
+            "recall_at_100": 0.54873946783669,
+            "mrr_at_20": 0.31419628952165357
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        },
+        "32": {
+          "candidate_count": 3200,
+          "mean_overlap_at_k": 0.5902006172839506,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 1.0,
+          "minimum_exact_topk_candidate_coverage": 1.0,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.250319953756277,
+            "map_at_100": 0.20457128353564907,
+            "recall_at_100": 0.54873946783669,
+            "mrr_at_20": 0.31419628952165357
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        }
+      },
+      "elapsed_seconds": 2.898919749997731
+    },
+    "256": {
+      "retained_postings": 64512,
+      "work_ratio": {
+        "mean": 0.1366160370959408,
+        "p50": 0.12267629672444713,
+        "p95": 0.2313147101409765,
+        "maximum": 0.5478263145496899
+      },
+      "omitted_score_bound": {
+        "mean": 10.059852600097656,
+        "p95": 14.700471878051758,
+        "maximum": 17.509605407714844
+      },
+      "candidate_multipliers": {
+        "4": {
+          "candidate_count": 400,
+          "mean_overlap_at_k": 0.5146604938271605,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 0.8945987654320988,
+          "minimum_exact_topk_candidate_coverage": 0.05,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.25457944458814363,
+            "map_at_100": 0.20908168326060653,
+            "recall_at_100": 0.5539233057751576,
+            "mrr_at_20": 0.32194314456544276
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969703664298238,
+            "map_at_100": 0.2473247059939589,
+            "recall_at_100": 0.5788467662310255,
+            "mrr_at_20": 0.36923548860092115
+          }
+        },
+        "8": {
+          "candidate_count": 800,
+          "mean_overlap_at_k": 0.5146604938271605,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 0.979675925925926,
+          "minimum_exact_topk_candidate_coverage": 0.18,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.25457944458814363,
+            "map_at_100": 0.20908168326060653,
+            "recall_at_100": 0.5539233057751576,
+            "mrr_at_20": 0.32194314456544276
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.24704583091533414,
+            "recall_at_100": 0.5775534093821131,
+            "mrr_at_20": 0.3691422620098732
+          }
+        },
+        "16": {
+          "candidate_count": 1600,
+          "mean_overlap_at_k": 0.5146604938271605,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 0.9992438271604938,
+          "minimum_exact_topk_candidate_coverage": 0.69,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.25457944458814363,
+            "map_at_100": 0.20908168326060653,
+            "recall_at_100": 0.5539233057751576,
+            "mrr_at_20": 0.32194314456544276
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        },
+        "32": {
+          "candidate_count": 3200,
+          "mean_overlap_at_k": 0.5146604938271605,
+          "minimum_overlap_at_k": 0.01,
+          "mean_exact_topk_candidate_coverage": 1.0,
+          "minimum_exact_topk_candidate_coverage": 1.0,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.25457944458814363,
+            "map_at_100": 0.20908168326060653,
+            "recall_at_100": 0.5539233057751576,
+            "mrr_at_20": 0.32194314456544276
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        }
+      },
+      "elapsed_seconds": 2.936093416999938
+    },
+    "512": {
+      "retained_postings": 129024,
+      "work_ratio": {
+        "mean": 0.14738158889784478,
+        "p50": 0.13364222071476298,
+        "p95": 0.2412115314438633,
+        "maximum": 0.5598869317140838
+      },
+      "omitted_score_bound": {
+        "mean": 9.599366188049316,
+        "p95": 14.025405883789062,
+        "maximum": 16.820276260375977
+      },
+      "candidate_multipliers": {
+        "4": {
+          "candidate_count": 400,
+          "mean_overlap_at_k": 0.4589969135802469,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.7939969135802469,
+          "minimum_exact_topk_candidate_coverage": 0.01,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.26260119587217384,
+            "map_at_100": 0.22006745942448097,
+            "recall_at_100": 0.5565111500296686,
+            "mrr_at_20": 0.3315839102460476
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.29643315930984265,
+            "map_at_100": 0.24693847955196233,
+            "recall_at_100": 0.5848907693815101,
+            "mrr_at_20": 0.36961752159980577
+          }
+        },
+        "8": {
+          "candidate_count": 800,
+          "mean_overlap_at_k": 0.4589969135802469,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.9265123456790123,
+          "minimum_exact_topk_candidate_coverage": 0.05,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.26260119587217384,
+            "map_at_100": 0.22006745942448097,
+            "recall_at_100": 0.5565111500296686,
+            "mrr_at_20": 0.3315839102460476
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.29720092491526806,
+            "map_at_100": 0.24738200103679892,
+            "recall_at_100": 0.5810758471638101,
+            "mrr_at_20": 0.36931901562229935
+          }
+        },
+        "16": {
+          "candidate_count": 1600,
+          "mean_overlap_at_k": 0.4589969135802469,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.987932098765432,
+          "minimum_exact_topk_candidate_coverage": 0.27,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.26260119587217384,
+            "map_at_100": 0.22006745942448097,
+            "recall_at_100": 0.5565111500296686,
+            "mrr_at_20": 0.3315839102460476
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2471308884719141,
+            "recall_at_100": 0.5786312067562067,
+            "mrr_at_20": 0.36912060292388665
+          }
+        },
+        "32": {
+          "candidate_count": 3200,
+          "mean_overlap_at_k": 0.4589969135802469,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.9998765432098765,
+          "minimum_exact_topk_candidate_coverage": 0.92,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.26260119587217384,
+            "map_at_100": 0.22006745942448097,
+            "recall_at_100": 0.5565111500296686,
+            "mrr_at_20": 0.3315839102460476
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.2470704460213793,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        }
+      },
+      "elapsed_seconds": 3.020890457999485
+    },
+    "1000": {
+      "retained_postings": 252000,
+      "work_ratio": {
+        "mean": 0.16790342202022426,
+        "p50": 0.15503891988134771,
+        "p95": 0.26139399099866195,
+        "maximum": 0.5828774831837098
+      },
+      "omitted_score_bound": {
+        "mean": 9.051835060119629,
+        "p95": 13.296438217163086,
+        "maximum": 15.974034309387207
+      },
+      "candidate_multipliers": {
+        "4": {
+          "candidate_count": 400,
+          "mean_overlap_at_k": 0.4258950617283951,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.7340740740740741,
+          "minimum_exact_topk_candidate_coverage": 0.02,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.27968249804796325,
+            "map_at_100": 0.23020232583083017,
+            "recall_at_100": 0.5563970194757232,
+            "mrr_at_20": 0.34979671580638355
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2998364897428726,
+            "map_at_100": 0.24957661740424467,
+            "recall_at_100": 0.5926445982001538,
+            "mrr_at_20": 0.37122099666281816
+          }
+        },
+        "8": {
+          "candidate_count": 800,
+          "mean_overlap_at_k": 0.4258950617283951,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.8463425925925925,
+          "minimum_exact_topk_candidate_coverage": 0.06,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.27968249804796325,
+            "map_at_100": 0.23020232583083017,
+            "recall_at_100": 0.5563970194757232,
+            "mrr_at_20": 0.34979671580638355
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.29818553139302567,
+            "map_at_100": 0.24800819725133666,
+            "recall_at_100": 0.5901820102051584,
+            "mrr_at_20": 0.3702777676524595
+          }
+        },
+        "16": {
+          "candidate_count": 1600,
+          "mean_overlap_at_k": 0.4258950617283951,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.9519444444444445,
+          "minimum_exact_topk_candidate_coverage": 0.11,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.27968249804796325,
+            "map_at_100": 0.23020232583083017,
+            "recall_at_100": 0.5563970194757232,
+            "mrr_at_20": 0.34979671580638355
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.29758607534844816,
+            "map_at_100": 0.24747311633394395,
+            "recall_at_100": 0.5810268563740786,
+            "mrr_at_20": 0.36988269099104293
+          }
+        },
+        "32": {
+          "candidate_count": 3200,
+          "mean_overlap_at_k": 0.4258950617283951,
+          "minimum_overlap_at_k": 0.0,
+          "mean_exact_topk_candidate_coverage": 0.9933641975308642,
+          "minimum_exact_topk_candidate_coverage": 0.33,
+          "approximate_metrics": {
+            "ndcg_at_10": 0.27968249804796325,
+            "map_at_100": 0.23020232583083017,
+            "recall_at_100": 0.5563970194757232,
+            "mrr_at_20": 0.34979671580638355
+          },
+          "exact_completion_metrics": {
+            "ndcg_at_10": 0.2969355454393106,
+            "map_at_100": 0.24708429610884886,
+            "recall_at_100": 0.5767450613515428,
+            "mrr_at_20": 0.36895364746940684
+          }
+        }
+      },
+      "elapsed_seconds": 2.825885250000283
+    }
+  },
+  "elapsed_seconds": 16.718801916998927
+}

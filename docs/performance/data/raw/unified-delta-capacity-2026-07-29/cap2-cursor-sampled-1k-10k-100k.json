@@ -1,0 +1,154 @@
+{
+  "external_cluster": true,
+  "gates": {
+    "enforced": true,
+    "failures": [],
+    "largest_to_smallest_append_lock_ratio": 1.0,
+    "largest_to_smallest_publish_ratio": 0.8286,
+    "max_ratio": 1.5,
+    "passed": true
+  },
+  "insert_batch_size": 1000,
+  "levels": [
+    1000,
+    10000,
+    100000
+  ],
+  "model": {
+    "manifest_sha256": "5792543cfb259cb969136315e4072bf90f0542345aa636062878649d88414d32",
+    "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+    "path": "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+    "runtime_abi": "ii42_p2_unified_text_atoms_v2"
+  },
+  "observations": [
+    {
+      "append_lock_p95_us": 2,
+      "append_lock_us": 1,
+      "append_lock_us_samples": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "append_ms": 301.375,
+      "append_p95_ms": 349.358,
+      "chain_depth": 6,
+      "delta_records_after": 1005,
+      "delta_records_before": 1000,
+      "incremental_publish_delta": 5,
+      "incremental_record_delta": 5,
+      "oracle_exact": true,
+      "per_append_incremental_exact": true,
+      "prefix_records": 1000,
+      "publish_p95_us": 86,
+      "publish_us": 70,
+      "publish_us_samples": [
+        86,
+        48,
+        70,
+        70,
+        72
+      ],
+      "query_latency": {
+        "max_ms": 101.784,
+        "median_ms": 89.863,
+        "p95_ms": 100.955,
+        "runs": 21.0
+      },
+      "result_count": 100,
+      "samples": 5,
+      "segment_bytes": 540,
+      "segment_records": 1,
+      "timing_sample_delta": 5
+    },
+    {
+      "append_lock_p95_us": 1,
+      "append_lock_us": 1,
+      "append_lock_us_samples": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "append_ms": 306.97,
+      "append_p95_ms": 309.666,
+      "chain_depth": 6,
+      "delta_records_after": 10005,
+      "delta_records_before": 10000,
+      "incremental_publish_delta": 5,
+      "incremental_record_delta": 5,
+      "oracle_exact": true,
+      "per_append_incremental_exact": true,
+      "prefix_records": 10000,
+      "publish_p95_us": 124,
+      "publish_us": 49,
+      "publish_us_samples": [
+        124,
+        48,
+        51,
+        49,
+        49
+      ],
+      "query_latency": {
+        "max_ms": 100.593,
+        "median_ms": 92.566,
+        "p95_ms": 100.578,
+        "runs": 21.0
+      },
+      "result_count": 100,
+      "samples": 5,
+      "segment_bytes": 540,
+      "segment_records": 1,
+      "timing_sample_delta": 5
+    },
+    {
+      "append_lock_p95_us": 1,
+      "append_lock_us": 1,
+      "append_lock_us_samples": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "append_ms": 315.18,
+      "append_p95_ms": 315.613,
+      "chain_depth": 6,
+      "delta_records_after": 100005,
+      "delta_records_before": 100000,
+      "incremental_publish_delta": 5,
+      "incremental_record_delta": 5,
+      "oracle_exact": true,
+      "per_append_incremental_exact": true,
+      "prefix_records": 100000,
+      "publish_p95_us": 279,
+      "publish_us": 58,
+      "publish_us_samples": [
+        279,
+        58,
+        53,
+        70,
+        47
+      ],
+      "query_latency": {
+        "max_ms": 156.332,
+        "median_ms": 117.235,
+        "p95_ms": 123.909,
+        "runs": 21.0
+      },
+      "result_count": 100,
+      "samples": 5,
+      "segment_bytes": 540,
+      "segment_records": 1,
+      "timing_sample_delta": 5
+    }
+  ],
+  "passed": true,
+  "query_runs": 21,
+  "route": "incremental unified-delta capacity",
+  "samples_per_level": 5,
+  "server_model_path": "/models/p2",
+  "shared_cache_size": "768MB"
+}

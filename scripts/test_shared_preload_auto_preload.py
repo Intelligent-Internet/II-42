@@ -12,6 +12,8 @@ import tempfile
 import time
 from pathlib import Path
 
+from ii42_test_support import extension_control_root
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANY_INDEX_COUNT = 130
@@ -23,14 +25,14 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         '--bindir',
-        default=os.environ.get('PG_BINDIR', '/usr/bin'),
+        default='/opt/homebrew/opt/postgresql@18/bin',
         help='PostgreSQL bin directory containing initdb, pg_ctl, and psql.',
     )
     parser.add_argument(
         '--cache-mb',
         type=int,
         default=64,
-        help='Main shared-memory generation cache size for the temp cluster.',
+        help='Main shared runtime arena size for the temporary cluster.',
     )
     parser.add_argument(
         '--timeout',
@@ -42,6 +44,15 @@ def parse_args() -> argparse.Namespace:
         '--keep',
         action='store_true',
         help='Keep the temporary cluster for debugging.',
+    )
+    parser.add_argument('--extension-libdir', type=Path)
+    parser.add_argument(
+        '--extension-control-dir',
+        type=Path,
+        help=(
+            'PostgreSQL share directory containing extension/ii42.control, '
+            'or the extension directory itself.'
+        ),
     )
     return parser.parse_args()
 
@@ -104,15 +115,31 @@ def init_cluster(args: argparse.Namespace, pgdata: Path, port: int) -> None:
     ])
     with (pgdata / 'postgresql.conf').open('a', encoding='utf-8') as conf:
         conf.write("\nlisten_addresses = ''\n")
+        if args.extension_libdir is not None:
+            libdir = str(args.extension_libdir).replace("'", "''")
+            conf.write(
+                "dynamic_library_path = '"
+                f'{libdir}:$libdir'
+                "'\n"
+            )
+        if args.extension_control_dir is not None:
+            control_dir = str(
+                args.extension_control_dir
+            ).replace("'", "''")
+            conf.write(
+                "extension_control_path = '"
+                f'{control_dir}:$system'
+                "'\n"
+            )
         conf.write(f"unix_socket_directories = '{pgdata}'\n")
         conf.write(f'port = {port}\n')
-        conf.write("shared_preload_libraries = 'psql_bm25s'\n")
+        conf.write("shared_preload_libraries = 'ii42'\n")
         conf.write(
-            f"psql_bm25s.shared_generation_cache_size = '{args.cache_mb}MB'\n"
+            f"ii42.shared_runtime_size = '{args.cache_mb}MB'\n"
         )
-        conf.write('psql_bm25s.maintenance_worker_limit = 1\n')
-        conf.write("psql_bm25s.preload_timer_interval_ms = '1000ms'\n")
-        conf.write("psql_bm25s.maintenance_timer_interval_ms = '1000ms'\n")
+        conf.write('ii42.maintenance_worker_limit = 1\n')
+        conf.write("ii42.preload_timer_interval_ms = '1000ms'\n")
+        conf.write("ii42.maintenance_timer_interval_ms = '1000ms'\n")
 
     run([
         str(bindir / 'pg_ctl'),
@@ -156,7 +183,7 @@ def require_invalid_auto_preload(
             tokens text[] not null
         );
         CREATE INDEX docs_invalid_bm25_idx
-            ON docs_invalid USING psql_bm25s (tokens)
+            ON docs_invalid USING ii42 (tokens)
             WITH (auto_preload = -1);
         ''',
         check=False,
@@ -177,7 +204,7 @@ def setup(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         pgdata,
         port,
         '''
-        CREATE EXTENSION psql_bm25s;
+        CREATE EXTENSION ii42;
         ''',
     )
     require_invalid_auto_preload(args, pgdata, port)
@@ -208,16 +235,16 @@ def setup(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         FROM generate_series(1, 2000) gs;
 
         CREATE INDEX docs_high_bm25_idx
-            ON docs_high USING psql_bm25s (tokens)
+            ON docs_high USING ii42 (tokens)
             WITH (auto_preload = 10);
         CREATE INDEX docs_low_bm25_idx
-            ON docs_low USING psql_bm25s (tokens)
+            ON docs_low USING ii42 (tokens)
             WITH (auto_preload = 1);
         CREATE INDEX docs_stale_bm25_idx
-            ON docs_stale USING psql_bm25s (tokens)
+            ON docs_stale USING ii42 (tokens)
             WITH (consistency = 'manual', auto_preload = 5);
         CREATE INDEX docs_cold_bm25_idx
-            ON docs_cold USING psql_bm25s (tokens);
+            ON docs_cold USING ii42 (tokens);
 
         INSERT INTO docs_stale VALUES
             (2001, ARRAY['auto', 'preload', 'stale', 'delta']);
@@ -238,7 +265,7 @@ def setup(args: argparse.Namespace, pgdata: Path, port: int) -> None:
         '\n'.join(
             f'''
             CREATE INDEX docs_many_bm25_{i:03d}_idx
-                ON docs_many USING psql_bm25s (tokens)
+                ON docs_many USING ii42 (tokens)
                 WITH (auto_preload = 1);
             '''
             for i in range(MANY_INDEX_COUNT)
@@ -257,7 +284,7 @@ def state(
         pgdata,
         port,
         f"""
-        SELECT public.psql_bm25s_generation_cache_state(
+        SELECT public.ii42_index_runtime_state(
             '{index_name}'::regclass
         );
         """,
@@ -273,10 +300,6 @@ def state_value(cache_state: str, key: str) -> str:
 
 def resident(cache_state: str) -> bool:
     return state_value(cache_state, 'shared_preload_resident') == 'true'
-
-
-def shared_entries(cache_state: str) -> int:
-    return int(state_value(cache_state, 'shared_preload_entries'))
 
 
 def assert_worker_phase_counters_visible(cache_state: str) -> None:
@@ -312,12 +335,17 @@ def wait_for_auto_preload(
                 raise AssertionError(f'unmarked index was preloaded: {cold}')
             saw_first_resident = True
 
-        if saw_first_resident and resident(stale) and resident(low):
+        if saw_first_resident and resident(low):
             if resident(cold):
                 raise AssertionError(f'unmarked index was preloaded: {cold}')
+            if resident(stale):
+                raise AssertionError(
+                    'manual stale generation was preloaded before maintenance: '
+                    f'{stale}'
+                )
             if state_value(stale, 'payload_health') != 'stale':
                 raise AssertionError(
-                    'stale generation was preloaded but not reported stale: '
+                    'manual stale generation did not report stale health: '
                     f'{stale}'
                 )
             return high, low, stale, cold
@@ -335,27 +363,57 @@ def wait_for_many_preload(
     pgdata: Path,
     port: int,
 ) -> str:
-    target = 3 + MANY_INDEX_COUNT
     deadline = time.monotonic() + args.timeout
     high = ''
+    resident_count = 0
 
     while time.monotonic() < deadline:
         high = state(args, pgdata, port, 'docs_high_bm25_idx')
-        if shared_entries(high) >= target:
+        resident_count = int(psql(
+            args,
+            pgdata,
+            port,
+            r'''
+            SELECT count(*)
+            FROM pg_catalog.pg_class AS relation
+            JOIN pg_catalog.pg_namespace AS namespace
+              ON namespace.oid = relation.relnamespace
+            WHERE namespace.nspname = 'public'
+              AND relation.relname ~ '^docs_many_bm25_[0-9]{3}_idx$'
+              AND public.ii42_index_shared_preload_resident(
+                    relation.oid
+                  );
+            ''',
+        ))
+        if resident_count == MANY_INDEX_COUNT:
             assert_worker_phase_counters_visible(high)
             return high
         time.sleep(0.1)
 
     raise AssertionError(
         'auto_preload registry did not admit all marked indexes: '
-        f'target={target} state={high}'
+        f'resident={resident_count}/{MANY_INDEX_COUNT} state={high}'
     )
 
 
 def main() -> None:
     args = parse_args()
+    if (args.extension_libdir is None) != (
+        args.extension_control_dir is None
+    ):
+        raise ValueError(
+            '--extension-libdir and --extension-control-dir must be '
+            'provided together'
+        )
+    if args.extension_libdir is not None:
+        args.extension_libdir = args.extension_libdir.resolve()
+    if args.extension_control_dir is not None:
+        args.extension_control_dir = extension_control_root(
+            args.extension_control_dir
+        )
+
     workdir = Path(tempfile.mkdtemp(
-        prefix='psql_bm25s_shared_auto_preload_',
+        prefix='ii42_shared_auto_preload_',
         dir='/tmp',
     ))
     pgdata = workdir / 'pgdata'

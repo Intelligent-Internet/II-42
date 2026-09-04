@@ -1,0 +1,144 @@
+{
+  "candidate_multipliers": [],
+  "index_name": "ii42_beir15.docs_fiqa_bm25_idx",
+  "k": 100,
+  "query_count": 648,
+  "ratios": [
+    {
+      "baseline_overlap_at_100": 1.0,
+      "budget_ratio": 0.0,
+      "latency_ms": {
+        "p50": 87.27447899991603,
+        "p95": 105.2589590003663
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0,
+        "mrr_at_20": 0.0,
+        "ndcg_at_10": 0.0,
+        "recall_at_100": 0.0
+      },
+      "metrics": {
+        "map_at_100": 0.27918083664112703,
+        "mrr_at_20": 0.41773500768025484,
+        "ndcg_at_10": 0.3341804870193415,
+        "recall_at_100": 0.6187780283845099
+      },
+      "query_count": 648,
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9907253086419753,
+      "budget_ratio": 0.005,
+      "latency_ms": {
+        "p50": 90.83237499999086,
+        "p95": 122.67487500002972
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.00043774099944371425,
+        "mrr_at_20": 0.00047236650926729684,
+        "ndcg_at_10": 0.0005156741210485816,
+        "recall_at_100": -0.0008903133903134242
+      },
+      "metrics": {
+        "map_at_100": 0.27961857764057074,
+        "mrr_at_20": 0.41820737418952214,
+        "ndcg_at_10": 0.3346961611403901,
+        "recall_at_100": 0.6178877149941965
+      },
+      "query_count": 648,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.16666666666666669,
+          "gain_queries": 95,
+          "harm_queries": 88,
+          "worst": -0.10010738831615118
+        },
+        "mrr_at_20": {
+          "best": 0.5,
+          "gain_queries": 16,
+          "harm_queries": 15,
+          "worst": -0.5
+        },
+        "ndcg_at_10": {
+          "best": 0.17319681505689122,
+          "gain_queries": 17,
+          "harm_queries": 14,
+          "worst": -0.1251739405390886
+        },
+        "recall_at_100": {
+          "best": 0.0,
+          "gain_queries": 0,
+          "harm_queries": 3,
+          "worst": -0.3333333333333333
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    },
+    {
+      "baseline_overlap_at_100": 0.9724537037037037,
+      "budget_ratio": 0.02,
+      "latency_ms": {
+        "p50": 104.60362500020892,
+        "p95": 142.3867089997657
+      },
+      "mean_omitted_bound_fraction": null,
+      "mean_pruned_postings": null,
+      "mean_pruned_terms": null,
+      "metric_delta": {
+        "map_at_100": 0.0009252261915195237,
+        "mrr_at_20": 0.003995289648633549,
+        "ndcg_at_10": 0.001962072811652449,
+        "recall_at_100": 0.006316137566137581
+      },
+      "metrics": {
+        "map_at_100": 0.28010606283264655,
+        "mrr_at_20": 0.4217302973288884,
+        "ndcg_at_10": 0.33614255983099395,
+        "recall_at_100": 0.6250941659506475
+      },
+      "query_count": 648,
+      "query_level_delta": {
+        "map_at_100": {
+          "best": 0.25501253132832075,
+          "gain_queries": 153,
+          "harm_queries": 115,
+          "worst": -0.5
+        },
+        "mrr_at_20": {
+          "best": 0.6666666666666667,
+          "gain_queries": 43,
+          "harm_queries": 33,
+          "worst": -0.5
+        },
+        "ndcg_at_10": {
+          "best": 0.30884878848933894,
+          "gain_queries": 43,
+          "harm_queries": 29,
+          "worst": -0.36907024642854247
+        },
+        "recall_at_100": {
+          "best": 1.0,
+          "gain_queries": 10,
+          "harm_queries": 5,
+          "worst": -1.0
+        }
+      },
+      "semantic_work_target_postings": 0,
+      "strategy": "term-budget",
+      "support_ratio": 0.0
+    }
+  ],
+  "semantic_work_target_postings": 0,
+  "strategy": "term-budget",
+  "support_ratio": 0.0
+}

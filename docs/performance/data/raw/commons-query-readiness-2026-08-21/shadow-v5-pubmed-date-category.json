@@ -1,0 +1,1271 @@
+{
+  "active_sessions_after": [],
+  "cases": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "client_timeout",
+          "wall_ms": 65030.613671056926
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 1705.612,
+          "filter_oracle": {
+            "allowed_documents": 51033
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c4"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d22"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a238"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93a"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806a"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92ed6"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e696dd"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593ab"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4f542"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e45747"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bf6"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c31e"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1bcb1"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a87"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112ae"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f5b"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0087e"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c1"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee01"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda95"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6460"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4ee6"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a0"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a1"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42defeb5"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc99"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba3"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259a"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8743"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd5308"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4ce9"
+            ],
+            [
+              "(1324829,3)",
+              5923227,
+              "42dceff5"
+            ],
+            [
+              "(564029,5)",
+              2490353,
+              "42dc590c"
+            ],
+            [
+              "(1412022,2)",
+              6298998,
+              "42dc50e2"
+            ],
+            [
+              "(444713,1)",
+              1955279,
+              "42dc3c65"
+            ],
+            [
+              "(592308,4)",
+              2621593,
+              "42dc1a53"
+            ],
+            [
+              "(1405218,3)",
+              6270223,
+              "42db9fa4"
+            ],
+            [
+              "(899126,4)",
+              4039402,
+              "42db45ea"
+            ],
+            [
+              "(1397678,4)",
+              6238236,
+              "42db0d08"
+            ],
+            [
+              "(56954,3)",
+              245189,
+              "42dad51f"
+            ],
+            [
+              "(1598584,2)",
+              7123069,
+              "42da7ae3"
+            ],
+            [
+              "(400327,1)",
+              1761904,
+              "42da2c94"
+            ],
+            [
+              "(491029,4)",
+              2177202,
+              "42da2424"
+            ],
+            [
+              "(1002686,4)",
+              4491960,
+              "42d9f12b"
+            ],
+            [
+              "(207311,4)",
+              910872,
+              "42d9d8f1"
+            ],
+            [
+              "(1737290,4)",
+              7741683,
+              "42d9cee2"
+            ],
+            [
+              "(12265,3)",
+              52396,
+              "42d9beb9"
+            ],
+            [
+              "(1061903,2)",
+              4769318,
+              "42d964af"
+            ],
+            [
+              "(582462,4)",
+              2574139,
+              "42d90d1e"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "94019651",
+            "accelerator_forward_chunk_reads": "6892",
+            "accelerator_forward_row_reads": "51033",
+            "allowed_documents": "51033",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "documents_examined": "51033",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "scope_ilike_blocks_considered": "19372",
+            "scope_ilike_blocks_skipped": "8448",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "2796310",
+            "scope_ilike_values": 4958998,
+            "scope_ilike_values_examined": "2796310",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "sql_filter_residual": false
+          },
+          "name": "pubmed_date_category",
+          "rank_oracle": {
+            "allowed_documents": 51033,
+            "hit_signature": [
+              [
+                "(553207,2)",
+                2445119,
+                "4305d9c4"
+              ],
+              [
+                "(245514,1)",
+                1073702,
+                "43001d22"
+              ],
+              [
+                "(195724,1)",
+                860029,
+                "42f8a238"
+              ],
+              [
+                "(49687,3)",
+                214840,
+                "42ece93a"
+              ],
+              [
+                "(102,4)",
+                446,
+                "42ec806a"
+              ],
+              [
+                "(679111,1)",
+                3012489,
+                "42ea8dd3"
+              ],
+              [
+                "(1548873,1)",
+                6902239,
+                "42e92ed6"
+              ],
+              [
+                "(35779,4)",
+                155527,
+                "42e696dd"
+              ],
+              [
+                "(653818,3)",
+                2900426,
+                "42e593ab"
+              ],
+              [
+                "(377908,1)",
+                1663242,
+                "42e4f542"
+              ],
+              [
+                "(375559,3)",
+                1652937,
+                "42e45747"
+              ],
+              [
+                "(1202205,4)",
+                5396814,
+                "42e41bf6"
+              ],
+              [
+                "(1762020,4)",
+                7845584,
+                "42e1c31e"
+              ],
+              [
+                "(1121905,1)",
+                5027384,
+                "42e1bcb1"
+              ],
+              [
+                "(1097932,4)",
+                4923455,
+                "42e12a87"
+              ],
+              [
+                "(38150,1)",
+                165925,
+                "42e112ae"
+              ],
+              [
+                "(1075348,4)",
+                4825805,
+                "42e09f5b"
+              ],
+              [
+                "(1837496,2)",
+                8162218,
+                "42e0087e"
+              ],
+              [
+                "(840521,8)",
+                3738251,
+                "42e002c1"
+              ],
+              [
+                "(1710752,5)",
+                7628589,
+                "42dfee01"
+              ],
+              [
+                "(1347735,2)",
+                6025825,
+                "42dfda95"
+              ],
+              [
+                "(658404,3)",
+                2920657,
+                "42df6460"
+              ],
+              [
+                "(212134,2)",
+                931970,
+                "42df4ee6"
+              ],
+              [
+                "(1822515,3)",
+                8099576,
+                "42df32a0"
+              ],
+              [
+                "(1004631,4)",
+                4500766,
+                "42df03a1"
+              ],
+              [
+                "(750238,2)",
+                3341370,
+                "42defeb5"
+              ],
+              [
+                "(991311,3)",
+                4440448,
+                "42defc99"
+              ],
+              [
+                "(684733,1)",
+                3036538,
+                "42de7ba3"
+              ],
+              [
+                "(530861,3)",
+                2348046,
+                "42de259a"
+              ],
+              [
+                "(625770,4)",
+                2781924,
+                "42dd8743"
+              ],
+              [
+                "(1035306,2)",
+                4651081,
+                "42dd5308"
+              ],
+              [
+                "(814882,1)",
+                3622318,
+                "42dd4ce9"
+              ],
+              [
+                "(1324829,3)",
+                5923227,
+                "42dceff5"
+              ],
+              [
+                "(564029,5)",
+                2490353,
+                "42dc590c"
+              ],
+              [
+                "(1412022,2)",
+                6298998,
+                "42dc50e2"
+              ],
+              [
+                "(444713,1)",
+                1955279,
+                "42dc3c65"
+              ],
+              [
+                "(592308,4)",
+                2621593,
+                "42dc1a53"
+              ],
+              [
+                "(1405218,3)",
+                6270223,
+                "42db9fa4"
+              ],
+              [
+                "(899126,4)",
+                4039402,
+                "42db45ea"
+              ],
+              [
+                "(1397678,4)",
+                6238236,
+                "42db0d08"
+              ],
+              [
+                "(56954,3)",
+                245189,
+                "42dad51f"
+              ],
+              [
+                "(1598584,2)",
+                7123069,
+                "42da7ae3"
+              ],
+              [
+                "(400327,1)",
+                1761904,
+                "42da2c94"
+              ],
+              [
+                "(491029,4)",
+                2177202,
+                "42da2424"
+              ],
+              [
+                "(1002686,4)",
+                4491960,
+                "42d9f12b"
+              ],
+              [
+                "(207311,4)",
+                910872,
+                "42d9d8f1"
+              ],
+              [
+                "(1737290,4)",
+                7741683,
+                "42d9cee2"
+              ],
+              [
+                "(12265,3)",
+                52396,
+                "42d9beb9"
+              ],
+              [
+                "(1061903,2)",
+                4769318,
+                "42d964af"
+              ],
+              [
+                "(582462,4)",
+                2574139,
+                "42d90d1e"
+              ]
+            ]
+          },
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 38409.49193597771
+        },
+        {
+          "attempt": 3,
+          "elapsed_ms": 1685.723,
+          "filter_oracle": {
+            "allowed_documents": 51033
+          },
+          "hit_signature": [
+            [
+              "(553207,2)",
+              2445119,
+              "4305d9c4"
+            ],
+            [
+              "(245514,1)",
+              1073702,
+              "43001d22"
+            ],
+            [
+              "(195724,1)",
+              860029,
+              "42f8a238"
+            ],
+            [
+              "(49687,3)",
+              214840,
+              "42ece93a"
+            ],
+            [
+              "(102,4)",
+              446,
+              "42ec806a"
+            ],
+            [
+              "(679111,1)",
+              3012489,
+              "42ea8dd3"
+            ],
+            [
+              "(1548873,1)",
+              6902239,
+              "42e92ed6"
+            ],
+            [
+              "(35779,4)",
+              155527,
+              "42e696dd"
+            ],
+            [
+              "(653818,3)",
+              2900426,
+              "42e593ab"
+            ],
+            [
+              "(377908,1)",
+              1663242,
+              "42e4f542"
+            ],
+            [
+              "(375559,3)",
+              1652937,
+              "42e45747"
+            ],
+            [
+              "(1202205,4)",
+              5396814,
+              "42e41bf6"
+            ],
+            [
+              "(1762020,4)",
+              7845584,
+              "42e1c31e"
+            ],
+            [
+              "(1121905,1)",
+              5027384,
+              "42e1bcb1"
+            ],
+            [
+              "(1097932,4)",
+              4923455,
+              "42e12a87"
+            ],
+            [
+              "(38150,1)",
+              165925,
+              "42e112ae"
+            ],
+            [
+              "(1075348,4)",
+              4825805,
+              "42e09f5b"
+            ],
+            [
+              "(1837496,2)",
+              8162218,
+              "42e0087e"
+            ],
+            [
+              "(840521,8)",
+              3738251,
+              "42e002c1"
+            ],
+            [
+              "(1710752,5)",
+              7628589,
+              "42dfee01"
+            ],
+            [
+              "(1347735,2)",
+              6025825,
+              "42dfda95"
+            ],
+            [
+              "(658404,3)",
+              2920657,
+              "42df6460"
+            ],
+            [
+              "(212134,2)",
+              931970,
+              "42df4ee6"
+            ],
+            [
+              "(1822515,3)",
+              8099576,
+              "42df32a0"
+            ],
+            [
+              "(1004631,4)",
+              4500766,
+              "42df03a1"
+            ],
+            [
+              "(750238,2)",
+              3341370,
+              "42defeb5"
+            ],
+            [
+              "(991311,3)",
+              4440448,
+              "42defc99"
+            ],
+            [
+              "(684733,1)",
+              3036538,
+              "42de7ba3"
+            ],
+            [
+              "(530861,3)",
+              2348046,
+              "42de259a"
+            ],
+            [
+              "(625770,4)",
+              2781924,
+              "42dd8743"
+            ],
+            [
+              "(1035306,2)",
+              4651081,
+              "42dd5308"
+            ],
+            [
+              "(814882,1)",
+              3622318,
+              "42dd4ce9"
+            ],
+            [
+              "(1324829,3)",
+              5923227,
+              "42dceff5"
+            ],
+            [
+              "(564029,5)",
+              2490353,
+              "42dc590c"
+            ],
+            [
+              "(1412022,2)",
+              6298998,
+              "42dc50e2"
+            ],
+            [
+              "(444713,1)",
+              1955279,
+              "42dc3c65"
+            ],
+            [
+              "(592308,4)",
+              2621593,
+              "42dc1a53"
+            ],
+            [
+              "(1405218,3)",
+              6270223,
+              "42db9fa4"
+            ],
+            [
+              "(899126,4)",
+              4039402,
+              "42db45ea"
+            ],
+            [
+              "(1397678,4)",
+              6238236,
+              "42db0d08"
+            ],
+            [
+              "(56954,3)",
+              245189,
+              "42dad51f"
+            ],
+            [
+              "(1598584,2)",
+              7123069,
+              "42da7ae3"
+            ],
+            [
+              "(400327,1)",
+              1761904,
+              "42da2c94"
+            ],
+            [
+              "(491029,4)",
+              2177202,
+              "42da2424"
+            ],
+            [
+              "(1002686,4)",
+              4491960,
+              "42d9f12b"
+            ],
+            [
+              "(207311,4)",
+              910872,
+              "42d9d8f1"
+            ],
+            [
+              "(1737290,4)",
+              7741683,
+              "42d9cee2"
+            ],
+            [
+              "(12265,3)",
+              52396,
+              "42d9beb9"
+            ],
+            [
+              "(1061903,2)",
+              4769318,
+              "42d964af"
+            ],
+            [
+              "(582462,4)",
+              2574139,
+              "42d90d1e"
+            ]
+          ],
+          "hits": 50,
+          "ii42_trace": {
+            "accelerator_attempted": true,
+            "accelerator_fallback": false,
+            "accelerator_forward_bytes": "94019651",
+            "accelerator_forward_chunk_reads": "6892",
+            "accelerator_forward_row_reads": "51033",
+            "allowed_documents": "51033",
+            "blocks_considered": "0",
+            "blocks_scored": "0",
+            "blocks_skipped": "0",
+            "documents_examined": "51033",
+            "postings_examined": "0",
+            "query_route": "forward_rows",
+            "scope_ilike_blocks_considered": "19372",
+            "scope_ilike_blocks_skipped": "8448",
+            "scope_ilike_comparison_limit_exceeded": false,
+            "scope_ilike_comparisons": "2796310",
+            "scope_ilike_values": 4958998,
+            "scope_ilike_values_examined": "2796310",
+            "scope_predicates": 2,
+            "scope_resolved_predicates": 2,
+            "sql_filter_residual": false
+          },
+          "name": "pubmed_date_category",
+          "rank_oracle": {
+            "allowed_documents": 51033,
+            "hit_signature": [
+              [
+                "(553207,2)",
+                2445119,
+                "4305d9c4"
+              ],
+              [
+                "(245514,1)",
+                1073702,
+                "43001d22"
+              ],
+              [
+                "(195724,1)",
+                860029,
+                "42f8a238"
+              ],
+              [
+                "(49687,3)",
+                214840,
+                "42ece93a"
+              ],
+              [
+                "(102,4)",
+                446,
+                "42ec806a"
+              ],
+              [
+                "(679111,1)",
+                3012489,
+                "42ea8dd3"
+              ],
+              [
+                "(1548873,1)",
+                6902239,
+                "42e92ed6"
+              ],
+              [
+                "(35779,4)",
+                155527,
+                "42e696dd"
+              ],
+              [
+                "(653818,3)",
+                2900426,
+                "42e593ab"
+              ],
+              [
+                "(377908,1)",
+                1663242,
+                "42e4f542"
+              ],
+              [
+                "(375559,3)",
+                1652937,
+                "42e45747"
+              ],
+              [
+                "(1202205,4)",
+                5396814,
+                "42e41bf6"
+              ],
+              [
+                "(1762020,4)",
+                7845584,
+                "42e1c31e"
+              ],
+              [
+                "(1121905,1)",
+                5027384,
+                "42e1bcb1"
+              ],
+              [
+                "(1097932,4)",
+                4923455,
+                "42e12a87"
+              ],
+              [
+                "(38150,1)",
+                165925,
+                "42e112ae"
+              ],
+              [
+                "(1075348,4)",
+                4825805,
+                "42e09f5b"
+              ],
+              [
+                "(1837496,2)",
+                8162218,
+                "42e0087e"
+              ],
+              [
+                "(840521,8)",
+                3738251,
+                "42e002c1"
+              ],
+              [
+                "(1710752,5)",
+                7628589,
+                "42dfee01"
+              ],
+              [
+                "(1347735,2)",
+                6025825,
+                "42dfda95"
+              ],
+              [
+                "(658404,3)",
+                2920657,
+                "42df6460"
+              ],
+              [
+                "(212134,2)",
+                931970,
+                "42df4ee6"
+              ],
+              [
+                "(1822515,3)",
+                8099576,
+                "42df32a0"
+              ],
+              [
+                "(1004631,4)",
+                4500766,
+                "42df03a1"
+              ],
+              [
+                "(750238,2)",
+                3341370,
+                "42defeb5"
+              ],
+              [
+                "(991311,3)",
+                4440448,
+                "42defc99"
+              ],
+              [
+                "(684733,1)",
+                3036538,
+                "42de7ba3"
+              ],
+              [
+                "(530861,3)",
+                2348046,
+                "42de259a"
+              ],
+              [
+                "(625770,4)",
+                2781924,
+                "42dd8743"
+              ],
+              [
+                "(1035306,2)",
+                4651081,
+                "42dd5308"
+              ],
+              [
+                "(814882,1)",
+                3622318,
+                "42dd4ce9"
+              ],
+              [
+                "(1324829,3)",
+                5923227,
+                "42dceff5"
+              ],
+              [
+                "(564029,5)",
+                2490353,
+                "42dc590c"
+              ],
+              [
+                "(1412022,2)",
+                6298998,
+                "42dc50e2"
+              ],
+              [
+                "(444713,1)",
+                1955279,
+                "42dc3c65"
+              ],
+              [
+                "(592308,4)",
+                2621593,
+                "42dc1a53"
+              ],
+              [
+                "(1405218,3)",
+                6270223,
+                "42db9fa4"
+              ],
+              [
+                "(899126,4)",
+                4039402,
+                "42db45ea"
+              ],
+              [
+                "(1397678,4)",
+                6238236,
+                "42db0d08"
+              ],
+              [
+                "(56954,3)",
+                245189,
+                "42dad51f"
+              ],
+              [
+                "(1598584,2)",
+                7123069,
+                "42da7ae3"
+              ],
+              [
+                "(400327,1)",
+                1761904,
+                "42da2c94"
+              ],
+              [
+                "(491029,4)",
+                2177202,
+                "42da2424"
+              ],
+              [
+                "(1002686,4)",
+                4491960,
+                "42d9f12b"
+              ],
+              [
+                "(207311,4)",
+                910872,
+                "42d9d8f1"
+              ],
+              [
+                "(1737290,4)",
+                7741683,
+                "42d9cee2"
+              ],
+              [
+                "(12265,3)",
+                52396,
+                "42d9beb9"
+              ],
+              [
+                "(1061903,2)",
+                4769318,
+                "42d964af"
+              ],
+              [
+                "(582462,4)",
+                2574139,
+                "42d90d1e"
+              ]
+            ]
+          },
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 9374.706645030528
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "filter_oracle": {
+        "attempts": [
+          {
+            "attempt": 2,
+            "native_allowed_documents": 51033,
+            "passed": true,
+            "sql_allowed_documents": 51033
+          },
+          {
+            "attempt": 3,
+            "native_allowed_documents": 51033,
+            "passed": true,
+            "sql_allowed_documents": 51033
+          }
+        ],
+        "passed": true
+      },
+      "first_ms": 1705.612,
+      "name": "pubmed_date_category",
+      "passed": false,
+      "rank_oracle": {
+        "attempts": [
+          {
+            "allowed_documents": 51033,
+            "attempt": 2,
+            "passed": true
+          },
+          {
+            "allowed_documents": 51033,
+            "attempt": 3,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 1685.723,
+        "mean_ms": 1685.723,
+        "min_ms": 1685.723,
+        "p50_ms": 1685.723,
+        "p95_ms": 1685.723
+      }
+    }
+  ],
+  "environment": {
+    "database": "ii_dev",
+    "extension_version": "0.2.4",
+    "indexes": {
+      "commons.data_arxiv__title_abstract__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636530/1/2120",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_ca__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636533/1/2111",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_ca_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636536/1/2156",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_tx__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636531/1/2072",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_tx_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636534/1/2074",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_wa__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636532/1/2100",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_wa_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636535/1/2118",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_pubmed__title_abstract__current_next_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "57028352/1/2310",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.sys_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636529/1/2054",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      }
+    },
+    "pubmed_index": "commons.data_pubmed__title_abstract__current_next_idx",
+    "pubmed_index_source": "explicit",
+    "server_version": "18.4 (Debian 18.4-1.pgdg13+1)",
+    "settings": {
+      "ii42.maintenance_worker_limit": "4",
+      "ii42.shared_runtime_size": "114688",
+      "ii42.test_disable_semantic_accelerator": "off",
+      "shared_preload_libraries": "ii42,pg_stat_statements,pg_prewarm"
+    },
+    "table_stats": {
+      "data_arxiv": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_ca_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_tx_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_wa_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_pubmed": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      }
+    }
+  },
+  "finished_at_epoch": 1787377898.5272088,
+  "passed": false,
+  "started_at_epoch": 1787377785.6375902,
+  "suite": "commons_query_matrix"
+}

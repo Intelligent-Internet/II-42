@@ -4,6 +4,8 @@ set -euo pipefail
 
 version=''
 image_tag=''
+model_checkout=''
+allow_dirty=false
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -14,6 +16,14 @@ while [ "$#" -gt 0 ]; do
         --image-tag)
             image_tag="$2"
             shift 2
+            ;;
+        --model-checkout)
+            model_checkout="$2"
+            shift 2
+            ;;
+        --allow-dirty)
+            allow_dirty=true
+            shift
             ;;
         *)
             echo "unknown argument: $1" >&2
@@ -28,14 +38,65 @@ if [ -z "$version" ]; then
 fi
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+if [ -z "$model_checkout" ]; then
+    model_checkout="${II42_MILESTONE_MODEL_CHECKOUT:-}"
+fi
+if [ -z "$model_checkout" ]; then
+    model_checkout="${repo_root}/.artifacts/ii42-milestone-model"
+fi
+if [ ! -d "$model_checkout" ]; then
+    echo "milestone model checkout not found: ${model_checkout}" >&2
+    echo 'pass --model-checkout or set II42_MILESTONE_MODEL_CHECKOUT' >&2
+    exit 1
+fi
+model_checkout="$(cd "$model_checkout" && pwd)"
+python3 "${repo_root}/scripts/validate_milestone_model_checkout.py" \
+    --checkout "$model_checkout" \
+    --quiet
+model_id="$(python3 -c \
+    'import json,sys; print(json.load(open(sys.argv[1]))["model_id"])' \
+    "${model_checkout}/manifest.json")"
+model_manifest_sha256="$(python3 -c \
+    'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1], "rb").read()).hexdigest())' \
+    "${model_checkout}/manifest.json")"
+if git -C "$repo_root" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    git_commit="$(git -C "$repo_root" rev-parse HEAD)"
+    git_tree_state='clean'
+    if [ -n "$(git -C "$repo_root" status \
+        --porcelain --untracked-files=normal)" ]; then
+        git_tree_state='dirty'
+    fi
+else
+    git_commit="${II42_GIT_COMMIT:-}"
+    git_tree_state="${II42_GIT_TREE_STATE:-source-archive}"
+    if [ -z "$git_commit" ]; then
+        echo 'II42_GIT_COMMIT is required outside a Git worktree' >&2
+        exit 1
+    fi
+fi
+if [ "$git_tree_state" = 'dirty' ] && [ "$allow_dirty" != true ]; then
+    echo 'refusing to build a release from a dirty Git worktree' >&2
+    echo 'commit or stash changes, or pass --allow-dirty explicitly' >&2
+    exit 1
+fi
+control_version="$(sed -n \
+    "s/^default_version = '\(.*\)'$/\1/p" \
+    "${repo_root}/ii42.control")"
+if [ "$version" != "$control_version" ]; then
+    echo "Docker version ${version} does not match ii42.control " \
+        "version ${control_version}" >&2
+    exit 1
+fi
+onnxruntime_version="$(tr -d '[:space:]' \
+    <"${repo_root}/packaging/onnxruntime.version")"
 arch="$(uname -m)"
 os_name="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
 if [ -z "$image_tag" ]; then
-    image_tag="psql_bm25s:pg18-v${version}"
+    image_tag="ii42:pg18-v${version}"
 fi
 
-package_name="psql_bm25s-v${version}-docker-pg18-${os_name}-${arch}"
+package_name="ii42-v${version}-docker-pg18-${os_name}-${arch}"
 dist_dir="${repo_root}/dist"
 archive_path="${dist_dir}/${package_name}.tar.gz"
 checksum_path="${archive_path}.sha256"
@@ -45,7 +106,13 @@ mkdir -p "$dist_dir"
 
 docker build \
     --pull \
-    --build-arg "PSQL_BM25S_VERSION=${version}" \
+    --build-context "ii42_milestone_model=${model_checkout}" \
+    --build-arg "II42_VERSION=${version}" \
+    --build-arg "ONNXRUNTIME_VERSION=${onnxruntime_version}" \
+    --build-arg "II42_GIT_COMMIT=${git_commit}" \
+    --build-arg "II42_GIT_TREE_STATE=${git_tree_state}" \
+    --build-arg "II42_MODEL_ID=${model_id}" \
+    --build-arg "II42_MODEL_MANIFEST_SHA256=${model_manifest_sha256}" \
     --file "${repo_root}/packaging/docker/postgres18/Dockerfile" \
     --tag "${image_tag}" \
     "${repo_root}"

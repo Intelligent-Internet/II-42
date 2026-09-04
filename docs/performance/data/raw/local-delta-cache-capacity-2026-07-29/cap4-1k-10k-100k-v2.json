@@ -1,0 +1,210 @@
+{
+  "external_cluster": true,
+  "gates": {
+    "failures": [],
+    "passed": true
+  },
+  "levels": [
+    1000,
+    10000,
+    100000
+  ],
+  "local_cache_max_bytes": 1073741824,
+  "local_cache_max_records": 200000,
+  "model": {
+    "manifest_sha256": "5792543cfb259cb969136315e4072bf90f0542345aa636062878649d88414d32",
+    "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+    "path": "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke",
+    "runtime_abi": "ii42_p2_unified_text_atoms_v2"
+  },
+  "observations": [
+    {
+      "after_commit_stats": {
+        "builds": 2,
+        "entries": 0,
+        "evictions": 0,
+        "hits": 198,
+        "retained_bytes": 0
+      },
+      "baseline_stats": {
+        "builds": 0,
+        "entries": 0,
+        "evictions": 0,
+        "hits": 0,
+        "retained_bytes": 0
+      },
+      "first_latency": {
+        "first_query_ms": 150.358,
+        "reuse_median_ms": 5.644,
+        "reuse_p95_ms": 6.089
+      },
+      "first_oracle_exact": true,
+      "first_result_count": 100,
+      "first_reuse_memory_growth_bytes": 249856,
+      "first_stats": {
+        "builds": 1,
+        "entries": 1,
+        "evictions": 0,
+        "hits": 99,
+        "retained_bytes": 3577600
+      },
+      "memory_after_commit_bytes": 11559464,
+      "memory_after_first_build_bytes": 16193160,
+      "memory_after_first_reuse_bytes": 16443016,
+      "memory_after_second_build_bytes": 16479080,
+      "memory_after_second_reuse_bytes": 16479080,
+      "memory_before_bytes": 2804104,
+      "prefix_records": 1000,
+      "query_runs_per_identity": 100,
+      "second_latency": {
+        "first_query_ms": 133.363,
+        "reuse_median_ms": 5.655,
+        "reuse_p95_ms": 5.916
+      },
+      "second_oracle_exact": true,
+      "second_result_count": 100,
+      "second_reuse_memory_growth_bytes": 0,
+      "second_stats": {
+        "builds": 2,
+        "entries": 1,
+        "evictions": 0,
+        "hits": 198,
+        "retained_bytes": 3581664
+      }
+    },
+    {
+      "after_commit_stats": {
+        "builds": 4,
+        "entries": 0,
+        "evictions": 0,
+        "hits": 396,
+        "retained_bytes": 0
+      },
+      "baseline_stats": {
+        "builds": 2,
+        "entries": 0,
+        "evictions": 0,
+        "hits": 198,
+        "retained_bytes": 0
+      },
+      "first_latency": {
+        "first_query_ms": 303.412,
+        "reuse_median_ms": 7.3,
+        "reuse_p95_ms": 7.836
+      },
+      "first_oracle_exact": true,
+      "first_result_count": 100,
+      "first_reuse_memory_growth_bytes": 0,
+      "first_stats": {
+        "builds": 3,
+        "entries": 1,
+        "evictions": 0,
+        "hits": 297,
+        "retained_bytes": 34480712
+      },
+      "memory_after_commit_bytes": 11880208,
+      "memory_after_first_build_bytes": 54691536,
+      "memory_after_first_reuse_bytes": 54691536,
+      "memory_after_second_build_bytes": 54995928,
+      "memory_after_second_reuse_bytes": 54995928,
+      "memory_before_bytes": 11559464,
+      "prefix_records": 10000,
+      "query_runs_per_identity": 100,
+      "second_latency": {
+        "first_query_ms": 296.58,
+        "reuse_median_ms": 7.431,
+        "reuse_p95_ms": 7.745
+      },
+      "second_oracle_exact": true,
+      "second_result_count": 100,
+      "second_reuse_memory_growth_bytes": 0,
+      "second_stats": {
+        "builds": 4,
+        "entries": 1,
+        "evictions": 0,
+        "hits": 396,
+        "retained_bytes": 34484792
+      }
+    },
+    {
+      "after_commit_stats": {
+        "builds": 6,
+        "entries": 0,
+        "evictions": 0,
+        "hits": 594,
+        "retained_bytes": 0
+      },
+      "baseline_stats": {
+        "builds": 4,
+        "entries": 0,
+        "evictions": 0,
+        "hits": 396,
+        "retained_bytes": 0
+      },
+      "first_latency": {
+        "first_query_ms": 2542.65,
+        "reuse_median_ms": 13.492,
+        "reuse_p95_ms": 15.112
+      },
+      "first_oracle_exact": true,
+      "first_result_count": 100,
+      "first_reuse_memory_growth_bytes": 0,
+      "first_stats": {
+        "builds": 5,
+        "entries": 1,
+        "evictions": 0,
+        "hits": 495,
+        "retained_bytes": 344633520
+      },
+      "memory_after_commit_bytes": 11898640,
+      "memory_after_first_build_bytes": 415505648,
+      "memory_after_first_reuse_bytes": 415505648,
+      "memory_after_second_build_bytes": 415535864,
+      "memory_after_second_reuse_bytes": 415535864,
+      "memory_before_bytes": 11885024,
+      "prefix_records": 100000,
+      "query_runs_per_identity": 100,
+      "second_latency": {
+        "first_query_ms": 2184.895,
+        "reuse_median_ms": 13.605,
+        "reuse_p95_ms": 15.479
+      },
+      "second_oracle_exact": true,
+      "second_result_count": 100,
+      "second_reuse_memory_growth_bytes": 0,
+      "second_stats": {
+        "builds": 6,
+        "entries": 1,
+        "evictions": 0,
+        "hits": 594,
+        "retained_bytes": 344637832
+      }
+    }
+  ],
+  "overflow_probe": {
+    "after_stats": {
+      "builds": 6,
+      "entries": 0,
+      "evictions": 0,
+      "hits": 594,
+      "retained_bytes": 0
+    },
+    "before_stats": {
+      "builds": 6,
+      "entries": 0,
+      "evictions": 0,
+      "hits": 594,
+      "retained_bytes": 0
+    },
+    "configured_max_records": 100002,
+    "error": {
+      "message": "ii42 transaction-local SAE delta cache exceeds its configured limit",
+      "sqlstate": "54000"
+    },
+    "passed": true
+  },
+  "passed": true,
+  "query_runs": 100,
+  "route": "transaction-local unified-delta cache capacity",
+  "server_model_path": "/Volumes/Betty/Tmp/ii42-p2-model-checkouts/ii42_p2_p22_nfcorpus_v2_smoke"
+}

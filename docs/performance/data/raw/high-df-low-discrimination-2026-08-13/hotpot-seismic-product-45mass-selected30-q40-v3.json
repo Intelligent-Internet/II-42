@@ -1,0 +1,87 @@
+{
+  "build": {
+    "accelerated_posting_mass_actual": 0.3000215868570207,
+    "accelerated_posting_mass_target": 0.3,
+    "accelerated_term_count": 547,
+    "actual_posting_mass": 0.4500030409098235,
+    "build_knn": 0,
+    "centroid_fraction": 0.02,
+    "doc_cut": 15,
+    "index_variant": "standard",
+    "minimum_n_postings": 1000,
+    "n_postings": 35798,
+    "summary_energy": 0.1,
+    "target_posting_mass": 0.45
+  },
+  "build_seconds": 9.492357048991835,
+  "conversion_seconds": 0.0,
+  "dataset_root": "/home/huoju/leask/runs/ii42-p2-beir15-native-v1/semantic-shards/hotpotqa",
+  "document_count": 5233329,
+  "documents_npz": null,
+  "exact": {
+    "latency_ms": {
+      "p50": 898.2141049928032,
+      "p95": 956.2524369976018
+    },
+    "metrics": {
+      "map_at_100": 0.6381858936399031,
+      "mrr_at_20": 0.8602083333333332,
+      "ndcg_at_10": 0.7197670811071559,
+      "recall_at_100": 0.875
+    }
+  },
+  "index_bytes": 9495012305,
+  "knn_build_seconds": 0.0,
+  "knn_bytes": 0,
+  "queries_npz": null,
+  "query_count": 40,
+  "schema": "ii42_seismic_npz_oracle_v2",
+  "variants": [
+    {
+      "accelerator_exact_completion_latency_ms": {
+        "p50": 1.1218645086046308,
+        "p95": 1.1815850157290697
+      },
+      "accelerator_exact_completion_metrics": {
+        "map_at_100": 0.337009307589015,
+        "mrr_at_20": 0.5739583333333333,
+        "ndcg_at_10": 0.408657302785486,
+        "recall_at_100": 0.425
+      },
+      "candidate_k": 800,
+      "candidate_multiplier": 8,
+      "exact_completion_latency_ms": {
+        "p50": 1268.4126809908776,
+        "p95": 2119.931635010289
+      },
+      "full_accelerator_coverage_queries": 0,
+      "full_coverage_queries": 38,
+      "heap_factor": 0.7,
+      "latency_ms": {
+        "p50": 1285.0765599869192,
+        "p95": 2137.626795010874
+      },
+      "mean_accelerated_posting_ratio": 0.7706259964410175,
+      "mean_accelerator_candidates": 800.0,
+      "mean_accelerator_exact_topk_candidate_coverage": 0.30225,
+      "mean_exact_topk_candidate_coverage": 0.998,
+      "mean_residual_posting_ratio": 0.22937400355898255,
+      "mean_topk_overlap": 0.998,
+      "mean_union_candidates": 662399.95,
+      "metrics": {
+        "map_at_100": 0.6381858936399031,
+        "mrr_at_20": 0.8602083333333332,
+        "ndcg_at_10": 0.7197670811071559,
+        "recall_at_100": 0.875
+      },
+      "partial_acceleration": true,
+      "query_count": 40,
+      "query_cut": 16,
+      "search_knn": 0,
+      "search_latency_ms": {
+        "p50": 11.192037505679764,
+        "p95": 24.82634800253436
+      }
+    }
+  ]
+}

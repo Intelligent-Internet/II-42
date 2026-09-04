@@ -1,0 +1,156 @@
+{
+  "surface": "enlightenment_arxiv75k_p2_300_query_soak",
+  "iterations": 300,
+  "latency_ms": {
+    "mean": 97.36373443389311,
+    "p50": 97.1063050092198,
+    "p95": 122.01413401635364,
+    "min": 73.46210902323946,
+    "max": 166.05789703316987
+  },
+  "memory_samples": [
+    {
+      "iteration": 0,
+      "backend_context": {
+        "total_bytes": 4405984,
+        "used_bytes": 3445528
+      },
+      "backend_process": {
+        "VmSize": 140383666176,
+        "VmRSS": 418721792,
+        "RssAnon": 7356416,
+        "RssFile": 12320768
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923123712,
+        "RssAnon": 869109760,
+        "RssFile": 29949952
+      }
+    },
+    {
+      "iteration": 1,
+      "backend_context": {
+        "total_bytes": 6618616,
+        "used_bytes": 5283088
+      },
+      "backend_process": {
+        "VmSize": 140387078144,
+        "VmRSS": 504860672,
+        "RssAnon": 10854400,
+        "RssFile": 16637952
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923189248,
+        "RssAnon": 869109760,
+        "RssFile": 29949952
+      }
+    },
+    {
+      "iteration": 25,
+      "backend_context": {
+        "total_bytes": 6878712,
+        "used_bytes": 5447600
+      },
+      "backend_process": {
+        "VmSize": 140387495936,
+        "VmRSS": 517017600,
+        "RssAnon": 11214848,
+        "RssFile": 16637952
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923197440,
+        "RssAnon": 869109760,
+        "RssFile": 29958144
+      }
+    },
+    {
+      "iteration": 50,
+      "backend_context": {
+        "total_bytes": 6878712,
+        "used_bytes": 5447600
+      },
+      "backend_process": {
+        "VmSize": 140387495936,
+        "VmRSS": 517148672,
+        "RssAnon": 11214848,
+        "RssFile": 16637952
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923197440,
+        "RssAnon": 869109760,
+        "RssFile": 29958144
+      }
+    },
+    {
+      "iteration": 100,
+      "backend_context": {
+        "total_bytes": 6878712,
+        "used_bytes": 5447600
+      },
+      "backend_process": {
+        "VmSize": 140387495936,
+        "VmRSS": 517226496,
+        "RssAnon": 11214848,
+        "RssFile": 16637952
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923197440,
+        "RssAnon": 869109760,
+        "RssFile": 29958144
+      }
+    },
+    {
+      "iteration": 200,
+      "backend_context": {
+        "total_bytes": 6841848,
+        "used_bytes": 5429328
+      },
+      "backend_process": {
+        "VmSize": 140387495936,
+        "VmRSS": 517292032,
+        "RssAnon": 11214848,
+        "RssFile": 16703488
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923197440,
+        "RssAnon": 869109760,
+        "RssFile": 29958144
+      }
+    },
+    {
+      "iteration": 300,
+      "backend_context": {
+        "total_bytes": 6841848,
+        "used_bytes": 5429328
+      },
+      "backend_process": {
+        "VmSize": 140387495936,
+        "VmRSS": 517308416,
+        "RssAnon": 11231232,
+        "RssFile": 16703488
+      },
+      "runtime_process": {
+        "VmSize": 142147231744,
+        "VmRSS": 923197440,
+        "RssAnon": 869109760,
+        "RssFile": 29958144
+      }
+    }
+  ],
+  "runtime_delta": {
+    "requests": 300,
+    "successes": 300,
+    "failures": 0,
+    "runtime_runs": 300,
+    "encoded_texts": 300,
+    "runtime_total_us": 4645251,
+    "queue_waits": 20,
+    "worker_recoveries": 0
+  }
+}

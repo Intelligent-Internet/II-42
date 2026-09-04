@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "installation_mode": "offline_only",
+  "old_binary_sha256": "510190dfa812effed328024357d9013b5037bdc75a35819bc38eaa47ad767708",
+  "candidate_binary_sha256_before": "4f0d53dea071fd2f3b715c368ae86120597d5242b75478d195a5faa9eba8d99e",
+  "candidate_binary_sha256_after": "4f0d53dea071fd2f3b715c368ae86120597d5242b75478d195a5faa9eba8d99e",
+  "old_start_seconds": 111,
+  "candidate_start_seconds": 112,
+  "old_top10_exact": true,
+  "candidate_top10_exact": true,
+  "generation_id_preserved": true,
+  "generation_signature_preserved": true,
+  "old_query_ready": true,
+  "candidate_query_ready": true
+}

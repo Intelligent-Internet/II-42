@@ -1,0 +1,125 @@
+{
+  "created_at": "2026-04-02T15:04:37.149270+00:00",
+  "tasks": {
+    "arguana:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:05:10.143408+00:00"
+    },
+    "arguana:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:05:08.718116+00:00"
+    },
+    "climate-fever:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:05:55.868827+00:00"
+    },
+    "climate-fever:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:06:14.620730+00:00"
+    },
+    "cqadupstack:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:09:16.785710+00:00"
+    },
+    "cqadupstack:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:09:48.074421+00:00"
+    },
+    "dbpedia-entity:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:05:32.649106+00:00"
+    },
+    "dbpedia-entity:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:05:42.907481+00:00"
+    },
+    "fever:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:07:25.584993+00:00"
+    },
+    "fever:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:07:57.156269+00:00"
+    },
+    "fiqa:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:12:15.746609+00:00"
+    },
+    "fiqa:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:12:38.154893+00:00"
+    },
+    "hotpotqa:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:13:00.934311+00:00"
+    },
+    "hotpotqa:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:13:33.464859+00:00"
+    },
+    "msmarco:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:15:42.071939+00:00"
+    },
+    "msmarco:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:15:06.522006+00:00"
+    },
+    "nfcorpus:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:16:04.172896+00:00"
+    },
+    "nfcorpus:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:17:41.632037+00:00"
+    },
+    "nq:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:18:05.605420+00:00"
+    },
+    "nq:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:19:35.314380+00:00"
+    },
+    "quora:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:23:52.156405+00:00"
+    },
+    "quora:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:25:42.060389+00:00"
+    },
+    "scidocs:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:26:02.780845+00:00"
+    },
+    "scidocs:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:27:53.533449+00:00"
+    },
+    "scifact:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:28:12.883795+00:00"
+    },
+    "scifact:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:29:47.090645+00:00"
+    },
+    "trec-covid:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:30:06.712181+00:00"
+    },
+    "trec-covid:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:31:29.639820+00:00"
+    },
+    "webis-touche2020:psql_bm25s_ids": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:32:16.755321+00:00"
+    },
+    "webis-touche2020:psql_bm25s_text": {
+      "status": "starting",
+      "updated_at": "2026-04-02T15:33:40.669534+00:00"
+    }
+  }
+}

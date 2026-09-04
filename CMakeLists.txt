@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(psql_bm25s LANGUAGES C)
+project(ii42 LANGUAGES C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -8,9 +8,9 @@ set(CMAKE_C_EXTENSIONS OFF)
 
 find_package(ICU QUIET COMPONENTS i18n uc data)
 if(ICU_FOUND)
-    set(PSQL_BM25S_ICU_TARGETS ICU::i18n ICU::uc)
+    set(II42_ICU_TARGETS ICU::i18n ICU::uc)
     if(TARGET ICU::data)
-        list(APPEND PSQL_BM25S_ICU_TARGETS ICU::data)
+        list(APPEND II42_ICU_TARGETS ICU::data)
     endif()
 else()
     find_package(PkgConfig QUIET)
@@ -25,94 +25,123 @@ else()
     endif()
 
     if(TARGET PkgConfig::ICU_PKG)
-        set(PSQL_BM25S_ICU_TARGETS PkgConfig::ICU_PKG)
+        set(II42_ICU_TARGETS PkgConfig::ICU_PKG)
     else()
         set(
-            PSQL_BM25S_ICU_PREFIX_HINTS
+            II42_ICU_PREFIX_HINTS
             /opt/homebrew/opt/icu4c@78
             /opt/homebrew/opt/icu4c@77
             /opt/homebrew/opt/icu4c
             /usr/local/opt/icu4c
         )
         find_path(
-            PSQL_BM25S_ICU_INCLUDE_DIR
+            II42_ICU_INCLUDE_DIR
             unicode/ubrk.h
             PATH_SUFFIXES include
-            PATHS ${PSQL_BM25S_ICU_PREFIX_HINTS}
+            PATHS ${II42_ICU_PREFIX_HINTS}
         )
         find_library(
-            PSQL_BM25S_ICU_I18N_LIB
+            II42_ICU_I18N_LIB
             NAMES icui18n
             PATH_SUFFIXES lib
-            PATHS ${PSQL_BM25S_ICU_PREFIX_HINTS}
+            PATHS ${II42_ICU_PREFIX_HINTS}
         )
         find_library(
-            PSQL_BM25S_ICU_UC_LIB
+            II42_ICU_UC_LIB
             NAMES icuuc
             PATH_SUFFIXES lib
-            PATHS ${PSQL_BM25S_ICU_PREFIX_HINTS}
+            PATHS ${II42_ICU_PREFIX_HINTS}
         )
         find_library(
-            PSQL_BM25S_ICU_DATA_LIB
+            II42_ICU_DATA_LIB
             NAMES icudata
             PATH_SUFFIXES lib
-            PATHS ${PSQL_BM25S_ICU_PREFIX_HINTS}
+            PATHS ${II42_ICU_PREFIX_HINTS}
         )
         if(
-            NOT PSQL_BM25S_ICU_INCLUDE_DIR
-            OR NOT PSQL_BM25S_ICU_I18N_LIB
-            OR NOT PSQL_BM25S_ICU_UC_LIB
-            OR NOT PSQL_BM25S_ICU_DATA_LIB
+            NOT II42_ICU_INCLUDE_DIR
+            OR NOT II42_ICU_I18N_LIB
+            OR NOT II42_ICU_UC_LIB
+            OR NOT II42_ICU_DATA_LIB
         )
             message(FATAL_ERROR 'Unable to locate ICU headers and libraries')
         endif()
 
-        add_library(psql_bm25s_icu INTERFACE)
+        add_library(ii42_icu INTERFACE)
         target_include_directories(
-            psql_bm25s_icu
+            ii42_icu
             INTERFACE
-            ${PSQL_BM25S_ICU_INCLUDE_DIR}
+            ${II42_ICU_INCLUDE_DIR}
         )
         target_link_libraries(
-            psql_bm25s_icu
+            ii42_icu
             INTERFACE
-            ${PSQL_BM25S_ICU_I18N_LIB}
-            ${PSQL_BM25S_ICU_UC_LIB}
-            ${PSQL_BM25S_ICU_DATA_LIB}
+            ${II42_ICU_I18N_LIB}
+            ${II42_ICU_UC_LIB}
+            ${II42_ICU_DATA_LIB}
         )
-        set(PSQL_BM25S_ICU_TARGETS psql_bm25s_icu)
+        set(II42_ICU_TARGETS ii42_icu)
     endif()
 endif()
 
 add_library(
-    psql_bm25s_core
+    ii42_core
     STATIC
-    src/psql_bm25s_core.c
-    src/psql_bm25s_query.c
-    src/psql_bm25s_stem.c
-    src/psql_bm25s_storage.c
-    src/psql_bm25s_text.c
+    src/ii42_block_ranges.c
+    src/ii42_core.c
+    src/ii42_document_tid_lookup.c
+    src/ii42_document_cow.c
+    src/ii42_initial_fold_stream.c
+    src/ii42_lexicon_cow.c
+    src/ii42_prefix_cow.c
+    src/ii42_posting_heat.c
+    src/ii42_query.c
+    src/ii42_semantic_accelerator.c
+    src/ii42_semantic_accelerator_builder.c
+    src/ii42_semantic_accelerator_directory.c
+    src/ii42_semantic_forward.c
+    src/ii42_semantic_forward_bound.c
+    src/ii42_semantic_impact_frontier.c
+    src/ii42_scope.c
+    src/ii42_weighted_space_saving.c
+    src/ii42_semantic_bmp.c
+    src/ii42_segments.c
+    src/ii42_term_cow.c
+    src/ii42_stem.c
+    src/ii42_storage.c
+    src/ii42_text.c
 )
-target_include_directories(psql_bm25s_core PUBLIC src)
+target_include_directories(ii42_core PUBLIC src)
 target_compile_options(
-    psql_bm25s_core
+    ii42_core
     PRIVATE
     -Wall
     -Wextra
     -Wpedantic
 )
 if(NOT WIN32)
-    target_link_libraries(psql_bm25s_core PUBLIC m)
+    target_link_libraries(ii42_core PUBLIC m)
 endif()
-target_link_libraries(psql_bm25s_core PUBLIC ${PSQL_BM25S_ICU_TARGETS})
+target_link_libraries(ii42_core PUBLIC ${II42_ICU_TARGETS})
 
-add_executable(psql_bm25s_unit_tests tests/test_main.c)
-target_link_libraries(psql_bm25s_unit_tests PRIVATE psql_bm25s_core)
-target_include_directories(psql_bm25s_unit_tests PRIVATE src)
+add_executable(ii42_unit_tests tests/test_main.c)
+target_link_libraries(ii42_unit_tests PRIVATE ii42_core)
+target_include_directories(ii42_unit_tests PRIVATE src)
 
-add_executable(psql_bm25s_simd_bench tests/benchmark_simd.c)
-target_link_libraries(psql_bm25s_simd_bench PRIVATE psql_bm25s_core)
-target_include_directories(psql_bm25s_simd_bench PRIVATE src)
+add_executable(ii42_simd_bench tests/benchmark_simd.c)
+target_link_libraries(ii42_simd_bench PRIVATE ii42_core)
+target_include_directories(ii42_simd_bench PRIVATE src)
+
+add_executable(ii42_extent_bench tests/benchmark_extents.c)
+target_link_libraries(ii42_extent_bench PRIVATE ii42_core)
+target_include_directories(ii42_extent_bench PRIVATE src)
+
+add_executable(
+    ii42_semantic_bmp_bench
+    tests/benchmark_semantic_bmp.c
+)
+target_link_libraries(ii42_semantic_bmp_bench PRIVATE ii42_core)
+target_include_directories(ii42_semantic_bmp_bench PRIVATE src)
 
 enable_testing()
-add_test(NAME psql_bm25s_unit_tests COMMAND psql_bm25s_unit_tests)
+add_test(NAME ii42_unit_tests COMMAND ii42_unit_tests)

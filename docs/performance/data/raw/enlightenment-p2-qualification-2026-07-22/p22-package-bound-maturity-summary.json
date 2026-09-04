@@ -1,0 +1,43 @@
+{
+  "artifact_scope": "local macOS PG18 P2.2 candidate",
+  "elapsed_ms": 160324.487,
+  "extension_version": "0.1.2",
+  "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+  "model_lifecycle": {
+    "passed_gates": 48,
+    "total_gates": 48
+  },
+  "onnxruntime_version": "1.26.0",
+  "package_binding": {
+    "artifacts": {
+      "ii42--0.1.2.sql": "da5fe33ee24dc6aa69271d0605dfc8b853c9f36ff7612a386a1cfb7fee78e7fe",
+      "ii42.control": "4206ce8ed1c09cb6feb11bcdca970f351212fa9d94e3d25ee5e182e0c9a9ca0b",
+      "ii42.dylib": "13944272b64450c5f6f7bcf781275905d1b33bb323d2869e326e0deadda90600",
+      "libonnxruntime.1.26.0.dylib": "30afadcfc3c704f7671f8430d6252956651c1972373901d2be629da2e6a4d8ee"
+    },
+    "fingerprint": "5b2f3c08bfeededb0c90ce450c946bf8890d362f961fb559e929a5303fac0cf4",
+    "postflight_matches_preflight": true
+  },
+  "passed": true,
+  "runtime_abi": "ii42_p2_unified_text_atoms_v2",
+  "steps": [
+    "product convergence inventory",
+    "product script py_compile",
+    "isolated core extension regression",
+    "isolated extension schema placement smoke",
+    "isolated ONNX Runtime ABI smoke",
+    "ONNX Runtime CPU provider matrix",
+    "empty and UNLOGGED lifecycle smoke",
+    "mutable BM25 crash recovery smoke",
+    "runtime service required smoke",
+    "runtime service privilege smoke",
+    "runtime service temp pg smoke",
+    "physical replication lifecycle smoke",
+    "payload health corruption smoke",
+    "ONNX Runtime resource soak",
+    "production model unified lifecycle smoke",
+    "concurrent DDL and relation rewrite lifecycle smoke",
+    "runtime service restart smoke",
+    "mutable lifecycle medium smoke"
+  ]
+}

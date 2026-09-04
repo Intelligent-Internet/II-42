@@ -1,0 +1,202 @@
+{
+  "schema_version": "p22_exact_final_v2_summary_v1",
+  "surface": {
+    "database": "ii_dev",
+    "index": "ii42_qual_20260722.arxiv_p2_idx",
+    "documents": 75001,
+    "queries": 12,
+    "k": 100,
+    "repeats_per_candidate_round": 10
+  },
+  "baseline": {
+    "stage": "baseline-b",
+    "binary_sha256": "21db255f463d82f687931fb4062b944295b6c4e30b5558e1ee79423f748e3ce4",
+    "latency": {
+      "count": 120,
+      "max_ms": 127.24394502583891,
+      "mean_ms": 94.57141305028927,
+      "min_ms": 62.826698005665094,
+      "p50_ms": 95.89775549829938,
+      "p95_ms": 112.90769254555926
+    },
+    "comparison": null
+  },
+  "accepted_final_v2_rounds": [
+    {
+      "stage": "exact-bulk-slice-v1",
+      "binary_sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6",
+      "latency": {
+        "count": 120,
+        "max_ms": 127.58416298311204,
+        "mean_ms": 55.99411410609415,
+        "min_ms": 45.29392399126664,
+        "p50_ms": 54.40443553379737,
+        "p95_ms": 68.26956972654443
+      },
+      "comparison": {
+        "allowed_absolute_score_delta": 0.0001,
+        "identity_mismatches": 0,
+        "improvement_percent": {
+          "p50_ms": 43.26829105529778,
+          "p95_ms": 39.535058960666426
+        },
+        "max_absolute_score_delta": 0.0,
+        "passed": true,
+        "ranked_rows": 1200,
+        "required_improvement_percent": 20.0
+      }
+    },
+    {
+      "stage": "exact-bulk-slice-v1-c2",
+      "binary_sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6",
+      "latency": {
+        "count": 120,
+        "max_ms": 108.54510101489723,
+        "mean_ms": 55.319862323328074,
+        "min_ms": 40.971674025058746,
+        "p50_ms": 53.21862947312184,
+        "p95_ms": 74.53890085162129
+      },
+      "comparison": {
+        "allowed_absolute_score_delta": 0.0001,
+        "identity_mismatches": 0,
+        "improvement_percent": {
+          "p50_ms": 44.5048226659845,
+          "p95_ms": 33.982442496959024
+        },
+        "max_absolute_score_delta": 0.0,
+        "passed": true,
+        "ranked_rows": 1200,
+        "required_improvement_percent": 20.0
+      }
+    },
+    {
+      "stage": "exact-final-v2-c3",
+      "binary_sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6",
+      "latency": {
+        "count": 120,
+        "max_ms": 106.30869399756193,
+        "mean_ms": 54.29107689706143,
+        "min_ms": 43.24404295766726,
+        "p50_ms": 52.309264516225085,
+        "p95_ms": 68.1493230513297
+      },
+      "comparison": {
+        "allowed_absolute_score_delta": 0.0001,
+        "identity_mismatches": 0,
+        "improvement_percent": {
+          "p50_ms": 45.453087776227754,
+          "p95_ms": 39.64155894530318
+        },
+        "max_absolute_score_delta": 0.0,
+        "passed": true,
+        "ranked_rows": 1200,
+        "required_improvement_percent": 20.0
+      }
+    },
+    {
+      "stage": "reinstall-final-v2-stable-c4",
+      "binary_sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6",
+      "latency": {
+        "count": 120,
+        "max_ms": 83.30760896205902,
+        "mean_ms": 51.388026241814565,
+        "min_ms": 42.748973006382585,
+        "p50_ms": 50.78693249379285,
+        "p95_ms": 58.828526714933105
+      },
+      "comparison": {
+        "allowed_absolute_score_delta": 0.0001,
+        "identity_mismatches": 0,
+        "improvement_percent": {
+          "p50_ms": 47.04054101173047,
+          "p95_ms": 47.89679481653097
+        },
+        "max_absolute_score_delta": 0.0,
+        "passed": true,
+        "ranked_rows": 1200,
+        "required_improvement_percent": 20.0
+      }
+    }
+  ],
+  "rollback_control": {
+    "stage": "rollback-final-v1-after-v2",
+    "binary_sha256": "8bdede8cbf1dbecd088b38fda84eacd2fd4c6f2f644e69724fba5f2c2ae87787",
+    "latency": {
+      "count": 36,
+      "max_ms": 127.19872099114582,
+      "mean_ms": 88.51710135705717,
+      "min_ms": 65.26604999089614,
+      "p50_ms": 87.81495099538006,
+      "p95_ms": 109.35000149765983
+    },
+    "comparison": {
+      "allowed_absolute_score_delta": 0.0001,
+      "identity_mismatches": 0,
+      "improvement_percent": {
+        "p50_ms": -1.8376153598993674,
+        "p95_ms": -9.16582319744497
+      },
+      "max_absolute_score_delta": 0.0,
+      "passed": true,
+      "ranked_rows": 1200,
+      "required_improvement_percent": -100.0
+    }
+  },
+  "immediate_post_restart_observation": {
+    "stage": "reinstall-final-v2",
+    "binary_sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6",
+    "latency": {
+      "count": 120,
+      "max_ms": 191.7957560508512,
+      "mean_ms": 89.22586800763384,
+      "min_ms": 40.33662797883153,
+      "p50_ms": 84.96596600161865,
+      "p95_ms": 159.35976192122325
+    },
+    "comparison": {
+      "allowed_absolute_score_delta": 0.0001,
+      "identity_mismatches": 0,
+      "improvement_percent": {
+        "p50_ms": 11.399421644310104,
+        "p95_ms": -41.14163377922206
+      },
+      "max_absolute_score_delta": 0.0,
+      "passed": false,
+      "ranked_rows": 1200,
+      "required_improvement_percent": 20.0
+    },
+    "accepted_as_performance_gate": false,
+    "classification": "restart_preload_contaminated",
+    "reason": "PostgreSQL and preload workers were still consuming CPU and loading resident state; exact identity and scores remained unchanged."
+  },
+  "package": {
+    "passed": true,
+    "fingerprint": "0c8f7f8ab6b13b0be36b5b0549ad00d7ee9e32bc2ced71fabed3d2b83c37bb24",
+    "package_root": "/Volumes/Calf/postgresql/18/ii42/packages/0.1.2-20260723-p22-final-v2/staged",
+    "ii42_sha256": "89172cd2415979a3d6ab9816c4862b636fa57e3db1751ce3516948b79a0766c6"
+  },
+  "maturity": {
+    "passed": true,
+    "failed_step": null,
+    "elapsed_ms": 1951322.552,
+    "steps": 17,
+    "preflight_fingerprint": "0c8f7f8ab6b13b0be36b5b0549ad00d7ee9e32bc2ced71fabed3d2b83c37bb24",
+    "postflight_fingerprint": "0c8f7f8ab6b13b0be36b5b0549ad00d7ee9e32bc2ced71fabed3d2b83c37bb24"
+  },
+  "mutable_lifecycle": {
+    "passed": true,
+    "passed_gates": 46,
+    "total_gates": 46
+  },
+  "verdict": {
+    "exact_identity_parity": true,
+    "exact_score_parity": true,
+    "required_improvement_percent": 20.0,
+    "accepted_rounds": 4,
+    "accepted_rounds_passing": 4,
+    "rollback_reinstall_closed": true,
+    "package_bound_maturity_passed": true,
+    "passed": true
+  }
+}

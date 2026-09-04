@@ -1,6 +1,6 @@
 # Supported Input Types
 
-`psql_bm25s` supports five indexed source-column types:
+`ii42` supports five indexed source-column types:
 
 - `int4[]`
 - `text[]`
@@ -8,7 +8,7 @@
 - `text`
 - `varchar`
 
-They all feed the same BM25 index core, but they reach it through two
+In BM25 mode they all feed the same index core, through two
 different input models:
 
 - pretokenized inputs owned by the application:
@@ -23,15 +23,20 @@ different input models:
 
 | Source type | Input model | Best fit | Main trade-off |
 | --- | --- | --- | --- |
-| `int4[]` | pre-encoded token IDs | highest-throughput exact retrieval | requires an external vocabulary or token-ID pipeline |
+| `int4[]` | pre-encoded token IDs | exact retrieval without text processing | requires an external vocabulary or token-ID pipeline |
 | `text[]` | pretokenized text tokens | explicit token control with strong exact performance | application must materialize tokens |
 | `varchar[]` | pretokenized text tokens | same use case as `text[]` for schemas that already use `varchar[]` | application must materialize tokens |
 | `text` | raw scalar text | easiest onboarding from ordinary PostgreSQL schemas | indexing and some verification paths pay tokenization cost inside the extension |
 | `varchar` | raw scalar text | same as `text` when schema already uses `varchar` | indexing and some verification paths pay tokenization cost inside the extension |
 
-## How `psql_bm25s` Supports Them
+For `sae = true`, the source must be text-like: `text`, `varchar`, `text[]`,
+or `varchar[]`. The model receives one text representation derived from those
+values. `int4[]` remains a single-column BM25 input and is not a semantic model
+input.
 
-For `int4[]`, `text[]`, and `varchar[]`, the index receives the caller's
+## How `ii42` Supports Them
+
+In BM25 mode, for `int4[]`, `text[]`, and `varchar[]`, the index receives the caller's
 token stream directly:
 
 - `int4[]` passes pre-encoded token IDs
@@ -56,21 +61,23 @@ by the SQL helpers:
 - optional Latin-diacritic folding
 
 For the index-level scalar text parameters, see
-[Index Parameters](index-parameters.md#text-processing-parameters).
+[Index Parameters](index-parameters.md#bm25-text-processing).
 
-## Performance Characteristics
+SAE uses the frozen model tokenizer and normalization contract for both lexical
+and semantic atoms. Text arrays are joined into model input; they do not bypass
+model tokenization or preserve arbitrary application tokens as model IDs. See
+[Semantic Model Checkout](examples/semantic-model-checkout.md).
+
+## Selection Guidance
 
 ### `int4[]`
 
-This is the fastest and most stable exact-retrieval path when the
-application can own vocabulary management and token-ID assignment. It is
-the basis of the published `psql_bm25s ids` benchmark line.
+This path avoids text tokenization inside the extension and gives the
+application complete ownership of vocabulary and token-ID assignment.
 
 ### `text[]`
 
-This is the main pretokenized text path. It keeps the token stream
-explicit, avoids scalar retokenization, and is the basis of the
-published `psql_bm25s text[]` benchmark line.
+This path keeps the token stream explicit and avoids scalar retokenization.
 
 Use it when:
 
@@ -98,22 +105,10 @@ That makes scalar text columns the best choice when:
   acceptable
 - the application wants a direct SQL-column search surface
 
-Pretokenized arrays remain the more performance-oriented choice when the
-application already owns tokenization or wants the most stable
-high-throughput benchmark path.
-
-## Public Benchmark Scope
-
-The main published PG18 cross-engine benchmark matrix in
-[Performance and Benchmarks](performance/README.md) is currently based
-on the pretokenized input paths:
-
-- `psql_bm25s ids` uses `int4[]`
-- `psql_bm25s text[]` uses `text[]`
-
-Scalar `text` and `varchar` are supported for ordinary application
-schemas, but they are not the basis of the current public cross-engine
-matrix.
+Pretokenized arrays can reduce indexing CPU when the application already owns
+tokenization. Actual throughput depends on corpus shape, token distribution,
+PostgreSQL configuration, and hardware; use the current benchmark harness
+before choosing a type for performance alone.
 
 ## Multicolumn Fusion
 
@@ -126,8 +121,14 @@ Multicolumn fusion indexes currently support:
 
 Scalar multicolumn fusion tokenizes each indexed scalar column with the
 index text options before fusing the resulting token stream. See
-[Multi-Column Fusion Indexes](multicolumn-fusion-indexes.md) for the
+[Multicolumn Indexes](multicolumn-indexes.md) for the
 current rules and recommended usage.
+
+The same homogeneous multicolumn text-like shapes support `sae = true`. The
+columns form one lexical document and one semantic model input by default.
+With `field_aware = true`, lexical and semantic atoms retain separate field
+namespaces. The shared runtime batch-encodes nonempty fields, while the index
+keeps one document version, root, maintenance lifecycle, and scorer.
 
 ## Practical Guidance
 
@@ -136,12 +137,12 @@ Use:
 - `text` or `varchar` when you want the easiest schema-level start
 - `text[]` or `varchar[]` when you already own tokenization and want the
   clearest text-token contract
-- `int4[]` when you need the highest-throughput exact path and can own
-  token IDs upstream
+- `int4[]` when you can own stable token IDs upstream and want to avoid text
+  processing inside the extension
 
 Related docs:
 
 - [API Reference](api-reference.md)
 - [Query Semantics](query-semantics.md)
 - [Performance and Benchmarks](performance/README.md)
-- [Multi-Column Fusion Indexes](multicolumn-fusion-indexes.md)
+- [Multicolumn Indexes](multicolumn-indexes.md)

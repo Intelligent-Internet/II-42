@@ -1,0 +1,87 @@
+{
+  "build": {
+    "accelerated_posting_mass_actual": 0.3002976003410093,
+    "accelerated_posting_mass_target": 0.3,
+    "accelerated_term_count": 260,
+    "actual_posting_mass": 0.4500198289140986,
+    "build_knn": 0,
+    "centroid_fraction": 0.02,
+    "doc_cut": 15,
+    "index_variant": "standard",
+    "minimum_n_postings": 1000,
+    "n_postings": 5278,
+    "summary_energy": 0.1,
+    "target_posting_mass": 0.45
+  },
+  "build_seconds": 0.9197665689862333,
+  "conversion_seconds": 0.0,
+  "dataset_root": "/home/huoju/leask/runs/ii42-p2-beir15-native-v1/semantic-shards/webis-touche2020",
+  "document_count": 382545,
+  "documents_npz": null,
+  "exact": {
+    "latency_ms": {
+      "p50": 84.82734402059577,
+      "p95": 94.29461197578348
+    },
+    "metrics": {
+      "map_at_100": 0.15753240775477778,
+      "mrr_at_20": 0.4409061460081868,
+      "ndcg_at_10": 0.24520135821907216,
+      "recall_at_100": 0.47147249494064
+    }
+  },
+  "index_bytes": 884483209,
+  "knn_build_seconds": 0.0,
+  "knn_bytes": 0,
+  "queries_npz": null,
+  "query_count": 49,
+  "schema": "ii42_seismic_npz_oracle_v2",
+  "variants": [
+    {
+      "accelerator_exact_completion_latency_ms": {
+        "p50": 1.0035359882749617,
+        "p95": 1.084016024833545
+      },
+      "accelerator_exact_completion_metrics": {
+        "map_at_100": 0.08632262869885655,
+        "mrr_at_20": 0.33323316795389835,
+        "ndcg_at_10": 0.15984306091543646,
+        "recall_at_100": 0.25558975964240394
+      },
+      "candidate_k": 800,
+      "candidate_multiplier": 8,
+      "exact_completion_latency_ms": {
+        "p50": 111.94320998038165,
+        "p95": 199.4389549945481
+      },
+      "full_accelerator_coverage_queries": 7,
+      "full_coverage_queries": 49,
+      "heap_factor": 0.7,
+      "latency_ms": {
+        "p50": 116.25767598161474,
+        "p95": 202.5488770159427
+      },
+      "mean_accelerated_posting_ratio": 0.802429077218997,
+      "mean_accelerator_candidates": 800.0,
+      "mean_accelerator_exact_topk_candidate_coverage": 0.5373469387755102,
+      "mean_exact_topk_candidate_coverage": 1.0,
+      "mean_residual_posting_ratio": 0.19757092278100297,
+      "mean_topk_overlap": 1.0,
+      "mean_union_candidates": 83204.16326530612,
+      "metrics": {
+        "map_at_100": 0.15753240775477778,
+        "mrr_at_20": 0.4409061460081868,
+        "ndcg_at_10": 0.24520135821907216,
+        "recall_at_100": 0.47147249494064
+      },
+      "partial_acceleration": true,
+      "query_count": 49,
+      "query_cut": 16,
+      "search_knn": 0,
+      "search_latency_ms": {
+        "p50": 4.134465998504311,
+        "p95": 5.783698987215757
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "tasks": {
+    "arguana:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:16:58.111819+00:00",
+      "vm_name": "pg18hd2-0331-arg-psql"
+    },
+    "arguana:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:16:59.138724+00:00",
+      "vm_name": "pg18hd2-0331-arg-txt"
+    },
+    "climate-fever:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:19:48.204595+00:00",
+      "vm_name": "pg18hd2-0331-clf-psql"
+    },
+    "climate-fever:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:19:49.583995+00:00",
+      "vm_name": "pg18hd2-0331-clf-txt"
+    },
+    "cqadupstack:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:37:08.170472+00:00",
+      "vm_name": "pg18hd2-0331-cqa-psql"
+    },
+    "cqadupstack:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:36:42.116755+00:00",
+      "vm_name": "pg18hd2-0331-cqa-txt"
+    },
+    "dbpedia-entity:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:18:21.184997+00:00",
+      "vm_name": "pg18hd2-0331-dbe-psql"
+    },
+    "dbpedia-entity:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:18:21.071210+00:00",
+      "vm_name": "pg18hd2-0331-dbe-txt"
+    },
+    "fever:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:26.870153+00:00",
+      "vm_name": "pg18hd2-0331-fev-psql"
+    },
+    "fever:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:32.766451+00:00",
+      "vm_name": "pg18hd2-0331-fev-txt"
+    },
+    "fiqa:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:17:01.550486+00:00",
+      "vm_name": "pg18hd2-0331-fiq-psql"
+    },
+    "fiqa:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:17:01.375538+00:00",
+      "vm_name": "pg18hd2-0331-fiq-txt"
+    },
+    "hotpotqa:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:19:08.068241+00:00",
+      "vm_name": "pg18hd2-0331-hqa-psql"
+    },
+    "hotpotqa:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:19:00.588702+00:00",
+      "vm_name": "pg18hd2-0331-hqa-txt"
+    },
+    "msmarco:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:10.475057+00:00",
+      "vm_name": "pg18hd2-0331-msm-psql"
+    },
+    "msmarco:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:07.879499+00:00",
+      "vm_name": "pg18hd2-0331-msm-txt"
+    },
+    "nfcorpus:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:19:34.201249+00:00",
+      "vm_name": "pg18hd2-0331-nfc-psql"
+    },
+    "nfcorpus:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:18:53.608200+00:00",
+      "vm_name": "pg18hd2-0331-nfc-txt"
+    },
+    "nq:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:21:24.966026+00:00",
+      "vm_name": "pg18hd2-0331-nq-psql"
+    },
+    "nq:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:44.268695+00:00",
+      "vm_name": "pg18hd2-0331-nq-txt"
+    },
+    "quora:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:19:45.492962+00:00",
+      "vm_name": "pg18hd2-0331-quo-psql"
+    },
+    "quora:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:08.852096+00:00",
+      "vm_name": "pg18hd2-0331-quo-txt"
+    },
+    "scidocs:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:33.818041+00:00",
+      "vm_name": "pg18hd2-0331-scd-psql"
+    },
+    "scidocs:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:33.993859+00:00",
+      "vm_name": "pg18hd2-0331-scd-txt"
+    },
+    "scifact:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:20:23.089442+00:00",
+      "vm_name": "pg18hd2-0331-scf-psql"
+    },
+    "scifact:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:21:20.206771+00:00",
+      "vm_name": "pg18hd2-0331-scf-txt"
+    },
+    "trec-covid:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:21:29.636127+00:00",
+      "vm_name": "pg18hd2-0331-trc-psql"
+    },
+    "trec-covid:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:21:29.229958+00:00",
+      "vm_name": "pg18hd2-0331-trc-txt"
+    },
+    "webis-touche2020:psql_bm25s_ids": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:21:28.594715+00:00",
+      "vm_name": "pg18hd2-0331-wbt-psql"
+    },
+    "webis-touche2020:psql_bm25s_text": {
+      "status": "running",
+      "updated_at": "2026-04-01T01:21:27.192019+00:00",
+      "vm_name": "pg18hd2-0331-wbt-txt"
+    }
+  },
+  "updated_at": "2026-04-01T01:37:08.170495+00:00"
+}

@@ -1,0 +1,747 @@
+{
+  "active_sessions_after": [],
+  "cases": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 174.465,
+          "hits": 50,
+          "name": "arxiv_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 199.40701592713594
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 174.975,
+          "hits": 50,
+          "name": "arxiv_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 201.6650908626616
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 300.0,
+      "first_ms": 174.465,
+      "name": "arxiv_unfiltered",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 174.975,
+        "mean_ms": 174.975,
+        "min_ms": 174.975,
+        "p50_ms": 174.975,
+        "p95_ms": 174.975
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 308.795,
+          "hits": 50,
+          "name": "arxiv_date_category",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 336.9456590153277
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 306.343,
+          "hits": 50,
+          "name": "arxiv_date_category",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 333.7948911357671
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 308.795,
+      "name": "arxiv_date_category",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 306.343,
+        "mean_ms": 306.343,
+        "min_ms": 306.343,
+        "p50_ms": 306.343,
+        "p95_ms": 306.343
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 417.93,
+          "hits": 50,
+          "name": "arxiv_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 445.75017783790827
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 433.589,
+          "hits": 50,
+          "name": "arxiv_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 460.92546288855374
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 1000.0,
+      "first_ms": 417.93,
+      "name": "arxiv_broad_date",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 433.589,
+        "mean_ms": 433.589,
+        "min_ms": 433.589,
+        "p50_ms": 433.589,
+        "p95_ms": 433.589
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 406.439,
+          "hits": 50,
+          "name": "arxiv_organization_selective",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 434.062090003863
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 408.839,
+          "hits": 50,
+          "name": "arxiv_organization_selective",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 436.78845511749387
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 406.439,
+      "name": "arxiv_organization_selective",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 408.839,
+        "mean_ms": 408.839,
+        "min_ms": 408.839,
+        "p50_ms": 408.839,
+        "p95_ms": 408.839
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "ERROR:  canceling statement due to statement timeout\nCONTEXT:  SQL statement \"SELECT q.rank, q.ctid, q.doc_ord, q.score, q.selected_terms, q.candidate_docs, q.scored_docs, q.generator_entry_visits, q.generator_decoded_postings, q.candidate_postings, q.rerank_binary_steps, q.rerank_slice_hits, q.rerank_score_terms, q.rerank_doc_terms, q.memory_bytes FROM ii42_index_semantic_query_native_internal($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) AS q JOIN commons.data_arxiv AS source ON source.ctid = q.ctid ORDER BY q.rank\"\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer,text[],real[],integer[],tid[],jsonb) line 38 at RETURN QUERY\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k,\n            field_names,\n            field_weights,\n            allowed_doc_ids,\n            allowed_tids,\n            filters\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search_internal(regclass,text,text[],real[],integer,real[],boolean,text[],boolean,boolean,integer[],tid[],jsonb) line 143 at RETURN QUERY\nSQL function \"ii42_search\" statement 1",
+          "status": "statement_timeout",
+          "wall_ms": 15026.510182069615
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 9810.704,
+          "hits": 50,
+          "name": "arxiv_organization_broad",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 9838.921647053212
+        }
+      ],
+      "completed": 1,
+      "expected_max_ms": 1000.0,
+      "first_ms": 9810.704,
+      "name": "arxiv_organization_broad",
+      "passed": false,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 9810.704,
+        "mean_ms": 9810.704,
+        "min_ms": 9810.704,
+        "p50_ms": 9810.704,
+        "p95_ms": 9810.704
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 267.624,
+          "hits": 50,
+          "name": "pubmed_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 295.4450179822743
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 252.56,
+          "hits": 50,
+          "name": "pubmed_unfiltered",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 278.8914500270039
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 300.0,
+      "first_ms": 267.624,
+      "name": "pubmed_unfiltered",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 252.56,
+        "mean_ms": 252.56,
+        "min_ms": 252.56,
+        "p50_ms": 252.56,
+        "p95_ms": 252.56
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 522.356,
+          "hits": 50,
+          "name": "pubmed_date_journal",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 550.2116829156876
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 534.35,
+          "hits": 50,
+          "name": "pubmed_date_journal",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 563.0964089650661
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 522.356,
+      "name": "pubmed_date_journal",
+      "passed": false,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 534.35,
+        "mean_ms": 534.35,
+        "min_ms": 534.35,
+        "p50_ms": 534.35,
+        "p95_ms": 534.35
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 624.07,
+          "hits": 50,
+          "name": "pubmed_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 651.9730589352548
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 638.764,
+          "hits": 50,
+          "name": "pubmed_broad_date",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 666.901018936187
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 1000.0,
+      "first_ms": 624.07,
+      "name": "pubmed_broad_date",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 638.764,
+        "mean_ms": 638.764,
+        "min_ms": 638.764,
+        "p50_ms": 638.764,
+        "p95_ms": 638.764
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "ERROR:  canceling statement due to statement timeout\nCONTEXT:  SQL statement \"SELECT q.rank, q.ctid, q.doc_ord, q.score, q.selected_terms, q.candidate_docs, q.scored_docs, q.generator_entry_visits, q.generator_decoded_postings, q.candidate_postings, q.rerank_binary_steps, q.rerank_slice_hits, q.rerank_score_terms, q.rerank_doc_terms, q.memory_bytes FROM ii42_index_semantic_query_native_internal($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) AS q JOIN commons.data_pubmed AS source ON source.ctid = q.ctid ORDER BY q.rank\"\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer,text[],real[],integer[],tid[],jsonb) line 38 at RETURN QUERY\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k,\n            field_names,\n            field_weights,\n            allowed_doc_ids,\n            allowed_tids,\n            filters\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search_internal(regclass,text,text[],real[],integer,real[],boolean,text[],boolean,boolean,integer[],tid[],jsonb) line 143 at RETURN QUERY\nSQL function \"ii42_search\" statement 1",
+          "status": "statement_timeout",
+          "wall_ms": 15025.08191508241
+        },
+        {
+          "attempt": 2,
+          "error": "ERROR:  canceling statement due to statement timeout\nCONTEXT:  SQL statement \"SELECT q.rank, q.ctid, q.doc_ord, q.score, q.selected_terms, q.candidate_docs, q.scored_docs, q.generator_entry_visits, q.generator_decoded_postings, q.candidate_postings, q.rerank_binary_steps, q.rerank_slice_hits, q.rerank_score_terms, q.rerank_doc_terms, q.memory_bytes FROM ii42_index_semantic_query_native_internal($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) AS q JOIN commons.data_pubmed AS source ON source.ctid = q.ctid ORDER BY q.rank\"\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer,text[],real[],integer[],tid[],jsonb) line 38 at RETURN QUERY\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k,\n            field_names,\n            field_weights,\n            allowed_doc_ids,\n            allowed_tids,\n            filters\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search_internal(regclass,text,text[],real[],integer,real[],boolean,text[],boolean,boolean,integer[],tid[],jsonb) line 143 at RETURN QUERY\nSQL function \"ii42_search\" statement 1",
+          "status": "statement_timeout",
+          "wall_ms": 15026.321368990466
+        }
+      ],
+      "completed": 0,
+      "expected_max_ms": 1000.0,
+      "name": "pubmed_partial_date",
+      "passed": false,
+      "violations": 0
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "ERROR:  canceling statement due to statement timeout\nCONTEXT:  SQL statement \"SELECT source.ctid FROM ONLY commons.data_pubmed AS source WHERE EXISTS (SELECT 1 FROM unnest(source.categories) AS source_item(value) WHERE source_item.value::text ILIKE ANY (ARRAY(SELECT item.value #>> '{}' FROM jsonb_array_elements($1 -> 'categories' -> 'ilike_any') AS item(value)))) AND (source.publish_date >= (jsonb_populate_record(NULL::commons.data_pubmed, jsonb_build_object('publish_date', $1 -> 'publish_date' -> 'range' -> 'gte'))).publish_date AND source.publish_date <= (jsonb_populate_record(NULL::commons.data_pubmed, jsonb_build_object('publish_date', $1 -> 'publish_date' -> 'range' -> 'lte'))).publish_date)\"\nSQL statement \"SELECT q.rank, q.ctid, q.doc_ord, q.score, q.selected_terms, q.candidate_docs, q.scored_docs, q.generator_entry_visits, q.generator_decoded_postings, q.candidate_postings, q.rerank_binary_steps, q.rerank_slice_hits, q.rerank_score_terms, q.rerank_doc_terms, q.memory_bytes FROM ii42_index_semantic_query_native_internal($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) AS q JOIN commons.data_pubmed AS source ON source.ctid = q.ctid ORDER BY q.rank\"\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer,text[],real[],integer[],tid[],jsonb) line 38 at RETURN QUERY\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k,\n            field_names,\n            field_weights,\n            allowed_doc_ids,\n            allowed_tids,\n            filters\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search_internal(regclass,text,text[],real[],integer,real[],boolean,text[],boolean,boolean,integer[],tid[],jsonb) line 143 at RETURN QUERY\nSQL function \"ii42_search\" statement 1",
+          "status": "statement_timeout",
+          "wall_ms": 15026.132856030017
+        },
+        {
+          "attempt": 2,
+          "error": "ERROR:  canceling statement due to statement timeout\nCONTEXT:  SQL statement \"SELECT source.ctid FROM ONLY commons.data_pubmed AS source WHERE EXISTS (SELECT 1 FROM unnest(source.categories) AS source_item(value) WHERE source_item.value::text ILIKE ANY (ARRAY(SELECT item.value #>> '{}' FROM jsonb_array_elements($1 -> 'categories' -> 'ilike_any') AS item(value)))) AND (source.publish_date >= (jsonb_populate_record(NULL::commons.data_pubmed, jsonb_build_object('publish_date', $1 -> 'publish_date' -> 'range' -> 'gte'))).publish_date AND source.publish_date <= (jsonb_populate_record(NULL::commons.data_pubmed, jsonb_build_object('publish_date', $1 -> 'publish_date' -> 'range' -> 'lte'))).publish_date)\"\nSQL statement \"SELECT q.rank, q.ctid, q.doc_ord, q.score, q.selected_terms, q.candidate_docs, q.scored_docs, q.generator_entry_visits, q.generator_decoded_postings, q.candidate_postings, q.rerank_binary_steps, q.rerank_slice_hits, q.rerank_score_terms, q.rerank_doc_terms, q.memory_bytes FROM ii42_index_semantic_query_native_internal($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) AS q JOIN commons.data_pubmed AS source ON source.ctid = q.ctid ORDER BY q.rank\"\nPL/pgSQL function ii42_search_semantic_internal(regclass,text,integer,text[],real[],integer[],tid[],jsonb) line 38 at RETURN QUERY\nSQL statement \"SELECT\n            model_hit.ctid,\n            model_hit.doc_ord AS doc_id,\n            model_hit.score::real\n        FROM ii42_search_semantic_internal(\n            index_name,\n            query_text,\n            k,\n            field_names,\n            field_weights,\n            allowed_doc_ids,\n            allowed_tids,\n            filters\n        ) AS model_hit\n        ORDER BY model_hit.rank\"\nPL/pgSQL function ii42_search_internal(regclass,text,text[],real[],integer,real[],boolean,text[],boolean,boolean,integer[],tid[],jsonb) line 143 at RETURN QUERY\nSQL function \"ii42_search\" statement 1",
+          "status": "statement_timeout",
+          "wall_ms": 15026.967871002853
+        }
+      ],
+      "completed": 0,
+      "expected_max_ms": 500.0,
+      "name": "pubmed_date_category",
+      "passed": false,
+      "violations": 0
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 230.506,
+          "hits": 73,
+          "name": "ca_policy_union",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 260.46645687893033
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 224.688,
+          "hits": 73,
+          "name": "ca_policy_union",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 252.62347422540188
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 300.0,
+      "first_ms": 230.506,
+      "name": "ca_policy_union",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 224.688,
+        "mean_ms": 224.688,
+        "min_ms": 224.688,
+        "p50_ms": 224.688,
+        "p95_ms": 224.688
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 215.462,
+          "hits": 2,
+          "name": "ca_chunk_scope_ordinary",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 243.21930296719074
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 215.488,
+          "hits": 2,
+          "name": "ca_chunk_scope_ordinary",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 242.7684310823679
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 215.462,
+      "name": "ca_chunk_scope_ordinary",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 215.488,
+        "mean_ms": 215.488,
+        "min_ms": 215.488,
+        "p50_ms": 215.488,
+        "p95_ms": 215.488
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 114.668,
+          "hits": 73,
+          "name": "tx_policy_union",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 142.46446313336492
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 113.269,
+          "hits": 73,
+          "name": "tx_policy_union",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 140.80405910499394
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 300.0,
+      "first_ms": 114.668,
+      "name": "tx_policy_union",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 113.269,
+        "mean_ms": 113.269,
+        "min_ms": 113.269,
+        "p50_ms": 113.269,
+        "p95_ms": 113.269
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 92.395,
+          "hits": 5,
+          "name": "tx_chunk_scope_ordinary",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 119.31009008549154
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 94.373,
+          "hits": 5,
+          "name": "tx_chunk_scope_ordinary",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 121.52235000394285
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 92.395,
+      "name": "tx_chunk_scope_ordinary",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 94.373,
+        "mean_ms": 94.373,
+        "min_ms": 94.373,
+        "p50_ms": 94.373,
+        "p95_ms": 94.373
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 211.682,
+          "hits": 88,
+          "name": "wa_policy_union",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 240.0726401247084
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 213.398,
+          "hits": 88,
+          "name": "wa_policy_union",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 240.9671249333769
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 300.0,
+      "first_ms": 211.682,
+      "name": "wa_policy_union",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 213.398,
+        "mean_ms": 213.398,
+        "min_ms": 213.398,
+        "p50_ms": 213.398,
+        "p95_ms": 213.398
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 162.441,
+          "hits": 5,
+          "name": "wa_chunk_scope_ordinary",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 190.22881402634084
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 158.488,
+          "hits": 5,
+          "name": "wa_chunk_scope_ordinary",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 185.40192488580942
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 162.441,
+      "name": "wa_chunk_scope_ordinary",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 158.488,
+        "mean_ms": 158.488,
+        "min_ms": 158.488,
+        "p50_ms": 158.488,
+        "p95_ms": 158.488
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 8005.312,
+          "hits": 50,
+          "name": "ca_chunk_scope_stress",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 8031.333698192611
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 6050.148,
+          "hits": 50,
+          "name": "ca_chunk_scope_stress",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 6077.972396044061
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 2000.0,
+      "first_ms": 8005.312,
+      "name": "ca_chunk_scope_stress",
+      "passed": false,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 6050.148,
+        "mean_ms": 6050.148,
+        "min_ms": 6050.148,
+        "p50_ms": 6050.148,
+        "p95_ms": 6050.148
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "elapsed_ms": 102.327,
+          "hits": 50,
+          "name": "system_chunk_scope",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 129.70149307511747
+        },
+        {
+          "attempt": 2,
+          "elapsed_ms": 51.809,
+          "hits": 50,
+          "name": "system_chunk_scope",
+          "status": "completed",
+          "violations": 0,
+          "wall_ms": 78.29953404143453
+        }
+      ],
+      "completed": 2,
+      "expected_max_ms": 500.0,
+      "first_ms": 102.327,
+      "name": "system_chunk_scope",
+      "passed": true,
+      "violations": 0,
+      "warm": {
+        "count": 1,
+        "max_ms": 51.809,
+        "mean_ms": 51.809,
+        "min_ms": 51.809,
+        "p50_ms": 51.809,
+        "p95_ms": 51.809
+      }
+    }
+  ],
+  "environment": {
+    "database": "ii_dev",
+    "extension_version": "0.2.4",
+    "indexes": {
+      "commons.data_arxiv__title_abstract__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636530/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_ca__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636533/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_ca_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636536/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_tx__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636531/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_tx_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636534/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_wa__title_description__field_aware_bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636532/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_policy_wa_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636535/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.data_pubmed__title_abstract__current_next_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "57028352/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      },
+      "commons.sys_chunks__content__bm25_idx": {
+        "accelerator_state": "ready",
+        "builder_policy_id": 7,
+        "forward_complete": true,
+        "generation_id": "25636529/1/2051",
+        "health": "ok",
+        "runtime_contract_matches": true,
+        "valid": true
+      }
+    },
+    "pubmed_index": "commons.data_pubmed__title_abstract__current_next_idx",
+    "pubmed_index_source": "candidate_fallback",
+    "server_version": "18.4 (Debian 18.4-1.pgdg13+1)",
+    "settings": {
+      "ii42.maintenance_worker_limit": "4",
+      "ii42.shared_runtime_size": "114688",
+      "ii42.test_disable_semantic_accelerator": "off",
+      "shared_preload_libraries": "ii42,pg_stat_statements,pg_prewarm"
+    },
+    "table_stats": {
+      "data_arxiv": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_ca_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_tx_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_policy_wa_chunks": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      },
+      "data_pubmed": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "n_live_tup": 0
+      }
+    }
+  },
+  "finished_at_epoch": 1787359809.1838677,
+  "passed": false,
+  "started_at_epoch": 1787359701.5846922,
+  "suite": "commons_query_matrix"
+}

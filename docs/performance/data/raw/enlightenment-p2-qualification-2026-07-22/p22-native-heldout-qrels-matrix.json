@@ -1,0 +1,234 @@
+{
+  "all_quality_deltas_positive": true,
+  "candidate_k": 1000,
+  "datasets": [
+    {
+      "candidate_k": 1000,
+      "dataset": "scifact-official",
+      "document_count": 5183,
+      "methods": {
+        "BM25": {
+          "build_seconds": 0.659394,
+          "index_bytes": 8601600,
+          "latency_ms_p50": 1.415375,
+          "latency_ms_p95": 1.604792,
+          "metrics": {
+            "candidate_upper_bound": 0.965,
+            "map_at_100": 0.626833,
+            "mrr_at_20": 0.634838,
+            "ndcg_at_10": 0.663931,
+            "recall_at_100": 0.882556
+          },
+          "model_id": null,
+          "name": "BM25"
+        },
+        "P2.2": {
+          "build_seconds": 244.961216,
+          "index_bytes": 30318592,
+          "latency_ms_p50": 15.838667,
+          "latency_ms_p95": 19.389375,
+          "metrics": {
+            "candidate_upper_bound": 0.99,
+            "map_at_100": 0.670381,
+            "mrr_at_20": 0.679533,
+            "ndcg_at_10": 0.709942,
+            "recall_at_100": 0.952667
+          },
+          "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+          "name": "P2.2"
+        }
+      },
+      "p2_minus_bm25": {
+        "candidate_upper_bound": 0.025000000000000022,
+        "map_at_100": 0.04354800000000003,
+        "mrr_at_20": 0.04469500000000004,
+        "ndcg_at_10": 0.04601099999999991,
+        "recall_at_100": 0.07011100000000003
+      },
+      "provenance": {
+        "bytes": 1300,
+        "path": "docs/performance/data/raw/enlightenment-p2-qualification-2026-07-22/p22-native-scifact-qrels-summary.json",
+        "sha256": "8e9be501a4617d784a69155b64779d64f2ab979656af3db5f923a2b31ccc1bc9"
+      },
+      "query_count": 300
+    },
+    {
+      "candidate_k": 1000,
+      "dataset": "arguana-official",
+      "document_count": 8674,
+      "methods": {
+        "BM25": {
+          "build_seconds": 1.456612,
+          "index_bytes": 12083200,
+          "latency_ms_p50": 2.387791,
+          "latency_ms_p95": 3.066875,
+          "metrics": {
+            "candidate_upper_bound": 0.990007,
+            "map_at_100": 0.237186,
+            "mrr_at_20": 0.233893,
+            "ndcg_at_10": 0.344115,
+            "recall_at_100": 0.952891
+          },
+          "model_id": null,
+          "name": "BM25"
+        },
+        "P2.2": {
+          "build_seconds": 329.691447,
+          "index_bytes": 42532864,
+          "latency_ms_p50": 45.57325,
+          "latency_ms_p95": 69.883834,
+          "metrics": {
+            "candidate_upper_bound": 0.999286,
+            "map_at_100": 0.286933,
+            "mrr_at_20": 0.285425,
+            "ndcg_at_10": 0.410565,
+            "recall_at_100": 0.98858
+          },
+          "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+          "name": "P2.2"
+        }
+      },
+      "p2_minus_bm25": {
+        "candidate_upper_bound": 0.009279000000000037,
+        "map_at_100": 0.049746999999999986,
+        "mrr_at_20": 0.051531999999999994,
+        "ndcg_at_10": 0.06645000000000001,
+        "recall_at_100": 0.03568899999999997
+      },
+      "provenance": {
+        "bytes": 1310,
+        "path": "docs/performance/data/raw/enlightenment-p2-qualification-2026-07-22/p22-native-arguana-qrels-summary.json",
+        "sha256": "6c758a9c4b79de2b4b872b865d486f3de38dd20dca8063be64f75dbd26991f40"
+      },
+      "query_count": 1401
+    },
+    {
+      "candidate_k": 1000,
+      "dataset": "scidocs-official",
+      "document_count": 25657,
+      "methods": {
+        "BM25": {
+          "build_seconds": null,
+          "index_bytes": 34455552,
+          "latency_ms_p50": 3.405572846531868,
+          "latency_ms_p95": 4.058023914694786,
+          "metrics": {
+            "candidate_upper_bound": 0.5612166666666667,
+            "map_at_100": 0.10333287498596447,
+            "mrr_at_20": 0.27741957743408985,
+            "ndcg_at_10": 0.15074529722404112,
+            "recall_at_100": 0.3482166666666667
+          },
+          "model_id": null,
+          "name": "BM25"
+        },
+        "P2.2": {
+          "build_seconds": null,
+          "index_bytes": 116875264,
+          "latency_ms_p50": 57.02429311349988,
+          "latency_ms_p95": 71.43289176747203,
+          "metrics": {
+            "candidate_upper_bound": 0.7350166666666667,
+            "map_at_100": 0.14202346022076834,
+            "mrr_at_20": 0.3442629403834899,
+            "ndcg_at_10": 0.19967716449807565,
+            "recall_at_100": 0.47185000000000005
+          },
+          "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+          "name": "P2.2"
+        }
+      },
+      "p2_minus_bm25": {
+        "candidate_upper_bound": 0.17379999999999995,
+        "map_at_100": 0.03869058523480387,
+        "mrr_at_20": 0.06684336294940008,
+        "ndcg_at_10": 0.048931867274034535,
+        "recall_at_100": 0.12363333333333337
+      },
+      "provenance": {
+        "bytes": 1810980,
+        "path": "docs/performance/data/raw/enlightenment-p2-qualification-2026-07-22/scidocs-official-native-qrels.json",
+        "sha256": "3c898fdf79c8cb839888cd7b18836acb6d46a228572b138895b48cf385160eea"
+      },
+      "query_count": 1000
+    },
+    {
+      "candidate_k": 1000,
+      "dataset": "trec-covid-official",
+      "document_count": 171331,
+      "methods": {
+        "BM25": {
+          "build_seconds": 10.816816,
+          "index_bytes": 202539008,
+          "latency_ms_p50": 4.154189024120569,
+          "latency_ms_p95": 5.7013556361198425,
+          "metrics": {
+            "candidate_upper_bound": 0.36283092513600906,
+            "map_at_100": 0.313540353901533,
+            "mrr_at_20": 0.8172222222222223,
+            "ndcg_at_10": 0.5731011990962008,
+            "recall_at_100": 0.10023561567187432
+          },
+          "model_id": null,
+          "name": "BM25"
+        },
+        "P2.2": {
+          "build_seconds": 10042.401586,
+          "index_bytes": 631193600,
+          "latency_ms_p50": 48.60892612487078,
+          "latency_ms_p95": 55.92082440853119,
+          "metrics": {
+            "candidate_upper_bound": 0.40612374812753893,
+            "map_at_100": 0.5301102796043318,
+            "mrr_at_20": 0.92,
+            "ndcg_at_10": 0.7452540721686005,
+            "recall_at_100": 0.15638529961677206
+          },
+          "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+          "name": "P2.2"
+        }
+      },
+      "p2_minus_bm25": {
+        "candidate_upper_bound": 0.04329282299152987,
+        "map_at_100": 0.21656992570279876,
+        "mrr_at_20": 0.10277777777777775,
+        "ndcg_at_10": 0.17215287307239968,
+        "recall_at_100": 0.056149683944897735
+      },
+      "provenance": {
+        "bytes": 2505455,
+        "path": "docs/performance/data/raw/enlightenment-p2-qualification-2026-07-22/trec-covid-official-native-qrels.json",
+        "sha256": "768045bd615238633fad9f9594f1965e10c886cb4f6a8351e070bcb3f55629ea"
+      },
+      "query_count": 50
+    }
+  ],
+  "macro": {
+    "methods": {
+      "BM25": {
+        "candidate_upper_bound": 0.7197636479506689,
+        "map_at_100": 0.3202230572218744,
+        "mrr_at_20": 0.49084319991407804,
+        "ndcg_at_10": 0.4329731240800605,
+        "recall_at_100": 0.5709748205846352
+      },
+      "P2.2": {
+        "candidate_upper_bound": 0.7826066036985514,
+        "map_at_100": 0.40736193495627504,
+        "mrr_at_20": 0.5573052350958725,
+        "ndcg_at_10": 0.516359559166669,
+        "recall_at_100": 0.642370574904193
+      }
+    },
+    "p2_minus_bm25": {
+      "candidate_upper_bound": 0.06284295574788246,
+      "map_at_100": 0.08713887773440065,
+      "mrr_at_20": 0.06646203518179444,
+      "ndcg_at_10": 0.08338643508660848,
+      "recall_at_100": 0.0713957543195578
+    }
+  },
+  "model_id": "ii42_p2_p22_nfcorpus_v2_smoke",
+  "route": "ii42_search",
+  "surface": "ii42_native_qrels_matrix_v1"
+}

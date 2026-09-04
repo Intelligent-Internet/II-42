@@ -41,7 +41,7 @@ def merge_results(primary: dict, overlays: list[dict]) -> dict:
 
     for entry in results.values():
         query = (
-            entry.get('psql_bm25s_ids', {})
+            entry.get('ii42_ids', {})
             .get('query', {})
         )
         if query.get('qps') is not None:

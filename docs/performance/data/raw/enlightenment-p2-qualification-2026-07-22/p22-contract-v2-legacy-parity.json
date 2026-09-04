@@ -1,0 +1,9 @@
+{
+  "absolute_tolerance": 0.0001,
+  "changed_score_ulps": 6,
+  "identity_rows": 30,
+  "max_abs_delta": 6.103515625e-05,
+  "max_rel_delta": 7.970976081890619e-08,
+  "passed": true,
+  "relative_tolerance": 1e-06
+}

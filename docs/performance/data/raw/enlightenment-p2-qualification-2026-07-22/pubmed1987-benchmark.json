@@ -1,0 +1,125 @@
+{
+  "surface": "enlightenment_pubmed_cross_domain_1987",
+  "documents": 1987,
+  "quality_claim": false,
+  "latency": {
+    "bm25": {
+      "count": 60,
+      "mean_ms": 7.67595663977166,
+      "p50_ms": 3.5029595310334116,
+      "p95_ms": 54.01160701876506,
+      "min_ms": 2.3042979883030057,
+      "max_ms": 55.07477204082534
+    },
+    "p2": {
+      "count": 60,
+      "mean_ms": 46.27283978528188,
+      "p50_ms": 45.637499511940405,
+      "p95_ms": 55.80735602416098,
+      "min_ms": 32.95559698017314,
+      "max_ms": 60.147661017253995
+    }
+  },
+  "identity_proxy": {
+    "bm25": {
+      "at_1": 0.9166666666666666,
+      "at_10": 0.9166666666666666,
+      "at_100": 1.0
+    },
+    "p2": {
+      "at_1": 0.75,
+      "at_10": 0.9166666666666666,
+      "at_100": 1.0
+    }
+  },
+  "p2_vs_bm25_overlap_at_100": 0.36083333333333334,
+  "diagnostics": {
+    "candidate_docs": 1331.8333333333333,
+    "candidate_postings": 3635.6666666666665,
+    "rerank_doc_terms": 235812.5,
+    "resident_payload_bytes": 5332432.0
+  },
+  "concurrency": {
+    "bm25": {
+      "workers": 8,
+      "wall_ms": 84.9229620071128,
+      "latency": {
+        "count": 8,
+        "mean_ms": 27.004481249605305,
+        "p50_ms": 21.259259985527024,
+        "p95_ms": 69.25177900120616,
+        "min_ms": 16.858983028214425,
+        "max_ms": 69.25177900120616
+      }
+    },
+    "p2": {
+      "workers": 8,
+      "wall_ms": 236.46152700530365,
+      "latency": {
+        "count": 8,
+        "mean_ms": 149.94931351247942,
+        "p50_ms": 147.19151199096814,
+        "p95_ms": 223.40357501525432,
+        "min_ms": 88.82540604099631,
+        "max_ms": 223.40357501525432
+      }
+    }
+  },
+  "domain_query": "oxidative stress in human cells",
+  "domain_results": {
+    "bm25": [
+      [
+        "1241427",
+        "Ultrafine particulate pollutants induce oxidative stress and mitochondrial damage.",
+        7.6666617
+      ],
+      [
+        "1065334",
+        "Potential involvement of oxidative stress in cartilage senescence and development of osteoarthritis: oxidative stress induces chondrocyte telomere instability and downregulation of chondrocyte function",
+        7.5835714
+      ],
+      [
+        "129984",
+        "Peroxynitrite decomposition catalyst prevents apoptotic cell death in a human astrocytoma cell line incubated with supernatants of HIV-infected macrophages",
+        6.7357354
+      ],
+      [
+        "1781589",
+        "Upregulation of expression of the chemokine receptor CCR5 by hydrogen peroxide in human monocytes.",
+        6.3739734
+      ],
+      [
+        "1420330",
+        "Establishment and characterization of multicellular spheroids from a human glioma cell line; Implications for tumor therapy",
+        6.296845
+      ]
+    ],
+    "p2": [
+      [
+        "1781589",
+        "Upregulation of expression of the chemokine receptor CCR5 by hydrogen peroxide in human monocytes.",
+        569.0491
+      ],
+      [
+        "1215514",
+        "Role of oxidative stress in female reproduction",
+        565.0785
+      ],
+      [
+        "1065334",
+        "Potential involvement of oxidative stress in cartilage senescence and development of osteoarthritis: oxidative stress induces chondrocyte telomere instability and downregulation of chondrocyte function",
+        509.40167
+      ],
+      [
+        "1352360",
+        "Comparison of gene expression signatures of diamide, H<sub>2</sub>O<sub>2 </sub>and menadione exposed *Aspergillus nidulans *cultures \u2013 linking genome-wide transcriptional changes to cellular physiology",
+        473.8201
+      ],
+      [
+        "1370914",
+        "A Stress Surveillance System Based on Calcium and Nitric Oxide in Marine Diatoms",
+        466.73898
+      ]
+    ]
+  }
+}

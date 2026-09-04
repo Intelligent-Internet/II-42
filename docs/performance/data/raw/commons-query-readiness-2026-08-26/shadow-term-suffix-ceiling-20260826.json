@@ -1,0 +1,52 @@
+{
+  "schema": "ii42_term_suffix_ceiling_v1",
+  "measured_at": "2026-08-26",
+  "query": "cancer immunotherapy survival",
+  "lexical_dims": 29522,
+  "semantic_dims": 50265,
+  "field_count": 2,
+  "base_query_term_count": 42,
+  "expanded_query_term_count": 84,
+  "maximum_query_term": 157163,
+  "probe": {
+    "kind": "read_only_directory_only_no_init_dso",
+    "sha256": "91e2d4d1bbcf1b1ca38c0b826a82d1f37eb9eca99b35cbda99e11e1e8f1bf871",
+    "scans_forward_rows": false,
+    "changes_product_route": false
+  },
+  "installed_product_binary_sha256": "a415dd9b921586b5499b076d5522d53e00e4f8474455c7cebfedbd2e7091acf0",
+  "measurements": [
+    {
+      "surface": "shadow_sidecar_medium_pubmed",
+      "index": "bench.pubmed_v2_idx",
+      "document_count": 500000,
+      "vocab_size": 159574,
+      "forward_chunk_count": 245,
+      "elapsed_ms": 43.786,
+      "forward_term_work_total": 137297457,
+      "forward_term_work_suffix": 156568,
+      "forward_term_bytes_total": 695917635,
+      "forward_term_bytes_suffix": 5193304,
+      "global_suffix_work_fraction": 0.0011403561538652534,
+      "global_suffix_byte_fraction": 0.0074625267974420565,
+      "can_reach_15pct_physical_reduction": false
+    },
+    {
+      "surface": "shadow_current_full_pubmed",
+      "index": "commons.data_pubmed__title_abstract__current_next_idx",
+      "generation_id": "57036813/1/2440",
+      "document_count": 8214026,
+      "vocab_size": 159574,
+      "forward_chunk_count": 8022,
+      "elapsed_ms": 48.041,
+      "forward_term_work_total": 2167848633,
+      "forward_term_work_suffix": 2456762,
+      "forward_term_bytes_total": 16288783543,
+      "forward_term_bytes_suffix": 162034446,
+      "global_suffix_work_fraction": 0.0011332719280313331,
+      "global_suffix_byte_fraction": 0.009947608768466523,
+      "can_reach_15pct_physical_reduction": false
+    }
+  ],
+  "decision": "reject_maximum_query_term_prefix_checkpoint"
+}
