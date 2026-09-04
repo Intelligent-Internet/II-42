@@ -10,6 +10,19 @@ HUB_URL = 'https://huggingface.co/Intelligent-Internet/II-42-Model-Beta-1'
 DOWNLOAD_DOC = REPO_ROOT / 'docs/examples/semantic-model-checkout.md'
 
 
+def test_model_card_links_to_public_project_repository() -> None:
+    card = (REPO_ROOT / 'packaging/huggingface/README.md').read_text()
+    project_url = 'https://github.com/Intelligent-Internet/II-42'
+    github_links = re.findall(r'https://github\.com/[^\s)]+', card)
+    assert set(github_links) == {
+        project_url,
+        f'{project_url}/blob/main/CONTRIBUTING.md',
+        f'{project_url}/blob/main/docs/README.md',
+    }
+    for name in ('CONTRIBUTING.md', 'docs/README.md'):
+        assert (REPO_ROOT / name).is_file()
+
+
 def test_public_model_card_matches_frozen_content_lock() -> None:
     lock = json.loads(
         (REPO_ROOT / 'packaging/milestone-model.json').read_text(),

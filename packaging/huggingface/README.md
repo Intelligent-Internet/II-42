@@ -17,7 +17,7 @@ pipeline_tag: feature-extraction
 # II-42 Model (Beta 1)
 
 This repository distributes the frozen **P2.2 ABI-v2 model checkout** used by
-[II-42](https://github.com/Intelligent-Internet/II-42-dev), a PostgreSQL-native
+[II-42](https://github.com/Intelligent-Internet/II-42), a PostgreSQL-native
 BM25 engine with optional semantic postings in the same index.
 
 This is the existing release model, published for reproducible source and
@@ -118,7 +118,7 @@ python3 scripts/validate_milestone_model_checkout.py \
 The fetcher checks the archive checksum and the source-controlled manifest,
 all artifact digests, and exact inventory before installing the checkout. It
 refuses to overwrite an existing output by default. See II-42's
-[contributor guide](https://github.com/Intelligent-Internet/II-42-dev/blob/main/CONTRIBUTING.md)
+[contributor guide](https://github.com/Intelligent-Internet/II-42/blob/main/CONTRIBUTING.md)
 for ZIP/Docker builds and the pinned ONNX Runtime SDK.
 
 Compiling the extension does not require these model weights. Complete
@@ -132,7 +132,7 @@ P2.2 is the full-text, lifecycle-qualified package successor to P2.1. The
 project's historical P2.1 BEIR15/MTEB10 comparisons are not measurements of
 this P2.2 checkout under every corpus, storage profile, or query workload.
 See the project's technical reports through its
-[documentation index](https://github.com/Intelligent-Internet/II-42-dev/blob/main/docs/README.md)
+[documentation index](https://github.com/Intelligent-Internet/II-42/blob/main/docs/README.md)
 for the evidence and reproduction boundaries.
 
 The upstream encoder is English-focused. This checkout's lexical vocabulary

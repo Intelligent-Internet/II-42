@@ -214,3 +214,16 @@ def test_ci_preserves_onnxruntime_discovery_during_install() -> None:
 
     assert 'sudo --preserve-env=PKG_CONFIG_PATH make install' in workflow
     assert workflow.count('II42_ENABLE_ONNXRUNTIME=1') >= 3
+
+
+def test_docker_smokes_wait_for_the_final_tcp_server() -> None:
+    for name in ('ci.yml', 'prepare-release.yml', 'release.yml'):
+        workflow = (REPO_ROOT / '.github/workflows' / name).read_text()
+        readiness_checks = [
+            line.strip() for line in workflow.splitlines()
+            if 'pg_isready ' in line
+        ]
+        if name != 'prepare-release.yml':
+            assert readiness_checks
+        for check in readiness_checks:
+            assert 'pg_isready -h 127.0.0.1 -U postgres' in check

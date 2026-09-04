@@ -245,6 +245,13 @@ The current release practice is:
    version from `ii42.control` and dispatches public `Release`; it does not
    automatically bump the catalog or rewrite existing tags. A changed release
    requires a newly reviewed version, not reuse of an already published tag.
+   Documentation, tests, and workflow-only follow-ups can sync without a version
+   bump: if the existing tag is an ancestor and its release is already published,
+   `Prepare Release` leaves that tag and its assets unchanged. The exemption
+   covers Markdown files, `docs/`, `tests/`, and `.github/`; changes to extension
+   code, SQL, build scripts, model locks, or license/notice files still require
+   a new version. Updated online documentation does not rewrite documentation
+   inside previously published archives.
 6. Public `Release` repeats CI for the tag, builds PostgreSQL 17/18 Linux ZIPs
    with the pinned ORT SDK and model, smoke-tests the PostgreSQL 18 Docker image,
    and publishes ZIPs, the Docker archive, and checksums as GitHub Release assets.
