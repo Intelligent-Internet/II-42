@@ -67,6 +67,17 @@ jobs:
                   tag_name="v${VERSION}"
                   if git rev-parse --verify "refs/tags/${tag_name}" >/dev/null 2>&1; then
                       if [ "$(git rev-parse "${tag_name}^{commit}")" != "$(git rev-parse HEAD)" ]; then
+                          if git merge-base --is-ancestor "${tag_name}" HEAD &&
+                              [ "$(gh release view "${tag_name}" \
+                                --json isDraft --jq '.isDraft')" = false ] &&
+                              git diff --quiet "${tag_name}^{commit}" HEAD -- . \
+                                ':(exclude,glob)**/*.md' \
+                                ':(exclude)docs/' \
+                                ':(exclude)tests/' \
+                                ':(exclude).github/'; then
+                              echo 'Only docs, tests, or workflow metadata changed; keep the published release unchanged.'
+                              exit 0
+                          fi
                           echo "${tag_name} already identifies different source; review a new version." >&2
                           exit 1
                       fi
