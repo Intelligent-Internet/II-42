@@ -1,9 +1,9 @@
 # Changelog
 
-This changelog records the public prerelease product lineage, not every
+This changelog records the public product lineage, not every
 internal research milestone or intermediate II-42 tag.
 
-The product has two generations in this prerelease lineage:
+The product has two generations in this release lineage:
 
 1. `psql_bm25s` `v0.4.11` is the first public prerelease baseline.
 2. II-42 `0.2.5` is the second generation, documented as **Beta 1**.
@@ -15,8 +15,10 @@ the second generation; they are not separate product baselines in this file.
 
 ## [II-42 0.2.5] - 2026-09-04
 
-Status: published as Beta 1 under the `v0.2.5` tag. This is a prerelease,
-not a stable release. The public release includes PostgreSQL 17 and 18
+Status: published as Beta 1 under the `v0.2.5` tag and promoted to the default
+GitHub Latest release on 2026-09-08. Beta 1 describes product maturity; the
+GitHub pre-release flag is no longer used for this default release channel.
+The public release includes PostgreSQL 17 and 18
 Linux x86-64 packages and a PostgreSQL 18 Docker image, with ONNX Runtime
 1.29.0 and the frozen default model. The `v0.2.5-rc1` tag is an earlier
 candidate snapshot, not the published Beta 1 package.

@@ -177,7 +177,11 @@ The public PostgreSQL 18 image includes II-42, ONNX Runtime 1.29.0, and the
 frozen default model. No registry login or separate model download is required.
 The published platform is `linux/amd64`; other architectures need emulation
 or a source build. Pin the versioned tag for reproducible deployment;
-`ghcr.io/intelligent-internet/ii-42:pg18` is the moving release alias.
+`ghcr.io/intelligent-internet/ii-42:pg18` and
+`ghcr.io/intelligent-internet/ii-42:latest` are moving aliases for the same
+published PostgreSQL 18 image. GitHub Latest points to this release as well;
+the Beta 1 designation describes its product maturity, not a separate GitHub
+pre-release channel.
 
 ```bash
 docker pull ghcr.io/intelligent-internet/ii-42:pg18-v0.2.5

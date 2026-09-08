@@ -255,8 +255,16 @@ The current release practice is:
 6. Public `Release` repeats CI for the tag, builds PostgreSQL 17/18 Linux ZIPs
    with the pinned ORT SDK and model, smoke-tests the PostgreSQL 18 Docker image,
    and publishes ZIPs, the Docker archive, and checksums as GitHub Release assets.
-   The image is also pushed to `ghcr.io/intelligent-internet/ii-42`, tagged
-   `pg18-v<version>` and `pg18`. The current beta line is marked prerelease.
+   The image is first pushed to `ghcr.io/intelligent-internet/ii-42` with the
+   versioned tag `pg18-v<version>`. Only after all assets are published does
+   `Promote Release` verify the complete asset inventory, source commit, and
+   image digest, then point `pg18` and `latest` at the same manifest and set
+   GitHub Latest. The Beta designation describes product maturity; this default
+   channel does not use GitHub's pre-release flag, which cannot be Latest.
+   Existing releases can use the manual `Promote Release` workflow with an
+   explicit release tag and reviewed image digest. Promotion changes only
+   aliases and release metadata: it does not build, upload, replace assets, or
+   move the source tag. It rejects promotion of an older published release.
 
 The public workflow files are intentionally excluded from source sync. Changes
 to those files must be reviewed and committed in the public repository as well;
