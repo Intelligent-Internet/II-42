@@ -1,0 +1,116 @@
+name: Promote Release
+
+on:
+    workflow_dispatch:
+        inputs:
+            tag_name:
+                description: Existing release tag to make Latest (no rebuild)
+                required: true
+                type: string
+            image_digest:
+                description: Reviewed SHA-256 digest of the published PG18 image
+                required: true
+                type: string
+    workflow_call:
+        inputs:
+            tag_name:
+                required: true
+                type: string
+            image_digest:
+                required: true
+                type: string
+
+env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+    contents: write
+    packages: write
+
+concurrency:
+    group: promote-public-release
+    cancel-in-progress: false
+
+jobs:
+    promote:
+        runs-on: ubuntu-24.04
+        env:
+            GH_TOKEN: ${{ github.token }}
+            GH_REPO: ${{ github.repository }}
+            TAG_NAME: ${{ inputs.tag_name }}
+            EXPECTED_DIGEST: ${{ inputs.image_digest }}
+        steps:
+            - name: Checkout release provenance
+              uses: actions/checkout@v5
+              with:
+                  fetch-depth: 0
+
+            - name: Verify complete release and immutable image identity
+              run: |
+                  set -euo pipefail
+                  [[ "${TAG_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+                  [[ "${EXPECTED_DIGEST}" =~ ^sha256:[0-9a-f]{64}$ ]]
+                  gh api "repos/${GH_REPO}/releases/tags/${TAG_NAME}" > release.json
+                  jq -e --arg tag "${TAG_NAME}" '
+                    (.draft == false) and (.tag_name == $tag) and
+                    ([.assets[].name] | sort) == ([
+                      "ii42-\($tag)-linux-x86_64-pg17.zip",
+                      "ii42-\($tag)-linux-x86_64-pg17.zip.sha256",
+                      "ii42-\($tag)-linux-x86_64-pg18.zip",
+                      "ii42-\($tag)-linux-x86_64-pg18.zip.sha256",
+                      "ii42-\($tag)-docker-pg18-linux-x86_64.tar.gz",
+                      "ii42-\($tag)-docker-pg18-linux-x86_64.tar.gz.sha256"
+                    ] | sort) and
+                    all(.assets[]; .state == "uploaded" and .size > 0 and
+                      (.digest | test("^sha256:[0-9a-f]{64}$")))
+                  ' release.json
+                  newest="$(gh api "repos/${GH_REPO}/releases" --paginate \
+                    --slurp --jq 'flatten | map(select(.draft == false)) |
+                      max_by(.published_at).tag_name')"
+                  test "${newest}" = "${TAG_NAME}"
+                  source_sha="$(git rev-parse "${TAG_NAME}^{commit}")"
+                  image="ghcr.io/${GH_REPO,,}"
+                  versioned="${image}:pg18-${TAG_NAME}"
+                  digest="$(docker buildx imagetools inspect "${versioned}" \
+                    --format '{{.Manifest.Digest}}')"
+                  test "${digest}" = "${EXPECTED_DIGEST}"
+                  docker buildx imagetools inspect "${image}@${digest}" \
+                    --format '{{json .Image}}' > image.json
+                  jq -e --arg version "${TAG_NAME#v}" --arg sha "${source_sha}" \
+                    --arg repo "https://github.com/${GH_REPO}" '
+                      .os == "linux" and .architecture == "amd64" and
+                      .config.Labels["org.opencontainers.image.version"] == $version and
+                      .config.Labels["org.opencontainers.image.revision"] == $sha and
+                      .config.Labels["org.opencontainers.image.source"] == $repo and
+                      .config.Labels["io.ii42.git-tree-state"] == "clean"
+                    ' image.json
+
+            - name: Point moving image aliases at the verified manifest
+              run: |
+                  set -euo pipefail
+                  export DOCKER_CONFIG="${RUNNER_TEMP}/docker-ghcr-promotion"
+                  mkdir -p "${DOCKER_CONFIG}"
+                  trap 'docker logout ghcr.io >/dev/null 2>&1 || true' EXIT
+                  printf '%s' "${GH_TOKEN}" | docker login ghcr.io \
+                    --username "${GITHUB_ACTOR}" --password-stdin
+                  image="ghcr.io/${GH_REPO,,}"
+                  docker buildx imagetools create --prefer-index=false \
+                    --tag "${image}:pg18" --tag "${image}:latest" \
+                    "${image}@${EXPECTED_DIGEST}"
+                  for tag in "pg18-${TAG_NAME}" pg18 latest; do
+                      actual="$(docker buildx imagetools inspect "${image}:${tag}" \
+                        --format '{{.Manifest.Digest}}')"
+                      test "${actual}" = "${EXPECTED_DIGEST}"
+                  done
+
+            - name: Set GitHub Latest without replacing release assets
+              run: |
+                  set -euo pipefail
+                  gh release edit "${TAG_NAME}" --prerelease=false --latest
+                  gh api "repos/${GH_REPO}/releases/latest" > latest.json
+                  jq -e --arg tag "${TAG_NAME}" '
+                    .tag_name == $tag and .prerelease == false and .draft == false
+                  ' latest.json
+                  diff -u \
+                    <(jq -S '.assets | map({id,name,digest,size}) | sort_by(.id)' release.json) \
+                    <(jq -S '.assets | map({id,name,digest,size}) | sort_by(.id)' latest.json)

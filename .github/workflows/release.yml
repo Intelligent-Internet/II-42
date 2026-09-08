@@ -130,6 +130,8 @@ jobs:
 
     build-docker-release-image:
         needs: validate
+        outputs:
+            image_digest: ${{ steps.publish.outputs.image_digest }}
         permissions:
             contents: read
             packages: write
@@ -229,12 +231,18 @@ jobs:
                   echo "DOCKER_CONFIG=${DOCKER_CONFIG}" >> "${GITHUB_ENV}"
 
             - name: Publish Docker image to GitHub Packages
+              id: publish
               run: |
                   ./scripts/publish_docker_image.sh \
                     --source-tag ii42:release-pg18 \
                     --target-image "ghcr.io/${GITHUB_REPOSITORY,,}" \
-                    --tag "pg18-v${{ steps.version.outputs.version }}" \
-                    --tag pg18
+                    --tag "pg18-v${{ steps.version.outputs.version }}"
+                  image="ghcr.io/${GITHUB_REPOSITORY,,}"
+                  digest="$(docker buildx imagetools inspect \
+                    "${image}:pg18-v${{ steps.version.outputs.version }}" \
+                    --format '{{.Manifest.Digest}}')"
+                  [[ "${digest}" =~ ^sha256:[0-9a-f]{64}$ ]]
+                  echo "image_digest=${digest}" >> "${GITHUB_OUTPUT}"
 
     publish-release:
         runs-on: ubuntu-24.04
@@ -250,7 +258,7 @@ jobs:
                   path: release-assets
                   merge-multiple: true
 
-            - name: Verify checksums and publish beta release
+            - name: Verify checksums and publish release assets
               env:
                   GH_TOKEN: ${{ github.token }}
                   GH_REPO: ${{ github.repository }}
@@ -270,5 +278,15 @@ jobs:
                   else
                       gh release create "${TAG_NAME}" "${assets[@]}" \
                         --title "II-42 ${TAG_NAME} (Beta)" \
-                        --generate-notes --verify-tag --prerelease
+                        --generate-notes --verify-tag --latest=false
                   fi
+
+    promote-release:
+        needs: [publish-release, build-docker-release-image]
+        permissions:
+            contents: write
+            packages: write
+        uses: ./.github/workflows/promote-release.yml
+        with:
+            tag_name: ${{ inputs.tag_name || github.ref_name }}
+            image_digest: ${{ needs.build-docker-release-image.outputs.image_digest }}
