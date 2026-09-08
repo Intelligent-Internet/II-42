@@ -13,11 +13,13 @@ library, SQL namespace, and configuration namespace changed from
 `psql_bm25s` to `ii42`. Intermediate II-42 tags belong to the development of
 the second generation; they are not separate product baselines in this file.
 
-## [II-42 0.2.5] - Unreleased
+## [II-42 0.2.5] - 2026-09-04
 
-Status: Beta 1 prerelease development. `ii42.control` declares `0.2.5`.
-The `v0.2.5-rc1` tag is an earlier candidate snapshot; subsequent release
-cleanup remains unreleased until a new tag is published.
+Status: published as Beta 1 under the `v0.2.5` tag. This is a prerelease,
+not a stable release. The public release includes PostgreSQL 17 and 18
+Linux x86-64 packages and a PostgreSQL 18 Docker image, with ONNX Runtime
+1.29.0 and the frozen default model. The `v0.2.5-rc1` tag is an earlier
+candidate snapshot, not the published Beta 1 package.
 
 Comparison baseline: [`psql_bm25s` `v0.4.11`], released on 2026-05-11.
 This section describes user-visible differences from that baseline.
@@ -323,6 +325,6 @@ The upstream `v0.4.11` release is the authoritative baseline. The generated
 tagged package is the source-package baseline used by the II-42 migration
 smoke.
 
-[II-42 0.2.5]: https://github.com/Intelligent-Internet/II-42-dev
-[`psql_bm25s` 0.4.11]: https://github.com/Intelligent-Internet/psql_bm25s/releases/tag/v0.4.11
-[`psql_bm25s` `v0.4.11`]: https://github.com/Intelligent-Internet/psql_bm25s/releases/tag/v0.4.11
+[II-42 0.2.5]: https://github.com/Intelligent-Internet/II-42/releases/tag/v0.2.5
+[`psql_bm25s` 0.4.11]: https://github.com/Intelligent-Internet/II-42/releases/tag/v0.4.11
+[`psql_bm25s` `v0.4.11`]: https://github.com/Intelligent-Internet/II-42/releases/tag/v0.4.11

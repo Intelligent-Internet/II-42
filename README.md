@@ -138,6 +138,11 @@ is required.
 
 ### Release package
 
+Download the [v0.2.5 Beta release](https://github.com/Intelligent-Internet/II-42/releases/tag/v0.2.5).
+Linux x86-64 ZIPs are available for PostgreSQL 17 and 18, each with a SHA-256
+checksum file. They include ONNX Runtime 1.29.0 and the frozen default model;
+no separate model checkout is needed to install a release package.
+
 Install only a package matching the target operating system, architecture,
 PostgreSQL major, and dependency ABI. Verify the checksum and compare
 `BUILD-INFO.txt` with the target `pg_config` directories before copying files.
@@ -168,22 +173,42 @@ relocatable after creation.
 
 ### Docker
 
-Build the PostgreSQL 18 image used by the release workflow:
+The public PostgreSQL 18 image includes II-42, ONNX Runtime 1.29.0, and the
+frozen default model. No registry login or separate model download is required.
+The published platform is `linux/amd64`; other architectures need emulation
+or a source build. Pin the versioned tag for reproducible deployment;
+`ghcr.io/intelligent-internet/ii-42:pg18` is the moving release alias.
 
-First [download the default model](docs/examples/semantic-model-checkout.md#download-the-default-model)
+```bash
+docker pull ghcr.io/intelligent-internet/ii-42:pg18-v0.2.5
+
+read -r -s -p 'PostgreSQL password: ' POSTGRES_PASSWORD
+printf '\n'
+export POSTGRES_PASSWORD
+docker run -d \
+    --name ii42-pg18 \
+    -e POSTGRES_PASSWORD \
+    -p 127.0.0.1:5432:5432 \
+    -v ii42-pg18-data:/var/lib/postgresql \
+    ghcr.io/intelligent-internet/ii-42:pg18-v0.2.5
+unset POSTGRES_PASSWORD
+```
+
+On a fresh data volume, initialization creates the extension and enables its
+shared runtime. Existing database volumes are not upgraded by initialization
+scripts; follow [Upgrading](docs/upgrading.md) before changing an existing
+deployment. The release also provides a checksummed Docker archive for
+offline loading with `docker load`.
+
+To build the image from source instead, first
+[download the default model](docs/examples/semantic-model-checkout.md#download-the-default-model)
 to `.artifacts/ii42-milestone-model`, or pass `--model-checkout` with a validated
-checkout path.
+checkout path:
 
 ```bash
 scripts/build_release_docker_image.sh \
     --version 0.2.5 \
     --image-tag ii42:local-pg18
-
-docker run -d \
-    --name ii42-pg18 \
-    -e POSTGRES_PASSWORD=postgres \
-    -p 5432:5432 \
-    ii42:local-pg18
 ```
 
 ### Source build
