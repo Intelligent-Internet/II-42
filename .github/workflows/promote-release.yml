@@ -65,7 +65,7 @@ jobs:
                       (.digest | test("^sha256:[0-9a-f]{64}$")))
                   ' release.json
                   newest="$(gh api "repos/${GH_REPO}/releases" --paginate \
-                    --slurp --jq 'flatten | map(select(.draft == false)) |
+                    --slurp | jq -r 'flatten | map(select(.draft == false)) |
                       max_by(.published_at).tag_name')"
                   test "${newest}" = "${TAG_NAME}"
                   source_sha="$(git rev-parse "${TAG_NAME}^{commit}")"
